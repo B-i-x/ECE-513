@@ -1,0 +1,57 @@
+/* Styling the article's images */
+img {
+    width: 300px;
+}
+
+/* Styling the h1 tag */
+h1 {
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: white;
+    background-color: red;
+}
+
+/* Styling the h2 tag */
+h2 {
+    padding: 2px;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    color: darkblue;
+}
+
+/* Styling the author name and date */
+#author-name-and-date {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: lightgray;
+}
+
+/* Styling the image-box division */
+#image-box {
+    float: right;
+    padding: 5px;
+    text-align: center;
+    width: 350px;
+    height: 250px;
+}
+
+/* Styling the image caption */
+#image-box p {
+    margin: 0px;
+    font-size: 12px;
+}
+
+/* Styling article text */
+p, ol {
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    color: gray;
+}
+
+/* Styling the share links */
+a {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: blue;
+}
