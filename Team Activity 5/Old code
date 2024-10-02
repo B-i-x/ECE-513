@@ -1,0 +1,31 @@
+<div class="keypad">
+  <!-- <div id="leftKeys">poop</div>
+  <div id="rightKeys">pee</div> -->
+  <!-- First Row -->
+  <button onclick="pressKey('7')">7</button>
+  <button onclick="pressKey('8')">8</button>
+  <button onclick="pressKey('9')">9</button>
+  <button onclick="pressKey('/')">/</button>
+  <br>
+  <!-- Second Row -->
+  <button onclick="pressKey('4')">4</button>
+  <button onclick="pressKey('5')">5</button>
+  <button onclick="pressKey('6')">6</button>
+  <button onclick="pressKey('*')">*</button>
+  <br>
+  <!-- Third Row -->
+  <button onclick="pressKey('1')">1</button>
+  <button onclick="pressKey('2')">2</button>
+  <button onclick="pressKey('3')">3</button>
+  <button onclick="pressKey('-')">-</button>
+  <br>
+  <!-- Fourth Row -->
+  <button onclick="pressKey('0')">0</button>
+  <button onclick="pressKey('.')">.</button>
+  <button onclick="calculate()">=</button>
+  <button onclick="pressKey('+')">+</button>
+  <br>
+  <!-- Clear Button -->
+  <button onclick="clearDisplay()">C</button>
+</div>
+<div id="errMsg"></div>

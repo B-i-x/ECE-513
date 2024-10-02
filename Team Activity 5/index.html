@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Simple calculator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1>Simple calculator</h1>
+  <div class="container">
+    <div class="display">
+      <input id="equation" type = "text"></input>
+      <input id="result" type = "number" value=0 readonly></input>
+    </div>
+    <div class="keypad">
+      <div id = "leftKeys">
+        <form name = "form">
+          <div class = "row">
+            <input type = "button" value = "7">
+            <input type = "button" value = "8">
+            <input type = "button" value = "9">
+          </div>
+          <div class = "row">
+            <input type = "button" value = "4">
+            <input type = "button" value = "5">
+            <input type = "button" value = "6">
+          </div>
+          <div class = "row">
+            <input type = "button" value = "1">
+            <input type = "button" value = "2">
+            <input type = "button" value = "3">
+          </div>
+          <div class = "row">
+            <input type = "button" value = "0">
+            <input type = "button" value = ".">
+            <input type = "button" value = "=">
+          </div>
+        </form>
+      </div>
+      
+      <div id = "rightKeys">
+        <table>
+          <tr><td><button>del</button></td></tr>
+          <tr><td><button>&div;</button></td></tr>
+          <tr><td><button>&times;</button></td></tr>
+          <tr><td><button>&minus;</button></td></tr>
+          <tr><td><button>&plus;</button></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="errMsg"></div>
+  </div>
+</body>
+
+</html>
