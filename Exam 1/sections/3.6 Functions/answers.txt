@@ -1,0 +1,19 @@
+[3.6.1] (C) function myFunc() {}
+
+[3.6.2] (C) 12
+
+[3.6.3] (A) myFunc(), (C) myFunc(3, 4)
+
+[3.6.4] (C) return value;
+
+[3.6.5] (A) 20
+
+[3.6.6] (C) undefined
+
+[3.6.7] (A) let add = function(a, b) { return a + b; }, (B) let square = function(x) { return x * x; }, (C) let greet = (name) => "Hello " + name;, (D) let divide = (a, b) => { return a / b; }
+
+[3.6.8] (A) let sum = (a, b) => { return a + b; }
+
+[3.6.9] (B) 10
+
+[3.6.10] (A) Shorter syntax compared to regular functions, (B) Implicit return when only one expression is present, (C) They automatically bind `this` to the current context

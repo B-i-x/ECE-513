@@ -1,0 +1,71 @@
+---
+[3.1.1] Multiple Choice: Who created JavaScript and in what year?
+   - (A) Tim Berners-Lee, 1991
+   - (B) Brendan Eich, 1995
+   - (C) Mark Zuckerberg, 1997
+   - (D) James Gosling, 1995
+---
+
+[3.1.2] Multiple Choice: What is ECMAScript?
+   - (A) Another name for Java
+   - (B) A standardized version of JavaScript
+   - (C) A JavaScript framework for server-side development
+   - (D) A deprecated web programming language
+---
+
+[3.1.3] Multiple Choice: JavaScript uses an interpreter to execute code. What is an interpreter's main role?
+   - (A) To compile code into machine language before execution
+   - (B) To execute code without compiling it into machine language first
+   - (C) To optimize JavaScript code for web browsers
+   - (D) To compile JavaScript into assembly code
+---
+
+[3.1.4] Multi-Select: Which of the following are valid JavaScript variable declarations? (Select all that apply)
+   - (A) let score;
+   - (B) int count;
+   - (C) const PI = 3.14;
+   - (D) var name = "Alice";
+---
+
+[3.1.5] Multiple Choice: What happens when a variable is declared with `const` in JavaScript?
+   - (A) The variable's value can change
+   - (B) The variable's value cannot be reassigned
+   - (C) The variable is block-scoped and can be modified
+   - (D) The variable becomes global by default
+---
+
+[3.1.6] Multiple Choice: Which function is used to display output in a browser's console?
+   - (A) alert()
+   - (B) write()
+   - (C) console.log()
+   - (D) print()
+---
+
+[3.1.7] Multi-Select: Which of the following are valid data types in JavaScript? (Select all that apply)
+   - (A) string
+   - (B) boolean
+   - (C) number
+   - (D) char
+---
+
+[3.1.8] Multiple Choice: What is the result of the following JavaScript code?
+let x; console.log(typeof x);
+
+- (A) number
+- (B) string
+- (C) undefined
+- (D) null
+---
+
+[3.1.9] Multi-Select: Which of the following are common ways to obtain user input in JavaScript? (Select all that apply)
+- (A) console.log()
+- (B) prompt()
+- (C) alert()
+- (D) input()
+---
+
+[3.1.10] Multiple Choice: What is dynamic typing in JavaScript?
+- (A) Variables must be declared with a specific data type
+- (B) Variables can change type depending on the assigned value
+- (C) JavaScript automatically converts variables into strings
+- (D) Variables cannot be reassigned once declared

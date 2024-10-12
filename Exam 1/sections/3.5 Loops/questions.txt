@@ -1,0 +1,19 @@
+[3.5.1] (C) The `while` loop checks the condition before running the loop body, while the `do-while` loop checks the condition after.
+
+[3.5.2] (A) 1, 2, 3, Done!
+
+[3.5.3] (C) `do-while` loop, (D) Infinite loop
+
+[3.5.4] (C) The loop body will never execute.
+
+[3.5.5] (B) To exit the loop immediately
+
+[3.5.6] (A) 10, 9, 8, 7, 6
+
+[3.5.7] (A) `for (let i = 0; i < 10; i++) { console.log(i); }`, (B) `for (let x = 10; x > 0; x--) { console.log(x); }`, (C) `for (let i = 1; i <= 5; i++) { if (i === 3) break; }`
+
+[3.5.8] (A) It skips the rest of the loop body for the current iteration and jumps to the next iteration.
+
+[3.5.9] (B) 1, 2, 4, 5
+
+[3.5.10] (A) The program runs forever, causing the browser to crash.

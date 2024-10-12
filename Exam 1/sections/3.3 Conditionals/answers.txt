@@ -1,0 +1,10 @@
+3.3.1 (B) It executes a block of code if a specified condition is true
+3.3.2 (B) 25
+3.3.3 (A) `===`, (B) `!=`, (D) `<=`
+3.3.4 (A) To execute one block of code if a condition is true and another if it is false
+3.3.5 (B) "age is even" and "age is not greater than 10"
+3.3.6 (A) `x == y`, (B) `x === y`, (C) `x != y`
+3.3.7 (A) 2
+3.3.8 (A) It allows for more than two possible conditions to be evaluated
+3.3.9 (A) `&&`, (B) `||`, (D) `!`
+3.3.10 (C) 51

@@ -1,0 +1,95 @@
+---
+[3.6.1] Multiple Choice: What is the correct syntax to declare a function in JavaScript?
+
+- (A) function myFunc {}
+- (B) func myFunc() {}
+- (C) function myFunc() {}
+- (D) declare function myFunc() {}
+---
+
+[3.6.2] Multiple Choice: What is the output of the following code?
+
+function displaySum(a, b, c) {
+  let sum = a + b + c;
+  console.log(sum);
+}
+displaySum(2, 4, 6);
+
+- (A) 6
+- (B) 10
+- (C) 12
+- (D) 24
+---
+
+[3.6.3] Multi-Select: Which of the following are valid ways to call a function in JavaScript? (Select all that apply)
+
+- (A) myFunc()
+- (B) call myFunc()
+- (C) myFunc(3, 4)
+- (D) myFunc;
+---
+
+[3.6.4] Multiple Choice: Which of the following is the correct way to return a value from a function?
+
+- (A) output()
+- (B) return
+- (C) return value;
+- (D) output value;
+---
+
+[3.6.5] Multiple Choice: What is the value of `result` in the following code?
+
+function multiply(x, y) {
+  return x * y;
+}
+let result = multiply(4, 5);
+console.log(result);
+
+- (A) 20
+- (B) 9
+- (C) NaN
+- (D) undefined
+---
+
+[3.6.6] Multiple Choice: What is the default value returned by a function if there is no explicit return statement?
+
+- (A) 0
+- (B) null
+- (C) undefined
+- (D) An error is thrown
+---
+
+[3.6.7] Multi-Select: Which of the following are valid function expressions in JavaScript? (Select all that apply)
+
+- (A) let add = function(a, b) { return a + b; }
+- (B) let square = function(x) { return x * x; }
+- (C) let greet = (name) => "Hello " + name;
+- (D) let divide = (a, b) => { return a / b };
+---
+
+[3.6.8] Multiple Choice: Which statement correctly defines an arrow function that calculates the sum of two numbers?
+
+- (A) let sum = (a, b) => { return a + b; }
+- (B) let sum = a, b => return a + b;
+- (C) let sum(a, b) = a + b;
+- (D) arrow sum(a, b) => a + b;
+---
+
+[3.6.9] Multiple Choice: What will be the output of the following arrow function?
+
+let double = (x) => x * 2;
+console.log(double(5));
+
+- (A) 5
+- (B) 10
+- (C) undefined
+- (D) An error will occur
+---
+
+[3.6.10] Multi-Select: Which of the following are advantages of using arrow functions in JavaScript? (Select all that apply)
+
+- (A) Shorter syntax compared to regular functions
+- (B) Implicit return when only one expression is present
+- (C) They automatically bind `this` to the current context
+- (D) Arrow functions are faster than regular functions
+---

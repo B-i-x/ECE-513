@@ -1,0 +1,93 @@
+---
+[3.5.1] Multiple Choice: What is the key difference between a `while` loop and a `do-while` loop in JavaScript?
+
+- (A) The `while` loop always runs at least once, while the `do-while` loop might not run at all.
+- (B) The `do-while` loop checks the condition before running the loop body.
+- (C) The `while` loop checks the condition before running the loop body, while the `do-while` loop checks the condition after.
+- (D) There is no difference between `while` and `do-while`.
+
+---
+[3.5.2] Multiple Choice: What is the output of the following code?
+
+let i = 1; while (i <= 3) { 
+    console.log(i); i++; 
+    } 
+    console.log("Done!");
+
+
+- (A) 1, 2, 3, Done!
+- (B) 1, 2, 3
+- (C) 1, 2, 3, 4, Done!
+- (D) Done!
+
+---
+[3.5.3] Multi-Select: Which of the following loops always execute at least once? (Select all that apply)
+
+- (A) `while` loop
+- (B) `for` loop
+- (C) `do-while` loop
+- (D) Infinite loop
+
+---
+[3.5.4] Multiple Choice: What happens if the condition in a `for` loop is initially false?
+
+- (A) The loop runs infinitely.
+- (B) The loop will execute once.
+- (C) The loop body will never execute.
+- (D) The condition will be ignored.
+
+---
+[3.5.5] Multiple Choice: What is the purpose of the `break` statement in a loop?
+
+- (A) To skip to the next iteration of the loop
+- (B) To exit the loop immediately
+- (C) To stop the loop and re-enter after one iteration
+- (D) To continue the loop from the last point
+
+---
+[3.5.6] Multiple Choice: What is the output of the following code?
+let count = 10; do { 
+    console.log(count); count--; 
+    } while (count > 5);
+
+- (A) 10, 9, 8, 7, 6
+- (B) 9, 8, 7, 6, 5
+- (C) 10, 9, 8, 7, 6, 5
+- (D) The code will not execute.
+
+---
+[3.5.7] Multi-Select: Which of the following are valid uses of the `for` loop in JavaScript? (Select all that apply)
+
+- (A) `for (let i = 0; i < 10; i++) { console.log(i); }`
+- (B) `for (let x = 10; x > 0; x--) { console.log(x); }`
+- (C) `for (let i = 1; i <= 5; i++) { if (i === 3) break; }`
+- (D) `for (let i = 0; i++) { console.log(i); }`
+
+---
+[3.5.8] Multiple Choice: What does the `continue` statement do in a loop?
+
+- (A) It skips the rest of the loop body for the current iteration and jumps to the next iteration.
+- (B) It exits the loop immediately.
+- (C) It stops the loop temporarily and then resumes from where it left off.
+- (D) It restarts the loop from the beginning.
+
+---
+[3.5.9] Multiple Choice: What is the output of the following code?
+for (let i = 1; i <= 5; i++) { if (i === 3) continue; console.log(i); }
+
+- (A) 1, 2, 3, 4, 5
+- (B) 1, 2, 4, 5
+- (C) 1, 2, 3
+- (D) 3, 4, 5
+
+---
+[3.5.10] Multiple Choice: What is the effect of an infinite loop in JavaScript?
+
+- (A) The program runs forever, causing the browser to crash.
+- (B) The program runs forever, but the browser continues to respond.
+- (C) The loop stops after a fixed number of iterations.
+- (D) The loop automatically terminates after 1000 iterations.
+
+---
+
+

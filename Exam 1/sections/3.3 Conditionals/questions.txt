@@ -1,0 +1,95 @@
+---
+[3.3.1] Multiple Choice: Which of the following best describes the purpose of an if statement in JavaScript?
+   - (A) It repeats a block of code as long as a condition is true
+   - (B) It executes a block of code if a specified condition is true
+   - (C) It randomly chooses whether to execute a block of code
+   - (D) It declares a variable with a default value
+---
+
+[3.3.2] Multiple Choice: What is the final value of `fee` in the following code?
+let fee = 30; let age = 12; if (age < 18) { fee -= 5; } if (age < 5) { fee = 0; } console.log(fee);
+- (A) 30
+- (B) 25
+- (C) 0
+- (D) 5
+---
+
+[3.3.3] Multi-Select: Which of the following are valid comparison operators in JavaScript? (Select all that apply)
+- (A) `===`
+- (B) `!=`
+- (C) `><`
+- (D) `<=`
+---
+
+[3.3.4] Multiple Choice: What is the purpose of an `if-else` statement in JavaScript?
+- (A) To execute one block of code if a condition is true and another if it is false
+- (B) To execute multiple blocks of code if multiple conditions are true
+- (C) To compare two variables and return a Boolean value
+- (D) To loop through an array of values
+---
+
+[3.3.5] Multiple Choice: Given the following code, what will be the output?
+let age = 6; 
+if (age % 2 == 0) { 
+    console.log("age is even"); 
+} else { 
+    console.log("age is odd"); } 
+    
+if (age > 10) { 
+    console.log("age is greater than 10"); 
+} else { 
+    console.log("age is not greater than 10"); 
+    }
+
+- (A) "age is odd" and "age is greater than 10"
+- (B) "age is even" and "age is not greater than 10"
+- (C) "age is odd" and "age is not greater than 10"
+- (D) "age is even" and "age is greater than 10"
+---
+
+[3.3.6] Multi-Select: Which of the following are valid ways to compare equality in JavaScript? (Select all that apply)
+- (A) `x == y`
+- (B) `x === y`
+- (C) `x != y`
+- (D) `x <> y`
+---
+
+[3.3.7] Multiple Choice: What is the result of the following code?
+let score = 2; 
+if (score === "2") { 
+    score = 10; } console.log(score);
+- (A) 2
+- (B) 10
+- (C) "2"
+- (D) Error
+---
+
+[3.3.8] Multiple Choice: What does the `else-if` structure provide that a basic `if-else` structure does not?
+- (A) It allows for more than two possible conditions to be evaluated
+- (B) It speeds up the execution of code
+- (C) It allows for a fallback condition when `else` is not enough
+- (D) It enables loops within conditionals
+---
+
+[3.3.9] Multi-Select: Which of the following logical operators can be used to combine multiple conditions in JavaScript? (Select all that apply)
+- (A) `&&`
+- (B) `||`
+- (C) `!=`
+- (D) `!`
+---
+
+[3.3.10] Multiple Choice: What is the final value of `numItems` in the following code?
+let bonus = 15; 
+let numItems = 44; 
+if (bonus < 12) { 
+    numItems += 3; 
+} else { 
+    numItems += 6; 
+} numItems++;
+
+- (A) 44
+- (B) 50
+- (C) 51
+- (D) 53
+
+

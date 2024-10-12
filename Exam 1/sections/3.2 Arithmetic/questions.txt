@@ -1,0 +1,73 @@
+---
+[3.2.1] Multiple Choice: Which arithmetic operator in JavaScript is used for exponentiation?
+   - (A) `^`
+   - (B) `**`
+   - (C) `exp()`
+   - (D) `++`
+---
+
+[3.2.2] Multiple Choice: What is the result of the following expression in JavaScript?
+let x = 5 % 2;
+- (A) 0
+- (B) 1
+- (C) 2
+- (D) 5
+---
+
+[3.2.3] Multi-Select: Which of the following are valid arithmetic operations in JavaScript? (Select all that apply)
+- (A) `10 + 2`
+- (B) `5 * 3`
+- (C) `8 / "4"`
+- (D) `"5" - 2`
+---
+
+[3.2.4] Multiple Choice: What does the following compound assignment operation do?
+x += 2;
+- (A) Adds 2 to x and stores the result in x
+- (B) Subtracts 2 from x and stores the result in x
+- (C) Multiplies x by 2 and stores the result in x
+- (D) Divides x by 2 and stores the result in x
+---
+
+[3.2.5] Multiple Choice: Which of the following is the modulus (remainder) operator in JavaScript?
+- (A) `**`
+- (B) `//`
+- (C) `%`
+- (D) `++`
+---
+
+[3.2.6] Multiple Choice: What is the result of the following expression?
+2 ** 3
+- (A) 6
+- (B) 8
+- (C) 9
+- (D) 12
+---
+
+[3.2.7] Multi-Select: Which of the following are valid compound assignment operators in JavaScript? (Select all that apply)
+- (A) `+=`
+- (B) `-=`
+- (C) `**=`
+- (D) `//=`
+---
+
+[3.2.8] Multiple Choice: What happens when you try to add a number and a string in JavaScript?
+- (A) The number is converted to a string, and concatenation occurs
+- (B) The string is converted to a number, and addition occurs
+- (C) An error is thrown
+- (D) The result is always NaN (Not a Number)
+---
+
+[3.2.9] Multiple Choice: Which JavaScript function is used to convert a string to a number?
+- (A) `parseString()`
+- (B) `convertNum()`
+- (C) `parseInt()`
+- (D) `toNumber()`
+---
+
+[3.2.10] Multi-Select: Which arithmetic operations will automatically convert a string to a number if one operand is a string? (Select all that apply)
+- (A) `*`
+- (B) `%`
+- (C) `/`
+- (D) `+`
+
