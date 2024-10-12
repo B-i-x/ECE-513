@@ -1,0 +1,49 @@
+---
+[1.6.1] True/False: An unordered list in HTML is used when the order of the items is important.
+---
+
+[1.6.2] Multiple Choice: Which HTML element is used to create an unordered list?
+   - (A) <ol>
+   - (B) <ul>
+   - (C) <li>
+   - (D) <list>
+---
+
+[1.6.3] True/False: List items within an unordered list are automatically numbered by the browser.
+---
+
+[1.6.4] Multiple Choice: What is the correct HTML element for creating a list item?
+   - (A) <item>
+   - (B) <li>
+   - (C) <listitem>
+   - (D) <ul>
+---
+
+[1.6.5] Multiple Choice: Which attribute would you use to change the bullet style in an unordered list using CSS?
+   - (A) list-style-type
+   - (B) list-bullet-style
+   - (C) bullet-style
+   - (D) type-style
+---
+
+[1.6.6] True/False: It is valid HTML to nest an unordered list within an ordered list.
+---
+
+[1.6.7] Multiple Choice: How can you start an ordered list at a number other than one?
+   - (A) Using the "start" attribute with the desired number
+   - (B) Using the "begin" attribute with the desired number
+   - (C) Using the "first" attribute with the desired number
+   - (D) It is not possible to start at a number other than one
+---
+
+[1.6.8] True/False: The <ol> element's numbering can be changed to alphabetical or Roman numerals using the "type" attribute.
+---
+
+[1.6.9] Multiple Choice: What is the default list item marker for an unordered list?
+   - (A) Numbers
+   - (B) Dashes
+   - (C) Bullets
+   - (D) Squares
+---
+
+[1.6.10] True/False: The <li> element can be used outside of <ul> or <ol> elements.

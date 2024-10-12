@@ -1,0 +1,10 @@
+1.6.1 False
+1.6.2 (B) <ul>
+1.6.3 False
+1.6.4 (B) <li>
+1.6.5 (A) list-style-type
+1.6.6 True
+1.6.7 (A) Using the "start" attribute with the desired number
+1.6.8 True
+1.6.9 (C) Bullets
+1.6.10 False
