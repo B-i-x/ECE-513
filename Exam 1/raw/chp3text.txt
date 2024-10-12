@@ -1,0 +1,4577 @@
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+1 of 119 2024-10-12, 4:01 p.m.
+3.1 Syntax and variables
+Background
+In 1995, Brendan Eich created JavaScript so the Netscape Navigator browser could dynamically
+respond to user events. Ex: The web page's content could change when the user clicked a button or
+hovered over an image.
+JavaScript was standardized by Ecma International in 1997 and called ECMAScript. Ecma
+International continues to improve ECMAScript, releasing a new version each year. JavaScript is an
+implementation of the ECMAScript specification.
+Today, JavaScript is one of the most popular programming languages. JavaScript is supported by
+every major web browser and makes web applications like Gmail and Google Maps possible.
+JavaScript is also popular outside the web browser. Ex: Node.js, which runs JavaScript, is a popular
+technology for creating server-side web applications.
+JavaScript is executed by an interpreter. An interpreter executes programming statements without
+first compiling the statements into machine language. Modern JavaScript interpreters (also called
+JavaScript engines) use just-in-time (JIT) compilation to compile the JavaScript code at execution
+time into another format that can be executed quickly.
+ECMAScript name
+The name "ECMAScript" was a compromise between Netscape, Microsoft, and other
+organizations involved in the standardization of JavaScript. Brendan Eich once
+commented that "ECMAScript was always an unwanted trade name that sounds like
+a skin disease." Despite ECMAScript's similarity to eczema (a group of related skin
+diseases), the name has stuck.
+Quote source Archived email (Oct 3, 2006).
+I PARTICIPATION I . ACTIVITY 3.1.1: JavaScript background.
+1) ECMAScript and JavaScript are the
+same thing.
+0 True
+□
+0
+let score
+score = 2
+let maxValue = 5; maxValue
+// number (initialized)
+memory
+numSongs 5
+numAlbums 20
+hitCount 10
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+2 of 119 2024-10-12, 4:01 p.m.
+0 False
+2) JavaScript is only used for programs
+that run in a web browser.
+0 True
+0 False
+3) All browsers must use the same
+JavaScript engine.
+0 True
+0 False
+4) JavaScript and Java are the same
+programming language.
+0 True
+0 False
+Variables
+A variable is a named container that stores a value in memory. A variable declaration is a
+statement that declares a new variable with the keyword /et followed by the variable name. Ex:
+declares a variable named score.
+0
+0
+0
+A variable may be assigned a value after being declared. An assignment assigns a variable with a
+value, like . A variable may also be assigned a value on the same line when the variable
+is declared, which is called initializing the variable. Ex:
+to 5.
+initializes
+A variable may be assigned a value without first declaring the variable, but good practice is to always
+declare a variable before assigning a value to the variable.
+IAP ACRTTIVICITIPYA TION I 3 .1 .2 : De c Ia ri.n g vari.a bl es an d assi.g ni.n g va Iu es.
+II Declaring a variable
+let numSongs ;
+II Variable is assigned a number
+numSongs = 5 ;
+II Variable is declared and assigned a nu
+l et numAlbums = 20 ;
+□
+mt
+let function while
+// Variable may be assigned a value without first being declared
+hitCount = 10;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+3 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+// Declaring a variable
+let numSongs;
+// Variable is assigned a number
+numSongs = 5;
+// Variable is declared and assigned a number (initialized)
+let numAlbums = 20;
+// Variable may be assigned a value without first being declared
+hitCount = 1 0;
+The first step runs: let numSongs;. The variable numSongs gets allocated a block of memory.
+The second step runs: numSongs = 5;. The block of memory that was allocated to numSongs
+now stores the value 5.
+The third step runs: let numAlbums = 20. The variable numAlbums gets allocated memory and
+assigned to 20 at the same time.
+The fourth step runs: hitCount = 10. The allocation and assignment of memory is shown just like
+the third step but with variable hitCount and value 10.
+Animation captions:
+1. The numSongs variable is declared with the "let" keyword.
+2. numSongs is assigned with 5.
+3. numAlbums is initialized with 20.
+4. When hitCount is assigned with 10, hitCount is implicitly declared. Good practice is to
+explicitly declare all variables with "let".
+A name created for an item like a variable is called an identifier. JavaScript imposes the following
+rules for identifiers:
+• An identifier can be any combination of letters, digits, underscores, or$.
+• An identifier may not start with a digit.
+• An identifier may not be a reserved word like , or
+lastPrice LastPrice last_price
+const slicesPerPizza = 8;
+slicesPerPizza
+var
+$totalPoints
+totalPoints
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+4 of 119 2024-10-12, 4:01 p.m.
+A JavaScript coding convention is to name JavaScript variables with camel casing, where the
+identifier starts with a lowercase letter, and subsequent words begin with a capital letter. Ex:
+is preferred over or
+A constant is an initialized variable whose value cannot change. A JavaScript constant is declared
+with the const keyword. Ex: creates a constant
+that is always 8.
+var keyword
+A variable may also be declared with the keyword, which is covered elsewhere in
+this material.
+I PARTICIPATION I
+ACTIVITY 3.1.3: Declaring and naming variables.
+7) Which statement declares the
+variable sum without assigning a
+value to sum?
+0 sum;
+0 let sum;
+0 sum = O;
+2) Which identifier is illegally named?
+0 star destroyer
+0 ADDRESS
+0 $save
+0 9to5
+3) Which variable is named with the
+preferred JavaScript naming
+conventions?
+0 total points -
+0
+0
+4) Which statement declares a constant
+□
+0
+0
+0
+0
+x = 5; x = "test"; x
+let name = "Naya";
+let quote = 'He asked, "Shall
+we play a game?"';
+let highScore = 950;
+let pi = 3.14;
+let hungry = true;
+let thirsty = false;
+let teams = ["Broncos",
+"Cowboys", "49ers"];
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+5 of 119 2024-10-12, 4:01 p.m.
+for Earth's gravity?
+O let earthGravity
+9. 8;
+const earthGravity 0 9. 8;
+0 const earthGravity;
+5) Which code segment contains an
+error?
+0 let numLives = 9 ;
+numLives = 8 ;
+const numLives 9;
+Q let livesLeft
+numLives ;
+const numLives 9;
+Q numLives = 10 ;
+Data types
+0
+Variables are not explicitly assigned a data type. JavaScript uses dynamic typing, which determines
+a variable's type at run-time. A variable can be assigned a value of one type and re-assigned a value
+of another type. Ex: assigns with a number type, then a string type.
+Table 3.1.1: Common JavaScript data types.
+Data type Description Example
+f--
+string
+Group of characters delimited with
+'single' or "double" quotes
+f--
+Numbers with or without decimal uvv.1-,;;:;; - ../-...IV f number --. 1 ,1 -
+places
+boolean true or false
+array List of items
+let movie = { title:"Sing",
+rating:"PG" };
+let message;
+let book = null;
+y = false;
+x = y;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+6 of 119 2024-10-12, 4:01 p.m.
+Data type Description
+object
+Collection of property and value
+pairs
+undefined
+Variable that has not been
+assigned a value
+null
+Intentionally absent of any object
+value
+I PARTICIPATION I . ACTIVITY 3.1.4: Variable data types.
+1)
+2)
+3)
+What is the data type of
+population?
+l et popul at i on 650000 ;
+0 int
+0 string
+0 number
+What is the data type of z?
+l et z ;
+0 undefined
+0 string
+0 number
+What is the data type of x?
+0 string
+0 boolean
+0 number
+4) What is syntactically wrong with the
+following code?
+Example
+= n11l l •
+□
+0
+0
+0
+0
+// /* */
+// line
+/* Multi-line
+// No semicolon is required
+let totalLives = 3
+// Two statements on the same line require a
+semicolon
+totalPoints = 5; totalLives = 2
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+7 of 119 2024-10-12, 4:01 p.m.
+name = 'Danny O' Sullivan ' ;
+O name is assigned a value
+without being declared first.
+Variables may not be assigned
+0 strings delimited with single
+quotes.
+O The single quotation mark in
+O'Sullivan is an error.
+Comments and semicolons
+A comment is any text intended for humans that is ignored by the JavaScript interpreter. JavaScript
+uses the and operators to produce comments in code.
+Figure 3.1.1: Comments.
+II Single 1
+c omment
+I* Multi -li
+comment
+*I
+JavaScript does not require that statements be terminated with a semicolon. Only when two
+statements reside on the same line must a semicolon separate the two statements. Good practice
+is to avoid placing two statements on the same line. Some developers prefer to use semicolons at
+the end of statements, and others do not. Good practice is to consistently use semicolons or not
+throughout the code.
+Figure 3.1.2: Using semicolons.
+l et totalPoints = 10 ;
+II
+prompt()
+prompt()
+null
+);
+name "Becky"
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+8 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I
+ACTIVITY 3.1.5: Detect the error. □
+Indicate if the statements contain an error or not.
+1) /* a i s ass i gned 2 0
+a = 2 ;
+0 Error
+0 No error
+2) 3 . 12 = pi ; 0
+0 Error
+0 No error
+3) x = 10 ; l et y 20 ; 0
+0 Error
+0 No error
+Input and output
+In a web browser, a JavaScript program may obtain text input from the user with the
+function. The prompt() function prompts the user with a dialog box that allows the user to type a
+single line of text and press OK or Cancel. The function returns the string the user typed
+or if the user pressed Cancel.
+Output may be produced using the function console.log(), which displays text or numbers in the
+console. The console is a location where text output is displayed. Web browsers have a console
+(accessible from the browser's development tools) that displays output from code the browser
+executes. This chapter's activities display the console output in the web page.
+I PARTICIPATION I 3 1 6 p . f . d d. I .
+ACTIVITY . . : rompting or input an Isp ayIng output.
+I I Display the prompt dialog box 7 l et name = prompt ( "What is your name? "
+II Output to the console
+console . log ("Hello, " + name + "!" );
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+9 of 119 2024-10-12, 4:01 p.m.
+L [- ___[_ _] _[ _] J
+Animation content:
+The following code is displayed:
+// Display the prompt dialog box
+let name= prompt("What is your name?");
+// Output to the console
+console.log("Hello, "+name+ "I");
+[ ]
+The first step of the animation runs: let name= prompt("What is your name?");. This opens a
+dialog box that displays What is your name? and a place to input text below.
+The second step shows the string Becky being input for the dialog box.
+The third step shows the variable name getting allocated memory and getting assigned the value
+Becky.
+The fourth step runs: console.log("Hello," +name+"!"); and displays Hello, Beckyl in the console
+Animation captions:
+1. The prompt() function displays a dialog box with the given prompt text.
+2. The user types her name and presses the OK button.
+3. The name variable is assigned with the entered text.
+4. console.log() outputs "Hello,", then the value of the name variable, then "I" to the console.
+I PARTICIPATION I ACTIVITY 3.1 .7: prompt() and console.log().
+1) Write the code to prompt the
+user with the question
+variable and retrieve the user's
+age.
+question = "How old are
+you?" ;
+age =
+□
+0
+tvShow
+tvShow null
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+10 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+2) Write the code to display "You
+are X", where Xis the value of
+the age variable.
+age = 21;
+console . log (
+) ;
+Check Show answer
+I PARTICIPATION I . . ACTIVITY 3.1 .8: JavaScript practice.
+The JavaScript code below initializes the variable to a popular TV show. Then, an
+if-else statement displays a message in the console if is , otherwise the
+value of tvshow is displayed in the console. Change the code to prompt the user for the
+user's favorite TV show. Then, display"_ is your favorite TV show!" in the console. Press
+"Run JavaScript" to run your code.
+Note: The console will display an error message if the JavaScript interpreter detects a
+syntax error. A syntax error is the incorrect typing of a programming statement. Ex:
+Forgetting to place "quotes" around a string value is a syntax error.
+I CHALLENGE I ACTIVITY 3.1.1: prompt() and console.log().
+5707 04.2065416 qx3zqy7
+Exploring further:
+• A Brief Historyi of JavaScrigt from authO
+• JavaScriQt Lexical Grammar from MDN
+3.2 Arithmetic
+0
+□
+□
+y = 2 * (x + 1)
++
+// x = 3
+x = 1 + 2;
+// x = 1
+x = 2 - 1;
+// x = 6
+x = 2 * 3;
+// x = 0.5
+x = 1 / 2;
+%
+// x = 0
+x = 4 % 2;
+**
+// x = 2 * 2 * 2 =
+8
+x = 2 ** 3;
+++
+// Same as x = x +
+1
+x++;
+--
+// Same as x = x -
+1
+x--;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+11 of 119 2024-10-12, 4:01 p.m.
+Arithmetic operators
+An expression is a combination of items like variables, numbers, operators, and parentheses, that
+evaluates to a value like 2 * (x + 1 ). Expressions are commonly used on the right side of an
+assignment statement, as in
+An arithmetic operator is used in an expression to perform an arithmetic computation. Ex: The
+arithmetic operator for addition is . JavaScript arithmetic operators are summarized in the table
+below.
+Table 3.2.1: JavaScript arithmetic operators.
+Arithmetic
+Description Example
+operator
++ Add
+- Subtract
+* Multiply
+I Divide
+Modulus
+(remainder)
+Exponentiation
+= Increment
+Decrement
+() ** * /
+% + - 7 + 3 * 2
+* + (7 + 3) * 2 ()
+*
+points = 10;
+points--;
+points = 6;
+points++;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+12 of 119 2024-10-12, 4:01 p.m.
+Expressions are computed using the same rules as basic arithmetic. Expressions in parentheses
+have highest precedence, followed by exponentiation ( ). Multiplication ( ), division ( ), and
+modulus ( ) have precedence over addition ( ) and subtraction ( ). Ex: The expression
+= 7 + 6 = 13 because has precedence over , but
+precedence over
+I PARTICIPATION I . . . ACTIVITY 3.2. 7: Arithmetic practice.
+What is points at the end of each code segment?
+1) points = 3 + 5 * 2 ;
+Check
+2) points
+points
+5 ;
+Check
+Show answer
+4 ;
+(3 + points ) %
+Show answer
+3) scal e = 5 ;
+points = 3 ** 2 * scale ;
+Check Show answer
+4)
+Check Show answer
+5)
+= 7 O * 2 = 20 because has
+□
+0
+0
+0
+0
+0
+// Same as x = x +
+2
+x += 2;
+// Same as x = x -
+2
+x -= 2;
+// Same as x = x *
+3
+x *= 3;
+// Same as x = x /
+3
+x /= 3;
+// Same as x = x %
+4
+x %= 4;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+13 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+Compound assignment operators
+A compound assignment operator combines an assignment statement with an arithmetic
+operation. Common JavaScript compound assignment operators are summarized in the table
+below.
+Table 3.2.2: Compound assignment operators.
+Assignment
+Description Example
+operator -
++= Add to
+-
+Subtract - =
+from
+-
+*= Multiply by
+-
+/= Divide by
+-
+%= Mod by
+I PARTICIPATION I . . . ACTIVITY 3.2.2: Practice with compound assignment operators. □
+1) What compound assignment 0
+points
+points = 5;
+points ___ 2;
+points
++
+"back" + "pack" "backpack"
++
++
++
++
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+14 of 119 2024-10-12, 4:01 p.m.
+2)
+operator makes
+become 2.5?
+Check Show answer
+What is ?
+points = 2 ;
+points *= 3 + l ;
+Check Show answer
+0
+3) What is p oint s? 0
+points = 4 ;
+points %= 2 ;
+Check Show answer
+Arithmetic with numbers and strings
+The operator is also the string concatenation operator. String concatenation appends one string
+after the end of another string, forming a single string. Ex: is
+The JavaScript interpreter determines if means "add" or "concatenate" based on the operands on
+either side of the operator. An operand is the value or values that an operator works on, like the
+number 2 or variable x.
+• If both operands are numbers, performs addition. Ex: 2 + 3 = 5.
+• If both operands are strings, performs string concatenation. Ex: "2" + "3" = "23".
+• If one operand is a number and the other a string, performs string concatenation. The
+number is converted into a string, and the two strings are concatenated into a single string.
+Ex: "2" + 3 = "2" + "3" = "23".
+For all other arithmetic operators, combining a number and a string in an arithmetic expression
+parseInt("5") + 2 = 5 + 2 = 7 parseFloat("2.4") + 6 = 2.4 + 6 = 8.4
+2 * 3 = 6
+2 * "3" =
+2 * 3 = 6
+string to
+number
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+15 of 119 2024-10-12, 4:01 p.m.
+converts the string operand to a number and then performs the arithmetic operation. Ex: "2" * 3 = 2
+* 3 = 6.
+I PARTICIPATION I 3.2.3: Type conversion in arithmetic operations.
+ACTIVITY
+number to
+string
+Animation content:
+2 + 3 = 5
+2 + "3" =
+"2" + "3" = "23"
+Step 1 shows an example of a number+ number expression:
+2 + 3 = 5.
+Step 2 shows an example of a number+ string expression:
+2 + "3" =
+"2" + "3" = "23".
+□
+The number 2 gets automatically converted to a string then the string 3 is concatenated to the
+converted string 2.
+Step 3 shows an example of the number* number expression:
+2 * 3 = 6.
+Step 4 shows an example of a number* string expression:
+2 * "3" =
+2 * 3 = 6.
+The string 3 gets automatically converted to a number and multiplied with the number 2.
+Animation captions:
+1. number+ number= number
+2. number+ string = string
+3. number* number= number
+4. number* string = number
+The JavaScript functions parselnt() and parseF/oat() convert strings into numbers. Ex:
+,and
+parseInt() parseFloat() NaN
+parseInt("dog") NaN
+true false
+isNaN()
+isNaN("dog") true
+isNaN("123") false
+secretCode =
+parseFloat("3.2") +
+parseInt("2.7");
+secretCode = 3 +
+parseInt("pig");
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+16 of 119 2024-10-12, 4:01 p.m.
+If or are given a non-number to parse, the functions return
+NaN is a JavaScript value that means Not a Number. Ex: is
+The JavaScript function isNaN() returns if the argument is not a number, otherwise.
+When the argument is non-numeric, the function attempts to convert the argument into a
+number. Ex: is because the non-numeric value "dog" cannot be converted
+into a number. But is because "123" can be converted into the number 123.
+I PARTICIPATION I 3 2 4 A . h . . . h b d .
+ACTIVITY . . : rit metIc practice wit num ers an strings.
+What is s e c retCode at the end of each code segment? Type "quotes" around strings. If
+not a number, type NaN.
+1) secretCode = 10 + "ten" ;
+Check Show answer
+2) secretCode " 3 " I " 6 " ;
+Check Show answer
+3) secretCode " 3 " + 5 * 2 ;
+Check Show answer
+4)
+Check Show answer
+5)
+□
+0
+0
+0
+0
+0
+{ }
+// to execute when condition is
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+17 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+6) I I true = 1 , false
+secretCode = 2 +
+isNaN ( "oink" ) +
+is NaN ( "5" ) ;
+0
+Check Show answer
+I CHALLENGE I . . ACTIVITY 3.2.1 : Arithmetic operators.
+570104.2065416.qx3zqy7
+Exploring further:
+• Arithmetic operators from M DN
+• MDN documentation for Qarselnt()_, QarseFloat()_, and isNaNO_
+3.3 Conditionals
+If statement
+An if statement executes a group of statements if a condition is true. Braces
+0
+□
+surround the
+group of statements. Good practice is to indent statements in braces using a consistent number of
+spaces. This material indents 3 spaces.
+Construct 3.3.1: if statement.
+if (con d itio n ) {
+II Statements to execu1
+true
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+18 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION
+ACTIVITY I 3.3.1: Evaluating if statements.
+let fee = 30 ;
+let age = 12 ;
+if (age < 18 ) {
+fee -= 5;
+if (age < 5)
+fee = 0 ;
+consol e . l og ( "fee i s$" + fee );
+Animation content:
+The following code is displayed:
+let fee= 30;
+let age= 12;
+if (age< 18){
+fee-= 5;
+}
+if(age< 5){
+fee= 0;
+}
+console.log("fee is$"+ fee);
+fee ~
+aget=j
+[fee is- $25 __]
+□
+Variables fee and age are allocated memory and initialized with values 25 and 12, respectively.
+The string fee is $25 is displayed without quotes in the console after the code is run.
+Animation captions:
+1. Variable fee is assigned 30, and age is assigned 12.
+2. Evaluate the condition: 12 < 18.
+3. 12 < 18 is true, so the block under "if" executes, and fee is assigned 30 - 5 = 25.
+4. Evaluate the condition: 12 < 5.
+5. 12 < 5 is false, so the block under "if" does not execute. Variable fee remains 25.
+// to execute when condition is
+// to execute when condition is
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+19 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I
+ACTIVITY 3.3.2: If statement.
+What is the final value of numitems?
+1) bonus = 19 ;
+numitems = 1 ;
+if (bonus > 10 )
+numitems = numitems +
+3 ;
+Check Show answer
+□
+0
+2) bonus = 0 ; 0
+numitems = 1 ;
+if (bonus > 10 )
+numitems = numitems +
+3 ;
+Check Show answer
+If-else statement
+An if-else statement executes a block of statements if the statement's condition is true, and
+executes another block of statements if the condition is false.
+Construct 3.3.2: if-else statement.
+i f (condi t i on ) {
+II statements to execu1
+true
+e l se {
+II statements to execu1
+false
+lS
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+20 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I 3.3.3: Evaluating if-else statements.
+ACTIVITY
+let age = 6 ;
+if (age % 2 == 0 )
+c ons ole . l o g ( "age is even " ) ;
+else {
+c ons ole . l o g ( "age i s odd" ) ;
+if (age > 10 ) {
+cons ole . l o g ( "age is greater than 10 " ) ;
+else {
+cons ole . l o g ( "age is not greater than 10 " );
+p
+Animation content:
+The following code is displayed:
+let age= 6;
+if (age % 2 == 0) {
+console.log("age is even");
+}
+else {
+console.log("age is odd");
+}
+if (age > 10) {
+console.log("age is greater than 1 0");
+}
+else {
+console.log("age is not greater than 1 0");
+}
+□
+age is even
+age is not greater than 10
+After the first line runs, the variable age is shown in memory initialized with value 6. Step 3 runs
+console.log("age is even"); and the string age is even is displayed in the console. Step 5 runs
+console.log("age is not greater than 1 0"); and the string age is not greater than 1 0 is displayed on
+a new line in the console.
+Animation captions:
+1. Variable age is assigned 6.
+2. Evaluate the condition: 6 % 2 == 0.
+bonus = 15;
+numItems = 44;
+if (bonus < 12) {
+numItems = numItems +
+3;
+}
+else {
+numItems = numItems +
+6;
+}
+numItems = numItems + 1;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+21 of 119 2024-10-12, 4:01 p.m.
+3. 0 == 0 is true, so the block under "if" executes.
+4. Evaluate the condition: age> 10.
+5. 6 > 10 is false, so the block under "else" executes.
+I PARTICIPATION I
+ACTIVITY 3.3.4: If-else statements.
+What is the final value of numitems?
+1) bonus = 5 ;
+if (bonus < 12 ) {
+numitems = 100 ;
+else {
+numitems 200 ;
+Check Show answer
+2) bonus = 12 ;
+if (bonus < 12 ) {
+numitems = 100 ;
+else {
+numitems 200 ;
+Check Show answer
+0
+0
+0
+3) 0
+// Braces not required around single
+statements
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+22 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+4) bonus = 5 ;
+if (bonus < 12 ) {
+bonus = bonus + 2 ;
+numitems = 3 * bonus ;
+else {
+numitems bonus + 10 ;
+Check Show answer
+Using {} around if and else blocks
+JavaScript does not require braces { J around if or else blocks with a single
+statement. Good practice is to always use braces, which results in more readable
+code that is less susceptible to logic errors.
+II Bra ces n o t if (vote == "M" )
+memberCount++;
+else
+nonMemberCount++;
+Comparison operators
+0
+If and if-else statements commonly use comparison operators. A comparison operator compares
+two operands and evaluates to a Boolean value, meaning either true or false.
+Table 3.3.1: Comparison operators.
+Comparison
+operator
+Name Example
+==
+2 == 2 //
+true
+"bat" == "bat" //
+true
+!=
+2 != 3 //
+true
+"bat" != "zoo" //
+true
+===
+2 === 2 // true
+"2" === 2 // false
+2 !== 2 // false
+"2" !== 2 // true
+2 < 3 //
+true
+"bat" < "zoo" //
+true
+2 <= 3 //
+true
+"bat" <= "bat" //
+true
+3 > 2 //
+true
+"zoo" > "bat" //
+true
+3 >= 2 //
+true
+"zoo" >= "zoo" //
+true
+== !=
+3 == "3"
+===
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+23 of 119 2024-10-12, 4:01 p.m.
+Comparison
+Name Example
+operator
+Equality
+, '
+I I
+Inequality
+Identity
+-
+1-- Non-identity
+-
+< Less than
+-
+<= Less than or equal
+> Greater than
+-
+Greater than or
+>=
+equal
+When the equality operator and inequality operator compare a number and a string, the
+string is first converted to a number and then compared. Ex:
+converted to 3 before the comparison, and 3 and 3 are the same.
+is true because "3" is
+The identity operator performs strict equality. Two operands are strictly equal if the operands'
+3 === 3
+"3" === 3
+!== "3" !== "3"
+"3" !== 3
+2 < "12"
+"cat" "dog"
+= == ===
+if (name = "Sue") name name
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+24 of 119 2024-10-12, 4:01 p.m.
+data types and values are equal. Ex: is true because both operands are numbers and the
+same value, but is false because "3" is a string, and 3 is a number. The non-identity
+operator is the opposite of the identity operator. Ex: is false because both
+operands are the same type and value, but is true because "3" is a string, and 3 is a
+number.
+Other comparison operators also convert a string to a number when comparing a string with a
+number. Ex: is true because 2 is less than the number 12. When comparing two strings,
+JavaScript uses Unicode values to compare characters. Ex:
+has a smaller Unicode value than "d".
+• <= rlno" is true because "c"
+A common error when comparing two values for equality is to use a single instead of or
+Ex: assigns with "Sue" instead of asking if equals "Sue".
+What is Unicode?
+Unicode is a computing industry standard that assigns a unique number to
+characters in over one hundred different languages, including multiple symbol sets
+and emoji. The Unicode numbers for capital A-Z range from 65 to 90, and lowercase
+a-z range from 97 to 122.
+I PARTICIPATION I . ACTIVITY 3.3.5: Comparison operators.
+Is the if statement true or false?
+1) score = 2 ;
+if (score == "2" )
+score = 10 ;
+0 true
+0 false
+2) score = 2 ;
+if (score = "5 0 " )
+score = 100 ;
+0 true
+0 false
+□
+0
+0
+score = 2;
+if (score === "2") {
+score = 10;
+}
+status = "10";
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+25 of 119 2024-10-12, 4:01 p.m.
+3)
+4)
+5)
+0 true
+0 false
+if (status > 5 )
+length = 0 ;
+0 true
+0 false
+status = " good" ;
+if (status > "bad" )
+bonus
+0 true
+0 false
++= 2 ;
+6) status = " charge " ;
+if (status <= " chance " )
+bonus += 2 ;
+0 true
+0 false
+7) l owerCaseLetters = "abc " ;
+upperCaseLetters = "ABC " ;
+if (l owerCaseLetters >
+upperCaseLetters ) {
+l ength++;
+0 true
+0 false
+Nested statements and else-if statement
+0
+0
+0
+0
+0
+If and else block statements can include any valid statements, including another if or if-else
+statement. An if or if-else statement that appears inside another if or if-else statement is called a
+nested statement.
+I PARTICIPATION I n
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+26 of 119 2024-10-12, 4:01 p.m.
+I ACTIVITY
+3.3.6: Nested if-else statement example.
+let userAge = 18 ;
+if (userAge <= 12 )
+console . l og ("Enjoy your early years. " );
+else {
+cons ole . l og ("You are at least 13. " );
+if (u s e rAge >= 18 ) {
+cons ole . l og ( "You are old enough to vote ." );
+else {
+cons ole . l og ( "You are too young to vote ." ) ;
+Animation content:
+The following code is displayed:
+let userAge = 18;
+if (userAge <= 12) {
+console.log("Enjoy your early years.");
+}
+else {
+console.log("You are at least 13.");
+if (userAge >= 18) {
+console.log("You are old enough to vote.");
+}
+else {
+}
+}
+console.log("You are too young to vote.");
+userAge~
+,
+You are at least 13.
+You are old enough to vote.
+In step 1, the variable userAge is allocated memory and initialized to 18. Step 2 runs the first line
+in the else block and the string You are at least 13. is displayed in the console. Step 3 runs the
+code in the nested if statement and the string You are old enough to vote. is displayed in the
+console.
+Animation captions:
+1. userAge is 18. Since 18 <= 12 is false, the outer if-else statement's else block executes.
+2. After outputting to the console, the nested if-else statement executes.
+3. 18 >= 18 is true, so the if block executes.
+4. No more statements exist in the nested if-else statement or the outer if-else statement.
+grade score
+// else statements
+{
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+27 of 119 2024-10-12, 4:01 p.m.
+A common situation is when several nested if-else statements are needed to execute one and only
+one block of statements. The else-if statement is an alternative to nested if-else statements that
+produces an easier-to-read list of statement blocks.
+In the example below, the variable is assigned with A, B, C, D, or F depending on the
+variable. The code segment on the left uses nested if-else statements. The code segment on the
+right performs the same logic with else-if statements.
+Figure 3.3.1: Nested if-else statements vs. else-if statements.
+II Nested if-else statemen
+if (score >= 90 )
+grade = "A" ;
+else {
+if (score >= 80 )
+grade = "B" ;
+else {
+if (score >= 70 )
+grade = "C" ;
+else {
+if (score >= 60 )
+grade = "D" ;
+else {
+grade "F" ;
+II else-if statements
+if (score >= 90 )
+grade = "A" ;
+else if (score >= 80 ) {
+grade = "B" ;
+else if (score >= 70 ) {
+grade = "C" ;
+else if (score >= 60 ) {
+grade = "D" ;
+else {
+grade "F" ;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+28 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . . ACTIVITY 3.3.7: Nested if-else practice.
+Use a nested if-else statement or an else-if statement to examine the variable
+golfScore.
+• If golf Score is above 90, output to the console "Keep trying!"
+• Otherwise, if golf Score is above 80, output to the console "Nice job!"
+• Otherwise, output to the console "Ready to go pro!"
+Test your code with values above 90, between 81 and 90, and 80 and below to ensure your
+logic is correct.
+I PARTICIPATION I . . ACTIVITY 3.3.8: Nested 1f and if-else statements.
+What is numBoxes at the end of each code segment?
+1) numApples = 2 ;
+numOranges = 5 ;
+numBoxes = 0 ;
+if (numApples % 2 ! = 0 ) {
+numBoxes l ;
+e l se {
+if (numApples +
+numOranges > 10 )
+numBoxes 2 ;
+e l se {
+numBoxes 99 ;
+Check Show answer
+□
+□
+0
+numApples = 2;
+numOranges = 5;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+29 of 119 2024-10-12, 4:01 p.m.
+2)
+numBoxes = 0 ;
+if (numApples > 0 ) {
+if (numOranges > 10 )
+numBoxes = 4 ;
+numBoxes++;
+else {
+numBoxes 99 ;
+Check Show answer
+3) produce = "carrots" ;
+if (produce == "apples" )
+numBoxes = l ;
+else if (produce
+"bananas" ) {
+numBoxes = 2 ;
+else if (produce
+"carrots" ) {
+numBoxes = 3 ;
+else {
+numBoxes 4 ;
+Check Show answer
+Logical operators
+JavaScript logical operators perform AND, OR, and NOT logic.
+Table 3.3.2: Logical operators.
+Logical
+operator
+Name Description
+0
+0
+Example
+(1 < 2 && 2 < 3) //
+true
+(1 < 2 || 2 < 0) //
+true
+!(2 == 2) // false
+&& ||
+(1 < 2 && 2 < 3 || 3 < 4) &&
+|| && || ()
+&& ||
+(a < 0 || a > 1 && b > 2) (a < 0 || (a > 1 && b > 2))
+!(score > 10)
+score <= 10
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+30 of 119 2024-10-12, 4:01 p.m.
+Logical
+Name Description Example
+operator
+&& And True if both sides are true
+-
+- I I - - - , , ,
+I I Or True if either side is true ~
+-
+I Not
+True if expression is not
+true
+Multiple and conditions may be combined into a single complex condition. Ex:
+. Complex conditions are evaluated from left to right, but has
+higher precedence than , so is evaluated before . Good practice is to use parentheses
+around conditions that use and to explicitly indicate the order of evaluation. Ex:
+is better expressed as:
+Logic involving "not" can be difficult for humans to correctly read or understand. Ex: "Are you not
+hungry?" is more difficult for a human to understand than the equivalent "Are you satisfied?" Good
+practice is to avoid using the not operator when possible. Ex: is better expressed
+as:
+I PARTICIPATION I 3.3.9: Evaluating complex conditions.
+ACTIVITY
+What is de c i s i on at the end of each code segment?
+1) homeTeam = 2 ;
+v i s itingTeam = 5 ;
+if (home Team > 10 I I
+visitingTeam > 0 ) {
+decision = l ;
+e l se {
+decision 0 ;
+Check Show answer
+□
+0
+homeTeam = 2;
+visitingTeam = 5;
+if (!(homeTeam > 10 &&
+visitingTeam > 0)) {
+true if (18)
+true
+false if (null) false
+null
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+31 of 119 2024-10-12, 4:01 p.m.
+2)
+~ - -- - ...., -•• -:;i - -- -••• ~ '"' I I l
+decision = l ;
+else {
+decision 0 ;
+Check Show answer
+3) homeTeam = 2 ;
+visitingTeam = 5 ;
+if (homeTeam > 10 I I
+(visitingTeam != 2 &&
+visitingTeam > 0 ))
+decision = l ;
+else {
+decision 0 ;
+Check Show answer
+I CHALLENGE I . . ACTIVITY 3.3.1: Cond1t1onals.
+5707 04.20654 7 6.qx3zqy7
+3.4 More conditionals
+Truthy and falsy
+A truthy value is a non-Boolean value that evaluates to in a Boolean context. Ex:
+0
+0
+□
+evaluates to because non-zero numbers are truthy values. A falsy value is a non-Boolean
+value that evaluates to
+is a falsy value.
+in a Boolean context. Ex: evaluates to because
+if (32)
+true false
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+32 of 119 2024-10-12, 4:01 p.m.
+Table 3.4.1: Truthy values.
+Example Description
+Non-zero
+number
+if ("cat")
+Non-empty
+string
+if (myObj ect) Object variable
+if (myArray) Array variable
+Table 3.4.2: Falsy values.
+Example Description -if ( 0) Zero -
+if ( " " ) Empty string
+~
+if (NaN) Not a number
+,__
+if (undefined)
+Variable that has not been assigned a
+value
+,__
+if (null) No object value
+I PARTICIPATION I ACTIVITY 3.4.1: Truthy and falsy values.
+Indicate if the if statement's condition evaluates to
+1) if (undefined)
+0 true
+0 false
+or i Co'"'
+0
+0
+if (999)
+if (0)
+?
+: condition true expression1
+expression2
+expression1 :
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+33 of 119 2024-10-12, 4:01 p.m.
+2) 0
+0 true
+0 false
+3) 0
+0 true
+0 false
+4) if ( " " ) 0
+0 true
+0 false
+5) if ( " " ) 0
+0 true
+0 false
+6) if ("false") 0
+0 true
+0 false
+7) if (myArray) 0
+0 true
+0 false
+Conditional (ternary) operator
+The conditional operator allows developers to write concise conditional statements. The
+conditional operator ( or ternary operator) has three operands separated by a question mark ( )
+and colon ( ). If the evaluates to , then the value of is returned,
+otherwise the value of is returned.
+Construct 3.4.1: Conditional (ternary) operator.
+condi tion ? expres~
+expression2
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+34 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION
+ACTIVITY I 3.4.2: Evaluating the conditional operator. □
+•
+score = 75 ;
+console . log (score >= 60 ? "passing" "failing" );
+registeredEarly = fa l se ;
+age = 20 ;
+fee = registeredEarl y I I age <= 18 ? 10 15 ;
+consol e . l og ("Fee is$" + fee );
+Animation content:
+The following code is displayed:
+score= 75;
+console.log(score >= 60? "passing" : "failing");
+registeredEarly = false;
+age= 20;
+fee = registered Early II age <= 18? 1 0 : 15;
+console.log("Fee is$"+ fee);
+75 score
+false registered Early
+20
+15
+passing
+Feeis$15
+age
+fee
+Step 1 and 2 run the first 2 lines. The left side of the? operator, score>= 60, evaluates to true so
+the entire expression evaluates to passing and passing is displayed to the console.
+Step 3 and 4 run the remaining lines of code. The left side of the? operator evaluates to false so
+the entire expression evaluates to 15. fee is assigned 15 and the last line displays Fee is $7 5 to
+the console.
+Animation captions:
+1. 75 >= 60 evaluates to true.
+2. Ternary operator returns "passing", so "passing" is displayed in the console.
+3. false II 20 <= 18 is false.
+4. Ternary operator returns 15, so fee is assigned 15 and output to the console .
+lateStatus
+currTime
+lateStatus = currTime > 60
+"yep" : "nope";
+y
+x x
+y = (x > 0) ?
+;
+boardType
+year = 1985;
+boardType = year >= 2015
+? "hoverboard" :
+"skateboard";
+priority
+attempt = 4;
+priority = 2;
+attempt > 3 ? priority++
+: priority--;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+35 of 119 2024-10-12, 4:01 p.m.
+ACTIVITY 3.4.3: Cond1t1onal operator. I PARTICIPATION I . .
+1) Complete the code to assign
+with "yep" if
+is greater than 60,
+and "nope" otherwise.
+Check Show answer
+2) Complete the code to assign
+with if is greater than 0, and
+-1 otherwise.
+Check Show answer
+3) What is after the
+following statements?
+Check Show answer
+4) What is after the
+following statements?
+Check Show answer
+□
+0
+0
+0
+0
+===
+// Statements executed when
+expression's value matches
+// expression's value matches
+// no cases match
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+36 of 119 2024-10-12, 4:01 p.m.
+Switch statement
+The switch statement is an alternative to writing multiple else-if statements. A switch statement
+compares an expression's value to several cases using strict equality ( ) and executes the first
+matching case's statements. If no case matches, an optional default case's statements execute.
+The break statement stops executing a case's statements and causes the statement immediately
+following the switch statement to execute. Omitting the break statement causes the next case's
+statements to execute, even though the case does not match.
+Construct 3.4.2: switch statement.
+switch (express i o n )
+case val ue l :
+II valuel
+break; I I optional
+case val ue2 :
+II Statements executed when
+value2
+break; I I optional
+II ...
+default :
+I PARTICIPATION
+ACTIVITY
+II Statements executed when
+I 3.4.4: Evaluating the switch statement.
+change = 10 ;
+switch (change )
+case 1 :
+co i n = "penny" ;
+break ;
+case 5 :
+10 change
+"dime" coin
+co i n = "nickel " ;
+break ;
+case 10 :
+co i n = "dime " ;
+break ;
+case 25 :
+[dime _J
+co i n = "quarter" ;
+break ;
+□
+default:
+coin = "unknown";
+}
+console.log(coin);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+37 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+change= 1 0;
+switch (change) {
+}
+case 1:
+coin = "penny";
+break;
+case 5:
+coin = "nickel";
+break;
+case 1 0:
+coin = "dime";
+break;
+case 25:
+coin = "quarter";
+break;
+default:
+coin = "unknown";
+console.log(coin);
+Step 1 assigns change to 10. Steps 2 through 4 compare the value and variable type of change
+with the value of each case. change has the same type and value as 10 so the case 10: block is
+executed. coin is declared and assigned the string dime.
+Step 5 runs the break; line and no more cases are checked or run. This includes the default: block.
+The last line of code is run and dime is displayed on the console.
+Animation captions:
+1. switch statement examines the change variable.
+2. change=== 1 is false, so the case does not match.
+3. change=== 5 is false, so the case does not match.
+4. change=== 10 is true, so the case matches, and the case's statements are executed.
+5. Break statement stops executing the switch statement. The code after the switch executes,
+outputting "dime" to the console.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+38 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.4.5: switch statement.
+Refer to the switch statement below.
+switch (item) {
+case "apple" :
+case "orange " :
+fruits ++;
+break;
+case "milk" :
+drinks++;
+case "cheese" :
+dairy++;
+break;
+case "beef" :
+case "chicken" :
+meat++;
+break;
+defaul t :
+other++;
+1) If i tern is "beef", what variables are
+incremented?
+0 other
+0 meat only
+0 meat and other
+2) If i tern is "milk", what variables are
+incremented?
+0 other
+0 drinks only
+0 drinks and dairy
+3) If i tern is "Apple", what variable is
+incremented?
+0 other
+0 fruits
+0 Nothing is incremented.
+I PARTICIPATION
+ACTIVITY I 3.4.6: Practice with the switch statement.
+□
+0
+0
+0
+□
+condition)
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+39 of 119 2024-10-12, 4:01 p.m.
+Convert the group of else-if statements into an equivalent switch statement.
+I CHALLENGE I . . ACTIVITY 3.4.1: More cond1t1onals . □
+5707 04.20654 7 6.qx3zqy7
+3.5 Loops
+While loop
+Three general-purpose looping constructs exist while, do-while, and for loops. The while loop is a
+looping structure that checks if the loop's condition is true before executing the loop body,
+repeating until the condition is false. The loop body is the set of statements that a loop repeatedly
+executes.
+Construct 3.5.1: while loop.
+I PARTICIPATION
+ACTIVITY
+while (cor
+{
+body
+I 3.5.1: Executing a while loop.
+i = 1 ;
+whi le (i <= 4 )
+consol e . l og ( i );
+i ++;
+conso l e . l og (" Done! " );
+□
+l
+while (true);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+40 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+i = 1;
+while (i <= 4) {
+console.log(i);
+i++;
+}
+console.log("Done!");
+'"-------)
+Step 1 runs line 1 and variable i is allocated memory.
+Step 3 displays the integer 1 in the console.
+In step 4 i is now assigned the value 2.
+Step 6 displays the strings 2, 3, 4, and Donel all displayed on new lines in the console.
+Animation captions:
+1. Assign i with 1.
+2. 1 <= 4 is true, so the loop's body executes.
+3. Output i to the console.
+4. Increment i.
+5. End of loop so go back to the top and re-evaluate the condition.
+6. Keep executing loop until i <= 4 is false.
+Developers must be careful to avoid writing infinite loops. An infinite loop is a loop that never stops
+executing. Ex: is an infinite loop because the loop's condition is never false.
+JavaScript infinite loop with Chrome's 'Page Unresponsive11 message
+If the web browser is running JavaScript that contains an infinite loop, the web
+browser tab will cease to respond to user input.
+Page Unresponsive
+he allowing page has become un s.p-onsive,, You can
+wai or it to become responsive or kill it.
+• [j https.://cs.li.:11rding.ed u/fmccown/ est.h tml
+)(
+c <= 20
+c < 20
+c
+let c = 10;
+while (c <= 20); {
+console.log(c);
+c += 5;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+41 of 119 2024-10-12, 4:01 p.m.
+[ Kill 7
+I PARTICIPATION I . ACTIVITY 3.5.2: while loop.
+1) What are the first and last numbers
+output by the code segment?
+le t c = 100 ;
+while (c > 0 ) {
+consol e . l og (c );
+C -= 10 ;
+0 100 and 0.
+0 90 and 0.
+0 100and10.
+2) What condition makes the loop
+output the even numbers 2 through
+20?
+le t c = 2 ;
+while ( _ ) {
+consol e . l og (c );
+C += 2 ;
+0 C >= 20
+0 r' <'= ?n
+0
+3) What is the value of when the loop
+terminates?
+Wait
+□
+0
+0
+0
+);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+42 of 119 2024-10-12, 4:01 p.m.
+0 25
+0 20
+0 The loop never terminates.
+4) What is c when the loop terminates?
+let c = 10 ;
+while (c <= 20 )
+consol e . l og (c );
+C += 5 ;
+0 15
+0 20
+0 The loop never terminates.
+Do-while loop
+0
+The do-while loop executes the loop body before checking the loop's condition to determine if the
+loop should execute again, repeating until the condition is false.
+Construct 3.5.2: do-while loop.
+do {
+body
+} while
+(conditi on
+IAP ACRTTIVICITIPYA TION I 3.5.3: Executing a do-while loop.
+i = l ;
+do {
+consol e . l og ( i );
+i ++;
+} while ( i <= 4 ) ;
+cons o l e . l og ("Done!" );
+□
+l
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+43 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+i = 1;
+do {
+console.log(i);
+i++;
+} while (i <= 4);
+console.log("Done!");
+'"------)
+In step 2, i now stores 2 in memory and 1 is displayed in the console before the loop condition
+line is run .
+In step 3, the strings 2, 3, 4, and Done are all displayed in the console on new lines.
+Animation captions:
+1. Assign i with 1.
+2. do . .while loop executes the loop body, evaluating the loop condition after the first execution.
+3. The loop repeatedly executes until i <= 4 is false.
+I PARTICIPATION I . ACTIVITY 3.5.4: do-while loop.
+1) What is the last number output
+to the console?
+let c = 10 ;
+do {
+consol e . l og (c );
+c--;
+while (c >= 5 );
+Check Show answer
+2) Write a condition that executes
+the do-while loop as long as the
+user enters a negative number.
+□
+0
+0
+let num;
+do {
+while
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+44 of 119 2024-10-12, 4:01 p.m.
+num = prompt ("Enter a
+negative number: " );
+} while ( __ );
+Check Show answer
+3) What is the last number output
+to the console?
+let x = 1 ;
+do
+let y = O;
+do {
+consol e . l og (x + y );
+y++;
+while (y < 3 );
+x++ ;
+while (x < 4 );
+Check Show answer
+IAP ACRTTIVICITIPYA TION I 3 .5. 5 : p ractI•c e wi•t h t h e w h"II e an d do -w hI" Ie Io ops.
+A given insect population doubles every week. If 2 insects exist on the first week, how
+many weeks will pass until the insect population exceeds 10,000 insects? Ex: 2 insects
+exist at the end of week 1, 4 exist on week 2, 8 exist on week 3, etc. Use a loop to
+output the insect population each week until the population exceeds 10,000 insects.
+Researchers have discovered that every 4 weeks a disease is killing 40% of the insect
+population after the population has reproduced . If 2 insects exist on the first week, how
+many weeks will pass until the insect population exceeds 10,000 insects? Ex: 2 insects
+exist at the end of week 1, 4 exist on week 2, 8 exist on week 3, and 9.6 (16 - 40%) exist on
+week 4. Write a second do-while loop that outputs the insect population each week until
+the population exceeds 10,000 insects.
+For loop
+0
+□
+condition;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+45 of 119 2024-10-12, 4:01 p.m.
+A for loop collects three parts - the loop variable initialization, loop condition, and loop variable
+update - all at the top of the loop. A for loop executes the initialization expression, evaluates the
+loop's condition, and executes the loop body if the condition is true. After the loop body executes,
+the final expression is evaluated, and the loop condition is checked to determine if the loop should
+execute again.
+Construct 3. 5.3: for loop.
+for (initialization ; cond
+finalExpression )
+body
+I PARTICIPATION
+ACTIVITY I 3.5.6: Executing a for loop.
+for (i = 1 ; i <= 4 ; i +J ) {
+conso le . l og (i );
+! onsole . l og ("Done!" );
+Animation content:
+The following code is displayed:
+for (i = 1; i <= 4; i++) {
+console.log(i);
+}
+console. log("Done!");
+1
+2
+3
+4
+Done!
+In step 1, i is allocated memory and stores 1.
+In step 3, 1 is displayed in the console.
+In step 4, i now stores the value 2.
+□
+In step 5, i keeps incrementing until i stores 5. 2, 3, 4, and Done! are displayed in the console on
+for (c = 100; ______; c--) {
+console.log(c);
+}
+c < 50
+c > 50
+c >= 50
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+46 of 119 2024-10-12, 4:01 p.m.
+new lines
+Animation captions:
+1. for loop's initial expression assigns i with 1.
+2. for loop's condition is then evaluated. 1 <= 4 is true, so the loop's statements are executed.
+3. Output i to the console.
+4. After the loop executes, the final expression is evaluated, which increments i.
+5. Loop repeatedly executes until i <= 4 is false.
+I PARTICIPATION I
+ACTIVITY 3.5.7: For loops.
+1) Which loop always executes the loop
+body at least once?
+0 while
+0 do-while
+0 for
+2) What numbers are output by the code
+segment?
+for ( c = 5 ; c < 10 ; c += 2 ) {
+con sol e . l og (c );
+0 5, 7,9
+0 5, 6, 7, 8, 9
+0 Infinite loop
+3) What condition causes the for loop to
+output the numbers 100 down to 50,
+inclusively?
+0
+0
+0
+□
+0
+0
+0
+// (missing 4 and 5)
+// Iterate immediately
+// 1 2 3 (missing 4) 5
+continue
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+47 of 119 2024-10-12, 4:01 p.m.
+4) What numbers are output by the code
+segment?
+f o r (x = l ; x <= 3 ; x++) {
+f or (y = 2 ; y <= 4; y++)
+consol e . l og (y );
+0 2,3,4
+0 2, 3,4,2, 3,4, 2, 3,4
+0 2, 3, 4, 5, 6, 7, 8, 9, 10
+break and continue statements
+Two jump statements alter the normal execution of a loop. The break statement
+breaks out of a loop prematurely. The continue statement causes a loop to iterate
+again without executing the remaining statements in the loop.
+f or ( c = 1 ; c <= 5 ; c++) {
+if ( C == 4 ) {
+break ; II Leave the loop
+consol e . l og (c ); II 1 2 3 (missi
+f or ( c = 1 ; c <= 5 ; c++) {
+if ( C == 4) {
+continue ; II Iterate again i
+consol e . l og (c ); II (missi
+Some developers use break and continUE to write short and concise code, but
+jump statements may introduce subtle logic errors that are difficult to find. This
+material does not use jump statements.
+I CHALLENGE I
+ACTIVITY 3-5-1: Loops.
+5707 04.2065416 qx3zqy7
+0
+□
+function
+()
+{}
+parameter1, parameter2,
+// to execute when function is
+"function");
+"function");
+10
+About to call function
+Returned from function
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+48 of 119 2024-10-12, 4:01 p.m.
+3.6 Functions
+Introduction to functions
+A function is a named group of statements. JavaScript functions are declared with the r unc t10
+keyword followed by the function name and parameter list in parentheses '. : . A parameter is a
+variable that supplies the function with input. The function's statements are enclosed in braces
+Invoking a function's name, known as a function call, causes the function's statements to execute.
+An argument is a value provided to a function's parameter during a function call.
+Construct 3.6.1: Function declaration.
+I PARTICIPATION
+ACTIVITY
+function fu n cti o nName (para
+... ) {
+II Statements to execut
+called
+I 3.6.1: Declaring and calling a function.
+function disp l aySum (x , y , z ) {
+l et sum = x + y + z ;
+consol e . l og (sum);
+conso l e . l og ("About to call func
+displ aySum (2 , 5 , 3);
+conso l e . l og ("Returned from func
+Animation content:
+The following code is displayed:
+□
+/1.L- . . .&..&.--."' • •
+I va11 IUI I\JLIUI I
+display
+displayAverage displayAverage
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+49 of 119 2024-10-12, 4:01 p.m.
+function displaySum(x, y, z) {
+let sum= x + y + z;
+console.log(sum);
+}
+In step 2, About to call function is displayed in the console. 2, 5, and 3 are stored in memory as x,
+y, and z respectively.
+In step 3, the lines of code defined inside the function displaySum are run. A new variable sum is
+declared and stores 10 in memory.
+In step 4, 1 O and Returned from function are each displayed on new lines in the console.
+Animation captions:
+1. A function named displaySum is declared with three parameters: x, y, and z.
+2. displaySum() is called with arguments 2, 5, and 3, which are assigned to parameters x, y,
+and z.
+3. The variable sum is assigned the sum of x, y, and z, which is 10.
+4. sum is output to the console. No more code exists in the function, so the function is
+finished executing.
+Good practice is to use function names that contain a verb and noun. Ex:
+function name, but
+displayed.
+is better because
+is a vague
+indicates what is being
+Good practice is to use camel case for JavaScript function names, where the name starts with a
+lowercase letter and subsequent words begin with a capital letter I PARTICIPATION I . . . ACTIVITY 3.6.2: Declaring and calling functions. □
+1) Which function call displays the
+numbers 5, 4, 3, 2, 1.
+fun c ti on countDown (firstNum )
+f or (let count = firstNum ;
+count > 0 ; count--) {
+console . log (count );
+0 coun tDown () ;
+0 countDown (5);
+O countDown(5, 4, 3, 2,
+0
+1);
+test
+function test(x, y) {
+if (x > y) {
+console.log(x);
+}
+else {
+console.log(y);
+}
+}
+Largest
+display_largest
+displayLargest
+function sayHello(name,
+greeting) {
+console.log(greeting + ", "
++ name + "!");
+}
+sayHello("Maria");
+sayHello("Sam");
+sayHello("Juan", "Hola");
+function sayHello(name,
+greeting = "Hello") {
+console.log(greeting + ", "
++ name);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+50 of 119 2024-10-12, 4:01 p.m.
+2) Choose a better name for the function
+0
+0
+0
+3) What is output to the console?
+0 Hello, Maria!
+0 Hello, undefined!
+0 undefined, Maria!
+4) The function below uses a default
+parameter value "Hello" that is
+assigned when the greeting is not
+supplied in the function call. What is
+output to the console?
+O Hello, Sam
+Hello, Juan
+0
+0
+0
+drawBox(2,
+6)
+undefined
+{
+6.5 ave
+6.5
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+51 of 119 2024-10-12, 4:01 p.m.
+O Hello,Sam
+Hola, Juan
+0 undefined
+I PARTICIPATION I . . ACTIVITY 3.6.3: Function practice.
+The code below produces a 5 x 10 box of question marks. Convert the code into a
+function called drawBox () that has three parameters:
+1. numRows - The number of rows for the box.
+2. numCols - The number of columns for the box.
+3. boxChar - The character to use to create the box. If no argument is supplied, use
+"XII.
+Ex: drawBox (5, 4, "!")and drawBox (below.
+! ! ! !
+! ! ! !
+! ! ! !
+! ! ! !
+! ! ! !
+xxxxxx
+xxxxxx
+Returning a value
+should display the boxes pictured
+□
+A function may return a single value using a return statement. A function that is missing a return
+statement returns
+I PARTICIPATION I . ACTIVITY 3.6.4: Function that returns a value.
+function findAverage (numl , num2 )
+return (numl + num2 ) / 2 ;
+let ave = findAverage (6, 7);
+conso l e . l og (ave );
+□
+r l
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+52 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+function flndAverage(num1, num2) {
+return (num1 + num2) / 2;
+}
+let ave = flndAverage(6, 7);
+console.log(ave);
+l J
+In step 2, the parameters for flndAverage, num1 and num2, are allocated memory and get
+assigned 6 and 5 respectively.
+In step 3, the function flndAverage finishes running. The blocks of memory used by the
+parameters num1 and num2 are deallocated and free for use by other variables. The variable avg
+is allocated memory and stores 6.5. 6.5 is displayed in the console.
+Animation captions:
+1. A function named flndAverage is declared with two parameters: num1 and num2.
+2. flndAverage() is called with arguments 6 and 7, which are assigned to parameters num1
+and num2.
+3. The return statement returns the average of num1 and num2, which is 6.5.
+I PARTICIPATION I . ACTIVITY 3.6.5: Functions that return values.
+1) What is output to the console?
+consol e . l og (findSmallest (5 ,
+2 ) ) ;
+function findSmall es t (x , y )
+if (x < y ) {
+return x ;
+e l se {
+0 2
+0 5
+return y ;
+□
+0
+factorial()
+function factorial(num) {
+let result = 1;
+for (let count = 1; count
+<= num; count++) {
+result *= count;
+}
+return result;
+}
+factorial(5);
+console.log(result);
+let answer =
+factorial();
+console.log(answer);
+let answer =
+factorial(5);
+console.log(answer);
+function factorial(num) {
+let result = 1;
+for (let count = 1; count
+<= num; count++) {
+result *= count;
+}
+return result;
+}
+let answer = factorial(8 -
+factorial(3));
+console.log(answer);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+53 of 119 2024-10-12, 4:01 p.m.
+0 undefined
+2) What is the correct way to call
+and output the
+factorial of 5?
+0
+0
+0
+3) What is output to the console?
+0 2
+0 6
+0 8
+4) What is output to the console?
+0
+0
+0
+// Function name is omitted
+function(x, y, z)
+y + z);
+);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+54 of 119 2024-10-12, 4:01 p.m.
+consol e . l og (sayHe llo ("Sam" ));
+f u n c ti on sayHe llo (name ) {
+consol e . l og ( "Hello, " +
+name + "! " );
+0 Hello, Sam!
+O Hello, Sam!
+undefined
+0 undefined
+Function expressions and anonymous functions
+JavaScript functions may be assigned to a variable with a function expression. A function
+expression is identical to a function declaration, except the function name may be omitted. A
+function without a name is called an anonymous function. Anonymous functions are often used
+with arrays and event handlers, discussed elsewhere in this material.
+Figure 3.6.1: Assigning a function expression to a variable.
+II Functi on i
+l et d i spl aySum = f
+{
+c onso l e . l og (x +
+I I Fun c tion call
+d i spl aySum (2 , 5 , 3
+Unlike functions declared with a function declaration, a variable assigned with a function
+expression cannot be used until after the variable is assigned. Using a variable before the variable
+is assigned with a function expression causes an exception.
+I PARTICIPATION I 3 6 6 U . f . . b f .
+ACTIVITY .. : sing a unction expression e ore assignment. □
+consol e . l og ( f i ndLargest (5 ,
+f unction f i ndLargest (x , y )
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+55 of 119 2024-10-12, 4:01 p.m.
+let largest ;
+if (x > y ) {
+largest = x ;
+else {
+largest = y ;
+return largest ;
+displaySum (2 , 5 , 3 ) ;
+let displaySum = functi on (x , y , z ) {
+cons ole . l og (x + y + z ) ;
+11
+Animation content:
+The following code is displayed:
+console.log(flndlargest(5, 3));
+function flndlargest(x, y) {
+}
+let largest;
+if (x > y) {
+largest= x;
+}
+else {
+largest= y;
+}
+return largest;
+displaySum(2, 5, 3);
+let displaySum = function(x, y, z) {
+console.log(x + y + z);
+}
+In step 2, 5 is displayed on the console.
+cannot access 'displaySum'
+before initialization
+In step 3, the error messageUncaught ReferenceError: cannot access 'displaySum' before
+initialization is displayed on the console
+Animation captions:
+1. find Largest() may be called before the find Largest() function declaration.
+2. Since x > y, flndlargest() returns 5, and 5 is output to the console.
+3. Calling displaySum() before displaySum is assigned with a function expression produces
+=>
+(parameter1, parameter2, ...) =>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+56 of 119 2024-10-12, 4:01 p.m.
+an exception.
+I PARTICIPATION I . . ACTIVITY 3.6.7: Function expressions.
+1) The variable result is assigned 4.
+let square = function (num )
+return num * num;
+let result = square (2 );
+0 True
+0 False
+2) The variable result is assigned 9.
+let result = square (3 );
+let square = function (num )
+return num * num;
+0 True
+0 False
+3) The variable result is assigned 9.
+let square = fun cti on (num )
+return num * num;
+let result = square ;
+0 True
+0 False
+Arrow functions
+□
+D
+D
+0
+An arrow function is an anonymous function that uses an arrow to create a compact function.
+An arrow function's parameters are listed to the left of the arrow. The right side of the arrow may be
+a single expression or multiple statements in braces.
+Construct 3.6.2: Arrow function declaration that returns a single expression.
+...) => {
+99
+3 6 =
+9
+25
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+57 of 119 2024-10-12, 4:01 p.m.
+Construct 3.6.3: Arrow function with multiple statements.
+I PARTICIPATION
+ACTIVITY
+(parameterl , parameter2 ,
+stateme nts ; }
+3.6.8: Arrow functions that sum two numbers and square a
+number.
++ l et f i ndSum = (a , b ) => a + b ;
+l et sum = f i ndSum (3 , 6);
+conso l e . l og (sum);
+5 * 5 = 25
+l et square = x => x * x;
+consol e . l og (square (5 ));
+Animation content:
+The following code is displayed:
+let flndSum = (a, b) =>a + b;
+let sum= flndSum(3, 6);
+console.log(sum);
+let square = x => x * x;
+console.log(square(5));
+Step 5 runs let sum= flndSum(3, 6); console.log(sum); and 9 is displayed in the console.
+Step 6 runs console.log(square(5)); and 25 is displayed in the console.
+Animation captions:
+□
+;
+}
+}
+return count;
+}
+isEven()
+function isEven(num) {
+return num % 2 === 0;
+}
+let isEven = num =>
+;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+58 of 119 2024-10-12, 4:01 p.m.
+1. An arrow function may be assigned to a variable, just like a function expression.
+2. The function parameters are listed in parenthesis to the left of the arrow=>.
+3. An expression listed by itself is the value returned by the arrow function.
+4. An arrow function is called the same as any other function. The arguments 3 and 6 are
+assigned to parameters a and b.
+5. The arrow function returns the sum of a and b, which is 9.
+6. An arrow function with only one parameter does not require parentheses around the one
+parameter.
+I PARTICIPATION I . ACTIVITY 3.6.9: Arrow function s.
+1) Complete the arrow function.
+let max
+> b ? a
+=> a
+Check Show answer
+2) Complete the arrow function.
+let countCapitals =
+=> {
+let count = 0;
+for (let i = 0; i <
+str . length; i ++) {
+let ch = str . charAt ( i );
+if (ch >= 'A' && ch <=
+I z I ) {
+count++;
+Check Show answer
+3) Convert into an
+equivalent arrow function.
+□
+0
+0
+0
+let
+var x = 6; x
+var let
+let var
+var
+let
+var let
+Using let
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+59 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+I CHALLENGE I . ACTIVITY 3.6.1: Functions. □
+5707 04.20654 7 6.qx3zqy7
+Exploring further:
+• Functions (MON)_
+3.7 Scope and the global object
+The var keyword and scope
+In addition to declaring variables with , a variable can be declared with the var keyword. Ex:
+declares the variable with an initial value of 6. When JavaScript was first created,
+was the only way to declare a variable. The keyword was added to JavaScript in 2015.
+Both and declare variables but with differing scope. A JavaScript variable's scope is the
+context in which the variable can be accessed.
+A variable declared inside a function has local scope, so only the function that defines the variable
+has access to the local variable. A variable declared outside a function has global scope, and all
+functions have access to a global variable.
+A variable declared inside a function with has function scope: the variable is accessible
+anywhere within the function, but not outside. A variable declared inside a function with has
+block scope: the variable is accessible only within the enclosing pair of braces.
+A variable declared using or that is not inside a function creates a global variable that is
+accessible from anywhere in the code.
+I PARTICIPATION I . ACTIVITY 3.7.1: var VS. let scoping. □
+Using var
+function numbers() {
+console.log(x);
+(x 0) {
+2;
+console.log(y);
+}
+(x 100) {
+2;
+console.log(z);
+}
+console.log(y);
+console.log(z);
+}
+numbers();
+console.log(x);
+console.log(y);
+console.log(z);
+numbers() console.log(x);
+(0) {
+2;
+console.log(y);
+}
+(x 100) {
+2;
+console.log(z);
+}
+console.log(y);
+console.log(z);
+}
+numbers();
+console.log(x);
+console.log(y);
+console.log(z);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+60 of 119 2024-10-12, 4:01 p.m.
+functi on numbers () {
+c onso e . og x ;
+if (> 0 ) {
+var y = x / 2 ;
+c onso le . l og (y ) ;
+if (< 100 ) {
+var z = x * 2 ;
+c onso le . l og (z ) ;
+c ons ole . l o g (y ) ;
+c ons ole . l o g ( z ) ;
+numbers ();
+c ons o le . l og (x );
+c ons o le . l og (y );
+cons o le . l og (z );
+Animation content:
+function numbers () {
+c onso e . og x ;
+if (x > 0 ) {
+let y = x / 2 ;
+c ons ole . l o g (y ) ;
+if (< 100 ) {
+let z = x * 2 ;
+c ons ole . l o g ( z ) ;
+c onso le . l og (y ) ;
+conso le . l og (z ) ;
+numbers () ;
+cons ole . l og (x );
+cons ole . l og (y );
+cons ole . l og ( z ) ;
+The following code is displayed to show the scope of variables using var declarations:
+II Outside a function so declared with global scope
+var x = 17;
+function numbers() {
+II x has global scope so x is accessible anywhere
+console.log(x);
+if (x > 0){
+II y is declared inside a function and inside an if block. y has function scope because y was
+declared with var
+vary= x I 2;
+console.log(y);
+}
+if (x < 100) {
+}
+II Same case as y, z is declared in a function using var. z has function scope.
+var z = x * 2;
+console.log(z);
+II y and z are accessible. y and z both have function scope and are accessed and declared in the
+same function
+console.log(y);
+console.log(z);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+61 of 119 2024-10-12, 4:01 p.m.
+numbers();
+II x has global scope so x is accessible
+console.log(x);
+II y and z are accessed outside of the function y and z were declared in. A ReferenceError is
+thrown.
+console.log(y);
+console.log(z);
+The following code is displayed to show the scope of variables using let declarations:
+II Outside a function so declared with global scope
+let x = 17
+function numbers() {
+II x has global scope so x is accessible anywhere
+console.log(x);
+if (x > O){
+II y is declared inside a function and inside an if block. y has block scope because y was
+declared with let
+let y = x I 2;
+console. log(y);
+}
+if (x < 100){
+}
+II Same case as y, z is declared in a function using var. z has block scope
+let z = x * 2;
+console.log(z);
+II y and z have block scope and are accessed outside the blocky and z were declared in. A
+ReferenceError is thrown.
+console.log(y);
+console.log(z);
+}
+numbers();
+II x has global scope so x is accessible
+console.log(x);
+II y and z are once again accessed outside of the blocky and z were declared in. A
+ReferenceError is thrown.
+console.log(y);
+console.log(z);
+Animation captions:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+62 of 119 2024-10-12, 4:01 p.m.
+1. var x = 17; declares x with global scope. xis accessible everywhere, so each console.log(x)
+statement logs x as 17.
+2. The vary declaration exists inside the numbers() function. So both console.log(y)
+statements inside the function logy as 8.5.
+3. Similarly, the var z statement is inside the function, so both console.log(z) statements
+inside the function log z as 34.
+4. y and z are not accessible outside the numbers() function. The console.log() statements
+that exist outside the function throw a ReferenceError when executed.
+5. Code that uses let instead of var has similar behavior for the global variable x.
+6. The first log statement for y is in y's scope (yellow), and the first log statement for z is in z's
+scope (green). So, 8.5 and 34 are logged.
+7. All remaining calls to logy or z are out of scope and throw a ReferenceError.
+I PARTICIPATION I . ACTIVITY 3.7.2: Local and global variables.
+Refer to the code below.
+function multiplyNumbers (x , y ) {
+var answer = x * y ;
+return answer ;
+var z = multiplyNumbers (2 , 3 );
+console . log (answer );
+1) The answer variable has __ scope.
+0 global
+0 local
+2) The z variable has __ scope.
+0 global
+0 local
+3) The console. log (answer); line
+0 logs 6
+0 logs undefined
+0 throws a ReferenceError
+I PARTICIPATION I
+□
+0
+0
+0
+n
+function oneToTen() {
+let a = 1;
+for (var i = a; i <= 10; i+
++) {
+console.log(i);
+_____
+}
+}
+a
+i
+a i
+f1()
+f2()
+function f1() {
+let x = 100;
+}
+function f2() {
+var y = 200;
+}
+x
+y
+k
+function sumOfSquares() {
+let sum = 0;
+for (let i = 1; i < 5; i++)
+{
+let j = i * i;
+sum += j;
+var k = sum;
+}
+_____
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+63 of 119 2024-10-12, 4:01 p.m.
+I ACTIVITY
+3.7.3: var vs. let scoping.
+1) In the code below, which variables are
+in scope on the blank line?
+0 only
+0 only
+0 both and
+2) After calling functions and
+in the code below, which
+variable has global scope?
+0
+0
+0 neither
+3) On the blank line in the code below,
+variable __ .
+O is out of scope and not
+0
+0
+0
+window
+test window.test
+window.location
+location = "Texas"
+var
+let
+var let
+{
+// Missing "var" tax becomes a global variable!
+10);
+// tax is accessible tax is global
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+64 of 119 2024-10-12, 4:01 p.m.
+accessible
+O is in scope and has a value of
+30
+O is in scope, but has an
+undefined value
+Global variables and the global object
+Before developer code is run, JavaScript implementations create the global object: an object that
+stores certain global variables, functions, and other properties. When running JavaScript code in a
+web browser, global variables are usually assigned as properties to the global object.
+Therefore, a global variable called is accessible as
+Developers must be careful when assigning global variables, because a global variable could
+replace an existing window property. Ex: contains the URL the browser is
+displaying. Assigning causes the web browser to attempt to load a web
+page with the URL "Texas", which likely does not exist.
+Three cases exist when assigning to a global variable X:
+• X has been declared with
+object.
+• X has been declared with
+, in which case a property named "X" is added to the global
+, in which case a property named "X" is not added to the global
+object, but X is still accessible from anywhere in the code.
+• X has not been declared with or , in which case the variable becomes a property of
+the global object, even if assigned to inside a function.
+Figure 3.7.1: Example with accidental global variable.
+function cal cul ateTax (total )
+II Mi ssing "var " so tax bE
+tax = total * 0 . 06 ;
+return tax ;
+var totalTax = cal cul ateTax (l
+II tax i s accessi ble because
+con sol e . l og (tax );
+var let
+window
+window.result
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+65 of 119 2024-10-12, 4:01 p.m.
+Good practice is to always declare variables used in functions with
+not become global.
+I PARTICIPATION I . . ACTIVITY 3.7.4: Variable scope and functions.
+1) What is output to the console?
+function addNumber (x )
+sum += x ;
+let sum = O;
+addNumber (2 );
+addNumber (S);
+console . log (sum);
+Check Show answer
+2) What is output to the console?
+function
+multiplyNumbers (x , y ) {
+answer = x * y ;
+return answer ;
+var z =
+multiplyNumbers (2 , 3 );
+console . log (answer );
+Check Show answer
+3) If is the global object,
+what is the value of
+after running
+the following code?
+or , so the variables do
+□
+0
+0
+0
+[]
+scores
+0 6
+1 15
+2 8
+0
+1
+2
+teams
+Tigers
+Bisons
+Eagles
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+66 of 119 2024-10-12, 4:01 p.m.
+function
+subtractNumbers (x , y ) {
+result = x - y ;
+var a =
+subtractNumbers (7 , 6);
+var b =
+subtractNumbers (ll , 3 );
+var c =
+subtractNumbers (9 , 1 );
+Check Show answer
+Exploring further:
+• var (MON).
+• Global object (MON).
+Array introduction
+3.8 Arrays
+An array is an ordered collection of values called elements. Each array element is stored in a
+numeric location called an index. An array is initialized by assigning an array variable with brackets
+containing comma-separated values.
+Array elements may be of the same type or different types. Arrays increase in size as elements are
+added and decrease as elements are removed.
+I PARTICIPATION I 3 8 1 I . . 1 • • d d. I . I
+ACTIVITY . . : nitIa Izing an Isp aying array e ements.
+let scores = [ ] ;
+scores [OJ 6 ;
+scores [l ] = 15 ; Fl Fl
+□
+scores[2] = 8;
+console.log(scores[0]);
+console.log(scores[1]);
+console.log(scores[2]);
+let teams = ["Tigers", "Bisons",
+"Eagles", "Cobras"];
+console.log(teams);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+67 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is shown below:
+let scores = 0;
+scores[O] = 6;
+scores[1] = 1 5;
+scores[2] = 8;
+console.log(scores[O]);
+console.log(scores[1]);
+console.log(scores[2]);
+let teams = ["Tigers", "Bisons",
+"Eagles", "Cobras"];
+console.log(teams);
+Step 2 runs the following code:
+scores[O] = 6;
+scores[1] = 1 5;
+scores[2] = 8;.
+I I
+The memory allocated to the array scores grows as more indices in the array get assigned
+values. Values 6, 15, and 8 are shown stored under the variable scores at indices 0, 1 and 2
+respectively.
+In step 3, the following lines of code are run:
+console.log(scores[O]);
+console.log(scores[1]);
+console.log(scores[2]);
+6, 15, and 8 are displayed in the console.
+In step 4, a new array teams is allocated memory to store 4 strings. The 4 strings are assigned to
+indices in the array in the order they are listed.
+In step 5, the array teams is logged to the console. Tigers,Bisons,Eagles,Cobras is displayed in
+console
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+68 of 119 2024-10-12, 4:01 p.m.
+Animation captions:
+1. An empty array called "scores" is declared with [ ].
+2. Three elements are added to the scores array at indexes 0, 1, and 2.
+3. The three elements are output to the console.
+4. The teams array is initialized with four elements.
+5. All four elements are output to the console separated by commas.
+IP ARTICIPATION I 3 B 2 I . . 1· . d d. I . I
+ACTIVITY .. : nitIa Izing an Isp aying array e ements.
+1) Initialize names to an empty
+array.
+let names =
+Check Show answer
+2) How many elements does
+names have?
+l et names = [] ;
+names [O] "Sue" ;
+names [ 1 ] "Bob" ;
+names [2] "Jeff" ;
+Check Show answer
+3) What is output to the console?
+l et names = [] ;
+names [O] " Sue " ;
+names [l] = "Bob " ;
+names [2] = "Jeff" ;
+consol e . log (names [O] +
+names [l] );
+Check Show answer
+4) What is the largest number
+□
+0
+0
+0
+0
+myArray.method();
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+69 of 119 2024-10-12, 4:01 p.m.
+name Index can be to output a
+name?
+l et names = ["Maria" ,
+"Braden" , "Jaden" , "Aditya" ] ;
+consol e . l og (names [nameindex ] );
+Check Show answer
+5) What is output to the console?
+l et nums = [5 , 2 , 9 , 3 ] ;
+nums [O] = nums [l] +
+nums [2] ;
+consol e . l og (nums [O] );
+Check Show answer
+6) Write the simplest code to
+output all elements in pets.
+let pets = [ "cats" , "dogs" ,
+"fish" ];
+console . log ( );
+Check Show answer
+Adding and removing array elements
+0
+0
+An array is an Array object that defines numerous methods for manipulating arrays. A method is a
+function that is attached to an object and operates on data stored in the object. Methods are called
+by prefacing the method with the object. Ex:
+Table 3.8.1: Array methods for adding and removing array elements.
+Method I Description I Example
+let nums = [2, 4, 6];
+nums.push(8); // nums = [2, 4, 6, 8]
+let nums = [2, 4, 6];
+let x = nums.pop(); // returns 6, nums =
+[2, 4]
+let nums = [2, 4, 6];
+nums.unshift(0); // nums = [0, 2, 4, 6]
+let nums = [2, 4, 6];
+let x = nums.shift(); // returns 2, nums
+= [4, 6]
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+70 of 119 2024-10-12, 4:01 p.m.
+Method Description Example
+Adds a
+push(value)
+value to
+the end of
+the array
+Removes
+the last
+array
+pop()
+element
+and
+returns
+the
+element
+Adds a
+value to
+unshift(va/ue)
+the
+beginning
+of the
+array
+Removes
+the first
+array
+shift()
+element
+and
+returns
+the
+element
+= [2, 4, 6, 8, 10];
+// Deletes all elements from index 3 to
+splice(3); // nums = [2, 4, 6]
+// Deletes 2 elements starting splice(0, 2); // nums [6]
+// Adds
+3, 5 starting at index 0
+splice(0, 0, 3, 5); // nums = [3,
+// Adds
+7, 9, 11 starting at index 2
+splice(2, 0, 7, 9, 11); // nums =
+[3, 5, 7, 9, 11, 6]
+shift
+splice
+push
+length
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+71 of 119 2024-10-12, 4:01 p.m.
+Method Description Example
+Adds or let nums
+removes II Delet
+elements the end
+from nums . spl
+splice( startinglndex,
+anywhere II Delet s start_nq at index 0
+in the nums . spl 1ms = r 61
+numE/em ToDelete,
+array and
+valuesToAdd) II returns nums . spl
+the 5, 6]
+deleted II elements nums . spl
+(if any) [3, 5 , ;
+I PARTICIPATION I . . ACTIVITY 3.8.3: Adding and removing array elements.
+The six individuals in the line array are waiting in line. Write the JavaScript code to add
+or remove elements to/from the array to simulate the following events:
+1. The person at the front of the line (index 0) leaves the line ( ).
+2. The person at the end of the line cuts in front of the person at the front of the line
+(pop and unshift).
+3. Two new people named "Poe" and "Snoke" cut into line behind the second person in
+line (splice) .
+4. The fifth person in line leaves the line (spl ).
+5. A new person named "Han" enters the back of the line ( ).
+Finally, display the contents of the line array to view the new line occupants. A correct
+solution will show: Leia, Finn, Poe, Snoke, Maz, Han.
+Looping through an array
+□
+The array property length contains the number of elements in the array. The
+helpful for looping through an array using a for loop.
+property is
+Figure 3.8.1: Looping through an array with a for loop.
+let groceries = ["bread", "milk", "peanut butter"];
+// Display all elements in groceries array
+for (i = 0; i < groceries length; i++) {
+groceries[i]);
+of
+of
+, "peanut butter"];
+// groceries array
+Array forEach()
+"peanut butter"];
+// groceries array
+groceries.forEach(function(item, index) {
+console.log(index + " - " + item);
+});
+0 - bread
+1 - milk
+2 - peanut butter
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+72 of 119 2024-10-12, 4:01 p.m.
+l.UL \ .L - V i .L '-- <:JLU G t::=L.Lt::=::i • .Lt::=11<:JLll i
+consol e . log (i + " - " + groceri
+0 - bread
+1 - milk
+2 - peanut butter
+The for-of loop is a simplified for loop that loops through an entire array. The array name is placed
+after the keyword in a for-of loop. Each time through the loop, the next array element is assigned
+to the variable in front of the keyword.
+Figure 3.8.2: Looping through an array with a for-of loop.
+The
+let groceri es = ["bread" , "milk"
+II Display all elements in grace
+for (let item of groceries ) {
+console . log (item);
+bread
+milk
+peanut butter
+method forEach() also loops through an array. The method takes a
+function as an argument. The function is called for each array element in order, passing the
+element and the element index to the function.
+Figure 3.8.3: Looping through an array with the forEach() method.
+let groceries = ["bread" , "milk" ,
+II Display all elements in groceri
+crroc-:P. r i P. s . f o rF,i'l c-:h ( f1rn c-:t_ i on ( i t_P.m . i
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+73 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.8.4: Looping through an array.
+1) What is autos. length?
+let autos = [ " Chevrolet " ,
+" Dodge " , "Ford" , "Ram" ];
+0 0
+0 3
+0 4
+2) What is output to the console?
+let autos = [ " Chevrolet " ,
+" Dodge " , "Ford" , "Ram" ];
+f o r (i = 0 ; i < 2 ; i ++) {
+cons ole . l og (autos [ i ]);
+0 Chevrolet, Dodge
+0 Chevrolet, Dodge, Ford
+0 Chevrolet, Dodge, Ford, Ram
+3) What is output to the console?
+let autos = [ " Chevrolet " ,
+" Dodge " , "Ford" , "Ram" ];
+f o r (i = 0 ; i < autos . length ;
+i ++) {
+if ( i % 2 == 0 ) {
+cons ole . l og (autos [ i ]);
+0 Chevrolet, Dodge, Ford, Ram
+0 Chevrolet, Ford
+0 Dodge, Ram
+4) What is output to the console?
+□
+0
+0
+0
+0
+ncScores[0]
+dukeScores ncScores
+winningTeam
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+74 of 119 2024-10-12, 4:01 p.m.
+let autos = ["Chevrolet" ,
+"Dodge" , "Ford" , "Ram" ] ;
+autos . f orE ach (function (i tem,
+index ) {
+} ) ;
+if (index % 3 == 0 ) {
+consol e . l og (i tem);
+}
+0 Chevrolet, Dodge, Ford, Ram
+0 Chevrolet, Ford
+0 Chevrolet, Ram
+5) What is missing in the for-of loop to
+display all the elements in the autos
+array?
+6)
+let autos = ["Chevrolet" ,
+"Dodge" , "Ford" , "Ram" ] ;
+for ( ) {
+consol e . l og (auto );
+0 let auto of autos
+0 let item of autos
+0 let autos of auto
+Which loop is best for looping through
+an array in reverse order (from last
+element to first element)?
+0 for loop
+0 for-of loop
+0 forEach() loop
+I PARTICIPATION I . . ACTIVITY 3.8.5: Practice looping.
+Duke and North Carolina have a famous basketball rivalry dating back to 1920. The
+number of points each team has scored in head-to-head competition over five years is
+provided in the dukeScores and ncScores arrays. Ex: North Carolina won the first
+game 76-72 since dukeScores [ o J is 72 and n is 76.
+Write a for loop that examines the and arrays and places "D" in
+the array if Duke won or "N" if North Carolina won, for every game. Ex:
+0
+0
+□
+) {
+{
+examScores));
+findAverage(examScores));
+examScores
+0
+1
+2
+3
+Average is 79.25
+84
+90
+65
+98
+New average is 84.25
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+75 of 119 2024-10-12, 4:01 p.m.
+winningTeam [ o J should be "N" because North Carolina won 76-72, and
+winningTeam [ 1 J should be "D" because Duke won 74-73.
+Then display the contents of the winningTeam array using a for-of or forEach() loop.
+Passing arrays to functions
+An array can be passed to a function as an argument. A function may modify an array argument's
+elements.
+IAP ACRTTIVICITIPYA TION I 3.8.6: Passing arrays to functions.
+function f i ndAverage (numbers ) {
+let sum = 0;
+for (l et i = 0 ; i < numbers . l ength ; i ++
+sum += numbers [ i ];
+return sum / numbers . l ength ;
+function g i veBonus (scores , bonus )
+for (let i = 0 ; i < scores . l ength ; i ++)
+scores [ i ] += bonus ;
+let examScores = [79 , 85 , 60 , 93 ] ;
+conso l e . l og ("Average i s " + findAverage (ex.
+g i veBonus (examScores , 5 );
+conso l e . l og ( "New average is " + f i ndAverag,
+Animation content:
+The following code is displayed:
+function flndAverage(numbers) {
+let sum= O;
+}
+for (let i = O; i < numbers.length; i++) {
+sum+= numbers[i];
+}
+return sum/ numbers.length;
+function giveBonus(scores, bonus) {
+□
+i++) {
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+76 of 119 2024-10-12, 4:01 p.m.
+for (let i = O; i < scores.length; i++) {
+scores[i] += bonus;
+}
+}
+let examScores = [79, 85, 60, 93];
+console.log("Average is 11 + flndAverage(examScores));
+giveBonus(examScores, 5);
+console.log("New average is 11 + flndAverage(examScores));
+The flndAverage() parameter numbers and the giveBonus() parameter scores both reference the
+same memory used by the examScore argument. The function flndAverage() is able to get values
+stored in the indices of examScores. The function giveBonus() is able to change values in
+examScores because the parameter scores reference the same block of memory as
+examScores. The parameter stores a copy of the reference to examScores rather than making a
+copy of the array examScores.
+Animation captions:
+1. The examScores array is passed to the flndAverage() function.
+2. flndAverage's numbers parameter refers to the same array as examScores.
+3. flndAverage() sums the scores in the numbers array, divides the sum by 4, and returns the
+result.
+4. examScores is passed to the giveBonus() function. The scores parameter and examScores
+argument refer to the same array.
+5. The for loop adds 5 to each element in scores, which also changes examScores.
+6. Since examScores is changed, the new average is 5 points higher than before.
+I PARTICIPATION I . . ACTIVITY 3.8.7: Passing arrays to functions.
+Match the value to the corresponding array element after the code below executes.
+function makeOdd (numbers ) {
+f o r (let i = O; i < numbers . length ;
+if (numbers [ i ] % 2 == 0 ) {
+numbers [ i ]++;
+let ages = [10, 3 , 5 , 8];
+makeOdd (ages );
+□
+indexOf()
+lastIndexOf()
+searchValue
+startingPosition
+indexOf() array.length - 1 lastIndexOf()
+92, 75, 64, 88,
+92); // 1
+92, 2); // 5
+100); //
+lastIndexOf(92); // 5
+lastIndexOf(92, 4); // 1
+lastIndexOf(50); //
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+77 of 119 2024-10-12, 4:01 p.m.
+If unable to drag and drop, refresh the page.
+11 3 5 9
+Searching an array
+ages[0]
+ages[1]
+ages[2]
+ages[3]
+Reset
+The array methods indexOf() and /astlndexOf() search an array and return the index of the first
+found value or -1 if the value is not found. searches from the beginning of the array to
+the end. searches from the end of the array to the beginning. Both functions take
+two arguments:
+I
+1. - The value to search for
+2. - Optional argument that indicates the index at which the search
+should begin (default is O for and for )
+Figure 3.8.4: Searching for array elements.
+l et scores
+92 l ;
+[80 , 9
+s = scores . indexOf (
+s = scores . indexOf (
+s = scores . indexOf (
+- 1
+s = scores . lastinde
+s = scores . l ast inde
+s = scores . lastinde
+- 1
+I I
+artists
+let artists = ["Raphael", "Titian", "Masaccio", "Botticelli", "Titian"];
+artists.indexOf("Botticelli")
+indexOf()
+enteredUsername
+enteredPassword true
+validCredentials()
+sort()
+sort()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+78 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION
+ACTIVITY
+Refer to the
+7)
+returns 3.
+0 True
+0 False
+3.8.8: Searching an array.
+array.
+2) artists. lastindexOf ("Titian")
+returns 1.
+0 True
+0 False
+3) artists. indexOf ("Michaelangelo")
+returns NaN.
+0 True
+0 False
+I PARTICIPATION I . . ACTIVITY 3.8.9: Practice searching an array.
+The validCredentials () function contains two parallel arrays of usernames and
+passwords. Modify validCredentials () to use the method to search the
+usernames array for the given enteredUsern . If the username is found, the same
+location in the passwords array should contain the . Return if
+the passwords are equal, false otherwise. val
+false if the given username was not found .
+Sorting an array
+should also return
+0
+0
+0
+□
+The array method sort() sorts an array in ascending (increasing) order. 's default behavior
+is to sort each element as a string using the string's Unicode values. Sorting by Unicode values may
+yield unsatisfactory results for arrays that store numbers. Ex: 7 O is sorted before 2 because "7 O" is
+< "2" when comparing the Unicode values of "7" to "2".
+The method can sort elements in other ways by passing a comparison function to
+sort() sort()
+1000, 4];
+// values: [1000, 200, 30, 4]
+// ascending order: [4, 30, 200,
+{
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+79 of 119 2024-10-12, 4:01 p.m.
+. The comparison function returns a number that helps
+order of the array's elements:
+determine the sorting
+• Returns a value< 0 if the first argument should appear before the second argument.
+• Returns a value > 0 if the first argument should appear after the second argument.
+• Returns O if the order of the first and second arguments does not matter.
+Figure 3.8.5: Sorting an array of numbers.
+l et numbers = [200 , 30 , 100
+II Sort based on Unicode va
+numbers . sort ();
+II Sort numbers in ascendin
+1000]
+numbers . sort (function (a , b )
+return a - b ;
+} ) ;
+I PARTICIPATION I . ACTIVITY 3.8.1 0: Sorting arrays.
+1) What is output to the console?
+let names = ["Sue " ,
+"Bob" , "Jeff" ] ;
+names . sort ();
+consol e . log (names [ 0 ] );
+Check Show answer
+2) What is output to the console?
+□
+0
+0
+let names = ["Sue",
+"Bob", "Jeff"];
+names.sort(function(a, b)
+{
+if (a > b) {
+return -1;
+}
+else if (a < b) {
+return 1;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+80 of 119 2024-10-12, 4:01 p.m.
+return 0 ;
+} ) ;
+consol e . l og (names [ 0]);
+Check Show answer
+3) What is output to the console?
+let totals = [ 90 , 4 , 21 ,
+34 l ;
+total s . sort ();
+consol e . log (totals [0]);
+Check Show answer
+4) What is output to the console?
+let totals = [ 99 , 4 , 25 0 ,
+38 l;
+totals . sort (fun cti on (a ,
+b ) {
+return b - a ;
+} ) ;
+consol e . log (total s [0]);
+Check Show answer
+I CHALLENGE I
+ACTIVITY 3.8.1: Arrays.
+5707 04.20654 7 6.qx3zqy7
+0
+0
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+81 of 119 2024-10-12, 4:01 p.m.
+Exploring further: 3.9 Objects
+• Array object (MON)
+Objects and properties
+An object is an unordered collection of properties. An object property is a name-value pair, where
+the name is an identifier and the value is any data type. Objects are often defined with an object
+literal. An object literal (also called an object initializer) is a comma-separated list of property
+name and value pairs.
+I PARTICIPATION I 3 g 1 C . b' · h b" 1· I ACTIVITY .. : reating an o Ject wit an o ~ect Itera .
+l et book = {} ;
+book = {
+t i t l e : "Outliers " , I publi shed : 2 011 ,
+keywords : [ " success " ,
+} ;
+" high-achievers " ]
+consol e . l og (book . title );
+consol e . l og (book . keywords [ 0]);
+book = {
+t i t l e : "Out liers " ,
+publi shed : 2 011 ,
+keywords : [ " success " , " h i gh- ach i evers " ] ,
+author : {
+f i rs t Name : "Malcolm" ,
+l astName : "Gladwell " } _J } .
+c : nso l e . l og (book . aut hor . l as t Name );
+Animation content:
+The following code is displayed:
+let book= D;
+book= {
+title: "Outliers",
+publi shed: 2011 ,
+Outliers
+success
+Gladwell
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+82 of 119 2024-10-12, 4:01 p.m.
+keywords: ["success", "high-achievers"]
+};
+console.log(book.title);
+console.log(book.keywords[0]);
+book= {
+title: "Outliers",
+published: 2011,
+keywords: ["success", "high-achievers"].
+author: {
+}
+};
+flrstName: "Malcolm",
+lastName: "Gladwell"
+console.log(book.author.lastName);
+Step 1 runs the code: let book={};.
+Step 2 runs the code: book= {
+title: "Outliers",
+published: 2011,
+keywords: ["success", "high-achievers"]
+};.
+Step 3 runs the code: console.log(book.title);
+console.log(book.keywords[0]);.
+Outliers and success are displayed in console, each on new lines.
+Step 4 runs the code:
+book= {
+title: "Outliers",
+published: 2011,
+keywords: ["success", "high-achievers"].
+author: {
+}
+};.
+flrstName: "Malcolm",
+lastName: "Gladwell"
+Step 5 runs the last line of code and Gladwell is displayed on a new line in the console
+Animation captions:
+1. book is assigned an empty object literal.
+2. book is assigned an object literal with three properties: title, published, keywords.
+"social media"],
+isbn = "1591846013";
+book.isbn("1591846013");
+book.author = "Jack";
+book.author.firstName
+= "Jack";
+book.author.lastName =
+"Jack";
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+83 of 119 2024-10-12, 4:01 p.m.
+3. Display the title and first keyword of the book object.
+4. book is assigned an object literal with an embedded object literal that is assigned to the
+author property.
+5. Display the last name of the book's author.
+I PARTICIPATION I . . . ACTIVITY 3.9.2: Accessing obJect properties.
+Refer to the book object below.
+l et book = {
+} ;
+title : "Hatching Twitter " ,
+published : 2013 ,
+keywords : [ "origins" , "betrayal" , s
+author : {
+firstName : "Nick" ,
+lastName : "Bil ton "
+□
+1) Which statement changes the 0
+published year to 2014?
+Q book.Published 2014;
+Q book.published 2014;
+Q book.published 2014;
+2) Which statement adds a new property
+called "isbn" with the value
+"1 591846013"?
+0
+0
+0
+book.isbn
+"1591846013";
+3) What statement replaces "Nick" with
+"Jack"?
+0
+0
+0
+0
+0
+this
+this.someProperty
+firstName + " " +
+// that "Susan Cain"
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+84 of 119 2024-10-12, 4:01 p.m.
+4) What is missing from the code below
+to remove "social media" from the
+book's keywords? The array method
+pop () removes the last element
+from an array.
+___ . pop ();
+0 keywords
+0 book.keywords[2]
+0 book.keywords
+Methods
+Assigning an object's property name with an anonymous function creates a method. Methods
+0
+access the object's properties using the keyword , followed by a period, before the property
+name. Ex:
+Figure 3.9.1: Defining a method in an object literal.
+let book = {
+title : "Quiet" ,
+author : {
+} ,
+firstName : "Susan" ,
+lastName : "Cain"
+II Define a method
+getAuthorName () {
+return this . author . firstNa
+this . author . lastName ;
+} ;
+II Call a method that returns "S
+let name = book . getAuthorName ();
+Figure 3.9.2: Defining a method for an existing object.
+let book = {
+title : "Quiet" ,
+author :
+book.assignMiddleInitial =
+function(middleInitial) {
+this.author.middleInitial =
+middleInitial;
+};
+book.assignMiddleInitial("H");
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+85 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.9.3: ObJect methods.
+Refer to the above figures.
+1) A method may be defined inside or
+outside an object literal.
+0 True
+0 False
+2) The method below outputs ''I'm
+reading 'Quiet'.".
+book . read = function ()
+console . log ("I'm reading '"
++ title + "' . " ) ;
+} ;
+0 True
+0 False
+3) The method below creates a new
+object property.
+0 True
+0 False
+□
+0
+0
+0
+score
+score
+get set
+get property() { return someValue; }
+set property(value) { ... }
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+86 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . . . ACTIVITY 3. 9.4: Practice creating obJects and methods.
+Create an object called game that represents a competition between two opponents or
+teams. Add the following properties to game, and assign any value to each property:
+1. winner - An object with properties name and
+2. loser - An object with properties name and
+Add the following methods to game:
+1. getMarginOfVictory () - Returns the difference between the winner's score and
+the loser's score
+2. showsummary () - Outputs to the console the winner's name and score, the loser's
+name and score, and the margin of victory
+Call the two methods to verify the methods work correctly. Example output:
+Broncos : 24
+Panthers : 10
+Margi n of v i c t ory : 14
+Accessor properties
+□
+An object property may need to be computed when retrieved, or setting a property may require
+executing some code to perform data validation. The and keywords define getters and
+setters for a property.
+• A getter is a function that is called when an object's property is retrieved. Syntax to define a
+getter:
+• A setter is a function that is called when an object's property is set to a value. Syntax to define
+a setter:
+An accessor property is an object property that has a getter or a setter or both.
+Figure 3.9.3: Defining an accessor property called 'area'.
+l et r ectang l e
+wi dth : 5 ,
+h e i gh t : 8 ,
+get a r ea ()
+return this .wi dth * this . h e i gh t ;
+} '
+this.secondOpponentScore) {
+> this.firstOpponentScore) {
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+87 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.9.5: Accessor properties.
+Refer to the game object.
+let game = {
+} ;
+firstOpponent : "Serena Williams " ,
+firstOpponentScore : 2 ,
+secondOpponent : "Garbine Muguruza " ,
+secondOpponentScore : 0 ,
+get winner () {
+if (this . firstOpponentScore > thi
+return this . firstOpponent ;
+else if (this . secondOpponentScore
+return this . secondOpponent ;
+else {
+return "Tie" ;
+1) The code below outputs "Serena
+Williams".
+console . log (game . winner ());
+0 True
+0 False
+2) The code below outputs "Maria
+Sharapova" .
+game . winner = "Maria
+Sharapova" ;
+console . log (game . winner );
+□
+0
+0
+nextSong
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+88 of 119 2024-10-12, 4:01 p.m.
+0 True
+0 False
+3) The ma tchDa te setter below sets
+the date property to the given
+value.
+let game = {
+} ;
+date : 1111
+set matchDate (value )
+date = value ;
+} ,
+0 True
+0 False
+4) What sets the game's match date to
+the Date object?
+let game = {
+} ;
+date : 1111
+set matchDate (value )
+this . date = value ;
+} ,
+II Wimbledon 2016 women's
+championship
+let champDate = new Date (2016 ,
+5 , 9 );
+O game.matchDate =
+champ Date;
+0 game.matchDate(champDate);
+I PARTICIPATION I . . . ACTIVITY 3.9.6: Practice creating accessor properties.
+The musicQueue object contains a songs property listing all the songs in the music
+queue. Add an accessor property called "next" with the following functions::
+• Getter - Returns the song in the songs array at index . Then increments
+next Song by one so the next song in the queue will be retrieved the next time the
+0
+0
+0
+nextSong songs
+songs
+musicQueue
+x = y;
+x = y;
+String
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+89 of 119 2024-10-12, 4:01 p.m.
+getter is accessed. If - is beyond the boundaries of the
+nextSong should be assigned 0.
+• Setter - Sets nextsong to the given value. If the value is outside the
+bounds, nextSong should be assigned 0.
+array,
+array's
+If the next property is implemented correctly, the for loop under the will
+display each song three times. The code under the for loop tests the setter and should
+display the song in comments.
+Passing objects to functions
+JavaScript data types can be divided into two categories: primitives and references.
+1. A primitive is data that is not an object and includes no methods. Primitive types include:
+boolean, number, string, null, and undefined.
+2. A reference is a logical memory address. Only objects are reference types.
+Assigning a variable with a primitive creates a copy of the primitive. Ex: If y is 2, then
+means x is assigned with a copy of y. Assigning a variable with a reference creates a copy of the
+reference. Ex: If y refers to an object, then means x is assigned with a copy of y's reference.
+Both x and y refer to the same object.
+When a primitive is passed to a function, the parameter is assigned a copy of the argument.
+Changing the parameter does not change the argument.
+When an object is passed to a function, the parameter is also assigned a copy of the argument.
+However, the parameter and argument are both a reference to the same object. Changing the
+parameter reference to a new object does not change the argument, but changing the parameter's
+properties does change the argument's properties.
+I
+Primitive wrappers
+All primitives, except for null and undefined, have equivalent objects that wrap the
+primitive values and provide methods for interacting with the primitives. Ex: A string
+primitive has a String class that provides various methods for manipulating a
+string. Calling "abc". toUpperCase () converts the primitive string into a
+object, calls the method, and returns the string primitive ''ABC".
+function changeThings(x, y, z) {
+x = 33;
+y.width 20;
+{ title: Games",
+author: }
+5;
+rectangle = {
+width: 3,
+height: };
+{
+title: Twilight",
+author: };
+changeThings(level, rectangle, book);
+console.log(level);
+console.log(rectangle.console.log(book.title);
+level 5
+width
+title
+author
+Twilight
+Stephenie Meyer
+x
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+90 of 119 2024-10-12, 4:01 p.m.
+ACT1v1TY 3.9.7: Passing primitives and references to a function. I PARTICIPATION I
+functi on changeThi ngs (x , y , z ) 7 X = 33 ;
+y .wi dth = 20 ;
+z = { t i tle : "The Hunger Games " ,
+autho r : "Suzanne Collins" };
+let level = 5 ;
+let re c tangle
+width : 3 ,
+height : 16
+} ;
+let book = {
+title : "Twilight " ,
+a utho r : " Stephenie Meyer"
+} ;
+changeThings (level , re c tangle , b ook);
+cons ole . l og (level );
+cons ole . l og (re c tangle .width);
+cons ole . l og (book . title );
+Animation content:
+The following code is displayed:
+function changeThings(x, y, z) {
+X = 33;
+}
+y.width = 20;
+z = { title: "The Hunger Games",
+author: "Suzanne Collins " };
+let level = 5;
+let rectangle = {
+width : 3,
+height: 16
+};
+let book= {
+title: "Twilight",
+author: "Stephenie Meyer"
+};
+changeThings(level, rectangle, book);
+console. log(level);
+level §
+rectangle
+book
+~ X
+y
+z
+5
+20
+Twilight
+JI 20 II width
+16 height
+.4
+.4 The Hunger Games title
+Suzanne Collins author
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+91 of 119 2024-10-12, 4:01 p.m.
+console.log(rectangle.width);
+console.log(book.title);
+Step 1 runs the following line of code:
+Let level = 5;. Level is allocated memory and stores the value 5 at level's memory address.
+Step 2 runs the following code:
+let rectangle = {
+width: 3,
+height 16
+};
+let book= {
+title: ''Twilight",
+author: "Stephenie Meyer"
+};.
+Rectangle is allocated memory but stores the memory address that stores the values of width
+and height. The memory allocated to rectangle is shown pointing to the blocks of memory that
+are allocated to width and height. The same applies to the object book.
+Step 3 runs the following code:
+changeThings(level, rectangle, book.
+The parameter y is shown pointing to the same block of memory rectangle points to and
+parameter z points to the same block of memory that book points to.
+Step 4 runs the following code in changeThings: x = 33;.
+Step 5 runs the following code in changeThings: y.width = 20;
+Step 6 runs the following code in change Things: z = { title: 'The Hunger Games",
+author: "Suzanne Collins"};
+In step, 7 the function change Things returns and runs the following code:
+console.log(level);
+console.log(rectangle.width);
+console.log(book.title);.
+5, 20, and Twilight are displayed in the console.
+After returning x, y, and z have their memory deallocated. Since the memory that stored the
+object z referred to no longer has a reference, the object gets deallocated memory.
+Animation captions:
+1. level is a number, which is a primitive type.
+2. rectangle and book are objects. Each object refers to the object's location in memory.
+3. The call to change Things() assigns a copy of each argument to the x, y, and z parameters. y
+refers to the same object as rectangle, and z refers to the same object as book.
+4. Assigning x a new number does not change level.
+5. Assigning y.width a new number changes rectangle.width since bothy and rectangle refer
+to the same object.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+92 of 119 2024-10-12, 4:01 p.m.
+6. Assigning z a new object does not change book since z and book refer to different objects.
+7. After returning from change Things(), rectangle.width is the only value that has changed.
+I PARTICIPATION I . . . ACTIVITY 3.9.8: Passing objects to functions.
+Refer to the code below.
+fun c ti on changeMovie (movie )
+movie . title = "The Avengers " ;
+movie . released = 2012 ;
+movie = {
+title : "Avengers: Endgame" ,
+released : 2019 };
+let avengersMovie = {
+} ;
+title : "Avengers: Infinity War " ,
+released : 2018
+1) What is output to the console?
+changeMovie (avengersMovie );
+console . log (avengersMovie . title );
+0 Avengers: Infinity War
+0 The Avengers
+0 Avengers: Endgame
+2) What is output to the console?
+let myMovie = avengersMovie ;
+myMovie . title = "Avengers: Age of
+Ultron " ;
+console . log (avengersMovie . title );
+0 Avengers: Infinity War
+0 The Avengers
+0 Avengers: Age of Ultron
+I CHALLENGE I . ACTIVITY 3.9.1: Objects.
+5707 04.20654 7 6.qx3zqy7
+□
+0
+0
+□
+myMap["key"]
+stateCapitals["CO"]);
+stateCapitals
+AR Little Rock
+CO Denver
+NM Santa Fe
+CO capital is Denver
+TX Austin
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+93 of 119 2024-10-12, 4:01 p.m.
+Exploring further: 3.1 O Maps
+• Working with objects (MON).
+Objects as maps
+A map or associative array is a data structure that maps keys to values. Each key/value pair in a
+map is called an element.
+JavaScript objects can be used as maps, in which the key is the object property and the value is the
+property's value. When an object is used as a map, individual elements are accessed by key using
+brackets. Ex:
+IAP ACRTTIVICITIPYA TION I 3.10.1: State capitals in an obJ·ect map.
+l et stateCapi ta l s = {
+AR : " Little Rock" ,
+CO : " Denver " ,
+NM : "Sante Fe "
+} ;
+consol e . l og ( "CO capital is " + stateCapi tal
+stateCapi ta l s [ " TX" ] = "Austin" ;
+Animation content:
+Static figure:
+Begin code segment:
+let stateCapitals = {
+AR: "Little Rock",
+CO: "Denver",
+NM: "Sante Fe"
+};
+console.log("CO capital is "+ stateCapitals["CO"]);
+□
+contacts["Dave"].email
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+94 of 119 2024-10-12, 4:01 p.m.
+stateCapitals[''TX"] = "Austin";
+End code segment.
+Memory for stateCapitals shows four elements with two letter state codes as keys and capitals
+as values: AR/''Little Rock", CO/"Denver", NM/"Santa Fe", and TX/"Austin".
+Console displays:
+CO capital is Denver
+Animation captions:
+1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+elements.
+2. The map's value for key "CO" is "Denver".
+3. The capital of Texas, with key ''TX" and value "Austin", is added to the map.
+I PARTICIPATION I . ACTIVITY 3.10.2: ObJect maps.
+Refer to the object map below.
+l et contacts = {
+Rosa : {
+} ;
+} '
+phone : "303-555-4321" ,
+email : "rosa@gmail.com"
+Dave : {
+} '
+phone : "501-533-9988" ,
+email : "dave@yahoo.com"
+Li : {
+phone : "213-511-6758" ,
+email : "li@msn.com"
+1) What outputs Dave's email address?
+console . log ( __ );
+0 ["Dave"] .email
+0 contacts.email
+0
+□
+0
+in
+variable in object)
+stateCapitals
+AR Little Rock
+CO Denver
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+95 of 119 2024-10-12, 4:01 p.m.
+2) What assigns a Twitter username to
+Rosa?
+--- = "@rosaLuvsCats " ;
+0 contact s ["Rosa "] . t witte r
+0 contact s ["rosa "] . t witte r
+0 contact s ["Rosa "] . email
+3) What adds John to the contact s
+map?
+___ = { phone : " 111-2222 " ,
+email : " john@work.org" };
+0 contact s ["John"] .email
+0 contact s
+0 contact s ["John"]
+For-in loop
+0
+0
+The for-in loop iterates over an object's properties in arbitrary order and is ideal for looping through
+an object map's elements. The for-in loop declares a variable on the left side of the keyword and
+an object on the right. In each iteration, the variable is assigned with each of the object's properties.
+Construct 3.10.1: for-in loop.
+for (let vari ab
+{
+body
+I PARTICIPATION
+ACTIVITY I 3.10.3: Looping through an object map.
+let stateCapitals = {
+AR : "Little Rock" ,
+CO : " Denver " ,
+NM : "Sante Fe "
+□
+};
+console.log("All capitals:");
+for (let state in stateCapitals) {
+console.log(state + " is " + stateCapitals[state]);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+96 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+Static figure:
+Begin code snippet:
+let stateCapitals = {
+};
+AR: "Little Rock",
+CO: "Denver",
+NM: "Sante Fe"
+console.log("AII capitals:");
+for (let state in stateCapitals) {
+console.log(state +" is "+ stateCapitals[statel);
+}
+End code snippet.
+Console displays:
+All capitals:
+AR is Little Rock
+CO is Denver
+NM is Sante Fe
+Animation captions:
+1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+elements.
+2. The for-in loop declares variable state inside the for-in statement.
+3. The for-in loop assigns each key to the state variable, one at a time. The loop body outputs
+each element.
+I PARTICIPATION I
+ACTIVITY 3.10.4: For-in loop. □
+let contacts = {
+Rosa: {
+phone: "303-555-4321",
+email: "rosa@gmail.com"
+},
+Dave: {
+phone: "501-533-9988",
+email: "dave@yahoo.com"
+},
+Li: {
+phone: "213-511-6758",
+email: "li@msn.com"
+}
+};
+contacts
+for (______) {
+console log(name + ": " +
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+97 of 119 2024-10-12, 4:01 p.m.
+Refer to the object map below.
+7) Which expression loops through the
+map to output all names
+and phone numbers?
+..__,..._,, J..L..._, ..._,, ....L... ,.__, • ....L. ..._,,':::I \ J..LI...A..LL L'--' I
+contacts [name ] . phone );
+}
+0 let contacts
+0 let name in contacts
+0 let contacts in name
+2) What is missing to assign email with
+each contact's email address?
+f o r (l et name in contacts )
+l et email =
+i f (email . inc ludes ( "msn " ))
+consol e . l og (name );
+0 contacts.email
+0 name.email
+0 contacts[name] .email
+IAP ACRTTIVICITIPYA TION I 3.10.5: Practice with obJ·ect maps.
+0
+0
+□
+courses
+title
+description creditHours
+length
+true
+false
+{
+,
+stateCapitals);
+//
+length); // 3
+// Evaluates true
+if ("NM" in stateCapitals) {
+console.log("NM exists");
+}
+// Remove the NM/Santa Fe pair
+delete stateCapitals["NM"];
+// Evaluates false
+if ("NM" in stateCapitals) {
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+98 of 119 2024-10-12, 4:01 p.m.
+Create an object map called that stores a university department's course
+number as the key and an object as the value. The object has three properties:
+. Example courses:
+• 770 - Introduction to Programming, Develop algorithms for computers, 5.
+• 250 - Web Development, Build web applications, 3.
+• 31 O - Operating Systems, Process management and memory management, 3.
+• 430 - Artificial Intelligence, Simulate human thinking, 2.
+Then, write a for-in loop that displays the course number and title for only those courses
+that are 3 credit hours.
+Other object map operations
+Other common operations performed on object maps include:
+• Get number of elements. The Object.keys() method returns an array of an object's property
+names. The array's property returns the number of elements in the object map.
+• Check for key. The in operator returns if an object contains the given property and
+returns otherwise.
+• Remove element. The delete operator removes a key/property from a map or object.
+Figure 3.10.1: Object map operations example.
+let stateCapital s = I
+AR : "Little Rock " ,
+CO : "Denver" ,
+NM : "Sante Fe "
+} ;
+let states =
+Ob j ect . keys (stateCapj
+consol e . l og (states );
+AR, CO,NM
+console . log (states . lE
+length);
+students
+if (________) {
+console.log("Hello, "
++ students[888].name);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+99 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.10.6: in and delete operators.
+Refer to the object map below.
+let students = {
+123 : { name : "Tiara" , gpa : 3 . 3 } '
+444 : { name : "Lee" , gpa : 2 . 0 } '
+987 : { name : "Braden" , gpa : 3 . 1 }
+} ;
+1) Remove Lee from students.
+delete
+Check Show answer
+2) Assuming students has three elements before
+the code executes, what number is output to the
+console?
+delete students ["Braden " ];
+consol e . log (Ob j ect . keys (students ) . l er
+Check Show answer
+3) What is missing to check if
+student ID 888 is in ?
+□
+0
+0
+0
+Map
+Map
+[key, value]
+stateCapitals
+AR Little Rock
+CO Denver
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+100 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+4) What is output to the console?
+for (let i d in students )
+{
+delete students [ i d ];
+if (123 in students ) {
+consol e . l og ("yes" );
+else {
+consol e . l og ("no" );
+Check Show answer
+Map object
+The Map object is a newer alternative to using objects for storing key/value pairs. Common
+methods and properties of the object include:
+0
+• The set(key, value) method sets a key/value pair. If the key is new, a new element is added to
+the map. If the key already exists, the new value replaces the existing value.
+• The get(key) method gets a key's associated value.
+• The has(key) method returns true if a map contains a key, false otherwise.
+• The delete(key) method removes a map element.
+• The size property is the number of elements in the map.
+The for-of loop, which is often used to loop through an array, is ideal for looping through a
+Each of the map's key/value pairs are assigned to the
+of loop, as illustrated in the animation below.
+variables declared in the for-
+I PARTICIPATION I . . AcTiviTv 3.7 0.7: State capitals in a Map.
+let stateCapi tal s = new Map ();
+stateCapi tal s . set ("AR" , "Little Rock " );
+stateCapital s . set ("CO" , "Denver" );
+□
+stateCapitals.set("NM", "Santa Fe");
+console.log("Size of map is " + stateCapitals.size);
+if (stateCapitals.has("CO")) {
+console.log("CO capital is " + stateCapitals.get("CO"));
+}
+console.log("All capitals:");
+for (let [state, capital] of stateCapitals) {
+console.log(state + " is " + capital);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+101 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+let stateCapitals = new Map();
+stateCapitals.set("AR", "Little Rock");
+stateCapitals.set("CO", "Denver");
+stateCapitals.set("NM", "Santa Fe");
+console.log("Size of map is"+ stateCapitals.size);
+if (stateCapitals.has("CO")) {
+console.log("CO capital is"+ stateCapitals.get("CO"));
+}
+console.log("AII capitals:");
+for (let [state, capital] of stateCapitals) {
+console.log(state +"is"+ capital);
+}
+Step 1 runs the first line and stateCapitals is initialized to a map object with nothing stored.
+Step 2 runs the following code:
+stateCapitals.set("AR", "Little Rock");
+stateCapitals.set("CO", "Denver");
+stateCapitals.set("NM", "Santa Fe");.
+The map stateCapitals is populated with keys: AR, CO, and NM. Each key is associated with a
+memory location storing the strings: Little Rock, Denver, and Sante Fe.
+Step 3 runs the following line of code:
+console.log("Size of map is"+ stateCapitals.size);.
+Size of map is 3 is displayed in the console.
+Step 4 runs the following if block:
+if (stateCapitals.has("CO")) {
+console.log("CO capital is"+ stateCapitals.get("CO"));
+}.
+CO capital is Denver is displayed in the console.
+email: "rosa@gmail.com" }],
+email: "dave@yahoo.com" }],
+email: "li@msn.com" }]
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+102 of 119 2024-10-12, 4:01 p.m.
+Step 5 runs the following code:
+console.log("AII capitals:");
+for (let [state, capital] of stateCapitals) {
+console.log(state +" is "+ capital);
+}.
+The following lines are displayed in the console:
+All capitals:
+AR is Little Rock
+CO is Denver
+NM is Sante Fe
+Animation captions:
+1. A new Map object is created with the Map() constructor.
+2. The set() method adds three key/value pairs to the stateCapitals Map.
+3. The size property returns 3 because stateCapitals has three key/value pairs.
+4. The has() method returns true because "CO" is one of the keys in stateCapitals. The get()
+method returns the value associated with "CO".
+5. The for-of loop assigns each key/value pair to variables state and capital.
+I PARTICIPATION I . ACTIVITY 3.10.8: Map obJect.
+Refer to the map below.
+l et contacts = new Map ( [
+l ) ;
+[ "Rosa" , { phone : "303-555-4321" , em
+[ "Dave" , { phone : "501-533-9988" , em
+[ "Li" , { phone : "213-511-6758" , em
+1) What is output to the console?
+console . log (contacts . size );
+0 0
+0 2
+0 3
+2) What is output to the console?
+contacts . set ("Li" , {
+phone : "213-444-6758" ,
+email : "li@email.com" } ) ;
+console . log (contacts . size );
+□
+0
+0
+contacts.delete("Li");
+console.log(contacts.size);
+console.log(______);
+contacts.get("Dave")
+contacts.get("Dave").email
+contacts["Dave"].email
+if (contacts.has("John")) {
+console.log(contacts.get("John").phone);
+}
+else {
+console.log("Missing");
+}
+email phone
+let rosa = contacts.get("Rosa");
+rosa.twitter = "@rosaLuvsCats";
+contacts.get("Rosa").twitter
+= "@rosaLuvsCats";
+contacts.set("Rosa").twitter
+= "@rosaLuvsCats";
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+103 of 119 2024-10-12, 4:01 p.m.
+0 0
+0 3
+0 4
+3) What is output to the console?
+0 0
+0 2
+0 3
+4) What outputs Dave's email address?
+0
+0
+0
+5) What is output to the console?
+0 John's phone number
+0 The string "Missing"
+0 An empty string
+6) The code below assigns a Twitter
+username to Rosa while leaving Rosa's
+and properties unaltered.
+How can the code be simplified?
+0
+0
+0
+0
+0
+0
+String
+String
+String
+"test".charAt(1) String
+"test".length charAt() ≥
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+104 of 119 2024-10-12, 4:01 p.m.
+contacts . set ("Rosa" , {
+Q twi tter = "@rosaLuvsCats"
+} ) ;
+7) Which expression loops through the
+contacts map to output all names
+and phone numbers?
+f o r ( __ ) {
+con sol e . l og (name +
+contac t . p h one );
+". " +
+}
+0 let contact of
+contacts
+0 let [name, contact] of
+contacts
+0 let name of contacts
+I CHALLENGE I ACTIVITY 3.7o. 7: Maps.
+5707 04.2065416 qx3zqy7
+Exploring further:
+• Mar,2 object (MON)_
+3.11 String object
+Introduction to the String object
+The String object defines methods to manipulate strings, extract substrings, test for string
+0
+□
+inclusion, etc. A string literal (a string in "quotes") is automatically converted into a object
+when a method is invoked.
+The method charAt() returns the character at the specified index as a string. Ex:
+returns the character "e" at index 1. The property length returns the
+number of characters in a string. Ex: returns 4. Calling with an index
+length
+++) {
+spaces");
+I love JS
+0 1 2 3 4 5 6 7 8
+s =
+totalSpaces =
+i
+2 s.length = 9
+=
+2 spaces
+9
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+105 of 119 2024-10-12, 4:01 p.m.
+the string's returns an empty string.
+IAP ACRTTIVICITIPYA TION I 3.11 .1: Counting spaces in a string.
+l et s = "I love JS " ;
+l et tota l Spaces = 0 ;
+for (l et i = 0 ; i < s . length ; i ·
+i f (s . charAt (i ) === " " ) {
+I } } total Spaces ++;
+console . log (totalSpaces + " spac
+Animation content:
+The following code is displayed:
+let s = "I love JS";
+let totalSpaces = 0;
+for (let i = 0; i < s.length; i++) {
+if (s .charAt(i) ===" ") {
+}
+}
+tot a !Spaces++;
+console.log(totalSpaces + " spaces");
+□
+ro ,T.C:::
+[ ]
+In step 1, the strings is initialized and indices 0-8 are shown under each character in the string "I
+love JS"
+Step 3 and 4 runs the following line:
+for (let i = 0; i < s.length; i++) {.
+i is initialized to 0, ands.length is 9. i is shown as a pointer under the index 0 in the strings.
+In step 5, the if statement is checked when i = 0.
+In step 6, the loop iterates with i now equal to 1, and totalSpaces becomes 1.
+In step 7, the loop runs until i is incremented to 9. The string "2 spaces" is displayed in the
+console.
+Animation captions:
+1. The s variable is initialized to a string literal.
+String
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+106 of 119 2024-10-12, 4:01 p.m.
+2. The totalSpaces variable is used to count how many spaces are in the strings.
+3. Use variable i to iterate through the string s.
+4. The loop continues until i is s.length, the number of characters in the strings.
+5. s.charAt(O) is "I", not a space, so totalSpaces is not affected.
+6. s.charAt(1) is a space, so totalSpaces is incremented to 1.
+7. The for loop continues to check each character in the string. totalSpaces is 2 when the loop
+terminates.
+I PARTICIPATION I . . ACTIVITY 3.11.2: String obJect.
+1) What is the value of s. length?
+let s =
+0 0
+"" ,.
+0 NaN
+0 1
+2) What is the value of s. char At ( 1)?
+3)
+let s = "To be , or not to
+be ." ;
+0 space
+0 T
+0 0
+What is the value of s [ 1 J?
+let s = "Tobe , or not to
+be. " ;
+0 space
+0 T
+0 0
+Searching and replacing
+The object provides methods to search and replace strings:
+• The indexOf() method returns the index of the search string1s first occurrence inside the
+□
+0
+0
+0
+String
+String
+will find.";
+// 5
+// 1
+(first occurrence)
+// 2
+(last occurrence)
+// -1 (case-sensitive
+// "Seek and you will discover"
+// "Search and you will
+// No change (case-sensitive
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+107 of 119 2024-10-12, 4:01 p.m.
+object or -1 if the search string is not found.
+• The /astlndexOf() method returns the index of the search string's last occurrence inside the
+object or -1 if the search string is not found.
+• The replace() method replaces one string with another and returns the string with the
+replacement string inside.
+Figure 3.11.1: Searching for a string with indexOf() and lastlndexOf().
+let s = "Seek and
+s . indexOf ("and" );
+you wil
+II II II II -
+s . indexOf ( "e" );
+s . lastindexOf ("e" );
+s . indexOf ("SEEK" );
+search)
+Figure 3.11.2: Replacing a string with replace().
+l et s = "Seek and you will find. " ;
+s = s . repl ace ("find" , "discover" );
+s = s . replace ("Seek" , "Search" );
+discover "
+s = s . repl ace ("SEARCH" , "search" );
+search)
+I PARTICIPATION I ACTIVITY 3.11.3: Search and replace.
+Enter the value assigned toxin each code segment.
+l et quote = "I am Spartacus! " ;
+1) X =
+quote . indexOf ("part" );
+Check Show answer
+2) x = quote . indexOf ("I
+am! " );
+□
+0
+0
+String
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+108 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+3) X =
+quote . lastindexOf ( "a" );
+Check Show answer
+4) x = quote . replace ( "am" ,
+"was" );
+Check Show answer
+5) X =
+quote . replace ("spart" ,
+"mart" );
+Check Show answer
+Other String methods
+0
+0
+0
+A variety of other
+table below.
+methods exist. Some of the common methods are summarized in the
+Table 3.11.1: Common String methods.
+Method Description Example
+s = "As you wish.";
+s.substr(3, 3); // "you"
+s.substr(3); // "you wish." (length
+optional)
+s = "As you wish.";
+s.substring(3, 6); // "you"
+s.substring(3); // "you wish." (2nd
+index optional)
+s = "As you wish.";
+s.split(" "); // ["As", "you", "wish."]
+s = "What?";
+s.toLowerCase(); // "what?"
+s = "What?";
+s.toUpperCase(); // "WHAT?"
+s = " test ";
+s.trim(); // "test"
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+109 of 119 2024-10-12, 4:01 p.m.
+Returns the
+substring that
+substr()
+begins at a
+given index and
+has an optional
+given length.
+Returns the
+substring
+substring()
+between two
+indices, not
+including the
+second index.
+Returns an
+array of strings
+formed by
+splitting the
+split() string into
+substrings. The
+given delimiter
+separates
+substrings.
+Returns the
+string
+toLowerCase() converted to
+lowercase
+characters.
+Returns the
+string
+to Uppercase() converted to
+uppercase
+characters.
+Returns the
+string with
+trim()
+leading and
+trailing
+whitespace
+removed.
+greeting.trim()
+greeting.substr(9, 4)
+greeting.substr(9)
+greeting.toLowerCase()
+greeting.split("o")
+testPassword()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+110 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.17.4: String methods.
+Match the return value to the string method.
+l et greeting = " Welcome Home! " ;
+If unable to drag and drop, refresh the page.
+"Home!" " welcome home! " "Welcome Home!" I" Welc", "me H", "me! "]
+"Home"
+gree
+gree
+gree
+gree
+gree
+Reset
+I PARTICIPATION I . . . ACTIVITY 3.11.5: Practice with String methods.
+When creating an account on line, most websites require the user to enter a "strong"
+password. A strong password is a password that someone is unlikely to guess. Strong
+passwords must be sufficiently long, contain upper and lowercase letters, contain
+punctuation, etc.
+Complete the testPassword () function, which tests the strength of the given
+password. testPassword () should verify the password meets the criteria below in the
+order specified. If the criteria is not met, test Pc should return an appropriate
+message indicating what is wrong with the password. If all the criteria are met,
+testPassword () should return an empty string.
+□
+□
+length
+isSingleDigit()
+substr()
+===
+testPassword()
+`
+${expression} `test ${1 + 2}` "test 3"
+x * y); 2 * 3 = 6
+2 * 3 = 6
+line 1
+line 2
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+111 of 119 2024-10-12, 4:01 p.m.
+1. Minimum length of 6 characters - Use the
+is long enough.
+property to ensure the password
+2. No spaces - Use indexof () to ensure the password does not contain any spaces.
+3. Use at least one digit - Create a loop to examine each character of the password,
+and count how many times a digit character appears. JavaScript does not have a
+function to verify if a character is a digit, so use the uy .Leu.L~ .L L , 1 function
+provided. The password should have at least one digit.
+4. First 3 characters must not be repeated at the end - Use to extract the
+string at the front and end of the password. Then, compare the substrings with
+Ex: Password "abc123abc" is not acceptable because "abc" at the front of the
+password is the same as "abc" at the end of the password.
+The code is currently testing the password "pass" which should fail because the password
+is only 4 characters long. Verify that testPassv works by trying passwords that
+fail each of the four criteria.
+Template literals
+A template literal is a string literal enclosed by the back-tick ( ) that allows embedding expressions
+with a dollar sign and braces ( ). Ex: evaluates to
+Template literals replace the need to produce a string with string concatenation.
+I PARTICIPATION I . . . ACTIVITY 3.11.6: Template literal s1mpl1fles syntax.
+X = 2 ;
+y = 3 ;
+result = x + " * " + y + "=" + (
+conso l e . l og (resul t );
+2 3 6
+resul t = '${ x } * ${ y } = ${ x * y }' ;
+conso l e . l og (resul t );
+conso l e . l og ( ' line 1
+line 2' );
+Animation content:
+The following code is displayed:
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+112 of 119 2024-10-12, 4:01 p.m.
+X = 2;
+y = 3;
+result = x + 11 * 11 + y + 11 = 11 + (x * y);
+console.log(result);
+result= '${x} * S{y} = S{x * y}';
+console.log(result);
+console.log('line 1
+line 2');
+Step 1 runs the following code:
+X = 2;
+y = 3;
+result = x + 11 * 11 + y + 11 = 11 + (x * y);
+console.log(result);.
+The string 2 * 3 = 6 is displayed in the console.
+Step 2 runs the following code:
+result = 'S{x} * S{y} = S{x * y}';
+console.log(result);
+Step 3 runs the following code:
+console.log('line 1
+line 2');.
+In the console, line 1 and line 2 are displayed in different lines despite only having 1 console.log
+line run.
+Animation captions:
+1. String concatenation is required to build a string showing the math equation.
+2. A template literal simplifies the syntax to build the same string.
+3. Newline characters inserted in a template literal create multi-line strings.
+I PARTICIPATION I . ACTIVITY 3.11.7: Template literal.
+Rewrite each string assignment using a template literal.
+1) greeti ng = "Welcome, " +
+name + "! " ;
+greeting=
+Check Show answer
+□
+0
+answer = "sum is " + (x +
+y);
+answer =
+;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+113 of 119 2024-10-12, 4:01 p.m.
+2) 0
+Check Show answer
+3) ye ll = verb . toUpperCase () 0
++ "I" ,•
+yell =
+,
+Check Show answer
+4) l etters = "a\nb\nc " ; 0
+letters =
+,
+Check Show answer
+I CHALLENGE I . ACTIVITY 3. 11.1 : Strin gs. □
+5707 04.2065416 qx3zqy7
+Exploring further:
+• String object (MDN).
+• TemRlate literals (Template string~)_(MDN)_
+3.12 Lab: Auto loan {CSS)
+Due: Wednesday, September 15, 11 :59PM
+Create a CSS stylesheet such that the provided HTML (autoloan.html) looks like the following
+container
+<div> offer offer
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+114 of 119 2024-10-12, 4:01 p.m.
+webpage. In addition to the automated checks, we will also perform a visual check of the styling
+when grading the lab.
+Compa.rison of Dealer Incentives and Loan Off1ers
+[. ,pure~ _ Off&t.11I ] P111rchase Offer 2
+Item Cos1 lltem Cost
+P rchase p ice; $33,500 Pu chase price; $33,500
+Cash incent1 e/rebate: $0 Cash incent e/rebate: $500
+Loan lerm (months): 48 Loan te m( onths): 48
+Annual percen age rate (AP ): 32 Annual pe centage rate (APR): 4_
+onlhly payment: $725.33 o thly payment: $746.59
+Total cost: S34 815.62 Total cost· S35,836.15
+To achieve the desired web page, the following contents in your html file should be updated for
+Table 1 (Offer 1 ).
+• Loan term (months): 60
+• Annual percentage rate (APR): 3.11
+• Monthly payment: $604
+• Total cost $36,215.00
+To achieve the desired web page, the following style rules should be utilized.
+• The default fonts (in order of priority) should be Roboto, Helvetica, and sans-serif
+• The heading "Comparison of Dealer Incentives and Loan Offers" should be 12pt font using
+color #444444 and have centered text
+• Define styling for the class such that the contents is centered, has a 5 pixel
+margin, and has a font size of 1 Opt
+• Each offer is defined in a tag with the class . Define the class such that
+o Each offer is displayed inline-block, with a fixed width of 400 pixels, a 4 pixel margin,
+and centered text
+o Each offer has a 1 pixel solid border using color #cccccc with a radius of 1 pixel
+o Each offer uses a shadow defined as:
+■ box-shadow: 0px 2px 2px #dddddd, 0px 0px 5px #dddddd;
+<div> offerTitle offerTitle
+<div> offerContents
+offerContents
+finalValue
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+115 of 119 2024-10-12, 4:01 p.m.
+• The offer title is defined in a tag with class. Define the
+class such that
+o The title uses 11 pt bold font with color #ffffff
+o The title's background is colored #00b3b3
+o The title has no margin and 15 pixels of padding
+• The offer contents are defined in a tag with class . Define the
+class such that:
+o Each offer contents div has 20 pixels of padding, a 2 pixel border radius for the bottom
+border, and background colored #fafafa
+• Define CSS rules such that all tables have the following styling:
+o The table should have a width of 100%, background colored #ffffff, no border spacing, a
+shadow defined as:
+■ box-shadow: 0px 2px 2px #dddddd, 0px 0px 5px #dddddd;
+o Header cells should use a 9pt bold font with color #777777
+o Data cells should use a font lighter than normal weight with color #444444
+o Header cells should have 1 0 pixels of padding and no margin
+o Data cells should have 1 0 pixels of padding on the left and right, 20 pixels of padding on
+top and bottom, and no margin
+o Both header cells and data cells should left align text
+o Both header cells and data cells should have a solid bottom border of 1 pixel using color
+#f1 f1 f1
+• Define a class that defines a bold font weight with color #2222ff
+Note1: When testing font sizes, a font size specified in points (pt) will be converted by the browser
+to pixels (px). If there is a font size mismatch, the resulting font sizes ( expected and in your
+webpage) will be displayed in pixels. For example, a font size of 12pt is equivalent to 16px.
+Note2: Following references may be useful: https://www.w3schools.com/cssref/css3prborderradius.
+asp and https://www.w3schools.com/cssref/css3prbox-shadow.asp. You can also find
+other CSS properties in w3schools.com for this lab.
+570104.2065416.qx3zqy7 I LAB I ACTIVITY 3.12.1 : Lab: Auto loan (CSS) 11 / 11 ---
+Submission Instructions
+Downloadable files
+index.html and style.css Download
+Upload your files below by dragging and dropping into the area or choosing a file on your hard
+drive.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+116 of 119 2024-10-12, 4:01 p.m.
+index.html
+Drag file here
+or
+Choose on hard drive.
+Submit for grading
+Coding trail of your work What is this?
+10 / 2 W9,11,11 min:3
+style.css
+Drag file here
+or
+Choose on hard drive.
+Latest submission - 11 :30 AM MST
+on 10/02/24
+Submission passed ✓ Total score: 11
+all tests / 11
+D Only show failing tests
+1 :Unit test A
+h1 styling
+✓ font-family of <h1 > tag
+✓ font-size of <h1 > tag
+✓ color of <h1 > tag
+2:Unit test A
+Background colors
+✓ Offer title background color of rgb(0, 179, 179)
+✓ Offer contents background color of rgb(250, 250, 250)
+✓ Table 1 background of rgb(255, 255, 255)
+✓ Table 2 background of rgb(255, 255, 255)
+3:Unit test A
+Display style for offer divs
+✓ First offer div style of inline-block
+Download this submission
+1 / 1
+1 / 1
+1 / 1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+117 of 119 2024-10-12, 4:01 p.m.
+✓ Second offer div style of inline-block
+4:Unit test A
+Border radii
+✓ border-bottom-right-radius of offer class (for table 1)
+✓ border-bottom-left-radius of offer class (for table 1)
+✓ border-top-right-radius of offer class (for table 1)
+✓ border-top-left-radius of offer class (for table 1)
+✓ border-bottom-right-radius of offer class (for table 2)
+✓ border-bottom-left-radius of offer class (for table 2)
+✓ border-top-right-radius of offer class (for table 2)
+✓ border-top-left-radius of offer class (for table 2)
+✓ border-bottom-right-radius of offerContents class (for table 1)
+✓ border-bottom-left-radius of offerContents class (for table 1)
+✓ border-top-right-radius of offerContents class (for table 1)
+✓ border-top-left-radius of offerContents class (for table 1)
+✓ border-bottom-right-radius of offerContents class (for table 2)
+✓ border-bottom-left-radius of offerContents class (for table 2)
+✓ border-top-right-radius of offerContents class (for table 2)
+✓ border-top-left-radius of offerContents class (for table 2)
+5:Unit test A
+Box shadows
+1 / 1
+1 / 1
+✓ offer class (table 1) box shadow of rgb(221 , 221 , 221) Opx 2px 2px Opx, rgb(221 ,
+221,221) Opx Opx 5px Opx
+✓ table 1 box shadow of rgb(221, 221,221) Opx 2px 2px Opx, rgb(221, 221,221) Opx
+Opx 5px Opx
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+118 of 119 2024-10-12, 4:01 p.m.
+✓ offer class (table 1) box shadow of rgb(221, 221,221) Opx 2px 2px Opx, rgb(221,
+221,221) Opx Opx 5px Opx
+✓ table 2 box shadow of rgb(221, 221,221) Opx 2px 2px Opx, rgb(221, 221,221) Opx
+Opx 5px Opx
+✓ No box shadow for container class
+6:Unit test A 1 / 1
+Margins and padding
+✓ Margin for container class
+✓ Margin for offer class
+✓ Margin for <th>
+✓ Margin for <td>
+✓ Padding for offerTitle class
+✓ Padding for offerContents class
+✓ Padding for <th>
+✓ Padding for <td>
+7:Unit test A 1 / 1
+<th> font colors, sizes, and weights
+✓ font-size of <th> tag
+✓ color of <th> tag
+✓ Bold font weight for <th>.
+8:Unit test A 1 / 1
+<td> font colors, sizes, and weights
+✓ font-size of <td> tag
+✓ color of <td> tag
+✓ Ligher font weight for <td>.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+119 of 119 2024-10-12, 4:01 p.m.
+9:Unit test A
+Text alignment
+✓ <h1 > text align is center
+✓ Offer <table> text align is center
+✓ <th> text align is left
+✓ <td> text align is center
+1 0:Unit test A
+flnalValue class styling
+✓ Bold font weight for flnalValue class.
+✓ Text color of rgb(34, 34, 255) for flnalValue class
+11 :Update contents A
+✓ Loan term (months) contains expected content
+✓ Annual percentage rate (APR) contains expected content
+✓ Monthly payment contains expected content
+✓ Total cost contains expected content
+Previous submissions
+11 :20 AM on 1 0/2/24
+11 :16 AM on 1 0/2/24
+11 / 11
+9 I 11
+View v
+View v
+1 / 1
+1 / 1
+1 / 1
