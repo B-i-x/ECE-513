@@ -1,0 +1,69 @@
+---
+[2.3.1] Multiple Choice: What is the purpose of the CSS `color` property?
+   - (A) To set the background color of an element
+   - (B) To define the text color of an element
+   - (C) To specify the border color of an element
+   - (D) To change the color of links within an element
+---
+
+[2.3.2] Multiple Choice: Which function is used to specify colors in terms of hue, saturation, and lightness in CSS?
+   - (A) rgb()
+   - (B) rgba()
+   - (C) hsl()
+   - (D) hex()
+---
+
+[2.3.3] Multi-Select: Which properties can use the `rgba()` function for defining colors? (Select all that apply)
+   - (A) color
+   - (B) background-color
+   - (C) border-color
+   - (D) outline-color
+---
+
+[2.3.4] Multiple Choice: How do you specify a background image for an element in CSS?
+   - (A) background-image: url('image.jpg');
+   - (B) background: image('image.jpg');
+   - (C) background-url: 'image.jpg';
+   - (D) bg-image: url('image.jpg');
+---
+
+[2.3.5] Multiple Choice: What does setting `background-color` to `transparent` do?
+   - (A) Makes the element's background fully opaque
+   - (B) Makes the element's background solid without transparency
+   - (C) Allows the background of underlying elements to be visible
+   - (D) Hides the element completely from view
+---
+
+[2.3.6] Multiple Choice: What is the result of using the `float` property with a value of `left` on an image within a paragraph?
+   - (A) The image is removed from the flow of the document
+   - (B) The image floats to the left, and text wraps around it on the right
+   - (C) The image stays fixed at the left edge of its container
+   - (D) The image aligns to the left, but text does not wrap around it
+---
+
+[2.3.7] Multi-Select: What scenarios are appropriate for using the `clear` property in CSS? (Select all that apply)
+   - (A) To prevent text from wrapping around floated elements
+   - (B) To set which sides of an element floating elements cannot be next to
+   - (C) To increase the space around floating elements
+   - (D) To reset the floating behavior of elements
+---
+
+[2.3.8] Multiple Choice: Which CSS property combines the definitions of `background-color`, `background-image`, `background-position`, and `background-repeat`?
+   - (A) background-combine
+   - (B) background
+   - (C) background-set
+   - (D) background-all
+---
+
+[2.3.9] Multiple Choice: How does CSS handle the transparency of colors specified with the `hsla()` function?
+   - (A) The 'a' in `hsla()` stands for absolute, which prevents any transparency
+   - (B) The alpha channel controls the transparency; 1 is fully opaque, 0 is fully transparent
+   - (C) Transparency is not supported in `hsla()`, only in `rgba()`
+   - (D) Transparency effects are reversed in `hsla()` compared to `rgba()`
+---
+
+[2.3.10] Multiple Choice: What is the CSS `background-clip` property used for?
+   - (A) To define the painting area of the background
+   - (B) To clip the background to fit the content area only
+   - (C) To add animation effects to the background
+   - (D) To prevent the background from scrolling with the content

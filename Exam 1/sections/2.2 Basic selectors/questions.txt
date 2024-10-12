@@ -1,0 +1,69 @@
+---
+[2.2.1] Multiple Choice: Which selector is used to apply styles to elements with a specific class?
+   - (A) #
+   - (B) .
+   - (C) :
+   - (D) *
+---
+
+[2.2.2] Multiple Choice: What does an ID selector begin with in CSS?
+   - (A) A hash (#)
+   - (B) A dot (.)
+   - (C) An at sign (@)
+   - (D) A dollar sign ($)
+---
+
+[2.2.3] Multi-Select: Which of the following are true about class selectors? (Select all that apply)
+   - (A) They can be used to style multiple elements simultaneously.
+   - (B) They must be unique within a page.
+   - (C) They are represented by a period (.) prefix.
+   - (D) They have higher specificity than element selectors.
+---
+
+[2.2.4] Multiple Choice: How would you select an HTML element with the ID 'banner'?
+   - (A) .banner
+   - (B) #banner
+   - (C) banner
+   - (D) &banner
+---
+
+[2.2.5] Multiple Choice: Which selector would you use to style all <p> elements within a <div>?
+   - (A) div p
+   - (B) div + p
+   - (C) div > p
+   - (D) p div
+---
+
+[2.2.6] Multiple Choice: What does a descendant selector use to combine two selectors?
+   - (A) A comma (,)
+   - (B) A plus sign (+)
+   - (C) A greater than sign (>)
+   - (D) A space
+---
+
+[2.2.7] Multiple Choice: If an element has multiple classes, which class's styles are applied?
+   - (A) The first class listed in the class attribute
+   - (B) The last class listed in the class attribute
+   - (C) All applicable styles are combined
+   - (D) Only the class with the highest specificity
+---
+
+[2.2.8] Multi-Select: Which statements are true about ID selectors? (Select all that apply)
+   - (A) They can be used on more than one element per page.
+   - (B) They are unique to a single element on a page.
+   - (C) They have higher specificity than class selectors.
+   - (D) They are denoted by a period (.)
+---
+
+[2.2.9] Multiple Choice: What is the result of applying multiple CSS rules with different selectors to the same element?
+   - (A) Only the first rule is applied.
+   - (B) Only the last rule is applied.
+   - (C) All rules are applied, but properties are combined based on specificity.
+   - (D) The browser randomly chooses which rule to apply.
+---
+
+[2.2.10] Multiple Choice: How do you select all elements that are the direct children of a <div> element?
+   - (A) div > *
+   - (B) div + *
+   - (C) div *
+   - (D) div ~ *

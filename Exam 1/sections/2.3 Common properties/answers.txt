@@ -1,0 +1,10 @@
+2.3.1 (B) To define the text color of an element
+2.3.2 (C) hsl()
+2.3.3 (A) color, (B) background-color, (C) border-color, (D) outline-color
+2.3.4 (A) background-image: url('image.jpg');
+2.3.5 (C) Allows the background of underlying elements to be visible
+2.3.6 (B) The image floats to the left, and text wraps around it on the right
+2.3.7 (A) To prevent text from wrapping around floated elements, (B) To set which sides of an element floating elements cannot be next to, (D) To reset the floating behavior of elements
+2.3.8 (B) background
+2.3.9 (B) The alpha channel controls the transparency; 1 is fully opaque, 0 is fully transparent
+2.3.10 (A) To define the painting area of the background

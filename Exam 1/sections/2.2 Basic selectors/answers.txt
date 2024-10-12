@@ -1,0 +1,10 @@
+2.2.1 (B) .
+2.2.2 (A) A hash (#)
+2.2.3 (A) They can be used to style multiple elements simultaneously, (C) They are represented by a period (.) prefix, (D) They have higher specificity than element selectors.
+2.2.4 (B) #banner
+2.2.5 (A) div p
+2.2.6 (D) A space
+2.2.7 (C) All applicable styles are combined
+2.2.8 (B) They are unique to a single element on a page, (C) They have higher specificity than class selectors
+2.2.9 (C) All rules are applied, but properties are combined based on specificity.
+2.2.10 (A) div > *

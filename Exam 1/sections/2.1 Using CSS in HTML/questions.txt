@@ -1,0 +1,69 @@
+---
+[2.1.1] Multiple Choice: What is the primary function of CSS?
+   - (A) To structure web page content
+   - (B) To create interactive user interfaces
+   - (C) To define the visual presentation of web pages
+   - (D) To manage the server response to web requests
+---
+
+[2.1.2] Multiple Choice: Which CSS property is used to change the text color of an element?
+   - (A) color
+   - (B) background-color
+   - (C) font-style
+   - (D) text-decoration
+---
+
+[2.1.3] Multiple Choice: What does the 'Cascading' in Cascading Style Sheets (CSS) primarily describe?
+   - (A) The priority scheme that determines which style rules apply to an element
+   - (B) The method by which styles are passed from parent to child elements
+   - (C) The flow of styles as they appear from top to bottom in a stylesheet
+   - (D) Both (A) and (B)
+---
+
+[2.1.4] Multi-Select: Which of the following are valid ways to integrate CSS into a webpage? (Select all that apply)
+   - (A) Inline styles
+   - (B) Internal stylesheets
+   - (C) External stylesheets
+   - (D) Importing CSS via JavaScript
+---
+
+[2.1.5] Multiple Choice: What is the default behavior when multiple styles are applied to an element?
+   - (A) The first style in the HTML file is applied.
+   - (B) All styles are combined and applied.
+   - (C) The most specific style according to CSS specificity rules is applied.
+   - (D) The last style in the CSS file is applied.
+---
+
+[2.1.6] Multiple Choice: Which CSS property controls the text size?
+   - (A) text-size
+   - (B) font-style
+   - (C) font-weight
+   - (D) font-size
+---
+
+[2.1.7] Multiple Choice: What does the 'style' attribute represent in an HTML tag?
+   - (A) A way to add a unique identifier to an element
+   - (B) A method to apply CSS rules directly to the element
+   - (C) A link to an external stylesheet
+   - (D) An indication of the element's importance in the document
+---
+
+[2.1.8] Multiple Choice: Which selector would target all <p> elements inside <div> elements?
+   - (A) div p
+   - (B) div + p
+   - (C) div > p
+   - (D) p div
+---
+
+[2.1.9] Multi-Select: What are the effects of using the '!important' declaration in a CSS rule? (Select all that apply)
+   - (A) It increases the priority of the CSS rule.
+   - (B) It makes the CSS file larger.
+   - (C) It overrides other declarations even if they have higher specificity.
+   - (D) It can make debugging and maintenance of CSS more difficult.
+---
+
+[2.1.10] Multiple Choice: Which property is used to create space around elements, inside of any defined borders?
+   - (A) margin
+   - (B) padding
+   - (C) border
+   - (D) width
