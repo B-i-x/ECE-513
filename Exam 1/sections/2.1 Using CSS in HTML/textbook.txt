@@ -1,0 +1,388 @@
+Introduction to CSS
+CSS (Cascading Style Sheets) is a textual language for describing how a webpage is styled for
+visual presentation. Web browsers use CSS to determine how a webpage is rendered on the screen,
+printed to paper, or presented via other media. The CSS acronym highlights the two main
+characteristics of presenting a webpage: I PARTICIPATION I . ACTIVITY 2.1.1: Understanding the CSS acronym.
+If unable to drag and drop, refresh the page.
+Cascading Style Sheet
+The process of combining multiple
+style rules and resolving conflicting
+styles.
+Describes the visual presentation of
+structured documents.
+Reset
+□
+A web developer uses CSS to write a list of rules. A CSS rule consists of a selector followed by a
+declaration block between braces ( ).
+• A CSS selector specifies the HTML elements to which the specific style rule applies.
+• A declaration block contains one or more declarations separated by semicolons ( ).
+• A CSS styling declaration is a CSS property followed by a colon (·)and the property value.
+Figure 2.1.1: Parts of a CSS rule.
+selector
+span {
+rn1nr · arPPn : 1 declaration
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+2 of 98 2024-10-12, 3:24 p.m.
+block
+}
+property value
+Semicolons are only required to separate rule declarations. A common error is to forget the
+separating semicolon when adding a new declaration to a declaration block. Good practice is to place
+each declaration on a separate line and to add a semicolon to the end of each declaration block, even
+when a semicolon is not required, so that adding the semicolon is not forgotten later when adding
+more declarations.
+I PARTICIPATION I
+ACTIVITY 2.1.2: Valid CSS.
+1) hl {
+color : black ;
+0 Valid
+0 Invalid
+2) p {
+background-color = blue ;
+0 Valid
+0 Invalid
+3) span { font-weight : bold;
+font-size : 2em ; }
+0 Valid
+0 Invalid
+4) div {
+font-family : serif
+0 Valid
+0 Invalid
+Applying CSS
+CSS can be applied to HTML in three ways:
+□
+0
+0
+0
+0
+<style>
+<link>
+style <style> <link>
+<style> <link>
+<head>
+color: orange; }
+I'm orange.</p>
+Embedded stylesheet External stylesheet
+<link href="styles.css"
+rel="stylesheet">
+<p>I'm purple.</p>
+/* styles.css */
+p { color: purple; }
+I'm purple.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+3 of 98 2024-10-12, 3:24 p.m.
+1. An inline style places CSS declarations inside an element's style attribute.
+2. An embedded stylesheet places CSS rules in an HTML document's head using a
+element.
+3. An external stylesheet places CSS rules in a separate file that is imported into an HTML
+document with a element.
+The attribute may be used on any element. The
+placed anywhere in a webpage, but good practice is to place
+and __ ·--- elements may be
+and 11.nk> elements inside
+the document head (in the element).
+I PARTICIPATION I ACTIVITY 2.1.3: Three ways to apply CSS.
+lnline style
+<p styl e ="co l or:green">
+I 'm green .
+</ p>
+Embeddec
+<style>
+p { col or
+</ style>
+<p >I 'm oran
+(_1_•m_ gr_e_en._ _____) ( I'm orange.
+Animation content:
+□
+) ( ___ )
+An HTML snippet of an inline style is shown: <p style="color:green"> I'm green </p>. This inline
+style turns the sentence, "I'm green." to green.
+An HTML snippet of an embedded styles heet is shown:
+<style>p { color:orange; }</style>.
+<p> I'm orange. </p>
+This embedded stylesheet turns the sentence, "I'm orange." to orange.
+An HTML snippet is shown:
+<link href="styles.css" rel="stylesheet">
+<p> I'm purple. </p>
+An external stylesheet is displayed below the HTML snippet:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+4 of 98 2024-10-12, 3:24 p.m.
+/* styles.css */
+p { color:purple;}
+This external stylesheet turns the sentence, ''I'm purple." to purple.
+Animation captions:
+1. An inline style uses an element's style attribute to turn the paragraph text green.
+2. An embedded stylesheet defines CSS rules in the <style> element. The p selector makes all
+paragraphs have orange text.
+3. A <link> element imports an external stylesheet into an HTML document. styles.css makes
+all paragraphs have purple text.
+I PARTICIPATION I . ACTIVITY 2.1.4: Applying CSS. □
+7) An inline style does not use a selector. 0
+0 True
+0 False
+2) An inline style uses braces ( { } ). 0
+0 True
+0 False
+3) The embedded stylesheet from the 0
+animation above makes a//
+paragraphs in the webpage orange.
+0 True
+0 False
+4) A website should use an external 0
+stylesheet to create styles that apply
+to all webpages.
+0 True
+0 False
+5) lnline styles cannot be used with 0
+embedded stylesheets or external
+stylesheets.
+<h1>
+<body>
+p { color: red !important; }
+!important
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+5 of 98 2024-10-12, 3:24 p.m.
+0 True
+0 False
+Inheritance and conflict
+Every browser has a default stylesheet that specifies styling for each HTML element. Ex: The
+default style declarations for elements typically specify a bold-weighted font that is twice the
+normal font size. CSS style declarations override the default style declarations.
+The style declarations from a parent element cascade down and are applied to any child elements,
+a concept called inheritance. Each element inherits the style declarations from the element's
+parent. The element's parent inherits style declarations from the parent's parent element, and so on
+up to the top-level element.
+When two style declarations with identical properties apply to the same element, a conflict occurs.
+Two common conflicts include:
+1. A parent's style declaration conflicts with a child's style declaration. Ex: The parent element's
+text is blue, but a child element's style declaration indicates the color should be green. When a
+conflict occurs, the child's declaration overrides the parent's declaration.
+2. An embedded or external stylesheet's style declaration conflicts with an inline style. Ex: An
+inline style says the element should be blue, but the embedded stylesheet says the element
+should be green. When a conflict occurs, an inline style overrides the embedded or external
+stylesheet's declaration.
+Specificity and !important
+The browser uses specificity, a scoring system that resolves more complex CSS
+conflicts, to determine what style declarations apply to an element. See the
+"Exploring further" section below for more information on CSS specificity
+The !important rule may be used on a style declaration to override other declarations
+and disregard specificity Ex: { col or: 1 makes the
+paragraph red, even if an inline style attempts to make the paragraph green.
+Stylesheets that use! important are hard to understand and difficult to maintain,
+so good practice is to avoid using ! importa
+I PARTICIPATION
+ACTIVITY I 2.1.5: Overriding CSS properties. □
+<style>
+p { color:orange; }
+span { color:green; }
+</style>
+<p>
+Part of this sentence is orange,
+<span>while the rest is green.</span>
+</p>
+<p>
+Part of this sentence is orange,
+<span style="color:blue">while the rest
+is blue.</span>
+</p>
+<p style="color:red">
+This sentence is red.
+</p>
+Part of this sentence is orange,
+while the rest is green.
+Part of this sentence is orange,
+while the rest is blue.
+This sentence is red.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+6 of 98 2024-10-12, 3:24 p.m.
+Animation content:
+The following code snippet is displayed:
+<style>
+p { color:orange; }
+span { color:green; }
+</style>
+<p>
+Part of this sentence is orange,
+<span>while the rest is green.</span>
+</p>
+<p>
+Part of this sentence is orange,
+<span style="color:blue">while the rest
+is blue.</span>
+</p>
+<p style="color:red">
+This sentence is red.
+</p>
+r
+rea.
+To the right of this code snippet, the following sentences are displayed inside a browser:
+Part of this sentence is orange, while the rest is green.
+Part of this sentence is orange, while the rest is blue.
+This sentence is red.
+Animation captions:
+1. The browser's default styling colors the text black.
+<p style="color:yellow">George
+Washington was president from
+1789 until 1797.</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+7 of 98 2024-10-12, 3:24 p.m.
+2. The embedded stylesheet uses a p selector to color all paragraph text orange.
+3. The embedded stylesheet uses a span selector to color all span text green. The first span's
+color overrides the parent's color.
+4. The second span's inline style overrides the embedded stylesheet, so the text is blue.
+5. The third paragraph's inline style overrides the embedded stylesheet, so the text is red.
+I PARTICIPATION I . . ACTIVITY 2.1.6: Inheritance and conflicts.
+Use the HTML below to answer the questions. Assume the HTML in each question is
+inserted into the <body>.
+< ! DOCTYPE html >
+<html lang="en">
+<head>
+<title>Presidential Facts</title>
+<style>
+body {
+color : blue ;
+div
+color : green ;
+</ style>
+</head>
+<body>
+<! -- Content goes here -->
+</body>
+</html>
+1) What color is the text?
+<p >George Washington was the
+first president of the United
+States. </ p >
+0 Black
+0 Blue
+0 Green
+2) What color is the text?
+0 Yellow
+□
+0
+0
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+8 of 98 2024-10-12, 3:24 p.m.
+0 Blue
+0 Green
+3) What color is the text?
+<div>George Washington did not
+have a middle name. Middle
+names were not common in the
+col onies until the early 19th
+century. </div>
+0 Black
+0 Blue
+0 Green
+4) What color is the text?
+<div
+styl e = "color:orange" >George
+Washington never lived in the
+White House because
+constructi on was completed
+several years after he retired
+from the presidency. </div>
+0 Orange
+0 Blue
+0 Green
+I PARTICIPATION I . . ACTIVITY 2.1.7: Applying CSS declarations.
+Given the following HTML and CSS files, indicate which color the web browser will use to
+display the words. The CSS uses the inherit keyword, which specifies that a property
+should inherit the parent element's value.
+hello.html:
+0
+0
+□
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="hello.css" rel="stylesheet">
+<style>
+p {
+color: black;
+}
+</style>
+<title>A Sample CSS Page</title>
+green">World</span>!</p>
+</p>
+color: red
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+9 of 98 2024-10-12, 3:24 p.m.
+</head>
+<body>
+<p >He llo , <span style= " color: green
+<p style=" color : inherit " >Good day<
+</body>
+</html>
+hello.css:
+body {
+color : red;
+If unable to drag and drop, refresh the page.
+black green red
+Hello
+World
+Good day
+Viewing CSS with Chrome DevTools
+Reset
+The Chrome Dev Tools shows the CSS declarations being applied to the webpage
+elements. In the screenshot below, the span's inline style makes the span text
+green. The span element's color: green declaration overrides the p element's
+color: black declaration and the body element's declaration.
+I 0 A Sample CSS Page X + □
+SHOW EXPECTED
+zyBooks
+10 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+f- - C <D File I C:/ temp/ example.html
+Hello, \\orld!
+Good clay
+*
+£1eme ·s Console Sources etwork Performance Memory Application » X
+h _ lang= en
+► head -· /h ead
+.., body
+.., p
+" el o, •
+span style color: green World / span == $0
+"!"
+/ p
+p style= color: inherit Good day /p>
+/ body
+/ht ml
+html body p spa
+I CHALLENGE I .. ACTIVITY 2.1.1: Writing CSS rules.
+570104.2065416.qx3zqy7
+Start
+S es Computed Event L·steners »
+Filter
+ele ent.style {
+color : ■ gree n ;
+}
+lnheri ed om p
+p {
+}
+lnheri ed om body
+body {
+~-~
+:hov .els + ...
+~
+exami;1 e.html:5
+he lo.css:1
+Using a <style> element, set the color to silver for all <p> elements. 1 <!-- Your solution goes here -->
+2
+3 <p> Paragraph 1 content</p>
+4 <p> Paragraph 2 content</p>
+5 <p> Paragraph 3 content</p>
+1 2 3 4 5
+□
+2024-10-12, 3:24 p.m.
+zyBooks
+11 of 98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+Check Next
+View your last submission v
+Exploring further:
+• Cascade and inheritance from MDN
+• CSS inherit Keyword from W3Schools
+• CSS SQeciflcitY- from W3Schools

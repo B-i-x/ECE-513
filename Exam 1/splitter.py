@@ -4,7 +4,7 @@ import re, os
 def split_sections(input_filepath):
 
     # Regex pattern to identify section headers e.g., "1.1 "
-    section_pattern = re.compile(r'^1\.\d+ [^\d]+$')
+    section_pattern = re.compile(r'^2\.\d+ [^\d]+$')
     
     # Initialize variables
     current_section = None
@@ -36,10 +36,12 @@ def split_sections(input_filepath):
     
     # Save the last section encountered
     if current_section is not None:
-        output_filepath = f'section_{current_section.strip()}.txt'
+        output_filepath = f'sections/{current_section.strip()}.txt'
+        os.makedirs(output_folder, exist_ok=True)
+        output_filepath = os.path.join(output_folder, 'textbook.txt')
         with open(output_filepath, 'w') as output_file:
             output_file.write(''.join(section_content))
         print(f"Section {current_section.strip()} saved to {output_filepath}")
 
 # Example usage
-split_sections('textbook/chp1text.txt')
+split_sections('raw/chp2text.txt')

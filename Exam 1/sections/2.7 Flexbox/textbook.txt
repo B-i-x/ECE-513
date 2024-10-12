@@ -1,0 +1,273 @@
+Create a webpage based on this news article: httgs://alumni.arizona.edu/arizona-magazine/
+su mmer-2017 / flve-thi ngs-know-about-rattles na kes-a nd-thei r-ba bies
+Your webpage should include the following HTML components (in order):
+• <title> tag with content: 5 Things to Know About Rattlesnakes and Their Babies
+• UA logo as <img> tag with src attribute containing: Uni versi tyLogo. png
+• <hl> tag with content: 5 Things to Know About Rattlesnakes and Their Babies
+• <h2 > tag with content: Arizona's rattlesnakes welcome their offspring in July and August.
+While baby rattlesnakes are small, their bite is just as dangerous.
+• <p> tag with content: UA College of Pharmacy I August 6, 2014. Add id of "author-name-anddate"
+for this paragraph.
+• <p> tag with content: Arguably, snake season is year-round in Arizona, a state known for its
+rattlers. But baby rattlesnakes are born in July and August, making these two months
+especially dangerous for hikers, gardeners, children and others at high risk of exposure to
+rattlesnake bites.
+• <div> tag (with id of "image-box" for this div tag) containing the following tags:
+o Article photo as <img> tag with src attribute containing: SnakeBi te. j pg and alt
+attribute containing: snake bite
+o <p> tag with content for image caption: Puncture marks indicate the rattlesnake bite on
+the heel of a 9-year-old.
+• 4 more <p> tags with contents (in order):
+2024-10-12, 3:24 p.m.
+<p> <a>
+<h1>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+91 of 98 2024-10-12, 3:24 p.m.
+o So far this year, 7 4 rattlesnake bites to humans have been reported to the Arizona
+Poison and Drug Information Center. Based at the University of Arizona College of
+Pharmacy, the center serves the entire state of Arizona with the exception of Maricopa
+County, providing free and confidential poison and medication information to callers
+around the clock.
+o Specialists answering the phones at the center regularly receive calls from Arizonans of
+all ages who don't realize they were bitten by a rattler. The poison center urges anyone
+who feels a mysterious sting, pinch or bite while outdoors to immediately call the center
+at 800-222-1222.
+o "We will ask a few questions that will help you either identify possible snakebite or
+eliminate it," said Keith Boesen, director of the Arizona Poison and Drug Information
+Center. "With snakebite, the sooner the medical treatment, the better the outcome, so
+calling us right away can make a very big difference for the victims and the medical
+teams treating them."
+o The center advises anyone who might come cross paths with rattlesnakes to be aware
+of these five things:
+• An ordered list with the following item contents (in order):
+•
+o Baby rattlesnakes range in length from 6 to 12 inches and are easily camouflaged by
+brush and grass.
+o Baby rattlesnakes are rattleless until they first shed their skins, so there will be no
+infamous "chica-chica" sound before they strike.
+o Despite their impish size, baby snakes have enough venom to be very dangerous if they
+bite a human.
+o Adult rattlesnakes do not always rattle an audible warning before or while they are
+biting.
+o It's a good idea to call the poison center if you notice an unidentified small cut or
+wound, even if you feel no pain. With the lack of telltale rattle warning, people can be
+bitten without knowing what has happened until they notice their symptoms and
+attribute them to a snakebite.
+tag containing 3 tags with content and href of:
+o Twitter and httQs://twitter.com/
+o Facebook and httQs://www.facebook.com/
+o Linkedln and httQs://www.linkedin.com/
+Add CSS rules to style.css for the given news article webpage that matches the following styling:
+• Both article's images styled with a width of 300px
+• Article's tag styled with:
+o 5px padding all around
+o Font family of Arial
+o Font size of 24px
+o Font color of white
+<h2>
+<p>
+<p> <ol>
+<a>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+92 of 98 2024-10-12, 3:24 p.m.
+o Background color of red
+• Article's tag styled with:
+o 2px padding all around
+o Font family of Verdana
+o Font size of 16px
+o Font color of darkblue
+• Selecting the id of author-name-and-date, style the author name and date with:
+o Font family of Arial
+o Font size of 12px
+o Font color of lightgray
+• Selecting the id of image-box, style the division with:
+o floats to parent container's right side
+o 5px padding all around
+o text align of center
+o a width of 350px
+o a height of 250px
+• Selecting tag in the division, style the image caption with:
+o Opx margin all around
+o font-size of 12px
+• Article's text ( and tags) styled with:
+o Font family of Times New Roman
+o Font size of 16px
+o Font color of gray
+• Article's share links ( tags) styled with:
+o Font family of Arial
+o Font size of 12px
+o Font color of blue
+Note: Colors, font sizes, padding, etc. must be exact.
+570104.20654 l 6.qx3zqy7 I ~,vrrv I 2.8.1 : Lab: UA News Article (HTML and CSS)
+Submission Instructions
+Downloadable files
+i ndex . h t ml , s t y l e . css , Un i vers ityLogo . png ,and
+Sna keBi t e . j pg
+23 I 23
+Download
+---
+Upload your files below by dragging and dropping into the area or choosing a file on your hard
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+93 of 98 2024-10-12, 3:24 p.m.
+drive.
+index.html
+Drag file here
+or
+Choose on hard drive.
+Submit for grading
+Coding trail of your work What is this?
+9/ 15 U17, 23 min:7
+style.css
+Drag file here
+or
+Choose on hard drive.
+Latest submission - 7:18 PM MST on Submission passed Total score: 23
+09/15/24 all tests ✓ /23
+D Only show failing tests
+1 :Unit test A
+News article title
+✓ At least 1 <title> tag exists
+✓ Assert #2
+✓ At least 1 <h1 > tag exists
+✓ h1 tag contains expected content
+2:Unit test A
+First image is UA logo
+✓ At least 1 <img> tag exists
+✓ Assert #2
+3:Unit test A
+Sub title
+✓ At least 1 <h2> tag exists
+Download this submission
+1 / 1
+1 / 1
+1 / 1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+94 of 98 2024-10-12, 3:24 p.m.
+✓ h2 tag contains expected content
+4:Unit test A 1 / 1
+Author and date
+✓ At least 1 <p> tag exists
+✓ Author and date in first <p> tag
+5:Unit test A 2 / 2
+Article text
+✓ Number of <p> tags
+✓ Article content in <p> tag #1
+✓ Article content in <p> tag #2
+✓ Article content in <p> tag #3
+✓ Article content in <p> tag #4
+✓ Article content in <p> tag #5
+✓ Article content in <p> tag #6
+6:Unit test A 2 / 2
+List Items
+✓ Number of <ol> tags
+✓ Number of <Ii> tags in <ol> tag
+✓ Article content in <Ii> tag #1
+✓ Article content in <Ii> tag #2
+✓ Article content in <Ii> tag #3
+✓ Article content in <Ii> tag #4
+✓ Article content in <Ii> tag #5
+7:Unit test A 1 / 1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+95 of 98 2024-10-12, 3:24 p.m.
+Article image
+✓ Number of <img> tags
+✓ Second image uses given link for article image
+✓ Second image uses an alternate text for article image
+8:Unit test A
+Image box
+✓ At least 1 <div> tag exists
+✓ Number of <div> tags
+✓ Number of <img> tags in <div>
+✓ Number of <p> tags in <div>
+9:Unit test A
+Links: Twitter, Facebook, and Linkedln
+✓ Number of <a> tags
+✓ <a> tag #1 's href
+✓ <a> tag #2's href
+✓ <a> tag #3's href
+1 O:Unit test A
+Image styles
+✓ Width of image 1
+✓ Width of image 2
+11 :Unit test A
+Header styles
+✓ padding of <h1 > tag
+✓ font-family of <h1 > tag
+2 / 2
+1 / 1
+1 / 1
+1 / 1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+96 of 98 2024-10-12, 3:24 p.m.
+✓ font-size of <h1 > tag
+✓ color of <h1 > tag
+✓ background-color of <h1 > tag
+12:Unit test A
+Header styles 2
+✓ padding of <h2> tag
+✓ font-family of <h2> tag
+✓ font-size of <h2> tag
+✓ color of <h2> tag
+13:Unit test A
+Author name and date styles
+✓ <p> with id author-name-and-date exists
+✓ font-family of <p> tag with id of author-name-and-date
+✓ font-size of <p> tag with id of author-name-and-date
+✓ color of <p> tag with id of author-name-and-date
+14:Unit test A
+Image box styles
+✓ <div> with id image-box exists
+✓ float of <div> tag with id of image-box
+✓ padding of <div> tag with id of image-box
+✓ width of <div> tag with id of image-box
+✓ height of <div> tag with id of image-box
+✓ text-align of <div> tag with id of image-box
+15:Unit test A
+1 / 1
+1 / 1
+2 / 2
+2 / 2
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+97 of 98 2024-10-12, 3:24 p.m.
+Image caption styles
+✓ image caption selector exists
+✓ margin of image caption
+✓ font-size of image caption
+16:Unit test A 2 / 2
+Article text styles
+✓ font-family of <p> tag 3
+✓ font-size of <p> tag 3
+✓ color of <p> tag 3
+✓ font-family of <p> tag 5
+✓ font-size of <p> tag 5
+✓ color of <p> tag 5
+✓ font-family of <p> tag 6
+✓ font-size of <p> tag 6
+✓ color of <p> tag 6
+✓ font-family of <p> tag 7
+✓ font-size of <p> tag 7
+✓ color of <p> tag 7
+✓ font-family of <p> tag 8
+✓ font-size of <p> tag 8
+✓ color of <p> tag 8
+✓ font-family of <p> tag 9
+✓ font-size of <p> tag 9
+✓ color of <p> tag 9
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+98 of 98 2024-10-12, 3:24 p.m.
+✓ font-family of <ol> tag
+✓ font-size of <ol> tag
+✓ color of <ol> tag
+17:Unit test A 1 / 1
+Link styles
+✓ font-family of <a> tag 1
+✓ font-size of <a> tag 1
+✓ color of <a> tag 1
+✓ font-family of <a> tag 2
+✓ font-size of <a> tag 2
+✓ color of <a> tag 2
+✓ font-family of <a> tag 3
+✓ font-size of <a> tag 3
+✓ color of <a> tag 3
+Previous submissions
+7:17 PM on 9/15/24 17 / 23 View v
