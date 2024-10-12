@@ -1,15 +1,15 @@
 ---
-[1.1] True/False: An IP address can consist of any four numbers between 1 and 1000.
+[1.1.1] True/False: An IP address can consist of any four numbers between 1 and 1000.
 ---
 
-[1.1] Multiple Choice: What is the maximum number in any single part of an IPv4 address?
+[1.1.2] Multiple Choice: What is the maximum number in any single part of an IPv4 address?
    - (A) 100
    - (B) 255
    - (C) 500
    - (D) 1024
 ---
 
-[1.1] Matching: Match the following domain types to their description:
+[1.1.3] Matching: Match the following domain types to their description:
    - (A) .com
    - (B) .edu
    - (C) .gov
@@ -18,7 +18,34 @@
    - ___ Government
 ---
 
-[1.1] True/False: IPv6 uses 128-bit addresses to allow for a greater number of unique IP addresses compared to IPv4.
+[1.1.4] True/False: IPv6 uses 128-bit addresses to allow for a greater number of unique IP addresses compared to IPv4.
 ---
 
-[1.1] True/False: The hostname in a URL must always include "www."
+[1.1.5] True/False: The hostname in a URL must always include "www."
+---
+
+[1.1.6] Multiple Choice: What protocol is used by a browser to retrieve the IP address of a domain name?
+   - (A) HTTPS
+   - (B) SMTP
+   - (C) DNS
+   - (D) TCP
+---
+
+[1.1.7] True/False: The subnet mask of an IPv4 address determines which part of the address represents the network and which part represents the host.
+---
+
+[1.1.8] Multiple Choice: Which version of IP is used to create a private network?
+   - (A) IPv3
+   - (B) IPv4
+   - (C) IPv6
+   - (D) IPv8
+---
+
+[1.1.9] True/False: Every device connected to the Internet must have a unique IP address in the IPv4 or IPv6 standard.
+---
+
+[1.1.10] Multiple Choice: What does the '255.255.255.0' number represent in a network setting?
+   - (A) IP address
+   - (B) Network prefix
+   - (C) Subnet mask
+   - (D) Default gateway

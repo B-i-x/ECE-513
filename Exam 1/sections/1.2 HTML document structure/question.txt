@@ -1,56 +1,56 @@
 ---
-[1.2] True/False: The <body> tag can contain any number of <head> tags to structure the document metadata repeatedly.
+[1.2.1] True/False: The <body> tag can contain any number of <head> tags to structure the document metadata repeatedly.
 ---
 
-[1.2] Multiple Choice: What does the <link> tag primarily use within an HTML document?
+[1.2.2] Multiple Choice: What does the <link> tag primarily use within an HTML document?
    - (A) To link JavaScript files
    - (B) To establish connections between different HTML pages
    - (C) To connect the document to external stylesheets
    - (D) To embed responsive meta tags
 ---
 
-[1.2] Multiple Choice: Which tag is used to define an independent, self-contained content that could be syndicated?
+[1.2.3] Multiple Choice: Which tag is used to define an independent, self-contained content that could be syndicated?
    - (A) <div>
    - (B) <section>
    - (C) <article>
    - (D) <span>
 ---
 
-[1.2] Multiple Choice: What is the function of the <nav> element?
+[1.2.4] Multiple Choice: What is the function of the <nav> element?
    - (A) To define a container for navigation links
    - (B) To create a network of connected data
    - (C) To mark the non-scrollable sections of a webpage
    - (D) To navigate through the JavaScript functions in the code
 ---
 
-[1.2] Multiple Choice: How is document type declaration (<DOCTYPE>) incorrectly described?
+[1.2.5] Multiple Choice: How is document type declaration (<DOCTYPE>) incorrectly described?
    - (A) It defines the HTML version being used.
    - (B) It is necessary for ensuring modern standards compliance.
    - (C) It activates the browser's quirks mode when omitted.
    - (D) It is an HTML element that contains metadata.
 ---
 
-[1.2] True/False: The <aside> tag is used to denote content that is tangentially related to the content around it.
+[1.2.6] True/False: The <aside> tag is used to denote content that is tangentially related to the content around it.
 ---
 
-[1.2] Multiple Choice: Which statement is true about the <footer> element?
+[1.2.7] Multiple Choice: Which statement is true about the <footer> element?
    - (A) It should only appear once at the bottom of the document.
    - (B) It can be used multiple times within sections or articles.
    - (C) It is deprecated in HTML5.
    - (D) It is reserved for bottom page copyrights only.
 ---
 
-[1.2] Multiple Choice: What does the 'charset' attribute in a <meta> tag specify?
+[1.2.8] Multiple Choice: What does the 'charset' attribute in a <meta> tag specify?
    - (A) The character encoding for the HTML document
    - (B) The set of characters allowed in the document's comments
    - (C) The website's character count limits
    - (D) The character encoding for URLs within the document
 ---
 
-[1.2] True/False: Inline styles added directly to HTML elements using the 'style' attribute are discouraged in modern web development practices.
+[1.2.9] True/False: Inline styles added directly to HTML elements using the 'style' attribute are discouraged in modern web development practices.
 ---
 
-[1.2] Multiple Choice: Which tag is specifically designed to programmatically access the content?
+[1.2.10] Multiple Choice: Which tag is specifically designed to programmatically access the content?
    - (A) <script>
    - (B) <output>
    - (C) <template>
