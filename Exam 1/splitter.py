@@ -1,6 +1,9 @@
 import re, os
 
-
+def create_file(file_path):
+    # Create an empty file
+    with open(file_path, 'w') as file:
+        pass
 def split_sections(input_filepath):
 
     # Regex pattern to identify section headers e.g., "1.1 "
@@ -23,6 +26,11 @@ def split_sections(input_filepath):
                 output_folder = f'sections/{current_section.strip()}'
                 os.makedirs(output_folder, exist_ok=True)
                 output_filepath = os.path.join(output_folder, 'textbook.txt')
+                q_filepath = os.path.join(output_folder, 'questions.txt')
+                a_filepath = os.path.join(output_folder, 'answers.txt')
+                create_file(q_filepath)
+                create_file(a_filepath)
+
                 with open(output_filepath, 'w') as output_file:
                     output_file.write(''.join(section_content))
                 print(f"Section {current_section.strip()} saved to {output_filepath}")
@@ -36,8 +44,12 @@ def split_sections(input_filepath):
     
     # Save the last section encountered
     if current_section is not None:
-        output_filepath = f'sections/{current_section.strip()}.txt'
+        output_folder = f'sections/{current_section.strip()}'
         os.makedirs(output_folder, exist_ok=True)
+        q_filepath = os.path.join(output_folder, 'questions.txt')
+        a_filepath = os.path.join(output_folder, 'answers.txt')
+        create_file(q_filepath)
+        create_file(a_filepath)
         output_filepath = os.path.join(output_folder, 'textbook.txt')
         with open(output_filepath, 'w') as output_file:
             output_file.write(''.join(section_content))
