@@ -1,0 +1,10 @@
+2.4.1 (C) The font type used for text rendering
+2.4.2 (B) em
+2.4.3 (A) font-family, (B) font-size, (C) font-weight
+2.4.4 (B) p { font-weight: bold; }
+2.4.5 (A) 16px
+2.4.6 (B) font-style
+2.4.7 (C) The presentation of lowercase letters as small capitals
+2.4.8 (B) The browser chooses the next available font in the list
+2.4.9 (D) root em (rem)
+2.4.10 (B) sans-serif

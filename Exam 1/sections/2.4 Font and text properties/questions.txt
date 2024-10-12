@@ -1,0 +1,69 @@
+---
+[2.4.1] Multiple Choice: What does the `font-family` property specify in CSS?
+   - (A) The line height of text
+   - (B) The decoration of the text
+   - (C) The font type used for text rendering
+   - (D) The color of the text
+---
+
+[2.4.2] Multiple Choice: Which unit is relative to the parent element’s font size?
+   - (A) px
+   - (B) em
+   - (C) cm
+   - (D) pt
+---
+
+[2.4.3] Multi-Select: Which properties are set by the shorthand `font` property? (Select all that apply)
+   - (A) font-family
+   - (B) font-size
+   - (C) font-weight
+   - (D) line-height
+---
+
+[2.4.4] Multiple Choice: How would you set the font weight to bold for a paragraph element?
+   - (A) p { font-style: bold; }
+   - (B) p { font-weight: bold; }
+   - (C) p { text-decoration: bold; }
+   - (D) p { font-family: bold; }
+---
+
+[2.4.5] Multiple Choice: What is the default size of the font-size property if not specified?
+   - (A) 16px
+   - (B) 12px
+   - (C) 10px
+   - (D) 14px
+---
+
+[2.4.6] Multiple Choice: Which CSS property changes the text style to italic?
+   - (A) font-weight
+   - (B) font-style
+   - (C) text-decoration
+   - (D) text-align
+---
+
+[2.4.7] Multiple Choice: What does the `font-variant` property affect?
+   - (A) The transformation of text to uppercase or lowercase
+   - (B) The embellishment of text like underlining
+   - (C) The presentation of lowercase letters as small capitals
+   - (D) The alignment of text
+---
+
+[2.4.8] Multiple Choice: If a specific font in a font-family list is not available, what happens?
+   - (A) The browser hides the text
+   - (B) The browser chooses the next available font in the list
+   - (C) The text is displayed using the default browser font
+   - (D) The browser downloads the font from the internet
+---
+
+[2.4.9] Multiple Choice: What unit is best used for defining font sizes that scale with device settings?
+   - (A) pixels (px)
+   - (B) points (pt)
+   - (C) viewport width (vw)
+   - (D) root em (rem)
+---
+
+[2.4.10] Multiple Choice: Which of the following is a generic family name in CSS?
+   - (A) Arial
+   - (B) sans-serif
+   - (C) Georgia
+   - (D) Garamond
