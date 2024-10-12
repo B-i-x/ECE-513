@@ -1,0 +1,354 @@
+Introduction to the String object
+The String object defines methods to manipulate strings, extract substrings, test for string
+0
+□
+inclusion, etc. A string literal (a string in "quotes") is automatically converted into a object
+when a method is invoked.
+The method charAt() returns the character at the specified index as a string. Ex:
+returns the character "e" at index 1. The property length returns the
+number of characters in a string. Ex: returns 4. Calling with an index
+length
+++) {
+spaces");
+I love JS
+0 1 2 3 4 5 6 7 8
+s =
+totalSpaces =
+i
+2 s.length = 9
+=
+2 spaces
+9
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+105 of 119 2024-10-12, 4:01 p.m.
+the string's returns an empty string.
+IAP ACRTTIVICITIPYA TION I 3.11 .1: Counting spaces in a string.
+l et s = "I love JS " ;
+l et tota l Spaces = 0 ;
+for (l et i = 0 ; i < s . length ; i ·
+i f (s . charAt (i ) === " " ) {
+I } } total Spaces ++;
+console . log (totalSpaces + " spac
+Animation content:
+The following code is displayed:
+let s = "I love JS";
+let totalSpaces = 0;
+for (let i = 0; i < s.length; i++) {
+if (s .charAt(i) ===" ") {
+}
+}
+tot a !Spaces++;
+console.log(totalSpaces + " spaces");
+□
+ro ,T.C:::
+[ ]
+In step 1, the strings is initialized and indices 0-8 are shown under each character in the string "I
+love JS"
+Step 3 and 4 runs the following line:
+for (let i = 0; i < s.length; i++) {.
+i is initialized to 0, ands.length is 9. i is shown as a pointer under the index 0 in the strings.
+In step 5, the if statement is checked when i = 0.
+In step 6, the loop iterates with i now equal to 1, and totalSpaces becomes 1.
+In step 7, the loop runs until i is incremented to 9. The string "2 spaces" is displayed in the
+console.
+Animation captions:
+1. The s variable is initialized to a string literal.
+String
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+106 of 119 2024-10-12, 4:01 p.m.
+2. The totalSpaces variable is used to count how many spaces are in the strings.
+3. Use variable i to iterate through the string s.
+4. The loop continues until i is s.length, the number of characters in the strings.
+5. s.charAt(O) is "I", not a space, so totalSpaces is not affected.
+6. s.charAt(1) is a space, so totalSpaces is incremented to 1.
+7. The for loop continues to check each character in the string. totalSpaces is 2 when the loop
+terminates.
+I PARTICIPATION I . . ACTIVITY 3.11.2: String obJect.
+1) What is the value of s. length?
+let s =
+0 0
+"" ,.
+0 NaN
+0 1
+2) What is the value of s. char At ( 1)?
+3)
+let s = "To be , or not to
+be ." ;
+0 space
+0 T
+0 0
+What is the value of s [ 1 J?
+let s = "Tobe , or not to
+be. " ;
+0 space
+0 T
+0 0
+Searching and replacing
+The object provides methods to search and replace strings:
+• The indexOf() method returns the index of the search string1s first occurrence inside the
+□
+0
+0
+0
+String
+String
+will find.";
+// 5
+// 1
+(first occurrence)
+// 2
+(last occurrence)
+// -1 (case-sensitive
+// "Seek and you will discover"
+// "Search and you will
+// No change (case-sensitive
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+107 of 119 2024-10-12, 4:01 p.m.
+object or -1 if the search string is not found.
+• The /astlndexOf() method returns the index of the search string's last occurrence inside the
+object or -1 if the search string is not found.
+• The replace() method replaces one string with another and returns the string with the
+replacement string inside.
+Figure 3.11.1: Searching for a string with indexOf() and lastlndexOf().
+let s = "Seek and
+s . indexOf ("and" );
+you wil
+II II II II -
+s . indexOf ( "e" );
+s . lastindexOf ("e" );
+s . indexOf ("SEEK" );
+search)
+Figure 3.11.2: Replacing a string with replace().
+l et s = "Seek and you will find. " ;
+s = s . repl ace ("find" , "discover" );
+s = s . replace ("Seek" , "Search" );
+discover "
+s = s . repl ace ("SEARCH" , "search" );
+search)
+I PARTICIPATION I ACTIVITY 3.11.3: Search and replace.
+Enter the value assigned toxin each code segment.
+l et quote = "I am Spartacus! " ;
+1) X =
+quote . indexOf ("part" );
+Check Show answer
+2) x = quote . indexOf ("I
+am! " );
+□
+0
+0
+String
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+108 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+3) X =
+quote . lastindexOf ( "a" );
+Check Show answer
+4) x = quote . replace ( "am" ,
+"was" );
+Check Show answer
+5) X =
+quote . replace ("spart" ,
+"mart" );
+Check Show answer
+Other String methods
+0
+0
+0
+A variety of other
+table below.
+methods exist. Some of the common methods are summarized in the
+Table 3.11.1: Common String methods.
+Method Description Example
+s = "As you wish.";
+s.substr(3, 3); // "you"
+s.substr(3); // "you wish." (length
+optional)
+s = "As you wish.";
+s.substring(3, 6); // "you"
+s.substring(3); // "you wish." (2nd
+index optional)
+s = "As you wish.";
+s.split(" "); // ["As", "you", "wish."]
+s = "What?";
+s.toLowerCase(); // "what?"
+s = "What?";
+s.toUpperCase(); // "WHAT?"
+s = " test ";
+s.trim(); // "test"
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+109 of 119 2024-10-12, 4:01 p.m.
+Returns the
+substring that
+substr()
+begins at a
+given index and
+has an optional
+given length.
+Returns the
+substring
+substring()
+between two
+indices, not
+including the
+second index.
+Returns an
+array of strings
+formed by
+splitting the
+split() string into
+substrings. The
+given delimiter
+separates
+substrings.
+Returns the
+string
+toLowerCase() converted to
+lowercase
+characters.
+Returns the
+string
+to Uppercase() converted to
+uppercase
+characters.
+Returns the
+string with
+trim()
+leading and
+trailing
+whitespace
+removed.
+greeting.trim()
+greeting.substr(9, 4)
+greeting.substr(9)
+greeting.toLowerCase()
+greeting.split("o")
+testPassword()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+110 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.17.4: String methods.
+Match the return value to the string method.
+l et greeting = " Welcome Home! " ;
+If unable to drag and drop, refresh the page.
+"Home!" " welcome home! " "Welcome Home!" I" Welc", "me H", "me! "]
+"Home"
+gree
+gree
+gree
+gree
+gree
+Reset
+I PARTICIPATION I . . . ACTIVITY 3.11.5: Practice with String methods.
+When creating an account on line, most websites require the user to enter a "strong"
+password. A strong password is a password that someone is unlikely to guess. Strong
+passwords must be sufficiently long, contain upper and lowercase letters, contain
+punctuation, etc.
+Complete the testPassword () function, which tests the strength of the given
+password. testPassword () should verify the password meets the criteria below in the
+order specified. If the criteria is not met, test Pc should return an appropriate
+message indicating what is wrong with the password. If all the criteria are met,
+testPassword () should return an empty string.
+□
+□
+length
+isSingleDigit()
+substr()
+===
+testPassword()
+`
+${expression} `test ${1 + 2}` "test 3"
+x * y); 2 * 3 = 6
+2 * 3 = 6
+line 1
+line 2
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+111 of 119 2024-10-12, 4:01 p.m.
+1. Minimum length of 6 characters - Use the
+is long enough.
+property to ensure the password
+2. No spaces - Use indexof () to ensure the password does not contain any spaces.
+3. Use at least one digit - Create a loop to examine each character of the password,
+and count how many times a digit character appears. JavaScript does not have a
+function to verify if a character is a digit, so use the uy .Leu.L~ .L L , 1 function
+provided. The password should have at least one digit.
+4. First 3 characters must not be repeated at the end - Use to extract the
+string at the front and end of the password. Then, compare the substrings with
+Ex: Password "abc123abc" is not acceptable because "abc" at the front of the
+password is the same as "abc" at the end of the password.
+The code is currently testing the password "pass" which should fail because the password
+is only 4 characters long. Verify that testPassv works by trying passwords that
+fail each of the four criteria.
+Template literals
+A template literal is a string literal enclosed by the back-tick ( ) that allows embedding expressions
+with a dollar sign and braces ( ). Ex: evaluates to
+Template literals replace the need to produce a string with string concatenation.
+I PARTICIPATION I . . . ACTIVITY 3.11.6: Template literal s1mpl1fles syntax.
+X = 2 ;
+y = 3 ;
+result = x + " * " + y + "=" + (
+conso l e . l og (resul t );
+2 3 6
+resul t = '${ x } * ${ y } = ${ x * y }' ;
+conso l e . l og (resul t );
+conso l e . l og ( ' line 1
+line 2' );
+Animation content:
+The following code is displayed:
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+112 of 119 2024-10-12, 4:01 p.m.
+X = 2;
+y = 3;
+result = x + 11 * 11 + y + 11 = 11 + (x * y);
+console.log(result);
+result= '${x} * S{y} = S{x * y}';
+console.log(result);
+console.log('line 1
+line 2');
+Step 1 runs the following code:
+X = 2;
+y = 3;
+result = x + 11 * 11 + y + 11 = 11 + (x * y);
+console.log(result);.
+The string 2 * 3 = 6 is displayed in the console.
+Step 2 runs the following code:
+result = 'S{x} * S{y} = S{x * y}';
+console.log(result);
+Step 3 runs the following code:
+console.log('line 1
+line 2');.
+In the console, line 1 and line 2 are displayed in different lines despite only having 1 console.log
+line run.
+Animation captions:
+1. String concatenation is required to build a string showing the math equation.
+2. A template literal simplifies the syntax to build the same string.
+3. Newline characters inserted in a template literal create multi-line strings.
+I PARTICIPATION I . ACTIVITY 3.11.7: Template literal.
+Rewrite each string assignment using a template literal.
+1) greeti ng = "Welcome, " +
+name + "! " ;
+greeting=
+Check Show answer
+□
+0
+answer = "sum is " + (x +
+y);
+answer =
+;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+113 of 119 2024-10-12, 4:01 p.m.
+2) 0
+Check Show answer
+3) ye ll = verb . toUpperCase () 0
++ "I" ,•
+yell =
+,
+Check Show answer
+4) l etters = "a\nb\nc " ; 0
+letters =
+,
+Check Show answer
+I CHALLENGE I . ACTIVITY 3. 11.1 : Strin gs. □
+5707 04.2065416 qx3zqy7
+Exploring further:
+• String object (MDN).
+• TemRlate literals (Template string~)_(MDN)_

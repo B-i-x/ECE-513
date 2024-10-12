@@ -1,0 +1,419 @@
+Introduction to functions
+A function is a named group of statements. JavaScript functions are declared with the r unc t10
+keyword followed by the function name and parameter list in parentheses '. : . A parameter is a
+variable that supplies the function with input. The function's statements are enclosed in braces
+Invoking a function's name, known as a function call, causes the function's statements to execute.
+An argument is a value provided to a function's parameter during a function call.
+Construct 3.6.1: Function declaration.
+I PARTICIPATION
+ACTIVITY
+function fu n cti o nName (para
+... ) {
+II Statements to execut
+called
+I 3.6.1: Declaring and calling a function.
+function disp l aySum (x , y , z ) {
+l et sum = x + y + z ;
+consol e . l og (sum);
+conso l e . l og ("About to call func
+displ aySum (2 , 5 , 3);
+conso l e . l og ("Returned from func
+Animation content:
+The following code is displayed:
+□
+/1.L- . . .&..&.--."' • •
+I va11 IUI I\JLIUI I
+display
+displayAverage displayAverage
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+49 of 119 2024-10-12, 4:01 p.m.
+function displaySum(x, y, z) {
+let sum= x + y + z;
+console.log(sum);
+}
+In step 2, About to call function is displayed in the console. 2, 5, and 3 are stored in memory as x,
+y, and z respectively.
+In step 3, the lines of code defined inside the function displaySum are run. A new variable sum is
+declared and stores 10 in memory.
+In step 4, 1 O and Returned from function are each displayed on new lines in the console.
+Animation captions:
+1. A function named displaySum is declared with three parameters: x, y, and z.
+2. displaySum() is called with arguments 2, 5, and 3, which are assigned to parameters x, y,
+and z.
+3. The variable sum is assigned the sum of x, y, and z, which is 10.
+4. sum is output to the console. No more code exists in the function, so the function is
+finished executing.
+Good practice is to use function names that contain a verb and noun. Ex:
+function name, but
+displayed.
+is better because
+is a vague
+indicates what is being
+Good practice is to use camel case for JavaScript function names, where the name starts with a
+lowercase letter and subsequent words begin with a capital letter I PARTICIPATION I . . . ACTIVITY 3.6.2: Declaring and calling functions. □
+1) Which function call displays the
+numbers 5, 4, 3, 2, 1.
+fun c ti on countDown (firstNum )
+f or (let count = firstNum ;
+count > 0 ; count--) {
+console . log (count );
+0 coun tDown () ;
+0 countDown (5);
+O countDown(5, 4, 3, 2,
+0
+1);
+test
+function test(x, y) {
+if (x > y) {
+console.log(x);
+}
+else {
+console.log(y);
+}
+}
+Largest
+display_largest
+displayLargest
+function sayHello(name,
+greeting) {
+console.log(greeting + ", "
++ name + "!");
+}
+sayHello("Maria");
+sayHello("Sam");
+sayHello("Juan", "Hola");
+function sayHello(name,
+greeting = "Hello") {
+console.log(greeting + ", "
++ name);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+50 of 119 2024-10-12, 4:01 p.m.
+2) Choose a better name for the function
+0
+0
+0
+3) What is output to the console?
+0 Hello, Maria!
+0 Hello, undefined!
+0 undefined, Maria!
+4) The function below uses a default
+parameter value "Hello" that is
+assigned when the greeting is not
+supplied in the function call. What is
+output to the console?
+O Hello, Sam
+Hello, Juan
+0
+0
+0
+drawBox(2,
+6)
+undefined
+{
+6.5 ave
+6.5
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+51 of 119 2024-10-12, 4:01 p.m.
+O Hello,Sam
+Hola, Juan
+0 undefined
+I PARTICIPATION I . . ACTIVITY 3.6.3: Function practice.
+The code below produces a 5 x 10 box of question marks. Convert the code into a
+function called drawBox () that has three parameters:
+1. numRows - The number of rows for the box.
+2. numCols - The number of columns for the box.
+3. boxChar - The character to use to create the box. If no argument is supplied, use
+"XII.
+Ex: drawBox (5, 4, "!")and drawBox (below.
+! ! ! !
+! ! ! !
+! ! ! !
+! ! ! !
+! ! ! !
+xxxxxx
+xxxxxx
+Returning a value
+should display the boxes pictured
+□
+A function may return a single value using a return statement. A function that is missing a return
+statement returns
+I PARTICIPATION I . ACTIVITY 3.6.4: Function that returns a value.
+function findAverage (numl , num2 )
+return (numl + num2 ) / 2 ;
+let ave = findAverage (6, 7);
+conso l e . l og (ave );
+□
+r l
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+52 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+function flndAverage(num1, num2) {
+return (num1 + num2) / 2;
+}
+let ave = flndAverage(6, 7);
+console.log(ave);
+l J
+In step 2, the parameters for flndAverage, num1 and num2, are allocated memory and get
+assigned 6 and 5 respectively.
+In step 3, the function flndAverage finishes running. The blocks of memory used by the
+parameters num1 and num2 are deallocated and free for use by other variables. The variable avg
+is allocated memory and stores 6.5. 6.5 is displayed in the console.
+Animation captions:
+1. A function named flndAverage is declared with two parameters: num1 and num2.
+2. flndAverage() is called with arguments 6 and 7, which are assigned to parameters num1
+and num2.
+3. The return statement returns the average of num1 and num2, which is 6.5.
+I PARTICIPATION I . ACTIVITY 3.6.5: Functions that return values.
+1) What is output to the console?
+consol e . l og (findSmallest (5 ,
+2 ) ) ;
+function findSmall es t (x , y )
+if (x < y ) {
+return x ;
+e l se {
+0 2
+0 5
+return y ;
+□
+0
+factorial()
+function factorial(num) {
+let result = 1;
+for (let count = 1; count
+<= num; count++) {
+result *= count;
+}
+return result;
+}
+factorial(5);
+console.log(result);
+let answer =
+factorial();
+console.log(answer);
+let answer =
+factorial(5);
+console.log(answer);
+function factorial(num) {
+let result = 1;
+for (let count = 1; count
+<= num; count++) {
+result *= count;
+}
+return result;
+}
+let answer = factorial(8 -
+factorial(3));
+console.log(answer);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+53 of 119 2024-10-12, 4:01 p.m.
+0 undefined
+2) What is the correct way to call
+and output the
+factorial of 5?
+0
+0
+0
+3) What is output to the console?
+0 2
+0 6
+0 8
+4) What is output to the console?
+0
+0
+0
+// Function name is omitted
+function(x, y, z)
+y + z);
+);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+54 of 119 2024-10-12, 4:01 p.m.
+consol e . l og (sayHe llo ("Sam" ));
+f u n c ti on sayHe llo (name ) {
+consol e . l og ( "Hello, " +
+name + "! " );
+0 Hello, Sam!
+O Hello, Sam!
+undefined
+0 undefined
+Function expressions and anonymous functions
+JavaScript functions may be assigned to a variable with a function expression. A function
+expression is identical to a function declaration, except the function name may be omitted. A
+function without a name is called an anonymous function. Anonymous functions are often used
+with arrays and event handlers, discussed elsewhere in this material.
+Figure 3.6.1: Assigning a function expression to a variable.
+II Functi on i
+l et d i spl aySum = f
+{
+c onso l e . l og (x +
+I I Fun c tion call
+d i spl aySum (2 , 5 , 3
+Unlike functions declared with a function declaration, a variable assigned with a function
+expression cannot be used until after the variable is assigned. Using a variable before the variable
+is assigned with a function expression causes an exception.
+I PARTICIPATION I 3 6 6 U . f . . b f .
+ACTIVITY .. : sing a unction expression e ore assignment. □
+consol e . l og ( f i ndLargest (5 ,
+f unction f i ndLargest (x , y )
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+55 of 119 2024-10-12, 4:01 p.m.
+let largest ;
+if (x > y ) {
+largest = x ;
+else {
+largest = y ;
+return largest ;
+displaySum (2 , 5 , 3 ) ;
+let displaySum = functi on (x , y , z ) {
+cons ole . l og (x + y + z ) ;
+11
+Animation content:
+The following code is displayed:
+console.log(flndlargest(5, 3));
+function flndlargest(x, y) {
+}
+let largest;
+if (x > y) {
+largest= x;
+}
+else {
+largest= y;
+}
+return largest;
+displaySum(2, 5, 3);
+let displaySum = function(x, y, z) {
+console.log(x + y + z);
+}
+In step 2, 5 is displayed on the console.
+cannot access 'displaySum'
+before initialization
+In step 3, the error messageUncaught ReferenceError: cannot access 'displaySum' before
+initialization is displayed on the console
+Animation captions:
+1. find Largest() may be called before the find Largest() function declaration.
+2. Since x > y, flndlargest() returns 5, and 5 is output to the console.
+3. Calling displaySum() before displaySum is assigned with a function expression produces
+=>
+(parameter1, parameter2, ...) =>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+56 of 119 2024-10-12, 4:01 p.m.
+an exception.
+I PARTICIPATION I . . ACTIVITY 3.6.7: Function expressions.
+1) The variable result is assigned 4.
+let square = function (num )
+return num * num;
+let result = square (2 );
+0 True
+0 False
+2) The variable result is assigned 9.
+let result = square (3 );
+let square = function (num )
+return num * num;
+0 True
+0 False
+3) The variable result is assigned 9.
+let square = fun cti on (num )
+return num * num;
+let result = square ;
+0 True
+0 False
+Arrow functions
+□
+D
+D
+0
+An arrow function is an anonymous function that uses an arrow to create a compact function.
+An arrow function's parameters are listed to the left of the arrow. The right side of the arrow may be
+a single expression or multiple statements in braces.
+Construct 3.6.2: Arrow function declaration that returns a single expression.
+...) => {
+99
+3 6 =
+9
+25
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+57 of 119 2024-10-12, 4:01 p.m.
+Construct 3.6.3: Arrow function with multiple statements.
+I PARTICIPATION
+ACTIVITY
+(parameterl , parameter2 ,
+stateme nts ; }
+3.6.8: Arrow functions that sum two numbers and square a
+number.
++ l et f i ndSum = (a , b ) => a + b ;
+l et sum = f i ndSum (3 , 6);
+conso l e . l og (sum);
+5 * 5 = 25
+l et square = x => x * x;
+consol e . l og (square (5 ));
+Animation content:
+The following code is displayed:
+let flndSum = (a, b) =>a + b;
+let sum= flndSum(3, 6);
+console.log(sum);
+let square = x => x * x;
+console.log(square(5));
+Step 5 runs let sum= flndSum(3, 6); console.log(sum); and 9 is displayed in the console.
+Step 6 runs console.log(square(5)); and 25 is displayed in the console.
+Animation captions:
+□
+;
+}
+}
+return count;
+}
+isEven()
+function isEven(num) {
+return num % 2 === 0;
+}
+let isEven = num =>
+;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+58 of 119 2024-10-12, 4:01 p.m.
+1. An arrow function may be assigned to a variable, just like a function expression.
+2. The function parameters are listed in parenthesis to the left of the arrow=>.
+3. An expression listed by itself is the value returned by the arrow function.
+4. An arrow function is called the same as any other function. The arguments 3 and 6 are
+assigned to parameters a and b.
+5. The arrow function returns the sum of a and b, which is 9.
+6. An arrow function with only one parameter does not require parentheses around the one
+parameter.
+I PARTICIPATION I . ACTIVITY 3.6.9: Arrow function s.
+1) Complete the arrow function.
+let max
+> b ? a
+=> a
+Check Show answer
+2) Complete the arrow function.
+let countCapitals =
+=> {
+let count = 0;
+for (let i = 0; i <
+str . length; i ++) {
+let ch = str . charAt ( i );
+if (ch >= 'A' && ch <=
+I z I ) {
+count++;
+Check Show answer
+3) Convert into an
+equivalent arrow function.
+□
+0
+0
+0
+let
+var x = 6; x
+var let
+let var
+var
+let
+var let
+Using let
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+59 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+I CHALLENGE I . ACTIVITY 3.6.1: Functions. □
+5707 04.20654 7 6.qx3zqy7
+Exploring further:
+• Functions (MON)_

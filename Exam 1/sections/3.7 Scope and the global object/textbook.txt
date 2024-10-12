@@ -1,0 +1,337 @@
+The var keyword and scope
+In addition to declaring variables with , a variable can be declared with the var keyword. Ex:
+declares the variable with an initial value of 6. When JavaScript was first created,
+was the only way to declare a variable. The keyword was added to JavaScript in 2015.
+Both and declare variables but with differing scope. A JavaScript variable's scope is the
+context in which the variable can be accessed.
+A variable declared inside a function has local scope, so only the function that defines the variable
+has access to the local variable. A variable declared outside a function has global scope, and all
+functions have access to a global variable.
+A variable declared inside a function with has function scope: the variable is accessible
+anywhere within the function, but not outside. A variable declared inside a function with has
+block scope: the variable is accessible only within the enclosing pair of braces.
+A variable declared using or that is not inside a function creates a global variable that is
+accessible from anywhere in the code.
+I PARTICIPATION I . ACTIVITY 3.7.1: var VS. let scoping. □
+Using var
+function numbers() {
+console.log(x);
+(x 0) {
+2;
+console.log(y);
+}
+(x 100) {
+2;
+console.log(z);
+}
+console.log(y);
+console.log(z);
+}
+numbers();
+console.log(x);
+console.log(y);
+console.log(z);
+numbers() console.log(x);
+(0) {
+2;
+console.log(y);
+}
+(x 100) {
+2;
+console.log(z);
+}
+console.log(y);
+console.log(z);
+}
+numbers();
+console.log(x);
+console.log(y);
+console.log(z);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+60 of 119 2024-10-12, 4:01 p.m.
+functi on numbers () {
+c onso e . og x ;
+if (> 0 ) {
+var y = x / 2 ;
+c onso le . l og (y ) ;
+if (< 100 ) {
+var z = x * 2 ;
+c onso le . l og (z ) ;
+c ons ole . l o g (y ) ;
+c ons ole . l o g ( z ) ;
+numbers ();
+c ons o le . l og (x );
+c ons o le . l og (y );
+cons o le . l og (z );
+Animation content:
+function numbers () {
+c onso e . og x ;
+if (x > 0 ) {
+let y = x / 2 ;
+c ons ole . l o g (y ) ;
+if (< 100 ) {
+let z = x * 2 ;
+c ons ole . l o g ( z ) ;
+c onso le . l og (y ) ;
+conso le . l og (z ) ;
+numbers () ;
+cons ole . l og (x );
+cons ole . l og (y );
+cons ole . l og ( z ) ;
+The following code is displayed to show the scope of variables using var declarations:
+II Outside a function so declared with global scope
+var x = 17;
+function numbers() {
+II x has global scope so x is accessible anywhere
+console.log(x);
+if (x > 0){
+II y is declared inside a function and inside an if block. y has function scope because y was
+declared with var
+vary= x I 2;
+console.log(y);
+}
+if (x < 100) {
+}
+II Same case as y, z is declared in a function using var. z has function scope.
+var z = x * 2;
+console.log(z);
+II y and z are accessible. y and z both have function scope and are accessed and declared in the
+same function
+console.log(y);
+console.log(z);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+61 of 119 2024-10-12, 4:01 p.m.
+numbers();
+II x has global scope so x is accessible
+console.log(x);
+II y and z are accessed outside of the function y and z were declared in. A ReferenceError is
+thrown.
+console.log(y);
+console.log(z);
+The following code is displayed to show the scope of variables using let declarations:
+II Outside a function so declared with global scope
+let x = 17
+function numbers() {
+II x has global scope so x is accessible anywhere
+console.log(x);
+if (x > O){
+II y is declared inside a function and inside an if block. y has block scope because y was
+declared with let
+let y = x I 2;
+console. log(y);
+}
+if (x < 100){
+}
+II Same case as y, z is declared in a function using var. z has block scope
+let z = x * 2;
+console.log(z);
+II y and z have block scope and are accessed outside the blocky and z were declared in. A
+ReferenceError is thrown.
+console.log(y);
+console.log(z);
+}
+numbers();
+II x has global scope so x is accessible
+console.log(x);
+II y and z are once again accessed outside of the blocky and z were declared in. A
+ReferenceError is thrown.
+console.log(y);
+console.log(z);
+Animation captions:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+62 of 119 2024-10-12, 4:01 p.m.
+1. var x = 17; declares x with global scope. xis accessible everywhere, so each console.log(x)
+statement logs x as 17.
+2. The vary declaration exists inside the numbers() function. So both console.log(y)
+statements inside the function logy as 8.5.
+3. Similarly, the var z statement is inside the function, so both console.log(z) statements
+inside the function log z as 34.
+4. y and z are not accessible outside the numbers() function. The console.log() statements
+that exist outside the function throw a ReferenceError when executed.
+5. Code that uses let instead of var has similar behavior for the global variable x.
+6. The first log statement for y is in y's scope (yellow), and the first log statement for z is in z's
+scope (green). So, 8.5 and 34 are logged.
+7. All remaining calls to logy or z are out of scope and throw a ReferenceError.
+I PARTICIPATION I . ACTIVITY 3.7.2: Local and global variables.
+Refer to the code below.
+function multiplyNumbers (x , y ) {
+var answer = x * y ;
+return answer ;
+var z = multiplyNumbers (2 , 3 );
+console . log (answer );
+1) The answer variable has __ scope.
+0 global
+0 local
+2) The z variable has __ scope.
+0 global
+0 local
+3) The console. log (answer); line
+0 logs 6
+0 logs undefined
+0 throws a ReferenceError
+I PARTICIPATION I
+□
+0
+0
+0
+n
+function oneToTen() {
+let a = 1;
+for (var i = a; i <= 10; i+
++) {
+console.log(i);
+_____
+}
+}
+a
+i
+a i
+f1()
+f2()
+function f1() {
+let x = 100;
+}
+function f2() {
+var y = 200;
+}
+x
+y
+k
+function sumOfSquares() {
+let sum = 0;
+for (let i = 1; i < 5; i++)
+{
+let j = i * i;
+sum += j;
+var k = sum;
+}
+_____
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+63 of 119 2024-10-12, 4:01 p.m.
+I ACTIVITY
+3.7.3: var vs. let scoping.
+1) In the code below, which variables are
+in scope on the blank line?
+0 only
+0 only
+0 both and
+2) After calling functions and
+in the code below, which
+variable has global scope?
+0
+0
+0 neither
+3) On the blank line in the code below,
+variable __ .
+O is out of scope and not
+0
+0
+0
+window
+test window.test
+window.location
+location = "Texas"
+var
+let
+var let
+{
+// Missing "var" tax becomes a global variable!
+10);
+// tax is accessible tax is global
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+64 of 119 2024-10-12, 4:01 p.m.
+accessible
+O is in scope and has a value of
+30
+O is in scope, but has an
+undefined value
+Global variables and the global object
+Before developer code is run, JavaScript implementations create the global object: an object that
+stores certain global variables, functions, and other properties. When running JavaScript code in a
+web browser, global variables are usually assigned as properties to the global object.
+Therefore, a global variable called is accessible as
+Developers must be careful when assigning global variables, because a global variable could
+replace an existing window property. Ex: contains the URL the browser is
+displaying. Assigning causes the web browser to attempt to load a web
+page with the URL "Texas", which likely does not exist.
+Three cases exist when assigning to a global variable X:
+• X has been declared with
+object.
+• X has been declared with
+, in which case a property named "X" is added to the global
+, in which case a property named "X" is not added to the global
+object, but X is still accessible from anywhere in the code.
+• X has not been declared with or , in which case the variable becomes a property of
+the global object, even if assigned to inside a function.
+Figure 3.7.1: Example with accidental global variable.
+function cal cul ateTax (total )
+II Mi ssing "var " so tax bE
+tax = total * 0 . 06 ;
+return tax ;
+var totalTax = cal cul ateTax (l
+II tax i s accessi ble because
+con sol e . l og (tax );
+var let
+window
+window.result
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+65 of 119 2024-10-12, 4:01 p.m.
+Good practice is to always declare variables used in functions with
+not become global.
+I PARTICIPATION I . . ACTIVITY 3.7.4: Variable scope and functions.
+1) What is output to the console?
+function addNumber (x )
+sum += x ;
+let sum = O;
+addNumber (2 );
+addNumber (S);
+console . log (sum);
+Check Show answer
+2) What is output to the console?
+function
+multiplyNumbers (x , y ) {
+answer = x * y ;
+return answer ;
+var z =
+multiplyNumbers (2 , 3 );
+console . log (answer );
+Check Show answer
+3) If is the global object,
+what is the value of
+after running
+the following code?
+or , so the variables do
+□
+0
+0
+0
+[]
+scores
+0 6
+1 15
+2 8
+0
+1
+2
+teams
+Tigers
+Bisons
+Eagles
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+66 of 119 2024-10-12, 4:01 p.m.
+function
+subtractNumbers (x , y ) {
+result = x - y ;
+var a =
+subtractNumbers (7 , 6);
+var b =
+subtractNumbers (ll , 3 );
+var c =
+subtractNumbers (9 , 1 );
+Check Show answer
+Exploring further:
+• var (MON).
+• Global object (MON).
+Array introduction

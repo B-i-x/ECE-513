@@ -1,0 +1,444 @@
+Exploring further: 3.1 O Maps
+• Working with objects (MON).
+Objects as maps
+A map or associative array is a data structure that maps keys to values. Each key/value pair in a
+map is called an element.
+JavaScript objects can be used as maps, in which the key is the object property and the value is the
+property's value. When an object is used as a map, individual elements are accessed by key using
+brackets. Ex:
+IAP ACRTTIVICITIPYA TION I 3.10.1: State capitals in an obJ·ect map.
+l et stateCapi ta l s = {
+AR : " Little Rock" ,
+CO : " Denver " ,
+NM : "Sante Fe "
+} ;
+consol e . l og ( "CO capital is " + stateCapi tal
+stateCapi ta l s [ " TX" ] = "Austin" ;
+Animation content:
+Static figure:
+Begin code segment:
+let stateCapitals = {
+AR: "Little Rock",
+CO: "Denver",
+NM: "Sante Fe"
+};
+console.log("CO capital is "+ stateCapitals["CO"]);
+□
+contacts["Dave"].email
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+94 of 119 2024-10-12, 4:01 p.m.
+stateCapitals[''TX"] = "Austin";
+End code segment.
+Memory for stateCapitals shows four elements with two letter state codes as keys and capitals
+as values: AR/''Little Rock", CO/"Denver", NM/"Santa Fe", and TX/"Austin".
+Console displays:
+CO capital is Denver
+Animation captions:
+1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+elements.
+2. The map's value for key "CO" is "Denver".
+3. The capital of Texas, with key ''TX" and value "Austin", is added to the map.
+I PARTICIPATION I . ACTIVITY 3.10.2: ObJect maps.
+Refer to the object map below.
+l et contacts = {
+Rosa : {
+} ;
+} '
+phone : "303-555-4321" ,
+email : "rosa@gmail.com"
+Dave : {
+} '
+phone : "501-533-9988" ,
+email : "dave@yahoo.com"
+Li : {
+phone : "213-511-6758" ,
+email : "li@msn.com"
+1) What outputs Dave's email address?
+console . log ( __ );
+0 ["Dave"] .email
+0 contacts.email
+0
+□
+0
+in
+variable in object)
+stateCapitals
+AR Little Rock
+CO Denver
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+95 of 119 2024-10-12, 4:01 p.m.
+2) What assigns a Twitter username to
+Rosa?
+--- = "@rosaLuvsCats " ;
+0 contact s ["Rosa "] . t witte r
+0 contact s ["rosa "] . t witte r
+0 contact s ["Rosa "] . email
+3) What adds John to the contact s
+map?
+___ = { phone : " 111-2222 " ,
+email : " john@work.org" };
+0 contact s ["John"] .email
+0 contact s
+0 contact s ["John"]
+For-in loop
+0
+0
+The for-in loop iterates over an object's properties in arbitrary order and is ideal for looping through
+an object map's elements. The for-in loop declares a variable on the left side of the keyword and
+an object on the right. In each iteration, the variable is assigned with each of the object's properties.
+Construct 3.10.1: for-in loop.
+for (let vari ab
+{
+body
+I PARTICIPATION
+ACTIVITY I 3.10.3: Looping through an object map.
+let stateCapitals = {
+AR : "Little Rock" ,
+CO : " Denver " ,
+NM : "Sante Fe "
+□
+};
+console.log("All capitals:");
+for (let state in stateCapitals) {
+console.log(state + " is " + stateCapitals[state]);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+96 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+Static figure:
+Begin code snippet:
+let stateCapitals = {
+};
+AR: "Little Rock",
+CO: "Denver",
+NM: "Sante Fe"
+console.log("AII capitals:");
+for (let state in stateCapitals) {
+console.log(state +" is "+ stateCapitals[statel);
+}
+End code snippet.
+Console displays:
+All capitals:
+AR is Little Rock
+CO is Denver
+NM is Sante Fe
+Animation captions:
+1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+elements.
+2. The for-in loop declares variable state inside the for-in statement.
+3. The for-in loop assigns each key to the state variable, one at a time. The loop body outputs
+each element.
+I PARTICIPATION I
+ACTIVITY 3.10.4: For-in loop. □
+let contacts = {
+Rosa: {
+phone: "303-555-4321",
+email: "rosa@gmail.com"
+},
+Dave: {
+phone: "501-533-9988",
+email: "dave@yahoo.com"
+},
+Li: {
+phone: "213-511-6758",
+email: "li@msn.com"
+}
+};
+contacts
+for (______) {
+console log(name + ": " +
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+97 of 119 2024-10-12, 4:01 p.m.
+Refer to the object map below.
+7) Which expression loops through the
+map to output all names
+and phone numbers?
+..__,..._,, J..L..._, ..._,, ....L... ,.__, • ....L. ..._,,':::I \ J..LI...A..LL L'--' I
+contacts [name ] . phone );
+}
+0 let contacts
+0 let name in contacts
+0 let contacts in name
+2) What is missing to assign email with
+each contact's email address?
+f o r (l et name in contacts )
+l et email =
+i f (email . inc ludes ( "msn " ))
+consol e . l og (name );
+0 contacts.email
+0 name.email
+0 contacts[name] .email
+IAP ACRTTIVICITIPYA TION I 3.10.5: Practice with obJ·ect maps.
+0
+0
+□
+courses
+title
+description creditHours
+length
+true
+false
+{
+,
+stateCapitals);
+//
+length); // 3
+// Evaluates true
+if ("NM" in stateCapitals) {
+console.log("NM exists");
+}
+// Remove the NM/Santa Fe pair
+delete stateCapitals["NM"];
+// Evaluates false
+if ("NM" in stateCapitals) {
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+98 of 119 2024-10-12, 4:01 p.m.
+Create an object map called that stores a university department's course
+number as the key and an object as the value. The object has three properties:
+. Example courses:
+• 770 - Introduction to Programming, Develop algorithms for computers, 5.
+• 250 - Web Development, Build web applications, 3.
+• 31 O - Operating Systems, Process management and memory management, 3.
+• 430 - Artificial Intelligence, Simulate human thinking, 2.
+Then, write a for-in loop that displays the course number and title for only those courses
+that are 3 credit hours.
+Other object map operations
+Other common operations performed on object maps include:
+• Get number of elements. The Object.keys() method returns an array of an object's property
+names. The array's property returns the number of elements in the object map.
+• Check for key. The in operator returns if an object contains the given property and
+returns otherwise.
+• Remove element. The delete operator removes a key/property from a map or object.
+Figure 3.10.1: Object map operations example.
+let stateCapital s = I
+AR : "Little Rock " ,
+CO : "Denver" ,
+NM : "Sante Fe "
+} ;
+let states =
+Ob j ect . keys (stateCapj
+consol e . l og (states );
+AR, CO,NM
+console . log (states . lE
+length);
+students
+if (________) {
+console.log("Hello, "
++ students[888].name);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+99 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.10.6: in and delete operators.
+Refer to the object map below.
+let students = {
+123 : { name : "Tiara" , gpa : 3 . 3 } '
+444 : { name : "Lee" , gpa : 2 . 0 } '
+987 : { name : "Braden" , gpa : 3 . 1 }
+} ;
+1) Remove Lee from students.
+delete
+Check Show answer
+2) Assuming students has three elements before
+the code executes, what number is output to the
+console?
+delete students ["Braden " ];
+consol e . log (Ob j ect . keys (students ) . l er
+Check Show answer
+3) What is missing to check if
+student ID 888 is in ?
+□
+0
+0
+0
+Map
+Map
+[key, value]
+stateCapitals
+AR Little Rock
+CO Denver
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+100 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+4) What is output to the console?
+for (let i d in students )
+{
+delete students [ i d ];
+if (123 in students ) {
+consol e . l og ("yes" );
+else {
+consol e . l og ("no" );
+Check Show answer
+Map object
+The Map object is a newer alternative to using objects for storing key/value pairs. Common
+methods and properties of the object include:
+0
+• The set(key, value) method sets a key/value pair. If the key is new, a new element is added to
+the map. If the key already exists, the new value replaces the existing value.
+• The get(key) method gets a key's associated value.
+• The has(key) method returns true if a map contains a key, false otherwise.
+• The delete(key) method removes a map element.
+• The size property is the number of elements in the map.
+The for-of loop, which is often used to loop through an array, is ideal for looping through a
+Each of the map's key/value pairs are assigned to the
+of loop, as illustrated in the animation below.
+variables declared in the for-
+I PARTICIPATION I . . AcTiviTv 3.7 0.7: State capitals in a Map.
+let stateCapi tal s = new Map ();
+stateCapi tal s . set ("AR" , "Little Rock " );
+stateCapital s . set ("CO" , "Denver" );
+□
+stateCapitals.set("NM", "Santa Fe");
+console.log("Size of map is " + stateCapitals.size);
+if (stateCapitals.has("CO")) {
+console.log("CO capital is " + stateCapitals.get("CO"));
+}
+console.log("All capitals:");
+for (let [state, capital] of stateCapitals) {
+console.log(state + " is " + capital);
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+101 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+let stateCapitals = new Map();
+stateCapitals.set("AR", "Little Rock");
+stateCapitals.set("CO", "Denver");
+stateCapitals.set("NM", "Santa Fe");
+console.log("Size of map is"+ stateCapitals.size);
+if (stateCapitals.has("CO")) {
+console.log("CO capital is"+ stateCapitals.get("CO"));
+}
+console.log("AII capitals:");
+for (let [state, capital] of stateCapitals) {
+console.log(state +"is"+ capital);
+}
+Step 1 runs the first line and stateCapitals is initialized to a map object with nothing stored.
+Step 2 runs the following code:
+stateCapitals.set("AR", "Little Rock");
+stateCapitals.set("CO", "Denver");
+stateCapitals.set("NM", "Santa Fe");.
+The map stateCapitals is populated with keys: AR, CO, and NM. Each key is associated with a
+memory location storing the strings: Little Rock, Denver, and Sante Fe.
+Step 3 runs the following line of code:
+console.log("Size of map is"+ stateCapitals.size);.
+Size of map is 3 is displayed in the console.
+Step 4 runs the following if block:
+if (stateCapitals.has("CO")) {
+console.log("CO capital is"+ stateCapitals.get("CO"));
+}.
+CO capital is Denver is displayed in the console.
+email: "rosa@gmail.com" }],
+email: "dave@yahoo.com" }],
+email: "li@msn.com" }]
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+102 of 119 2024-10-12, 4:01 p.m.
+Step 5 runs the following code:
+console.log("AII capitals:");
+for (let [state, capital] of stateCapitals) {
+console.log(state +" is "+ capital);
+}.
+The following lines are displayed in the console:
+All capitals:
+AR is Little Rock
+CO is Denver
+NM is Sante Fe
+Animation captions:
+1. A new Map object is created with the Map() constructor.
+2. The set() method adds three key/value pairs to the stateCapitals Map.
+3. The size property returns 3 because stateCapitals has three key/value pairs.
+4. The has() method returns true because "CO" is one of the keys in stateCapitals. The get()
+method returns the value associated with "CO".
+5. The for-of loop assigns each key/value pair to variables state and capital.
+I PARTICIPATION I . ACTIVITY 3.10.8: Map obJect.
+Refer to the map below.
+l et contacts = new Map ( [
+l ) ;
+[ "Rosa" , { phone : "303-555-4321" , em
+[ "Dave" , { phone : "501-533-9988" , em
+[ "Li" , { phone : "213-511-6758" , em
+1) What is output to the console?
+console . log (contacts . size );
+0 0
+0 2
+0 3
+2) What is output to the console?
+contacts . set ("Li" , {
+phone : "213-444-6758" ,
+email : "li@email.com" } ) ;
+console . log (contacts . size );
+□
+0
+0
+contacts.delete("Li");
+console.log(contacts.size);
+console.log(______);
+contacts.get("Dave")
+contacts.get("Dave").email
+contacts["Dave"].email
+if (contacts.has("John")) {
+console.log(contacts.get("John").phone);
+}
+else {
+console.log("Missing");
+}
+email phone
+let rosa = contacts.get("Rosa");
+rosa.twitter = "@rosaLuvsCats";
+contacts.get("Rosa").twitter
+= "@rosaLuvsCats";
+contacts.set("Rosa").twitter
+= "@rosaLuvsCats";
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+103 of 119 2024-10-12, 4:01 p.m.
+0 0
+0 3
+0 4
+3) What is output to the console?
+0 0
+0 2
+0 3
+4) What outputs Dave's email address?
+0
+0
+0
+5) What is output to the console?
+0 John's phone number
+0 The string "Missing"
+0 An empty string
+6) The code below assigns a Twitter
+username to Rosa while leaving Rosa's
+and properties unaltered.
+How can the code be simplified?
+0
+0
+0
+0
+0
+0
+String
+String
+String
+"test".charAt(1) String
+"test".length charAt() ≥
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+104 of 119 2024-10-12, 4:01 p.m.
+contacts . set ("Rosa" , {
+Q twi tter = "@rosaLuvsCats"
+} ) ;
+7) Which expression loops through the
+contacts map to output all names
+and phone numbers?
+f o r ( __ ) {
+con sol e . l og (name +
+contac t . p h one );
+". " +
+}
+0 let contact of
+contacts
+0 let [name, contact] of
+contacts
+0 let name of contacts
+I CHALLENGE I ACTIVITY 3.7o. 7: Maps.
+5707 04.2065416 qx3zqy7
+Exploring further:
+• Mar,2 object (MON)_

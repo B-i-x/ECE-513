@@ -1,0 +1,364 @@
+Background
+In 1995, Brendan Eich created JavaScript so the Netscape Navigator browser could dynamically
+respond to user events. Ex: The web page's content could change when the user clicked a button or
+hovered over an image.
+JavaScript was standardized by Ecma International in 1997 and called ECMAScript. Ecma
+International continues to improve ECMAScript, releasing a new version each year. JavaScript is an
+implementation of the ECMAScript specification.
+Today, JavaScript is one of the most popular programming languages. JavaScript is supported by
+every major web browser and makes web applications like Gmail and Google Maps possible.
+JavaScript is also popular outside the web browser. Ex: Node.js, which runs JavaScript, is a popular
+technology for creating server-side web applications.
+JavaScript is executed by an interpreter. An interpreter executes programming statements without
+first compiling the statements into machine language. Modern JavaScript interpreters (also called
+JavaScript engines) use just-in-time (JIT) compilation to compile the JavaScript code at execution
+time into another format that can be executed quickly.
+ECMAScript name
+The name "ECMAScript" was a compromise between Netscape, Microsoft, and other
+organizations involved in the standardization of JavaScript. Brendan Eich once
+commented that "ECMAScript was always an unwanted trade name that sounds like
+a skin disease." Despite ECMAScript's similarity to eczema (a group of related skin
+diseases), the name has stuck.
+Quote source Archived email (Oct 3, 2006).
+I PARTICIPATION I . ACTIVITY 3.1.1: JavaScript background.
+1) ECMAScript and JavaScript are the
+same thing.
+0 True
+□
+0
+let score
+score = 2
+let maxValue = 5; maxValue
+// number (initialized)
+memory
+numSongs 5
+numAlbums 20
+hitCount 10
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+2 of 119 2024-10-12, 4:01 p.m.
+0 False
+2) JavaScript is only used for programs
+that run in a web browser.
+0 True
+0 False
+3) All browsers must use the same
+JavaScript engine.
+0 True
+0 False
+4) JavaScript and Java are the same
+programming language.
+0 True
+0 False
+Variables
+A variable is a named container that stores a value in memory. A variable declaration is a
+statement that declares a new variable with the keyword /et followed by the variable name. Ex:
+declares a variable named score.
+0
+0
+0
+A variable may be assigned a value after being declared. An assignment assigns a variable with a
+value, like . A variable may also be assigned a value on the same line when the variable
+is declared, which is called initializing the variable. Ex:
+to 5.
+initializes
+A variable may be assigned a value without first declaring the variable, but good practice is to always
+declare a variable before assigning a value to the variable.
+IAP ACRTTIVICITIPYA TION I 3 .1 .2 : De c Ia ri.n g vari.a bl es an d assi.g ni.n g va Iu es.
+II Declaring a variable
+let numSongs ;
+II Variable is assigned a number
+numSongs = 5 ;
+II Variable is declared and assigned a nu
+l et numAlbums = 20 ;
+□
+mt
+let function while
+// Variable may be assigned a value without first being declared
+hitCount = 10;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+3 of 119 2024-10-12, 4:01 p.m.
+Animation content:
+The following code is displayed:
+// Declaring a variable
+let numSongs;
+// Variable is assigned a number
+numSongs = 5;
+// Variable is declared and assigned a number (initialized)
+let numAlbums = 20;
+// Variable may be assigned a value without first being declared
+hitCount = 1 0;
+The first step runs: let numSongs;. The variable numSongs gets allocated a block of memory.
+The second step runs: numSongs = 5;. The block of memory that was allocated to numSongs
+now stores the value 5.
+The third step runs: let numAlbums = 20. The variable numAlbums gets allocated memory and
+assigned to 20 at the same time.
+The fourth step runs: hitCount = 10. The allocation and assignment of memory is shown just like
+the third step but with variable hitCount and value 10.
+Animation captions:
+1. The numSongs variable is declared with the "let" keyword.
+2. numSongs is assigned with 5.
+3. numAlbums is initialized with 20.
+4. When hitCount is assigned with 10, hitCount is implicitly declared. Good practice is to
+explicitly declare all variables with "let".
+A name created for an item like a variable is called an identifier. JavaScript imposes the following
+rules for identifiers:
+• An identifier can be any combination of letters, digits, underscores, or$.
+• An identifier may not start with a digit.
+• An identifier may not be a reserved word like , or
+lastPrice LastPrice last_price
+const slicesPerPizza = 8;
+slicesPerPizza
+var
+$totalPoints
+totalPoints
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+4 of 119 2024-10-12, 4:01 p.m.
+A JavaScript coding convention is to name JavaScript variables with camel casing, where the
+identifier starts with a lowercase letter, and subsequent words begin with a capital letter. Ex:
+is preferred over or
+A constant is an initialized variable whose value cannot change. A JavaScript constant is declared
+with the const keyword. Ex: creates a constant
+that is always 8.
+var keyword
+A variable may also be declared with the keyword, which is covered elsewhere in
+this material.
+I PARTICIPATION I
+ACTIVITY 3.1.3: Declaring and naming variables.
+7) Which statement declares the
+variable sum without assigning a
+value to sum?
+0 sum;
+0 let sum;
+0 sum = O;
+2) Which identifier is illegally named?
+0 star destroyer
+0 ADDRESS
+0 $save
+0 9to5
+3) Which variable is named with the
+preferred JavaScript naming
+conventions?
+0 total points -
+0
+0
+4) Which statement declares a constant
+□
+0
+0
+0
+0
+x = 5; x = "test"; x
+let name = "Naya";
+let quote = 'He asked, "Shall
+we play a game?"';
+let highScore = 950;
+let pi = 3.14;
+let hungry = true;
+let thirsty = false;
+let teams = ["Broncos",
+"Cowboys", "49ers"];
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+5 of 119 2024-10-12, 4:01 p.m.
+for Earth's gravity?
+O let earthGravity
+9. 8;
+const earthGravity 0 9. 8;
+0 const earthGravity;
+5) Which code segment contains an
+error?
+0 let numLives = 9 ;
+numLives = 8 ;
+const numLives 9;
+Q let livesLeft
+numLives ;
+const numLives 9;
+Q numLives = 10 ;
+Data types
+0
+Variables are not explicitly assigned a data type. JavaScript uses dynamic typing, which determines
+a variable's type at run-time. A variable can be assigned a value of one type and re-assigned a value
+of another type. Ex: assigns with a number type, then a string type.
+Table 3.1.1: Common JavaScript data types.
+Data type Description Example
+f--
+string
+Group of characters delimited with
+'single' or "double" quotes
+f--
+Numbers with or without decimal uvv.1-,;;:;; - ../-...IV f number --. 1 ,1 -
+places
+boolean true or false
+array List of items
+let movie = { title:"Sing",
+rating:"PG" };
+let message;
+let book = null;
+y = false;
+x = y;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+6 of 119 2024-10-12, 4:01 p.m.
+Data type Description
+object
+Collection of property and value
+pairs
+undefined
+Variable that has not been
+assigned a value
+null
+Intentionally absent of any object
+value
+I PARTICIPATION I . ACTIVITY 3.1.4: Variable data types.
+1)
+2)
+3)
+What is the data type of
+population?
+l et popul at i on 650000 ;
+0 int
+0 string
+0 number
+What is the data type of z?
+l et z ;
+0 undefined
+0 string
+0 number
+What is the data type of x?
+0 string
+0 boolean
+0 number
+4) What is syntactically wrong with the
+following code?
+Example
+= n11l l •
+□
+0
+0
+0
+0
+// /* */
+// line
+/* Multi-line
+// No semicolon is required
+let totalLives = 3
+// Two statements on the same line require a
+semicolon
+totalPoints = 5; totalLives = 2
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+7 of 119 2024-10-12, 4:01 p.m.
+name = 'Danny O' Sullivan ' ;
+O name is assigned a value
+without being declared first.
+Variables may not be assigned
+0 strings delimited with single
+quotes.
+O The single quotation mark in
+O'Sullivan is an error.
+Comments and semicolons
+A comment is any text intended for humans that is ignored by the JavaScript interpreter. JavaScript
+uses the and operators to produce comments in code.
+Figure 3.1.1: Comments.
+II Single 1
+c omment
+I* Multi -li
+comment
+*I
+JavaScript does not require that statements be terminated with a semicolon. Only when two
+statements reside on the same line must a semicolon separate the two statements. Good practice
+is to avoid placing two statements on the same line. Some developers prefer to use semicolons at
+the end of statements, and others do not. Good practice is to consistently use semicolons or not
+throughout the code.
+Figure 3.1.2: Using semicolons.
+l et totalPoints = 10 ;
+II
+prompt()
+prompt()
+null
+);
+name "Becky"
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+8 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I
+ACTIVITY 3.1.5: Detect the error. □
+Indicate if the statements contain an error or not.
+1) /* a i s ass i gned 2 0
+a = 2 ;
+0 Error
+0 No error
+2) 3 . 12 = pi ; 0
+0 Error
+0 No error
+3) x = 10 ; l et y 20 ; 0
+0 Error
+0 No error
+Input and output
+In a web browser, a JavaScript program may obtain text input from the user with the
+function. The prompt() function prompts the user with a dialog box that allows the user to type a
+single line of text and press OK or Cancel. The function returns the string the user typed
+or if the user pressed Cancel.
+Output may be produced using the function console.log(), which displays text or numbers in the
+console. The console is a location where text output is displayed. Web browsers have a console
+(accessible from the browser's development tools) that displays output from code the browser
+executes. This chapter's activities display the console output in the web page.
+I PARTICIPATION I 3 1 6 p . f . d d. I .
+ACTIVITY . . : rompting or input an Isp ayIng output.
+I I Display the prompt dialog box 7 l et name = prompt ( "What is your name? "
+II Output to the console
+console . log ("Hello, " + name + "!" );
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+9 of 119 2024-10-12, 4:01 p.m.
+L [- ___[_ _] _[ _] J
+Animation content:
+The following code is displayed:
+// Display the prompt dialog box
+let name= prompt("What is your name?");
+// Output to the console
+console.log("Hello, "+name+ "I");
+[ ]
+The first step of the animation runs: let name= prompt("What is your name?");. This opens a
+dialog box that displays What is your name? and a place to input text below.
+The second step shows the string Becky being input for the dialog box.
+The third step shows the variable name getting allocated memory and getting assigned the value
+Becky.
+The fourth step runs: console.log("Hello," +name+"!"); and displays Hello, Beckyl in the console
+Animation captions:
+1. The prompt() function displays a dialog box with the given prompt text.
+2. The user types her name and presses the OK button.
+3. The name variable is assigned with the entered text.
+4. console.log() outputs "Hello,", then the value of the name variable, then "I" to the console.
+I PARTICIPATION I ACTIVITY 3.1 .7: prompt() and console.log().
+1) Write the code to prompt the
+user with the question
+variable and retrieve the user's
+age.
+question = "How old are
+you?" ;
+age =
+□
+0
+tvShow
+tvShow null
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+10 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
+2) Write the code to display "You
+are X", where Xis the value of
+the age variable.
+age = 21;
+console . log (
+) ;
+Check Show answer
+I PARTICIPATION I . . ACTIVITY 3.1 .8: JavaScript practice.
+The JavaScript code below initializes the variable to a popular TV show. Then, an
+if-else statement displays a message in the console if is , otherwise the
+value of tvshow is displayed in the console. Change the code to prompt the user for the
+user's favorite TV show. Then, display"_ is your favorite TV show!" in the console. Press
+"Run JavaScript" to run your code.
+Note: The console will display an error message if the JavaScript interpreter detects a
+syntax error. A syntax error is the incorrect typing of a programming statement. Ex:
+Forgetting to place "quotes" around a string value is a syntax error.
+I CHALLENGE I ACTIVITY 3.1.1: prompt() and console.log().
+5707 04.2065416 qx3zqy7
+Exploring further:
+• A Brief Historyi of JavaScrigt from authO
+• JavaScriQt Lexical Grammar from MDN

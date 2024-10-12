@@ -7,7 +7,7 @@ def create_file(file_path):
 def split_sections(input_filepath):
 
     # Regex pattern to identify section headers e.g., "1.1 "
-    section_pattern = re.compile(r'^2\.\d+ [^\d]+$')
+    section_pattern = re.compile(r'^3\.\d+ [^\d]+$')
     
     # Initialize variables
     current_section = None

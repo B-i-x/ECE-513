@@ -1,0 +1,496 @@
+Exploring further: 3.9 Objects
+• Array object (MON)
+Objects and properties
+An object is an unordered collection of properties. An object property is a name-value pair, where
+the name is an identifier and the value is any data type. Objects are often defined with an object
+literal. An object literal (also called an object initializer) is a comma-separated list of property
+name and value pairs.
+I PARTICIPATION I 3 g 1 C . b' · h b" 1· I ACTIVITY .. : reating an o Ject wit an o ~ect Itera .
+l et book = {} ;
+book = {
+t i t l e : "Outliers " , I publi shed : 2 011 ,
+keywords : [ " success " ,
+} ;
+" high-achievers " ]
+consol e . l og (book . title );
+consol e . l og (book . keywords [ 0]);
+book = {
+t i t l e : "Out liers " ,
+publi shed : 2 011 ,
+keywords : [ " success " , " h i gh- ach i evers " ] ,
+author : {
+f i rs t Name : "Malcolm" ,
+l astName : "Gladwell " } _J } .
+c : nso l e . l og (book . aut hor . l as t Name );
+Animation content:
+The following code is displayed:
+let book= D;
+book= {
+title: "Outliers",
+publi shed: 2011 ,
+Outliers
+success
+Gladwell
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+82 of 119 2024-10-12, 4:01 p.m.
+keywords: ["success", "high-achievers"]
+};
+console.log(book.title);
+console.log(book.keywords[0]);
+book= {
+title: "Outliers",
+published: 2011,
+keywords: ["success", "high-achievers"].
+author: {
+}
+};
+flrstName: "Malcolm",
+lastName: "Gladwell"
+console.log(book.author.lastName);
+Step 1 runs the code: let book={};.
+Step 2 runs the code: book= {
+title: "Outliers",
+published: 2011,
+keywords: ["success", "high-achievers"]
+};.
+Step 3 runs the code: console.log(book.title);
+console.log(book.keywords[0]);.
+Outliers and success are displayed in console, each on new lines.
+Step 4 runs the code:
+book= {
+title: "Outliers",
+published: 2011,
+keywords: ["success", "high-achievers"].
+author: {
+}
+};.
+flrstName: "Malcolm",
+lastName: "Gladwell"
+Step 5 runs the last line of code and Gladwell is displayed on a new line in the console
+Animation captions:
+1. book is assigned an empty object literal.
+2. book is assigned an object literal with three properties: title, published, keywords.
+"social media"],
+isbn = "1591846013";
+book.isbn("1591846013");
+book.author = "Jack";
+book.author.firstName
+= "Jack";
+book.author.lastName =
+"Jack";
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+83 of 119 2024-10-12, 4:01 p.m.
+3. Display the title and first keyword of the book object.
+4. book is assigned an object literal with an embedded object literal that is assigned to the
+author property.
+5. Display the last name of the book's author.
+I PARTICIPATION I . . . ACTIVITY 3.9.2: Accessing obJect properties.
+Refer to the book object below.
+l et book = {
+} ;
+title : "Hatching Twitter " ,
+published : 2013 ,
+keywords : [ "origins" , "betrayal" , s
+author : {
+firstName : "Nick" ,
+lastName : "Bil ton "
+□
+1) Which statement changes the 0
+published year to 2014?
+Q book.Published 2014;
+Q book.published 2014;
+Q book.published 2014;
+2) Which statement adds a new property
+called "isbn" with the value
+"1 591846013"?
+0
+0
+0
+book.isbn
+"1591846013";
+3) What statement replaces "Nick" with
+"Jack"?
+0
+0
+0
+0
+0
+this
+this.someProperty
+firstName + " " +
+// that "Susan Cain"
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+84 of 119 2024-10-12, 4:01 p.m.
+4) What is missing from the code below
+to remove "social media" from the
+book's keywords? The array method
+pop () removes the last element
+from an array.
+___ . pop ();
+0 keywords
+0 book.keywords[2]
+0 book.keywords
+Methods
+Assigning an object's property name with an anonymous function creates a method. Methods
+0
+access the object's properties using the keyword , followed by a period, before the property
+name. Ex:
+Figure 3.9.1: Defining a method in an object literal.
+let book = {
+title : "Quiet" ,
+author : {
+} ,
+firstName : "Susan" ,
+lastName : "Cain"
+II Define a method
+getAuthorName () {
+return this . author . firstNa
+this . author . lastName ;
+} ;
+II Call a method that returns "S
+let name = book . getAuthorName ();
+Figure 3.9.2: Defining a method for an existing object.
+let book = {
+title : "Quiet" ,
+author :
+book.assignMiddleInitial =
+function(middleInitial) {
+this.author.middleInitial =
+middleInitial;
+};
+book.assignMiddleInitial("H");
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+85 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.9.3: ObJect methods.
+Refer to the above figures.
+1) A method may be defined inside or
+outside an object literal.
+0 True
+0 False
+2) The method below outputs ''I'm
+reading 'Quiet'.".
+book . read = function ()
+console . log ("I'm reading '"
++ title + "' . " ) ;
+} ;
+0 True
+0 False
+3) The method below creates a new
+object property.
+0 True
+0 False
+□
+0
+0
+0
+score
+score
+get set
+get property() { return someValue; }
+set property(value) { ... }
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+86 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . . . ACTIVITY 3. 9.4: Practice creating obJects and methods.
+Create an object called game that represents a competition between two opponents or
+teams. Add the following properties to game, and assign any value to each property:
+1. winner - An object with properties name and
+2. loser - An object with properties name and
+Add the following methods to game:
+1. getMarginOfVictory () - Returns the difference between the winner's score and
+the loser's score
+2. showsummary () - Outputs to the console the winner's name and score, the loser's
+name and score, and the margin of victory
+Call the two methods to verify the methods work correctly. Example output:
+Broncos : 24
+Panthers : 10
+Margi n of v i c t ory : 14
+Accessor properties
+□
+An object property may need to be computed when retrieved, or setting a property may require
+executing some code to perform data validation. The and keywords define getters and
+setters for a property.
+• A getter is a function that is called when an object's property is retrieved. Syntax to define a
+getter:
+• A setter is a function that is called when an object's property is set to a value. Syntax to define
+a setter:
+An accessor property is an object property that has a getter or a setter or both.
+Figure 3.9.3: Defining an accessor property called 'area'.
+l et r ectang l e
+wi dth : 5 ,
+h e i gh t : 8 ,
+get a r ea ()
+return this .wi dth * this . h e i gh t ;
+} '
+this.secondOpponentScore) {
+> this.firstOpponentScore) {
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+87 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.9.5: Accessor properties.
+Refer to the game object.
+let game = {
+} ;
+firstOpponent : "Serena Williams " ,
+firstOpponentScore : 2 ,
+secondOpponent : "Garbine Muguruza " ,
+secondOpponentScore : 0 ,
+get winner () {
+if (this . firstOpponentScore > thi
+return this . firstOpponent ;
+else if (this . secondOpponentScore
+return this . secondOpponent ;
+else {
+return "Tie" ;
+1) The code below outputs "Serena
+Williams".
+console . log (game . winner ());
+0 True
+0 False
+2) The code below outputs "Maria
+Sharapova" .
+game . winner = "Maria
+Sharapova" ;
+console . log (game . winner );
+□
+0
+0
+nextSong
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+88 of 119 2024-10-12, 4:01 p.m.
+0 True
+0 False
+3) The ma tchDa te setter below sets
+the date property to the given
+value.
+let game = {
+} ;
+date : 1111
+set matchDate (value )
+date = value ;
+} ,
+0 True
+0 False
+4) What sets the game's match date to
+the Date object?
+let game = {
+} ;
+date : 1111
+set matchDate (value )
+this . date = value ;
+} ,
+II Wimbledon 2016 women's
+championship
+let champDate = new Date (2016 ,
+5 , 9 );
+O game.matchDate =
+champ Date;
+0 game.matchDate(champDate);
+I PARTICIPATION I . . . ACTIVITY 3.9.6: Practice creating accessor properties.
+The musicQueue object contains a songs property listing all the songs in the music
+queue. Add an accessor property called "next" with the following functions::
+• Getter - Returns the song in the songs array at index . Then increments
+next Song by one so the next song in the queue will be retrieved the next time the
+0
+0
+0
+nextSong songs
+songs
+musicQueue
+x = y;
+x = y;
+String
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+89 of 119 2024-10-12, 4:01 p.m.
+getter is accessed. If - is beyond the boundaries of the
+nextSong should be assigned 0.
+• Setter - Sets nextsong to the given value. If the value is outside the
+bounds, nextSong should be assigned 0.
+array,
+array's
+If the next property is implemented correctly, the for loop under the will
+display each song three times. The code under the for loop tests the setter and should
+display the song in comments.
+Passing objects to functions
+JavaScript data types can be divided into two categories: primitives and references.
+1. A primitive is data that is not an object and includes no methods. Primitive types include:
+boolean, number, string, null, and undefined.
+2. A reference is a logical memory address. Only objects are reference types.
+Assigning a variable with a primitive creates a copy of the primitive. Ex: If y is 2, then
+means x is assigned with a copy of y. Assigning a variable with a reference creates a copy of the
+reference. Ex: If y refers to an object, then means x is assigned with a copy of y's reference.
+Both x and y refer to the same object.
+When a primitive is passed to a function, the parameter is assigned a copy of the argument.
+Changing the parameter does not change the argument.
+When an object is passed to a function, the parameter is also assigned a copy of the argument.
+However, the parameter and argument are both a reference to the same object. Changing the
+parameter reference to a new object does not change the argument, but changing the parameter's
+properties does change the argument's properties.
+I
+Primitive wrappers
+All primitives, except for null and undefined, have equivalent objects that wrap the
+primitive values and provide methods for interacting with the primitives. Ex: A string
+primitive has a String class that provides various methods for manipulating a
+string. Calling "abc". toUpperCase () converts the primitive string into a
+object, calls the method, and returns the string primitive ''ABC".
+function changeThings(x, y, z) {
+x = 33;
+y.width 20;
+{ title: Games",
+author: }
+5;
+rectangle = {
+width: 3,
+height: };
+{
+title: Twilight",
+author: };
+changeThings(level, rectangle, book);
+console.log(level);
+console.log(rectangle.console.log(book.title);
+level 5
+width
+title
+author
+Twilight
+Stephenie Meyer
+x
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+90 of 119 2024-10-12, 4:01 p.m.
+ACT1v1TY 3.9.7: Passing primitives and references to a function. I PARTICIPATION I
+functi on changeThi ngs (x , y , z ) 7 X = 33 ;
+y .wi dth = 20 ;
+z = { t i tle : "The Hunger Games " ,
+autho r : "Suzanne Collins" };
+let level = 5 ;
+let re c tangle
+width : 3 ,
+height : 16
+} ;
+let book = {
+title : "Twilight " ,
+a utho r : " Stephenie Meyer"
+} ;
+changeThings (level , re c tangle , b ook);
+cons ole . l og (level );
+cons ole . l og (re c tangle .width);
+cons ole . l og (book . title );
+Animation content:
+The following code is displayed:
+function changeThings(x, y, z) {
+X = 33;
+}
+y.width = 20;
+z = { title: "The Hunger Games",
+author: "Suzanne Collins " };
+let level = 5;
+let rectangle = {
+width : 3,
+height: 16
+};
+let book= {
+title: "Twilight",
+author: "Stephenie Meyer"
+};
+changeThings(level, rectangle, book);
+console. log(level);
+level §
+rectangle
+book
+~ X
+y
+z
+5
+20
+Twilight
+JI 20 II width
+16 height
+.4
+.4 The Hunger Games title
+Suzanne Collins author
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+91 of 119 2024-10-12, 4:01 p.m.
+console.log(rectangle.width);
+console.log(book.title);
+Step 1 runs the following line of code:
+Let level = 5;. Level is allocated memory and stores the value 5 at level's memory address.
+Step 2 runs the following code:
+let rectangle = {
+width: 3,
+height 16
+};
+let book= {
+title: ''Twilight",
+author: "Stephenie Meyer"
+};.
+Rectangle is allocated memory but stores the memory address that stores the values of width
+and height. The memory allocated to rectangle is shown pointing to the blocks of memory that
+are allocated to width and height. The same applies to the object book.
+Step 3 runs the following code:
+changeThings(level, rectangle, book.
+The parameter y is shown pointing to the same block of memory rectangle points to and
+parameter z points to the same block of memory that book points to.
+Step 4 runs the following code in changeThings: x = 33;.
+Step 5 runs the following code in changeThings: y.width = 20;
+Step 6 runs the following code in change Things: z = { title: 'The Hunger Games",
+author: "Suzanne Collins"};
+In step, 7 the function change Things returns and runs the following code:
+console.log(level);
+console.log(rectangle.width);
+console.log(book.title);.
+5, 20, and Twilight are displayed in the console.
+After returning x, y, and z have their memory deallocated. Since the memory that stored the
+object z referred to no longer has a reference, the object gets deallocated memory.
+Animation captions:
+1. level is a number, which is a primitive type.
+2. rectangle and book are objects. Each object refers to the object's location in memory.
+3. The call to change Things() assigns a copy of each argument to the x, y, and z parameters. y
+refers to the same object as rectangle, and z refers to the same object as book.
+4. Assigning x a new number does not change level.
+5. Assigning y.width a new number changes rectangle.width since bothy and rectangle refer
+to the same object.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+92 of 119 2024-10-12, 4:01 p.m.
+6. Assigning z a new object does not change book since z and book refer to different objects.
+7. After returning from change Things(), rectangle.width is the only value that has changed.
+I PARTICIPATION I . . . ACTIVITY 3.9.8: Passing objects to functions.
+Refer to the code below.
+fun c ti on changeMovie (movie )
+movie . title = "The Avengers " ;
+movie . released = 2012 ;
+movie = {
+title : "Avengers: Endgame" ,
+released : 2019 };
+let avengersMovie = {
+} ;
+title : "Avengers: Infinity War " ,
+released : 2018
+1) What is output to the console?
+changeMovie (avengersMovie );
+console . log (avengersMovie . title );
+0 Avengers: Infinity War
+0 The Avengers
+0 Avengers: Endgame
+2) What is output to the console?
+let myMovie = avengersMovie ;
+myMovie . title = "Avengers: Age of
+Ultron " ;
+console . log (avengersMovie . title );
+0 Avengers: Infinity War
+0 The Avengers
+0 Avengers: Age of Ultron
+I CHALLENGE I . ACTIVITY 3.9.1: Objects.
+5707 04.20654 7 6.qx3zqy7
+□
+0
+0
+□
+myMap["key"]
+stateCapitals["CO"]);
+stateCapitals
+AR Little Rock
+CO Denver
+NM Santa Fe
+CO capital is Denver
+TX Austin
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+93 of 119 2024-10-12, 4:01 p.m.
