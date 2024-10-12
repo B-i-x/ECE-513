@@ -1,0 +1,10 @@
+1.8.1 False
+1.8.2 (B) To structure the document and group content
+1.8.3 False
+1.8.4 (C) `<div>`
+1.8.5 True
+1.8.6 (B) It does not start on a new line and only takes up as much width as necessary.
+1.8.7 True
+1.8.8 (C) `<aside>`
+1.8.9 False
+1.8.10 (B) Block; used for introductory content or navigational links

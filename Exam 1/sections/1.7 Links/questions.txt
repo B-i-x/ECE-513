@@ -1,0 +1,49 @@
+---
+[1.7.1] True/False: The `<a>` tag is used to define a division or a section in an HTML document.
+---
+
+[1.7.2] Multiple Choice: What attribute of the `<a>` tag specifies the URL the link goes to?
+   - (A) src
+   - (B) href
+   - (C) rel
+   - (D) type
+---
+
+[1.7.3] True/False: The `mailto:` URL scheme in an `<a>` tag's href attribute is used to link to another webpage.
+---
+
+[1.7.4] Multiple Choice: Which URL scheme starts an email program to send an email?
+   - (A) http://
+   - (B) ftp://
+   - (C) mailto:
+   - (D) https://
+---
+
+[1.7.5] Multiple Choice: What does clicking a hyperlink with an `href` attribute containing `mailto:someone@example.com` do?
+   - (A) Opens a webpage at `example.com`
+   - (B) Starts an email program to send an email to `someone@example.com`
+   - (C) Downloads a file from `example.com`
+   - (D) Connects to a live chat with `someone@example.com`
+---
+
+[1.7.6] True/False: An `<a>` element can only contain text and cannot include images.
+---
+
+[1.7.7] Multiple Choice: What attribute would you use to open a hyperlink in a new browser tab?
+   - (A) target="_self"
+   - (B) target="_parent"
+   - (C) target="_blank"
+   - (D) target="_top"
+---
+
+[1.7.8] True/False: Using `target="_blank"` in an `<a>` tag ensures that the linked document will open in a new tab, but not a new window.
+---
+
+[1.7.9] Multiple Choice: How do you create a hyperlink that points to a specific section of the same webpage?
+   - (A) Use the `id` attribute in the `<a>` tag
+   - (B) Use the `name` attribute in the `<a>` tag
+   - (C) Use a hash (`#`) followed by the section's identifier in the `href` attribute
+   - (D) Use the `link` element
+---
+
+[1.7.10] True/False: Relative URLs cannot be used within the `<a>` element to link to resources within the same site.

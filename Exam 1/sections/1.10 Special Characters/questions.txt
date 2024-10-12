@@ -1,0 +1,22 @@
+---
+[1.10.1] True/False: The `<input>` element can only be used for text fields in HTML forms.
+---
+
+[1.10.2] Multiple Choice: What attribute of the `<input>` element specifies the kind of data expected to be entered by the user?
+   - (A) type
+   - (B) name
+   - (C) value
+   - (D) placeholder
+---
+
+[1.10.3] True/False: The `value` attribute of an input element is visible to the user and can be modified.
+---
+
+[1.10.4] Multiple Choice: Which attribute is used to disable an HTML form input field?
+   - (A) disabled
+   - (B) off
+   - (C) inactive
+   - (D) readonly
+---
+
+[1.10.5] True/False: The `<label>` element is optional for `<input>` elements but recommended for accessibility.

@@ -1,0 +1,49 @@
+---
+[1.9.1] True/False: The `<table>` tag is used for creating structured layouts for web pages.
+---
+
+[1.9.2] Multiple Choice: Which HTML element defines a single cell in a table header?
+   - (A) `<td>`
+   - (B) `<tr>`
+   - (C) `<th>`
+   - (D) `<caption>`
+---
+
+[1.9.3] True/False: The `<caption>` tag must appear after the table rows.
+---
+
+[1.9.4] Multiple Choice: What attribute of the `<td>` element makes it span multiple columns?
+   - (A) `expand`
+   - (B) `colspan`
+   - (C) `stretch`
+   - (D) `widthspan`
+---
+
+[1.9.5] True/False: The `<tbody>` element is optional in HTML tables.
+---
+
+[1.9.6] Multiple Choice: Which tag is used to group the body content in an HTML table?
+   - (A) `<thead>`
+   - (B) `<tfoot>`
+   - (C) `<tbody>`
+   - (D) `<tgroup>`
+---
+
+[1.9.7] True/False: You can use the `<th>` element within `<tbody>` to emphasize certain rows.
+---
+
+[1.9.8] Multiple Choice: How do you define a table row that should appear at the bottom of a table, but is not a footer?
+   - (A) Use the `<tfoot>` tag.
+   - (B) Use the `<lastrow>` tag.
+   - (C) Use the `<bottom>` tag.
+   - (D) Simply place it at the end of the `<tbody>` section.
+---
+
+[1.9.9] True/False: Table headers created with `<th>` are automatically bolded and centered by default in most browsers.
+---
+
+[1.9.10] Multiple Choice: What is the purpose of the `<tfoot>` element in an HTML table?
+   - (A) To provide a summary or total row at the bottom of the table sections
+   - (B) To define the main content of the table
+   - (C) To add a header to the table
+   - (D) To decorate the table with additional styling

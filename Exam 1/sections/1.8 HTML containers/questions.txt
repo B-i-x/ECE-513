@@ -1,0 +1,49 @@
+---
+[1.8.1] True/False: Containers in HTML are always block-level elements.
+---
+
+[1.8.2] Multiple Choice: What is the primary purpose of a container element like `<div>`?
+   - (A) To create hyperlinks
+   - (B) To structure the document and group content
+   - (C) To display content as inline
+   - (D) To underline text
+---
+
+[1.8.3] True/False: The `<span>` element is used for creating block containers.
+---
+
+[1.8.4] Multiple Choice: Which HTML element is typically used as a generic container for styling purposes without any semantic meaning?
+   - (A) `<p>`
+   - (B) `<span>`
+   - (C) `<div>`
+   - (D) `<header>`
+---
+
+[1.8.5] True/False: The `<div>` element can contain both block-level and inline elements.
+---
+
+[1.8.6] Multiple Choice: What does it mean if an element is described as an "inline" element?
+   - (A) It occupies the full width of its parent container.
+   - (B) It does not start on a new line and only takes up as much width as necessary.
+   - (C) It cannot contain other elements.
+   - (D) It is always hidden from view.
+---
+
+[1.8.7] True/False: An `<a>` tag can be used as a container for both text and images.
+---
+
+[1.8.8] Multiple Choice: Which element is most suitable for marking up a sidebar with secondary content like links or advertisements?
+   - (A) `<main>`
+   - (B) `<footer>`
+   - (C) `<aside>`
+   - (D) `<nav>`
+---
+
+[1.8.9] True/False: A `<footer>` element can only contain text and no other HTML elements.
+---
+
+[1.8.10] Multiple Choice: What type of HTML element is `<header>`, and what is its typical use?
+   - (A) Inline; used for short text links
+   - (B) Block; used for introductory content or navigational links
+   - (C) Inline; used to group navigation links
+   - (D) Block; used only for bottom page content

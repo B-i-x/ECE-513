@@ -1,0 +1,10 @@
+1.7.1 False
+1.7.2 (B) href
+1.7.3 False
+1.7.4 (C) mailto:
+1.7.5 (B) Starts an email program to send an email to `someone@example.com`
+1.7.6 False
+1.7.7 (C) target="_blank"
+1.7.8 False
+1.7.9 (C) Use a hash (`#`) followed by the section's identifier in the `href` attribute
+1.7.10 False

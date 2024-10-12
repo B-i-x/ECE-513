@@ -1,0 +1,10 @@
+1.9.1 False
+1.9.2 (C) `<th>`
+1.9.3 False
+1.9.4 (B) `colspan`
+1.9.5 True
+1.9.6 (C) `<tbody>`
+1.9.7 True
+1.9.8 (D) Simply place it at the end of the `<tbody>` section.
+1.9.9 True
+1.9.10 (A) To provide a summary or total row at the bottom of the table sections
