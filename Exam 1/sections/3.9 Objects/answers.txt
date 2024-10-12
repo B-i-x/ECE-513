@@ -1,0 +1,19 @@
+[3.9.1] (A) Outliers, success
+
+[3.9.2] (D) Both (A) and (C)
+
+[3.9.3] (A) Dot notation, (B) Bracket notation
+
+[3.9.4] (B) Gladwell
+
+[3.9.5] (A) The property is permanently removed.
+
+[3.9.6] (A) Susan Cain
+
+[3.9.7] (B) The object that owns the method
+
+[3.9.8] (A) Methods can access other properties using `this`, (B) Methods can be added to an object after the object is created, (D) Methods can return values
+
+[3.9.9] (A) A property that has both getter and setter functions
+
+[3.9.10] (A) Serena Williams

@@ -1,0 +1,121 @@
+---
+[3.9.1] Multiple Choice: What does the following code output to the console?
+
+```javascript
+let book = {
+  title: "Outliers",
+  published: 2011,
+  keywords: ["success", "high-achievers"]
+};
+console.log(book.title);
+console.log(book.keywords[0]);
+
+(A) Outliers, success
+(B) Outliers, high-achievers
+(C) undefined, success
+(D) undefined, undefined
+
+---
+[3.9.2] Multiple Choice: Which of the following is a valid way to add a new property to an existing object?
+
+(A) book.author = "Malcolm Gladwell";
+(B) book.addProperty("author", "Malcolm Gladwell");
+(C) book["author"] = "Malcolm Gladwell";
+(D) Both (A) and (C)
+
+---
+[3.9.3] Multi-Select: Which of the following methods can be used to access object properties? (Select all that apply)
+
+(A) Dot notation
+(B) Bracket notation
+(C) Object.keys()
+(D) Object.getOwnPropertyNames()
+
+---
+[3.9.4] Multiple Choice: What does the following code output?
+
+javascript
+Copy code
+let book = {
+  title: "Outliers",
+  published: 2011,
+  author: { firstName: "Malcolm", lastName: "Gladwell" }
+};
+console.log(book.author.lastName);
+(A) Malcolm
+(B) Gladwell
+(C) Outliers
+(D) undefined
+
+---
+[3.9.5] Multiple Choice: What will happen if you try to delete a property from an object?
+
+(A) The property is permanently removed.
+(B) The property value is set to null.
+(C) The object becomes undefined.
+(D) It throws an error.
+
+---
+[3.9.6] Multiple Choice: What is the output of this code?
+
+javascript
+Copy code
+let book = {
+  title: "Quiet",
+  author: {
+    firstName: "Susan",
+    lastName: "Cain"
+  },
+  getAuthorName: function() {
+    return this.author.firstName + " " + this.author.lastName;
+  }
+};
+console.log(book.getAuthorName());
+(A) Susan Cain
+(B) Quiet
+(C) undefined
+(D) Error
+
+---
+[3.9.7] Multiple Choice: What does the this keyword refer to inside a method?
+
+(A) The global object
+(B) The object that owns the method
+(C) The function scope
+(D) The nearest variable in scope
+
+---
+[3.9.8] Multi-Select: Which of the following statements about object methods is true? (Select all that apply)
+
+(A) Methods can access other properties using this.
+(B) Methods can be added to an object after the object is created.
+(C) Methods must be declared inside the object literal.
+(D) Methods can return values.
+
+---
+[3.9.9] Multiple Choice: What is an accessor property in JavaScript?
+
+(A) A property that has both getter and setter functions
+(B) A property that is accessible only inside the object
+(C) A property that is inherited from another object
+(D) A property that is read-only
+
+---
+[3.9.10] Multiple Choice: What does the following code output?
+
+javascript
+Copy code
+let game = {
+  firstOpponent: "Serena Williams",
+  firstOpponentScore: 2,
+  secondOpponent: "Garbine Muguruza",
+  secondOpponentScore: 0,
+  get winner() {
+    return this.firstOpponentScore > this.secondOpponentScore ? this.firstOpponent : this.secondOpponent;
+  }
+};
+console.log(game.winner);
+(A) Serena Williams
+(B) Garbine Muguruza
+(C) undefined
+(D) Error

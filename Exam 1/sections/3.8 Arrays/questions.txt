@@ -1,0 +1,94 @@
+---
+[3.8.1] Multiple Choice: What is the result of the following code?
+
+```javascript
+let scores = [6, 15, 8];
+console.log(scores[1]);
+(A) 6
+(B) 15
+(C) 8
+(D) undefined
+
+---
+[3.8.2] Multiple Choice: What is the correct way to add a new element to the end of an array?
+
+(A) array.unshift(value)
+(B) array.push(value)
+(C) array.shift(value)
+(D) array.pop(value)
+
+---
+[3.8.3] Multi-Select: Which of the following methods can be used to remove elements from an array? (Select all that apply)
+
+(A) pop()
+(B) shift()
+(C) splice()
+(D) push()
+
+---
+[3.8.4] Multiple Choice: What will be the output of the following code?
+
+javascript
+Copy code
+let teams = ["Tigers", "Bisons", "Eagles", "Cobras"];
+console.log(teams.length);
+(A) 0
+(B) 2
+(C) 4
+(D) undefined
+
+---
+[3.8.5] Multiple Choice: What happens when you try to access an element in an array at an index that doesn’t exist?
+
+(A) It throws an error.
+(B) It returns undefined.
+(C) It returns null.
+(D) It crashes the program.
+
+---
+[3.8.6] Multiple Choice: What is the purpose of the forEach() method in JavaScript?
+
+(A) To return a new array with modified values.
+(B) To loop through each element of an array and apply a function to each element.
+(C) To remove elements from an array.
+(D) To concatenate two arrays.
+
+---
+[3.8.7] Multiple Choice: What will be the output of the following code?
+
+javascript
+Copy code
+let nums = [5, 2, 9, 3];
+nums[0] = nums[1] + nums[2];
+console.log(nums[0]);
+(A) 7
+(B) 5
+(C) 11
+(D) undefined
+
+---
+[3.8.8] Multi-Select: Which of the following methods can be used to add elements to an array? (Select all that apply)
+
+(A) push()
+(B) unshift()
+(C) splice()
+(D) pop()
+[3.8.9] Multiple Choice: What does the splice() method do in an array?
+
+(A) It adds an element to the beginning of the array.
+(B) It removes an element from the end of the array.
+(C) It removes or adds elements from/to the array at a specific index.
+(D) It sorts the array.
+
+---
+[3.8.10] Multiple Choice: What is the result of the following code?
+
+javascript
+Copy code
+let groceries = ["bread", "milk", "peanut butter"];
+groceries.push("eggs");
+console.log(groceries.length);
+(A) 2
+(B) 3
+(C) 4
+(D) 5

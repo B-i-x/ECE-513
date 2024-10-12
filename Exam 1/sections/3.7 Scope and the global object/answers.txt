@@ -1,0 +1,19 @@
+[3.7.1] (A) `var` has function scope, while `let` has block scope.
+
+[3.7.2] (C) Function scope
+
+[3.7.3] (B) Variables declared with `var` are hoisted., (C) Variables declared with `let` have block scope., (D) Variables declared with `var` have function scope.
+
+[3.7.4] (C) A ReferenceError is thrown.
+
+[3.7.5] (A) 10
+
+[3.7.6] (C) ReferenceError
+
+[3.7.7] (A) Accessible throughout the entire program, (C) Can be declared without `var`, `let`, or `const`, (D) Are properties of the global object in a browser environment.
+
+[3.7.8] (C) It becomes a global variable.
+
+[3.7.9] (C) `a`, `b`, and `c`
+
+[3.7.10] (B) It logs `10`, followed by ReferenceError for `y` and `z`.

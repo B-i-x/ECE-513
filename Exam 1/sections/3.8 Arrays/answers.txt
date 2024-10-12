@@ -1,0 +1,19 @@
+[3.8.1] (B) 15
+
+[3.8.2] (B) array.push(value)
+
+[3.8.3] (A) pop(), (B) shift(), (C) splice()
+
+[3.8.4] (C) 4
+
+[3.8.5] (B) It returns undefined.
+
+[3.8.6] (B) To loop through each element of an array and apply a function to each element.
+
+[3.8.7] (C) 11
+
+[3.8.8] (A) push(), (B) unshift(), (C) splice()
+
+[3.8.9] (C) It removes or adds elements from/to the array at a specific index.
+
+[3.8.10] (C) 4

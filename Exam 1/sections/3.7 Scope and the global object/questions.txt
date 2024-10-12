@@ -1,0 +1,125 @@
+---
+[3.7.1] Multiple Choice: What is the primary difference between variables declared with `var` and `let`?
+
+- (A) `var` has function scope, while `let` has block scope.
+- (B) `var` has block scope, while `let` has function scope.
+- (C) `var` and `let` have the same scope.
+- (D) `let` is globally scoped, and `var` is block-scoped.
+---
+
+[3.7.2] Multiple Choice: In JavaScript, what type of scope does a variable declared with `var` inside a function have?
+
+- (A) Global scope
+- (B) Block scope
+- (C) Function scope
+- (D) Lexical scope
+---
+
+[3.7.3] Multi-Select: Which of the following statements about `let` and `var` are true? (Select all that apply)
+
+- (A) Variables declared with `let` are not hoisted.
+- (B) Variables declared with `var` are hoisted.
+- (C) Variables declared with `let` have block scope.
+- (D) Variables declared with `var` have function scope.
+---
+
+[3.7.4] Multiple Choice: What happens when you try to access a `let` variable before it has been declared?
+
+- (A) The variable is undefined.
+- (B) The variable is set to `null`.
+- (C) A ReferenceError is thrown.
+- (D) It automatically assigns a default value.
+---
+
+[3.7.5] Multiple Choice: What will be the output of the following code?
+
+```javascript
+function testVar() {
+  if (true) {
+    var x = 10;
+  }
+  console.log(x);
+}
+testVar();
+(A) 10
+(B) undefined
+(C) ReferenceError
+(D) null
+---
+
+[3.7.6] Multiple Choice: What will be the output of the following code?
+
+javascript
+Copy code
+function testLet() {
+  if (true) {
+    let x = 10;
+  }
+  console.log(x);
+}
+testLet();
+(A) 10
+(B) undefined
+(C) ReferenceError
+(D) null
+
+---
+
+[3.7.7] Multi-Select: Which of the following are characteristics of global variables in JavaScript? (Select all that apply)
+
+(A) Accessible throughout the entire program
+(B) Can be declared inside a function with let
+(C) Can be declared without var, let, or const
+(D) Are properties of the global object in a browser environment
+
+---
+
+[3.7.8] Multiple Choice: What happens when you declare a variable without var, let, or const inside a function?
+
+(A) It becomes a local variable.
+(B) It becomes a block-scoped variable.
+(C) It becomes a global variable.
+(D) It throws an error.
+
+---
+
+[3.7.9] Multiple Choice: In the following code, which variables are in scope inside the if block?
+
+javascript
+let a = 10;
+function checkScope() {
+  var b = 20;
+  if (true) {
+    let c = 30;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+  }
+}
+checkScope();
+(A) Only a
+(B) Only c
+(C) a, b, and c
+(D) Only a and b
+
+---
+
+[3.7.10] Multiple Choice: What is the result of trying to log variables y and z outside of their respective functions in this code?
+
+javascript
+Copy code
+var x = 10;
+function scopeTest() {
+  var y = 20;
+  let z = 30;
+  console.log(y);
+  console.log(z);
+}
+scopeTest();
+console.log(x);
+console.log(y);
+console.log(z);
+(A) It logs 10, undefined, and undefined.
+(B) It logs 10, followed by ReferenceError for y and z.
+(C) It logs 10, 20, and 30.
+(D) It throws an error for x, y, and z.
