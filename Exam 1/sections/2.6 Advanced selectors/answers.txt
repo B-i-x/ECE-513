@@ -1,0 +1,10 @@
+2.6.1 (C) Positions an element relative to its normal position in the document flow
+2.6.2 (A) The element is positioned relative to the viewport
+2.6.3 (A) `position: absolute;`, (C) `position: fixed;`
+2.6.4 (B) Fixed elements are positioned relative to the viewport, while absolute elements are positioned relative to their nearest positioned ancestor.
+2.6.5 (A) The element remains static until it reaches a specified threshold, after which it becomes fixed.
+2.6.6 (A) z-index
+2.6.7 (A) top, (B) left, (C) bottom, (D) right
+2.6.8 (C) `static`
+2.6.9 (C) The viewport
+2.6.10 (A) Creating tooltips or dropdown menus, (B) Centering elements within a container, (D) Layering elements on top of each other with z-index

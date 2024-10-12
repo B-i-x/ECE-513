@@ -1,0 +1,10 @@
+2.7.1 (C) `display: flex;`
+2.7.2 (B) `justify-content`
+2.7.3 (B) `row`
+2.7.4 (A) `flex-wrap`, (D) `flex-direction`
+2.7.5 (B) Adds equal spacing between all flex items, with no space at the edges
+2.7.6 (A) `flex-grow`
+2.7.7 (A) `flex-start`, (B) `center`, (D) `flex-end`
+2.7.8 (B) `align-items: center;`
+2.7.9 (B) To specify the initial size of a flex item before any space distribution
+2.7.10 (A) `row`, (B) `row-reverse`, (C) `column`, (D) `column-reverse`

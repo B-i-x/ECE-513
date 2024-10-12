@@ -1,0 +1,69 @@
+---
+[2.6.1] Multiple Choice: What does `position: relative;` do in CSS?
+   - (A) Positions an element relative to its parent element
+   - (B) Positions an element based on the top-left corner of the viewport
+   - (C) Positions an element relative to its normal position in the document flow
+   - (D) Positions an element relative to the first parent with a position other than `static`
+---
+
+[2.6.2] Multiple Choice: When using `position: absolute;`, what happens if no ancestor elements have a position other than `static`?
+   - (A) The element is positioned relative to the viewport
+   - (B) The element is positioned relative to its parent element
+   - (C) The element does not appear on the page
+   - (D) The element is positioned relative to the document's root element
+---
+
+[2.6.3] Multi-Select: Which positioning values remove an element from the normal document flow? (Select all that apply)
+   - (A) `position: absolute;`
+   - (B) `position: relative;`
+   - (C) `position: fixed;`
+   - (D) `position: sticky;`
+---
+
+[2.6.4] Multiple Choice: What is the key difference between `position: fixed;` and `position: absolute;`?
+   - (A) Fixed elements scroll with the page, while absolute elements remain in place.
+   - (B) Fixed elements are positioned relative to the viewport, while absolute elements are positioned relative to their nearest positioned ancestor.
+   - (C) Fixed elements are always at the top of the page, while absolute elements move with the page.
+   - (D) Fixed elements cannot have z-index, while absolute elements can.
+---
+
+[2.6.5] Multiple Choice: What happens when `position: sticky;` is applied to an element?
+   - (A) The element remains static until it reaches a specified threshold, after which it becomes fixed.
+   - (B) The element is hidden until a scroll event occurs.
+   - (C) The element remains fixed in place once it is rendered.
+   - (D) The element behaves the same as an absolutely positioned element.
+---
+
+[2.6.6] Multiple Choice: Which of the following CSS properties is typically used to set the stacking order of elements with positioning?
+   - (A) z-index
+   - (B) float
+   - (C) visibility
+   - (D) opacity
+---
+
+[2.6.7] Multi-Select: Which CSS properties can be used to control the position of an element when `position: absolute;` or `position: relative;` is set? (Select all that apply)
+   - (A) top
+   - (B) left
+   - (C) bottom
+   - (D) right
+---
+
+[2.6.8] Multiple Choice: Which value of the `position` property is the default for all elements in a document?
+   - (A) `relative`
+   - (B) `absolute`
+   - (C) `static`
+   - (D) `fixed`
+---
+
+[2.6.9] Multiple Choice: When `position: fixed;` is applied, the element is positioned relative to:
+   - (A) The nearest positioned ancestor
+   - (B) The document’s root element
+   - (C) The viewport
+   - (D) The container's padding box
+---
+
+[2.6.10] Multi-Select: Which of the following are common use cases for `position: absolute;`? (Select all that apply)
+   - (A) Creating tooltips or dropdown menus
+   - (B) Centering elements within a container
+   - (C) Creating elements that remain in place when the page is scrolled
+   - (D) Layering elements on top of each other with z-index

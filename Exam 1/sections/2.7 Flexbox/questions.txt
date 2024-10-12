@@ -1,0 +1,69 @@
+---
+[2.7.1] Multiple Choice: What CSS property turns an element into a flex container?
+   - (A) `display: block;`
+   - (B) `display: inline-block;`
+   - (C) `display: flex;`
+   - (D) `display: grid;`
+---
+
+[2.7.2] Multiple Choice: In a flex container, how do you align the items along the main axis?
+   - (A) `align-items`
+   - (B) `justify-content`
+   - (C) `align-content`
+   - (D) `flex-direction`
+---
+
+[2.7.3] Multiple Choice: What is the default value of the `flex-direction` property in CSS?
+   - (A) `column`
+   - (B) `row`
+   - (C) `column-reverse`
+   - (D) `row-reverse`
+---
+
+[2.7.4] Multi-Select: Which of the following properties are used to control the wrapping of flex items? (Select all that apply)
+   - (A) `flex-wrap`
+   - (B) `flex-basis`
+   - (C) `flex-shrink`
+   - (D) `flex-direction`
+---
+
+[2.7.5] Multiple Choice: What does `justify-content: space-between;` do in a flex container?
+   - (A) Aligns all items to the center
+   - (B) Adds equal spacing between all flex items, with no space at the edges
+   - (C) Adds equal spacing between all items and the container edges
+   - (D) Aligns all items to the start of the container
+---
+
+[2.7.6] Multiple Choice: Which flexbox property allows items to grow to fill available space in the container?
+   - (A) `flex-grow`
+   - (B) `flex-shrink`
+   - (C) `flex-basis`
+   - (D) `align-self`
+---
+
+[2.7.7] Multi-Select: Which values can the `align-items` property accept? (Select all that apply)
+   - (A) `flex-start`
+   - (B) `center`
+   - (C) `space-between`
+   - (D) `flex-end`
+---
+
+[2.7.8] Multiple Choice: How do you center flex items along the cross-axis in a flex container?
+   - (A) `justify-content: center;`
+   - (B) `align-items: center;`
+   - (C) `flex-grow: 1;`
+   - (D) `flex-shrink: 0;`
+---
+
+[2.7.9] Multiple Choice: What is the purpose of `flex-basis` in CSS?
+   - (A) To specify the maximum size of a flex item
+   - (B) To specify the initial size of a flex item before any space distribution
+   - (C) To shrink items based on container size
+   - (D) To control the flex direction of the container
+---
+
+[2.7.10] Multi-Select: Which of the following are valid values for the `flex-direction` property? (Select all that apply)
+   - (A) `row`
+   - (B) `row-reverse`
+   - (C) `column`
+   - (D) `column-reverse`
