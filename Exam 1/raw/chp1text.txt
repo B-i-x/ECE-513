@@ -1,0 +1,3263 @@
+10/12/24, 1 :35 PM zyBooks
+1.1 IP addresses, domain names, and URLs
+IP addresses
+A computer communicates with another computer on the internet by sending packets back and forth.
+An internet packet contains To and From IP addresses, the information to communicate, and other
+configuration information.
+An IP address (short for Internet Protocol address) is a computer's unique address on the internet
+(like a house's unique address in the world), usually represented numerically like 198.57 .100.7. A
+typical IP address is 32 bits, divided into four 8-bit groups, each group often written as a decimal
+number. I PARTICIPATION
+ACTIVITY 1 .1 .1: IP addresses.
+Animation content:
+198 . 51 . 1 00 . 7
+/ I \ " 11000110 00110011 01100100 00000111
+0 = 00000000
+255 = 11111111
+The following IP address is displayed: 198.57 .100.7. For each section of the IP address, the
+corresponding 8 bits value is displayed. The 198 is represented with the 8 bits 71000710, 57 is
+007 1 001 1, 100 is 07 100100, and 7 is 000007 11 .
+Animation captions:
+1. An IP address is usually written as four numbers separated by dots.
+2. Each number represents 8 bits of the IP address, for a total of 32 bits.
+3. The smallest possible number in an IP address is 0, and the largest is 255.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+1/94
+10/12/24, 1 :35 PM zyBooks
+The original Internet Protocol, known as /Pv4, has 32-bit addresses. 32 bits can represent 232 or about
+4 billion unique addresses, originally believed to be more than enough, but 4 billion is no longer
+enough. A new version of the Internet Protocol, /Pv6, uses 128-bit addresses, capable of representing
+2128 addresses. The number 2128 is 3.4 x 1038 or
+340,000,000,000,000,000,000,000,000,000,000,000,000, which is hopefully enough for quite a while.
+IPv4 and IPv6 currently co-exist and likely will for a long time. I PARTICIPATION
+ACTIVITY 1.1.2: IP addresses.
+1) What is the size of an IP address in
+IPv4?
+0 32 bits
+0 128 bits
+2) IPv6 supports about how many IP
+addresses?
+0 100 billion
+0 3.4 X 1038
+3) With the introduction of IPv6, devices
+on the internet no longer use IPv4.
+0 True
+0 False
+Domain names and DNS
+D
+0
+0
+0
+Some websites can be directly reached using the computer system's IP address. Ex: Google could say
+"Go to 216.58.193.206 to search the internet." But those numbers are hard to remember, and IP
+addresses can change, so domain names are commonly used. A domain name is a name for an IP
+address, such as the name wikipedia.org for the IP address 198.35.26.96; the name is easier to
+remember and type. Capitalization doesn't matter: Wikipedia.org, wikipedia.org, and WIKIPEDIA.ORG
+are treated the same.
+When a computer sends a packet using a domain name over the internet, the first step is to contact a
+DNS server to convert the domain name to an IP address. DNS is short for Domain Name System.
+Thirteen main DNS servers (called root servers) exist in the world, and a computer's operating system
+or an ISP keeps a reference to the root servers' IP addresses. Ex: 198.41 .0.4 (run by Verisign),
+192.228.79.201 (run by USC), 199.7.91 .13 (run by Univ. of Maryland), and 192.203.230.10 (run by
+NASA). The first step of sending an internet packet to a domain name is thus to lookup the IP address
+via a DNS server.
+I II
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 2/94
+10/12/24, 1 :35 PM zyBooks I PARTICIPATION
+ACTIVITY 1.1.3: A DNS server first looks up a domain name's IP address.
+DNS
+whitehouse.gov 96.16.200.110
+cnn.com 157.166.226.25
+192.228. 79.201
+(Los Angeles, CA)
+Animation content:
+Packet
+To: 198.51 . 1 00 . 0
+From: 157 . 166 . 226 . 25
+Type: Web data
+Data: ''Top Sto r i es ''
+CNN
+157.166.226.25
+(Atlanta, GA)
+u
+A computer is displayed with the following IP address: 198.57 .100.0. A packet is displayed right next
+to the 198.51 .100.0 computer with the information: To: cnn.com, From: 198.51.100.00, Type: Web
+Access, Data:. Then another packet is sent to a DNS server to get the IP address for cnn.com. This
+packet retrieves 157.166.226.25 under Data: and sends it to the original packet. Now the original
+packet has the IP address for cnn.com, which is 157.166.226.25.
+Animation captions:
+1. A computer wants to send a packet to cnn.com.
+2. First, a packet is sent to a DNS server to lookup the IP address for cnn.com.
+3. The packet contains the destination address. The computer can now communicate with CNN.
+Registering a domain name
+Anyone may register an unused domain name with a domain name registrar. Most
+registrars charge a yearly fee for keeping the domain registered. Registration
+information is made publicly available from ICANN's Whois service.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 3/94
+10/12/24, 1 :35 PM zyBooks
+When a website is hosted with a web hosting company, the company will update the
+DNS servers so the website's domain name is associated with the IP address of the
+hosted website. The web hosting company may also manage the yearly registration of
+the domain name.
+IAP ACRTTIVICITIPYA TION 1.1 .4: IP addresses and domain names.
+◄
+1) Websites have either an IP address or a
+domain name, but not both.
+O True
+0 False
+2) cnn.com is a(n) __ .
+0 IP address
+0 domain name
+Q DNS
+3) A DNS server's primary role is to
+convert __ .
+O an IP address into 32 bits
+O an IP address to a domain name
+the domain name to an IP
+O address
+Try 1.1.1: IP addresses and domain names.
+Several sites will lookup the IP address of a domain, such as the following.
+• Click to open www.site24x7.com. Type "Wikipedia.com" or your favorite website name.
+Given an IP address, some sites will indicate the geographic location of that IP address'
+computer. Try entering 171.67.215.200, which is Stanford.corn's IP address, whose
+computers are in Palo Alto, California.
+• Click to open www.iplocation.net.
+Typing "What is my IP?" in a search engine can be used to determine one's IP address.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+►
+0
+0
+0
+4/94
+10/12/24, 1 :35 PM zyBooks
+• Click to OP-en Google.com.
+• Click to OP-en Bing.com.
+Domain name levels
+Domain names are hierarchical. A domain name belongs to one of numerous top-level domains (TLD),
+such as .com, .net, .org, .edu, and .gov. Also, each country is assigned a unique two-letter country code
+top-level domain (ccTLD) like .uk (United Kingdom), .ru (Russia), and .de (Germany). IANA, the
+organization that manages TLDs, allows companies and organizations to create customized TLDs, like
+.church, .pizza, and .music.
+I PARTICIPATION
+ACTIVITY 1.1.5: Common top-level domains.
+.com .net .org
+"Commercial" "Network" "Organization"
+Traditionally
+non-profits
+77% 10% 7%
+microsoft.com comcast.net wikipedia.org
+amazon.com sourceforge.net npr.org
+Animation content:
+D
+.edu .gov (Many more)
+"Educational" "Government"
+Post-secondary U.S. federal,
+institutions state, or local
+(colleges)
+harvard.edu cdc.gov
+ucla.edu irs.gov
+A branch diagram is displayed with each branch explaining the domain name of websites. The
+Commercial websites are represented with a .com domain name, Network websites are
+represented with a .net domain name, Organization websites are represented with a .org domain
+name, Education websites are represented with a .edu domain name, and Government sites are
+represented with a .gov domain name.
+Animation captions:
+1. Internet domain names are divided by top-level domains.
+2. The most popular is .com. Most companies have a .com name.
+3. Next most popular is .net. Typically for networking/internet-focused companies.
+4. Next is .org, traditionally for non-profit organizations.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 5/94
+10/12/24, 1 :35 PM zyBooks
+5. Other well-known top-level domains are .edu for colleges, and .gov for U.S. governments.
+Hundreds more exist.
+Immediately after a top-level domain comes a second-level domain, such as wikipedia in
+wikipedia.org. A second-level domain is commonly an organization's name as in Stanford.edu, or
+indicates the purpose of a website as in DoPython.org. Third-level and further level domains refer to
+sub-computer systems local to an organization, as in cs.stanford.edu where the cs is for Stanford's
+Computer Science department. A common third-or-deeper-level domain is www, short for World Wide
+Web, usually referring to an organization's web server. Many organizations use www optionally, so
+stanford.edu by default goes to www.stanford.edu.
+I PARTICIPATION
+ACTIVITY 1.1 .6: Domain hierarchy.
+Given a website such as www.whitehouse.gov, match the domain to the corresponding
+domain-level hierarchy.
+If unable to drag and drop, refresh the page .
+whitehouse ••
+Top-level domain.
+Third-level domain
+Second-level domain.
+Note
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+6/94
+10/12/24, 1 :35 PM zyBooks
+◄
+The top-down structure of a domain name is, somewhat counterintuitively, from rightto-
+left rather than left-to-right. Thus, cs.stanford.edu has a top-level domain of .edu,
+second-level stanford, and third-level cs. Common scams use this counterintuitive rightto-
+left feature to trick people into thinking a site belongs to a particular company Ex:
+bankofamerica.xxyz.com might trick a person into thinking the domain name is for Bank
+of America.
+URLs
+►
+Domain names are most commonly seen in URLs. A URL (Uniform Resource Locator) is the location
+of a web resource on the web, such as http://www.cdc.gov/alcohol/faqs.htm. A web resource is any
+retrievable item, like an HTML file, image, video, CSS stylesheet, etc.
+A URL is composed of several parts:
+• Scheme - Characters at the beginning of a URL followed by a colon":" or a colon and double
+slashes"://". Common URL schemes include http, https, mail to, and file . Ex: In
+https://www.cdc.gov/alcohol, the scheme is "https".
+• Hostname - The complete domain name following the scheme in a URL. Ex: In
+https://www.cdc.gov/alcohol, the hostname is "www.cdc.gov".
+• Path - The characters to the right of the hostname in a URL. Ex: In https://www.cdc.gov/alcohol,
+the path is "/alcohol".
+• Query string - Optional characters to the right of the question mark(?) in a URL that provide data
+for the web server. In https://www.youtube.com/watch?v=uu7XCEMdSHg, the characters after
+the? tells You Tube's server to play a video having code uu7XCEMdSHg.
+• Fragment - Optional characters at the end of a URL that start with a hash character(#) and refer
+to a certain location within a webpage. In https://en .wikipedia .org/wiki/URL#History, the
+fragment "#History" refers to the webpage's History section.
+Figure 1.1.1: Chrome browser hides the scheme and "www" in hostname.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 7/94
+10/12/24, 1 :35 PM zyBooks
+D Pro essor pranks ~tudents on X + □
+~ ➔ C
+https
+scheme hostname path query string
+◄
+I PARTICIPATION
+ACTIVITY 1.1 .7: A URL can specify the location of subfolders and files.
+Packet
+To: 192.133.129 . 169
+Type: Web data
+Data : " FAQ"
+B Centers for Disease Control and Prevention
+Introduction to Alcohol
+• What is a "drink"?
+• How does alcohol affect a person?
+Tools • Short-Term Health Risks
+• Relationship between Youth and Adult
+Gu;de Drinking
+• Is beer or wine safer to drink than
+Med;e hard liquor?
+Contact
+PC
+192.133.129.169
+Animation content:
+X
+*
+D
+alcohol
+fact-sheets.html faqs.html
+publications.html
+Web server
+23.39.150.112
+www.cdc.gov
+A computer sends a packet with the information To: http://www.cdc.gov/alcohol/faqs.htm, Type:
+Web access, Data: "FAQ" to a web server at www.cdc.gov. This packet retrieves and sends back
+information to the computer from a subfolder named alcohol and then another subfolder named
+faqs.htm.
+Animation captions:
+1. A computer's browser sends a packet requesting information from a web server at IP address
+23.39.150.112, with hostname www.cdc.gov.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 8/94
+10/12/24, 1 :35 PM zyBooks
+2. The information is in a subfolder named alcohol, then in a file in that folder named faqs.html.
+3. The faqs.html file is returned and displayed in the computer's browser.
+I PARTICIPATION
+AcTIvITV 1.1.8: URLs.
+1) Is the following a valid URL?
+https://www.whitehouse.gov/
+0 Yes
+Q No
+2) Is the following a valid URL?
+https://www.nasa.gov/cubequest/details/#.V0a0_VPF9U9
+0 Yes
+Q No
+3) What is the hostname of the following URL?
+http://www.weather.com/ summer /temperatures. html
+0 www.weather.com
+0 weather.com
+4) Which file does the following URL access?
+http://www.weather.com/summer/temperatures.html
+0 summer
+0 temperatures.html
+5) Which scheme should a URL use to
+provide a secured HTTP connection to
+a web server?
+0 http
+0 https
+6) Is www.nasa.gov a valid URL?
+0 Yes
+Q No
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+0
+0
+0
+9/94
+10/12/24, 1 :35 PM
+Webpage errors
+zyBooks
+If a domain name is not found by a DNS server (usually because the domain name is not registered), a
+page is displayed indicating such, as in "Sorry, the website www.xyz.blahblahblah cannot be found."
+A domain name may be found (so a valid IP address exists for that name) but the web server may not
+respond, resulting in a message like 'The website is not responding" or "Could not reach the website".
+Such non-response could be due to the web server being turned off or undergoing maintenance, or
+due to an essential router malfunctioning, for example.
+If a web server is reached but the specific requested page isn't found, the server returns a 404 status
+code, which is a code number for page not found. Various other status codes exist. Many web servers
+return a page that includes the number "404".
+Figure 1.1.2: An example webpage that returns a message with the code 404
+shown.
+® www.toyota.com/camrl ~ ]
+Your Location: 92691 9 Notebook
+® TOYOTA
+Let's Go Places
+Setect Vehicle Shopping Tools
+T T
+404 Page Not Found
+It looks like this page is no longer avai lable.
+◄ ►
+Linkrot
+The web is always changing with content being continually added and removed. When
+content is removed from the web, URLs that used to point to the content return a 404
+status code. Linkrot is the general name for a once valid link that now returns a 404
+status code.
+The Internet Archive is one of many organizations around the world that fights linkrot by
+archiving the web for posterity The Internet Archive's Wax.back Machine provides
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 10/94
+10/12/24, 1 :35 PM zyBooks
+access to billions of archived webpages and can often show users what a particular
+URL looked like at different times in history
+I PARTICIPATION
+ACTIVITY 1 .1. 9: Web page errors.
+1) A 404 message indicates that a
+domain name is not recognized.
+◄ 0 True
+O False
+2) If a web server is down (such as
+powered off), the server may return a
+page saying to please try again later.
+0 True
+O False
+Exploring further:
+• URL Standard (WHATWG)
+• List of Top-Level Domains (ICANN)
+I ~~~•• 1.1.1: IP addresses, domain names, and URLs.
+570104.2065416.qx3zqy7 -Which IPv4 address(es) are valid?
+0 (A) E26.D27.A9C.C27
+0 (B) 12.141.124.207
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+►
+0
+D
+11/94
+10/12/24, 1 :35 PM zyBooks
+0 (C) 154.53.103.48.171
+0 (D) 359.32.37 4.228
+1 2 3 4
+Check -
+1.2 HTML document structure
+HTML, elements, and tags
+HTML (HyperText Markup Language) is a textual language for creating webpages. The HTML
+acronym highlights the three main characteristics of webpages: I PARTICIPATION
+ACTIVITY 1.2.1: Understanding the HTML acronym.
+If unable to drag and drop, refresh the page.
+HyperText Language ■i@ii'ii
+Text that contains connections to
+other documents.
+Part of a document that explains how
+to interpret or structure other parts of
+the document.
+A set of rules describing how to write
+HTML.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+12/94
+10/12/24, 1 :35 PM zyBooks
+HTML defines over 130 elements. An element is a single HTML structure. Elements are represented
+with HTML tags.
+An HTML tag is a markup instruction identified by<, the tag name, and>.
+• An opening tag indicates the element's starting point in the document.
+• A closing tag indicates the element's ending point in the document.
+Ex: <strong>Hello</ strong> causes Hello to appear in a strong weighted font; <strong> is the
+opening tag,</ strong> is the closing tag, and everything from the opening tag to the closing tag is
+the element. While tag names can be uppercase or lowercase, good practice is to use lowercase letters
+for the tag names, as in <strong>Hello</ strong> rather than <Strong>Hello</ Strong>
+Some elements, like <br> and <img>, do not have a closing tag. A void element is an element that
+only needs an opening tag.
+Figure 1.2.1: HTML tags and element.
+open ing tag1 dosing tag1 \ I - -
+<p>,Good day.,</p>
+element
+◄
+I PARTICIPATION 1.2.2: Elements and tags.
+ACTIVITY
+1) An element and a tag are the same
+thing.
+0 True
+0 False
+2) A void element contains content.
+0 True
+O False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+0
+0
+13/94
+10/12/24, 1 :35 PM zyBooks I PARTICIPATION 1.2.3: Valid HTML markup.
+ACTIVITY D
+1) <p>This is a very short
+paragraph.</p>
+0 Valid
+0 Invalid
+~ <hl>This is a chapter
+heading
+0 Valid
+0 Invalid
+3) <p>We changed the <strong>
+<em>font</strong></em> in
+this paragraph.</p>
+0 Valid
+O Invalid
+~ <p>Sentence one.
+<strong>Sentence two.</p>
+0 Valid
+O Invalid
+5) <P>A short paragraph. </P>
+0 Valid
+O Invalid
+HTML document
+0
+0
+0
+0
+0
+The HTML Living Standard, produced by WHATWG, defines the minimal parts of an HTML document:
+1. The <!DOCTYPE html> declaration instructs the web browser about what type of document
+follows.
+2. The <html> element encloses everything but the<! DOCTYPE html> declaration.
+<html lang="en "> indicates that the document's language is English.
+3. The <head> element contains the document title, document metadata, and various other
+elements that are typically not displayed in the webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 14/94
+10/12/24, 1 :35 PM zyBooks
+4. The <meta> element specifies metadata, which is data that describes the document's data.
+<meta charset="UTF-8 "> describes how characters are represented in the HTML
+document. Additional <meta> tags may be used to indicate when the document was saved,
+who the author is, etc.
+5. The <title> element specifies the document's name. The title is usually displayed in the browser's
+titlebar, is used by search engines, and is used for bookmarking.
+6. The <body> element encloses all elements and content to be rendered in the browser.
+The opening <html> tag uses an attribute to indicate the webpage's language, and <meta> uses an
+attribute to indicate the character set. An element attribute provides additional information about the
+element and is included only in the opening tag. An attribute has a name and a value, specified using
+the form: name="value". Ex: <meta charset="UTF-8 "> has an attribute named char set with
+value "UTF-8".
+I PARTICIPATION
+ACTIVITY 1.2.4: Minimum HTML document structure.
+r
+<!DOCTYPE html> My First Webpage
+<html lang="en">
+<head> Hello, World!
+<meta charset="UTF-8">
+<title>My First Webpage</title>
+</head>
+<body>
+Hello, World!
+</body>
+</html>
+Animation content:
+The following code snippet is displayed:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My First Webpage</title>
+</head>
+<body>
+Hello, World!
+</body>
+A minimal webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+15/94
+10/12/24, 1 :35 PM zyBooks
+</html>
+End of code snippet. My First Webpage is displayed above a browser. The browser displays "Hello,
+World!"
+Animation captions:
+1. The document starts with <!DOCTYPE html>, which instructs the browser how to interpret the
+rest of the document.
+2. The <html> opening and closing tags mark the beginning and ending of the document. The
+lang attribute indicates the document's language is English.
+3. The <head> opening and closing tags enclose the <meta> and <title> elements.
+4. The <body> opening and closing tags enclose the document's contents. The browser displays
+the document body in the webpage.
+Notes
+◄
+Omitting the DOCTYPE from an HTML document or placing any characters before the
+DOCTYPE causes the web browser to render the document in quirks mode. Quirks
+mode is a browser rendering mode that renders a webpage using non-standard layout
+rules emulating older web browsers. A webpage with the DOCTYPE is rendered using
+standards mode, which uses the HTML Living Standard.
+The character set <meta> tag may be omitted if the webpage is served from a web
+server that indicates the character encoding in the HTTP Content-Type header. UTF-
+8 is a common character encoding that describes characters used by most of the
+world's languages. UTF-8 even includes fictional languages (e.g., Klingon, Elvish) and
+emoji (e.g., @, +-).
+The <head> element is optional but is included anyway in most webpages.
+I PARTICIPATION
+ACTIVITY 1.2.5: Matching basic document tag order.
+If unable to drag and drop, refresh the page.
+<!DOCTYPE html> <html lang="en">
+<ti tle>California State Quarter</ti tle>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+16/94
+10/12/24, 1 :35 PM zyBooks
+<body> The California quarter features Yosemite valley.</body>
+<meta charset="UTF-8">
+Create a webpage.
+</html>
+Instruction to web browser that
+specifies the document type.
+Tag that marks the beginning of the
+HTML document.
+Tag that specifies the character
+encoding used in the document.
+Tag that names the document.
+HTML content displayed by the
+browser.
+Tag that marks the end of the HTML
+document.
+Learning HTML is best performed by entering new HTML into a webpage and viewing
+the results in the web browser. A web server is not necessary to create a webpage
+that can only be viewed on your desktop or laptop computer.
+Try the following:
+1. Open your favorite text editor. Popular text editors include Sublime Text,
+Notepad++. and Visual Studio Code.
+2. Create a new file.
+3. Enter the HTML from the animation above into the file.
+4. Save the file to your computer's hard drive as hello.html. The file extension
+. html is necessary for your browser to know the text file contains HTML.
+5. Using Chrome or your favorite web browser, open hello.html by pressing Ctrl+O
+on Windows or Cmd+O on a Mac. Other ways to open the file include doublehttps:
+11Ieam.zybooks.comtzybook/ARIzoNAECE413SaIehiF all2024/chapter/1 /print 17/94
+10/12/24, 1 :35 PM zyBooks
+clicking the file or dragging the file into the browser.
+The Chrome browser below shows hello.html. The path to the file appears in the
+address bar.
+0 My First: Webpage X + 0
+~ ➔ C (D File I C:/ temp/ hel'lo.ht *
+HeUo, W:orld!
+Viewing a page's HTML
+□ , .
+A user on a desktop/laptop computer can instruct a browser to show a webpage's HTML. A web
+search for "View webpage HTML in Chrome" (or another browser) yields instructions. Ex: In Chrome,
+right-clicking (Windows) or Ctrl-clicking (Mac) and choosing "View page source" from the menu shows
+the webpage's HTML. A quicker method is to use the keyboard shortcut Ctrl+U (Windows) or
+~+Option+U (Mac). Most webpages use complex HTML with CSS and JavaScript, so the HTML can
+be hard to read.
+Figure 1.2.2: HTML page source in Chrome.
+◄ ►
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 18/94
+10/12/24, 1 :35 PM zyBooks
+0 My Fir Webpage X 0 hell o.html X +
+C (D view-sou rce:fi le:///C:/temp/hell o. htm 11
+Line wr a p O
+D-.. T' rE t i
+2 <html lang="en">
+l <h ecld>
+4 < eta charset=-"UT F- 8">
+5 <title>My Fi rst l•Jebpage</ t i tle>
+ii </ hea d>
+7 <body>
+II Hello , \~orld !.
+ll </ body>
+o </html>
+◄
+0
+*
+□ X
+►
+A user can also use a browser's development tools to view a webpage's HTML elements. Chrome
+DevTools is a collection of web development tools that are built into the desktop Chrome browser.
+Pressing Ctrl+Shift+I (Windows) or ~+Option+I (Mac) opens Chrome DevTools. Other desktop
+browsers have similar development tools.
+A browser's development tools show the browser's internal representation of a webpage's elements.
+The browser's internal representation and the webpage's actual HTML may differ slightly.
+Figure 1.2.3: Chrome DevTools showing page's elements.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 19/94
+10/12/24, 1 :35 PM
+0 My Fir.st Webpage X +
+C (D File I C:/ temp/hello.html
+Hello, ,. odd!
+zyBooks
+Elemen s Console Sources f\fetwork Performance Memory >>
+0
+*
+□
+0 X
+1 ....-- E m ... Styles Computed Layout Event Lis eners »
+<html lang="e n•>
+T <head>
+< eta char-set =• UTF - 8 ">
+<tit l e >My Fir s t Webpage</ tit le>
+</ head>
+body He-Ho,. l-Iorld ! /b.ody == .$0 __ _
+</ html>
+html body
+◄
+I PARTICIPATION
+ACTIVITY 1.2.6: View source in action.
+1) To see how a web page is constructed,
+a user can view the page source in the
+browser.
+0 True
+0 False
+2) To copy the functionality of another
+webpage found on the web, a user can
+just copy the HTML from the view
+source page.
+0 True
+0 False
+3) Viewing a webpage's source and
+viewing the browser's internal webpage
+representation always yields identical
+results.
+0 True
+Filter
+eleme nt . st yle {
+}
+body {
+display : block;
+I } margin, ► 8px;
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
++ r::n ... :hov .els ,. ~
+user agent stylesneet
+►
+D
+0
+0
+0
+20/94
+10/12/24, 1 :35 PM zyBooks
+0 False
+HTML validator
+Some elements that were used in earlier versions of HTML are now deprecated in the HTML Living
+Standard. A deprecated feature is part of a language that is officially discouraged because newer or
+better features exist, or because the deprecated feature is no longer considered safe. Ex: The
+<center> element is an officially deprecated element that should no longer be used.
+Browsers handle improperly structured HTML and deprecated elements differently and unpredictably.
+The only way to have predictable browser behavior is to use valid HTML. An HTML validator checks
+that an HTML document conforms to the standard. Good practice is to use tools like the W3C MarkuQ
+Validator to check document conformance.
+IAP ACRTTIVICITIPYA TION 1.2.7: HTML standardization and validation.
+Use the W3C MarkuR Validator to check the given HTML for correctness.
+1) The W3C Markup Validator
+indicates the HTML below has an
+error. What attribute, which
+describes how characters are
+represented in the document, is
+missing from <meta>?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta>
+<title>Learning
+HTML</title>
+</head>
+<body>
+Some HTML tags have
+attributes.
+</body>
+</html>
+Show answer
+2) The W3C Markup Validator warns
+that the HTML below is missing an
+attribute. What attribute is missing
+from <html>?
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+21/94
+10/12/24, 1 :35 PM
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Learning
+HTML</title>
+</head>
+<body>
+A warning is not as
+serious as an error.
+</body>
+</html>
+Show answer
+3) The W3C Markup Validator
+indicates the HTML below has an
+error. What tag is causing the
+error?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learning
+HTML</title>
+</head>
+<body>
+</p >This page has an
+error .
+</body>
+</html>
+Show answer
+Exploring further:
+• HTML tutorial from W3Schools.com
+zyBooks
+• HTML Encoding_(Character Sets). from W3Schools.com
+• W3C MarkuQ Validator - Checks the validity of web documents
+• Quirks Mode and Standards Mode from MON
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+22/94
+10/12/24, 1 :35 PM zyBooks
+1.3 Basic HTML elements
+Paragraphs
+The <p> element creates a paragraph in an HTML document. A paragraph is enclosed in HTML by the
+<p> opening and </p> closing tags. Browsers visually separate paragraphs from other text with
+spacing above and below.
+A common error is forgetting the closing <Ip> tag, or trying to put a paragraph inside of another
+paragraph. The web browser might render nested <p> tags visually correct, but an HTML validator will
+generate an error.
+I PARTICIPATION
+ACTIVITY 1.3.1: <p> and </p> tags enclose a paragraph.
+<p>
+This text will become
+the first paragraph.
+</p>
+<p>
+This text will become
+the second paragraph.
+</p>
+<p>
+This text will become
+the third paragraph.
+</p>
+Animation content:
+The following code snippet is displayed:
+<p>
+This text will become the first paragraph.
+</p>
+<p>
+This text will become the second paragraph.
+</p>
+<p>
+This text will become the third paragraph.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+r
+This text will become the first
+paragraph.
+This text will become the second
+paragraph.
+This text will become the third
+paragraph.
+D
+23/94
+10/12/24, 1 :35 PM
+</p>
+End of code snippet.
+zyBooks
+A browser renders the three paragraphs with some space in between paragraphs.
+Animation captions:
+1. Raw text in HTML is displayed as one block of continuous text.
+2. A paragraph is surrounded by opening <p> and closing </p> tags.
+3. Additional paragraph tags may be added to generate new paragraphs.
+I PARTICIPATION
+ACTIVITY 1 .3.2: Add <p> elements.
+The following HTML is an example with two paragraphs. Notice that blank lines do not start
+a new paragraph in the rendered webpage. Add <p> and </p> tags around each paragraph
+so that the rendered webpage shows two paragraphs. Try adding extra spaces and blank
+lines between words to see how the rendered HTML changes.
+1 Jhis is the first sentence of the first paragraph. This is the second sentence
+2
+3 This sentence is the first sentence of the second paragraph.
+4 Here is the second sentence of the second paragraph.
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+24/94
+10/12/24, 1 :35 PM zyBooks
+Your webpage
+This is the first sentence of the first paragraph. This is the second sentence of the first paragraph.
+This sentence is the first sentence of the second paragraph. Here is the second sentence of the
+second paragraph.
+► View solution
+I PARTICIPATION
+ACTIVITY 1.3.3: Valid or invalid HTML.
+Determine if the following HTML is valid or invalid.
+7) <p>The first widely-used web
+browser was Netscape
+Navigator.</p><p>Then came
+Internet Explorer.</p>
+0 Valid
+0 Invalid
+2) <p>Apache is an open-source
+web server .
+<p>IIS is a web server
+created by Microsoft.
+0 Valid
+0 Invalid
+3) <p>HTML is an acronym for
+HyperText Markup Language.
+<p>The inspiration for HTML
+was SGML, the Standard
+Generalized Markup Language.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+25/94
+10/12/24, 1 :35 PM
+</p> HTML is simpler than
+SGML and adds hyperlinks.
+<Ip>
+0 Valid
+O Invalid
+Whitespace and line breaks
+zyBooks
+A whitespace character is an unprinted character such as the spaces between words and lines of text.
+Browsers treat all sequences of whitespace as a single space between non-whitespace characters.
+Ex: The three spaces in the HTML "hello there" will be displayed with a single space "hello there".
+Whitespace characters include spaces, tabs, and newlines. So, a browser treats multiple lines of text
+as a single space.
+The <br> element creates a line break in a paragraph, such that the content after the line break
+appears on a new line. The <br> element is a void element, so only the opening tag is needed. Good
+practice is to use <br> when the line break is essential to the content, such as lines in a poem or
+mailing address, and not just to add spacing for formatting a webpage. CSS, discussed elsewhere,
+should be used for formatting a webpage.
+I PARTICIPATION
+ACTIVITY 1.3.4: Whitespace in HTML.
+<p>
+This sentence has
+many
+whitespace characters.
+</p>
+<p>
+Poetry in programming<br>
+Code and art combined<br>
+I dream in HTML
+</p>
+Animation content:
+The following code snippet is displayed:
+<p>
+This sentence has
+many
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+r ~
+This sentence has many whitespace
+characters.
+Poetry in programming
+Code and art combined
+I dream in HTML
+D
+26/94
+10/12/24, 1 :35 PM
+whitespace characters.
+</p>
+<p>
+Poetry in programming <br>
+Code and art combined <br>
+I dream in HTML
+</p>
+zyBooks
+End of code snippet. A monitor displays the first paragraph with the text, 'This sentence has many
+whitespace characters." The second paragraph displays 3 lines. The first line is, "Poetry in
+programming," the second line is, "Code and art combined," and the third line is "I dream in HTML."
+Animation captions:
+1. Multiple spaces are displayed as one space when rendered.
+2. Multiple blank lines are displayed as one space.
+3. Adding <br> tags splits the displayed text into multiple lines.
+I PARTICIPATION
+ACTIVITY 1.3.5: Line break.
+The following HTML fragment shows the address of the White House. Modify the HTML to
+include line breaks ( <br>) so the rendered webpage matches the expected webpage.
+1 ( p>The White House
+2 1600 Pennsylvania Avenue Northwest
+3 Washington, DC 20500</le]>
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+27/94
+10/12/24, 1 :35 PM
+Your webpage
+The White House 1600 Pennsylvania Avenue
+Northwest Washington, DC 20500
+► View solution
+zyBooks
+Expected webpage
+The White House
+1600 Pennsylvania Avenue Northwest
+Washington, DC 20500
+I PARTICIPATION ACTIVITY 1.3.6: Whitespace and line breaks.
+7) All the words in the paragraph below
+appear on the same line when rendered
+in a browser with sufficient width.
+<p>
+Aspire to inspire
+before you
+expire.
+<Ip>
+0 True
+0 False
+2) The <br> element has a closing tag.
+0 True
+0 False
+3) The letters A and B appear on separate
+lines with a blank line in between when
+rendered in a browser.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+28/94
+10/12/24, 1 :35 PM
+<p>
+A<br><br>B
+<Ip>
+0 True
+O False
+Sections and headings
+zyBooks
+A section is a collection of related content created with a <section> element. Many documents can be
+organized into sections, with each section being wrapped in a <section> element. Ex: A scholarly
+article's abstract, introduction, main content, and references can each be wrapped in a <section>
+element.
+A heading provides a title for each section. Headings are bold by default and are visually separated
+from the other text by extra spacing. Heading elements exist for the first six levels of sections: <h1>,
+<h2>, <h3>, <h4>, <h5>, and <h6>. Headings are helpful to users who skim through a webpage, to
+assistive technologies like screen readers, and to search engines.
+Good practice is to label each section with a heading and to select a heading element that matches the
+document's hierarchical structure. A common error is to choose a heading element based on the
+desired font size.
+I PARTICIPATION
+ACTIVITY 1.3.7: Section headings.
+<body>
+<hl >Web Development</hl>
+<section>
+<h2>HTML</h2>
+<p>
+HTML defines a webpage's structure
+and content.
+</p>
+</section>
+<section>
+<h2>CSS</h2>
+<p>
+CSS specifies a webpage's layout
+and visible appearance.
+</p>
+</section>
+<section>
+<h2>JavaScript</h2>
+<p>
+JavaScript describes a webpage's
+dynamic behaviors and actions.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+r
+Web Development
+HTML
+HTML defines a webpage's structure
+and content.
+css
+CSS specifies a webpage's layout
+and visible appearance.
+JavaScript
+JavaScript describes a webpage's
+dynamic behaviors and actions.
+\.. ~
+29/94
+10/12/24, 1 :35 PM
+<Ip>
+</section>
+</body>
+Animation content:
+HTML code:
+<body>
+<h1 >Web Development</h1 >
+<section>
+<h2>HTM L </h2>
+<p>
+HTML defines a webpage's structure
+and content.
+</p>
+</section>
+<section>
+<h2>CSS</h2>
+<p>
+CSS specifies a webpage's layout
+and visible appearance.
+</p>
+</section>
+<section>
+<h2>JavaScript</h2>
+<p>
+JavaScript describes a webpage's
+dynamic behaviors and actions.
+</p>
+</section>
+</body>
+End of code snippet.
+zyBooks
+The browser displays "Web Development" in a large, bold font. Then "HTML'.' in a smaller, bold font
+followed by "HTML defines a webpage's structure and content.". Then "CSS" in a bold font followed
+by "CSS specifies a webpage's layout and visible appearance." Then "JavaScript" in a bold font,
+followed by "JavaScript describes a webpage's dynamic behaviors and actions."
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 30/94
+10/12/24, 1 :35 PM zyBooks
+Animation captions:
+1. A webpage usually has a single hl heading. The heading is visually separated from other text
+by extra spacing and is displayed with a larger font.
+2. Each section starts with an h2 heading, which has a smaller font than the hl heading.
+I PARTICIPATION 1.3.8: Sections and headings.
+ACTIVITY
+1) A <section> element should be
+placed inside a heading element.
+0 True
+O False
+2) An <h3> element should be placed
+inside a <p> element.
+O True
+0 False
+3) If <hl> text appears too big, <h2> or
+<h3> elements should be used to
+decrease the text size.
+O True
+O False
+I PARTICIPATION
+ACTIVITY 1.3.9: Add headings.
+The following HTML is missing headings. Add <hl> and </hl> tags around the "Bill of
+Rights" section title, and <h2> and </h2> tags around each "Article" section title, so that
+your webpage matches the expected webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+D
+31/94
+10/12/24, 1:35 PM ______________ zyBooks
+1 ~,bod~>
+2 Bill of Rights
+3 <p>The following are the bill of rights of the USA</p>
+4
+5 <section>
+6 Article 1
+7 <p>Body of article 1</p>
+8 </section>
+9
+10 <section>
+11 Article 2
+12 <p>Body of article 2</p>
+13 </section>
+14
+15
+Render webpage
+Your webpage
+Bill of Rights
+Reset code
+The following are the bill of rights of the USA
+Article 1
+Body of article 1
+Article 2
+Body of article 2
+► View solution
+Expected webpage
+Bill of Rights
+The following are the bill of rights of the USA
+Article 1
+Body of article 1
+Article 2
+Body of article 2
+I PARTICIPATION
+ACTIVITY 1.3.10: Hierarchical structure of documents.
+1) Write a heading for a book chapter
+titled "Introduction".
+....
+Show answer I ...
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+32/94
+10/12/24, 1 :35 PM
+2) What element is used for
+subchapter titles?
+Show answer
+3) Write an HTML fragment that
+creates a title for the fourth level of
+a document hierarchy. The title
+should be "Exquisite details".
+Show answer
+Text formatting
+zyBooks
+A number of HTML elements cause the enclosed text to render in a different font in the browser:
+0
+0
+• The <em> element indicates emphasized text, such as text having an emphasized pronunciation
+when spoken, and is italicized by default.
+• The <strong> element indicates text that has strong importance, and is bolded by default.
+• The <cite> element denotes a title, such as a book or song title, and is italicized by default. Ex:
+<cite>Spaceballs</cite> is a parody of the <cite>Star Wars</cite> tril
+yields: Spaceballs is a parody of the Star Wars trilogy.
+• The <mark> element denotes important content that should be semantically highlighted and is
+rendered with a yellow background by default. Ex:
+<mark>Highlight</mark> what is important. yields: Highlight what is important.
+• The <b> element indicates text that needs attention, like key words in a document abstract or
+product names in a review, and renders the text in bold. Ex: Mix the flour and oil together.
+• The <i> element indicates text in an alternative voice, such as a word or phrase in a foreign
+language, and is rendered using italics. Ex: Dashi is a stock used in Japanese cooking.
+• The <u> element denotes text that should appear differently from normal text, such as
+misspelled words, and is underlined by default. Ex: Misspelled is often misspelled as mispelled.
+Note
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 33/94
+10/12/24, 1 :35 PM zyBooks
+◄
+Historically, in HTML4, the <b>, <i>, and <u> elements were used to render text and
+did not have meaning, or semantics. Good practice is to avoid formatting elements
+whenever possible, and instead use elements to indicate meaning. Ex: The <i> element
+can be used to emphasize text, but the <em> element should be used to convey
+emphasis.
+Table 1.3.1: Text-formatting elements.
+Element HTML example Rendered Semantics
+--
+em <em>emphasis</em> emphasis Emphasized text
+- --
+cite <cite>cite</cite> cite Title of a work
+-
+strong <strong>strong</strong> strong Important text
+mark <mark>mark</mark> mark Marked or highlighted text
+- I
+<var>variable</var> variable
+Definition of a variable in a
+var
+computer program
+- -
+kbd <kbd>keyboard</kbd> keyboard Keyboard input
+code <code>code</code> code Computer code
+- -
+samp <samp>sample</samp> sample Sample output from a computer
+- -
+b <b>bold</b> bold Bold text
+--
+-
+i italic
+Text of an alternate voice or word
+<i>italic</i>
+from another language
+t + -
+u <u>underline</u> underline
+Text that is rendered differently
+from normal text
+I
+◄
+Note
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+►
+34/94
+10/12/24, 1 :35 PM zyBooks
+Many CSS libraries, such as Font Awesome and Bootstrap, use the <i> tag to insert
+icons or simple images. See W3Schools Icons Tutorial for more details.
+◄
+I PARTICIPATION
+ACTIVITY 1.3.11 : Valid or invalid HTML.
+Determine if the following HTML is valid or invalid.
+1) You <em>must</em> read
+<cite>A Tale of Two
+Cities</cite>, one of the
+best selling books of all
+time.
+Q Valid
+O Invalid
+~ You must read <em><cite>A
+Tale of Two Cities</em>
+</cite>, one of the best
+selling books of all time.
+Q Valid
+O Invalid
+~ <em>You must read <cite>A
+Tale of Two Cities</cite>,
+one of the best selling
+books of all time.</em>
+Q Valid
+O Invalid
+I CHALLENGE
+ACTIVITY 1.3.1: Basic HTML elements.
+570104.2065416.qx3zqy7 -
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+0
+0
+0
+D
+35/94
+10/12/24, 1 :35 PM zyBooks
+Modify each sentence in the poem to end with a <br> tag, except the last sentence.
+SHOW EXPECTED
+1
+2 <p>Dance more. Think big. Live truly. So it goes. </p>
+3
+1 2
+Check - View your last submission v
+Exploring further:
+Headings and Sections from HTML Living Standard
+HTML Text Formatting from W3Schools
+3
+1.4 Comments
+4
+An HTML comment is a portion of the document that is not displayed by the browser. A comment
+begins with the<! -- character sequence and ends with the--> character sequence. Web developers
+sometimes use comments to leave notes for themselves or others, or to tell the browser to ignore part
+of the document. A common error is trying to put a comment inside of another comment. I PARTICIPATION
+ACTIVITY 1.4.1: Comments.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+36/94
+10/12/24, 1 :35 PM zyBooks
+The following HTML shows two paragraphs. Try modifying the HTML to use a comment so
+that the second paragraph is not displayed.
+1 ;(8>
+2 Your mission, should you choose to accept it, is to use a comment to prevent
+3 < le)>
+4 <p>
+5 This paragraph will self-destruct in five seconds. Good luck ...
+6 </p>
+◄
+Render webpage Reset code
+Your webpage
+Your mission, should you choose to accept it, is to use a comment to prevent the paragraph below
+from being shown in the preview window.
+This paragraph will self-destruct in five seconds. Good luck ...
+► View solution
+I PARTICIPATION
+ACTIVITY 1.4.2: Valid or invalid comments.
+Determine if the following HTML is valid or invalid.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+37/94
+10/12/24, 1 :35 PM
+7) <p>This sentence does < !-not-->
+contain a comment</p>
+Q Valid
+O Invalid
+~ <p>Roses are <!--purple-->
+red. Violets are<!-turquoise.
+<!--green.-->
+black.-->blue.</p>
+Q Valid
+0 Invalid
+3) <p>Bananas grow <!--in
+bushes.</p>--> on a tree.
+<Ip>
+Q Valid
+O Invalid
+~ <p>Mary had a <!--soft,
+little</p>--> lamb. Its
+fleece was white as snow.
+Q Valid
+O Invalid
+zyBooks
+1.5 Images
+<img> element
+0
+0
+0
+0
+The <img> element is a void element that displays an image in a webpage. The <img> element has
+two required attributes:
+• The src attribute specifies the URL of the image file to display.
+• The alt attribute provides a text description to use as an alternative to displaying the image.
+Ex:<img src="https://example.com/family.jpg" alt="Smith family reunion">
+displays the image family.jpg, but the text "Smith family reunion" displays if the image cannot be
+displayed.
+I
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 38/94
+10/12/24, 1 :35 PM I PARTICIPATION
+ACTIVITY 1.5.1: Loading images in HTML.
+<p >Cat image: </p>
+<img src="cat.jpg" alt="cat">
+<img src="broken.jpg"
+alt="broken image">
+<p >Source: https://resources.
+zybooks.com/WebProgramming/
+smallCatvl.jpg</p >
+Animation content:
+The following code snippet is displayed:
+<p>Cat image:</p>
+<img src="cat.jpg" alt="cat">
+<img src="broken.jpg"
+alt="broken image">
+<p>Source: https://resources.zybooks.com/
+WebProgramming/smallCatv1 .jpg</p>
+zyBooks
+Cat image:
+Source: https://resources.zybooks.com/
+WebProgramming/smallCatv1 .jpg
+D
+End of code snippet. A monitor displays a paragraph with the text, "Cat image:" and below it is an
+image of a cat. Below that a broken image is displayed with the alternative text, "broken image." At
+the bottom of the monitor is the text, "Source:
+https://resources.zybooks.com/WebProgramming/smallCatv1 .jpg"
+Animation captions:
+1. The <img> element adds an image to the webpage. The browser retrieves the image using the
+src attribute.
+2. The browser displays the text from the alt attribute when the image cannot be loaded. A
+person with visual impairments may use assistive technology to read the alt text aloud.
+3. The browser displays content following the images.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 39/94
+10/12/24, 1 :35 PM I PARTICIPATION
+ACTIVITY 1.5.2: Images.
+1) What element includes a picture in a
+webpage?
+0 <image>
+0 <img>
+0 <pict>
+2) Which image element attribute
+specifies the image's URL?
+0 url
+0 src
+0 alt
+3) Which is not a required attribute for
+images?
+0 src
+0 alt
+Q title
+zyBooks
+I PARTICIPATION
+ACTIVITY 1.5.3: Reasons for using alt attribute for images.
+Below are reasons for using the alt attribute. Match the reason with the appropriate scenario.
+If unable to drag and drop, refresh the page.
+Pass HTML validation Support assistive technology
+Allow browser to turn off image display Handle broken image URLs
+Software, such as page readers, help
+users with vision or cognitive
+impairments.
+A user may want to reduce data cost
+or load a page faster.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+D
+40/94
+10/12/24, 1 :35 PM
+Image size
+zyBooks
+The image cannot be loaded from the
+specified location.
+The alt attribute is required.
+The width attribute and height attribute are optional <img> attributes that tell the browser how many
+pixels the image should occupy. Ex:
+<img src=" logo. png" al t="Logo" width=" 2 00" height=" 100 "> makes the logo.png
+image display in a rectangle that is 200 x 100 pixels. If the specified width and height are different
+from the image's actual size, the browser will resize the image for display.
+An image's aspect ratio is the ratio of the image width to the image height. The aspect ratio is written
+as width:height. Ex: An image 500 pixels wide and 250 pixels high has an aspect ratio of 500:250,
+which simplifies to 2:1.
+If an <img> contains only a width or only a height attribute, the image's aspect ratio is maintained.
+If an <img> specifies a width and height different from the image's aspect ratio, the browser will
+distort the image to match the specified attribute values.
+I PARTICIPATION
+ACTIVITY 1.5.4: Image sizing.
+The following HTML fragment shows a cat image that is 640 x 424 pixels. Try modifying the
+HTML to adjust the image size. Render the webpage after each instruction:
+1. Make the image 250 pixels wide. Specify only the width.
+2. Make the image 250 pixels high. Specify only the height.
+3. Resize the image to have a width of 250 pixels and a height of 250 pixels.
+Try experimenting with other combinations of sizes to see how the width and height affect
+the display of the image.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+41/94
+10/12/24, 1 :35 PM zyBooks
+1 ~img src="https://resources.zybooks.com/WebProgramming/mediumCatvl.jpg" alt="Ci
+Render webpage Reset code
+Your webpage
+► View solution
+I PARTICIPATION
+ACTIVITY 1.5.5: Image width and height attributes.
+For the following questions, assume the image is 1000 pixels wide and 800 pixels high.
+Indicate the values needed in the following HTML to produce an image with an aspect ratio
+of 2:1 while maintaining the image's width of 1000 pixels.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+42/94
+10/12/24, 1 :35 PM zyBooks
+I
+<img alt="A sleepy dog"
+src="https://resources.zybooks.com/WebProgramming/mediumDogvl.jpg"
+width="(a)" height="(b)">
+1) (a)
+0 1000
+0 500
+0 800
+0 400
+2) (b)
+0 1000
+0 500
+0 800
+0 400
+PARTICIPATION ACTIVITY 1.5.6: Valid HTML code.
+Indicate which of the following <img> tags are valid.
+1) <img src=" smiley. gif">
+0 Valid
+0 Invalid
+2) <img src=" sparky .png" al t ="A
+picture of my dog, Sparky">
+</img>
+Q Valid
+0 Invalid
+3) <img alt="Fun weekend"
+src="weekend.jpg">
+0 Valid
+0 Invalid
+4) <img src="weekend. jpg" al t ="Fun
+weekend" width= "200">
+0 Valid
+O Invalid
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+D
+0
+0
+0
+0
+43/94
+10/12/24, 1 :35 PM zyBooks
+Image formats
+Web browsers support three popular image formats:
+1. The JPEG (Joint Photographic Experts Group) image format is commonly used for digital
+photographs.
+2. The PNG (Portable Network Graphics) image format is commonly used for line art, screenshots,
+or images requiring transparency.
+3. The G/F (Graphics Interchange Format) image format is commonly used for simple animated
+images.
+All three formats use data compression to decrease the image file size, which allows the file to be
+transferred over the internet quicker. JPEG images use lossy compression, meaning that some of the
+original picture information is lost when compressed. A photograph is best saved as a JPEG image
+because humans cannot easily perceive the quality loss in a photograph. PNG and GIF images use
+lossless compression, meaning no image quality is lost. Lossless compression works best when a
+large number of adjacent pixels are the same color.
+JPEG and PNG images can display true color (24-bit color), which is approximately 16 million different
+colors. GIF images are limited to only 256 colors (8-bit color), but GIF images can display animations,
+which are popular on social media.
+Table 1.5.1: Three popular image formats.
+File I
+Name Use Compression Colors Transparency Animation
+extension
+I
+JPEG Photographs Lossy
+24-
+. jpg No No
+bit
+j. L ~ -1- -1-
+PNG
+Line art and
+Lossless
+24-
+.png Yes No
+screens hots bit
+GIF .gif Animated images Lossless 8-bit Yes Yes
+◄ ►
+Other image formats
+Less common image formats include:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 44/94
+10/12/24, 1 :35 PM zyBooks
+• The APNG image format by Mozilla adds animation capability to PNG with true
+color support.
+• The SVG image format is an XML format that describes an image as a series of
+shapes and lines.
+• The WebP image format by Google supports true color, transparency, and
+animation.
+• The AVIF image format supports transparency, lossy or lossless compression,
+and higher compression rates.
+I PARTICIPATION
+ACTIVITY
+◄
+1.5.7: Image formats.
+Match each image to the image format most appropriate for that image.
+(a)
+Source: Stork imag~
+(b)
+(c)
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D ,.
+45/94
+10/12/24, 1 :35 PM zyBooks
+If unable to drag and drop, refresh the page.
+PNG
+JPEG
+GIF
+Favicon
+A favicon is a small icon that identifies a website and typically displays in a browser
+tab. A favicon can be any image format (JPEG, PNG, GIF) and any size. PNG is a
+popular favicon format because a PNG can have transparent pixels.
+X
+~ C i Secure
+A favicon is defined with a <link> element, which defines a link between a webpage
+and an external resource.
+<head>
+<title>My webpage</ title>
+<link rel="icon" href="favicon.png">
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 46/94
+10/12/24, 1 :35 PM
+I CHALLENGE
+ACTIVITY 1.5.1: Images.
+570104.20654 l 6.qx3zqy7 -
+zyBooks
+Add an alt attribute containing: Soft rain SHOW EXPECTED
+1
+2 <img src="deliberately-invalid-URL" >
+3
+1
+Check - View your last submission v
+Exploring further:
+• HTML images (W3Schools)
+• WebP image format (Google)
+• AVIF has landed (Jake Archibald)
+• Favicon (W3Schools)
+2
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+►
+3
+47/94
+10/12/24, 1 :35 PM zyBooks
+1.6 Lists
+Unordered lists
+An unordered list is a collection of items, usually indented and shown using bullets, created with the
+<ul> element. Each list item is created with the <Ii> element. I PARTICIPATION
+ACTIVITY 1.6.1 : Unordered list.
+<p >Some high demand majors are: </p >
+<ul>
+<li>Mathematics</li>
+<li>Statistics</li>
+<li>Computer Science</ li>
+</ul>
+<p >Source: College Consensus 2019</p >
+Animation content:
+The following code snippet is displayed:
+<p>Some high demand majors are:</p>
+<ul>
+<li>Mathematics</li>
+<li>Statistics</li>
+<li>Computer Science</li>
+</ul>
+<p>Source: College Consensus 2019</p>
+r
+Some high demand majors are:
+• Mathematics
+• Statistics
+• Computer Science
+Source: College Consensus 2019
+D
+End of code snippet. A monitor displays the paragraph with the text, "Some high demand majors
+are:" under it is a list with the bullet points Mathematics, Statistics, and Computer Science. Under
+the list is the paragraph with the text, "Source: College Consensus 2019."
+Animation captions:
+1. An unordered list is surrounded by opening <ul> and closing </ul> tags.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 48/94
+10/12/24, 1 :35 PM zyBooks
+2. A list item is surrounded by opening <Ii> and closing </Ii> tags. The browser displays each
+item indented and with a bullet.
+3. Additional list items may be added. Indenting ends after the list.
+I PARTICIPATION
+ACTIVITY 1.6.2: Unordered lists and list items.
+Arrange the tags to produce the following unordered list.
+• Peanutbutter
+• Jelly
+If unable to drag and drop, refresh the page.
+Ill <li>Peanutbutter</ li>
+(1)
+(2)
+(3)
+(4)
+I PARTICIPATION
+ACTIVITY 1.6.3: Unordered list elements.
+Indicate whether each line has an error.
+(a) <ul>
+(b) <li>Apples<li>
+(c) <li>Oranges
+(d) </ul>
+1) (a)
+0 No error
+O Error
+2) (b)
+-
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+<li>Jelly</ li>
+D
+D
+0
+0
+49/94
+10/12/24, 1 :35 PM zyBooks
+0 No error
+0 Error
+3) (c) 0
+0 No error
+0 Error
+4) (d) 0
+0 No error
+0 Error
+Ordered lists
+An ordered list is a sequenced collection of items, usually indented and shown using numbers or
+letters, created with the <o/> element. As with an unordered list, each list item is created with an <li>
+element. The <ol> element's numbering scheme is specified with the type attribute. The table below
+shows the different types available.
+Table 1.6.1: Ordered list types.
+Type Description Example _J Result
+~
+<ol type="l"> 1. item
+<li>item
+I 1</li> 1
+Numbers (default)
+<li>item 2. item
+type="l" 2</li> 2
+<li>item
+3</li> 3. item
+</ol>
+I
+3
+I
+<ol type="A"> A. item
+<li>item
+1</li> 1
+<li>item B. item
+type="A" Uppercase letters 2</ li> 2
+<li>item
+3</li> C. item
+</ol>
+I
+3
+I
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 50/94
+10/12/24, 1 :35 PM zyBooks
+<ol type="a"> a. item
+<li>item
+I 1</li> 1
+<li>item b. item
+type="a" Lowercase letters 2</li>
+<li>item 2
+3</li> c. item
+</ol> 3
+I
+<ol type="I"> I. item
+<li>item
+1</li> 1
+Uppercase Roman <li>item II. item
+type="I"
+numerals 2</li> 2 <li>item
+3</li> Ill. item
+</ol> 3
+I
+<ol type="i"> i. item
+<li>item
+1</li> 1
+Lowercase Roman <li>item ii. item
+type="i"
+numerals 2</li> 2 <li>item
+3</li> iii. item
+</ol>
+I
+3
+I
+CSS list-style-type
+The CSS property list-style-type provides the ability to change the bullet used in an
+unordered list and offers more numbering options in an ordered list.
+Example
+<ul style="list-style-type:square">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+Result
+• Item 1
+• Item 2
+• Item 3
+51/94
+10/12/24, 1 :35 PM
+I PARTICIPATION
+ACTIVITY
+zyBooks
+<ol style="list-style-type:lower-greek">
+<li>Item 1</ li>
+<li>Item 2</ li>
+<li>Item 3</ li>
+</ol>
+1.6.4: An ordered list: High demand majors.
+The HTML below shows an ordered list. Modify the HTML:
+a. Item 1
+~- Item 2
+y. Item 3
+1. Add Genetic Counseling as the fourth degree and Cybersecurity as the fifth.
+2. Use the type attribute to change the numbering type to letters and then to Roman
+numerals.
+1 ~p>Top masters degrees in demand are: </p>
+2 <ol>
+3 <li>Physician Assistant</li>
+4 <li>Statistics</li>
+5 <li>Nursing</li>
+6 </ol>
+7 <p>Source: College Consensus 2019</p>
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+►
+52/94
+10/12/24, 1 :35 PM
+Your webpage
+Top masters degrees in demand are:
+1. Physician Assistant
+2. Statistics
+3. Nursing
+Source: College Consensus 2019
+► View solution
+I PARTICIPATION
+ACTIVITY 1.6.5: Ordered list.
+Refer to the HTML below.
+<ol>
+<li>Cats</li>
+<li>Dogs</li>
+<li>Hamsters</li>
+</ol>
+1) The list will be numbered 1., 2., 3.
+0 True
+0 False
+2) Adding type=" i" to the first <li>
+changes the list to i., ii., iii.
+0 True
+0 False
+3) Changing the ordered list to an
+unordered list with type="A" changes
+the list to A., B., C.
+0 True
+O False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+zyBooks
+D
+0
+0
+0
+53/94
+10/12/24, 1 :35 PM zyBooks
+Nested lists
+A nested list is a list within a list item of another list. A nested list displays indented inside the outer
+list. A nested unordered list uses a different bullet style, and a nested ordered list restarts at 1. I PARTICIPATION
+ACTIVITY 1.6.6: Nested movie and book lists.
+<ul>
+<li>Favorite movies
+<ol>
+<li>The Princess Bride</li>
+<li>Remember the Titans</li>
+<li>Moana</li>
+</ol>
+</li>
+<li>Favorite books<!){i.>
+<ol>
+<li>To Kill a Mockingbird</li>
+<li>The Brothers Karamazov</li>
+</ol>
+</li>
+</ul>
+Animation content:
+Start HTML code:
+<ul>
+<li>Favorite movies
+<ol>
+<Ii> The Princess Bride</li>
+<li>Remember the Titans</li>
+<li>Moana</li>
+</ol>
+</Ii>
+<li>Favorite books
+<ol>
+<Ii> To Kill a Mockingbird</li>
+<Ii> The Brothers Karamazov</li>
+</ol>
+</Ii>
+</ul>
+End code.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+• Favorite movies
+1. The Princess Bride
+2. Remember the Titans
+3. Moana
+• Favorite books
+1. To Kill a Mockingbird
+2. The Brothers Karamazov
+54/94
+10/12/24, 1 :35 PM zyBooks
+Browser renders: bullet Favorite movies with nested list: 1. The Princess Bride, 2. Remember the
+Titans, 3. Moana. Followed by: bullet Favorite books with nested list: 1. To Kill a Mockingbird, 2. The
+Brothers Karamazov.
+Animation captions:
+1. An unordered list has two list items.
+2. A numbered list of movies is nested inside the unordered list's first Ii element.
+3. A common mistake is to leave a nested list outside an item's <Ii> and </Ii> tags. Although the
+HTML may render as intended, the HTML is technically incorrect.
+4. For the HTML to conform to the HTML Living Standard, the nested list should go INSIDE an
+item's <Ii> and </Ii> tags.
+I PARTICIPATION
+ACTIVITY 1.6.7: Nested lists.
+The HTML below shows three nested ordered lists. Try making the following modifications:
+1. Add the fourth most populous state, New York, with cities New York and Buffalo.
+2. Change California's nested <ol> elements to <ul> elements.
+3. Add an ordered or unordered list under Los Angeles with three items:
+1. Most populous city in California
+2. Second-most populous city in USA
+3. Third-most populous city in North America
+1 ~p>Most populous states and cities within those states: </p>
+2 <ol>
+3 <li>California
+4 <ol>
+5 <li> Los Angeles</li>
+6 <li>San Diego</li>
+7 </ol>
+8 </li>
+9
+10 <li>Texas
+11 <ol>
+12 <li>Houston</li>
+13 <li>San Antonio</li>
+14 </ol>
+15 </li>
+16
+17 <li>Florida
+1 ,-,-1
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+55/94
+10/12/24, 1 :35 PM
+Your webpage
+Most populous states and cities within those states:
+1. California
+1. Los Angeles
+2. San Diego
+2. Texas
+1. Houston
+2. San Antonio
+3. Florida
+1. Jacksonville
+2. Miami
+► View solution
+I PARTICIPATION
+ACTIVITY 1.6.8: Nested lists.
+zyBooks
+Indicate what precedes the given list item when rendered by the browser. Valid answers are:
+bullet, 1 ., 2., or 3.
+7) <ol>
+<li>Apples</ li>
+<li>Oranges</li>
+</ol>
+Oranges
+Show answer
+2) <ol>
+<li>Apples</li>
+<li>Oranges
+<ol>
+<li>Valencia</li>
+<li>Mandarin</li>
+</ol>
+</li>
+</ol>
+Valencia
+Show answer
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+56/94
+10/12/24, 1 :35 PM
+3) <ol>
+<li>Apples
+<ul>
+<li>Granny
+Smith</li>
+<li>Red
+Delicious</li>
+</ul>
+</li>
+<li>Oranges</li>
+</ol>
+[ Red Delicious
+Show answer
+4) <ol>
+<li>Apples
+<ol>
+<li>Red</li>
+<li>Green</li>
+</ol>
+</ li>
+<li>Oranges</li>
+<li>Bananas</li>
+</ol>
+[ Oranges
+Show answer
+I CHALLENGE
+ACTIVITY 1.6.1: Lists.
+570104.2065416.qx3zqy7 -
+zyBooks
+Modify the grocery list to be an unordered list. Use a paragraph element to enclose the text
+"Grocery list:" before the list. Mismatched, missing, and incorrectly nested tags are
+considered incorrect even if the rendered webpage looks correct. SHOW EXPECTED
+1
+2 Grocery list:
+3 Apples
+4 Avocados
+5 Eggs
+6
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+D
+57/94
+10/12/24, 1 :35 PM zyBooks
+1 2 3 4
+Check - View your last submission v
+Exploring further:
+• HTML lists from W3Schools.
+1.7 Links
+Anchor element
+The <a> element, or anchor element, defines a hyperlink in a webpage. A hyper/ink, or link, specifies
+where other information is located and what action the web browser should perform when a user
+clicks the hyperlink. A hyperlink action may tell the web browser to go to another webpage, to go to a
+location in the same webpage, to download a file, or to send an email.
+The href attribute specifies the hyperlink's URL. Ex:
+<a href="https: / /wikipedia. org/">Wikipedia</ a> displays the hyperlink WikiQedia and
+causes the browser to request the URL https://wikipedia.org/ when the hyperlink is clicked. Other URL
+schemes may cause the browser to take different actions. Ex: The URL mailto:mary@gmail.com uses
+the mail to scheme that directs the browser to start an email program and address an email to
+mary@gmail.com. I PARTICIPATION
+ACTIVITY 1.7.1 : URL schemes. D
+If unable to drag and drop, refresh the page.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 58/94
+10/12/24, 1 :35 PM zyBooks
+11111111 n ■
+Hyperlink used to send requests and
+responses that are readable only by
+the client and server.
+Hyperlink used to send requests and
+responses over the Internet without
+encryption.
+Hyperlink used to send email.
+Hyperlink used to refer to a document
+on the same computer as the web
+browser.
+Hyperlink used to transfer data files.
+I PARTICIPATION
+ACTIVITY 1.7.2: Hyperlink actions.
+What does clicking on each of the following hyperlinks do?
+7) <a
+href="https://example.com/index.html">See
+example</a>
+0 Loads a webpage over an unencrypted
+connection
+0 Encrypts the webpage load request and
+response
+0 Opens an email app to compose an email
+2) <a
+href="mailto:person@example.com" >Get
+in touch</a >
+0 Loads a page over an unencrypted
+connection
+0 Opens an email app to compose an
+email
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+59/94
+10/12/24, 1 :35 PM
+0 Downloads a file
+3) <a
+href="http://exarnple.com/index.htrnl" >See
+exarnple</a>
+0 Loads a page over an unencrypted
+connection
+0 Encrypts the page load request and
+response
+0 Opens a file
+4) <a
+href="ftp://exarnple.com/index.htrnl" >Raw
+data</ a>
+0 Loads a page over an unencrypted
+connection
+0 Opens a file from the user's computer
+0 Downloads a file
+5) <a
+href="file:///C : /exarnple/index.htrnl" >See
+exarnple</a>
+O Loads a page over an unencrypted
+connection
+O Opens a file from the user's computer
+O Downloads a file
+I PARTICIPATION
+ACTIVITY 1.7.3: Create a hyperlink to a webpage.
+zyBooks
+The following HTML shows a paragraph with a URL. Try turning the URL into an HTTPS
+hyperlink to example.com.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+D
+60/94
+10/12/24, 1 :35 PM zyBooks
+1 ~p> Link to https://example.com/</p>
+Render webpage Reset code
+Your webpage Expected webpage
+Link to https://example.com/ Link to htms://examP-le.com/
+► View solution
+Absolute and relative URLs
+When a webpage links to web resources on the same website, a relative URL may be specified in the
+href attribute instead of an absolute URL.
+• An absolute URL is a complete URL. Ex:
+<a href="http://example.com/test. html ">test</ a> is a hyperlink using the
+absolute URL http://example.com/test.html.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 61/94
+10/12/24, 1 :35 PM zyBooks
+• A relative URL specifies the relative path to the web resource with no scheme or hostname. Ex:
+<a href="test. html " >test</ a> uses the relative URL test.html to refer to an HTML
+document on the same website and with the same path as the current HTML document.
+A relative URL may use two periods followed by a forward slash ( .. /) in front of a filename to indicate
+the file is one directory above the current HTML document. Ex: The relative URL .. /test. html
+indicates test.html is in the directory above the HTML document containing the link. I PARTICIPATION
+ACTIVITY 1.7.4: Using relative URLs to link to files on the same website.
+mywebsite
+~ index.html
+~ family.html
+L- hobbies
+~ football.html
+L- geocaching.html
+Animation content:
+<!--index.html-->
+<p>
+<a href="family.html" >My family</a>
+</p>
+<p >My hobbies:
+<a href="hobbies/football.html">Football</a> and
+<a href="hobbies/geocaching.html">Geocaching</a>
+</p>
+< 1-- football.html-->
+<p >See my
+<a href="geocaching.html" >Geocaching page</a>
+</p>
+<p>
+<a href=" .. /index.html" >Go to my home page</ a>
+</p>
+D
+A diagram illustrates the nesting in mywebsite; index.html, family.html and hobbies are nested under
+mywebsite; football.html and geocaching.html are nested under hobbies. The following code
+snippet for index.html is displayed:
+<!--index.html-->
+<p>
+<a href="family.html">My family</a>
+</p>
+<p>My hobbies:
+<a href="hobbies/football.html">Football</a> and
+<a h ref="hobbies/ geocach i ng. html ">Geocach i ng</ a>
+</p>
+End of code snippet. The following code snippet for football.html is displayed:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 62/94
+10/12/24, 1 :35 PM
+<!--football.html-->
+<p>See my
+<a href="geocaching.html">Geocaching page</a>
+</p>
+<p>
+<a href=" . ./index.html">Go to my home page</a>
+</p>
+End of code snippet.
+Animation captions:
+zyBooks
+1. A website is organized into 4 HTML files. football.html and geocaching.html are located in the
+hobbies directory.
+2. index.html contains a hyperlink with a relative URL to family.html since family.html is on the
+same website as index.html.
+3. Hyperlinks to football.html and geocaching.html use relative URLs that start with "hobbies/"
+because both files are in the hobbies directory.
+4. football.html uses a relative URL to link to geocaching.html, which is in the same directory as
+football.html.
+5. football.html uses " .. " in the relative URL to link to index.html, because " .. " refers to the directory
+that is one level up from football.html, the mywebsite directory.
+I PARTICIPATION
+ACTIVITY 1.7.5: Relative URLs.
+Refer to the animation above.
+1) In which file would the hyperlink below
+be expected?
+<a href="index.html" >Home
+page</a>
+0 family.html
+0 football.html
+0 geocaching.html
+2) In which file would the hyperlink below
+be expected?
+<a
+href=" .. / family.html" >Family</a >
+0 index.html
+0 family.html
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+63/94
+10/12/24, 1 :35 PM
+0 geocaching.html
+3) Assume a directory called "junk" is
+located in the hobbies directory. What
+relative URL would index.html use to
+link to a file called stuff.html in the junk
+directory?
+0 stuff.html
+0 junk/stuff.html
+O hobbies/junk/stuff.html
+4) Assume a directory called "junk" is
+located in the hobbies directory, and
+the junk directory contains the file
+stuff.html. What relative URL would
+stuff.html use to link to index.html?
+0 index.html
+0 . ./index.html
+0 . ./../index.html
+Section links
+zyBooks
+0
+0
+A URL can point to a section, or fragment, of a document by adding a hash tag(#) and a fragment
+identifier at the end of the URL. Ex:
+https : //en. wikipedia. org/wiki/Computer science#History refers to the "History"
+section of the "Computer_science" page on Wikipedia.
+Adding the id attribute to any element creates a fragment identifier, permitting URLs to link directly to
+the id's location in the document. Several rules exist for an id value:
+• May be composed of any characters except whitespace characters. Ex: "history 123" is invalid
+because of the space.
+• Cannot start with a number. Ex: "3section" is invalid.
+• Is case sensitive. Ex: "History" and "history" are different ids.
+• Must be unique in the document. Ex: Two elements both using "history" is invalid.
+Good practice is to choose id values that start with a letter and are composed of only letters, digits,
+dashes (-), and underscores (_). Ex: "history7 23-late".
+The HTML in the figure below creates two section links to the <section> elements with fragment
+identifiers "Ch1" and "Ch2".
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 64/94
+10/12/24, 1 :35 PM zyBooks
+Figure 1.7.1: Section links to two <section> elements.
+<hl>Pride and Prejudice</hl>
+<p>
+Links to chapters:
+<a href="#Chl" >Chapter 1</a>
+<a href="#Ch2" >Chapter 2</ a>
+</p>
+<section id="Chl">
+<h2>Chapter One</h2>
+<p>
+It is a truth universally acknowledged, that a single man in
+possession of a good
+fortune, must be in want of a wife.
+</p>
+<p>
+However little known the feelings or views of such a man may be on his
+first entering
+a neighbourhood, this truth is so well fixed in the minds of the
+surrounding families,
+that he is considered the rightful property of some one or other of
+their daughters.
+</p>
+</ section>
+<section id="Ch2">
+<h2>Chapter Two</h2>
+<p>
+Mr. Bennet was among the earliest of those who waited on Mr.
+Bingley ...
+<Ip>
+</ section>
+◄
+I PARTICIPATION
+ACTIVITY 1.7.6: Create a hyperlink to a webpage fragment.
+The following HTML contains a hyperlink to the Wikipedia page about Abraham Lincoln. Try
+adding a document fragment identifier to the hyperlink to point to information on Abraham
+Lincoln's legacy, which is in the section named "Legacy". Each Wikipedia section has a unique
+fragment identifier to which a hyperlink can link. Note that the only way to discern whether
+the hyperlink is correct requires clicking the hyperlink to examine where the hyperlink leads.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+65/94
+10/12/24, 1 :35 PM zyBooks
+1 ~p>
+2 Link to <a href="https://en.wikipedia.org/wiki/Abraham_Lincoln">
+3 information on Abraham Lincoln's legacy</a>.
+4 < p1>
+Render webpage Reset code
+Your webpage
+Link to information on Abraham Lincoln's
+legacY..
+► View solution
+I PARTICIPATION
+ACTIVITY 1.7.7: Section links.
+Expected webpage
+Link to information on Abraham Lincoln's
+legacY..
+1) Which URL links to the "Governance" section of
+Wikipedia's Internet article?
+O https://en .wikipedia .org/wiki/lnternet
+O https://en.wikipedia.org/wiki/lnternet/Governance
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+66/94
+10/12/24, 1 :35 PM zyBooks
+O https://en .wikipedia .org/wiki/lnternet#Governance
+2) What is the paragraph's fragment
+identifier?
+<p id="location">
+Two blocks north of 2nd
+street.
+<Ip>
+0 Location
+0 location
+0 #location
+3) Which id is valid for the first paragraph?
+<p id=" __ ">
+845-555-3944
+<Ip>
+<p id="phone-work">
+845-222-4956
+<Ip>
+0 phone-work
+0 phone home
+0 phone-home
+Image links and targets
+0
+0
+The content in a hyperlink may be any valid HTML or text. A graphical hyper/ink or image link uses an
+image inside a hyperlink instead of text. Ex: The HTML below uses an image of a dog that links to the
+American Kennel Club.
+Figure 1.7.2: Graphical hyperlink: An image used within a hyperlink.
+<a href="http:llwww.akc.orgl" ><img src="dog.jpg" alt="Link to AKC using an
+image of a dog." ><la>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 67/94
+10/12/24, 1 :35 PM zyBooks
+An anchor element's target attribute indicates how the browser should display the link when clicked.
+• The self attribute value is the default and indicates the browser will open the link in the same
+tab or window.
+• The_ blank attribute value indicates the browser will open the link in a new tab or window.
+Figure 1.7.3: Target attribute: browser will open the link in a new tab.
+This link to the <a href="https://en.wikipedia.org/wiki/Main_Page"
+target="_blank" >Wikipedia main page</a>
+will open in a new tab or window.
+◄
+I PARTICIPATION
+ACTIVITY 1.7.8: Graphical hyperlinks and the target attribute.
+1) Hyperlinks can only contain text.
+0 True
+0 False
+2) The target attribute can be used on
+image links.
+0 True
+0 False
+3) The default value for the target
+attribute is _self.
+0 True
+0 False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+►
+D
+0
+0
+0
+68/94
+10/12/24, 1 :35 PM
+4) The web browser will always create a
+new window for hyperlinks whose
+target attribute is _blank.
+0 True
+O False
+I PARTICIPATION
+ACTIVITY 1.7.9: Hyperlink review.
+Determine if the following are valid or invalid hyperlinks.
+7) <a
+href="example.com/index.html">See
+example</a>
+Q Valid
+0 Invalid
+zyBooks
+2) <a
+href="https://example.com/index.html#History">History</a >
+0 Valid
+0 Invalid
+3) <a href="#History" >History</a >
+0 Valid
+O Invalid
+4) <a
+href="course.html#Notes">Notes </a >
+Q Valid
+0 Invalid
+5) <a
+href="https://example.org/index.html">
+<img
+src="https://example.org/picture.jpg"
+alt="Picture of cat" ></a >
+Q Valid
+0 Invalid
+6) <a href="caleb@gmail.com" >email
+me</a >
+0 Valid
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+D
+0
+0
+0
+0
+0
+0
+69/94
+10/12/24, 1 :35 PM
+0 Invalid
+I CHALLENGE
+ACTIVITY 1.7. 1: Links.
+570104.2065416.qx3zqy7 -
+zyBooks
+Add a link to https://www.wikipedia.org/. The link contents should be: Learn more
+SHOW EXPECTED
+1
+2 <!-- Your solution goes here-->
+3
+1
+Check - View your last submission v
+Exploring further:
+• HTML Links from W3schools
+2
+1.8 HTML containers
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+3
+D
+70/94
+10/12/24, 1 :35 PM zyBooks
+Containers and parent containers
+A container is any element in a web document body that has opening and closing tags. Web
+developers typically create many containers as a convenience to assist in organizing and formatting
+content. Ex: Containers can be formatted by applying styles to adjust margins, padding, horizontal and
+vertical alignment, and other visual presentation attributes.
+A parent container is the container in which another element resides.
+Table 1.8.1: Common HTML containers.
+Container Description
+<header> Container for introductory content
+<footer>
+Container for content descriptive information about the webpage like author,
+copyright, or date modified
+<address>
+<main>
+<section>
+<article>
+<nav>
+<aside>
+<div>
+<span>
+◄
+I PARTICIPATION
+ACTIVITY
+Container for person's or organization's contact information
+Container for the document's primary content
+Container for distinct parts of a document, such as a chapter
+Container for self-contained content that can be reused independently, such
+as a news article
+Container for content relating to website navigation
+Container for content not directly related to the main topic of a document
+Generic element for creating block containers
+Generic element for creating inline containers
+1.8.1 : Containers and parent containers.
+<body>
+<p >The top-selling board
+games of all time are: </p>
+The top-selling board games
+of all time are:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+-
+-
+►
+D
+71/94
+10/12/24, 1 :35 PM
+<o i >
+<l 15Cness<7 11>
+<li>Checkers</li>
+<li>Backgamrnon</li>
+<li>Scrabble</li>
+<li>Monopoly</li>
+<li>Clue</li>
+</ol>
+</body>
+Animation content:
+The following code snippet is displayed:
+<body>
+<p> The top-selling board games of all time are: </p>
+<ol>
+<li>Chess</li>
+<li>Checkers</li>
+<li>Backgammon</li>
+<li>Scrabble</li>
+<li>Monopoly</li>
+<li>Clue</li>
+</ol>
+</body>
+zyBooks
+1. Chess
+2. Checkers
+3. Backgammon
+4. Scrabble
+5. Monopoly
+6. Clue
+End of code snippet. A monitor displays a paragraph with the text, "The top-selling board games of
+all time are: " and below it is an ordered list beginning with "7 . Chess", and below it is "2. Checkers",
+"3. Backgammon", "4. Scrabble", "5. Monopoly", and "6. Clue".
+Animation captions:
+1. The <p> element is the container for the text 'The top-selling board games of all time are:".
+2. The <ol> element is the parent container for all list items.
+3. Each <Ii> element is the container for one list item.
+I PARTICIPATION
+ACTIVITY 1.8.2: Parent containers.
+Given the following HTML:
+<section>
+<ol>
+<li><img src="George-Washington.jpg" alt="George Washington" ></li>
+<li><img src="John-Adams.jpg" alt="John Adams" ></li>
+<li><img src="Thomas Jefferson.jpg" alt="Thomas Jefferson" ></li>
+</ol>
+</ section>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+72/94
+10/12/24, 1 :35 PM
+1) The <ol> element is the <li>
+element's parent container.
+0 True
+O False
+2) The <ol> element is the <img>
+element's parent container.
+O True
+0 False
+3) The <ol> element has a parent
+container.
+0 True
+0 False
+I PARTICIPATION
+ACTIVITY 1.8.3: Container structure.
+zyBooks
+Use the following visible containers created with the provided HTML below to answer the
+questions.
+<body>
+<header>
+<hl>The White House</hl>
+</header>
+<main>
+<p>
+The White House is the official residence of the President of
+the United States.
+</p>
+<img src="WhiteHouse.jpg" alt="White House">
+<address>
+White House<br>
+1600 Pennsylvania Avenue Northwest<br>
+Washington, DC 20500
+</address>
+</main>
+<footer>
+Site by <a href="mailto:solutions@example.com">Website Sol u t ions </a >
+</footer>
+</body>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+D
+73/94
+10/12/24, 1 :35 PM zyBooks
+1)
+2)
+3)
+The White Hous,e
+The \\ bite House is the official residence of the President of the
+United States.
+White House
+j 600 Pennsylvania Avem~e North,w.e,st
+Washington, DC 20-00
+I Site by \\ ebs ite Solutions
+Which element creates the container
+that holds the entire webpage?
+0 <body>
+0 <header>
+0 <main>
+Which element creates the container
+that holds the picture?
+0 <body>
+0 <main>
+0 <img>
+Which element creates the container
+that holds the White House address
+text?
+0 <footer>
+0 <main>
+0 <address>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+74/94
+10/12/24, 1 :35 PM
+4) Which element creates the parent
+container that holds the paragraph?
+Q <body>
+Q <main>
+0 <p>
+5) If a government logo and search box
+were to be added to the top of the
+page, in which container should the
+logo and search box be placed?
+Q <header>
+Q <main>
+Q <footer>
+Block elements
+zyBooks
+0
+0
+HTML elements can be categorized as either block or inline. A block element (sometimes called a
+block-level element) fills the width of the element's parent container and can contain other block
+elements, inline elements, and text. Block elements include <hl>, <table>, and <p>.
+Some block elements cannot be contained within certain other block elements when the semantics
+are unclear. Ex: The <p> element cannot contain another <p> element.
+A block element is typically displayed starting and ending on new lines. Ex: The <ol> element is a
+block element, and each ordered list starts on a new line separate from previous and following blocks.
+The <div> element is a generic element for creating block containers. Unlike other block elements,
+such as <p> and <table>, <div> is the only block element with no semantic meaning.
+Note
+◄
+By default, web browsers do not display container borders. For clarity, the container
+borders are visible in the following examples.
+Example 1.8.1: Block elements with visible containers.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+75/94
+10/12/24, 1 :35 PM zyBooks
+The following HTML breaks up a document into logical components using a <div> element
+for each component. The corresponding image displays the border for each container.
+<body>
+<div>Logo and headline elements</div>
+<div>Navigational elements</div>
+<div>Main content</div>
+<div>Footer and legal</div>
+</body>
+jLogo and headline elements
+~ avigational elements
+jMain content
+~ ooter and legal
+◄
+IAP ACRTTIVICITIPYA TION 1 .8.4: Block elements.
+1) Which element is a generic block
+element without any implied meaning?
+Q <block>
+Q <div>
+0 <section>
+2) What is the width of a block element?
+O The minimum width necessary
+to hold the block's contents.
+O The full width of the webpage.
+Q The full width of the block's
+parent container.
+lnline elements
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+0
+0
+76/94
+10/12/24, 1 :35 PM zyBooks
+An inline element fills the minimum space possible in the element's parent container and can only
+contain text or other inline elements. Ex: The <a> element is an inline element that creates a hyperlink
+container as big as the link's internal content; a hyperlink does not fill the width or height of the link's
+parent paragraph.
+The <span> element is a generic inline element. Unlike other inline elements, such as <a> and <em>,
+the <span> element has no semantic meaning.
+Since <div> and <span> do not have semantic meaning, <div> and <span> are used primarily for
+presentation and interaction purposes. Good practice is to use elements like <address>
+and <article> that convey semantic meaning when creating containers, and use <div> and <span>
+only when no other elements are appropriate.
+Example 1.8.2: Span elements with visible containers.
+The following HTML breaks up the second paragraph from Lincoln's Gettysburg Address into
+sentences using a <span> element for each component. The corresponding image displays
+a different background color for each inline container.
+<p>
+<span>Now we are engaged in a great civil war testing whether that
+nation, or any nation so conceived and so dedicated, can long
+endure. </span>
+<span>We are met on a great battle-field of that war. </span>
+<span>We have come to dedicate a portion of that field, as a final
+resting place for those who here gave their lives that that nation might
+live. </span>
+<span>It is altogether fitting and proper that we should do this. </ span>
+<Ip>
+Now vve are engaged in a great civil v.rar testing v.rhether that nation~ or
+any nation so conceived and so dedicated, can long endure. ~:Ve are met on
+a ·eat battle-field of that \var. We have come to dedicate a portion of that
+field~ as a final resting place for . hose who here gave their lives that that
+nation 1night live. It is altogether fitting and ro er that we should do this.
+◄
+I PARTICIPATION
+ACTIVITY 1.8.5: Block and inline elements.
+Refer to the following HTML, and determine if each element is a block or inline element.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+77/94
+10/12/24, 1 :35 PM zyBooks
+<p >Click on the "swoosh" to go to Nike Headquarters. <br>
+<a href="http://nike.com/" ><img src="nike-swoosh.jpg" alt="Nike swoosh">
+</a></p>
+7) <p>
+0 block
+0 inline
+2) <img>
+0 block
+0 inline
+3) <a>
+0 block
+0 inline
+4) <br>
+0 block
+0 inline
+I PARTICIPATION
+ACTIVITY 1.8.6: Hierarchy of block and inline elements.
+1) What types of elements can be inside a
+block element?
+O Only inline elements
+O Only block elements
+O Both inline and block elements
+2) What types of elements can be inside
+an inline element?
+O Only inline elements
+O Only block elements
+O Both inline and block elements
+Block vs. inline in Chrome DevTools
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+0
+D
+0
+0
+78/94
+10/12/24, 1 :35 PM zyBooks
+◄
+The difference between block and inline elements is visible in Chrome's DevTools. In
+the screenshot below-left, the mouse hovers over the <p> element in the Dev Tools,
+and a rectangle appears around the entire paragraph in the webpage. The rectangle
+spans the browser width because <p> is a block element. Below-right, the mouse
+hovers over the < span> element, but the rectangle is only as wide as the span's
+contents because <span> is an inline element.
+0 White House X + □ X 0 White House X +
+~ ➔ C CD File I C:/ temp/whitehouse.html * ~ ➔ C CD File I C:/ temp/whitehouse.html
+p 467x36 b.ite House Tiu• W hit~ House
+span 83.97 x 17
+e \\'hite House 15 the official residence of the President of the lJnned
+[i o] Elements Console Sources Network » : X [i o] Elements Console 'Sources Netw'ork »
+/ header>
+,, main
+The "
+<sp-an ..-Wh i t e Hou se </span>
+" is t he official r es idence of t.he
+President of t he United States .
+htmt body main p
+/ header
+,, main>
+••• "' P== S0
+The '"
+span White Hou se </span
+" i s the of~ cial r esidence of the
+President of t he United Stat es .
+htm I body main p
+□ X
+*
+: X
+I PARTICIPATION
+ACTIVITY 1.8.7: Block vs. inline.
+Change the <div> elements to <span> elements in the following HTML to see the
+difference between block and inline layout.
+IMMI css
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+79/94
+10/12/24, 1 :35 PM zyBooks
+1 ;<,section,>
+2 <div>According to Wikipedia, J.R.R. Tolkien's <u>The Lord of the Rings </u>
+3 best-selling novel ever written . </div>
+4
+5
+6
+7
+8
+<div>Wikipedia states that "only A Tale of Two Cities by Charles Dickens hai
+worldwide (over 200 million)". </div>
+<div>Tolkien's <u>The Hobbit</u> is the fourth best-selling novel of all tir
+9 < section>
+Render webpage Reset code
+Your webpage
+According to Wikipedia, J.R.R. Tolkien's The Lord of the Ring~ is the second best-selling novel
+ever written.
+Wikipedia states that "only A Tale of Two Cities by Charles Dickens has sold more copies
+worldwide ( over 200 million)".
+Tolkien's The Hobbit is the fourth best-selling novel of all time.
+► View solution
+I CHALLENGE
+ACTIVITY 1.8.1: HTML containers.
+570104.2065416.qx3zqy7 -Modify the <h1 > to be in a <header>, the section content to be in a <section>, and the
+copyright to be in a <footer>. SHOW EXPECTED
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+80/94
+10/12/24, 1 :35 PM
+.I.
+2 <hl> Intro</hl>
+3 <p>Content of first section</p>
+4 <p>&copy; 2012 - Phil Yu </p>
+5
+1 2
+Check - View your last submission v
+zyBooks
+3
+1.9 Tables
+Creating a table
+4
+A table is an HTML structure created with the <table> element that organizes data into rows and
+columns. A cell is a location in the table at a specific row and column.
+• The <tr> element creates a table row, which contains all the row's cells.
+• The <th> element creates a table cell containing table header information about the data.
+Usually, the browser displays table headers centered with a bold font.
+• The <td> element creates a table cell containing table data.
+A table caption defines a short descriptive text for a table and is created with the <caption> element.
+The caption element must immediately follow the opening <table> tag. A web browser typically
+renders the table caption centered above the table. I PARTICIPATION
+ACTIVITY 1.9.1: HTML tables organize data into rows and columns. D
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 81/94
+10/12/24, 1 :35 PM
+<table>
+<caption>Presidential Norninees</caption>
+<tr>
+<th>Party</th>
+<th>Norninee</th>
+</tr>
+<tr>
+<td>Dernocratic</td>
+<td>Franklin Pierc e </ td>
+</tr>
+<tr>
+<td>Whig</td>
+<td>Winfield Scott</td>
+</tr>
+</table>
+Animation content:
+The following code snippet is displayed:
+<table>
+<caption>Presidential Nominees</caption>
+<tr>
+<th>Party</th>
+<th>Nominee</th>
+</tr>
+<tr>
+<th>Democratic</th>
+<th>Franklin Pierce</th>
+</tr>
+<tr>
+<th>Whig</th>
+<th>Winfleld Scott</th>
+</tr>
+</table>
+zyBooks
+Presidential Nominees
+Party Nominee
+Democratic Franklin Pierce
+Whig Winfield Scott
+End of code snippet. The browser displays "Presidential Nominees" with a table underneath and
+column headers "Party" and "Nominee" in the first row. The second row is "Democratic" in the first
+column and "Franklin Pierce" in the second column. The third row is "Whig" in the first column and
+"Winfield Scott" in the second column.
+Animation captions:
+1. The <table> opening and </table> closing tags create a structure to store the table's contents.
+2. The <caption> opening and </caption> closing tags surround the table's caption, which
+renders above the table.
+3. The <tr> opening and </tr> closing tags create a row inside the table.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 82/94
+10/12/24, 1 :35 PM zyBooks
+4. The <th> opening and </th> closing tags create two header cells in the same row.
+5. Two more rows are added to the table. Each row has two data cells, created with <td> opening
+and </td> closing tags.
+6. Without CSS, the table renders with no borders around the table cells.
+Table borders
+◄
+The tables in this section appear with borders for clarity CSS can be added to a
+webpage to display table borders. Ex:
+<style>
+table , th, td {
+border : 2px solid gray;
+}
+</ style>
+CSS, discussed elsewhere, can a/so be used to increase the table's size, add
+background images and color, change the cell text alignment, etc.
+I PARTICIPATION 1.9.2: Table structure.
+ACTIVITY
+Match the tags to the correct blanks to render the table below.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+83/94
+10/12/24, 1 :35 PM
+<table>
+A Transistors then and now</caption>
+<tr>
+<th>Attribute</th>
+<th>1975</th>
+<th>2015</th>
+</ tr>
+B
+<th>Transistor size</th>
+<td>6 &mu;m</ td>
+<td>14 nm</td>
+</ tr>
+<tr>
+C Transistor count</th> --
+<td>6K</ td>
+D 1. 3G</ td>
+</ tr>
+</ table>
+Transistors then and now
+I Attribute llt975II 2015 I
+I Transistor size 116 μmll14 nml
+!Transistor countl@KJ[}QJ
+If unable to drag and drop, refresh the page.
+--- <caption>
+I PARTICIPATION
+ACTIVITY 1.9.3: Creating tables.
+A
+B
+C
+D
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+zyBooks
+D
+84/94
+10/12/24, 1 :35 PM zyBooks
+Enter the necessary HTML to create the different parts of a table.
+1) Create a table data cell containing
+"open".
+Show answer
+2) Create a table cell with header of
+"hours".
+l
+Show answer
+3) Create an empty table row with no
+content.
+[
+Show answer
+4) Create an empty table with the
+caption "Store Information".
+Show answer
+I PARTICIPATION
+ACTIVITY 1.9.4: Add table row.
+The following HTML is an example of a table with one row of column headers and one row of
+data. Try adding the necessary HTML and text to create another row, Average Temperature,
+at the bottom of the table that shows Alaska as having the lowest average temperature and
+Florida as having the highest average temperature.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+0
+D
+85/94
+10/12/24, 1:35 PM _____________ zyBooks
+1 ~,table,>
+2 <caption>State Weather Extremes</caption>
+3 <tr>
+4 <th ></th>
+5 <th>Lowest</th>
+6 <th>Highest</th>
+7 </tr>
+8 <tr>
+9 <th>Average Rainfall</th>
+10 <td >Nevada</td>
+11 <td >Hawaii</td>
+12 </tr>
+13 <Atablel>
+Render webpage Reset code
+Your webpage Expected webpage
+State Weather Extremes State Weather Extremes
+IILowestllHighestl
+~=====:
+!Average RainfallllNevadallHawaii I
+► View solution
+I PARTICIPATION
+ACTIVITY 1.9.5: Add table column.
+I IILowestllHighestl
+I Average Rainfall IIN evadallHawaii I
+!Average TemperaturellAlaska IIFlorida I
+The following HTML is an example of a table with one column of headers and one column of
+data. Try adding the necessary HTML and text to create another column, Heaviest, on the
+right side of the table that shows Ostrich as the heaviest bird and Blue Whale as the heaviest
+mammal.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+86/94
+10/12/24, 1 :35 PM zyBooks
+1 ~,table,>
+2 <caption>Weight Extremes</caption>
+3 <tr>
+4 <th ></th>
+5 <th>Lightest</th>
+6 </tr>
+7 <tr>
+8 <th>Bird</th>
+9 <td >Bee Hummingbird </td>
+10 </tr>
+11 <tr>
+12 <th>Mammal</th>
+13 <td >Pygmy Shrew</td>
+14 </tr>
+15 < table
+16
+Render webpage Reset code
+Your webpage
+Weight Extremes
+I II Lightest I
+I Bird IIBee Hummingbird!
+Expected webpage
+Weight Extremes
+I II Lightest II Heaviest
+I Bird IIBee Hummingbirdl!Ostrich
+I
+I
+IMamma1IIPygmy Shrew I IMamma1IIPygmy Shrew IIBlue Whalel
+► View solution
+Closing tags
+Web browsers often have to process invalid HTML and attempt to fix errors. However,
+the resulting behavior is unpredictable. Because web developers commonly do not write
+the closing </tr>, </th>, and <ltd> tags, the Living HTML Standard permits not
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 87/94
+10/12/24, 1 :35 PM zyBooks
+writing those closing tags. Good practice is to always use both the opening and closing
+tags for the <tr>, <th>, and <td> elements.
+Accessible tables
+People that use screen readers to hear table content benefit from the proper use of
+◄ ►
+◄
+<th> elements for table headings. Complex or long tables may use the scope attribute
+to improve accessibility The scope attribute is commonly assigned "col" or "row" to
+indicate if the table header applies to a column or row of data. Ex:
+<table>
+<caption>Weight Extremes</caption>
+<tr>
+<th></ th>
+<th scope="col" >Lightest</ th>
+<th scope="col" >Heaviest</ th>
+</tr>
+<tr>
+<th scope="row" >Bird</th>
+<td>Bee Hummingbird</td>
+<td>Ostrich</ td>
+</ tr>
+<tr>
+<th scope= "row" >Mammal</th>
+<td>Pygmy Shrew</ td>
+<td>Blue Whale</ td>
+</tr>
+</ table>
+More information about scope is found in "Exploring further".
+Spanning multiple columns and rows
+►
+A single table cell occupies a single row and column by default, but a cell may span multiple columns
+or multiple rows using the co/span attribute and rowspan attribute to specify how many columns or
+rows to span. The col span and rowspan attributes apply to <td> and <th> elements.
+I PARTICIPATION
+ACTIVITY 1.9.6: Spanning multiple columns and rows.
+The following HTML creates a table with a "Warmup" cell that spans 3 columns and a
+"Scrimmage" cell that spans 2 rows. Add HTML and text to create a "Sat" column and "7 2:00"
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+88/94
+10/12/24, 1 :35 PM zyBooks
+row containing cells spanning multiple rows or columns as shown in the expected webpage.
+1 ~.table,>
+2 <caption>Team Schedule</caption>
+3 <tr>
+4 <th ></th>
+5 <th >Mon</th>
+6 <th >Wed</th>
+7 <th >Fri</th>
+8 </tr>
+9 <tr>
+10 <th >9:00</th>
+11 <td colspan="3" >Warmup</td>
+12 </tr>
+13 <tr>
+14 <th >10:00</th>
+15 <td >Drills</td>
+16 <td >Skills Test </td>
+17 <td rowspan="2" >Scrimmage</td>
+1 / / +n,
+Render webpage Reset code
+Your webpage
+Team Schedule
+D ~ II Wed II Fri
+I 9:00 IIWarmup
+110:00IIDrillsllSkills TestlB
+~~ Scnmmage
+~~ 1!Weights I
+► View solution
+Expected webpage
+Team Schedule
+D ~ I Wed II Fri II Sat I
+I 9:00 IIWarmup IB
+ltO:OOIIDrillsll Skills TestlB Games
+~~ ,Scnmmage
+~~!Weights I
+~ II IITeamLunch I
+I PARTICIPATION
+ACTIVITY 1.9.7: Spanning multiple columns and rows.
+Refer to the table below.
+alpha
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+89/94
+10/12/24, 1 :35 PM
+beta
+gamma
+epsilon
+1) What HTML creates the "alpha" table
+cell?
+Q <tr colspan="2" >alpha</ tr>
+Q <td colspan="2" >alpha</ td>
+Q <td cols="2" >alpha</ td>
+2) What HTML creates the second row?
+<tr>
+<td>beta</ td>
+Q <td
+rowspan="2" >gamma</ td>
+</ tr>
+<tr>
+Q <td>beta</ td>
+</ tr>
+0
+<tr>
+<td>beta</ td>
+<td>gamma</td>
+</ tr>
+3) What HTML creates the third row?
+<tr>
+<td>epsilon</ td>
+Q <td
+rowspan="2" >gamma</ td>
+</ tr>
+0
+<tr>
+<td>epsilon</ td>
+<td></ td>
+</ tr>
+<tr>
+Q <td>epsilon</ td>
+</ tr>
+I CHALLENGE
+ACTIVITY 1.9.1: Modifying a table.
+570104.2065416.qx3zqy7 - https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+zyBooks
+0
+0
+0
+D
+90/94
+10/12/24, 1 :35 PM zyBooks
+Create another row for Bob, at the bottom of the table with a lowest score of 84 and highest
+of 97. SHOW EXPECTED
+1 <table>
+2 <caption> Exam scores</caption>
+3 <tr>
+4 <th ></th>
+5 <th >Lowest </th>
+6 <th >Highest </th>
+7 </tr>
+8 <tr>
+9 <th >Tim</th>
+10 <td >80</td>
+11 <td >90</td>
+12 </tr>
+13
+14 <!-- Your solution goes here-->
+15
+16 </table>
+1 I 2
+3 4 5
+Check - View your last submission v
+Header, body, and footer
+Three optional table tags specify each part of a table:
+• The <thead> element specifies the table header.
+• The <tbody> element specifies the table body.
+• The <tfoot> element specifies the table footer.
+The <the ad>, <tbody>, and <tf oot> elements do not affect the layout of the table, but browsers
+may use the elements to enable the table body to scroll independently of the header and footer or to
+print the header and footer on each page of a multi-page table printout. I PARTICIPATION
+ACTIVITY 1.9.8: Head, body, footer.
+Match the tags to the correct blanks to render the table below.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+91/94
+10/12/24, 1 :35 PM
+<table>
+A
+<tr>
+<th>Movie</th>
+<th>Rate</ th>
+<th>Price</th>
+</ tr>
+</thead>
+B
+<tr>
+<td>Finding Dory</td>
+<td>Adult</td>
+<td>$10</ td>
+</ tr>
+<tr>
+<td>Finding Dory</td>
+<td>Child</td>
+<td>$6</td>
+</tr>
+</ tbody>
+C
+<tr>
+<th colspan="2" >Total</ th>
+<th>$16</th>
+</ tr>
+</ tfoot>
+</ table>
+If unable to drag and drop, refresh the page.
+<thead> <tbody> <tfoot>
+A
+B
+C
+Exploring further:
+• HTML tables from W3Schools.com
+• Tables with Two Headers from w3.org
+zyBooks
+I Movie II Rate IIPricel
+!Finding DoryllAdultll!!QJ
+!Finding Doryll~[![J
+I Total ll]ill
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 92/94
+10/12/24, 1 :35 PM zyBooks
+1.10 Special characters
+Entities
+An entity is a mechanism for writing special characters or symbols in HTML, such as mathematical
+symbols, characters in most languages, and many other symbols. Many HTML entities can be
+specified by name. However, some entities do not have a name and can instead be specified using a
+decimal or hexadecimal number as shown in the table below.
+Table 1.10.1: HTML entity formats.
+Format type
+Format
+Symbol Description
+example
+I HTML defines names for common well-known
+Entity name &copy; © entities, which are typically English
+I abbreviations for the symbol.
+Decimal
+&#169; ©
+Every HTML entity has a unique number, which
+number can be specified as a decimal value.
+I
+I Every HTML entity has a unique hexadecimal
+Hexadecimal
+number
+&#x000A9; © number, which is the hexadecimal equivalent
+I to the entity's decimal number.
+◄
+I PARTICIPATION
+ACTIVITY 1.10.1: HTML entities for special symbols.
+Refer to the following symbols:
+• Mathematical "for all" symbol v with entity name "forall".
+• Euro symbol€ with entity name "euro".
+• Umbrella symbol T with decimal number 9730.
+1) The v symbol can be written as
+&forall; .
+0 True
+O False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+-
+►
+D
+0
+93/94
+10/12/24, 1 :35 PM
+2) The€ symbol can be written as &euro.
+O True
+O False
+3) The j symbol can be written as
+&#9730;.
+0 True
+0 False
+Emoji
+zyBooks
+Emoji characters can be displayed in a webpage with a decimal or hexadecimal entity.
+Ex: The happy face emoji, @, can be displayed with &#128512; or &#x1F600 ; . Since
+emoji are characters, not images, emoji characters can also be copied and pasted into
+any HTML document. Ex: <p> ()<Ip>.
+◄
+Entities for reserved characters
+0
+0
+►
+The< and & characters can be displayed using entities. The< character normally marks the beginning
+of a tag, so & 1 t; is used to display the < character when < is not part of a tag. The & character marks
+the beginning of an entity name, so &amp; is used to display the & character when & does not start an
+entity name.
+If the browser detects that < is being used without a tag or if & is being used without an entity, the
+browser will likely display the< or & characters. Ex: The HTML 2 < 3 & 4 will usually display
+2 < 3 & 4 without using entities. Good practice is to use &l t; and &amp; instead of relying on the
+browsertodeterminetheHTMLauthor'sintention. Ex: 2 &lt; 3 &amp; 4.
+I PARTICIPATION 1.7 0.2: HTML entities.
+ACTIVITY
+Match the character to the entity format.
+If unable to drag and drop, refresh the page.
+■ 11111
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+94/94

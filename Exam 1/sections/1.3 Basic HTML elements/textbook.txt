@@ -1,0 +1,494 @@
+Paragraphs
+The <p> element creates a paragraph in an HTML document. A paragraph is enclosed in HTML by the
+<p> opening and </p> closing tags. Browsers visually separate paragraphs from other text with
+spacing above and below.
+A common error is forgetting the closing <Ip> tag, or trying to put a paragraph inside of another
+paragraph. The web browser might render nested <p> tags visually correct, but an HTML validator will
+generate an error.
+I PARTICIPATION
+ACTIVITY 1.3.1: <p> and </p> tags enclose a paragraph.
+<p>
+This text will become
+the first paragraph.
+</p>
+<p>
+This text will become
+the second paragraph.
+</p>
+<p>
+This text will become
+the third paragraph.
+</p>
+Animation content:
+The following code snippet is displayed:
+<p>
+This text will become the first paragraph.
+</p>
+<p>
+This text will become the second paragraph.
+</p>
+<p>
+This text will become the third paragraph.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+r
+This text will become the first
+paragraph.
+This text will become the second
+paragraph.
+This text will become the third
+paragraph.
+D
+23/94
+10/12/24, 1 :35 PM
+</p>
+End of code snippet.
+zyBooks
+A browser renders the three paragraphs with some space in between paragraphs.
+Animation captions:
+1. Raw text in HTML is displayed as one block of continuous text.
+2. A paragraph is surrounded by opening <p> and closing </p> tags.
+3. Additional paragraph tags may be added to generate new paragraphs.
+I PARTICIPATION
+ACTIVITY 1 .3.2: Add <p> elements.
+The following HTML is an example with two paragraphs. Notice that blank lines do not start
+a new paragraph in the rendered webpage. Add <p> and </p> tags around each paragraph
+so that the rendered webpage shows two paragraphs. Try adding extra spaces and blank
+lines between words to see how the rendered HTML changes.
+1 Jhis is the first sentence of the first paragraph. This is the second sentence
+2
+3 This sentence is the first sentence of the second paragraph.
+4 Here is the second sentence of the second paragraph.
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+24/94
+10/12/24, 1 :35 PM zyBooks
+Your webpage
+This is the first sentence of the first paragraph. This is the second sentence of the first paragraph.
+This sentence is the first sentence of the second paragraph. Here is the second sentence of the
+second paragraph.
+► View solution
+I PARTICIPATION
+ACTIVITY 1.3.3: Valid or invalid HTML.
+Determine if the following HTML is valid or invalid.
+7) <p>The first widely-used web
+browser was Netscape
+Navigator.</p><p>Then came
+Internet Explorer.</p>
+0 Valid
+0 Invalid
+2) <p>Apache is an open-source
+web server .
+<p>IIS is a web server
+created by Microsoft.
+0 Valid
+0 Invalid
+3) <p>HTML is an acronym for
+HyperText Markup Language.
+<p>The inspiration for HTML
+was SGML, the Standard
+Generalized Markup Language.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+25/94
+10/12/24, 1 :35 PM
+</p> HTML is simpler than
+SGML and adds hyperlinks.
+<Ip>
+0 Valid
+O Invalid
+Whitespace and line breaks
+zyBooks
+A whitespace character is an unprinted character such as the spaces between words and lines of text.
+Browsers treat all sequences of whitespace as a single space between non-whitespace characters.
+Ex: The three spaces in the HTML "hello there" will be displayed with a single space "hello there".
+Whitespace characters include spaces, tabs, and newlines. So, a browser treats multiple lines of text
+as a single space.
+The <br> element creates a line break in a paragraph, such that the content after the line break
+appears on a new line. The <br> element is a void element, so only the opening tag is needed. Good
+practice is to use <br> when the line break is essential to the content, such as lines in a poem or
+mailing address, and not just to add spacing for formatting a webpage. CSS, discussed elsewhere,
+should be used for formatting a webpage.
+I PARTICIPATION
+ACTIVITY 1.3.4: Whitespace in HTML.
+<p>
+This sentence has
+many
+whitespace characters.
+</p>
+<p>
+Poetry in programming<br>
+Code and art combined<br>
+I dream in HTML
+</p>
+Animation content:
+The following code snippet is displayed:
+<p>
+This sentence has
+many
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+r ~
+This sentence has many whitespace
+characters.
+Poetry in programming
+Code and art combined
+I dream in HTML
+D
+26/94
+10/12/24, 1 :35 PM
+whitespace characters.
+</p>
+<p>
+Poetry in programming <br>
+Code and art combined <br>
+I dream in HTML
+</p>
+zyBooks
+End of code snippet. A monitor displays the first paragraph with the text, 'This sentence has many
+whitespace characters." The second paragraph displays 3 lines. The first line is, "Poetry in
+programming," the second line is, "Code and art combined," and the third line is "I dream in HTML."
+Animation captions:
+1. Multiple spaces are displayed as one space when rendered.
+2. Multiple blank lines are displayed as one space.
+3. Adding <br> tags splits the displayed text into multiple lines.
+I PARTICIPATION
+ACTIVITY 1.3.5: Line break.
+The following HTML fragment shows the address of the White House. Modify the HTML to
+include line breaks ( <br>) so the rendered webpage matches the expected webpage.
+1 ( p>The White House
+2 1600 Pennsylvania Avenue Northwest
+3 Washington, DC 20500</le]>
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+27/94
+10/12/24, 1 :35 PM
+Your webpage
+The White House 1600 Pennsylvania Avenue
+Northwest Washington, DC 20500
+► View solution
+zyBooks
+Expected webpage
+The White House
+1600 Pennsylvania Avenue Northwest
+Washington, DC 20500
+I PARTICIPATION ACTIVITY 1.3.6: Whitespace and line breaks.
+7) All the words in the paragraph below
+appear on the same line when rendered
+in a browser with sufficient width.
+<p>
+Aspire to inspire
+before you
+expire.
+<Ip>
+0 True
+0 False
+2) The <br> element has a closing tag.
+0 True
+0 False
+3) The letters A and B appear on separate
+lines with a blank line in between when
+rendered in a browser.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+28/94
+10/12/24, 1 :35 PM
+<p>
+A<br><br>B
+<Ip>
+0 True
+O False
+Sections and headings
+zyBooks
+A section is a collection of related content created with a <section> element. Many documents can be
+organized into sections, with each section being wrapped in a <section> element. Ex: A scholarly
+article's abstract, introduction, main content, and references can each be wrapped in a <section>
+element.
+A heading provides a title for each section. Headings are bold by default and are visually separated
+from the other text by extra spacing. Heading elements exist for the first six levels of sections: <h1>,
+<h2>, <h3>, <h4>, <h5>, and <h6>. Headings are helpful to users who skim through a webpage, to
+assistive technologies like screen readers, and to search engines.
+Good practice is to label each section with a heading and to select a heading element that matches the
+document's hierarchical structure. A common error is to choose a heading element based on the
+desired font size.
+I PARTICIPATION
+ACTIVITY 1.3.7: Section headings.
+<body>
+<hl >Web Development</hl>
+<section>
+<h2>HTML</h2>
+<p>
+HTML defines a webpage's structure
+and content.
+</p>
+</section>
+<section>
+<h2>CSS</h2>
+<p>
+CSS specifies a webpage's layout
+and visible appearance.
+</p>
+</section>
+<section>
+<h2>JavaScript</h2>
+<p>
+JavaScript describes a webpage's
+dynamic behaviors and actions.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+r
+Web Development
+HTML
+HTML defines a webpage's structure
+and content.
+css
+CSS specifies a webpage's layout
+and visible appearance.
+JavaScript
+JavaScript describes a webpage's
+dynamic behaviors and actions.
+\.. ~
+29/94
+10/12/24, 1 :35 PM
+<Ip>
+</section>
+</body>
+Animation content:
+HTML code:
+<body>
+<h1 >Web Development</h1 >
+<section>
+<h2>HTM L </h2>
+<p>
+HTML defines a webpage's structure
+and content.
+</p>
+</section>
+<section>
+<h2>CSS</h2>
+<p>
+CSS specifies a webpage's layout
+and visible appearance.
+</p>
+</section>
+<section>
+<h2>JavaScript</h2>
+<p>
+JavaScript describes a webpage's
+dynamic behaviors and actions.
+</p>
+</section>
+</body>
+End of code snippet.
+zyBooks
+The browser displays "Web Development" in a large, bold font. Then "HTML'.' in a smaller, bold font
+followed by "HTML defines a webpage's structure and content.". Then "CSS" in a bold font followed
+by "CSS specifies a webpage's layout and visible appearance." Then "JavaScript" in a bold font,
+followed by "JavaScript describes a webpage's dynamic behaviors and actions."
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 30/94
+10/12/24, 1 :35 PM zyBooks
+Animation captions:
+1. A webpage usually has a single hl heading. The heading is visually separated from other text
+by extra spacing and is displayed with a larger font.
+2. Each section starts with an h2 heading, which has a smaller font than the hl heading.
+I PARTICIPATION 1.3.8: Sections and headings.
+ACTIVITY
+1) A <section> element should be
+placed inside a heading element.
+0 True
+O False
+2) An <h3> element should be placed
+inside a <p> element.
+O True
+0 False
+3) If <hl> text appears too big, <h2> or
+<h3> elements should be used to
+decrease the text size.
+O True
+O False
+I PARTICIPATION
+ACTIVITY 1.3.9: Add headings.
+The following HTML is missing headings. Add <hl> and </hl> tags around the "Bill of
+Rights" section title, and <h2> and </h2> tags around each "Article" section title, so that
+your webpage matches the expected webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+D
+31/94
+10/12/24, 1:35 PM ______________ zyBooks
+1 ~,bod~>
+2 Bill of Rights
+3 <p>The following are the bill of rights of the USA</p>
+4
+5 <section>
+6 Article 1
+7 <p>Body of article 1</p>
+8 </section>
+9
+10 <section>
+11 Article 2
+12 <p>Body of article 2</p>
+13 </section>
+14
+15
+Render webpage
+Your webpage
+Bill of Rights
+Reset code
+The following are the bill of rights of the USA
+Article 1
+Body of article 1
+Article 2
+Body of article 2
+► View solution
+Expected webpage
+Bill of Rights
+The following are the bill of rights of the USA
+Article 1
+Body of article 1
+Article 2
+Body of article 2
+I PARTICIPATION
+ACTIVITY 1.3.10: Hierarchical structure of documents.
+1) Write a heading for a book chapter
+titled "Introduction".
+....
+Show answer I ...
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+32/94
+10/12/24, 1 :35 PM
+2) What element is used for
+subchapter titles?
+Show answer
+3) Write an HTML fragment that
+creates a title for the fourth level of
+a document hierarchy. The title
+should be "Exquisite details".
+Show answer
+Text formatting
+zyBooks
+A number of HTML elements cause the enclosed text to render in a different font in the browser:
+0
+0
+• The <em> element indicates emphasized text, such as text having an emphasized pronunciation
+when spoken, and is italicized by default.
+• The <strong> element indicates text that has strong importance, and is bolded by default.
+• The <cite> element denotes a title, such as a book or song title, and is italicized by default. Ex:
+<cite>Spaceballs</cite> is a parody of the <cite>Star Wars</cite> tril
+yields: Spaceballs is a parody of the Star Wars trilogy.
+• The <mark> element denotes important content that should be semantically highlighted and is
+rendered with a yellow background by default. Ex:
+<mark>Highlight</mark> what is important. yields: Highlight what is important.
+• The <b> element indicates text that needs attention, like key words in a document abstract or
+product names in a review, and renders the text in bold. Ex: Mix the flour and oil together.
+• The <i> element indicates text in an alternative voice, such as a word or phrase in a foreign
+language, and is rendered using italics. Ex: Dashi is a stock used in Japanese cooking.
+• The <u> element denotes text that should appear differently from normal text, such as
+misspelled words, and is underlined by default. Ex: Misspelled is often misspelled as mispelled.
+Note
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 33/94
+10/12/24, 1 :35 PM zyBooks
+◄
+Historically, in HTML4, the <b>, <i>, and <u> elements were used to render text and
+did not have meaning, or semantics. Good practice is to avoid formatting elements
+whenever possible, and instead use elements to indicate meaning. Ex: The <i> element
+can be used to emphasize text, but the <em> element should be used to convey
+emphasis.
+Table 1.3.1: Text-formatting elements.
+Element HTML example Rendered Semantics
+--
+em <em>emphasis</em> emphasis Emphasized text
+- --
+cite <cite>cite</cite> cite Title of a work
+-
+strong <strong>strong</strong> strong Important text
+mark <mark>mark</mark> mark Marked or highlighted text
+- I
+<var>variable</var> variable
+Definition of a variable in a
+var
+computer program
+- -
+kbd <kbd>keyboard</kbd> keyboard Keyboard input
+code <code>code</code> code Computer code
+- -
+samp <samp>sample</samp> sample Sample output from a computer
+- -
+b <b>bold</b> bold Bold text
+--
+-
+i italic
+Text of an alternate voice or word
+<i>italic</i>
+from another language
+t + -
+u <u>underline</u> underline
+Text that is rendered differently
+from normal text
+I
+◄
+Note
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+►
+34/94
+10/12/24, 1 :35 PM zyBooks
+Many CSS libraries, such as Font Awesome and Bootstrap, use the <i> tag to insert
+icons or simple images. See W3Schools Icons Tutorial for more details.
+◄
+I PARTICIPATION
+ACTIVITY 1.3.11 : Valid or invalid HTML.
+Determine if the following HTML is valid or invalid.
+1) You <em>must</em> read
+<cite>A Tale of Two
+Cities</cite>, one of the
+best selling books of all
+time.
+Q Valid
+O Invalid
+~ You must read <em><cite>A
+Tale of Two Cities</em>
+</cite>, one of the best
+selling books of all time.
+Q Valid
+O Invalid
+~ <em>You must read <cite>A
+Tale of Two Cities</cite>,
+one of the best selling
+books of all time.</em>
+Q Valid
+O Invalid
+I CHALLENGE
+ACTIVITY 1.3.1: Basic HTML elements.
+570104.2065416.qx3zqy7 -
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+0
+0
+0
+D
+35/94
+10/12/24, 1 :35 PM zyBooks
+Modify each sentence in the poem to end with a <br> tag, except the last sentence.
+SHOW EXPECTED
+1
+2 <p>Dance more. Think big. Live truly. So it goes. </p>
+3
+1 2
+Check - View your last submission v
+Exploring further:
+Headings and Sections from HTML Living Standard
+HTML Text Formatting from W3Schools
+3

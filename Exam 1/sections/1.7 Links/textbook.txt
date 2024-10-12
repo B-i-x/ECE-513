@@ -1,0 +1,412 @@
+Anchor element
+The <a> element, or anchor element, defines a hyperlink in a webpage. A hyper/ink, or link, specifies
+where other information is located and what action the web browser should perform when a user
+clicks the hyperlink. A hyperlink action may tell the web browser to go to another webpage, to go to a
+location in the same webpage, to download a file, or to send an email.
+The href attribute specifies the hyperlink's URL. Ex:
+<a href="https: / /wikipedia. org/">Wikipedia</ a> displays the hyperlink WikiQedia and
+causes the browser to request the URL https://wikipedia.org/ when the hyperlink is clicked. Other URL
+schemes may cause the browser to take different actions. Ex: The URL mailto:mary@gmail.com uses
+the mail to scheme that directs the browser to start an email program and address an email to
+mary@gmail.com. I PARTICIPATION
+ACTIVITY 1.7.1 : URL schemes. D
+If unable to drag and drop, refresh the page.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 58/94
+10/12/24, 1 :35 PM zyBooks
+11111111 n ■
+Hyperlink used to send requests and
+responses that are readable only by
+the client and server.
+Hyperlink used to send requests and
+responses over the Internet without
+encryption.
+Hyperlink used to send email.
+Hyperlink used to refer to a document
+on the same computer as the web
+browser.
+Hyperlink used to transfer data files.
+I PARTICIPATION
+ACTIVITY 1.7.2: Hyperlink actions.
+What does clicking on each of the following hyperlinks do?
+7) <a
+href="https://example.com/index.html">See
+example</a>
+0 Loads a webpage over an unencrypted
+connection
+0 Encrypts the webpage load request and
+response
+0 Opens an email app to compose an email
+2) <a
+href="mailto:person@example.com" >Get
+in touch</a >
+0 Loads a page over an unencrypted
+connection
+0 Opens an email app to compose an
+email
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+59/94
+10/12/24, 1 :35 PM
+0 Downloads a file
+3) <a
+href="http://exarnple.com/index.htrnl" >See
+exarnple</a>
+0 Loads a page over an unencrypted
+connection
+0 Encrypts the page load request and
+response
+0 Opens a file
+4) <a
+href="ftp://exarnple.com/index.htrnl" >Raw
+data</ a>
+0 Loads a page over an unencrypted
+connection
+0 Opens a file from the user's computer
+0 Downloads a file
+5) <a
+href="file:///C : /exarnple/index.htrnl" >See
+exarnple</a>
+O Loads a page over an unencrypted
+connection
+O Opens a file from the user's computer
+O Downloads a file
+I PARTICIPATION
+ACTIVITY 1.7.3: Create a hyperlink to a webpage.
+zyBooks
+The following HTML shows a paragraph with a URL. Try turning the URL into an HTTPS
+hyperlink to example.com.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+D
+60/94
+10/12/24, 1 :35 PM zyBooks
+1 ~p> Link to https://example.com/</p>
+Render webpage Reset code
+Your webpage Expected webpage
+Link to https://example.com/ Link to htms://examP-le.com/
+► View solution
+Absolute and relative URLs
+When a webpage links to web resources on the same website, a relative URL may be specified in the
+href attribute instead of an absolute URL.
+• An absolute URL is a complete URL. Ex:
+<a href="http://example.com/test. html ">test</ a> is a hyperlink using the
+absolute URL http://example.com/test.html.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 61/94
+10/12/24, 1 :35 PM zyBooks
+• A relative URL specifies the relative path to the web resource with no scheme or hostname. Ex:
+<a href="test. html " >test</ a> uses the relative URL test.html to refer to an HTML
+document on the same website and with the same path as the current HTML document.
+A relative URL may use two periods followed by a forward slash ( .. /) in front of a filename to indicate
+the file is one directory above the current HTML document. Ex: The relative URL .. /test. html
+indicates test.html is in the directory above the HTML document containing the link. I PARTICIPATION
+ACTIVITY 1.7.4: Using relative URLs to link to files on the same website.
+mywebsite
+~ index.html
+~ family.html
+L- hobbies
+~ football.html
+L- geocaching.html
+Animation content:
+<!--index.html-->
+<p>
+<a href="family.html" >My family</a>
+</p>
+<p >My hobbies:
+<a href="hobbies/football.html">Football</a> and
+<a href="hobbies/geocaching.html">Geocaching</a>
+</p>
+< 1-- football.html-->
+<p >See my
+<a href="geocaching.html" >Geocaching page</a>
+</p>
+<p>
+<a href=" .. /index.html" >Go to my home page</ a>
+</p>
+D
+A diagram illustrates the nesting in mywebsite; index.html, family.html and hobbies are nested under
+mywebsite; football.html and geocaching.html are nested under hobbies. The following code
+snippet for index.html is displayed:
+<!--index.html-->
+<p>
+<a href="family.html">My family</a>
+</p>
+<p>My hobbies:
+<a href="hobbies/football.html">Football</a> and
+<a h ref="hobbies/ geocach i ng. html ">Geocach i ng</ a>
+</p>
+End of code snippet. The following code snippet for football.html is displayed:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 62/94
+10/12/24, 1 :35 PM
+<!--football.html-->
+<p>See my
+<a href="geocaching.html">Geocaching page</a>
+</p>
+<p>
+<a href=" . ./index.html">Go to my home page</a>
+</p>
+End of code snippet.
+Animation captions:
+zyBooks
+1. A website is organized into 4 HTML files. football.html and geocaching.html are located in the
+hobbies directory.
+2. index.html contains a hyperlink with a relative URL to family.html since family.html is on the
+same website as index.html.
+3. Hyperlinks to football.html and geocaching.html use relative URLs that start with "hobbies/"
+because both files are in the hobbies directory.
+4. football.html uses a relative URL to link to geocaching.html, which is in the same directory as
+football.html.
+5. football.html uses " .. " in the relative URL to link to index.html, because " .. " refers to the directory
+that is one level up from football.html, the mywebsite directory.
+I PARTICIPATION
+ACTIVITY 1.7.5: Relative URLs.
+Refer to the animation above.
+1) In which file would the hyperlink below
+be expected?
+<a href="index.html" >Home
+page</a>
+0 family.html
+0 football.html
+0 geocaching.html
+2) In which file would the hyperlink below
+be expected?
+<a
+href=" .. / family.html" >Family</a >
+0 index.html
+0 family.html
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+63/94
+10/12/24, 1 :35 PM
+0 geocaching.html
+3) Assume a directory called "junk" is
+located in the hobbies directory. What
+relative URL would index.html use to
+link to a file called stuff.html in the junk
+directory?
+0 stuff.html
+0 junk/stuff.html
+O hobbies/junk/stuff.html
+4) Assume a directory called "junk" is
+located in the hobbies directory, and
+the junk directory contains the file
+stuff.html. What relative URL would
+stuff.html use to link to index.html?
+0 index.html
+0 . ./index.html
+0 . ./../index.html
+Section links
+zyBooks
+0
+0
+A URL can point to a section, or fragment, of a document by adding a hash tag(#) and a fragment
+identifier at the end of the URL. Ex:
+https : //en. wikipedia. org/wiki/Computer science#History refers to the "History"
+section of the "Computer_science" page on Wikipedia.
+Adding the id attribute to any element creates a fragment identifier, permitting URLs to link directly to
+the id's location in the document. Several rules exist for an id value:
+• May be composed of any characters except whitespace characters. Ex: "history 123" is invalid
+because of the space.
+• Cannot start with a number. Ex: "3section" is invalid.
+• Is case sensitive. Ex: "History" and "history" are different ids.
+• Must be unique in the document. Ex: Two elements both using "history" is invalid.
+Good practice is to choose id values that start with a letter and are composed of only letters, digits,
+dashes (-), and underscores (_). Ex: "history7 23-late".
+The HTML in the figure below creates two section links to the <section> elements with fragment
+identifiers "Ch1" and "Ch2".
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 64/94
+10/12/24, 1 :35 PM zyBooks
+Figure 1.7.1: Section links to two <section> elements.
+<hl>Pride and Prejudice</hl>
+<p>
+Links to chapters:
+<a href="#Chl" >Chapter 1</a>
+<a href="#Ch2" >Chapter 2</ a>
+</p>
+<section id="Chl">
+<h2>Chapter One</h2>
+<p>
+It is a truth universally acknowledged, that a single man in
+possession of a good
+fortune, must be in want of a wife.
+</p>
+<p>
+However little known the feelings or views of such a man may be on his
+first entering
+a neighbourhood, this truth is so well fixed in the minds of the
+surrounding families,
+that he is considered the rightful property of some one or other of
+their daughters.
+</p>
+</ section>
+<section id="Ch2">
+<h2>Chapter Two</h2>
+<p>
+Mr. Bennet was among the earliest of those who waited on Mr.
+Bingley ...
+<Ip>
+</ section>
+◄
+I PARTICIPATION
+ACTIVITY 1.7.6: Create a hyperlink to a webpage fragment.
+The following HTML contains a hyperlink to the Wikipedia page about Abraham Lincoln. Try
+adding a document fragment identifier to the hyperlink to point to information on Abraham
+Lincoln's legacy, which is in the section named "Legacy". Each Wikipedia section has a unique
+fragment identifier to which a hyperlink can link. Note that the only way to discern whether
+the hyperlink is correct requires clicking the hyperlink to examine where the hyperlink leads.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+65/94
+10/12/24, 1 :35 PM zyBooks
+1 ~p>
+2 Link to <a href="https://en.wikipedia.org/wiki/Abraham_Lincoln">
+3 information on Abraham Lincoln's legacy</a>.
+4 < p1>
+Render webpage Reset code
+Your webpage
+Link to information on Abraham Lincoln's
+legacY..
+► View solution
+I PARTICIPATION
+ACTIVITY 1.7.7: Section links.
+Expected webpage
+Link to information on Abraham Lincoln's
+legacY..
+1) Which URL links to the "Governance" section of
+Wikipedia's Internet article?
+O https://en .wikipedia .org/wiki/lnternet
+O https://en.wikipedia.org/wiki/lnternet/Governance
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+66/94
+10/12/24, 1 :35 PM zyBooks
+O https://en .wikipedia .org/wiki/lnternet#Governance
+2) What is the paragraph's fragment
+identifier?
+<p id="location">
+Two blocks north of 2nd
+street.
+<Ip>
+0 Location
+0 location
+0 #location
+3) Which id is valid for the first paragraph?
+<p id=" __ ">
+845-555-3944
+<Ip>
+<p id="phone-work">
+845-222-4956
+<Ip>
+0 phone-work
+0 phone home
+0 phone-home
+Image links and targets
+0
+0
+The content in a hyperlink may be any valid HTML or text. A graphical hyper/ink or image link uses an
+image inside a hyperlink instead of text. Ex: The HTML below uses an image of a dog that links to the
+American Kennel Club.
+Figure 1.7.2: Graphical hyperlink: An image used within a hyperlink.
+<a href="http:llwww.akc.orgl" ><img src="dog.jpg" alt="Link to AKC using an
+image of a dog." ><la>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 67/94
+10/12/24, 1 :35 PM zyBooks
+An anchor element's target attribute indicates how the browser should display the link when clicked.
+• The self attribute value is the default and indicates the browser will open the link in the same
+tab or window.
+• The_ blank attribute value indicates the browser will open the link in a new tab or window.
+Figure 1.7.3: Target attribute: browser will open the link in a new tab.
+This link to the <a href="https://en.wikipedia.org/wiki/Main_Page"
+target="_blank" >Wikipedia main page</a>
+will open in a new tab or window.
+◄
+I PARTICIPATION
+ACTIVITY 1.7.8: Graphical hyperlinks and the target attribute.
+1) Hyperlinks can only contain text.
+0 True
+0 False
+2) The target attribute can be used on
+image links.
+0 True
+0 False
+3) The default value for the target
+attribute is _self.
+0 True
+0 False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+►
+D
+0
+0
+0
+68/94
+10/12/24, 1 :35 PM
+4) The web browser will always create a
+new window for hyperlinks whose
+target attribute is _blank.
+0 True
+O False
+I PARTICIPATION
+ACTIVITY 1.7.9: Hyperlink review.
+Determine if the following are valid or invalid hyperlinks.
+7) <a
+href="example.com/index.html">See
+example</a>
+Q Valid
+0 Invalid
+zyBooks
+2) <a
+href="https://example.com/index.html#History">History</a >
+0 Valid
+0 Invalid
+3) <a href="#History" >History</a >
+0 Valid
+O Invalid
+4) <a
+href="course.html#Notes">Notes </a >
+Q Valid
+0 Invalid
+5) <a
+href="https://example.org/index.html">
+<img
+src="https://example.org/picture.jpg"
+alt="Picture of cat" ></a >
+Q Valid
+0 Invalid
+6) <a href="caleb@gmail.com" >email
+me</a >
+0 Valid
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+D
+0
+0
+0
+0
+0
+0
+69/94
+10/12/24, 1 :35 PM
+0 Invalid
+I CHALLENGE
+ACTIVITY 1.7. 1: Links.
+570104.2065416.qx3zqy7 -
+zyBooks
+Add a link to https://www.wikipedia.org/. The link contents should be: Learn more
+SHOW EXPECTED
+1
+2 <!-- Your solution goes here-->
+3
+1
+Check - View your last submission v
+Exploring further:
+• HTML Links from W3schools
+2

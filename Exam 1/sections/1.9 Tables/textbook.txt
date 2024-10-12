@@ -1,0 +1,425 @@
+Creating a table
+4
+A table is an HTML structure created with the <table> element that organizes data into rows and
+columns. A cell is a location in the table at a specific row and column.
+• The <tr> element creates a table row, which contains all the row's cells.
+• The <th> element creates a table cell containing table header information about the data.
+Usually, the browser displays table headers centered with a bold font.
+• The <td> element creates a table cell containing table data.
+A table caption defines a short descriptive text for a table and is created with the <caption> element.
+The caption element must immediately follow the opening <table> tag. A web browser typically
+renders the table caption centered above the table. I PARTICIPATION
+ACTIVITY 1.9.1: HTML tables organize data into rows and columns. D
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 81/94
+10/12/24, 1 :35 PM
+<table>
+<caption>Presidential Norninees</caption>
+<tr>
+<th>Party</th>
+<th>Norninee</th>
+</tr>
+<tr>
+<td>Dernocratic</td>
+<td>Franklin Pierc e </ td>
+</tr>
+<tr>
+<td>Whig</td>
+<td>Winfield Scott</td>
+</tr>
+</table>
+Animation content:
+The following code snippet is displayed:
+<table>
+<caption>Presidential Nominees</caption>
+<tr>
+<th>Party</th>
+<th>Nominee</th>
+</tr>
+<tr>
+<th>Democratic</th>
+<th>Franklin Pierce</th>
+</tr>
+<tr>
+<th>Whig</th>
+<th>Winfleld Scott</th>
+</tr>
+</table>
+zyBooks
+Presidential Nominees
+Party Nominee
+Democratic Franklin Pierce
+Whig Winfield Scott
+End of code snippet. The browser displays "Presidential Nominees" with a table underneath and
+column headers "Party" and "Nominee" in the first row. The second row is "Democratic" in the first
+column and "Franklin Pierce" in the second column. The third row is "Whig" in the first column and
+"Winfield Scott" in the second column.
+Animation captions:
+1. The <table> opening and </table> closing tags create a structure to store the table's contents.
+2. The <caption> opening and </caption> closing tags surround the table's caption, which
+renders above the table.
+3. The <tr> opening and </tr> closing tags create a row inside the table.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 82/94
+10/12/24, 1 :35 PM zyBooks
+4. The <th> opening and </th> closing tags create two header cells in the same row.
+5. Two more rows are added to the table. Each row has two data cells, created with <td> opening
+and </td> closing tags.
+6. Without CSS, the table renders with no borders around the table cells.
+Table borders
+◄
+The tables in this section appear with borders for clarity CSS can be added to a
+webpage to display table borders. Ex:
+<style>
+table , th, td {
+border : 2px solid gray;
+}
+</ style>
+CSS, discussed elsewhere, can a/so be used to increase the table's size, add
+background images and color, change the cell text alignment, etc.
+I PARTICIPATION 1.9.2: Table structure.
+ACTIVITY
+Match the tags to the correct blanks to render the table below.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+83/94
+10/12/24, 1 :35 PM
+<table>
+A Transistors then and now</caption>
+<tr>
+<th>Attribute</th>
+<th>1975</th>
+<th>2015</th>
+</ tr>
+B
+<th>Transistor size</th>
+<td>6 &mu;m</ td>
+<td>14 nm</td>
+</ tr>
+<tr>
+C Transistor count</th> --
+<td>6K</ td>
+D 1. 3G</ td>
+</ tr>
+</ table>
+Transistors then and now
+I Attribute llt975II 2015 I
+I Transistor size 116 μmll14 nml
+!Transistor countl@KJ[}QJ
+If unable to drag and drop, refresh the page.
+--- <caption>
+I PARTICIPATION
+ACTIVITY 1.9.3: Creating tables.
+A
+B
+C
+D
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+zyBooks
+D
+84/94
+10/12/24, 1 :35 PM zyBooks
+Enter the necessary HTML to create the different parts of a table.
+1) Create a table data cell containing
+"open".
+Show answer
+2) Create a table cell with header of
+"hours".
+l
+Show answer
+3) Create an empty table row with no
+content.
+[
+Show answer
+4) Create an empty table with the
+caption "Store Information".
+Show answer
+I PARTICIPATION
+ACTIVITY 1.9.4: Add table row.
+The following HTML is an example of a table with one row of column headers and one row of
+data. Try adding the necessary HTML and text to create another row, Average Temperature,
+at the bottom of the table that shows Alaska as having the lowest average temperature and
+Florida as having the highest average temperature.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+0
+D
+85/94
+10/12/24, 1:35 PM _____________ zyBooks
+1 ~,table,>
+2 <caption>State Weather Extremes</caption>
+3 <tr>
+4 <th ></th>
+5 <th>Lowest</th>
+6 <th>Highest</th>
+7 </tr>
+8 <tr>
+9 <th>Average Rainfall</th>
+10 <td >Nevada</td>
+11 <td >Hawaii</td>
+12 </tr>
+13 <Atablel>
+Render webpage Reset code
+Your webpage Expected webpage
+State Weather Extremes State Weather Extremes
+IILowestllHighestl
+~=====:
+!Average RainfallllNevadallHawaii I
+► View solution
+I PARTICIPATION
+ACTIVITY 1.9.5: Add table column.
+I IILowestllHighestl
+I Average Rainfall IIN evadallHawaii I
+!Average TemperaturellAlaska IIFlorida I
+The following HTML is an example of a table with one column of headers and one column of
+data. Try adding the necessary HTML and text to create another column, Heaviest, on the
+right side of the table that shows Ostrich as the heaviest bird and Blue Whale as the heaviest
+mammal.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+86/94
+10/12/24, 1 :35 PM zyBooks
+1 ~,table,>
+2 <caption>Weight Extremes</caption>
+3 <tr>
+4 <th ></th>
+5 <th>Lightest</th>
+6 </tr>
+7 <tr>
+8 <th>Bird</th>
+9 <td >Bee Hummingbird </td>
+10 </tr>
+11 <tr>
+12 <th>Mammal</th>
+13 <td >Pygmy Shrew</td>
+14 </tr>
+15 < table
+16
+Render webpage Reset code
+Your webpage
+Weight Extremes
+I II Lightest I
+I Bird IIBee Hummingbird!
+Expected webpage
+Weight Extremes
+I II Lightest II Heaviest
+I Bird IIBee Hummingbirdl!Ostrich
+I
+I
+IMamma1IIPygmy Shrew I IMamma1IIPygmy Shrew IIBlue Whalel
+► View solution
+Closing tags
+Web browsers often have to process invalid HTML and attempt to fix errors. However,
+the resulting behavior is unpredictable. Because web developers commonly do not write
+the closing </tr>, </th>, and <ltd> tags, the Living HTML Standard permits not
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 87/94
+10/12/24, 1 :35 PM zyBooks
+writing those closing tags. Good practice is to always use both the opening and closing
+tags for the <tr>, <th>, and <td> elements.
+Accessible tables
+People that use screen readers to hear table content benefit from the proper use of
+◄ ►
+◄
+<th> elements for table headings. Complex or long tables may use the scope attribute
+to improve accessibility The scope attribute is commonly assigned "col" or "row" to
+indicate if the table header applies to a column or row of data. Ex:
+<table>
+<caption>Weight Extremes</caption>
+<tr>
+<th></ th>
+<th scope="col" >Lightest</ th>
+<th scope="col" >Heaviest</ th>
+</tr>
+<tr>
+<th scope="row" >Bird</th>
+<td>Bee Hummingbird</td>
+<td>Ostrich</ td>
+</ tr>
+<tr>
+<th scope= "row" >Mammal</th>
+<td>Pygmy Shrew</ td>
+<td>Blue Whale</ td>
+</tr>
+</ table>
+More information about scope is found in "Exploring further".
+Spanning multiple columns and rows
+►
+A single table cell occupies a single row and column by default, but a cell may span multiple columns
+or multiple rows using the co/span attribute and rowspan attribute to specify how many columns or
+rows to span. The col span and rowspan attributes apply to <td> and <th> elements.
+I PARTICIPATION
+ACTIVITY 1.9.6: Spanning multiple columns and rows.
+The following HTML creates a table with a "Warmup" cell that spans 3 columns and a
+"Scrimmage" cell that spans 2 rows. Add HTML and text to create a "Sat" column and "7 2:00"
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+88/94
+10/12/24, 1 :35 PM zyBooks
+row containing cells spanning multiple rows or columns as shown in the expected webpage.
+1 ~.table,>
+2 <caption>Team Schedule</caption>
+3 <tr>
+4 <th ></th>
+5 <th >Mon</th>
+6 <th >Wed</th>
+7 <th >Fri</th>
+8 </tr>
+9 <tr>
+10 <th >9:00</th>
+11 <td colspan="3" >Warmup</td>
+12 </tr>
+13 <tr>
+14 <th >10:00</th>
+15 <td >Drills</td>
+16 <td >Skills Test </td>
+17 <td rowspan="2" >Scrimmage</td>
+1 / / +n,
+Render webpage Reset code
+Your webpage
+Team Schedule
+D ~ II Wed II Fri
+I 9:00 IIWarmup
+110:00IIDrillsllSkills TestlB
+~~ Scnmmage
+~~ 1!Weights I
+► View solution
+Expected webpage
+Team Schedule
+D ~ I Wed II Fri II Sat I
+I 9:00 IIWarmup IB
+ltO:OOIIDrillsll Skills TestlB Games
+~~ ,Scnmmage
+~~!Weights I
+~ II IITeamLunch I
+I PARTICIPATION
+ACTIVITY 1.9.7: Spanning multiple columns and rows.
+Refer to the table below.
+alpha
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+89/94
+10/12/24, 1 :35 PM
+beta
+gamma
+epsilon
+1) What HTML creates the "alpha" table
+cell?
+Q <tr colspan="2" >alpha</ tr>
+Q <td colspan="2" >alpha</ td>
+Q <td cols="2" >alpha</ td>
+2) What HTML creates the second row?
+<tr>
+<td>beta</ td>
+Q <td
+rowspan="2" >gamma</ td>
+</ tr>
+<tr>
+Q <td>beta</ td>
+</ tr>
+0
+<tr>
+<td>beta</ td>
+<td>gamma</td>
+</ tr>
+3) What HTML creates the third row?
+<tr>
+<td>epsilon</ td>
+Q <td
+rowspan="2" >gamma</ td>
+</ tr>
+0
+<tr>
+<td>epsilon</ td>
+<td></ td>
+</ tr>
+<tr>
+Q <td>epsilon</ td>
+</ tr>
+I CHALLENGE
+ACTIVITY 1.9.1: Modifying a table.
+570104.2065416.qx3zqy7 - https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+zyBooks
+0
+0
+0
+D
+90/94
+10/12/24, 1 :35 PM zyBooks
+Create another row for Bob, at the bottom of the table with a lowest score of 84 and highest
+of 97. SHOW EXPECTED
+1 <table>
+2 <caption> Exam scores</caption>
+3 <tr>
+4 <th ></th>
+5 <th >Lowest </th>
+6 <th >Highest </th>
+7 </tr>
+8 <tr>
+9 <th >Tim</th>
+10 <td >80</td>
+11 <td >90</td>
+12 </tr>
+13
+14 <!-- Your solution goes here-->
+15
+16 </table>
+1 I 2
+3 4 5
+Check - View your last submission v
+Header, body, and footer
+Three optional table tags specify each part of a table:
+• The <thead> element specifies the table header.
+• The <tbody> element specifies the table body.
+• The <tfoot> element specifies the table footer.
+The <the ad>, <tbody>, and <tf oot> elements do not affect the layout of the table, but browsers
+may use the elements to enable the table body to scroll independently of the header and footer or to
+print the header and footer on each page of a multi-page table printout. I PARTICIPATION
+ACTIVITY 1.9.8: Head, body, footer.
+Match the tags to the correct blanks to render the table below.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+91/94
+10/12/24, 1 :35 PM
+<table>
+A
+<tr>
+<th>Movie</th>
+<th>Rate</ th>
+<th>Price</th>
+</ tr>
+</thead>
+B
+<tr>
+<td>Finding Dory</td>
+<td>Adult</td>
+<td>$10</ td>
+</ tr>
+<tr>
+<td>Finding Dory</td>
+<td>Child</td>
+<td>$6</td>
+</tr>
+</ tbody>
+C
+<tr>
+<th colspan="2" >Total</ th>
+<th>$16</th>
+</ tr>
+</ tfoot>
+</ table>
+If unable to drag and drop, refresh the page.
+<thead> <tbody> <tfoot>
+A
+B
+C
+Exploring further:
+• HTML tables from W3Schools.com
+• Tables with Two Headers from w3.org
+zyBooks
+I Movie II Rate IIPricel
+!Finding DoryllAdultll!!QJ
+!Finding Doryll~[![J
+I Total ll]ill
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 92/94
+10/12/24, 1 :35 PM zyBooks

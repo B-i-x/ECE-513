@@ -1,0 +1,38 @@
+True/False: An IP address is usually written as five numbers separated by colons.
+
+Multiple Choice: How many bits is an IPv4 address?
+
+A) 32 bits
+B) 64 bits
+C) 128 bits
+D) 256 bits
+True/False: IPv6 supports approximately 340 undecillion IP addresses.
+
+Fill in the Blank: Domain names are resolved to IP addresses using the ______ system.
+
+Multiple Choice: What does DNS stand for?
+
+A) Domain Name System
+B) Domain Network Service
+C) Dynamic Name System
+D) Direct Network Server
+Matching: Match the following domain types to their description:
+
+(A) .com
+(B) .edu
+(C) .gov
+___ Commercial
+___ Educational
+___ Government
+True/False: URLs contain the access protocol at the beginning, referred to as the 'scheme'.
+
+Multiple Choice: Which part of a URL specifies the actual path of the resource on the server?
+
+A) Host
+B) Scheme
+C) Path
+D) Query
+True/False: The 'www' in a URL is considered the top-level domain.
+
+Short Answer: Explain the difference between an IP address and a domain name.
+

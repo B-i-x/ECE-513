@@ -1,0 +1,365 @@
+IP addresses
+A computer communicates with another computer on the internet by sending packets back and forth.
+An internet packet contains To and From IP addresses, the information to communicate, and other
+configuration information.
+An IP address (short for Internet Protocol address) is a computer's unique address on the internet
+(like a house's unique address in the world), usually represented numerically like 198.57 .100.7. A
+typical IP address is 32 bits, divided into four 8-bit groups, each group often written as a decimal
+number. I PARTICIPATION
+ACTIVITY 1 .1 .1: IP addresses.
+Animation content:
+198 . 51 . 1 00 . 7
+/ I \ " 11000110 00110011 01100100 00000111
+0 = 00000000
+255 = 11111111
+The following IP address is displayed: 198.57 .100.7. For each section of the IP address, the
+corresponding 8 bits value is displayed. The 198 is represented with the 8 bits 71000710, 57 is
+007 1 001 1, 100 is 07 100100, and 7 is 000007 11 .
+Animation captions:
+1. An IP address is usually written as four numbers separated by dots.
+2. Each number represents 8 bits of the IP address, for a total of 32 bits.
+3. The smallest possible number in an IP address is 0, and the largest is 255.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+1/94
+10/12/24, 1 :35 PM zyBooks
+The original Internet Protocol, known as /Pv4, has 32-bit addresses. 32 bits can represent 232 or about
+4 billion unique addresses, originally believed to be more than enough, but 4 billion is no longer
+enough. A new version of the Internet Protocol, /Pv6, uses 128-bit addresses, capable of representing
+2128 addresses. The number 2128 is 3.4 x 1038 or
+340,000,000,000,000,000,000,000,000,000,000,000,000, which is hopefully enough for quite a while.
+IPv4 and IPv6 currently co-exist and likely will for a long time. I PARTICIPATION
+ACTIVITY 1.1.2: IP addresses.
+1) What is the size of an IP address in
+IPv4?
+0 32 bits
+0 128 bits
+2) IPv6 supports about how many IP
+addresses?
+0 100 billion
+0 3.4 X 1038
+3) With the introduction of IPv6, devices
+on the internet no longer use IPv4.
+0 True
+0 False
+Domain names and DNS
+D
+0
+0
+0
+Some websites can be directly reached using the computer system's IP address. Ex: Google could say
+"Go to 216.58.193.206 to search the internet." But those numbers are hard to remember, and IP
+addresses can change, so domain names are commonly used. A domain name is a name for an IP
+address, such as the name wikipedia.org for the IP address 198.35.26.96; the name is easier to
+remember and type. Capitalization doesn't matter: Wikipedia.org, wikipedia.org, and WIKIPEDIA.ORG
+are treated the same.
+When a computer sends a packet using a domain name over the internet, the first step is to contact a
+DNS server to convert the domain name to an IP address. DNS is short for Domain Name System.
+Thirteen main DNS servers (called root servers) exist in the world, and a computer's operating system
+or an ISP keeps a reference to the root servers' IP addresses. Ex: 198.41 .0.4 (run by Verisign),
+192.228.79.201 (run by USC), 199.7.91 .13 (run by Univ. of Maryland), and 192.203.230.10 (run by
+NASA). The first step of sending an internet packet to a domain name is thus to lookup the IP address
+via a DNS server.
+I II
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 2/94
+10/12/24, 1 :35 PM zyBooks I PARTICIPATION
+ACTIVITY 1.1.3: A DNS server first looks up a domain name's IP address.
+DNS
+whitehouse.gov 96.16.200.110
+cnn.com 157.166.226.25
+192.228. 79.201
+(Los Angeles, CA)
+Animation content:
+Packet
+To: 198.51 . 1 00 . 0
+From: 157 . 166 . 226 . 25
+Type: Web data
+Data: ''Top Sto r i es ''
+CNN
+157.166.226.25
+(Atlanta, GA)
+u
+A computer is displayed with the following IP address: 198.57 .100.0. A packet is displayed right next
+to the 198.51 .100.0 computer with the information: To: cnn.com, From: 198.51.100.00, Type: Web
+Access, Data:. Then another packet is sent to a DNS server to get the IP address for cnn.com. This
+packet retrieves 157.166.226.25 under Data: and sends it to the original packet. Now the original
+packet has the IP address for cnn.com, which is 157.166.226.25.
+Animation captions:
+1. A computer wants to send a packet to cnn.com.
+2. First, a packet is sent to a DNS server to lookup the IP address for cnn.com.
+3. The packet contains the destination address. The computer can now communicate with CNN.
+Registering a domain name
+Anyone may register an unused domain name with a domain name registrar. Most
+registrars charge a yearly fee for keeping the domain registered. Registration
+information is made publicly available from ICANN's Whois service.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 3/94
+10/12/24, 1 :35 PM zyBooks
+When a website is hosted with a web hosting company, the company will update the
+DNS servers so the website's domain name is associated with the IP address of the
+hosted website. The web hosting company may also manage the yearly registration of
+the domain name.
+IAP ACRTTIVICITIPYA TION 1.1 .4: IP addresses and domain names.
+◄
+1) Websites have either an IP address or a
+domain name, but not both.
+O True
+0 False
+2) cnn.com is a(n) __ .
+0 IP address
+0 domain name
+Q DNS
+3) A DNS server's primary role is to
+convert __ .
+O an IP address into 32 bits
+O an IP address to a domain name
+the domain name to an IP
+O address
+Try 1.1.1: IP addresses and domain names.
+Several sites will lookup the IP address of a domain, such as the following.
+• Click to open www.site24x7.com. Type "Wikipedia.com" or your favorite website name.
+Given an IP address, some sites will indicate the geographic location of that IP address'
+computer. Try entering 171.67.215.200, which is Stanford.corn's IP address, whose
+computers are in Palo Alto, California.
+• Click to open www.iplocation.net.
+Typing "What is my IP?" in a search engine can be used to determine one's IP address.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+►
+0
+0
+0
+4/94
+10/12/24, 1 :35 PM zyBooks
+• Click to OP-en Google.com.
+• Click to OP-en Bing.com.
+Domain name levels
+Domain names are hierarchical. A domain name belongs to one of numerous top-level domains (TLD),
+such as .com, .net, .org, .edu, and .gov. Also, each country is assigned a unique two-letter country code
+top-level domain (ccTLD) like .uk (United Kingdom), .ru (Russia), and .de (Germany). IANA, the
+organization that manages TLDs, allows companies and organizations to create customized TLDs, like
+.church, .pizza, and .music.
+I PARTICIPATION
+ACTIVITY 1.1.5: Common top-level domains.
+.com .net .org
+"Commercial" "Network" "Organization"
+Traditionally
+non-profits
+77% 10% 7%
+microsoft.com comcast.net wikipedia.org
+amazon.com sourceforge.net npr.org
+Animation content:
+D
+.edu .gov (Many more)
+"Educational" "Government"
+Post-secondary U.S. federal,
+institutions state, or local
+(colleges)
+harvard.edu cdc.gov
+ucla.edu irs.gov
+A branch diagram is displayed with each branch explaining the domain name of websites. The
+Commercial websites are represented with a .com domain name, Network websites are
+represented with a .net domain name, Organization websites are represented with a .org domain
+name, Education websites are represented with a .edu domain name, and Government sites are
+represented with a .gov domain name.
+Animation captions:
+1. Internet domain names are divided by top-level domains.
+2. The most popular is .com. Most companies have a .com name.
+3. Next most popular is .net. Typically for networking/internet-focused companies.
+4. Next is .org, traditionally for non-profit organizations.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 5/94
+10/12/24, 1 :35 PM zyBooks
+5. Other well-known top-level domains are .edu for colleges, and .gov for U.S. governments.
+Hundreds more exist.
+Immediately after a top-level domain comes a second-level domain, such as wikipedia in
+wikipedia.org. A second-level domain is commonly an organization's name as in Stanford.edu, or
+indicates the purpose of a website as in DoPython.org. Third-level and further level domains refer to
+sub-computer systems local to an organization, as in cs.stanford.edu where the cs is for Stanford's
+Computer Science department. A common third-or-deeper-level domain is www, short for World Wide
+Web, usually referring to an organization's web server. Many organizations use www optionally, so
+stanford.edu by default goes to www.stanford.edu.
+I PARTICIPATION
+ACTIVITY 1.1 .6: Domain hierarchy.
+Given a website such as www.whitehouse.gov, match the domain to the corresponding
+domain-level hierarchy.
+If unable to drag and drop, refresh the page .
+whitehouse ••
+Top-level domain.
+Third-level domain
+Second-level domain.
+Note
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+6/94
+10/12/24, 1 :35 PM zyBooks
+◄
+The top-down structure of a domain name is, somewhat counterintuitively, from rightto-
+left rather than left-to-right. Thus, cs.stanford.edu has a top-level domain of .edu,
+second-level stanford, and third-level cs. Common scams use this counterintuitive rightto-
+left feature to trick people into thinking a site belongs to a particular company Ex:
+bankofamerica.xxyz.com might trick a person into thinking the domain name is for Bank
+of America.
+URLs
+►
+Domain names are most commonly seen in URLs. A URL (Uniform Resource Locator) is the location
+of a web resource on the web, such as http://www.cdc.gov/alcohol/faqs.htm. A web resource is any
+retrievable item, like an HTML file, image, video, CSS stylesheet, etc.
+A URL is composed of several parts:
+• Scheme - Characters at the beginning of a URL followed by a colon":" or a colon and double
+slashes"://". Common URL schemes include http, https, mail to, and file . Ex: In
+https://www.cdc.gov/alcohol, the scheme is "https".
+• Hostname - The complete domain name following the scheme in a URL. Ex: In
+https://www.cdc.gov/alcohol, the hostname is "www.cdc.gov".
+• Path - The characters to the right of the hostname in a URL. Ex: In https://www.cdc.gov/alcohol,
+the path is "/alcohol".
+• Query string - Optional characters to the right of the question mark(?) in a URL that provide data
+for the web server. In https://www.youtube.com/watch?v=uu7XCEMdSHg, the characters after
+the? tells You Tube's server to play a video having code uu7XCEMdSHg.
+• Fragment - Optional characters at the end of a URL that start with a hash character(#) and refer
+to a certain location within a webpage. In https://en .wikipedia .org/wiki/URL#History, the
+fragment "#History" refers to the webpage's History section.
+Figure 1.1.1: Chrome browser hides the scheme and "www" in hostname.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 7/94
+10/12/24, 1 :35 PM zyBooks
+D Pro essor pranks ~tudents on X + □
+~ ➔ C
+https
+scheme hostname path query string
+◄
+I PARTICIPATION
+ACTIVITY 1.1 .7: A URL can specify the location of subfolders and files.
+Packet
+To: 192.133.129 . 169
+Type: Web data
+Data : " FAQ"
+B Centers for Disease Control and Prevention
+Introduction to Alcohol
+• What is a "drink"?
+• How does alcohol affect a person?
+Tools • Short-Term Health Risks
+• Relationship between Youth and Adult
+Gu;de Drinking
+• Is beer or wine safer to drink than
+Med;e hard liquor?
+Contact
+PC
+192.133.129.169
+Animation content:
+X
+*
+D
+alcohol
+fact-sheets.html faqs.html
+publications.html
+Web server
+23.39.150.112
+www.cdc.gov
+A computer sends a packet with the information To: http://www.cdc.gov/alcohol/faqs.htm, Type:
+Web access, Data: "FAQ" to a web server at www.cdc.gov. This packet retrieves and sends back
+information to the computer from a subfolder named alcohol and then another subfolder named
+faqs.htm.
+Animation captions:
+1. A computer's browser sends a packet requesting information from a web server at IP address
+23.39.150.112, with hostname www.cdc.gov.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 8/94
+10/12/24, 1 :35 PM zyBooks
+2. The information is in a subfolder named alcohol, then in a file in that folder named faqs.html.
+3. The faqs.html file is returned and displayed in the computer's browser.
+I PARTICIPATION
+AcTIvITV 1.1.8: URLs.
+1) Is the following a valid URL?
+https://www.whitehouse.gov/
+0 Yes
+Q No
+2) Is the following a valid URL?
+https://www.nasa.gov/cubequest/details/#.V0a0_VPF9U9
+0 Yes
+Q No
+3) What is the hostname of the following URL?
+http://www.weather.com/ summer /temperatures. html
+0 www.weather.com
+0 weather.com
+4) Which file does the following URL access?
+http://www.weather.com/summer/temperatures.html
+0 summer
+0 temperatures.html
+5) Which scheme should a URL use to
+provide a secured HTTP connection to
+a web server?
+0 http
+0 https
+6) Is www.nasa.gov a valid URL?
+0 Yes
+Q No
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+0
+0
+0
+9/94
+10/12/24, 1 :35 PM
+Webpage errors
+zyBooks
+If a domain name is not found by a DNS server (usually because the domain name is not registered), a
+page is displayed indicating such, as in "Sorry, the website www.xyz.blahblahblah cannot be found."
+A domain name may be found (so a valid IP address exists for that name) but the web server may not
+respond, resulting in a message like 'The website is not responding" or "Could not reach the website".
+Such non-response could be due to the web server being turned off or undergoing maintenance, or
+due to an essential router malfunctioning, for example.
+If a web server is reached but the specific requested page isn't found, the server returns a 404 status
+code, which is a code number for page not found. Various other status codes exist. Many web servers
+return a page that includes the number "404".
+Figure 1.1.2: An example webpage that returns a message with the code 404
+shown.
+® www.toyota.com/camrl ~ ]
+Your Location: 92691 9 Notebook
+® TOYOTA
+Let's Go Places
+Setect Vehicle Shopping Tools
+T T
+404 Page Not Found
+It looks like this page is no longer avai lable.
+◄ ►
+Linkrot
+The web is always changing with content being continually added and removed. When
+content is removed from the web, URLs that used to point to the content return a 404
+status code. Linkrot is the general name for a once valid link that now returns a 404
+status code.
+The Internet Archive is one of many organizations around the world that fights linkrot by
+archiving the web for posterity The Internet Archive's Wax.back Machine provides
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 10/94
+10/12/24, 1 :35 PM zyBooks
+access to billions of archived webpages and can often show users what a particular
+URL looked like at different times in history
+I PARTICIPATION
+ACTIVITY 1 .1. 9: Web page errors.
+1) A 404 message indicates that a
+domain name is not recognized.
+◄ 0 True
+O False
+2) If a web server is down (such as
+powered off), the server may return a
+page saying to please try again later.
+0 True
+O False
+Exploring further:
+• URL Standard (WHATWG)
+• List of Top-Level Domains (ICANN)
+I ~~~•• 1.1.1: IP addresses, domain names, and URLs.
+570104.2065416.qx3zqy7 -Which IPv4 address(es) are valid?
+0 (A) E26.D27.A9C.C27
+0 (B) 12.141.124.207
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+►
+0
+D
+11/94
+10/12/24, 1 :35 PM zyBooks
+0 (C) 154.53.103.48.171
+0 (D) 359.32.37 4.228
+1 2 3 4
+Check -

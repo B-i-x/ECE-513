@@ -1,0 +1,368 @@
+HTML, elements, and tags
+HTML (HyperText Markup Language) is a textual language for creating webpages. The HTML
+acronym highlights the three main characteristics of webpages: I PARTICIPATION
+ACTIVITY 1.2.1: Understanding the HTML acronym.
+If unable to drag and drop, refresh the page.
+HyperText Language ■i@ii'ii
+Text that contains connections to
+other documents.
+Part of a document that explains how
+to interpret or structure other parts of
+the document.
+A set of rules describing how to write
+HTML.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+12/94
+10/12/24, 1 :35 PM zyBooks
+HTML defines over 130 elements. An element is a single HTML structure. Elements are represented
+with HTML tags.
+An HTML tag is a markup instruction identified by<, the tag name, and>.
+• An opening tag indicates the element's starting point in the document.
+• A closing tag indicates the element's ending point in the document.
+Ex: <strong>Hello</ strong> causes Hello to appear in a strong weighted font; <strong> is the
+opening tag,</ strong> is the closing tag, and everything from the opening tag to the closing tag is
+the element. While tag names can be uppercase or lowercase, good practice is to use lowercase letters
+for the tag names, as in <strong>Hello</ strong> rather than <Strong>Hello</ Strong>
+Some elements, like <br> and <img>, do not have a closing tag. A void element is an element that
+only needs an opening tag.
+Figure 1.2.1: HTML tags and element.
+open ing tag1 dosing tag1 \ I - -
+<p>,Good day.,</p>
+element
+◄
+I PARTICIPATION 1.2.2: Elements and tags.
+ACTIVITY
+1) An element and a tag are the same
+thing.
+0 True
+0 False
+2) A void element contains content.
+0 True
+O False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+0
+0
+13/94
+10/12/24, 1 :35 PM zyBooks I PARTICIPATION 1.2.3: Valid HTML markup.
+ACTIVITY D
+1) <p>This is a very short
+paragraph.</p>
+0 Valid
+0 Invalid
+~ <hl>This is a chapter
+heading
+0 Valid
+0 Invalid
+3) <p>We changed the <strong>
+<em>font</strong></em> in
+this paragraph.</p>
+0 Valid
+O Invalid
+~ <p>Sentence one.
+<strong>Sentence two.</p>
+0 Valid
+O Invalid
+5) <P>A short paragraph. </P>
+0 Valid
+O Invalid
+HTML document
+0
+0
+0
+0
+0
+The HTML Living Standard, produced by WHATWG, defines the minimal parts of an HTML document:
+1. The <!DOCTYPE html> declaration instructs the web browser about what type of document
+follows.
+2. The <html> element encloses everything but the<! DOCTYPE html> declaration.
+<html lang="en "> indicates that the document's language is English.
+3. The <head> element contains the document title, document metadata, and various other
+elements that are typically not displayed in the webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 14/94
+10/12/24, 1 :35 PM zyBooks
+4. The <meta> element specifies metadata, which is data that describes the document's data.
+<meta charset="UTF-8 "> describes how characters are represented in the HTML
+document. Additional <meta> tags may be used to indicate when the document was saved,
+who the author is, etc.
+5. The <title> element specifies the document's name. The title is usually displayed in the browser's
+titlebar, is used by search engines, and is used for bookmarking.
+6. The <body> element encloses all elements and content to be rendered in the browser.
+The opening <html> tag uses an attribute to indicate the webpage's language, and <meta> uses an
+attribute to indicate the character set. An element attribute provides additional information about the
+element and is included only in the opening tag. An attribute has a name and a value, specified using
+the form: name="value". Ex: <meta charset="UTF-8 "> has an attribute named char set with
+value "UTF-8".
+I PARTICIPATION
+ACTIVITY 1.2.4: Minimum HTML document structure.
+r
+<!DOCTYPE html> My First Webpage
+<html lang="en">
+<head> Hello, World!
+<meta charset="UTF-8">
+<title>My First Webpage</title>
+</head>
+<body>
+Hello, World!
+</body>
+</html>
+Animation content:
+The following code snippet is displayed:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My First Webpage</title>
+</head>
+<body>
+Hello, World!
+</body>
+A minimal webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+15/94
+10/12/24, 1 :35 PM zyBooks
+</html>
+End of code snippet. My First Webpage is displayed above a browser. The browser displays "Hello,
+World!"
+Animation captions:
+1. The document starts with <!DOCTYPE html>, which instructs the browser how to interpret the
+rest of the document.
+2. The <html> opening and closing tags mark the beginning and ending of the document. The
+lang attribute indicates the document's language is English.
+3. The <head> opening and closing tags enclose the <meta> and <title> elements.
+4. The <body> opening and closing tags enclose the document's contents. The browser displays
+the document body in the webpage.
+Notes
+◄
+Omitting the DOCTYPE from an HTML document or placing any characters before the
+DOCTYPE causes the web browser to render the document in quirks mode. Quirks
+mode is a browser rendering mode that renders a webpage using non-standard layout
+rules emulating older web browsers. A webpage with the DOCTYPE is rendered using
+standards mode, which uses the HTML Living Standard.
+The character set <meta> tag may be omitted if the webpage is served from a web
+server that indicates the character encoding in the HTTP Content-Type header. UTF-
+8 is a common character encoding that describes characters used by most of the
+world's languages. UTF-8 even includes fictional languages (e.g., Klingon, Elvish) and
+emoji (e.g., @, +-).
+The <head> element is optional but is included anyway in most webpages.
+I PARTICIPATION
+ACTIVITY 1.2.5: Matching basic document tag order.
+If unable to drag and drop, refresh the page.
+<!DOCTYPE html> <html lang="en">
+<ti tle>California State Quarter</ti tle>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+16/94
+10/12/24, 1 :35 PM zyBooks
+<body> The California quarter features Yosemite valley.</body>
+<meta charset="UTF-8">
+Create a webpage.
+</html>
+Instruction to web browser that
+specifies the document type.
+Tag that marks the beginning of the
+HTML document.
+Tag that specifies the character
+encoding used in the document.
+Tag that names the document.
+HTML content displayed by the
+browser.
+Tag that marks the end of the HTML
+document.
+Learning HTML is best performed by entering new HTML into a webpage and viewing
+the results in the web browser. A web server is not necessary to create a webpage
+that can only be viewed on your desktop or laptop computer.
+Try the following:
+1. Open your favorite text editor. Popular text editors include Sublime Text,
+Notepad++. and Visual Studio Code.
+2. Create a new file.
+3. Enter the HTML from the animation above into the file.
+4. Save the file to your computer's hard drive as hello.html. The file extension
+. html is necessary for your browser to know the text file contains HTML.
+5. Using Chrome or your favorite web browser, open hello.html by pressing Ctrl+O
+on Windows or Cmd+O on a Mac. Other ways to open the file include doublehttps:
+11Ieam.zybooks.comtzybook/ARIzoNAECE413SaIehiF all2024/chapter/1 /print 17/94
+10/12/24, 1 :35 PM zyBooks
+clicking the file or dragging the file into the browser.
+The Chrome browser below shows hello.html. The path to the file appears in the
+address bar.
+0 My First: Webpage X + 0
+~ ➔ C (D File I C:/ temp/ hel'lo.ht *
+HeUo, W:orld!
+Viewing a page's HTML
+□ , .
+A user on a desktop/laptop computer can instruct a browser to show a webpage's HTML. A web
+search for "View webpage HTML in Chrome" (or another browser) yields instructions. Ex: In Chrome,
+right-clicking (Windows) or Ctrl-clicking (Mac) and choosing "View page source" from the menu shows
+the webpage's HTML. A quicker method is to use the keyboard shortcut Ctrl+U (Windows) or
+~+Option+U (Mac). Most webpages use complex HTML with CSS and JavaScript, so the HTML can
+be hard to read.
+Figure 1.2.2: HTML page source in Chrome.
+◄ ►
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 18/94
+10/12/24, 1 :35 PM zyBooks
+0 My Fir Webpage X 0 hell o.html X +
+C (D view-sou rce:fi le:///C:/temp/hell o. htm 11
+Line wr a p O
+D-.. T' rE t i
+2 <html lang="en">
+l <h ecld>
+4 < eta charset=-"UT F- 8">
+5 <title>My Fi rst l•Jebpage</ t i tle>
+ii </ hea d>
+7 <body>
+II Hello , \~orld !.
+ll </ body>
+o </html>
+◄
+0
+*
+□ X
+►
+A user can also use a browser's development tools to view a webpage's HTML elements. Chrome
+DevTools is a collection of web development tools that are built into the desktop Chrome browser.
+Pressing Ctrl+Shift+I (Windows) or ~+Option+I (Mac) opens Chrome DevTools. Other desktop
+browsers have similar development tools.
+A browser's development tools show the browser's internal representation of a webpage's elements.
+The browser's internal representation and the webpage's actual HTML may differ slightly.
+Figure 1.2.3: Chrome DevTools showing page's elements.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 19/94
+10/12/24, 1 :35 PM
+0 My Fir.st Webpage X +
+C (D File I C:/ temp/hello.html
+Hello, ,. odd!
+zyBooks
+Elemen s Console Sources f\fetwork Performance Memory >>
+0
+*
+□
+0 X
+1 ....-- E m ... Styles Computed Layout Event Lis eners »
+<html lang="e n•>
+T <head>
+< eta char-set =• UTF - 8 ">
+<tit l e >My Fir s t Webpage</ tit le>
+</ head>
+body He-Ho,. l-Iorld ! /b.ody == .$0 __ _
+</ html>
+html body
+◄
+I PARTICIPATION
+ACTIVITY 1.2.6: View source in action.
+1) To see how a web page is constructed,
+a user can view the page source in the
+browser.
+0 True
+0 False
+2) To copy the functionality of another
+webpage found on the web, a user can
+just copy the HTML from the view
+source page.
+0 True
+0 False
+3) Viewing a webpage's source and
+viewing the browser's internal webpage
+representation always yields identical
+results.
+0 True
+Filter
+eleme nt . st yle {
+}
+body {
+display : block;
+I } margin, ► 8px;
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
++ r::n ... :hov .els ,. ~
+user agent stylesneet
+►
+D
+0
+0
+0
+20/94
+10/12/24, 1 :35 PM zyBooks
+0 False
+HTML validator
+Some elements that were used in earlier versions of HTML are now deprecated in the HTML Living
+Standard. A deprecated feature is part of a language that is officially discouraged because newer or
+better features exist, or because the deprecated feature is no longer considered safe. Ex: The
+<center> element is an officially deprecated element that should no longer be used.
+Browsers handle improperly structured HTML and deprecated elements differently and unpredictably.
+The only way to have predictable browser behavior is to use valid HTML. An HTML validator checks
+that an HTML document conforms to the standard. Good practice is to use tools like the W3C MarkuQ
+Validator to check document conformance.
+IAP ACRTTIVICITIPYA TION 1.2.7: HTML standardization and validation.
+Use the W3C MarkuR Validator to check the given HTML for correctness.
+1) The W3C Markup Validator
+indicates the HTML below has an
+error. What attribute, which
+describes how characters are
+represented in the document, is
+missing from <meta>?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta>
+<title>Learning
+HTML</title>
+</head>
+<body>
+Some HTML tags have
+attributes.
+</body>
+</html>
+Show answer
+2) The W3C Markup Validator warns
+that the HTML below is missing an
+attribute. What attribute is missing
+from <html>?
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+21/94
+10/12/24, 1 :35 PM
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Learning
+HTML</title>
+</head>
+<body>
+A warning is not as
+serious as an error.
+</body>
+</html>
+Show answer
+3) The W3C Markup Validator
+indicates the HTML below has an
+error. What tag is causing the
+error?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learning
+HTML</title>
+</head>
+<body>
+</p >This page has an
+error .
+</body>
+</html>
+Show answer
+Exploring further:
+• HTML tutorial from W3Schools.com
+zyBooks
+• HTML Encoding_(Character Sets). from W3Schools.com
+• W3C MarkuQ Validator - Checks the validity of web documents
+• Quirks Mode and Standards Mode from MON
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+22/94
+10/12/24, 1 :35 PM zyBooks

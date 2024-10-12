@@ -1,0 +1,267 @@
+<img> element
+0
+0
+0
+0
+The <img> element is a void element that displays an image in a webpage. The <img> element has
+two required attributes:
+• The src attribute specifies the URL of the image file to display.
+• The alt attribute provides a text description to use as an alternative to displaying the image.
+Ex:<img src="https://example.com/family.jpg" alt="Smith family reunion">
+displays the image family.jpg, but the text "Smith family reunion" displays if the image cannot be
+displayed.
+I
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 38/94
+10/12/24, 1 :35 PM I PARTICIPATION
+ACTIVITY 1.5.1: Loading images in HTML.
+<p >Cat image: </p>
+<img src="cat.jpg" alt="cat">
+<img src="broken.jpg"
+alt="broken image">
+<p >Source: https://resources.
+zybooks.com/WebProgramming/
+smallCatvl.jpg</p >
+Animation content:
+The following code snippet is displayed:
+<p>Cat image:</p>
+<img src="cat.jpg" alt="cat">
+<img src="broken.jpg"
+alt="broken image">
+<p>Source: https://resources.zybooks.com/
+WebProgramming/smallCatv1 .jpg</p>
+zyBooks
+Cat image:
+Source: https://resources.zybooks.com/
+WebProgramming/smallCatv1 .jpg
+D
+End of code snippet. A monitor displays a paragraph with the text, "Cat image:" and below it is an
+image of a cat. Below that a broken image is displayed with the alternative text, "broken image." At
+the bottom of the monitor is the text, "Source:
+https://resources.zybooks.com/WebProgramming/smallCatv1 .jpg"
+Animation captions:
+1. The <img> element adds an image to the webpage. The browser retrieves the image using the
+src attribute.
+2. The browser displays the text from the alt attribute when the image cannot be loaded. A
+person with visual impairments may use assistive technology to read the alt text aloud.
+3. The browser displays content following the images.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 39/94
+10/12/24, 1 :35 PM I PARTICIPATION
+ACTIVITY 1.5.2: Images.
+1) What element includes a picture in a
+webpage?
+0 <image>
+0 <img>
+0 <pict>
+2) Which image element attribute
+specifies the image's URL?
+0 url
+0 src
+0 alt
+3) Which is not a required attribute for
+images?
+0 src
+0 alt
+Q title
+zyBooks
+I PARTICIPATION
+ACTIVITY 1.5.3: Reasons for using alt attribute for images.
+Below are reasons for using the alt attribute. Match the reason with the appropriate scenario.
+If unable to drag and drop, refresh the page.
+Pass HTML validation Support assistive technology
+Allow browser to turn off image display Handle broken image URLs
+Software, such as page readers, help
+users with vision or cognitive
+impairments.
+A user may want to reduce data cost
+or load a page faster.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+0
+0
+0
+D
+40/94
+10/12/24, 1 :35 PM
+Image size
+zyBooks
+The image cannot be loaded from the
+specified location.
+The alt attribute is required.
+The width attribute and height attribute are optional <img> attributes that tell the browser how many
+pixels the image should occupy. Ex:
+<img src=" logo. png" al t="Logo" width=" 2 00" height=" 100 "> makes the logo.png
+image display in a rectangle that is 200 x 100 pixels. If the specified width and height are different
+from the image's actual size, the browser will resize the image for display.
+An image's aspect ratio is the ratio of the image width to the image height. The aspect ratio is written
+as width:height. Ex: An image 500 pixels wide and 250 pixels high has an aspect ratio of 500:250,
+which simplifies to 2:1.
+If an <img> contains only a width or only a height attribute, the image's aspect ratio is maintained.
+If an <img> specifies a width and height different from the image's aspect ratio, the browser will
+distort the image to match the specified attribute values.
+I PARTICIPATION
+ACTIVITY 1.5.4: Image sizing.
+The following HTML fragment shows a cat image that is 640 x 424 pixels. Try modifying the
+HTML to adjust the image size. Render the webpage after each instruction:
+1. Make the image 250 pixels wide. Specify only the width.
+2. Make the image 250 pixels high. Specify only the height.
+3. Resize the image to have a width of 250 pixels and a height of 250 pixels.
+Try experimenting with other combinations of sizes to see how the width and height affect
+the display of the image.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+41/94
+10/12/24, 1 :35 PM zyBooks
+1 ~img src="https://resources.zybooks.com/WebProgramming/mediumCatvl.jpg" alt="Ci
+Render webpage Reset code
+Your webpage
+► View solution
+I PARTICIPATION
+ACTIVITY 1.5.5: Image width and height attributes.
+For the following questions, assume the image is 1000 pixels wide and 800 pixels high.
+Indicate the values needed in the following HTML to produce an image with an aspect ratio
+of 2:1 while maintaining the image's width of 1000 pixels.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+42/94
+10/12/24, 1 :35 PM zyBooks
+I
+<img alt="A sleepy dog"
+src="https://resources.zybooks.com/WebProgramming/mediumDogvl.jpg"
+width="(a)" height="(b)">
+1) (a)
+0 1000
+0 500
+0 800
+0 400
+2) (b)
+0 1000
+0 500
+0 800
+0 400
+PARTICIPATION ACTIVITY 1.5.6: Valid HTML code.
+Indicate which of the following <img> tags are valid.
+1) <img src=" smiley. gif">
+0 Valid
+0 Invalid
+2) <img src=" sparky .png" al t ="A
+picture of my dog, Sparky">
+</img>
+Q Valid
+0 Invalid
+3) <img alt="Fun weekend"
+src="weekend.jpg">
+0 Valid
+0 Invalid
+4) <img src="weekend. jpg" al t ="Fun
+weekend" width= "200">
+0 Valid
+O Invalid
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+D
+0
+0
+0
+0
+43/94
+10/12/24, 1 :35 PM zyBooks
+Image formats
+Web browsers support three popular image formats:
+1. The JPEG (Joint Photographic Experts Group) image format is commonly used for digital
+photographs.
+2. The PNG (Portable Network Graphics) image format is commonly used for line art, screenshots,
+or images requiring transparency.
+3. The G/F (Graphics Interchange Format) image format is commonly used for simple animated
+images.
+All three formats use data compression to decrease the image file size, which allows the file to be
+transferred over the internet quicker. JPEG images use lossy compression, meaning that some of the
+original picture information is lost when compressed. A photograph is best saved as a JPEG image
+because humans cannot easily perceive the quality loss in a photograph. PNG and GIF images use
+lossless compression, meaning no image quality is lost. Lossless compression works best when a
+large number of adjacent pixels are the same color.
+JPEG and PNG images can display true color (24-bit color), which is approximately 16 million different
+colors. GIF images are limited to only 256 colors (8-bit color), but GIF images can display animations,
+which are popular on social media.
+Table 1.5.1: Three popular image formats.
+File I
+Name Use Compression Colors Transparency Animation
+extension
+I
+JPEG Photographs Lossy
+24-
+. jpg No No
+bit
+j. L ~ -1- -1-
+PNG
+Line art and
+Lossless
+24-
+.png Yes No
+screens hots bit
+GIF .gif Animated images Lossless 8-bit Yes Yes
+◄ ►
+Other image formats
+Less common image formats include:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 44/94
+10/12/24, 1 :35 PM zyBooks
+• The APNG image format by Mozilla adds animation capability to PNG with true
+color support.
+• The SVG image format is an XML format that describes an image as a series of
+shapes and lines.
+• The WebP image format by Google supports true color, transparency, and
+animation.
+• The AVIF image format supports transparency, lossy or lossless compression,
+and higher compression rates.
+I PARTICIPATION
+ACTIVITY
+◄
+1.5.7: Image formats.
+Match each image to the image format most appropriate for that image.
+(a)
+Source: Stork imag~
+(b)
+(c)
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D ,.
+45/94
+10/12/24, 1 :35 PM zyBooks
+If unable to drag and drop, refresh the page.
+PNG
+JPEG
+GIF
+Favicon
+A favicon is a small icon that identifies a website and typically displays in a browser
+tab. A favicon can be any image format (JPEG, PNG, GIF) and any size. PNG is a
+popular favicon format because a PNG can have transparent pixels.
+X
+~ C i Secure
+A favicon is defined with a <link> element, which defines a link between a webpage
+and an external resource.
+<head>
+<title>My webpage</ title>
+<link rel="icon" href="favicon.png">
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 46/94
+10/12/24, 1 :35 PM
+I CHALLENGE
+ACTIVITY 1.5.1: Images.
+570104.20654 l 6.qx3zqy7 -
+zyBooks
+Add an alt attribute containing: Soft rain SHOW EXPECTED
+1
+2 <img src="deliberately-invalid-URL" >
+3
+1
+Check - View your last submission v
+Exploring further:
+• HTML images (W3Schools)
+• WebP image format (Google)
+• AVIF has landed (Jake Archibald)
+• Favicon (W3Schools)
+2
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+►
+3
+47/94
+10/12/24, 1 :35 PM zyBooks

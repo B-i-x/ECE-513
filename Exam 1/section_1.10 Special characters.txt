@@ -1,0 +1,75 @@
+Entities
+An entity is a mechanism for writing special characters or symbols in HTML, such as mathematical
+symbols, characters in most languages, and many other symbols. Many HTML entities can be
+specified by name. However, some entities do not have a name and can instead be specified using a
+decimal or hexadecimal number as shown in the table below.
+Table 1.10.1: HTML entity formats.
+Format type
+Format
+Symbol Description
+example
+I HTML defines names for common well-known
+Entity name &copy; © entities, which are typically English
+I abbreviations for the symbol.
+Decimal
+&#169; ©
+Every HTML entity has a unique number, which
+number can be specified as a decimal value.
+I
+I Every HTML entity has a unique hexadecimal
+Hexadecimal
+number
+&#x000A9; © number, which is the hexadecimal equivalent
+I to the entity's decimal number.
+◄
+I PARTICIPATION
+ACTIVITY 1.10.1: HTML entities for special symbols.
+Refer to the following symbols:
+• Mathematical "for all" symbol v with entity name "forall".
+• Euro symbol€ with entity name "euro".
+• Umbrella symbol T with decimal number 9730.
+1) The v symbol can be written as
+&forall; .
+0 True
+O False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+-
+►
+D
+0
+93/94
+10/12/24, 1 :35 PM
+2) The€ symbol can be written as &euro.
+O True
+O False
+3) The j symbol can be written as
+&#9730;.
+0 True
+0 False
+Emoji
+zyBooks
+Emoji characters can be displayed in a webpage with a decimal or hexadecimal entity.
+Ex: The happy face emoji, @, can be displayed with &#128512; or &#x1F600 ; . Since
+emoji are characters, not images, emoji characters can also be copied and pasted into
+any HTML document. Ex: <p> ()<Ip>.
+◄
+Entities for reserved characters
+0
+0
+►
+The< and & characters can be displayed using entities. The< character normally marks the beginning
+of a tag, so & 1 t; is used to display the < character when < is not part of a tag. The & character marks
+the beginning of an entity name, so &amp; is used to display the & character when & does not start an
+entity name.
+If the browser detects that < is being used without a tag or if & is being used without an entity, the
+browser will likely display the< or & characters. Ex: The HTML 2 < 3 & 4 will usually display
+2 < 3 & 4 without using entities. Good practice is to use &l t; and &amp; instead of relying on the
+browsertodeterminetheHTMLauthor'sintention. Ex: 2 &lt; 3 &amp; 4.
+I PARTICIPATION 1.7 0.2: HTML entities.
+ACTIVITY
+Match the character to the entity format.
+If unable to drag and drop, refresh the page.
+■ 11111
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+94/94

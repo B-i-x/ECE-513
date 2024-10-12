@@ -1,0 +1,397 @@
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+3
+D
+70/94
+10/12/24, 1 :35 PM zyBooks
+Containers and parent containers
+A container is any element in a web document body that has opening and closing tags. Web
+developers typically create many containers as a convenience to assist in organizing and formatting
+content. Ex: Containers can be formatted by applying styles to adjust margins, padding, horizontal and
+vertical alignment, and other visual presentation attributes.
+A parent container is the container in which another element resides.
+Table 1.8.1: Common HTML containers.
+Container Description
+<header> Container for introductory content
+<footer>
+Container for content descriptive information about the webpage like author,
+copyright, or date modified
+<address>
+<main>
+<section>
+<article>
+<nav>
+<aside>
+<div>
+<span>
+◄
+I PARTICIPATION
+ACTIVITY
+Container for person's or organization's contact information
+Container for the document's primary content
+Container for distinct parts of a document, such as a chapter
+Container for self-contained content that can be reused independently, such
+as a news article
+Container for content relating to website navigation
+Container for content not directly related to the main topic of a document
+Generic element for creating block containers
+Generic element for creating inline containers
+1.8.1 : Containers and parent containers.
+<body>
+<p >The top-selling board
+games of all time are: </p>
+The top-selling board games
+of all time are:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+-
+-
+►
+D
+71/94
+10/12/24, 1 :35 PM
+<o i >
+<l 15Cness<7 11>
+<li>Checkers</li>
+<li>Backgamrnon</li>
+<li>Scrabble</li>
+<li>Monopoly</li>
+<li>Clue</li>
+</ol>
+</body>
+Animation content:
+The following code snippet is displayed:
+<body>
+<p> The top-selling board games of all time are: </p>
+<ol>
+<li>Chess</li>
+<li>Checkers</li>
+<li>Backgammon</li>
+<li>Scrabble</li>
+<li>Monopoly</li>
+<li>Clue</li>
+</ol>
+</body>
+zyBooks
+1. Chess
+2. Checkers
+3. Backgammon
+4. Scrabble
+5. Monopoly
+6. Clue
+End of code snippet. A monitor displays a paragraph with the text, "The top-selling board games of
+all time are: " and below it is an ordered list beginning with "7 . Chess", and below it is "2. Checkers",
+"3. Backgammon", "4. Scrabble", "5. Monopoly", and "6. Clue".
+Animation captions:
+1. The <p> element is the container for the text 'The top-selling board games of all time are:".
+2. The <ol> element is the parent container for all list items.
+3. Each <Ii> element is the container for one list item.
+I PARTICIPATION
+ACTIVITY 1.8.2: Parent containers.
+Given the following HTML:
+<section>
+<ol>
+<li><img src="George-Washington.jpg" alt="George Washington" ></li>
+<li><img src="John-Adams.jpg" alt="John Adams" ></li>
+<li><img src="Thomas Jefferson.jpg" alt="Thomas Jefferson" ></li>
+</ol>
+</ section>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+72/94
+10/12/24, 1 :35 PM
+1) The <ol> element is the <li>
+element's parent container.
+0 True
+O False
+2) The <ol> element is the <img>
+element's parent container.
+O True
+0 False
+3) The <ol> element has a parent
+container.
+0 True
+0 False
+I PARTICIPATION
+ACTIVITY 1.8.3: Container structure.
+zyBooks
+Use the following visible containers created with the provided HTML below to answer the
+questions.
+<body>
+<header>
+<hl>The White House</hl>
+</header>
+<main>
+<p>
+The White House is the official residence of the President of
+the United States.
+</p>
+<img src="WhiteHouse.jpg" alt="White House">
+<address>
+White House<br>
+1600 Pennsylvania Avenue Northwest<br>
+Washington, DC 20500
+</address>
+</main>
+<footer>
+Site by <a href="mailto:solutions@example.com">Website Sol u t ions </a >
+</footer>
+</body>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+D
+73/94
+10/12/24, 1 :35 PM zyBooks
+1)
+2)
+3)
+The White Hous,e
+The \\ bite House is the official residence of the President of the
+United States.
+White House
+j 600 Pennsylvania Avem~e North,w.e,st
+Washington, DC 20-00
+I Site by \\ ebs ite Solutions
+Which element creates the container
+that holds the entire webpage?
+0 <body>
+0 <header>
+0 <main>
+Which element creates the container
+that holds the picture?
+0 <body>
+0 <main>
+0 <img>
+Which element creates the container
+that holds the White House address
+text?
+0 <footer>
+0 <main>
+0 <address>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+74/94
+10/12/24, 1 :35 PM
+4) Which element creates the parent
+container that holds the paragraph?
+Q <body>
+Q <main>
+0 <p>
+5) If a government logo and search box
+were to be added to the top of the
+page, in which container should the
+logo and search box be placed?
+Q <header>
+Q <main>
+Q <footer>
+Block elements
+zyBooks
+0
+0
+HTML elements can be categorized as either block or inline. A block element (sometimes called a
+block-level element) fills the width of the element's parent container and can contain other block
+elements, inline elements, and text. Block elements include <hl>, <table>, and <p>.
+Some block elements cannot be contained within certain other block elements when the semantics
+are unclear. Ex: The <p> element cannot contain another <p> element.
+A block element is typically displayed starting and ending on new lines. Ex: The <ol> element is a
+block element, and each ordered list starts on a new line separate from previous and following blocks.
+The <div> element is a generic element for creating block containers. Unlike other block elements,
+such as <p> and <table>, <div> is the only block element with no semantic meaning.
+Note
+◄
+By default, web browsers do not display container borders. For clarity, the container
+borders are visible in the following examples.
+Example 1.8.1: Block elements with visible containers.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+75/94
+10/12/24, 1 :35 PM zyBooks
+The following HTML breaks up a document into logical components using a <div> element
+for each component. The corresponding image displays the border for each container.
+<body>
+<div>Logo and headline elements</div>
+<div>Navigational elements</div>
+<div>Main content</div>
+<div>Footer and legal</div>
+</body>
+jLogo and headline elements
+~ avigational elements
+jMain content
+~ ooter and legal
+◄
+IAP ACRTTIVICITIPYA TION 1 .8.4: Block elements.
+1) Which element is a generic block
+element without any implied meaning?
+Q <block>
+Q <div>
+0 <section>
+2) What is the width of a block element?
+O The minimum width necessary
+to hold the block's contents.
+O The full width of the webpage.
+Q The full width of the block's
+parent container.
+lnline elements
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+0
+0
+76/94
+10/12/24, 1 :35 PM zyBooks
+An inline element fills the minimum space possible in the element's parent container and can only
+contain text or other inline elements. Ex: The <a> element is an inline element that creates a hyperlink
+container as big as the link's internal content; a hyperlink does not fill the width or height of the link's
+parent paragraph.
+The <span> element is a generic inline element. Unlike other inline elements, such as <a> and <em>,
+the <span> element has no semantic meaning.
+Since <div> and <span> do not have semantic meaning, <div> and <span> are used primarily for
+presentation and interaction purposes. Good practice is to use elements like <address>
+and <article> that convey semantic meaning when creating containers, and use <div> and <span>
+only when no other elements are appropriate.
+Example 1.8.2: Span elements with visible containers.
+The following HTML breaks up the second paragraph from Lincoln's Gettysburg Address into
+sentences using a <span> element for each component. The corresponding image displays
+a different background color for each inline container.
+<p>
+<span>Now we are engaged in a great civil war testing whether that
+nation, or any nation so conceived and so dedicated, can long
+endure. </span>
+<span>We are met on a great battle-field of that war. </span>
+<span>We have come to dedicate a portion of that field, as a final
+resting place for those who here gave their lives that that nation might
+live. </span>
+<span>It is altogether fitting and proper that we should do this. </ span>
+<Ip>
+Now vve are engaged in a great civil v.rar testing v.rhether that nation~ or
+any nation so conceived and so dedicated, can long endure. ~:Ve are met on
+a ·eat battle-field of that \var. We have come to dedicate a portion of that
+field~ as a final resting place for . hose who here gave their lives that that
+nation 1night live. It is altogether fitting and ro er that we should do this.
+◄
+I PARTICIPATION
+ACTIVITY 1.8.5: Block and inline elements.
+Refer to the following HTML, and determine if each element is a block or inline element.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+77/94
+10/12/24, 1 :35 PM zyBooks
+<p >Click on the "swoosh" to go to Nike Headquarters. <br>
+<a href="http://nike.com/" ><img src="nike-swoosh.jpg" alt="Nike swoosh">
+</a></p>
+7) <p>
+0 block
+0 inline
+2) <img>
+0 block
+0 inline
+3) <a>
+0 block
+0 inline
+4) <br>
+0 block
+0 inline
+I PARTICIPATION
+ACTIVITY 1.8.6: Hierarchy of block and inline elements.
+1) What types of elements can be inside a
+block element?
+O Only inline elements
+O Only block elements
+O Both inline and block elements
+2) What types of elements can be inside
+an inline element?
+O Only inline elements
+O Only block elements
+O Both inline and block elements
+Block vs. inline in Chrome DevTools
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+0
+0
+0
+0
+D
+0
+0
+78/94
+10/12/24, 1 :35 PM zyBooks
+◄
+The difference between block and inline elements is visible in Chrome's DevTools. In
+the screenshot below-left, the mouse hovers over the <p> element in the Dev Tools,
+and a rectangle appears around the entire paragraph in the webpage. The rectangle
+spans the browser width because <p> is a block element. Below-right, the mouse
+hovers over the < span> element, but the rectangle is only as wide as the span's
+contents because <span> is an inline element.
+0 White House X + □ X 0 White House X +
+~ ➔ C CD File I C:/ temp/whitehouse.html * ~ ➔ C CD File I C:/ temp/whitehouse.html
+p 467x36 b.ite House Tiu• W hit~ House
+span 83.97 x 17
+e \\'hite House 15 the official residence of the President of the lJnned
+[i o] Elements Console Sources Network » : X [i o] Elements Console 'Sources Netw'ork »
+/ header>
+,, main
+The "
+<sp-an ..-Wh i t e Hou se </span>
+" is t he official r es idence of t.he
+President of t he United States .
+htmt body main p
+/ header
+,, main>
+••• "' P== S0
+The '"
+span White Hou se </span
+" i s the of~ cial r esidence of the
+President of t he United Stat es .
+htm I body main p
+□ X
+*
+: X
+I PARTICIPATION
+ACTIVITY 1.8.7: Block vs. inline.
+Change the <div> elements to <span> elements in the following HTML to see the
+difference between block and inline layout.
+IMMI css
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+►
+D
+79/94
+10/12/24, 1 :35 PM zyBooks
+1 ;<,section,>
+2 <div>According to Wikipedia, J.R.R. Tolkien's <u>The Lord of the Rings </u>
+3 best-selling novel ever written . </div>
+4
+5
+6
+7
+8
+<div>Wikipedia states that "only A Tale of Two Cities by Charles Dickens hai
+worldwide (over 200 million)". </div>
+<div>Tolkien's <u>The Hobbit</u> is the fourth best-selling novel of all tir
+9 < section>
+Render webpage Reset code
+Your webpage
+According to Wikipedia, J.R.R. Tolkien's The Lord of the Ring~ is the second best-selling novel
+ever written.
+Wikipedia states that "only A Tale of Two Cities by Charles Dickens has sold more copies
+worldwide ( over 200 million)".
+Tolkien's The Hobbit is the fourth best-selling novel of all time.
+► View solution
+I CHALLENGE
+ACTIVITY 1.8.1: HTML containers.
+570104.2065416.qx3zqy7 -Modify the <h1 > to be in a <header>, the section content to be in a <section>, and the
+copyright to be in a <footer>. SHOW EXPECTED
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
+D
+80/94
+10/12/24, 1 :35 PM
+.I.
+2 <hl> Intro</hl>
+3 <p>Content of first section</p>
+4 <p>&copy; 2012 - Phil Yu </p>
+5
+1 2
+Check - View your last submission v
+zyBooks
+3
