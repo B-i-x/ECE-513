@@ -1,0 +1,93 @@
+---
+[3.11.1] Multiple Choice: What does the `charAt()` method do in JavaScript?
+
+- (A) Returns the character at the specified index in a string.
+- (B) Returns the Unicode value of a character.
+- (C) Converts the character at the specified index to uppercase.
+- (D) Removes the character at the specified index.
+---
+
+[3.11.2] Multiple Choice: What is the output of the following code?
+
+let str = "JavaScript";
+console.log(str.charAt(4));
+
+- (A) "J"
+- (B) "S"
+- (C) "v"
+- (D) "a"
+---
+
+[3.11.3] Multi-Select: Which of the following methods can be used to extract a substring from a string? (Select all that apply)
+
+- (A) `substring()`
+- (B) `substr()`
+- (C) `slice()`
+- (D) `charAt()`
+---
+
+[3.11.4] Multiple Choice: What will be the output of this code?
+
+let sentence = "I love programming!";
+console.log(sentence.indexOf("love"));
+
+- (A) 0
+- (B) 2
+- (C) 5
+- (D) -1
+---
+
+[3.11.5] Multiple Choice: What does the `replace()` method do in JavaScript?
+
+- (A) Removes the specified substring.
+- (B) Finds and replaces a substring in a string.
+- (C) Finds and appends a substring to a string.
+- (D) Duplicates a substring within a string.
+---
+
+[3.11.6] Multiple Choice: What is the result of this code?
+
+let text = "Hello World!";
+let newText = text.replace("World", "JavaScript");
+console.log(newText);
+
+- (A) Hello World!
+- (B) Hello JavaScript!
+- (C) Hello Java!
+- (D) Error
+---
+
+[3.11.7] Multiple Choice: Which of the following methods converts a string to lowercase?
+
+- (A) `toUpperCase()`
+- (B) `toLowerCase()`
+- (C) `split()`
+- (D) `concat()`
+---
+
+[3.11.8] Multiple Choice: What will the following code output?
+
+let phrase = "Spaces here";
+console.log(phrase.length);
+
+- (A) 10
+- (B) 11
+- (C) 12
+- (D) undefined
+---
+
+[3.11.9] Multiple Choice: What is the purpose of the `trim()` method in JavaScript?
+
+- (A) Trims off a substring from the start and end of the string.
+- (B) Removes whitespace from both ends of a string.
+- (C) Converts a string to lowercase.
+- (D) Replaces spaces with underscores.
+---
+
+[3.11.10] Multiple Choice: What is the benefit of using template literals in JavaScript?
+
+- (A) They allow embedding expressions into strings.
+- (B) They prevent the use of variables in strings.
+- (C) They convert strings to numbers automatically.
+- (D) They remove special characters from strings.
+---

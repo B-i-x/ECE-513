@@ -1,0 +1,115 @@
+---
+[3.10.1] Multiple Choice: What does the following code output?
+
+let stateCapitals = {
+  AR: "Little Rock",
+  CO: "Denver",
+  NM: "Santa Fe"
+};
+console.log(stateCapitals["CO"]);
+
+- (A) Little Rock
+- (B) Denver
+- (C) Santa Fe
+- (D) undefined
+---
+
+[3.10.2] Multiple Choice: How can you add a new key/value pair to an existing object in JavaScript?
+
+- (A) object.add("key", "value");
+- (B) object["key"] = "value";
+- (C) object.insert("key", "value");
+- (D) object.key("value");
+---
+
+[3.10.3] Multi-Select: Which of the following are valid ways to loop through an object’s properties? (Select all that apply)
+
+- (A) for (let key in object)
+- (B) for (let key of object)
+- (C) Object.keys(object).forEach()
+- (D) for (let value of Object.values(object))
+---
+
+[3.10.4] Multiple Choice: What is the purpose of the `delete` operator in JavaScript?
+
+- (A) To remove a property from an object
+- (B) To clear all properties from an object
+- (C) To reset a property to `undefined`
+- (D) To throw an error if the property does not exist
+---
+
+[3.10.5] Multiple Choice: What is the output of the following code?
+
+let contacts = {
+  Rosa: { phone: "303-555-4321", email: "rosa@gmail.com" },
+  Dave: { phone: "501-533-9988", email: "dave@yahoo.com" }
+};
+console.log(contacts["Dave"].email);
+
+- (A) rosa@gmail.com
+- (B) 501-533-9988
+- (C) dave@yahoo.com
+- (D) undefined
+---
+
+[3.10.6] Multiple Choice: What is the result of this code?
+
+let stateCapitals = {
+  AR: "Little Rock",
+  CO: "Denver"
+};
+delete stateCapitals["CO"];
+console.log("CO" in stateCapitals);
+
+- (A) true
+- (B) false
+- (C) undefined
+- (D) An error is thrown
+---
+
+[3.10.7] Multi-Select: Which of the following statements are true about for-in loops in JavaScript? (Select all that apply)
+
+- (A) They loop over all enumerable properties of an object.
+- (B) They loop over both the keys and values of an object.
+- (C) They can be used to iterate over arrays.
+- (D) They loop through an object’s keys in insertion order.
+---
+
+[3.10.8] Multiple Choice: What will the following code output?
+
+let courses = {
+  "101": "Math",
+  "102": "English",
+  "103": "History"
+};
+for (let course in courses) {
+  console.log(course + ": " + courses[course]);
+}
+
+- (A) "101: Math", "102: English", "103: History"
+- (B) "Math", "English", "History"
+- (C) "101: History", "102: English", "103: Math"
+- (D) undefined
+---
+
+[3.10.9] Multiple Choice: How do you check if an object contains a specific key?
+
+- (A) if (object.key !== undefined)
+- (B) if (key in object)
+- (C) if (Object.hasKey(object, key))
+- (D) if (object.includes(key))
+---
+
+[3.10.10] Multiple Choice: What will this code output?
+
+let students = {
+  123: { name: "Tiara", gpa: 3.3 },
+  444: { name: "Lee", gpa: 2.0 }
+};
+console.log(444 in students);
+
+- (A) true
+- (B) false
+- (C) undefined
+- (D) null
+---

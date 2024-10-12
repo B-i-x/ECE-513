@@ -1,0 +1,19 @@
+[3.10.1] (B) Denver
+
+[3.10.2] (B) object["key"] = "value";
+
+[3.10.3] (A) for (let key in object), (C) Object.keys(object).forEach(), (D) for (let value of Object.values(object))
+
+[3.10.4] (A) To remove a property from an object
+
+[3.10.5] (C) dave@yahoo.com
+
+[3.10.6] (B) false
+
+[3.10.7] (A) They loop over all enumerable properties of an object., (C) They can be used to iterate over arrays.
+
+[3.10.8] (A) "101: Math", "102: English", "103: History"
+
+[3.10.9] (B) if (key in object)
+
+[3.10.10] (A) true

@@ -1,0 +1,19 @@
+[3.11.1] (A) Returns the character at the specified index in a string.
+
+[3.11.2] (D) "a"
+
+[3.11.3] (A) `substring()`, (B) `substr()`, (C) `slice()`
+
+[3.11.4] (B) 2
+
+[3.11.5] (B) Finds and replaces a substring in a string.
+
+[3.11.6] (B) Hello JavaScript!
+
+[3.11.7] (B) `toLowerCase()`
+
+[3.11.8] (B) 11
+
+[3.11.9] (B) Removes whitespace from both ends of a string.
+
+[3.11.10] (A) They allow embedding expressions into strings.
