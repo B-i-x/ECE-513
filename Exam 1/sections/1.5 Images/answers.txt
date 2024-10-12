@@ -1,0 +1,10 @@
+1.5.1 (B) To display an alternative text description if the image cannot be loaded
+1.5.2 False
+1.5.3 (B) src
+1.5.4 True
+1.5.5 (A) The image displays as a broken icon.
+1.5.6 False
+1.5.7 (B) width and height
+1.5.8 False
+1.5.9 (A) The image is displayed with the specified dimensions, possibly distorted.
+1.5.10 True

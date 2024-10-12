@@ -1,0 +1,49 @@
+---
+[1.5.1] Multiple Choice: What is the purpose of the 'alt' attribute in an <img> tag?
+   - (A) To provide a caption for the image
+   - (B) To display an alternative text description if the image cannot be loaded
+   - (C) To increase the image size
+   - (D) To link to another webpage
+---
+
+[1.5.2] True/False: The 'src' attribute in an <img> tag is optional.
+---
+
+[1.5.3] Multiple Choice: Which attribute specifies the image source in an <img> tag?
+   - (A) href
+   - (B) src
+   - (C) rel
+   - (D) type
+---
+
+[1.5.4] True/False: The 'alt' attribute is required in <img> tags to pass HTML validation.
+---
+
+[1.5.5] Multiple Choice: What happens if the 'src' attribute of an <img> tag is missing?
+   - (A) The image displays as a broken icon.
+   - (B) The browser automatically searches for a valid source.
+   - (C) No image space is rendered in the document.
+   - (D) The alt text is displayed in place of the image.
+---
+
+[1.5.6] True/False: The <img> tag can be used to embed a video file into a webpage.
+---
+
+[1.5.7] Multiple Choice: Which attribute in an <img> tag defines the space an image occupies before it loads?
+   - (A) alt
+   - (B) width and height
+   - (C) src
+   - (D) style
+---
+
+[1.5.8] True/False: The dimensions specified in the <img> tag always override the natural size of the image.
+---
+
+[1.5.9] Multiple Choice: How does the browser handle an <img> tag with conflicting width and height attributes that distort the image's natural aspect ratio?
+   - (A) The image is displayed with the specified dimensions, possibly distorted.
+   - (B) The browser adjusts the dimensions to maintain the aspect ratio.
+   - (C) The image fails to load.
+   - (D) The browser ignores the height attribute.
+---
+
+[1.5.10] True/False: The <img> tag supports both width and height attributes to control image sizing without CSS.
