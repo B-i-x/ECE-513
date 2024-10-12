@@ -1,0 +1,10 @@
+1.4.1 False
+1.4.2 (B) <!-- This is a comment -->
+1.4.3 False
+1.4.4 (B) To leave notes for other developers within the code
+1.4.5 False
+1.4.6 (B) To temporarily disable code without deleting it
+1.4.7 True
+1.4.8 (B) The content inside the comment may be displayed as text.
+1.4.9 True
+1.4.10 (A) Comments can be placed anywhere in the HTML, including within tags.

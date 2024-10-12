@@ -1,0 +1,49 @@
+---
+[1.4.1] True/False: HTML comments are rendered in the browser and visible to the user.
+---
+
+[1.4.2] Multiple Choice: What is the correct syntax for an HTML comment?
+   - (A) <comment>This is a comment</comment>
+   - (B) <!-- This is a comment -->
+   - (C) // This is a comment
+   - (D) # This is a comment
+---
+
+[1.4.3] True/False: Comments in HTML can be nested inside other comments.
+---
+
+[1.4.4] Multiple Choice: Which of the following is a proper use of HTML comments?
+   - (A) To execute a JavaScript function conditionally
+   - (B) To leave notes for other developers within the code
+   - (C) To create a hidden text field in a form
+   - (D) To style elements differently based on the comment
+---
+
+[1.4.5] True/False: Placing a comment inside an HTML tag will prevent the tag from being rendered.
+---
+
+[1.4.6] Multiple Choice: How should HTML comments be used in a document?
+   - (A) To improve the page's SEO by including keywords
+   - (B) To temporarily disable code without deleting it
+   - (C) To create secure sections of code that cannot be viewed by the user
+   - (D) To automatically update content on a webpage
+---
+
+[1.4.7] True/False: HTML comments can be used to hide scripts from browsers that do not support JavaScript.
+---
+
+[1.4.8] Multiple Choice: What happens if an HTML comment is incorrectly formatted?
+   - (A) The comment is still hidden from the user.
+   - (B) The content inside the comment may be displayed as text.
+   - (C) The entire webpage fails to render.
+   - (D) The comment turns into a functional HTML element.
+---
+
+[1.4.9] True/False: It is considered good practice to use comments to explain complex parts of the code.
+---
+
+[1.4.10] Multiple Choice: Which statement about HTML comments is true?
+   - (A) Comments can be placed anywhere in the HTML, including within tags.
+   - (B) Comments reduce the overall performance of the webpage.
+   - (C) Comments can execute HTML code when the page loads.
+   - (D) Comments are often used to include executable code on the page.

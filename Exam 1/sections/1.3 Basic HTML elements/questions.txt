@@ -1,0 +1,49 @@
+---
+[1.3.1] True/False: The <p> tag is used to create line breaks in HTML documents.
+---
+
+[1.3.2] Multiple Choice: What is the purpose of the <p> tag in an HTML document?
+   - (A) To define a line break
+   - (B) To emphasize text
+   - (C) To create a paragraph
+   - (D) To insert an image
+---
+
+[1.3.3] True/False: Nested <p> tags are valid in HTML and do not cause any errors in document rendering.
+---
+
+[1.3.4] Multiple Choice: How do browsers typically display paragraphs?
+   - (A) With no spacing between paragraphs
+   - (B) With extra spacing above and below paragraphs
+   - (C) By indenting the first line of each paragraph
+   - (D) By making the text bold
+---
+
+[1.3.5] True/False: Adding extra spaces within the text in an HTML document will affect the spacing between words in most web browsers.
+---
+
+[1.3.6] Multiple Choice: What does the <br> tag accomplish in an HTML document?
+   - (A) It adds a background color to text.
+   - (B) It creates a new paragraph.
+   - (C) It inserts a line break within the text.
+   - (D) It changes the font size of the text.
+---
+
+[1.3.7] True/False: The <br> tag requires a closing tag.
+---
+
+[1.3.8] Multiple Choice: What is the effect of multiple whitespace characters between words in HTML?
+   - (A) They add multiple spaces in the rendered document.
+   - (B) They are collapsed into a single space.
+   - (C) They create a new paragraph.
+   - (D) They are ignored by web browsers.
+---
+
+[1.3.9] True/False: The use of the <br> tag is recommended for managing the layout and spacing of elements in a webpage.
+---
+
+[1.3.10] Multiple Choice: How should line breaks be managed in HTML for content such as addresses or poetry?
+   - (A) Using <p> tags at the end of each line
+   - (B) Using CSS to manage spacing
+   - (C) Using <br> tags at the end of each line
+   - (D) Using <div> tags for each new line
