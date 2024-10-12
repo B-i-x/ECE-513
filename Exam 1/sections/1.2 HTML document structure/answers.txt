@@ -1,0 +1,10 @@
+1. False
+2. (C) To connect the document to external stylesheets
+3. (C) <article>
+4. (A) To define a container for navigation links
+5. (D) It is an HTML element that contains metadata.
+6. True
+7. (B) It can be used multiple times within sections or articles.
+8. (A) The character encoding for the HTML document
+9. True
+10. (A) <script>

@@ -1,0 +1,8 @@
+1. False
+2. (B) 255
+3. 
+   - (A) Commercial
+   - (B) Educational
+   - (C) Government
+4. True
+5. False
