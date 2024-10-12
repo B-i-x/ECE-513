@@ -1,0 +1,368 @@
+Element, class, and ID selectors
+CSS has many ways to specify the selector. Three common selector types are:
+1. The element selector matches elements with the specified element names.
+Ex: p { color : blue; } selects all p elements.
+2. The class selector, specified with a period character followed by the class name, matches
+elements that have the specified class name.
+Ex: . notice { c o lor: blue; } selects all elements with a class="notice" attribute.
+3. The ID selector, specified with a hash character followed by the ID name, matches the
+element that has the specified ID.
+Ex: #byLine { color: blue; } selects the element with the id="byLine" attribute.
+HTML class names allow CSS rules and JavaScript code to modify all HTML elements belonging to
+a class. An HTML element's_class attribute_ specifies the classes to which the element belongs,
+with each class name separated by a space. Ex: <span class="highlight first" > has two
+classes, highlight and first . While HTML elements' IDs are unique, many elements may use
+the same HTML class name.
+I PARTICIPATION I . ACTIVITY 2.2.1: Applying styles to HTML elements. □
+2024-10-12, 3:24 p.m.
+green blue
+decoration underline
+font-style italic
+<p id="second">Blade Runner</p>
+<p class="gr">Moon</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+12 of 98 2024-10-12, 3:24 p.m.
+Animation content:
+A block of CSS is shown:
+A block of HTML is shown:
+<p>Children of Men</p>
+<p id="second">Blade Runner</p>
+<p class="gr">Moon</p>
+A browser displays four paragraphs. The first says "Children of Men" in blue text. The second says
+"Blade Runner" in orange text. The third says "Moon" in green text.
+Animation captions:
+1. The default styling colors the text black with a white background.
+2. The element selector p matches all paragraph elements and colors the text blue.
+3. The class selector .gr matches all elements with the "gr" class attribute and colors the text
+green.
+4. The ID selector #second matches the paragraph with "second" ID attribute and colors the
+text orange.
+I PARTICIPATION I ACTIVITY 2.2.2: Element, class, and ID selectors.
+Modify or add one CSS rule for each requirement below using the specified selectors.
+1. Element selector: Change the text color from
+2. Class selector: Set the text-decoratio to
+with the class name footnote .
+3. ID selector: Set the text color to orange and the
+HTML element with the ID footnote-1.
+I HTML I css
+to for the list items.
+'"" for all HTML elements
+to for the
+□
+Facts about CSS
+According to Wikipedia, CSS was first
+proposed by Håkon Wium Lie on
+October 10, 1994. [1]
+The first W3C CSS Recommendation
+(CSS1) was released in 1996.
+CSS was selected over competing
+stylesheet technologies because CSS
+allowed a document's style to be
+influenced by multiple stylesheets by
+way of "cascading". [1]
+Four years passed from when CSS1
+was released before any browser fully
+supported CSS1. [2]
+zyBooks
+13 of98
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+~ tion~
+<h2> Facts about CSS </h2>
+<ul>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+<li>According to Wikipedia, CSS was first proposed by Hakon Wium Lj
+<a href="#footnote-1" >[1] </ a></li>
+<li>The first W3C CSS Recommendation (CSSl) was released in 1996. </
+<li>CSS was selected over competing stylesheet technologies because
+style to be influenced by multiple stylesheets by way of "cascac
+<a href="#footnote-1" >[1] </ a></li>
+12
+<li> Four years passed from when CSSl was released before any browse
+<a href="#footnote-2" >[2] </ a></li>
+</ul> r
+13 <p id="footnote-1" class="footnote">
+14
+15
+[1] <a href="https://en.wikipedia.org/wiki/CSS#History" target="_b]
+Cascading Style Sheets history</ a>. Retrieved March 31, 2022.
+16 </p>
+17 <p id="footnote-2" class="footnote">
+1s:l r,l " "' hl"o+- "h++nc•//on t.dvinorli::, nl"n!t.dvi/rccHni++ir11l+" t.d+h ::,rlnr
+Render webpage Reset code
+Your webpage
+Facts about CSS
+• According to Wikipedia, CSS was first
+proposed by Hakon Wium Lie on
+October 10, 1994. W
+• The first W3C CSS Recommendation
+(CSSl) was released in 1996.
+• CSS was selected over competing
+stylesheet technologies because CSS
+allowed a document's style to be
+influenced by multiple stylesheets by
+way of "cascading". W
+• Four years passed from when CSSl
+was released before any browser fully
+► View solution
+Expected webpage
+• Hakon W
+• CSSl) • oi f ,,c ascad .m' g ". W
+• CSSl
+I PARTICIPATION I ACTIVITY 2.2.3: Element, class, and ID selectors.
+Refer to the following HTML fragment.
+□
+2024-10-12, 3:24 p.m.
+<ol class="numbers">
+<li id="first">First number</li>
+<li id="second">Second number</li>
+<li id="third">Third <span class="important">number</span></li>
+</ol>
+<ul>
+<li>A bullet</li>
+<li>Another bullet</li>
+<li>Another <span class="important">important item</span></li>
+</ul>
+<li>
+h2 em { color: blue; }
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+14 of 98 2024-10-12, 3:24 p.m.
+7) What CSS selector matches all
+the elements?
+Check Show answer
+2) What CSS selector matches the
+last <li> element in the
+ordered list?
+Check Show answer
+3) What CSS selector matches the
+numbe r s class attribute?
+Check Show answer
+Descendant selector
+The descendant selector, specified with a selector followed by a space and another selector,
+0
+0
+0
+matches elements that are contained in other elements. Ex:
+em elements contained in h2 elements.
+{ cc lor: } selects
+I PARTICIPATION I ACTIVITY 2.2.4: Descendant selectors.
+The given CSS rule makes all strong elements have a gold background. Modify the rule so
+only strong elements inside a ul element are gold.
+□
+Some common idioms:
+The ball is in your court.
+Break a leg.
+It's the best thing since sliced bread.
+Jump on the bandwagon.
+zyBooks https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+I HTML I css I
+1 <p>
+2 Some common <strong> idioms </strong> :
+3 </P1>
+4
+5 <ul>
+6 <li>The <strong> ball</strong> is in your <strong> court </strong> . </li>
+7 <li>Break a <strong> leg</strong> . </li>
+8 <li>It's the best thing since <strong> sliced bread </strong> . </li>
+9 <li> Jump on the <strong> bandwagon </strong> . </li>
+10 </ul>
+11
+Render webpage Reset code
+Your webpage Expected webpage
+Some common idioms: • The ball is in your court. • • Break a leg. • • It's the best thing since sliced bread. • • Jump on the bandwagon. • ► View solution
+I PARTICIPATION I . ACTIVITY 2.2.5: Descendant matching. □
+Refer to the CSS below.
+15 of98 2024-10-12, 3:24 p.m.
+p span {
+background-color: yellow;
+}
+<p>The <span>text</span> is
+highlighted.</p>
+<li>
+<ol>
+<li>The <span>text</span> is
+highlighted.</li>
+<li>The text is not
+highlighted.</li>
+</ol>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+16 of 98 2024-10-12, 3:24 p.m.
+1) Does "text" appear highlighted?
+0 Yes
+0 No
+2) Does "text" in the first
+appear highlighted?
+element
+0 Yes
+0 No
+3) Does "text" appear highlighted?
+<p ><em><span>text</span></
+em></p>
+0 Yes
+0 No
+4) Does "text" appear highlighted in both
+<span> elements?
+<p>
+<span>text< / span>
+<span><em>text< / em>< / span>
+</ p>
+0 Yes
+0 No
+5) Does "text" appear highlighted?
+<span><p >text</p ></span>
+0 Yes
+0 No
+0
+0
+0
+0
+0
+a:hover
+span.highlight span highlight
+tr: nth-child(even)
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+17 of 98 2024-10-12, 3:24 p.m.
+Pseudo-class selector
+The pseudo-class selector, specified with a colon character followed by a pseudo-class name,
+matches elements based on user behavior or element metainformation. Example pseudo-class
+selectors include:
+• :disabled - Element is disabled.
+• :hover - Mouse is hovering over the element.
+• :empty - Element has no child elements.
+• :lang(language) - Element contains text in a specified language.
+• :nth-child(n) - Element is the parent element's nth child.
+Class selectors and pseudo-class selectors can combine with element names to match more
+specific elements. Ex: selects only the anchor element the mouse is hovering over, and
+selects only elements that have the class attribute.
+I PARTICIPATION I . ACTIVITY 2.2.6: Using pseudo-class selectors on a table.
+The table displays the five countries that earned the most medals in the 2022 Winter
+Olympics in Beijing. Hovering the mouse over the text on the expected webpage's top row
+makes the text orange.
+1. Add a new rule using the child selector that makes every even tr
+child element have a lavender background color.
+2. Add a new rule using the th: hover selector that changes the th element's text
+color to orange when the mouse hovers over the element.
+I HTML I css j
+□
+ROC Canada 4 8
+14
+26
+7
+zyBooks https://leam.zybooks.com/zybook/ ARIZONAECE4 l 3SalehiFall2024/c ...
+18 of98
+1 ~ltable,t>
+2 <captiont:-2022 Olympic Medal Counts </captiont>
+3 <t n
+4 <tht> Country</tht>
+5 <tht> Gold </tht>
+6 <tht>Silver</tht>
+7 <tht> Bronze</tht>
+8 <tht> Total</tht>
+9 </t n
+10 <t n
+11 <tdt> Norway </tdt>
+12 <tdt:- 16</tdt>
+13 <td >8</td>
+14 <td >13</td>
+15 <td >37 </td>
+16 </tr>
+17 <tr>
+1s:l ✓ +rh. R/'"\r ,, l +rh .
+Render webpage Reset code
+Your webpage
+2022 Olympic Medal Counts
+Country Gold Silver Bronze Total
+Norway 16 8 13 37
+ROG 6 12 14 32
+Germany 12 10
+Canada 4 8
+USA 8 10
+► View solution
+5
+14
+7
+27
+26
+25
+I PARTICIPATION I ACTIVITY 2.2.7: Pseudo-class selectors.
+1) Which selector makes a div element's
+background color change to light blue
+when the mouse hovers over any part
+of the div contents?
+Expected webpage
+2022 Olympic Medal Counts
+Country Gold Silver Bronze Total
+Norway 16 8 13 37
+ROG 6 12 14 32
+Germany 12 10
+USA 8 10
+5
+27
+25
+□
+0
+2024-10-12, 3:24 p.m.
+_____ {
+background-color:
+lightblue;
+}
+:hover
+div:hover
+div.hover
+:nth-child
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+19 of 98 2024-10-12, 3:24 p.m.
+0
+0
+0
+2) The pseudo-class can
+be specified with "even" and "odd"
+values as well as a number
+representing the child's position,
+where 1 is the first child. What is
+missing to make the first list item
+purple?
+li : nth- child ( -- color : purple ;
+0 0
+0 1
+0 first
+3) Which selector gives buttons with a
+disabled attribute a gray
+background?
+background- col or : gray ;
+0 button
+0 button:disabled
+0 button : enabled
+I CHALLENGE I . ACTIVITY 2.2.1: Basic selectors.
+5707 04.2065416 qx3zqy7
+Start
+Set background-color to deeppink for all elements with class: standout
+SHOW EXPECTED
+0
+0
+□
+zyBooks
+20 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1
+2 /* Your solution goes here*/
+3
+1 2
+Check Next
+View your last submission v
+Exploring further:
+l css I HTML l
+3
+• CSS Selectors Reference from W3Schools.
+• CSS Pseudo-classes from W3Schools.
+• CSS Attribute Selectors from W3Schools.
+4

@@ -1,0 +1,507 @@
+Universal selector
+The universal selector, specified using an asterisk character ( ), matches a// elements in the
+webpage. The universal selector is implied when an element name is not specified. Ex: The CSS
+selectors and match exactly the same elements, where the universal
+selector is implied in and explicit in
+Multiple selector
+The multiple selector, specified using a comma ( ) to separate selectors, matches all listed
+elements to apply a style rule. Ex: The figure below shows two CSS examples that apply the same
+styles to and elements. The CSS on the left unnecessarily duplicates the styling
+declarations for and elements, whereas the CSS on the right uses a single style
+declaration using a multiple selector.
+Figure 2.6.1: Comparing separate and multiple selectors.
+Separate selectors Multiple selector
+ul {
+background- color :
+gray ;
+color : white ;
+font - weight : bold;
+}
+ol {
+background- color :
+gray ;
+color : white ;
+font - weight : bold;
+}
+Child selector
+The child selector, specified using a greater than character ( ) between two selectors, matches any
+elements where the second element is a direct child of the first element. The child selector is
+similar to the descendant selector (space between selectors), but the matching child element in the
+child selector must be a direct child of the matching parent element.
+The name is an anagram Neo for O n e .
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+63 of 98 2024-10-12, 3:24 p.m.
+I PARTICIPATION
+ACTIVITY I 2.6.1: Styling background color with child selector.
+p em {
+background- col or : ye llow ;
+p > em {
+background- col or : green ;
+<p>
+The name
+<strong><em>Neo</em></ strong>
+i s an anagram for
+<em>One</em> .
+</p>
+Animation content:
+The stylesheet reads:
+p em {
+background-color: yellow;
+}
+p > em {
+background-color: green;
+}
+The HTML reads:
+<p>
+The name
+<strong><em>Neo</em></strong>
+is an anagram for
+<em>One</em>.
+</p>
+r
+□
+The browser displays 'The name Neo is an anagram for One." Neo is bold and italicized with a
+yellow background. One is italicized with a green background.
+Animation captions:
+1 . The em elements are descendants of the paragraph element, so the descendant selector
+matches both elements.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+64 of 98 2024-10-12, 3:24 p.m.
+2. The "Neo'' em element is a direct child of the strong element, not the p element, so the p >
+em child selector does not match the "Neo" em.
+3. The p > em child selector does match the "One" em element since the em is a direct child of
+p.
+I PARTICIPATION I . . ACTIVITY 2.6.2: List item selectors.
+Match the CSS selectors to the best descriptions.
+If unable to drag and drop, refresh the page.
+Ii ol > Ii ol Ii
+Match all list items.
+Match all list items that are
+descendants of ordered lists.
+Match all list items that are direct
+children of ordered lists.
+Reset
+I PARTICIPATION I . . ACTIVITY 2.6.3: Matching specific elements.
+Refer to the HTML below.
+□
+□
+<p>James Bond is known to drive the <span class="mfg">Aston Martin</span>
+DB5.
+Below are a few cars James Bond has driven in recent Bond films according
+to
+<a href="https://en.wikipedia.org/wiki/
+List_of_James_Bond_vehicles">Wikipedia</a>.</p>
+<ol>
+<li><cite>Casino Royale</cite> (2006)
+<ul>
+<li><span class="mfg">Bentley</span> 4.5 Litre</li>
+<li><span class="mfg">Aston Martin</span> DB5</li>
+</ul>
+</li>
+<li><cite>Quantum of Solace</cite> (2008)
+<ul>
+<li><span class="mfg">Aston Martin</span> DBS V12</li>
+</ul>
+</li>
+<li><cite>Skyfall</cite> (2012)
+<ul>
+<li><span class="mfg">Jaguar</span> XJ (X351)</li>
+<li><span class="mfg">Mercedes</span> S400</li>
+<li><span class="mfg">Aston Martin</span> DB5</li>
+</ul>
+</li>
+<li><cite>Spectre</cite> (2015)
+<ul>
+<li><span class="mfg">Aston Martin</span> DB10</li>
+</ul>
+</li>
+</ol>
+mfg
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+65 of 98 2024-10-12, 3:24 p.m.
+7) What CSS selector matches all
+list items?
+Check Show answer
+2) What selector matches list
+items that are direct children of
+ordered lists but not unordered
+lists?
+Check Show answer
+3) What selector matches all
+elements with the class
+0
+0
+0
+background-color
+<ul> magenta
+<li>
+cyan <span>
+cyan <span>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+66 of 98 2024-10-12, 3:24 p.m.
+attribute?
+Check Show answer
+4) What selector matches ordered
+and unordered lists?
+Check Show answer
+5) What selector matches <cite>,
+<sp a n >, and <a> elements?
+Check Show answer
+I PARTICIPATION I . . ACTIVITY 2.6.4: Child and multiple selectors.
+Modify or add a CSS rule for each requirement below to change the
+property as specified.
+1. Add a rule to change the background color for elements to be
+2. Modify the ol li selector so the yellow background color applies only to
+elements that are direct children of <ol> elements.
+3. Add a rule to change the background color to for elements that are
+descendants of <ol> elements.
+4. Add a rule to change the background color to for elements that are
+descendents of <ul> elements.
+5. Combine the previous two rules into a single rule using a multiple selector.
+I HTML I css j
+0
+0
+□
+~
+<body>
+1. The Muppets were created in 1955.
+2. The first two Muppets performers were
+married.
+Jim Henson
+Jane Henson
+3. The Muppets were also in comic strips
+and movies.
+The Muppets were created in 1955.
+Every "Muppets" and "Henson" word is
+colored cyan except in this sentence.
+zyBooks
+67 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 ~eil>
+2
+3
+4
+<li>The <em><span>Muppets </span></em> were created in 1955. </li>
+<li>The first two <span><em>Muppets </em></span> performers were marriE
+<ul>
+5
+6
+7
+<li> Jim <span>Henson </span></li>
+<li> Jane <span>Henson </span></li>
+</ul>
+8 </li>
+9
+10
+<li>The <span>Muppets </span> were also in comic strips and movies. </lj
+</ol
+11
+12 <ul>
+13
+14
+<li>The <em><span>Muppets </span></em> were created in 1955. </li>
+</ul>
+15
+16 <p> Every <span> "Muppets" </span> and <span> "Henson" </span> word is colorec
+17
+Render webpage Reset code
+Your webpage
+1. The Muppets were created in 1955.
+2. The first two Muppets performers were
+married.
+o Jim Henson
+o Jane Henson
+3. The Muppets were also in comic strips
+and movies.
+• The Muppets were created in 1955.
+Every "Muppets" and "Henson" word is
+colored cyan except in this sentence.
+► View solution
+Sibling selectors
+Expected webpage
+I
+o o • Sibling elements are elements that share the same parent element. The general sibling selector,
+specified using a tilde character ( ~) between two selectors, matches the second element if the
+second element occurs after the first element and both elements are siblings. Any number of other
+elements can be placed between two general sibling elements. In the example below, the heading
+and the paragraphs are children of the element. Consequently, the two paragraphs are
+2024-10-12, 3:24 p.m.
++
+h1 + p
+<h1>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+68 of 98 2024-10-12, 3:24 p.m.
+both general siblings of the heading element.
+Figure 2.6.2: General sibling selector.
+<style>
+hl ~ p {
+HTML and CSS
+border-top : lpx sol id gray ;
+</style>
+<body>
+<hl>Cl ass i fieds </hl>
+<p >Dog for adopt i on . Call
+555 -1 23 4. </p>
+<p >Guard dog wanted . Call
+555 -4 321 . </p>
+</body>
+Render
+Classifieds
+Dog for adoption. Call 555-1234.
+Guard dog wanted. Call
+555-4321 .
+The adjacent sibling selector, specified using a plus character ( ) between two selectors, matches
+an element that immediately follows another element, where both elements have the same parent.
+Ex: The adjacent selector in the figure below matches the first paragraph immediately
+following the heading element, where both the paragraph and heading share the same parent
+element.
+Figure 2.6.3: Adjacent sibling selector.
+L HTML and CSS Render
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+69 of 98 2024-10-12, 3:24 p.m.
+I
+<style>
+hl + p {
+bor de r-top : lpx solid o r a nge ;
+</ style>
+<body>
+<hl>My Book Report< / hl>
+<p>
+I tho r oughly enj oyed this
+book. The story made me
+l augh and cry and jump for
+j oy .
+</p>
+<p>
+I recommend this book to
+anyone who l oves to read.
+</p>
+</body>
+My Book Report
+I thoroughly enjoyed this book. The
+story made me laugh and cry and jump
+for joy.
+I recommend this book to anyone who
+loves to read.
+Combinators.
+Combinators are CSS selectors that match specific relationships between other
+selectors. The descendant, child, adjacent sibling, and general sibling selectors are all
+combinators.
+PARTICIPATION I . ACTIVITY 2.6.5: Identify CSS selector names.
+Identify which CSS selector is used in each question.
+1) Ii~ img
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+2) *.hide
+□
+0
+0
+[ ]
+a[target] target
+a[target="_blank"]
+_blank
+[target="_blank"] <a target="_blank">
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+70 of 98 2024-10-12, 3:24 p.m.
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+3) h1 + p 0
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+4) p > img 0
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+Attribute selector
+The attribute selector, specified with an attribute name and optional value comparison enclosed in
+square brackets ( and ), matches elements with the specified attribute or the specified attribute
+and value. Ex: selector matches anchor elements with a attribute specified.
+The attribute selector can be more specific by matching elements with attributes having a specific
+value. Ex: attribute selector matches anchor elements with a target
+attribute value of
+Table 2.6.1: Common attribute selector comparators.
+Comparator
+Matches
+CSS example Matching examples
+element when
+Attribute has
+= [target="_}
+exact value
+[alt~="sad"]
+<img src="sad.png"
+alt="a sad face">
+[class^="nav"]
+<ul class="nav-level0">
+<ul class="navigation
+item">
+rel
+nofollow
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+71 of 98 2024-10-12, 3:24 p.m.
+Attribute
+~= contains whole [sad'
+word
+A_ Attribute begins
+[class A="nc
+with value
+I PARTICIPATION I . ACTIVITY 2.6.6: Attribute selectors.
+Complete the CSS attribute selectors to implement the specified behavior.
+1) Set the text color for input
+buttons of type submit.
+<button
+type="submit" >Submi t </
+button>
+button[
+color: green;
+}
+Check Show answer
+] {
+2) Set the input area width for any
+text input elements to 300
+pixel s.
+<input type="text"
+name="firstName">
+input[
+width: 300px;
+}
+] {
+Check Show answer
+3) Set the text color to blue for any
+links where the attribute
+contains
+□
+0
+0
+0
+::
+li:: after { content: "<" }
+li::
+before { content: "***" }
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+72 of 98 2024-10-12, 3:24 p.m.
+<a rel ="abstract
+nofollow" href="https://
+example .com">
+a[ ] {
+color: blue;
+}
+Check Show answer
+4) Create a border for images
+where the alt attribute starts
+with test.
+<img s r c="picl.jpg"
+wi dth="50" height="50"
+alt="testing">
+img[ ] {
+border: red lpx solid;
+}
+Check Show answer
+Pseudo-element selector
+0
+The pseudo-element selector, specified with two colon characters ( ) followed by a pseudoelement,
+matches parts of elements. The pseudo-element selectors allow styles to apply to the first
+line or first letter of text of an element or to text that is selected by the user, or allow additional
+content to be inserted before or after an element.
+Table 2.6.2: Common pseudo-element selectors.
+Pseudo-
+Explanation CSS example
+element
+::after
+Add content after the
+. ,.....n T • " / " l
+matched element.
+::before
+Add content before the
+matched element.
+p::first-line { color: red }
+p::first-letter { font-size:200% }
+::selection { background: yellow }
+<blockquote>To be or not
+to be...</blockquote>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+73 of 98 2024-10-12, 3:24 p.m.
+::first-line
+Match the first line of
+text in a block element.
+p: :f
+::first-letter
+Match the first letter of
+text in a block element.
+p: :f
+::selection
+Matches the text
+: : se )ackqromd: VP-1101,1
+selected by user.
+I PARTICIPATION I
+ACTIVITY 2.6.7: Pseudo-element selectors.
+Complete the CSS pseudo-element selectors to implement the specified behavior.
+1) Change the text color to green
+for any text that is currently
+selected using the mouse.
+{
+color: green;
+}
+Check Show answer
+2) Make the first letter uppercase
+in all list items.
+<li>Bread< / li>
+text-transform:
+uppercase;
+}
+{
+Check Show answer
+3) Underline the first line in each
+blockquote.
+i
+□
+0
+0
+0
+zyBooks
+74 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+text-decoration:
+underline;
+}
+{
+Check Show answer
+4) Add a red asterisk at the end of
+each paragraph.
+<p >Turn the switch on. </
+p>
+}
+content: "*";
+color: red;
+{
+Check Show answer
+I CHALLENGE I ACTIVITY 2.6.1: Advanced selectors.
+5707 04.20654 7 6.qx3zqy7
+Start
+Use a multiple selector to apply the below rules to all <h1 > and <ol> elements.
+SHOW EXPECTED
+I css I HTML I
+1 /* Your solution goes here*/ {
+2 color : coral;
+3 }
+0
+□
+2024-10-12, 3:24 p.m.
+zyBooks
+75 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 2 3 4
+Check Next
+View your last submission v
+Exploring further:
+• CSS selector reference from W3 Consortium.

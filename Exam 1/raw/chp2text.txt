@@ -1,0 +1,3743 @@
+{}
+;
+:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+1 of 98 2024-10-12, 3:24 p.m.
+2.1 Using CSS in HTML
+Introduction to CSS
+CSS (Cascading Style Sheets) is a textual language for describing how a webpage is styled for
+visual presentation. Web browsers use CSS to determine how a webpage is rendered on the screen,
+printed to paper, or presented via other media. The CSS acronym highlights the two main
+characteristics of presenting a webpage: I PARTICIPATION I . ACTIVITY 2.1.1: Understanding the CSS acronym.
+If unable to drag and drop, refresh the page.
+Cascading Style Sheet
+The process of combining multiple
+style rules and resolving conflicting
+styles.
+Describes the visual presentation of
+structured documents.
+Reset
+□
+A web developer uses CSS to write a list of rules. A CSS rule consists of a selector followed by a
+declaration block between braces ( ).
+• A CSS selector specifies the HTML elements to which the specific style rule applies.
+• A declaration block contains one or more declarations separated by semicolons ( ).
+• A CSS styling declaration is a CSS property followed by a colon (·)and the property value.
+Figure 2.1.1: Parts of a CSS rule.
+selector
+span {
+rn1nr · arPPn : 1 declaration
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+2 of 98 2024-10-12, 3:24 p.m.
+block
+}
+property value
+Semicolons are only required to separate rule declarations. A common error is to forget the
+separating semicolon when adding a new declaration to a declaration block. Good practice is to place
+each declaration on a separate line and to add a semicolon to the end of each declaration block, even
+when a semicolon is not required, so that adding the semicolon is not forgotten later when adding
+more declarations.
+I PARTICIPATION I
+ACTIVITY 2.1.2: Valid CSS.
+1) hl {
+color : black ;
+0 Valid
+0 Invalid
+2) p {
+background-color = blue ;
+0 Valid
+0 Invalid
+3) span { font-weight : bold;
+font-size : 2em ; }
+0 Valid
+0 Invalid
+4) div {
+font-family : serif
+0 Valid
+0 Invalid
+Applying CSS
+CSS can be applied to HTML in three ways:
+□
+0
+0
+0
+0
+<style>
+<link>
+style <style> <link>
+<style> <link>
+<head>
+color: orange; }
+I'm orange.</p>
+Embedded stylesheet External stylesheet
+<link href="styles.css"
+rel="stylesheet">
+<p>I'm purple.</p>
+/* styles.css */
+p { color: purple; }
+I'm purple.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+3 of 98 2024-10-12, 3:24 p.m.
+1. An inline style places CSS declarations inside an element's style attribute.
+2. An embedded stylesheet places CSS rules in an HTML document's head using a
+element.
+3. An external stylesheet places CSS rules in a separate file that is imported into an HTML
+document with a element.
+The attribute may be used on any element. The
+placed anywhere in a webpage, but good practice is to place
+and __ ·--- elements may be
+and 11.nk> elements inside
+the document head (in the element).
+I PARTICIPATION I ACTIVITY 2.1.3: Three ways to apply CSS.
+lnline style
+<p styl e ="co l or:green">
+I 'm green .
+</ p>
+Embeddec
+<style>
+p { col or
+</ style>
+<p >I 'm oran
+(_1_•m_ gr_e_en._ _____) ( I'm orange.
+Animation content:
+□
+) ( ___ )
+An HTML snippet of an inline style is shown: <p style="color:green"> I'm green </p>. This inline
+style turns the sentence, "I'm green." to green.
+An HTML snippet of an embedded styles heet is shown:
+<style>p { color:orange; }</style>.
+<p> I'm orange. </p>
+This embedded stylesheet turns the sentence, "I'm orange." to orange.
+An HTML snippet is shown:
+<link href="styles.css" rel="stylesheet">
+<p> I'm purple. </p>
+An external stylesheet is displayed below the HTML snippet:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+4 of 98 2024-10-12, 3:24 p.m.
+/* styles.css */
+p { color:purple;}
+This external stylesheet turns the sentence, ''I'm purple." to purple.
+Animation captions:
+1. An inline style uses an element's style attribute to turn the paragraph text green.
+2. An embedded stylesheet defines CSS rules in the <style> element. The p selector makes all
+paragraphs have orange text.
+3. A <link> element imports an external stylesheet into an HTML document. styles.css makes
+all paragraphs have purple text.
+I PARTICIPATION I . ACTIVITY 2.1.4: Applying CSS. □
+7) An inline style does not use a selector. 0
+0 True
+0 False
+2) An inline style uses braces ( { } ). 0
+0 True
+0 False
+3) The embedded stylesheet from the 0
+animation above makes a//
+paragraphs in the webpage orange.
+0 True
+0 False
+4) A website should use an external 0
+stylesheet to create styles that apply
+to all webpages.
+0 True
+0 False
+5) lnline styles cannot be used with 0
+embedded stylesheets or external
+stylesheets.
+<h1>
+<body>
+p { color: red !important; }
+!important
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+5 of 98 2024-10-12, 3:24 p.m.
+0 True
+0 False
+Inheritance and conflict
+Every browser has a default stylesheet that specifies styling for each HTML element. Ex: The
+default style declarations for elements typically specify a bold-weighted font that is twice the
+normal font size. CSS style declarations override the default style declarations.
+The style declarations from a parent element cascade down and are applied to any child elements,
+a concept called inheritance. Each element inherits the style declarations from the element's
+parent. The element's parent inherits style declarations from the parent's parent element, and so on
+up to the top-level element.
+When two style declarations with identical properties apply to the same element, a conflict occurs.
+Two common conflicts include:
+1. A parent's style declaration conflicts with a child's style declaration. Ex: The parent element's
+text is blue, but a child element's style declaration indicates the color should be green. When a
+conflict occurs, the child's declaration overrides the parent's declaration.
+2. An embedded or external stylesheet's style declaration conflicts with an inline style. Ex: An
+inline style says the element should be blue, but the embedded stylesheet says the element
+should be green. When a conflict occurs, an inline style overrides the embedded or external
+stylesheet's declaration.
+Specificity and !important
+The browser uses specificity, a scoring system that resolves more complex CSS
+conflicts, to determine what style declarations apply to an element. See the
+"Exploring further" section below for more information on CSS specificity
+The !important rule may be used on a style declaration to override other declarations
+and disregard specificity Ex: { col or: 1 makes the
+paragraph red, even if an inline style attempts to make the paragraph green.
+Stylesheets that use! important are hard to understand and difficult to maintain,
+so good practice is to avoid using ! importa
+I PARTICIPATION
+ACTIVITY I 2.1.5: Overriding CSS properties. □
+<style>
+p { color:orange; }
+span { color:green; }
+</style>
+<p>
+Part of this sentence is orange,
+<span>while the rest is green.</span>
+</p>
+<p>
+Part of this sentence is orange,
+<span style="color:blue">while the rest
+is blue.</span>
+</p>
+<p style="color:red">
+This sentence is red.
+</p>
+Part of this sentence is orange,
+while the rest is green.
+Part of this sentence is orange,
+while the rest is blue.
+This sentence is red.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+6 of 98 2024-10-12, 3:24 p.m.
+Animation content:
+The following code snippet is displayed:
+<style>
+p { color:orange; }
+span { color:green; }
+</style>
+<p>
+Part of this sentence is orange,
+<span>while the rest is green.</span>
+</p>
+<p>
+Part of this sentence is orange,
+<span style="color:blue">while the rest
+is blue.</span>
+</p>
+<p style="color:red">
+This sentence is red.
+</p>
+r
+rea.
+To the right of this code snippet, the following sentences are displayed inside a browser:
+Part of this sentence is orange, while the rest is green.
+Part of this sentence is orange, while the rest is blue.
+This sentence is red.
+Animation captions:
+1. The browser's default styling colors the text black.
+<p style="color:yellow">George
+Washington was president from
+1789 until 1797.</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+7 of 98 2024-10-12, 3:24 p.m.
+2. The embedded stylesheet uses a p selector to color all paragraph text orange.
+3. The embedded stylesheet uses a span selector to color all span text green. The first span's
+color overrides the parent's color.
+4. The second span's inline style overrides the embedded stylesheet, so the text is blue.
+5. The third paragraph's inline style overrides the embedded stylesheet, so the text is red.
+I PARTICIPATION I . . ACTIVITY 2.1.6: Inheritance and conflicts.
+Use the HTML below to answer the questions. Assume the HTML in each question is
+inserted into the <body>.
+< ! DOCTYPE html >
+<html lang="en">
+<head>
+<title>Presidential Facts</title>
+<style>
+body {
+color : blue ;
+div
+color : green ;
+</ style>
+</head>
+<body>
+<! -- Content goes here -->
+</body>
+</html>
+1) What color is the text?
+<p >George Washington was the
+first president of the United
+States. </ p >
+0 Black
+0 Blue
+0 Green
+2) What color is the text?
+0 Yellow
+□
+0
+0
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+8 of 98 2024-10-12, 3:24 p.m.
+0 Blue
+0 Green
+3) What color is the text?
+<div>George Washington did not
+have a middle name. Middle
+names were not common in the
+col onies until the early 19th
+century. </div>
+0 Black
+0 Blue
+0 Green
+4) What color is the text?
+<div
+styl e = "color:orange" >George
+Washington never lived in the
+White House because
+constructi on was completed
+several years after he retired
+from the presidency. </div>
+0 Orange
+0 Blue
+0 Green
+I PARTICIPATION I . . ACTIVITY 2.1.7: Applying CSS declarations.
+Given the following HTML and CSS files, indicate which color the web browser will use to
+display the words. The CSS uses the inherit keyword, which specifies that a property
+should inherit the parent element's value.
+hello.html:
+0
+0
+□
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="hello.css" rel="stylesheet">
+<style>
+p {
+color: black;
+}
+</style>
+<title>A Sample CSS Page</title>
+green">World</span>!</p>
+</p>
+color: red
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+9 of 98 2024-10-12, 3:24 p.m.
+</head>
+<body>
+<p >He llo , <span style= " color: green
+<p style=" color : inherit " >Good day<
+</body>
+</html>
+hello.css:
+body {
+color : red;
+If unable to drag and drop, refresh the page.
+black green red
+Hello
+World
+Good day
+Viewing CSS with Chrome DevTools
+Reset
+The Chrome Dev Tools shows the CSS declarations being applied to the webpage
+elements. In the screenshot below, the span's inline style makes the span text
+green. The span element's color: green declaration overrides the p element's
+color: black declaration and the body element's declaration.
+I 0 A Sample CSS Page X + □
+SHOW EXPECTED
+zyBooks
+10 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+f- - C <D File I C:/ temp/ example.html
+Hello, \\orld!
+Good clay
+*
+£1eme ·s Console Sources etwork Performance Memory Application » X
+h _ lang= en
+► head -· /h ead
+.., body
+.., p
+" el o, •
+span style color: green World / span == $0
+"!"
+/ p
+p style= color: inherit Good day /p>
+/ body
+/ht ml
+html body p spa
+I CHALLENGE I .. ACTIVITY 2.1.1: Writing CSS rules.
+570104.2065416.qx3zqy7
+Start
+S es Computed Event L·steners »
+Filter
+ele ent.style {
+color : ■ gree n ;
+}
+lnheri ed om p
+p {
+}
+lnheri ed om body
+body {
+~-~
+:hov .els + ...
+~
+exami;1 e.html:5
+he lo.css:1
+Using a <style> element, set the color to silver for all <p> elements. 1 <!-- Your solution goes here -->
+2
+3 <p> Paragraph 1 content</p>
+4 <p> Paragraph 2 content</p>
+5 <p> Paragraph 3 content</p>
+1 2 3 4 5
+□
+2024-10-12, 3:24 p.m.
+zyBooks
+11 of 98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+Check Next
+View your last submission v
+Exploring further:
+• Cascade and inheritance from MDN
+• CSS inherit Keyword from W3Schools
+• CSS SQeciflcitY- from W3Schools
+2.2 Basic selectors
+Element, class, and ID selectors
+CSS has many ways to specify the selector. Three common selector types are:
+1. The element selector matches elements with the specified element names.
+Ex: p { color : blue; } selects all p elements.
+2. The class selector, specified with a period character followed by the class name, matches
+elements that have the specified class name.
+Ex: . notice { c o lor: blue; } selects all elements with a class="notice" attribute.
+3. The ID selector, specified with a hash character followed by the ID name, matches the
+element that has the specified ID.
+Ex: #byLine { color: blue; } selects the element with the id="byLine" attribute.
+HTML class names allow CSS rules and JavaScript code to modify all HTML elements belonging to
+a class. An HTML element's_class attribute_ specifies the classes to which the element belongs,
+with each class name separated by a space. Ex: <span class="highlight first" > has two
+classes, highlight and first . While HTML elements' IDs are unique, many elements may use
+the same HTML class name.
+I PARTICIPATION I . ACTIVITY 2.2.1: Applying styles to HTML elements. □
+2024-10-12, 3:24 p.m.
+green blue
+decoration underline
+font-style italic
+<p id="second">Blade Runner</p>
+<p class="gr">Moon</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+12 of 98 2024-10-12, 3:24 p.m.
+Animation content:
+A block of CSS is shown:
+A block of HTML is shown:
+<p>Children of Men</p>
+<p id="second">Blade Runner</p>
+<p class="gr">Moon</p>
+A browser displays four paragraphs. The first says "Children of Men" in blue text. The second says
+"Blade Runner" in orange text. The third says "Moon" in green text.
+Animation captions:
+1. The default styling colors the text black with a white background.
+2. The element selector p matches all paragraph elements and colors the text blue.
+3. The class selector .gr matches all elements with the "gr" class attribute and colors the text
+green.
+4. The ID selector #second matches the paragraph with "second" ID attribute and colors the
+text orange.
+I PARTICIPATION I ACTIVITY 2.2.2: Element, class, and ID selectors.
+Modify or add one CSS rule for each requirement below using the specified selectors.
+1. Element selector: Change the text color from
+2. Class selector: Set the text-decoratio to
+with the class name footnote .
+3. ID selector: Set the text color to orange and the
+HTML element with the ID footnote-1.
+I HTML I css
+to for the list items.
+'"" for all HTML elements
+to for the
+□
+Facts about CSS
+According to Wikipedia, CSS was first
+proposed by Håkon Wium Lie on
+October 10, 1994. [1]
+The first W3C CSS Recommendation
+(CSS1) was released in 1996.
+CSS was selected over competing
+stylesheet technologies because CSS
+allowed a document's style to be
+influenced by multiple stylesheets by
+way of "cascading". [1]
+Four years passed from when CSS1
+was released before any browser fully
+supported CSS1. [2]
+zyBooks
+13 of98
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+~ tion~
+<h2> Facts about CSS </h2>
+<ul>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+<li>According to Wikipedia, CSS was first proposed by Hakon Wium Lj
+<a href="#footnote-1" >[1] </ a></li>
+<li>The first W3C CSS Recommendation (CSSl) was released in 1996. </
+<li>CSS was selected over competing stylesheet technologies because
+style to be influenced by multiple stylesheets by way of "cascac
+<a href="#footnote-1" >[1] </ a></li>
+12
+<li> Four years passed from when CSSl was released before any browse
+<a href="#footnote-2" >[2] </ a></li>
+</ul> r
+13 <p id="footnote-1" class="footnote">
+14
+15
+[1] <a href="https://en.wikipedia.org/wiki/CSS#History" target="_b]
+Cascading Style Sheets history</ a>. Retrieved March 31, 2022.
+16 </p>
+17 <p id="footnote-2" class="footnote">
+1s:l r,l " "' hl"o+- "h++nc•//on t.dvinorli::, nl"n!t.dvi/rccHni++ir11l+" t.d+h ::,rlnr
+Render webpage Reset code
+Your webpage
+Facts about CSS
+• According to Wikipedia, CSS was first
+proposed by Hakon Wium Lie on
+October 10, 1994. W
+• The first W3C CSS Recommendation
+(CSSl) was released in 1996.
+• CSS was selected over competing
+stylesheet technologies because CSS
+allowed a document's style to be
+influenced by multiple stylesheets by
+way of "cascading". W
+• Four years passed from when CSSl
+was released before any browser fully
+► View solution
+Expected webpage
+• Hakon W
+• CSSl) • oi f ,,c ascad .m' g ". W
+• CSSl
+I PARTICIPATION I ACTIVITY 2.2.3: Element, class, and ID selectors.
+Refer to the following HTML fragment.
+□
+2024-10-12, 3:24 p.m.
+<ol class="numbers">
+<li id="first">First number</li>
+<li id="second">Second number</li>
+<li id="third">Third <span class="important">number</span></li>
+</ol>
+<ul>
+<li>A bullet</li>
+<li>Another bullet</li>
+<li>Another <span class="important">important item</span></li>
+</ul>
+<li>
+h2 em { color: blue; }
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+14 of 98 2024-10-12, 3:24 p.m.
+7) What CSS selector matches all
+the elements?
+Check Show answer
+2) What CSS selector matches the
+last <li> element in the
+ordered list?
+Check Show answer
+3) What CSS selector matches the
+numbe r s class attribute?
+Check Show answer
+Descendant selector
+The descendant selector, specified with a selector followed by a space and another selector,
+0
+0
+0
+matches elements that are contained in other elements. Ex:
+em elements contained in h2 elements.
+{ cc lor: } selects
+I PARTICIPATION I ACTIVITY 2.2.4: Descendant selectors.
+The given CSS rule makes all strong elements have a gold background. Modify the rule so
+only strong elements inside a ul element are gold.
+□
+Some common idioms:
+The ball is in your court.
+Break a leg.
+It's the best thing since sliced bread.
+Jump on the bandwagon.
+zyBooks https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+I HTML I css I
+1 <p>
+2 Some common <strong> idioms </strong> :
+3 </P1>
+4
+5 <ul>
+6 <li>The <strong> ball</strong> is in your <strong> court </strong> . </li>
+7 <li>Break a <strong> leg</strong> . </li>
+8 <li>It's the best thing since <strong> sliced bread </strong> . </li>
+9 <li> Jump on the <strong> bandwagon </strong> . </li>
+10 </ul>
+11
+Render webpage Reset code
+Your webpage Expected webpage
+Some common idioms: • The ball is in your court. • • Break a leg. • • It's the best thing since sliced bread. • • Jump on the bandwagon. • ► View solution
+I PARTICIPATION I . ACTIVITY 2.2.5: Descendant matching. □
+Refer to the CSS below.
+15 of98 2024-10-12, 3:24 p.m.
+p span {
+background-color: yellow;
+}
+<p>The <span>text</span> is
+highlighted.</p>
+<li>
+<ol>
+<li>The <span>text</span> is
+highlighted.</li>
+<li>The text is not
+highlighted.</li>
+</ol>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+16 of 98 2024-10-12, 3:24 p.m.
+1) Does "text" appear highlighted?
+0 Yes
+0 No
+2) Does "text" in the first
+appear highlighted?
+element
+0 Yes
+0 No
+3) Does "text" appear highlighted?
+<p ><em><span>text</span></
+em></p>
+0 Yes
+0 No
+4) Does "text" appear highlighted in both
+<span> elements?
+<p>
+<span>text< / span>
+<span><em>text< / em>< / span>
+</ p>
+0 Yes
+0 No
+5) Does "text" appear highlighted?
+<span><p >text</p ></span>
+0 Yes
+0 No
+0
+0
+0
+0
+0
+a:hover
+span.highlight span highlight
+tr: nth-child(even)
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+17 of 98 2024-10-12, 3:24 p.m.
+Pseudo-class selector
+The pseudo-class selector, specified with a colon character followed by a pseudo-class name,
+matches elements based on user behavior or element metainformation. Example pseudo-class
+selectors include:
+• :disabled - Element is disabled.
+• :hover - Mouse is hovering over the element.
+• :empty - Element has no child elements.
+• :lang(language) - Element contains text in a specified language.
+• :nth-child(n) - Element is the parent element's nth child.
+Class selectors and pseudo-class selectors can combine with element names to match more
+specific elements. Ex: selects only the anchor element the mouse is hovering over, and
+selects only elements that have the class attribute.
+I PARTICIPATION I . ACTIVITY 2.2.6: Using pseudo-class selectors on a table.
+The table displays the five countries that earned the most medals in the 2022 Winter
+Olympics in Beijing. Hovering the mouse over the text on the expected webpage's top row
+makes the text orange.
+1. Add a new rule using the child selector that makes every even tr
+child element have a lavender background color.
+2. Add a new rule using the th: hover selector that changes the th element's text
+color to orange when the mouse hovers over the element.
+I HTML I css j
+□
+ROC Canada 4 8
+14
+26
+7
+zyBooks https://leam.zybooks.com/zybook/ ARIZONAECE4 l 3SalehiFall2024/c ...
+18 of98
+1 ~ltable,t>
+2 <captiont:-2022 Olympic Medal Counts </captiont>
+3 <t n
+4 <tht> Country</tht>
+5 <tht> Gold </tht>
+6 <tht>Silver</tht>
+7 <tht> Bronze</tht>
+8 <tht> Total</tht>
+9 </t n
+10 <t n
+11 <tdt> Norway </tdt>
+12 <tdt:- 16</tdt>
+13 <td >8</td>
+14 <td >13</td>
+15 <td >37 </td>
+16 </tr>
+17 <tr>
+1s:l ✓ +rh. R/'"\r ,, l +rh .
+Render webpage Reset code
+Your webpage
+2022 Olympic Medal Counts
+Country Gold Silver Bronze Total
+Norway 16 8 13 37
+ROG 6 12 14 32
+Germany 12 10
+Canada 4 8
+USA 8 10
+► View solution
+5
+14
+7
+27
+26
+25
+I PARTICIPATION I ACTIVITY 2.2.7: Pseudo-class selectors.
+1) Which selector makes a div element's
+background color change to light blue
+when the mouse hovers over any part
+of the div contents?
+Expected webpage
+2022 Olympic Medal Counts
+Country Gold Silver Bronze Total
+Norway 16 8 13 37
+ROG 6 12 14 32
+Germany 12 10
+USA 8 10
+5
+27
+25
+□
+0
+2024-10-12, 3:24 p.m.
+_____ {
+background-color:
+lightblue;
+}
+:hover
+div:hover
+div.hover
+:nth-child
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+19 of 98 2024-10-12, 3:24 p.m.
+0
+0
+0
+2) The pseudo-class can
+be specified with "even" and "odd"
+values as well as a number
+representing the child's position,
+where 1 is the first child. What is
+missing to make the first list item
+purple?
+li : nth- child ( -- color : purple ;
+0 0
+0 1
+0 first
+3) Which selector gives buttons with a
+disabled attribute a gray
+background?
+background- col or : gray ;
+0 button
+0 button:disabled
+0 button : enabled
+I CHALLENGE I . ACTIVITY 2.2.1: Basic selectors.
+5707 04.2065416 qx3zqy7
+Start
+Set background-color to deeppink for all elements with class: standout
+SHOW EXPECTED
+0
+0
+□
+zyBooks
+20 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1
+2 /* Your solution goes here*/
+3
+1 2
+Check Next
+View your last submission v
+Exploring further:
+l css I HTML l
+3
+• CSS Selectors Reference from W3Schools.
+• CSS Pseudo-classes from W3Schools.
+• CSS Attribute Selectors from W3Schools.
+4
+2.3 Common properties
+Color property
+5
+The color CSS property changes the text color to a specified color value. A color value can be
+specified in several ways:
+• CSS defines 140 color names. Ex: white, blue, black, gray, forestgreen, magenta.
+2024-10-12, 3:24 p.m.
+rgb(0, 0, 0) rgb(0, 0, 255) rgb(255, 255, 0)
+rgb(255, 255, 255)
+#RRGGBB
+#000000 #0000FF #FFFF00 #FFFFFF
+hsl(0, 0%, 0%)
+hsl(120, 100%, 50%) hsl(0, 100%, 25%)
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+21 of 98 2024-10-12, 3:24 p.m.
+• An RGB color value specifies a color using the rgb(red, green, blue) function by indicating the
+red, green, and blue intensities. Each intensity for red, green, and blue is between O and 255,
+where O is the lowest intensity and 255 is the highest.
+Ex: is black, is blue, is yellow, and
+is white.
+• A hexadecimal color specifies a color using the format by indicating the red, green,
+and blue intensities. Each intensity for red, green, and blue is between 00 and FF hexadecimal
+numbers, where 00 is the lowest intensity and FF is the highest.
+Ex: is black, is blue, is yellow, and is white.
+• An HSL color value specifies a color using the hsl(hue, saturation, lightness) function by
+indicating the hue, saturation, and lightness values. The hue value ranges between O and 360,
+and the saturation and lightness values range between 0% and 100%. Ex:
+is black, is green, and is dark red.
+The HSL color specification method is harder to understand and is not used as frequently as
+the RGB and hexadecimal color specification methods.
+• The RGB and HSL color values can add an alpha value to allow for transparency. The RGBA
+color value specifies a color using the rgba(red, green, blue, alpha) function by indicating the
+red, green, blue, and alpha intensities. The HSLA color value specifies a color using the
+hsla(hue, saturation, lightness, alpha) function by indicating the hue, saturation, lightness,
+and alpha intensities. The intensities have the same ranges as for RGB or HSL color values,
+but the alpha intensity is between O and 1. An alpha of O means fully transparent, 1 means
+fully opaque, and 0.5 means half transparent.
+Color picker.
+rgb( o ~ , o ~ , o ~ )
+Each va lue ranges Oto 255
+Red
+Green
+Blue
+#000000
+Value ranges 000000 to FFFFFF
+color
+byname black
+byrgb
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+22 of 98 2024-10-12, 3:24 p.m.
+I PARTICIPATION I ACTIVITY 2.3.1: Color values and names.
+Use the color picker above to help match each color value to the color name.
+If unable to drag and drop, refresh the page.
+#FFD700 #0000FF rgb(144, 238, 144) #006400 #FFFFFF
+rgb(80, 80, 80)
+Blue
+Black
+White
+DarkGreen
+LightGreen
+Gray
+Gold
+Reset
+I PARTICIPATION I
+ACTIVITY 2.3.2: CSS text color.
+Modify or add one CSS rule for each requirement below to change the text
+property as specified.
+1. By color name: change the text color for b:
+blue.
+2. By RGB values: change the text color for b
+class elements from
+class elements from black
+□
+rgb(0, 0, 0)
+□
+to
+rgb(0, 0, 0)
+byhsl
+hsl(0, 0%, 0%)
+The text is blue
+The text is green
+The text is cyan
+zyBooks
+23 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+(rgb ( o, o, o)) to green by modifying the second number to be 255.
+3. By HSL values: change the text color for class elements from black
+(hs l ( o, o % , o % ) ) to cyan by modifying the first number to be 200, the second
+number to 100%, and the third number to 50%.
+l HTML I css
+1 <[0 class ="byname" >The text is blue</p8
+2
+3 <p class ="byrgb" >The text is green</p>
+4
+5 <p class ="byhsl" >The text is cyan</p>
+6
+Render webpage
+Your webpage
+The text is blue
+The text is green
+The text is cyan
+► View solution
+Reset code
+Expected webpage
+2024-10-12, 3:24 p.m.
+transparent none
+transparent none
+Fluffy, soft, white clouds.
+Without the sun, black.
+Fluffy, soft, and white are the clouds.
+The sky is light blue.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+24 of 98 2024-10-12, 3:24 p.m.
+Background properties
+Every element in a webpage has a set of background properties. The web browser first draws the
+element's background and then the element's content. If the element's background is not fully
+opaque, the element's parent is visible under the element's content. Common background
+properties include:
+• The background-color property specifies the background color.
+• The background-image property specifies a background image.
+• The background property is shorthand for setting several of the element's background
+properties at the same time.
+Background colors are specified using color names, a color function (RGB, RGBA, HSL, HSLA), or
+one of the values such as . Background images are specified with the value or
+the url('URL) function, where URL indicates the location of the image. By default, the initial
+background color is and background image is , which means the element's
+parent's background will display underneath the elemenfs content. When a background color and
+image are both specified, the background image is rendered on top of the color. I PARTICIPATION I . . ACTIVITY 2.3.3: Styling background color and image.
+<style>
+p {
+background-color : LightSkyBlue;
+. c l ouds {
+background-image : url ( 'clouds.png' ) ;
+</ style>
+<p >
+The sky i s light b l ue .
+</p>
+<p c l ass ="clouds">
+Fluffy , soft , and wh i te are the clouds
+</p>
+<p >
+Wi thout the sun, b l ack.
+</ p>
+Animation content:
+A block of HTML is shown with a style block containing CSS:
+<style>
+□
+different languages.</p>
+"color: #ffff00">
+"image: url('smiley.gif')">Hola</li>
+"green url('smiley.gif')">Olá</li>
+"image: url('clouds.png');">
+"blue">Salut</li>
+"url('smiley.gif')">Hej</li>
+"transparent url('smiley.gif')">Bog</
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+25 of 98 2024-10-12, 3:24 p.m.
+p{
+background-color: LightSkyBlue;
+}
+.clouds {
+background-image: url('clouds.png');
+}
+<p>
+The sky is light blue.
+</p>
+<p class="clouds">
+Fluffy, soft, and white are
+the clouds.
+</p>
+<p>
+Without the sun, black.
+</p>
+The browser displays three lines of text:
+Line 1: 'The sky is light blue." with a light blue background color.
+Line 2: "Fluffy, soft, and white are the clouds." with an image of clouds in the background.
+Line 3: "Without the sun, black." with a light blue background color.
+Animation captions:
+1. The elements display with transparent backgrounds.
+2. The p element has a LightSkyBlue background color.
+3. The clouds class uses a background image that displays over the p element's background.
+I PARTICIPATION I . . . ACTIVITY 2.3.4: Determining background properties.
+Given the HTML below, indicate the background properties used for the elements.
+Assume that the smiley.gif image has a transparent background.
+<p >Below is the word "Hello" in differe
+<ul id="americas" style="background-col
+<li id="hola" style="background-imag
+<li id="ola" style="background: gree
+</ul>
+<ul id="europe" style="background-image
+<li id="salut" style="background: bl
+<li id="hej" style="background: red
+<li id="bog" style="background: tran
+li>
+</ul>
+. <lo>
+., .-.r-:.f= I\H -...._ u ,,,.._ 1 -, / / 1 .; -...._
+□
+float clear
+float
+none
+left
+right
+clear
+none
+left
+right
+both
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+26 of 98 2024-10-12, 3:24 p.m.
+If unable to drag and drop, refresh the page.
+blue smiley face on red
+smiley face on clouds
+Float and clear properties
+smiley face on green
+Hola
+Ola
+Salut
+Hej
+Bog
+smiley face on yellow
+Reset
+CSS properties and control how text flows around HTML elements, making
+webpages look like a magazine or newspaper article where the article's text wraps around the
+images in the page.
+The float property specifies whether the element will float to the right or left of the element's parent
+container, allowing text to flow around the element. Values for the property include:
+• - Element does not float (default value)
+• - Element floats to parent container's left side
+• - Element floats to parent container's right side
+The clear property moves elements below previously floated elements. Values for the
+property include:
+• - Element allowed to float (default value)
+• - Stop floating on parent container's left side
+• - Stop floating on parent container's right side
+• - Stop floating on both sides
+<img src="ducatiSmallv1.jpg"
+alt="Yellow and black
+motorcycle">
+<p>
+The Ducati Streetfighter 848 is
+the bike
+you've been looking for!
+</p>
+<p>
+Call us for a quote!
+</p>
+<img src="ducatiSmallv1.jpg"
+alt="Yellow and black
+motorcycle"
+style="float:left">
+<p>
+The Ducati Streetfighter 848 is
+the bike
+you've been looking for!
+</p>
+<p>
+Call us for a quote!
+</p>
+<img src="ducatiSmallv1.jpg"
+alt="Yellow and black
+motorcycle"
+style="float:right">
+<p>
+The Ducati Streetfighter 848 is
+the bike
+you've been looking for!
+</p>
+<p>
+Call us for a quote!
+</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+27 of 98 2024-10-12, 3:24 p.m.
+Table 2.3.1: Float examples.
+HTML and CSS
+No floating
+Float left
+Float right
+Clear both
+Render
+The Ducati Streetfighter 848 is the bike
+you 1ve been looking for!
+Call us for a quote!
+Call us for a quote!
+The Ducati
+Streetfighter
+848isthe
+bike you1ve
+been looking
+for!
+Call us for a quote!
+The Ducati
+Streetfighter
+848isthe
+The Ducati
+Streetfighter
+848isthe
+zyBooks
+28 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+<img src="ducatiSmallvl.jpg"
+alt="Yellow and black
+motorcycle "
+style="float:left">
+<p>
+The Ducati Streetfighter 848 is
+the bike
+you've been looking for!
+</p >
+<p style="clear:both">
+Call us for a quote!
+</p >
+I PARTICIPATION I . . ACTIVITY 2.3.5: Floating images.
+Call us for a quote!
+Modify the CSS below to float to the right the first image with floatright
+class, to float
+to the left the second image with floatleft class, and to clear floating elements on
+both sides of the p element with nofloats class.
+1 <hl>Classifieds</~1>
+2
+3 <p>
+I HTML I css
+4 <img src="https: //resources. zybooks. com/WebProgramming/smallCatvl. jpg"
+5 class="floatright" >
+6 Adorable female cat available for adoption. We found Fluffy during at
+7 She is house-trained and very cuddly. Call 555-1234.
+8 </p>
+9
+10 <p class="nofloats" >
+11 <img src="https: //resources. zybooks. com/WebProgramming/smallDogvl. jpg"
+12 class="floatleft" >
+13 Looking for new home for puppy. Goes by the name "Bowser".
+14 </p>
+15
+16 <p>
+17 Call 555-4321 for more information.
+1 S'.I ✓ /n,
+Render webpage
+Reset code
+□
+2024-10-12, 3:24 p.m.
+"basketball">
+Classifieds
+Adorable female
+cat available
+for adoption.
+We found Fluffy
+during a
+thunderstorm.
+She is housetrained
+and
+very cuddly. Call 555-1234.
+Looking for new
+home for puppy.
+Goes by the
+name "Bowser".
+Call 555-4321
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+29 of 98 2024-10-12, 3:24 p.m.
+Your webpage
+Classifieds
+Expected webpage
+le
+Ac
+Cc
+fc
+WE
+dL
+tt
+St
+Adorable tr
+female cat available for adoption . We
+found Fluffy during a thunderstorm . She
+is house-trained and very cuddly. Call
+555-1234 .
+► View solution
+VE
+I
+I PARTICIPATION I . ACTIVITY 2.3.6: Float and clear properties.
+Refer to the HTML below.
+<div>
+<img src="basketball.png" a l t ="baske
+<p >Say what? < / p>
+<p >Let ' s s hoot some hoops! </ p>
+< / div>
+1) If the float property is not used, what
+does the HTML display?
+0
+Say what?
+Let's shoot some hoopsl
+0
+Say what?
+O Let's shoot
+Say what?
+Let's shoot
+some hoops!
+□
+0
+inline span a
+block p h1 div
+none style
+inline-block
+list-item
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+30 of 98 2024-10-12, 3:24 p.m.
+2)
+3)
+some hoops!
+What CSS rule produces the following
+result?
+Say what?
+Let's shoot
+some hoopsl
+0 div float: left;
+0 img float: left;
+0 p { float: left; }
+Assuming the ball image floats right,
+what CSS rule produces the following
+result?
+Say what?
+Let's shoot some hoops!
+Q div
+0 img
+clear: both;
+clear: both;
+0 p { clear: both; }
+Display property
+The display property controls the layout of the element on a webpage. Values for the display
+property include:
+• - Displays the element as an inline element, like or elements.
+• - Displays the element as a block element, like , , or • • v elements.
+• - Hides the element from being displayed, like elements.
+0
+0
+• - Displays the contents of the element as a block element, but formats the
+element as an inline element.
+• - Displays the contents of the element as a list item element. I =~~~~~;~•110" I 2.3.7 Using the display property. □
+.display1 {
+color: aliceblue;
+}
+.{
+color: lemonchiffon;
+}
+.{
+color: }
+display1">
+Actions speak louder than display2">the sword.
+come to display3">span>.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+31 of 98 2024-10-12, 3:24 p.m.
+.display l {
+background- color : aliceblue ;
+display : inline ;
+.display2
+background- color : lemonchiffon ;
+display : block;
+. display3 {
+background- color : mintcream;
+display : none ;
+<p class="displayl ">
+Ac ti ons spe a k l ouder t ha n words.
+</p>
+<p>
+The <span class="display2 " >pen</ span>
+is mightier than t he s word.
+</p>
+<p>
+All good things c ome t o those who
+<span class="display3 " >wait</span> .
+</p>
+Actions speak louder than words.
+The
+Animation content:
+Stylesheet:
+.display1 {
+background-color: aliceblue;
+}
+.display2 {
+pen
+is mightier than the sword.
+All good things come to those who .
+background-color: lemonchiffon;
+}
+.display3 {
+background-color: mintcream;
+}
+HTML:
+<p class="display1 ">
+Actions speak louder than words.
+</p>
+<p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+32 of 98 2024-10-12, 3:24 p.m.
+The <span class="display2">pen</span> is mightier than the sword.
+</p>
+<p>
+All good things come to those who <span class="display2">wait</span>.
+</p>
+Step 1: The browser displays: "Actions speak louder than words." with a blue background that
+spans the entire browser width.
+Step 2: After changing the CSS, the blue background shrinks to displaying only behind the
+paragraph's words .
+Step 3: The browser displays 'The pen is mightier than the sword.", and the word "pen" has a
+yellow background.
+Step 4: After changing the CSS, the word "pen" moves to the next line, and the yellow background
+expands to fill the browser width.
+Step 5: The browser displays "All good things come to those who wait.". After changing the CSS,
+the word "wait" disappears, and the period slides to the left after "who" and a space.
+Animation captions:
+1. The p element is a block element, and a block element fills the width of the element's
+container.
+2. Adding display:inline to the display1 class makes the p element be treated as an inline
+element. The blue background now is only as wide as the paragraph contents.
+3. The span element is an inline element, so the span's content is shown on the same line as
+the surrounding text.
+4. Adding display:block to the display2 class make the span be treated as a block element.
+The span's content now displays on a separate line.
+5. The span's content displays by default, but adding display:none to the display3 class hides
+the span's contents.
+I PARTICIPATION I . ACTIVITY 2.3.8: Display CSS values. □
+Provide the CSS display value that correctly styles the following HTML as displayed.
+<style>
+.animal {
+background: yellow;
+display: _____;
+}
+</style>
+<p>
+My favorite breed of
+<span class="animal">cat</span>
+is Russian Blue.
+</p>
+display:
+display:
+display:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+33 of 98 2024-10-12, 3:24 p.m.
+7)
+2)
+3)
+4)
+My favorite breed of cat is
+Russian Blue.
+Check Show answer
+My favorite breed of is
+Russian Blue.
+Check Show answer
+--------------- -----------------------,
+My favorite breed of i
+cat
+is Russian Blue.
+------------ --------------- ------------
+Check Show answer
+My favorite breed of
+• cat
+is Russian Blue.
+0
+0
+0
+0
+<html>
+--my-variable: red;
+var(--my-variable);
+--color);
+The sun rises and sets.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+34 of 98 2024-10-12, 3:24 p.m.
+display:
+Check Show answer
+CSS variables
+Many websites have complex stylesheets with repeated values. Ex: The same background color
+may be used in numerous places, and changing the background color requires searching and
+replacing throughout the stylesheet. CSS variables simplify the process of creating CSS values that
+are used repeatedly in a stylesheet.
+A CSS variable is a custom CSS property that defines a value. A CSS variable is declared in a CSS
+selector that defines the variable's scope. A CSS variable can have global scope by declaring the
+variable in the :root selector, which targets the highest DOM element: the element.
+A CSS variable is defined with two dashes preceding the variable name. Ex:
+A CSS variable is accessed with the var() function. Ex:
+I PARTICIPATION
+ACTIVITY I 2.3.9: Using CSS variables.
+<style>
+: root {
+p {
+--main- color : red ;
+--main- bg- color : ye llow ;
+col or : var (--main- color );
+background- color : var (--main- bg- coloi
+</ style>
+<p >The s un r i ses a nd set s . </p>
+Animation content:
+A block of HTML is shown with a style block containing CSS:
+<style>
+:root {
+□
+color
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+35 of 98 2024-10-12, 3:24 p.m.
+--main-color: red;
+--main-bg-color: yellow;
+}
+p{
+}
+color: var(--main-color);
+background-color: var(--ma i n-bg-color);
+</style>
+<p> The sun rises and sets.</p>
+This code block displays a line of text that says "The sun rises and sets." in red colored text with a
+yellow background.
+Animation captions:
+1. A CSS variable defined in the :root selector has global scope.
+2. The CSS variables main-color and main-bg-color are initialized with the color values red and
+yellow, respectively.
+3. The p selector uses the CSS variables main-color and main-bg-color to set the paragraph's
+text and background colors.
+I PARTICIPATION I . ACTIVITY 2.3.10: CSS variables.
+1) What selector must a CSS variable be
+declared in to have global scope?
+0 : root
+0 p
+Q div
+2) What is the proper syntax to declare a
+CSS variable set to black?
+0 section-color: black;
+--section-color: 0 black;
+0 --section-color black;
+3) What is the proper syntax to use a
+CSS variable called --sectionrn
+l nr?
+□
+0
+0
+0
+zyBooks
+36 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+color: --section- 0 color;
+color: var(--Section- 0 color);
+O color: var(--sectioncolor);
+4) Suppose --main-color from the
+animation above is used in 200
+different CSS rules. Besides the
+: root rule, how many CSS rules
+would need to be modified if -main-
+color is changed to blue?
+0 0
+0 1
+0 200
+I CHALLENGE I . ACTIVITY 2.3.1 : Common properties.
+570104.2065416.qx3zqy7
+Start
+For the <p> element, set background-color to rgb(7 00, 100, 250) . SHOW EXPECTED
+I css I HTML I
+1 p {
+2
+3 /* Your solution goes here*/
+4
+5 }
+0
+□
+2024-10-12, 3:24 p.m.
+zyBooks
+37 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 2 3
+Check Next
+View your last submission v
+Exploring further:
+• HTML Color Names from W3Schools.
+• CSS Legal Color Values from W3Schools.
+• Color HSL from W3Schools.
+• CSS Background ProgertY- from W3Schools.
+• CSS Display, Progerty from W3Schools.
+2.4 Font and text properties
+Font properties
+Many CSS properties control the font properties for displaying text. CSS font properties include:
+• The font-family property specifies the font family, such as "Times New Roman" or serif.
+• The font-size property changes the font size, such as 12 o %, smal 1, or 12px.
+• The font-weight property specifies the font weight, such as normal or bold.
+• The font-style property changes the text style, such as normal, italic, or oblique.
+• The font-variant property specifies the variant of the text, such as normal or small-caps.
+• The font property is shorthand for setting several font properties at the same time. Ex:
+font: italic 12pt Georgia, serif;
+The font-family property contains a list of fonts specified as a family name or a generic family
+separated by commas.
+• A family name is the name of a specific font, like 'Times New Roman", "Arial", or "Georgia".
+Family names containing spaces must be wrapped in quotations marks, while family names
+without spaces do not.
+• A generic family is a general group of fonts, like serif, sans-serif, cursive, fantasy, or
+monospace. Ex: Times New Roman and Georgia are both serif fonts because the fonts
+2024-10-12, 3:24 p.m.
+font-family: Arial, Helvetica, sans-serif;
+Garamond
+Georgia
+Times New
+Roman
+Arial
+Helvetica
+Verdana
+Brush Script MT
+Comic Sans MS
+Lucida
+Handwriting
+Impact
+Luminari
+Consolas
+Courier New
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+38 of 98 2024-10-12, 3:24 p.m.
+contain serifs, which are small strokes attached to the end of larger strokes on each letter.
+The web browser will use the first font listed that is available. Good practice is to start the list with
+the intended font and end with a generic family. Ex:
+Table 2.4.1: Generic family names.
+Generic
+Distinguishing features Example fonts
+family
+Serif
+"Embellishments" like finishing strokes or
+flare ends
+Sans-Serif Plain stroke ends
+Cursive
+Cursive or calligraphy characteristics like
+joined strokes
+Fantasy Decorative
+Monos pace
+Constant width for letters, punctuation, and
+space
+..,.....,
+Web fonts
+A limited number of fonts are available on all platforms: Arial, Courier New, Georgia,
+Times New Roman, and Verdana. Web developers can expand the number of fonts
+sans-serif;
+The Shins</span>, because their
+is thought-provoking!
+<p>
+<p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+39 of 98 2024-10-12, 3:24 p.m.
+available by using web fonts. A web font is a CSS feature that allows custom fonts to
+be downloaded to the web browser. See the links in "Exploring further" for more
+information.
+I PARTICIPATION I . . ACTIVITY 2.4.1 : Computing font properties.
+Given the HTML below, answer the following questions regarding font properties.
+<style>
+p {
+font - family : "Verdana" , "Arial" , san
+#band {
+font - style : italic ;
+#music {
+font - variant : small - caps ;
+</ style>
+<p >
+My favor i te band i s <span id="band" >
+<span id="music" >mus i c </ span> i s tho
+</p>
+1) What is the most preferred font
+for the <p> element?
+Check Show answer
+2) What is the second most
+preferred font for the
+element?
+Check Show answer
+3) What is the third most preferred
+font for the element?
+□
+0
+0
+0
+xx-small x-small small
+medium large x-large xx-large
+smaller larger
+cm
+mm
+in
+px
+pt
+pc
+em
+rem <html>
+vw
+vh
+%
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+40 of 98 2024-10-12, 3:24 p.m.
+Check Show answer
+4) What is the text variant for the
+<span> element with the
+music id?
+Check Show answer
+Font sizes
+0
+The font size can be specified using a predefined size name, a relative size name, or a number with
+an absolute or relative size unit. The predefined size names are
+, and , where medium is the default size. The relative size
+names are and which change the font size for an element to be smaller or larger
+than the font size of the parent element.
+An absolute size is a size that is fixed and independent of other CSS sizes. Absolute size units
+include:
+• - centimeters
+• - millimeters
+• - inches
+• - pixels (7 px = 1 /96in)
+• - points (7 pt = 1 /72in)
+• - pica (7 pc = 12pt)
+A relative size is a size that is relative to another size. Some common relative size units include:
+• - Relative to the element's font size. Ex: 2em = 2 x current font size.
+• - Relative to the root element's font size. Ex: 1.5rem = 1.5 x element's font size.
+• - 1 % of the viewport's width. Ex: 1 0vw = 10% of browser's width.
+• - 1 % of the viewport's height. Ex: 5vh = 5% of browser's height.
+• - Percentage of the element's font size. Ex: 120% = 20% larger than the current font size.
+Most web browsers use a default font size of 16px. However, users who struggle to read 16px
+fonts may change the browser's default font size to a larger size. Good practice is to use relative
+font sizes, which scale with changes to the default browser font size.
+Table 2.4.2: Example font sizes.
+font-size: x-large;
+font-size: smaller;
+font-size: 1.5rem;
+}
+p {
+font-size: 50%;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+41 of 98 2024-10-12, 3:24 p.m.
+Example CSS Displayed
+You must be the change you wish to
+see in the world.
+You must be the change you wish to see in the world.
+~
+f ont- s ize: 1 6p x ; You must be the change you wish to see in the world.
+font- s ize: 1.5rem;
+You must be the change you wish to
+see in the world.
+font- s ize: 12 0%
+You must be the change you wish to see in the
+world.
+I PARTICIPATION I . ACTIVITY 2.4.2: Font sizes.
+Assume the browser's default font size is 16px. What size does the given p selector make
+each paragraph?
+1)
+2)
+3)
+p {
+font-size :
+0 16px
+0 1 Bpx
+0 20px
+p {
+0 Bpx
+0 16px
+0 24px
+1 8px ;
+□
+0
+0
+0
+left right center justify
+overline line-through underline none
+uppercase lowercase capitalize
+text-align: right
+text-align: center
+justify
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+42 of 98 2024-10-12, 3:24 p.m.
+0 Bpx
+0 16px
+0 24px
+Text properties
+Many CSS properties control how text is displayed. Some common CSS text properties include:
+• The text-align property changes the horizontal alignment of text for an element. Possible
+values are: , and
+• The text-decoration property can add or remove text decorations like underlining or a -l+Rethrough.
+Possible values are: , and
+• The text-transform property converts letters to UPPERCASE, lowercase, or Capitalizes Initial
+Letters. Possible values are: , and
+• The text-indent property specifies the first line's indentation amount.
+Table 2.4.3: Text alignment examples.
+Alignment CSS example Displayed
+-
+Example of wrapped text
+left t ext-a lig n : l e ft using the horizontal
+alignment CSS property.
+-
+Example of wrapped text
+right t ext-a lig n : righ using the horizontal
+alignment CSS property.
+Example of wrapped text
+center t ext-a lig n : cent, using the horizontal
+alignment CSS property.
+-
+Example of wrapped text
+justify text-align: jus t using the horizontal
+alignment CSS property.
+Underlined links
+text-decoration:none
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+43 of 98 2024-10-12, 3:24 p.m.
+The CSS is commonly used to remove the default
+underline from links. The underline helps users quickly identify links, so developers
+should use caution when removing link underlines. Relying solely on color to identify
+links can be problematic to users that are color blind or insensitive.
+I PARTICIPATION I . ACTIVITY 2.4.3: Text alignment.
+Provide the CSS value that correctly styles the example text as displayed.
+1)
+Gears and Pulleys
+The untold story of power
+transference.
+text-align:
+2) r
+Check Show answer
+The following sentences
+are examples of a pangram,
+a sentence that contains all
+of the letters of the
+alphabet. The quick brown
+fox jumped over a lazy dog.
+Pack my box with five
+dozen liquor jugs.
+Jackdaws love my big
+sphinx of quartz. The five
+boxing wizards jump
+quickly. How vexingly quick
+daft zebras jump! Bright
+vixens jump; dozy fowl
+quack. Forsaking monastic
+tradition, twelve jovial friars
+gave up their vocation for a
+questionable existence on
+the flying trapeze.
+□
+0
+0
+Knowledge comes, wisdom lingers. - Lord Tennyson</p>
+text-transform:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+44 of 98 2024-10-12, 3:24 p.m.
+text-align:
+Check Show answer
+3)
+Due: July 4, 1776 ;
+,
+text-align:
+Check Show answer
+I PARTICIPATION I . ACTIVITY 2.4.4: Text properties.
+Given the HTML below, select the correct text property and value to display the rendered
+browser text.
+<style>
+p {
+</ style>
+<p >Knowl edge comes , but wi sdom linge r s .
+1)
+2)
+: Knowledge comes, but wisdom
+: .lingers. - Lord TennY-son
+'
+text-decoration: 0 overline
+text-decoration: 0 underline
+text-transform: 0 underline
+Knowledge Comes, But Wisdom
+Lingers. - Lord Tennyson
+0
+0
+□
+0
+0
+zyBooks
+45 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+3)
+uppercase
+text-decoration: 0 capitalize
+text-transform: 0 capitalize
+Knowledge comes,
+but wisdom lingers. -
+Lord Tennyson
+0 text-indent: 20px
+0 text-indent: -20px
+0 text-indent: true
+I CHALLENGE I . ACTIVITY 2.4.1 : Font and text properties.
+5707 04.20654 7 6.qx3zqy7
+Start
+For the <p> element, set font-size to 120%, and set font-variant to small-caps.
+SHOW EXPECTED
+1 p {
+2
+I css I HTML I
+3 /* Your solution goes here*/
+4
+5 }
+1 2
+0
+□
+2024-10-12, 3:24 p.m.
+zyBooks
+46 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+Check Next
+View your last submission v
+Exploring further:
+• CSS Fonts from W3Schools
+• CSS Text from W3Schools
+• CSS Web Fonts from W3Schools
+• What's the best font size for the web? by Robert Mohns
+2. 5 Box model
+Box model components
+HTML elements take up space on the webpage. The box model describes the size of each element
+as a series of nested boxes. The box model is important to understand when considering design
+and layout.
+• Content: The innermost box contains the content of the element, such as text and images.
+• Padding: The padding box contains the content box and adds a transparent area around the
+content.
+• Border: The border box contains the padded content and adds an optionally colored area
+around the padding.
+• Margin: The margin box contains all three boxes and adds a transparent area around the
+border.
+Figure 2.5.1: Box model with labeled boxes.
+Margin
+Border
+.: ················ ·· ··· ····· ······· ······· ·· ····· ···· ···· ··· ····· ··········,.
+I Padding I
+•, I- ---------------------------------I ••
+: I I :
+: I :
+: I :
+.• I .•
+: Content :
+2024-10-12, 3:24 p.m.
+padding: 5px;
+border: 2px solid blue;
+margin: 10px;
+After
+Content
+Before margin
+border
+padding
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+47 of 98 2024-10-12, 3:24 p.m.
+-----
+' I
+I
+I
+I- ------------------------ --- ------I
+The CSS properties that control the padding, border, and margin are:
+.-
+• The padding property specifies the padding thickness. Ex:
+padding around the content.
+creates a 5 pixel
+• The border property specifies the border's thickness, style, and color. Ex:
+creates a solid blue border that is 2 pixels thick.
+• The margin property specifies the margin thickness. Ex:
+margin.
+creates a 1 O pixel
+The content, padding, margin, and border boxes are rendered according to the following rules:
+• The content is displayed with a background according to the element's background color.
+• The padding is transparent and will be displayed using the same color as the element's
+background.
+• The border can be either colored or transparent. If transparent, the border will be displayed
+with the same color as the padding.
+• The margin is transparent and will be displayed using the background color of the parent
+element. I PARTICIPATION
+ACTIVITY 2.5.1: Box model displayed.
+div { background- co l or : b l ue ; }
+#content {
+paddi ng : 5px;
+border : 5px solid b l ack ;
+margi n : 5px ;
+<div>Before</div>
+<div id=" content " >Content</div>
+<div>After</div>
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+48 of 98 2024-10-12, 3:24 p.m.
+A block of CSS is shown:
+div { background-color: blue;}
+#content {
+}
+padding: 5px;
+border: 5px solid black;
+margin: 5px;
+A block of HTML is also shown:
+<div>Before</div>
+<div id="content">Content</div>
+<div>After</div>
+Together the HTML and CSS displays three div elements on a screen. The first element is shown
+in a blue box across the top of the screen and has the text "Before". The second is shown under
+the first element with a 5 pixel transparent margin that surrounds the 5 pixel black border. Inside
+the border there is a 5 pixel padding that surrounds the div content, which has the text "Content".
+Both the padding and the div element have the background color blue. The third div element is
+displayed under the second div element. The third div is shown as a blue box spanning across the
+screen with the text "After".
+Animation captions:
+1. The box model describes the space each HTML element takes as a box. Each div element
+is displayed with a blue background, and each box is highlighted with a light blue outline.
+2. Padding surrounds the content element with transparent space, which is displayed using
+the element's background color.
+3. The border surrounds the content and padding and is colored black.
+4. The margin surrounds the border with transparent space and separates the element from
+other elements.
+I PARTICIPATION I . ACTIVITY 2.5.2: Choose the correct display color. □
+Given the HTML and CSS below, choose which color each box will be displayed.
+<style>
+div {
+background: white;
+border: 2px solid blue;
+}
+span {
+background: yellow;
+border: 1px solid black;
+padding: 2px;
+margin: 2px;
+}
+emergency broadcast system.</div>
+padding margin
+margin: 20px;
+margin: 10px 20px;
+margin: 10px 30px 20px;
+margin: 10px 30px 20px 40px;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+49 of 98 2024-10-12, 3:24 p.m.
+</ style>
+<div>This is a <span>test</span> of the
+If unable to drag and drop, refresh the page.
+black yellow white blue
+span element's padding
+span element's border
+span's margin
+div's border
+Box sizing
+The and properties may have from 1 to 4 values:
+• One value - Specifies uniform thickness around the box. Ex:
+margin thickness around the box.
+Reset
+specifies 20px
+• Two values - Specifies top and bottom, right and left thickness. Ex: rr argin: .1 up ~ .t. upx
+specifies 1 0px top and bottom margins and 20px right and left margins.
+• Three values - Specifies top, right and left, and bottom thickness. Ex:
+specifies 1 0px top margin, 30px right and left margins, and
+20px bottom margin.
+• Four values - Specifies top, right, bottom, and left thickness. Ex:
+specifies 1 0px top margin, 30px right margin, 20px
+bottom margin, and 40px left margin.
+padding border margin -top
+-left -bottom -right padding-top:5px;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+50 of 98 2024-10-12, 3:24 p.m.
+Example 2.5.1: Example with non-uniform margin and padding thickness.
+<style>
+hl {
+margin : 40px 30px ;
+padding : 20px 50px 40px ;
+background-color : khaki ;
+</ style>
+<hl>The Box Model </hl>
+40px
+50px 20px
+3opx - The Box Model
+40px
+40px
+~ 30px
+The ,and CSS properties can apply only to one side by adding a
+, or suffix to the CSS property. Ex: specifies 5
+pixels of padding above the content.
+Example 2.5.2: Example specifying one side of the box.
+darkcyan;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+51 of 98 2024-10-12, 3:24 p.m.
+<style>
+hl {
+border-left : Spx solid darkcy,
+margin-right : 30px ;
+padding-top : 20px ;
+background-color : lightcyan ;
+</style>
+<hl>The Box Model</hl>
+ITh;dBg;; Model
+border-left
+I PARTICIPATION I . ACTIVITY 2.5.3: Box model properties.
+1) What CSS declaration sets the
+margin to have a uniform space
+of 20 pixels?
+Check Show answer
+2) What CSS declaration changes
+the top and bottom padding to
+be 20 pixels and right and left to
+be 30 pixels?
+Check Show answer
+3) What CSS declaration changes
+the right padding to be 1 0 pixels
+wide?
+Check Show answer
+marg·n-right
+□
+0
+0
+0
+width height
+width: 20px;
+height: 30px;
+height
+<div id="nopadding">Controlling the content size</div>
+<div id="padding">Controlling the content size</div>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+52 of 98 2024-10-12, 3:24 p.m.
+Content width and height
+A block element's content spans the width of the enclosing parent element by default, but the
+content size can be changed with the and CSS properties:
+• The width property specifies the content's width. Ex:
+20px wide.
+, • ? n-r::,::><::: makes the content
+• The height property specifies the content's height. Ex:
+30px high.
+Example 2.5.3: Example using width and height properties.
+makes the content
+Two <div> elements have the same width and property values. However, the
+second <div> appears larger because of the additional padding.
+<style>
+#nopadding {
+width : 200px ;
+height : lOOpx ;
+background-color : li ghtgreen ;
+font-size : 30px ;
+#padding {
+padding : 50px ;
+width : 200px ;
+height : lOOpx ;
+background-color : khaki ;
+font-size : 30px ;
+</style>
+Controlling the
+content size 100 px
+200 px ! 50 px
+__ Controlling the
+50 px content size
+.. ..
+50 px
+width height <span>
+display inline-block
+and <span id="span2">Span 2</
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+53 of 98 2024-10-12, 3:24 p.m.
+! 50 px
+~------
+A common error is to use or on inline elements. An inline element like has a
+width and height that is equal to the size of the element's content. The width and height cannot be
+changed unless the inline element's property is changed to _Lll~_;_rn:: ~~V\.., ;_,_,
+Example 2.5.4: Example using width and height properties on an inline
+element.
+<style>
+#spanl {
+wi dth : 80px ; /* Ign ored */
+height : 40px ; /* Ign ored */
+background-color : lightgreen ;
+#span2
+d isplay : inline-block ;
+wi dth : 80px ;
+height : 40px ;
+background-color : khaki ;
+</ style>
+<p>
+<span i d= "spanl" >Span l </ span>
+span>
+</ p>
+Span 1 and Span 2
+I PARTICIPATION I . ACTIVITY 2.5.4: Compute the size.
+1) What is the total <div> width?
+□
+0
+<style>
+div {
+width: 200px;
+padding: 10px;
+border: 2px solid
+green;
+margin: 5px;
+}
+</style>
+<div>How wide am I?</div>
+pixels
+<div>
+<style>
+div {
+height: 100px;
+margin: 10px 5px;
+}
+</style>
+<div>How tall am I?</div>
+pixels
+<div>
+<style>
+div {
+width: 100px;
+margin-left: 10px;
+margin-right: 15px;
+padding: 2px 5px 10px
+20px;
+}
+</style>
+<div>How wide am I?</div>
+pixels
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+54 of 98 2024-10-12, 3:24 p.m.
+Check Show answer
+2) What is the total height? 0
+Check Show answer
+3) What is the total width? 0
+<h1>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+55 of 98 2024-10-12, 3:24 p.m.
+Check Show answer
+4) The default <strong> content
+width is 115px. What is the total
+<strong> width?
+<style>
+strong {
+width : 200px ;
+margin : 5px ;
+</ style>
+<strong>How wi de am I ?</
+strong>
+pixels
+Check Show answer
+Chrome DevTools
+The Chrome DevTools display the margin, border, padding, and content sizes for all
+elements. The screens hot below shows the size of the element with the
+content (509 x 37 pixels) at the center.
+C') The Box Model X + □ X
+C ()) fi le:///C:/temp/ es .html *
+The Box Model
+~ oJ !:lemen s Console Sources etwork Performance Memory Application » X
+doct, .e 1
+<ht ml>
+► <head >--</head>
+"' <body>
+hl The Box Mode / hl == $fJ
+</ body>
+</ iltrnl >
+------
+Styles Computed Event Listene rs »
+Filter
+}
+11.IY I !:'.4 WJI 1,11 1., i n .. ..:,1,.1.,11 I. ■ u~,r, J
+l!iargin-·i.nline-end: @px;
+font-wei.g/Jt : bot d;
+:hov .el s +. . ...
+0
+border
+border-width: 5px;
+border-style: dashed;
+border-color: green;
+solid black;
+dashed red;
+dotted blue;
+none green;
+border: 5px double gray;
+border: 5px groove orange;
+border: 5px ridge pink;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+56 of 98 2024-10-12, 3:24 p.m.
+margin 40
+bor :::l ~r
+I"'-----------------, ! p;dding 20 l
+30 -i so I sog • 3 7 1 so! - 30
+' i l _ -----40 -------_ J
+40
+htm I body h 1
+Border styles
+The property combines the border width, style, and color. Each CSS property may also be
+specified separately:
+• The border-width property specifies the border's width. Ex:
+a border that is 5px thick.
+• The border-style property specifies the border's style. Ex:
+specifies a border that is dashed.
+• The border-color property specifies the border's color. Ex:
+specifies a border that is green.
+Table 2.5.1: Common border styles.
+Style CSS example
+Isolid
+border: 2px so
+1---
+dashed border: 2px da
+dotted border: 2px do
+none border: 2px no
+double
+groove
+ridge
+specifies
+Displayed
+I example I
+r-----,
+: example :
+.L.. .-....- ...-...-...-......I
+..\. e...x..a..m...p..l.e.. ....\
+example
+II example II
+example
+I example
+style
+zyBooks
+57 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+inset border: 5px inset brown;
+I example I
+-=
+outset border: 5px outset yellow;
+example
+I PARTICIPATION I . . . ACTIVITY 2.5.5: Modify the padding, border, and margin.
+Modify the CSS declarations for the span and p rules to meet each requirement below:
+1. Padding on the span: 5 pixels left, and 5 pixels right.
+2. Border on the span: 2 pixels solid black above (use -top
+suffix), and 4 pixels solid
+gray below (use -bot tom).
+3. Padding on the paragraph: 10 pixels on all sides.
+4. Border on the paragraph: 10 pixels, light green, ridge style (use border-style,
+border-color, and border-width).
+5. Margin on the paragraph: 5 pixels on all sides.
+I HTML I css I
+1 <p>
+2 The typical filler text is the <span> Lorem Ipsum</span> .
+3 According to lipsum.com, this text has been standard dummy text since the
+4 </p>
++....r +---,-.-.--r,-,+ -~
+Render webpage
+Reset code
+□
+2024-10-12, 3:24 p.m.
+The typical filler text is the Lorem
+Ipsum . According to lipsum.com,
+this text has been standard dummy
+text since the 1500s.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+58 of 98 2024-10-12, 3:24 p.m.
+Your webpage
+The typical filler text is the Lorem Ipsum.
+According to lipsum.com, this text has been
+standard dummy text since the 1500s.
+► View solution
+Expected webpage
+Margin collapsing and horizontal centering
+Vertical margins of two elements can sometimes combine or collapse into a single vertical space.
+Horizontal margins never collapse. Ex: Adjoining margins of two vertically stacked block elements
+collapse. The resulting margin size equals the top element's bottom margin or the bottom
+element's top margin, whichever is larger.
+Example 2.5.5: Collapsed margins.
+The following HTML demonstrates a collapsed margin. The vertical space between the
+inner div elements is collapsed to 10 pixels, while the horizontal space between the span
+elements is 20 pixels.
+HTML and CSS Rendered webpage
+style
+margin auto
+auto
+margin:auto
+display:inline
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+59 of 98 2024-10-12, 3:24 p.m.
+<styl.e>
+. outer {
+border : 2px dotted black ;
+.inner {
+margin : lOpx ;
+border : lpx solid gray ;
+span {
+margin : lOpx ;
+background : lightgray;
+</ style>
+<div class="outer" >
+<div class="inner">
+<span>First</
+span><span>element</span>
+</div>
+<div class="inner">
+Second element
+</div>
+</div>
+I First element
+!second element
+When an element has the property set to , the browser will compute the left and right
+margins to use up the remaining width of the parent element. The margin value is useful for
+horizontally centering an element in the parent element. A common error is to use
+on elements that do not have the width specified or have , such as span
+elements.
+Example 2.5.6: Horizontal centering.
+L HTML and CSS Rendered webpage
+<body>
+<div style="width:300px;
+margin:auto;">Some text</div>
+</body>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+60 of 98 2024-10-12, 3:24 p.m.
+I
+<style>
+. outer {
+border : 2px dotted
+black;
+.inne r
+margin : auto ;
+width : lOOpx ;
+border : lpx solid
+gray ;
+</ style>
+<div class="outer">
+<div class="inner">
+Cente r ed content
+</div>
+<div class="inner">
+Second e l eme nt
+</div>
+</div>
+PARTICIPATION I . ACTIVITY 2.5.6: Margins.
+1) If two elements are stacked on top of
+each other and both have
+margin: 2 Opx, the total margin
+between the two elements is 40px.
+0 True
+0 False
+2) If two elements are horizontally
+adjacent to each other and both have
+margin: 2 Opx, the total margin
+between the two elements is 40px.
+0 True
+0 False
+3) The text is horizontally centered in the
+web browser.
+Centered
+content
+Second
+element
+................................ ~~~~'"························
+□
+0
+0
+0
+zyBooks
+61 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+0 True
+0 False
+I CHALLENGE I ACTIVITY 2.5.1: Box model.
+5707 04.2065416 qx3zqy7
+Start
+For the <span> element, set the border all around to be 5 pixels, dashed, and coral.
+SHOW EXPECTED
+I css I HTML I
+1 span {
+2
+3 /* Your solution goes here*/
+4
+5 }
+1 2
+Check Next
+View your last submission v
+Exploring further:
+• Box model from W3 Consortium.
+3 4 5
+□
+2024-10-12, 3:24 p.m.
+*
+.highlight *.highlight
+.highlight *.highlight
+,
+<ol> <ul>
+<ol> <ul>
+ul, ol {
+background-color:
+gray;
+color: white;
+font-weight: bold;
+}
+>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+62 of 98 2024-10-12, 3:24 p.m.
+2.6 Advanced selectors
+Universal selector
+The universal selector, specified using an asterisk character ( ), matches a// elements in the
+webpage. The universal selector is implied when an element name is not specified. Ex: The CSS
+selectors and match exactly the same elements, where the universal
+selector is implied in and explicit in
+Multiple selector
+The multiple selector, specified using a comma ( ) to separate selectors, matches all listed
+elements to apply a style rule. Ex: The figure below shows two CSS examples that apply the same
+styles to and elements. The CSS on the left unnecessarily duplicates the styling
+declarations for and elements, whereas the CSS on the right uses a single style
+declaration using a multiple selector.
+Figure 2.6.1: Comparing separate and multiple selectors.
+Separate selectors Multiple selector
+ul {
+background- color :
+gray ;
+color : white ;
+font - weight : bold;
+}
+ol {
+background- color :
+gray ;
+color : white ;
+font - weight : bold;
+}
+Child selector
+The child selector, specified using a greater than character ( ) between two selectors, matches any
+elements where the second element is a direct child of the first element. The child selector is
+similar to the descendant selector (space between selectors), but the matching child element in the
+child selector must be a direct child of the matching parent element.
+The name is an anagram Neo for O n e .
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+63 of 98 2024-10-12, 3:24 p.m.
+I PARTICIPATION
+ACTIVITY I 2.6.1: Styling background color with child selector.
+p em {
+background- col or : ye llow ;
+p > em {
+background- col or : green ;
+<p>
+The name
+<strong><em>Neo</em></ strong>
+i s an anagram for
+<em>One</em> .
+</p>
+Animation content:
+The stylesheet reads:
+p em {
+background-color: yellow;
+}
+p > em {
+background-color: green;
+}
+The HTML reads:
+<p>
+The name
+<strong><em>Neo</em></strong>
+is an anagram for
+<em>One</em>.
+</p>
+r
+□
+The browser displays 'The name Neo is an anagram for One." Neo is bold and italicized with a
+yellow background. One is italicized with a green background.
+Animation captions:
+1 . The em elements are descendants of the paragraph element, so the descendant selector
+matches both elements.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+64 of 98 2024-10-12, 3:24 p.m.
+2. The "Neo'' em element is a direct child of the strong element, not the p element, so the p >
+em child selector does not match the "Neo" em.
+3. The p > em child selector does match the "One" em element since the em is a direct child of
+p.
+I PARTICIPATION I . . ACTIVITY 2.6.2: List item selectors.
+Match the CSS selectors to the best descriptions.
+If unable to drag and drop, refresh the page.
+Ii ol > Ii ol Ii
+Match all list items.
+Match all list items that are
+descendants of ordered lists.
+Match all list items that are direct
+children of ordered lists.
+Reset
+I PARTICIPATION I . . ACTIVITY 2.6.3: Matching specific elements.
+Refer to the HTML below.
+□
+□
+<p>James Bond is known to drive the <span class="mfg">Aston Martin</span>
+DB5.
+Below are a few cars James Bond has driven in recent Bond films according
+to
+<a href="https://en.wikipedia.org/wiki/
+List_of_James_Bond_vehicles">Wikipedia</a>.</p>
+<ol>
+<li><cite>Casino Royale</cite> (2006)
+<ul>
+<li><span class="mfg">Bentley</span> 4.5 Litre</li>
+<li><span class="mfg">Aston Martin</span> DB5</li>
+</ul>
+</li>
+<li><cite>Quantum of Solace</cite> (2008)
+<ul>
+<li><span class="mfg">Aston Martin</span> DBS V12</li>
+</ul>
+</li>
+<li><cite>Skyfall</cite> (2012)
+<ul>
+<li><span class="mfg">Jaguar</span> XJ (X351)</li>
+<li><span class="mfg">Mercedes</span> S400</li>
+<li><span class="mfg">Aston Martin</span> DB5</li>
+</ul>
+</li>
+<li><cite>Spectre</cite> (2015)
+<ul>
+<li><span class="mfg">Aston Martin</span> DB10</li>
+</ul>
+</li>
+</ol>
+mfg
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+65 of 98 2024-10-12, 3:24 p.m.
+7) What CSS selector matches all
+list items?
+Check Show answer
+2) What selector matches list
+items that are direct children of
+ordered lists but not unordered
+lists?
+Check Show answer
+3) What selector matches all
+elements with the class
+0
+0
+0
+background-color
+<ul> magenta
+<li>
+cyan <span>
+cyan <span>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+66 of 98 2024-10-12, 3:24 p.m.
+attribute?
+Check Show answer
+4) What selector matches ordered
+and unordered lists?
+Check Show answer
+5) What selector matches <cite>,
+<sp a n >, and <a> elements?
+Check Show answer
+I PARTICIPATION I . . ACTIVITY 2.6.4: Child and multiple selectors.
+Modify or add a CSS rule for each requirement below to change the
+property as specified.
+1. Add a rule to change the background color for elements to be
+2. Modify the ol li selector so the yellow background color applies only to
+elements that are direct children of <ol> elements.
+3. Add a rule to change the background color to for elements that are
+descendants of <ol> elements.
+4. Add a rule to change the background color to for elements that are
+descendents of <ul> elements.
+5. Combine the previous two rules into a single rule using a multiple selector.
+I HTML I css j
+0
+0
+□
+~
+<body>
+1. The Muppets were created in 1955.
+2. The first two Muppets performers were
+married.
+Jim Henson
+Jane Henson
+3. The Muppets were also in comic strips
+and movies.
+The Muppets were created in 1955.
+Every "Muppets" and "Henson" word is
+colored cyan except in this sentence.
+zyBooks
+67 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 ~eil>
+2
+3
+4
+<li>The <em><span>Muppets </span></em> were created in 1955. </li>
+<li>The first two <span><em>Muppets </em></span> performers were marriE
+<ul>
+5
+6
+7
+<li> Jim <span>Henson </span></li>
+<li> Jane <span>Henson </span></li>
+</ul>
+8 </li>
+9
+10
+<li>The <span>Muppets </span> were also in comic strips and movies. </lj
+</ol
+11
+12 <ul>
+13
+14
+<li>The <em><span>Muppets </span></em> were created in 1955. </li>
+</ul>
+15
+16 <p> Every <span> "Muppets" </span> and <span> "Henson" </span> word is colorec
+17
+Render webpage Reset code
+Your webpage
+1. The Muppets were created in 1955.
+2. The first two Muppets performers were
+married.
+o Jim Henson
+o Jane Henson
+3. The Muppets were also in comic strips
+and movies.
+• The Muppets were created in 1955.
+Every "Muppets" and "Henson" word is
+colored cyan except in this sentence.
+► View solution
+Sibling selectors
+Expected webpage
+I
+o o • Sibling elements are elements that share the same parent element. The general sibling selector,
+specified using a tilde character ( ~) between two selectors, matches the second element if the
+second element occurs after the first element and both elements are siblings. Any number of other
+elements can be placed between two general sibling elements. In the example below, the heading
+and the paragraphs are children of the element. Consequently, the two paragraphs are
+2024-10-12, 3:24 p.m.
++
+h1 + p
+<h1>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+68 of 98 2024-10-12, 3:24 p.m.
+both general siblings of the heading element.
+Figure 2.6.2: General sibling selector.
+<style>
+hl ~ p {
+HTML and CSS
+border-top : lpx sol id gray ;
+</style>
+<body>
+<hl>Cl ass i fieds </hl>
+<p >Dog for adopt i on . Call
+555 -1 23 4. </p>
+<p >Guard dog wanted . Call
+555 -4 321 . </p>
+</body>
+Render
+Classifieds
+Dog for adoption. Call 555-1234.
+Guard dog wanted. Call
+555-4321 .
+The adjacent sibling selector, specified using a plus character ( ) between two selectors, matches
+an element that immediately follows another element, where both elements have the same parent.
+Ex: The adjacent selector in the figure below matches the first paragraph immediately
+following the heading element, where both the paragraph and heading share the same parent
+element.
+Figure 2.6.3: Adjacent sibling selector.
+L HTML and CSS Render
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+69 of 98 2024-10-12, 3:24 p.m.
+I
+<style>
+hl + p {
+bor de r-top : lpx solid o r a nge ;
+</ style>
+<body>
+<hl>My Book Report< / hl>
+<p>
+I tho r oughly enj oyed this
+book. The story made me
+l augh and cry and jump for
+j oy .
+</p>
+<p>
+I recommend this book to
+anyone who l oves to read.
+</p>
+</body>
+My Book Report
+I thoroughly enjoyed this book. The
+story made me laugh and cry and jump
+for joy.
+I recommend this book to anyone who
+loves to read.
+Combinators.
+Combinators are CSS selectors that match specific relationships between other
+selectors. The descendant, child, adjacent sibling, and general sibling selectors are all
+combinators.
+PARTICIPATION I . ACTIVITY 2.6.5: Identify CSS selector names.
+Identify which CSS selector is used in each question.
+1) Ii~ img
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+2) *.hide
+□
+0
+0
+[ ]
+a[target] target
+a[target="_blank"]
+_blank
+[target="_blank"] <a target="_blank">
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+70 of 98 2024-10-12, 3:24 p.m.
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+3) h1 + p 0
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+4) p > img 0
+0 Universal selector
+0 Multiple selector
+0 Child selector
+0 General sibling selector
+0 Adjacent sibling selector
+Attribute selector
+The attribute selector, specified with an attribute name and optional value comparison enclosed in
+square brackets ( and ), matches elements with the specified attribute or the specified attribute
+and value. Ex: selector matches anchor elements with a attribute specified.
+The attribute selector can be more specific by matching elements with attributes having a specific
+value. Ex: attribute selector matches anchor elements with a target
+attribute value of
+Table 2.6.1: Common attribute selector comparators.
+Comparator
+Matches
+CSS example Matching examples
+element when
+Attribute has
+= [target="_}
+exact value
+[alt~="sad"]
+<img src="sad.png"
+alt="a sad face">
+[class^="nav"]
+<ul class="nav-level0">
+<ul class="navigation
+item">
+rel
+nofollow
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+71 of 98 2024-10-12, 3:24 p.m.
+Attribute
+~= contains whole [sad'
+word
+A_ Attribute begins
+[class A="nc
+with value
+I PARTICIPATION I . ACTIVITY 2.6.6: Attribute selectors.
+Complete the CSS attribute selectors to implement the specified behavior.
+1) Set the text color for input
+buttons of type submit.
+<button
+type="submit" >Submi t </
+button>
+button[
+color: green;
+}
+Check Show answer
+] {
+2) Set the input area width for any
+text input elements to 300
+pixel s.
+<input type="text"
+name="firstName">
+input[
+width: 300px;
+}
+] {
+Check Show answer
+3) Set the text color to blue for any
+links where the attribute
+contains
+□
+0
+0
+0
+::
+li:: after { content: "<" }
+li::
+before { content: "***" }
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+72 of 98 2024-10-12, 3:24 p.m.
+<a rel ="abstract
+nofollow" href="https://
+example .com">
+a[ ] {
+color: blue;
+}
+Check Show answer
+4) Create a border for images
+where the alt attribute starts
+with test.
+<img s r c="picl.jpg"
+wi dth="50" height="50"
+alt="testing">
+img[ ] {
+border: red lpx solid;
+}
+Check Show answer
+Pseudo-element selector
+0
+The pseudo-element selector, specified with two colon characters ( ) followed by a pseudoelement,
+matches parts of elements. The pseudo-element selectors allow styles to apply to the first
+line or first letter of text of an element or to text that is selected by the user, or allow additional
+content to be inserted before or after an element.
+Table 2.6.2: Common pseudo-element selectors.
+Pseudo-
+Explanation CSS example
+element
+::after
+Add content after the
+. ,.....n T • " / " l
+matched element.
+::before
+Add content before the
+matched element.
+p::first-line { color: red }
+p::first-letter { font-size:200% }
+::selection { background: yellow }
+<blockquote>To be or not
+to be...</blockquote>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+73 of 98 2024-10-12, 3:24 p.m.
+::first-line
+Match the first line of
+text in a block element.
+p: :f
+::first-letter
+Match the first letter of
+text in a block element.
+p: :f
+::selection
+Matches the text
+: : se )ackqromd: VP-1101,1
+selected by user.
+I PARTICIPATION I
+ACTIVITY 2.6.7: Pseudo-element selectors.
+Complete the CSS pseudo-element selectors to implement the specified behavior.
+1) Change the text color to green
+for any text that is currently
+selected using the mouse.
+{
+color: green;
+}
+Check Show answer
+2) Make the first letter uppercase
+in all list items.
+<li>Bread< / li>
+text-transform:
+uppercase;
+}
+{
+Check Show answer
+3) Underline the first line in each
+blockquote.
+i
+□
+0
+0
+0
+zyBooks
+74 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+text-decoration:
+underline;
+}
+{
+Check Show answer
+4) Add a red asterisk at the end of
+each paragraph.
+<p >Turn the switch on. </
+p>
+}
+content: "*";
+color: red;
+{
+Check Show answer
+I CHALLENGE I ACTIVITY 2.6.1: Advanced selectors.
+5707 04.20654 7 6.qx3zqy7
+Start
+Use a multiple selector to apply the below rules to all <h1 > and <ol> elements.
+SHOW EXPECTED
+I css I HTML I
+1 /* Your solution goes here*/ {
+2 color : coral;
+3 }
+0
+□
+2024-10-12, 3:24 p.m.
+zyBooks
+75 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 2 3 4
+Check Next
+View your last submission v
+Exploring further:
+• CSS selector reference from W3 Consortium.
+2.7 Flexbox
+Flexbox container and items
+The Flexible Box or flexbox is a CSS layout mode that provides an efficient way to lay out elements
+in a container so the elements behave predictably when the container is resized or viewed on
+different screen sizes.
+A flex container is an element that has the CSS property display set to flex to create a blocklevel
+flex container or inline-f lex to create an inline flex container. Ex:
+<div style=" display: flex" >. Flex containers hold flex items. A flex item is a child element
+of a flex container that is positioned and sized according to various CSS flexbox properties. I PARTICIPATION I 2.7.1 : Flexbox example renders three div elements on the same
+ACTIVITY row.
+<div i d="container">
+<div>A</ div>
+<div>B</ div>
+<div>C</ div>
+</ div>
+/* flex c ontainer */
+#contai ner {
+d i spl ay : fl ex ;
+border : lpx green so lid ;
+paddi ng : Spx;
+/* flex items */
+#contai ner > div
+paddi ng : lOpx ;
+border : lpx b l ue solid ;
+□
+2024-10-12, 3:24 p.m.
+items container
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+76 of 98 2024-10-12, 3:24 p.m.
+l ___ J
+Animation content:
+Two blocks of code are displayed, the first in HTML:
+<div id="container">
+<div>A</div>
+<div>B</div>
+<div>C</div>
+</div>,
+the second in CSS:
+/* flex container*/
+#container {
+}
+display: flex;
+border: 1 px green solid;
+padding: 5px;
+/* flex items*/
+#container> div {
+padding: 1 Opx;
+border: 1 px blue solid;
+}
+A screen is displayed below. The first scene shows A, B, and C vertically aligned on the left
+without CSS. Next the flex container block is highlighted and A, B, and C display left-aligned in a
+row. Lastly the flex items block is highlighted and A, B, and Care formatted.
+Animation captions:
+1. Without any CSS, the A, B, and C div elements display vertically, each filling the browser
+width .
+2. Setting the CSS display property to "flex" makes the outer div the flex container. The flex
+items now display on the same row.
+3. The flex items have padding and blue borders.
+I PARTICIPATION I . . ACTIVITY 2.7.2: Flexbox container and items.
+Refer to the animation above.
+1) The flex container has
+item(s) .
+flex
+□
+0
+#container
+row row-reverse column column-reverse
+gap: 10px;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+77 of 98 2024-10-12, 3:24 p.m.
+0 1
+0 2
+0 3
+2) Removing __ from the
+rule displays all flex
+items vertically on separate rows.
+0 display: flex;
+0 border: lpx green
+solid;
+0 padding: 5px;
+3) Flex items appear __ within a flex
+container by default.
+0 left aligned
+0 centered
+0 right-aligned
+Flex container properties
+Several CSS properties modify the default behavior of a flex container:
+• The flex-direction property defines the direction of flex items within the container using
+values:
+(default)
+A C
+B B
+C A
+0
+0
+• The gap property defines the space between flex items. Ex:
+between all items.
+puts a 1 Opx gap
+flex-start flex-end space-between space-around space-evenly
+nowrap wrap wrap-reverse
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+78 of 98 2024-10-12, 3:24 p.m.
+B
+C
+• The justify-content property justifies the flex items within the container using values:
+(default) center
+GE]
+• The flex-wrap property determines if or how flex items wrap onto multiple rows when the
+container is not wide enough to hold all items, using values:
+(default)
+A B C
+C A B -
+I PARTICIPATION I . . ACTIVITY 2.7.3: Flex container properties for photos.
+The webpage below uses a flexbox to display three photos with captions.
+Make the following CSS modifications to the flex container. After each modification,
+render the webpage to verify the modification works properly.
+1. Add a gap property to the flex container to put a 20px gap between the photos.
+2. Add a flex-direction property to the flex container to display the photos in
+reverse.
+3. Add a justify-content property to the flex container to display the photos
+centered in the browser window.
+□
+wrap
+zyBooks
+I
+79 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+4. Add a flex-wrap property to the flex container so the photos wrap to the next row
+when the browser width is reduced .
+Note: The window that renders the webpage can be resized using the small handle in the
+bottom-right corner.
+I HTML I css I
+1 <[div} id="container"> li
+2 <div class="photo"> f
+3 <img src ="https: //resources. zybooks. com/WebProgramming/ducatiSmalh
+4 <p>
+5 Ducati motorcycle
+6 </p>
+7 </div>
+8 <div class="photo">
+9 <img src ="https://resources.zybooks.com/WebProgramming/kyotoRestaur
+10 <p>
+11 Japanese restaurant
+12 </p>
+13 </div>
+14 <div class="photo">
+15 <img src ="https://resources.zybooks.com/WebProgramming/lakelvl.jpg"
+16 <p>
+17 Lake in Colorado
+Render webpage Reset code
+Your webpage
+Japanese restaurant
+Ducati motorcycle Lake in Colorado
+► View solution
+2024-10-12, 3:24 p.m.
+<div>
+<div id="container">
+<img src="madrid.jpg" alt="Madrid">
+<img src="hanoi.jpg" alt="Hanoi">
+<img src="islamabad.jpg" alt="Islamabad">
+</div>
+flex-direction
+row
+row-reverse
+column-reverse
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+80 of 98 2024-10-12, 3:24 p.m.
+ACTIVITY 2.7.4: Flex container properties. I PARTICIPATION I
+Refer to the HTML below. Assume a CSS rule exists that makes the a flex
+container.
+7) What value
+displays Madrid on the right side of
+the grid container with all three
+images on the same row?
+0
+0
+0
+2) What justify-content value puts
+an equal amount of space on either
+side of the three images but leaves no
+space between the images?
+0 center
+0 space-between
+0 space-around
+3) What flex-wrap value makes the
+Islamabad image appear below
+Madrid if the grid container is not
+wide enough to show all three images
+on the same row?
+0 nowrap
+0 wrap
+0 wrap-reverse
+Flex item properties
+A flex item's width is determined by the combination of three CSS properties:
+0
+0
+0
+auto
+auto
+"html">Home</a></li>
+"products.html">Products</a></li>
+"html">About</a></li>
+Products About Home Products About
+nav li {
+flex-basis: 100px;
+flex-shrink: 0;
+background-color: gold;
+text-align: center;
+}
+: 1;
+background-color: gold;
+align: center;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+81 of 98 2024-10-12, 3:24 p.m.
+• The flex-basis property sets the initial length of a flex item. The values can be (the
+default), a percentage, or a length unit. The default value makes the flex item the same
+initial length as the content.
+• The flex-grow property sets a proportion that determines how much of the available
+container space should be assigned to the item. The default is 0, meaning the size should be
+based on the item's content.
+• The flex-shrink property sets a proportion that determines the item's minimum size. The
+default is 1, meaning the size should shrink at the same rate as other items when the
+container width shrinks. A value of O means the item should not change sizes when the
+container width shrinks.
+I PARTICIPATION I 2.7.5: Changing flex item properties.
+ACTIVITY
+<nav>
+<ul>
+<li><a href="index.
+<li><a href="produc
+<li><a href="about.
+nav ul {
+</ ul>
+</ nav>
+d i spl ay : fl ex ;
+li st- styl e - type : none ;
+paddi ng : 0;
+nav li {
+f l ex- grow :
+backgrounc
+text- a ligr
+□
+Home Products About
+[Hom, P, _ I] [' _I,____-_______,I! J
+Animation content:
+A code block of HTML is displayed:
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+82 of 98 2024-10-12, 3:24 p.m.
+</nav>
+Next three code blocks of CSS are shown. The first block shows the following:
+nav ul {
+}
+display: flex;
+list-style-type: none;
+padding: O;
+The second:
+nav Ii {
+}
+flex-grow: 1;
+background-color: gold;
+text-align: center;
+And the third:
+nav Ii {
+}
+flex-basis: 1 OOpx;
+flex-shrink: O;
+background-color: gold;
+text-align: center;
+Below each CSS code block there is a screen displaying the output. The first shows Home,
+Product, and About in a row across the top. The second first shows the three nav links leftaligned
+in a row when flex-grow is 0, then portions the nav links evenly when flex-grow is 1. The
+third box shows the three nav links changing container size when the browser is resized when
+flex-shrink is 0, then flex-shrink is changed to 1, preventing the containers from resizing.
+Animation captions:
+1. A website's navigation links are displayed in an unordered list.
+2. Making the ul element a flex container places the nav links on the same row.
+3. By default, the Ii elements have flex-basis:auto and flex-grow:O, so Ii elements are only as
+wide as the item's content.
+4. Changing flex-grow from the default Oto 1 gives all Ii elements the same proportion. The
+elements fill the flex container.
+5. Replacing "flex-grow:1" with "flex-basis:1 OOpx" makes each Ii element 1 OOpx wide.
+6. Resizing the browser changes the container size. When the container shrinks, the Ii
+elements shrink to fill the available space.
+7. Changing flex-shrink from the default 1 to O prevents the Ii elements from shrinking when
+the browser is resized .
+I PARTICIPATION
+ACTIVITY I 2.7.6: Flex item properties. □
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ACME Widgets</title>
+<style>
+body {
+font-family: Arial;
+}
+header {
+display: flex;
+justify-content: space-between;
+}
+header h1 {
+margin: 6px;
+}
+nav ul {
+display: flex;
+list-style-type: none;
+padding: 0;
+margin: 0;
+width: 500px;
+}
+nav li {
+background-color: gold;
+margin: 5px;
+padding: 10px;
+text-align: center;
+}
+nav a {
+color: black;
+text-decoration: none;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>ACME Widgets</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+</nav>
+</header>
+</body>
+</html>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+83 of 98 2024-10-12, 3:24 p.m.
+•
+Refer to the webpage below.
+:/li>
+flex-basis
+<nav>
+auto
+<nav>
+nav li
+nav {
+flex-basis: 50%;
+}
+flex-grow: 0;
+flex-grow: 1;
+flex-grow: 50%;
+header h1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+84 of 98 2024-10-12, 3:24 p.m.
+1) How many flex containers exist in the
+webpage?
+0 0
+0 1
+0 2
+2) The heading "ACME Widgets" appears
+__ the navigation links in the
+browser.
+0 to the left of
+0 to the right of
+0 above
+3) What is the for the
+flex item?
+0
+0 0
+0 1
+4) How wide is the flex item?
+5)
+0 Just wide enough to hold all
+the navigation links
+0 Half the width of the webpage
+0 Entire width of the web page
+In addition to the CSS below, __
+must be added to the
+the Ii elements fill half the row.
+0
+0
+0
+rule so
+6) Adding __ to the rule
+prevents the heading from shrinking
+when the browser is resized.
+0
+0
+0
+0
+0
+0
+flex-grow flex-shrink flex-basis
+flex: 0 1 auto;
+flex-grow: 0; flex-shrink: 1; flex-basis: auto;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+85 of 98 2024-10-12, 3:24 p.m.
+0 flex-shrink: none;
+0 flex-shrink: 1;
+0 flex-shrink: O;
+The flex property
+The shorthand property flex specifies
+is the same as
+., and ~.: -=-== ::., ..::._.=, .::_ .: together. Ex:
+I PARTICIPATION
+ACTIVITY I 2.7.7: Flexbox layout using the flex property. □
+r
+I
+I
+\...
+<body>
+<header>Header</header>
+<!-- Flexbox layout -->
+<div id="container">
+<nav>Nav</nav>
+<main>Ma i n</main>
+<aside>As i de</aside>
+</div>
+<footer>Footer</ footer>
+</body>
+Header
+I'
+Nav Main Aside
+I II
+Footer
+Animation content:
+Two blocks of code are shown. The HTML:
+<body>
+<header>Header</header>
+<!-- Flexbox layout-->
+<div id="container">
+<nav>Nav</nav>
+<main>Main</main>
+"'
+I
+I
+~
+#container {
+display : flex ;
+nav
+flex : 0 1 20%;
+main
+flex : 0 1 60%;
+aside
+flex : 0 1 20%;
+-4 A~
+flex-grow flex-basis
+flex-shrink
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+86 of 98 2024-10-12, 3:24 p.m.
+<aside>Aside</aside>
+</div>
+<footer>Footer</footer>
+</body>
+and the CSS:
+#container {
+display: flex;
+}
+nav {
+flex: 0 1 20%;
+}
+main {
+flex: 0 1 60%;
+}
+aside {
+flex: 0 1 20%;
+}
+In the CSS flex property, the 0 controls flex-grow, the 1 controls flex-shrink, and the percentage
+controls flex-basis. Below is a screen displaying header spanning the width at the top of body,
+footer spanning the width at the bottom of body, and between the two is <nav> occupying 20% of
+the left side of body, main occupying 60% of the middle of body, and aside occupying the
+remaining 20% of body on the right side.
+Animation captions:
+1. <header> and <footer> span the entire width of <body>, but the <div> is a flex container that
+displays the flex items on the same row.
+2. <nav>, <main>, and <aside> all have flex-grow= 0, so all three flex items' width should be
+based on each item's content.
+3. <nav>, <main>, and <aside> all have flex-shrink= 1, so all three flex items shrink at the same
+rate when the browser is resized.
+4. <nav> occupies 20% of the row, <main> occupies 60%, and <aside> occupies 20%. 20% +
+60% + 20% = 1 00% of the row.
+I PARTICIPATION I . . ACTIVITY 2.7.8: Flex item properties.
+Refer to the animation above.
+1) Which property makes the Main flex
+item wider than Nav and Aside?
+□
+0
+flex-grow
+flex-basis
+flex-shrink
+nav { flex: 1 1 auto; }
+main { flex: 3.5 1 auto; }
+aside { flex: 1 1 auto; }
+#container { display: flex;
+flex-direction:
+row;
+justify-content:
+center; }
+nav { flex: 0 1 auto; }
+main { flex: 0 1 auto; }
+aside { flex: 0 1 auto; }
+#container { display: flex;
+flex-direction: column; }
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+87 of 98 2024-10-12, 3:24 p.m.
+0
+0
+0
+2) How do the changes below affect the
+webpage?
+0 All three flex items are equal
+width.
+0 Nav and Aside are wider than
+Main.
+0 The layout will be nearly the
+same as before.
+3) How do the changes below affect the
+webpage?
+All three flex items are default
+0 width and centered horizontally
+in the flex container.
+0 Nav and aside are wider than
+Main.
+All three flex items will be
+0 default width, aligned to the
+left.
+4) How does the change below affect
+the webpage?
+0 No changes.
+0
+0
+0
+zyBooks
+88 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+O All three flex items are stacked
+on top of one another.
+O The direction of the flex items
+is reversed .
+I PARTICIPATION I . ACTIVITY 2.7.9: Flexbox practice.
+The webpage displays three years of Grammy Award nominations for Album of the Year.
+Each year's nomination is placed in a <section>
+element.
+Alter the webpage to display the three sections in a single row:
+1. Add a single <div> element that surrounds all three sections.
+2. Add the proper CSS so the <div> becomes a flex container and displays each
+section on a single row.
+3. Add a flex property to the section rule that sets flex-grow to 0, flex-shrink to 1,
+and flex-basis to 250px.
+4. Add a flex-wrap property that makes the sections wrap to the next row when the
+browser is resized.
+After adding the HTML and CSS above, render the webpage. Resize the rendered
+webpage's window and verify that the sections wrap to the next row when the window
+isn't wide enough to display the sections side-by-side.
+I HTML I css I
+1 <lb_b>Grammy Nominees for Album of the Year</hl>
+2
+3 <section>
+4 <h2> 2020</h2>
+5 <ul>
+6 <li><cite> Folklore</cite> by Taylor Swift</li>
+7 <li><cite>Future Nostalgia</cite> by Dua Lipa</li>
+8 <li><cite>Hollywood's Bleeding</cite> by Post Malone</li>
+9 <li><cite>Chilombo</cite> by Jhene Aiko</li>
+10 <li><cite>Black Pumas (Deluxe Edition) </cite> by Black Pumas </li>
+11 <li><cite>Everyday Life</cite> by Coldplay</li>
+12 <li><cite>Djesse Vol.3 </cite> by Jacob Collier</li>
+13 <li><cite>Women In Music Pt. III</cite> by HAIM</li>
+14 </ul>
+15 </section>
+16 <section>
+17 <h2> 2019</h2>
+HI
+□
+2024-10-12, 3:24 p.m.
+by Black Pumas
+zyBooks
+89 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+Render webpage Reset code
+Your webpage
+Grammy Nominees for Album of the Year
+2020
+• Folklore by Taylor Swift
+• Future Nostalgia by Dua Lipa
+• Hollywood's Bleeding by Post Malone
+• Chilombo by Jhene Aiko
+• Black Pumas (Deluxe Edition) • Everyday Life by Coldplay
+• Djesse Vol.3 by Jacob Collier
+• Women In Music Pt. Ill by HAIM
+2019
+► View solution
+I CHALLENGE I ACTIVITY 2.7.1: Flexbox.
+570104.2065416.qx3zqy7
+Start
+For the element with class container, set display to flex and width to 105px.
+SHOW EXPECTED
+1 . container {
+2
+I css I HTML I
+3 /* Your solution goes here*/
+4
+5 }
+6 . container > div {
+7
+8
+9
+10 }
+background-color :
+border : 2px solid
+padding : 6px;
+lightblue;
+blue;
+□
+2024-10-12, 3:24 p.m.
+zyBooks
+90 of98
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 2 3
+Check Next
+View your last submission v
+Exploring further:
+• HTML LaY-outs from W3Schools
+• CSS Flexbox from W3Schools
+2.8 Lab: UA News Article (HTML and CSS)
+Create a webpage based on this news article: httgs://alumni.arizona.edu/arizona-magazine/
+su mmer-2017 / flve-thi ngs-know-about-rattles na kes-a nd-thei r-ba bies
+Your webpage should include the following HTML components (in order):
+• <title> tag with content: 5 Things to Know About Rattlesnakes and Their Babies
+• UA logo as <img> tag with src attribute containing: Uni versi tyLogo. png
+• <hl> tag with content: 5 Things to Know About Rattlesnakes and Their Babies
+• <h2 > tag with content: Arizona's rattlesnakes welcome their offspring in July and August.
+While baby rattlesnakes are small, their bite is just as dangerous.
+• <p> tag with content: UA College of Pharmacy I August 6, 2014. Add id of "author-name-anddate"
+for this paragraph.
+• <p> tag with content: Arguably, snake season is year-round in Arizona, a state known for its
+rattlers. But baby rattlesnakes are born in July and August, making these two months
+especially dangerous for hikers, gardeners, children and others at high risk of exposure to
+rattlesnake bites.
+• <div> tag (with id of "image-box" for this div tag) containing the following tags:
+o Article photo as <img> tag with src attribute containing: SnakeBi te. j pg and alt
+attribute containing: snake bite
+o <p> tag with content for image caption: Puncture marks indicate the rattlesnake bite on
+the heel of a 9-year-old.
+• 4 more <p> tags with contents (in order):
+2024-10-12, 3:24 p.m.
+<p> <a>
+<h1>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+91 of 98 2024-10-12, 3:24 p.m.
+o So far this year, 7 4 rattlesnake bites to humans have been reported to the Arizona
+Poison and Drug Information Center. Based at the University of Arizona College of
+Pharmacy, the center serves the entire state of Arizona with the exception of Maricopa
+County, providing free and confidential poison and medication information to callers
+around the clock.
+o Specialists answering the phones at the center regularly receive calls from Arizonans of
+all ages who don't realize they were bitten by a rattler. The poison center urges anyone
+who feels a mysterious sting, pinch or bite while outdoors to immediately call the center
+at 800-222-1222.
+o "We will ask a few questions that will help you either identify possible snakebite or
+eliminate it," said Keith Boesen, director of the Arizona Poison and Drug Information
+Center. "With snakebite, the sooner the medical treatment, the better the outcome, so
+calling us right away can make a very big difference for the victims and the medical
+teams treating them."
+o The center advises anyone who might come cross paths with rattlesnakes to be aware
+of these five things:
+• An ordered list with the following item contents (in order):
+•
+o Baby rattlesnakes range in length from 6 to 12 inches and are easily camouflaged by
+brush and grass.
+o Baby rattlesnakes are rattleless until they first shed their skins, so there will be no
+infamous "chica-chica" sound before they strike.
+o Despite their impish size, baby snakes have enough venom to be very dangerous if they
+bite a human.
+o Adult rattlesnakes do not always rattle an audible warning before or while they are
+biting.
+o It's a good idea to call the poison center if you notice an unidentified small cut or
+wound, even if you feel no pain. With the lack of telltale rattle warning, people can be
+bitten without knowing what has happened until they notice their symptoms and
+attribute them to a snakebite.
+tag containing 3 tags with content and href of:
+o Twitter and httQs://twitter.com/
+o Facebook and httQs://www.facebook.com/
+o Linkedln and httQs://www.linkedin.com/
+Add CSS rules to style.css for the given news article webpage that matches the following styling:
+• Both article's images styled with a width of 300px
+• Article's tag styled with:
+o 5px padding all around
+o Font family of Arial
+o Font size of 24px
+o Font color of white
+<h2>
+<p>
+<p> <ol>
+<a>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+92 of 98 2024-10-12, 3:24 p.m.
+o Background color of red
+• Article's tag styled with:
+o 2px padding all around
+o Font family of Verdana
+o Font size of 16px
+o Font color of darkblue
+• Selecting the id of author-name-and-date, style the author name and date with:
+o Font family of Arial
+o Font size of 12px
+o Font color of lightgray
+• Selecting the id of image-box, style the division with:
+o floats to parent container's right side
+o 5px padding all around
+o text align of center
+o a width of 350px
+o a height of 250px
+• Selecting tag in the division, style the image caption with:
+o Opx margin all around
+o font-size of 12px
+• Article's text ( and tags) styled with:
+o Font family of Times New Roman
+o Font size of 16px
+o Font color of gray
+• Article's share links ( tags) styled with:
+o Font family of Arial
+o Font size of 12px
+o Font color of blue
+Note: Colors, font sizes, padding, etc. must be exact.
+570104.20654 l 6.qx3zqy7 I ~,vrrv I 2.8.1 : Lab: UA News Article (HTML and CSS)
+Submission Instructions
+Downloadable files
+i ndex . h t ml , s t y l e . css , Un i vers ityLogo . png ,and
+Sna keBi t e . j pg
+23 I 23
+Download
+---
+Upload your files below by dragging and dropping into the area or choosing a file on your hard
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+93 of 98 2024-10-12, 3:24 p.m.
+drive.
+index.html
+Drag file here
+or
+Choose on hard drive.
+Submit for grading
+Coding trail of your work What is this?
+9/ 15 U17, 23 min:7
+style.css
+Drag file here
+or
+Choose on hard drive.
+Latest submission - 7:18 PM MST on Submission passed Total score: 23
+09/15/24 all tests ✓ /23
+D Only show failing tests
+1 :Unit test A
+News article title
+✓ At least 1 <title> tag exists
+✓ Assert #2
+✓ At least 1 <h1 > tag exists
+✓ h1 tag contains expected content
+2:Unit test A
+First image is UA logo
+✓ At least 1 <img> tag exists
+✓ Assert #2
+3:Unit test A
+Sub title
+✓ At least 1 <h2> tag exists
+Download this submission
+1 / 1
+1 / 1
+1 / 1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+94 of 98 2024-10-12, 3:24 p.m.
+✓ h2 tag contains expected content
+4:Unit test A 1 / 1
+Author and date
+✓ At least 1 <p> tag exists
+✓ Author and date in first <p> tag
+5:Unit test A 2 / 2
+Article text
+✓ Number of <p> tags
+✓ Article content in <p> tag #1
+✓ Article content in <p> tag #2
+✓ Article content in <p> tag #3
+✓ Article content in <p> tag #4
+✓ Article content in <p> tag #5
+✓ Article content in <p> tag #6
+6:Unit test A 2 / 2
+List Items
+✓ Number of <ol> tags
+✓ Number of <Ii> tags in <ol> tag
+✓ Article content in <Ii> tag #1
+✓ Article content in <Ii> tag #2
+✓ Article content in <Ii> tag #3
+✓ Article content in <Ii> tag #4
+✓ Article content in <Ii> tag #5
+7:Unit test A 1 / 1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+95 of 98 2024-10-12, 3:24 p.m.
+Article image
+✓ Number of <img> tags
+✓ Second image uses given link for article image
+✓ Second image uses an alternate text for article image
+8:Unit test A
+Image box
+✓ At least 1 <div> tag exists
+✓ Number of <div> tags
+✓ Number of <img> tags in <div>
+✓ Number of <p> tags in <div>
+9:Unit test A
+Links: Twitter, Facebook, and Linkedln
+✓ Number of <a> tags
+✓ <a> tag #1 's href
+✓ <a> tag #2's href
+✓ <a> tag #3's href
+1 O:Unit test A
+Image styles
+✓ Width of image 1
+✓ Width of image 2
+11 :Unit test A
+Header styles
+✓ padding of <h1 > tag
+✓ font-family of <h1 > tag
+2 / 2
+1 / 1
+1 / 1
+1 / 1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+96 of 98 2024-10-12, 3:24 p.m.
+✓ font-size of <h1 > tag
+✓ color of <h1 > tag
+✓ background-color of <h1 > tag
+12:Unit test A
+Header styles 2
+✓ padding of <h2> tag
+✓ font-family of <h2> tag
+✓ font-size of <h2> tag
+✓ color of <h2> tag
+13:Unit test A
+Author name and date styles
+✓ <p> with id author-name-and-date exists
+✓ font-family of <p> tag with id of author-name-and-date
+✓ font-size of <p> tag with id of author-name-and-date
+✓ color of <p> tag with id of author-name-and-date
+14:Unit test A
+Image box styles
+✓ <div> with id image-box exists
+✓ float of <div> tag with id of image-box
+✓ padding of <div> tag with id of image-box
+✓ width of <div> tag with id of image-box
+✓ height of <div> tag with id of image-box
+✓ text-align of <div> tag with id of image-box
+15:Unit test A
+1 / 1
+1 / 1
+2 / 2
+2 / 2
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+97 of 98 2024-10-12, 3:24 p.m.
+Image caption styles
+✓ image caption selector exists
+✓ margin of image caption
+✓ font-size of image caption
+16:Unit test A 2 / 2
+Article text styles
+✓ font-family of <p> tag 3
+✓ font-size of <p> tag 3
+✓ color of <p> tag 3
+✓ font-family of <p> tag 5
+✓ font-size of <p> tag 5
+✓ color of <p> tag 5
+✓ font-family of <p> tag 6
+✓ font-size of <p> tag 6
+✓ color of <p> tag 6
+✓ font-family of <p> tag 7
+✓ font-size of <p> tag 7
+✓ color of <p> tag 7
+✓ font-family of <p> tag 8
+✓ font-size of <p> tag 8
+✓ color of <p> tag 8
+✓ font-family of <p> tag 9
+✓ font-size of <p> tag 9
+✓ color of <p> tag 9
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+98 of 98 2024-10-12, 3:24 p.m.
+✓ font-family of <ol> tag
+✓ font-size of <ol> tag
+✓ color of <ol> tag
+17:Unit test A 1 / 1
+Link styles
+✓ font-family of <a> tag 1
+✓ font-size of <a> tag 1
+✓ color of <a> tag 1
+✓ font-family of <a> tag 2
+✓ font-size of <a> tag 2
+✓ color of <a> tag 2
+✓ font-family of <a> tag 3
+✓ font-size of <a> tag 3
+✓ color of <a> tag 3
+Previous submissions
+7:17 PM on 9/15/24 17 / 23 View v
