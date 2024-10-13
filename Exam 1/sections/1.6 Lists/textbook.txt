@@ -1,396 +1,782 @@
 Unordered lists
+Unordered lists
+An unordered list is a collection of items, usually indented and shown using bullets, created with the
 An unordered list is a collection of items, usually indented and shown using bullets, created with the
 <ul> element. Each list item is created with the <Ii> element. I PARTICIPATION
+<ul> element. Each list item is created with the <Ii> element. I PARTICIPATION
+ACTIVITY 1.6.1 : Unordered list.
 ACTIVITY 1.6.1 : Unordered list.
 <p >Some high demand majors are: </p >
+<p >Some high demand majors are: </p >
+<ul>
 <ul>
 <li>Mathematics</li>
+<li>Mathematics</li>
+<li>Statistics</li>
 <li>Statistics</li>
 <li>Computer Science</ li>
+<li>Computer Science</ li>
+</ul>
 </ul>
 <p >Source: College Consensus 2019</p >
+<p >Source: College Consensus 2019</p >
+Animation content:
 Animation content:
 The following code snippet is displayed:
+The following code snippet is displayed:
+<p>Some high demand majors are:</p>
 <p>Some high demand majors are:</p>
 <ul>
+<ul>
+<li>Mathematics</li>
 <li>Mathematics</li>
 <li>Statistics</li>
+<li>Statistics</li>
+<li>Computer Science</li>
 <li>Computer Science</li>
 </ul>
+</ul>
+<p>Source: College Consensus 2019</p>
 <p>Source: College Consensus 2019</p>
 r
+r
+Some high demand majors are:
 Some high demand majors are:
 • Mathematics
+• Mathematics
+• Statistics
 • Statistics
 • Computer Science
+• Computer Science
+Source: College Consensus 2019
 Source: College Consensus 2019
 D
+D
+End of code snippet. A monitor displays the paragraph with the text, "Some high demand majors
 End of code snippet. A monitor displays the paragraph with the text, "Some high demand majors
 are:" under it is a list with the bullet points Mathematics, Statistics, and Computer Science. Under
+are:" under it is a list with the bullet points Mathematics, Statistics, and Computer Science. Under
+the list is the paragraph with the text, "Source: College Consensus 2019."
 the list is the paragraph with the text, "Source: College Consensus 2019."
 Animation captions:
+Animation captions:
+1. An unordered list is surrounded by opening <ul> and closing </ul> tags.
 1. An unordered list is surrounded by opening <ul> and closing </ul> tags.
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 48/94
 10/12/24, 1 :35 PM zyBooks
+10/12/24, 1 :35 PM zyBooks
+2. A list item is surrounded by opening <Ii> and closing </Ii> tags. The browser displays each
 2. A list item is surrounded by opening <Ii> and closing </Ii> tags. The browser displays each
 item indented and with a bullet.
+item indented and with a bullet.
+3. Additional list items may be added. Indenting ends after the list.
 3. Additional list items may be added. Indenting ends after the list.
 I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 1.6.2: Unordered lists and list items.
 ACTIVITY 1.6.2: Unordered lists and list items.
 Arrange the tags to produce the following unordered list.
+Arrange the tags to produce the following unordered list.
+• Peanutbutter
 • Peanutbutter
 • Jelly
+• Jelly
+If unable to drag and drop, refresh the page.
 If unable to drag and drop, refresh the page.
 Ill <li>Peanutbutter</ li>
+Ill <li>Peanutbutter</ li>
+(1)
 (1)
 (2)
+(2)
+(3)
 (3)
 (4)
+(4)
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY 1.6.3: Unordered list elements.
+ACTIVITY 1.6.3: Unordered list elements.
+Indicate whether each line has an error.
 Indicate whether each line has an error.
 (a) <ul>
+(a) <ul>
+(b) <li>Apples<li>
 (b) <li>Apples<li>
 (c) <li>Oranges
+(c) <li>Oranges
+(d) </ul>
 (d) </ul>
 1) (a)
+1) (a)
+0 No error
 0 No error
 O Error
+O Error
 2) (b)
+2) (b)
+-
 -
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 <li>Jelly</ li>
+<li>Jelly</ li>
 D
 D
+D
+D
+0
+0
 0
 0
 49/94
+49/94
+10/12/24, 1 :35 PM zyBooks
 10/12/24, 1 :35 PM zyBooks
 0 No error
+0 No error
+0 Error
 0 Error
 3) (c) 0
+3) (c) 0
 0 No error
+0 No error
+0 Error
 0 Error
 4) (d) 0
+4) (d) 0
+0 No error
 0 No error
 0 Error
+0 Error
+Ordered lists
 Ordered lists
 An ordered list is a sequenced collection of items, usually indented and shown using numbers or
+An ordered list is a sequenced collection of items, usually indented and shown using numbers or
+letters, created with the <o/> element. As with an unordered list, each list item is created with an <li>
 letters, created with the <o/> element. As with an unordered list, each list item is created with an <li>
 element. The <ol> element's numbering scheme is specified with the type attribute. The table below
+element. The <ol> element's numbering scheme is specified with the type attribute. The table below
+shows the different types available.
 shows the different types available.
 Table 1.6.1: Ordered list types.
+Table 1.6.1: Ordered list types.
+Type Description Example _J Result
 Type Description Example _J Result
 ~
+~
+<ol type="l"> 1. item
 <ol type="l"> 1. item
 <li>item
+<li>item
+I 1</li> 1
 I 1</li> 1
 Numbers (default)
+Numbers (default)
+<li>item 2. item
 <li>item 2. item
 type="l" 2</li> 2
+type="l" 2</li> 2
+<li>item
 <li>item
 3</li> 3. item
+3</li> 3. item
+</ol>
 </ol>
 I
+I
 3
+3
+I
 I
 <ol type="A"> A. item
+<ol type="A"> A. item
+<li>item
 <li>item
 1</li> 1
+1</li> 1
+<li>item B. item
 <li>item B. item
 type="A" Uppercase letters 2</ li> 2
+type="A" Uppercase letters 2</ li> 2
+<li>item
 <li>item
 3</li> C. item
+3</li> C. item
+</ol>
 </ol>
 I
+I
 3
+3
+I
 I
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print 50/94
 10/12/24, 1 :35 PM zyBooks
+10/12/24, 1 :35 PM zyBooks
+<ol type="a"> a. item
 <ol type="a"> a. item
 <li>item
+<li>item
+I 1</li> 1
 I 1</li> 1
 <li>item b. item
+<li>item b. item
+type="a" Lowercase letters 2</li>
 type="a" Lowercase letters 2</li>
 <li>item 2
+<li>item 2
+3</li> c. item
 3</li> c. item
 </ol> 3
-I
-<ol type="I"> I. item
-<li>item
-1</li> 1
-Uppercase Roman <li>item II. item
-type="I"
-numerals 2</li> 2 <li>item
-3</li> Ill. item
 </ol> 3
 I
-<ol type="i"> i. item
+I
+<ol type="I"> I. item
+<ol type="I"> I. item
+<li>item
 <li>item
 1</li> 1
+1</li> 1
+Uppercase Roman <li>item II. item
+Uppercase Roman <li>item II. item
+type="I"
+type="I"
+numerals 2</li> 2 <li>item
+numerals 2</li> 2 <li>item
+3</li> Ill. item
+3</li> Ill. item
+</ol> 3
+</ol> 3
+I
+I
+<ol type="i"> i. item
+<ol type="i"> i. item
+<li>item
+<li>item
+1</li> 1
+1</li> 1
+Lowercase Roman <li>item ii. item
 Lowercase Roman <li>item ii. item
 type="i"
+type="i"
+numerals 2</li> 2 <li>item
 numerals 2</li> 2 <li>item
 3</li> iii. item
+3</li> iii. item
+</ol>
 </ol>
 I
+I
+3
 3
 I
+I
+CSS list-style-type
 CSS list-style-type
 The CSS property list-style-type provides the ability to change the bullet used in an
+The CSS property list-style-type provides the ability to change the bullet used in an
+unordered list and offers more numbering options in an ordered list.
 unordered list and offers more numbering options in an ordered list.
 Example
+Example
+<ul style="list-style-type:square">
 <ul style="list-style-type:square">
 <li>Item 1</li>
+<li>Item 1</li>
+<li>Item 2</li>
 <li>Item 2</li>
 <li>Item 3</li>
+<li>Item 3</li>
+</ul>
 </ul>
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 Result
+Result
+• Item 1
 • Item 1
 • Item 2
+• Item 2
+• Item 3
 • Item 3
 51/94
+51/94
+10/12/24, 1 :35 PM
 10/12/24, 1 :35 PM
 I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
 ACTIVITY
 zyBooks
+zyBooks
+<ol style="list-style-type:lower-greek">
 <ol style="list-style-type:lower-greek">
 <li>Item 1</ li>
+<li>Item 1</ li>
+<li>Item 2</ li>
 <li>Item 2</ li>
 <li>Item 3</ li>
+<li>Item 3</ li>
+</ol>
 </ol>
 1.6.4: An ordered list: High demand majors.
+1.6.4: An ordered list: High demand majors.
+The HTML below shows an ordered list. Modify the HTML:
 The HTML below shows an ordered list. Modify the HTML:
 a. Item 1
+a. Item 1
+~- Item 2
 ~- Item 2
 y. Item 3
+y. Item 3
+1. Add Genetic Counseling as the fourth degree and Cybersecurity as the fifth.
 1. Add Genetic Counseling as the fourth degree and Cybersecurity as the fifth.
 2. Use the type attribute to change the numbering type to letters and then to Roman
+2. Use the type attribute to change the numbering type to letters and then to Roman
+numerals.
 numerals.
 1 ~p>Top masters degrees in demand are: </p>
+1 ~p>Top masters degrees in demand are: </p>
+2 <ol>
 2 <ol>
 3 <li>Physician Assistant</li>
+3 <li>Physician Assistant</li>
+4 <li>Statistics</li>
 4 <li>Statistics</li>
 5 <li>Nursing</li>
+5 <li>Nursing</li>
+6 </ol>
 6 </ol>
 7 <p>Source: College Consensus 2019</p>
+7 <p>Source: College Consensus 2019</p>
+Render webpage Reset code
 Render webpage Reset code
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 D
+D
+►
 ►
 52/94
+52/94
+10/12/24, 1 :35 PM
 10/12/24, 1 :35 PM
 Your webpage
+Your webpage
+Top masters degrees in demand are:
 Top masters degrees in demand are:
 1. Physician Assistant
+1. Physician Assistant
+2. Statistics
 2. Statistics
 3. Nursing
+3. Nursing
+Source: College Consensus 2019
 Source: College Consensus 2019
 ► View solution
+► View solution
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY 1.6.5: Ordered list.
+ACTIVITY 1.6.5: Ordered list.
+Refer to the HTML below.
 Refer to the HTML below.
 <ol>
+<ol>
+<li>Cats</li>
 <li>Cats</li>
 <li>Dogs</li>
+<li>Dogs</li>
+<li>Hamsters</li>
 <li>Hamsters</li>
 </ol>
+</ol>
+1) The list will be numbered 1., 2., 3.
 1) The list will be numbered 1., 2., 3.
 0 True
+0 True
+0 False
 0 False
 2) Adding type=" i" to the first <li>
+2) Adding type=" i" to the first <li>
+changes the list to i., ii., iii.
 changes the list to i., ii., iii.
 0 True
+0 True
+0 False
 0 False
 3) Changing the ordered list to an
+3) Changing the ordered list to an
+unordered list with type="A" changes
 unordered list with type="A" changes
 the list to A., B., C.
+the list to A., B., C.
 0 True
+0 True
+O False
 O False
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 zyBooks
+zyBooks
 D
+D
+0
+0
+0
 0
 0
 0
 53/94
+53/94
+10/12/24, 1 :35 PM zyBooks
 10/12/24, 1 :35 PM zyBooks
 Nested lists
+Nested lists
+A nested list is a list within a list item of another list. A nested list displays indented inside the outer
 A nested list is a list within a list item of another list. A nested list displays indented inside the outer
 list. A nested unordered list uses a different bullet style, and a nested ordered list restarts at 1. I PARTICIPATION
+list. A nested unordered list uses a different bullet style, and a nested ordered list restarts at 1. I PARTICIPATION
+ACTIVITY 1.6.6: Nested movie and book lists.
 ACTIVITY 1.6.6: Nested movie and book lists.
 <ul>
-<li>Favorite movies
-<ol>
-<li>The Princess Bride</li>
-<li>Remember the Titans</li>
-<li>Moana</li>
-</ol>
-</li>
-<li>Favorite books<!){i.>
-<ol>
-<li>To Kill a Mockingbird</li>
-<li>The Brothers Karamazov</li>
-</ol>
-</li>
-</ul>
-Animation content:
-Start HTML code:
 <ul>
 <li>Favorite movies
+<li>Favorite movies
 <ol>
-<Ii> The Princess Bride</li>
+<ol>
+<li>The Princess Bride</li>
+<li>The Princess Bride</li>
+<li>Remember the Titans</li>
 <li>Remember the Titans</li>
 <li>Moana</li>
+<li>Moana</li>
 </ol>
+</ol>
+</li>
+</li>
+<li>Favorite books<!){i.>
+<li>Favorite books<!){i.>
+<ol>
+<ol>
+<li>To Kill a Mockingbird</li>
+<li>To Kill a Mockingbird</li>
+<li>The Brothers Karamazov</li>
+<li>The Brothers Karamazov</li>
+</ol>
+</ol>
+</li>
+</li>
+</ul>
+</ul>
+Animation content:
+Animation content:
+Start HTML code:
+Start HTML code:
+<ul>
+<ul>
+<li>Favorite movies
+<li>Favorite movies
+<ol>
+<ol>
+<Ii> The Princess Bride</li>
+<Ii> The Princess Bride</li>
+<li>Remember the Titans</li>
+<li>Remember the Titans</li>
+<li>Moana</li>
+<li>Moana</li>
+</ol>
+</ol>
+</Ii>
 </Ii>
 <li>Favorite books
+<li>Favorite books
+<ol>
 <ol>
 <Ii> To Kill a Mockingbird</li>
+<Ii> To Kill a Mockingbird</li>
+<Ii> The Brothers Karamazov</li>
 <Ii> The Brothers Karamazov</li>
 </ol>
+</ol>
+</Ii>
 </Ii>
 </ul>
+</ul>
+End code.
 End code.
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 D
+D
+• Favorite movies
 • Favorite movies
 1. The Princess Bride
+1. The Princess Bride
+2. Remember the Titans
 2. Remember the Titans
 3. Moana
+3. Moana
+• Favorite books
 • Favorite books
 1. To Kill a Mockingbird
+1. To Kill a Mockingbird
+2. The Brothers Karamazov
 2. The Brothers Karamazov
 54/94
+54/94
+10/12/24, 1 :35 PM zyBooks
 10/12/24, 1 :35 PM zyBooks
 Browser renders: bullet Favorite movies with nested list: 1. The Princess Bride, 2. Remember the
+Browser renders: bullet Favorite movies with nested list: 1. The Princess Bride, 2. Remember the
+Titans, 3. Moana. Followed by: bullet Favorite books with nested list: 1. To Kill a Mockingbird, 2. The
 Titans, 3. Moana. Followed by: bullet Favorite books with nested list: 1. To Kill a Mockingbird, 2. The
 Brothers Karamazov.
+Brothers Karamazov.
+Animation captions:
 Animation captions:
 1. An unordered list has two list items.
+1. An unordered list has two list items.
+2. A numbered list of movies is nested inside the unordered list's first Ii element.
 2. A numbered list of movies is nested inside the unordered list's first Ii element.
 3. A common mistake is to leave a nested list outside an item's <Ii> and </Ii> tags. Although the
+3. A common mistake is to leave a nested list outside an item's <Ii> and </Ii> tags. Although the
+HTML may render as intended, the HTML is technically incorrect.
 HTML may render as intended, the HTML is technically incorrect.
 4. For the HTML to conform to the HTML Living Standard, the nested list should go INSIDE an
+4. For the HTML to conform to the HTML Living Standard, the nested list should go INSIDE an
+item's <Ii> and </Ii> tags.
 item's <Ii> and </Ii> tags.
 I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 1.6.7: Nested lists.
 ACTIVITY 1.6.7: Nested lists.
 The HTML below shows three nested ordered lists. Try making the following modifications:
+The HTML below shows three nested ordered lists. Try making the following modifications:
+1. Add the fourth most populous state, New York, with cities New York and Buffalo.
 1. Add the fourth most populous state, New York, with cities New York and Buffalo.
 2. Change California's nested <ol> elements to <ul> elements.
+2. Change California's nested <ol> elements to <ul> elements.
+3. Add an ordered or unordered list under Los Angeles with three items:
 3. Add an ordered or unordered list under Los Angeles with three items:
 1. Most populous city in California
+1. Most populous city in California
+2. Second-most populous city in USA
 2. Second-most populous city in USA
 3. Third-most populous city in North America
+3. Third-most populous city in North America
+1 ~p>Most populous states and cities within those states: </p>
 1 ~p>Most populous states and cities within those states: </p>
 2 <ol>
+2 <ol>
+3 <li>California
 3 <li>California
 4 <ol>
+4 <ol>
+5 <li> Los Angeles</li>
 5 <li> Los Angeles</li>
 6 <li>San Diego</li>
+6 <li>San Diego</li>
+7 </ol>
 7 </ol>
 8 </li>
+8 </li>
+9
 9
 10 <li>Texas
+10 <li>Texas
+11 <ol>
 11 <ol>
 12 <li>Houston</li>
+12 <li>Houston</li>
+13 <li>San Antonio</li>
 13 <li>San Antonio</li>
 14 </ol>
+14 </ol>
+15 </li>
 15 </li>
 16
+16
+17 <li>Florida
 17 <li>Florida
 1 ,-,-1
+1 ,-,-1
+Render webpage Reset code
 Render webpage Reset code
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 D
+D
+55/94
 55/94
 10/12/24, 1 :35 PM
+10/12/24, 1 :35 PM
+Your webpage
 Your webpage
 Most populous states and cities within those states:
+Most populous states and cities within those states:
+1. California
 1. California
 1. Los Angeles
+1. Los Angeles
+2. San Diego
 2. San Diego
 2. Texas
+2. Texas
+1. Houston
 1. Houston
 2. San Antonio
+2. San Antonio
+3. Florida
 3. Florida
 1. Jacksonville
+1. Jacksonville
+2. Miami
 2. Miami
 ► View solution
+► View solution
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY 1.6.8: Nested lists.
+ACTIVITY 1.6.8: Nested lists.
+zyBooks
 zyBooks
 Indicate what precedes the given list item when rendered by the browser. Valid answers are:
+Indicate what precedes the given list item when rendered by the browser. Valid answers are:
+bullet, 1 ., 2., or 3.
 bullet, 1 ., 2., or 3.
 7) <ol>
+7) <ol>
+<li>Apples</ li>
 <li>Apples</ li>
 <li>Oranges</li>
+<li>Oranges</li>
+</ol>
 </ol>
 Oranges
+Oranges
+Show answer
 Show answer
 2) <ol>
+2) <ol>
+<li>Apples</li>
 <li>Apples</li>
 <li>Oranges
+<li>Oranges
+<ol>
 <ol>
 <li>Valencia</li>
+<li>Valencia</li>
+<li>Mandarin</li>
 <li>Mandarin</li>
 </ol>
+</ol>
+</li>
 </li>
 </ol>
+</ol>
 Valencia
+Valencia
+Show answer
 Show answer
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 D
+D
+0
+0
 0
 0
 56/94
+56/94
+10/12/24, 1 :35 PM
 10/12/24, 1 :35 PM
 3) <ol>
+3) <ol>
+<li>Apples
 <li>Apples
 <ul>
+<ul>
+<li>Granny
 <li>Granny
 Smith</li>
+Smith</li>
+<li>Red
 <li>Red
 Delicious</li>
+Delicious</li>
+</ul>
 </ul>
 </li>
+</li>
 <li>Oranges</li>
+<li>Oranges</li>
+</ol>
 </ol>
 [ Red Delicious
+[ Red Delicious
+Show answer
 Show answer
 4) <ol>
+4) <ol>
+<li>Apples
 <li>Apples
 <ol>
+<ol>
+<li>Red</li>
 <li>Red</li>
 <li>Green</li>
+<li>Green</li>
+</ol>
 </ol>
 </ li>
+</ li>
+<li>Oranges</li>
 <li>Oranges</li>
 <li>Bananas</li>
+<li>Bananas</li>
+</ol>
 </ol>
 [ Oranges
+[ Oranges
+Show answer
 Show answer
 I CHALLENGE
+I CHALLENGE
+ACTIVITY 1.6.1: Lists.
 ACTIVITY 1.6.1: Lists.
 570104.2065416.qx3zqy7 -
+570104.2065416.qx3zqy7 -
+zyBooks
 zyBooks
 Modify the grocery list to be an unordered list. Use a paragraph element to enclose the text
+Modify the grocery list to be an unordered list. Use a paragraph element to enclose the text
+"Grocery list:" before the list. Mismatched, missing, and incorrectly nested tags are
 "Grocery list:" before the list. Mismatched, missing, and incorrectly nested tags are
 considered incorrect even if the rendered webpage looks correct. SHOW EXPECTED
+considered incorrect even if the rendered webpage looks correct. SHOW EXPECTED
+1
 1
 2 Grocery list:
+2 Grocery list:
+3 Apples
 3 Apples
 4 Avocados
+4 Avocados
 5 Eggs
+5 Eggs
+6
 6
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 0
 0
+0
+0
+D
 D
 57/94
+57/94
+10/12/24, 1 :35 PM zyBooks
 10/12/24, 1 :35 PM zyBooks
 1 2 3 4
+1 2 3 4
+Check - View your last submission v
 Check - View your last submission v
 Exploring further:
+Exploring further:
+• HTML lists from W3Schools.
 • HTML lists from W3Schools.

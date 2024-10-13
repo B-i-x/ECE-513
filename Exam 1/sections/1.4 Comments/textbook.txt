@@ -1,53 +1,104 @@
 4
+4
+An HTML comment is a portion of the document that is not displayed by the browser. A comment
 An HTML comment is a portion of the document that is not displayed by the browser. A comment
 begins with the<! -- character sequence and ends with the--> character sequence. Web developers
+begins with the<! -- character sequence and ends with the--> character sequence. Web developers
+sometimes use comments to leave notes for themselves or others, or to tell the browser to ignore part
 sometimes use comments to leave notes for themselves or others, or to tell the browser to ignore part
 of the document. A common error is trying to put a comment inside of another comment. I PARTICIPATION
+of the document. A common error is trying to put a comment inside of another comment. I PARTICIPATION
+ACTIVITY 1.4.1: Comments.
 ACTIVITY 1.4.1: Comments.
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 D
+D
+36/94
 36/94
 10/12/24, 1 :35 PM zyBooks
+10/12/24, 1 :35 PM zyBooks
+The following HTML shows two paragraphs. Try modifying the HTML to use a comment so
 The following HTML shows two paragraphs. Try modifying the HTML to use a comment so
 that the second paragraph is not displayed.
+that the second paragraph is not displayed.
+1 ;(8>
 1 ;(8>
 2 Your mission, should you choose to accept it, is to use a comment to prevent
+2 Your mission, should you choose to accept it, is to use a comment to prevent
+3 < le)>
 3 < le)>
 4 <p>
+4 <p>
+5 This paragraph will self-destruct in five seconds. Good luck ...
 5 This paragraph will self-destruct in five seconds. Good luck ...
 6 </p>
+6 </p>
+◄
 ◄
 Render webpage Reset code
+Render webpage Reset code
+Your webpage
 Your webpage
 Your mission, should you choose to accept it, is to use a comment to prevent the paragraph below
+Your mission, should you choose to accept it, is to use a comment to prevent the paragraph below
+from being shown in the preview window.
 from being shown in the preview window.
 This paragraph will self-destruct in five seconds. Good luck ...
+This paragraph will self-destruct in five seconds. Good luck ...
+► View solution
 ► View solution
 I PARTICIPATION
+I PARTICIPATION
 ACTIVITY 1.4.2: Valid or invalid comments.
+ACTIVITY 1.4.2: Valid or invalid comments.
+Determine if the following HTML is valid or invalid.
 Determine if the following HTML is valid or invalid.
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/1 /print
 D
+D
+37/94
 37/94
 10/12/24, 1 :35 PM
+10/12/24, 1 :35 PM
+7) <p>This sentence does < !-not-->
 7) <p>This sentence does < !-not-->
 contain a comment</p>
+contain a comment</p>
 Q Valid
+Q Valid
+O Invalid
 O Invalid
 ~ <p>Roses are <!--purple-->
+~ <p>Roses are <!--purple-->
+red. Violets are<!-turquoise.
 red. Violets are<!-turquoise.
 <!--green.-->
+<!--green.-->
+black.-->blue.</p>
 black.-->blue.</p>
 Q Valid
+Q Valid
+0 Invalid
 0 Invalid
 3) <p>Bananas grow <!--in
+3) <p>Bananas grow <!--in
+bushes.</p>--> on a tree.
 bushes.</p>--> on a tree.
 <Ip>
+<Ip>
 Q Valid
+Q Valid
+O Invalid
 O Invalid
 ~ <p>Mary had a <!--soft,
+~ <p>Mary had a <!--soft,
+little</p>--> lamb. Its
 little</p>--> lamb. Its
 fleece was white as snow.
+fleece was white as snow.
+Q Valid
 Q Valid
 O Invalid
+O Invalid
+zyBooks
 zyBooks
