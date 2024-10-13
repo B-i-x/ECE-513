@@ -1,538 +1,1062 @@
 If statement
+If statement
+An if statement executes a group of statements if a condition is true. Braces
 An if statement executes a group of statements if a condition is true. Braces
 0
+0
+□
 □
 surround the
+surround the
+group of statements. Good practice is to indent statements in braces using a consistent number of
 group of statements. Good practice is to indent statements in braces using a consistent number of
 spaces. This material indents 3 spaces.
+spaces. This material indents 3 spaces.
+Construct 3.3.1: if statement.
 Construct 3.3.1: if statement.
 if (con d itio n ) {
+if (con d itio n ) {
 II Statements to execu1
+II Statements to execu1
+true
 true
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 18 of 119 2024-10-12, 4:01 p.m.
+18 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY I 3.3.1: Evaluating if statements.
+ACTIVITY I 3.3.1: Evaluating if statements.
+let fee = 30 ;
 let fee = 30 ;
 let age = 12 ;
+let age = 12 ;
+if (age < 18 ) {
 if (age < 18 ) {
 fee -= 5;
+fee -= 5;
+if (age < 5)
 if (age < 5)
 fee = 0 ;
+fee = 0 ;
+consol e . l og ( "fee i s$" + fee );
 consol e . l og ( "fee i s$" + fee );
 Animation content:
+Animation content:
+The following code is displayed:
 The following code is displayed:
 let fee= 30;
+let fee= 30;
+let age= 12;
 let age= 12;
 if (age< 18){
+if (age< 18){
+fee-= 5;
 fee-= 5;
 }
+}
+if(age< 5){
 if(age< 5){
 fee= 0;
+fee= 0;
+}
 }
 console.log("fee is$"+ fee);
+console.log("fee is$"+ fee);
+fee ~
 fee ~
 aget=j
+aget=j
+[fee is- $25 __]
 [fee is- $25 __]
 □
+□
+Variables fee and age are allocated memory and initialized with values 25 and 12, respectively.
 Variables fee and age are allocated memory and initialized with values 25 and 12, respectively.
 The string fee is $25 is displayed without quotes in the console after the code is run.
+The string fee is $25 is displayed without quotes in the console after the code is run.
+Animation captions:
 Animation captions:
 1. Variable fee is assigned 30, and age is assigned 12.
+1. Variable fee is assigned 30, and age is assigned 12.
+2. Evaluate the condition: 12 < 18.
 2. Evaluate the condition: 12 < 18.
 3. 12 < 18 is true, so the block under "if" executes, and fee is assigned 30 - 5 = 25.
+3. 12 < 18 is true, so the block under "if" executes, and fee is assigned 30 - 5 = 25.
+4. Evaluate the condition: 12 < 5.
 4. Evaluate the condition: 12 < 5.
 5. 12 < 5 is false, so the block under "if" does not execute. Variable fee remains 25.
+5. 12 < 5 is false, so the block under "if" does not execute. Variable fee remains 25.
+// to execute when condition is
+// to execute when condition is
 // to execute when condition is
 // to execute when condition is
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 19 of 119 2024-10-12, 4:01 p.m.
+19 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I
 I PARTICIPATION I
 ACTIVITY 3.3.2: If statement.
+ACTIVITY 3.3.2: If statement.
+What is the final value of numitems?
 What is the final value of numitems?
 1) bonus = 19 ;
+1) bonus = 19 ;
+numitems = 1 ;
 numitems = 1 ;
 if (bonus > 10 )
+if (bonus > 10 )
+numitems = numitems +
 numitems = numitems +
 3 ;
+3 ;
+Check Show answer
 Check Show answer
 □
+□
+0
 0
 2) bonus = 0 ; 0
+2) bonus = 0 ; 0
+numitems = 1 ;
 numitems = 1 ;
 if (bonus > 10 )
+if (bonus > 10 )
+numitems = numitems +
 numitems = numitems +
 3 ;
+3 ;
+Check Show answer
 Check Show answer
 If-else statement
+If-else statement
+An if-else statement executes a block of statements if the statement's condition is true, and
 An if-else statement executes a block of statements if the statement's condition is true, and
 executes another block of statements if the condition is false.
+executes another block of statements if the condition is false.
+Construct 3.3.2: if-else statement.
 Construct 3.3.2: if-else statement.
 i f (condi t i on ) {
+i f (condi t i on ) {
+II statements to execu1
 II statements to execu1
 true
+true
+e l se {
 e l se {
 II statements to execu1
+II statements to execu1
 false
+false
+lS
 lS
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 20 of 119 2024-10-12, 4:01 p.m.
+20 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I 3.3.3: Evaluating if-else statements.
 I PARTICIPATION I 3.3.3: Evaluating if-else statements.
 ACTIVITY
+ACTIVITY
+let age = 6 ;
 let age = 6 ;
 if (age % 2 == 0 )
+if (age % 2 == 0 )
+c ons ole . l o g ( "age is even " ) ;
 c ons ole . l o g ( "age is even " ) ;
 else {
+else {
+c ons ole . l o g ( "age i s odd" ) ;
 c ons ole . l o g ( "age i s odd" ) ;
 if (age > 10 ) {
+if (age > 10 ) {
+cons ole . l o g ( "age is greater than 10 " ) ;
 cons ole . l o g ( "age is greater than 10 " ) ;
 else {
+else {
+cons ole . l o g ( "age is not greater than 10 " );
 cons ole . l o g ( "age is not greater than 10 " );
 p
+p
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+let age= 6;
 let age= 6;
 if (age % 2 == 0) {
+if (age % 2 == 0) {
+console.log("age is even");
 console.log("age is even");
 }
+}
+else {
 else {
 console.log("age is odd");
+console.log("age is odd");
+}
 }
 if (age > 10) {
+if (age > 10) {
+console.log("age is greater than 1 0");
 console.log("age is greater than 1 0");
 }
+}
+else {
 else {
 console.log("age is not greater than 1 0");
+console.log("age is not greater than 1 0");
+}
 }
 □
+□
+age is even
 age is even
 age is not greater than 10
+age is not greater than 10
+After the first line runs, the variable age is shown in memory initialized with value 6. Step 3 runs
 After the first line runs, the variable age is shown in memory initialized with value 6. Step 3 runs
 console.log("age is even"); and the string age is even is displayed in the console. Step 5 runs
+console.log("age is even"); and the string age is even is displayed in the console. Step 5 runs
+console.log("age is not greater than 1 0"); and the string age is not greater than 1 0 is displayed on
 console.log("age is not greater than 1 0"); and the string age is not greater than 1 0 is displayed on
 a new line in the console.
+a new line in the console.
+Animation captions:
 Animation captions:
 1. Variable age is assigned 6.
+1. Variable age is assigned 6.
+2. Evaluate the condition: 6 % 2 == 0.
 2. Evaluate the condition: 6 % 2 == 0.
 bonus = 15;
+bonus = 15;
+numItems = 44;
 numItems = 44;
 if (bonus < 12) {
+if (bonus < 12) {
+numItems = numItems +
 numItems = numItems +
 3;
+3;
+}
 }
 else {
+else {
+numItems = numItems +
 numItems = numItems +
 6;
+6;
 }
+}
+numItems = numItems + 1;
 numItems = numItems + 1;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 21 of 119 2024-10-12, 4:01 p.m.
+21 of 119 2024-10-12, 4:01 p.m.
+3. 0 == 0 is true, so the block under "if" executes.
 3. 0 == 0 is true, so the block under "if" executes.
 4. Evaluate the condition: age> 10.
+4. Evaluate the condition: age> 10.
+5. 6 > 10 is false, so the block under "else" executes.
 5. 6 > 10 is false, so the block under "else" executes.
 I PARTICIPATION I
+I PARTICIPATION I
+ACTIVITY 3.3.4: If-else statements.
 ACTIVITY 3.3.4: If-else statements.
 What is the final value of numitems?
+What is the final value of numitems?
+1) bonus = 5 ;
 1) bonus = 5 ;
 if (bonus < 12 ) {
-numitems = 100 ;
-else {
-numitems 200 ;
-Check Show answer
-2) bonus = 12 ;
 if (bonus < 12 ) {
 numitems = 100 ;
+numitems = 100 ;
+else {
 else {
 numitems 200 ;
+numitems 200 ;
 Check Show answer
+Check Show answer
+2) bonus = 12 ;
+2) bonus = 12 ;
+if (bonus < 12 ) {
+if (bonus < 12 ) {
+numitems = 100 ;
+numitems = 100 ;
+else {
+else {
+numitems 200 ;
+numitems 200 ;
+Check Show answer
+Check Show answer
+0
+0
+0
 0
 0
 0
 3) 0
+3) 0
 // Braces not required around single
+// Braces not required around single
+statements
 statements
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 22 of 119 2024-10-12, 4:01 p.m.
+22 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
 Check Show answer
 4) bonus = 5 ;
+4) bonus = 5 ;
+if (bonus < 12 ) {
 if (bonus < 12 ) {
 bonus = bonus + 2 ;
+bonus = bonus + 2 ;
+numitems = 3 * bonus ;
 numitems = 3 * bonus ;
 else {
+else {
+numitems bonus + 10 ;
 numitems bonus + 10 ;
 Check Show answer
+Check Show answer
+Using {} around if and else blocks
 Using {} around if and else blocks
 JavaScript does not require braces { J around if or else blocks with a single
+JavaScript does not require braces { J around if or else blocks with a single
+statement. Good practice is to always use braces, which results in more readable
 statement. Good practice is to always use braces, which results in more readable
 code that is less susceptible to logic errors.
+code that is less susceptible to logic errors.
+II Bra ces n o t if (vote == "M" )
 II Bra ces n o t if (vote == "M" )
 memberCount++;
+memberCount++;
+else
 else
 nonMemberCount++;
+nonMemberCount++;
+Comparison operators
 Comparison operators
 0
+0
+If and if-else statements commonly use comparison operators. A comparison operator compares
 If and if-else statements commonly use comparison operators. A comparison operator compares
 two operands and evaluates to a Boolean value, meaning either true or false.
+two operands and evaluates to a Boolean value, meaning either true or false.
+Table 3.3.1: Comparison operators.
 Table 3.3.1: Comparison operators.
 Comparison
+Comparison
+operator
 operator
 Name Example
+Name Example
+==
 ==
 2 == 2 //
+2 == 2 //
+true
 true
 "bat" == "bat" //
+"bat" == "bat" //
+true
 true
 !=
+!=
+2 != 3 //
 2 != 3 //
 true
+true
+"bat" != "zoo" //
 "bat" != "zoo" //
 true
+true
+===
 ===
 2 === 2 // true
+2 === 2 // true
+"2" === 2 // false
 "2" === 2 // false
 2 !== 2 // false
+2 !== 2 // false
+"2" !== 2 // true
 "2" !== 2 // true
 2 < 3 //
+2 < 3 //
+true
 true
 "bat" < "zoo" //
+"bat" < "zoo" //
+true
 true
 2 <= 3 //
+2 <= 3 //
+true
 true
 "bat" <= "bat" //
+"bat" <= "bat" //
+true
 true
 3 > 2 //
+3 > 2 //
+true
 true
 "zoo" > "bat" //
+"zoo" > "bat" //
+true
 true
 3 >= 2 //
+3 >= 2 //
+true
 true
 "zoo" >= "zoo" //
+"zoo" >= "zoo" //
+true
 true
 == !=
+== !=
 3 == "3"
+3 == "3"
+===
 ===
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 23 of 119 2024-10-12, 4:01 p.m.
+23 of 119 2024-10-12, 4:01 p.m.
+Comparison
 Comparison
 Name Example
+Name Example
+operator
 operator
 Equality
+Equality
+, '
 , '
 I I
+I I
+Inequality
 Inequality
 Identity
+Identity
+-
 -
 1-- Non-identity
+1-- Non-identity
+-
 -
 < Less than
+< Less than
+-
 -
 <= Less than or equal
+<= Less than or equal
+> Greater than
 > Greater than
 -
+-
+Greater than or
 Greater than or
 >=
+>=
+equal
 equal
 When the equality operator and inequality operator compare a number and a string, the
+When the equality operator and inequality operator compare a number and a string, the
+string is first converted to a number and then compared. Ex:
 string is first converted to a number and then compared. Ex:
 converted to 3 before the comparison, and 3 and 3 are the same.
+converted to 3 before the comparison, and 3 and 3 are the same.
+is true because "3" is
 is true because "3" is
 The identity operator performs strict equality. Two operands are strictly equal if the operands'
+The identity operator performs strict equality. Two operands are strictly equal if the operands'
+3 === 3
 3 === 3
 "3" === 3
+"3" === 3
+!== "3" !== "3"
 !== "3" !== "3"
 "3" !== 3
+"3" !== 3
+2 < "12"
 2 < "12"
 "cat" "dog"
+"cat" "dog"
 = == ===
+= == ===
+if (name = "Sue") name name
 if (name = "Sue") name name
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 24 of 119 2024-10-12, 4:01 p.m.
+24 of 119 2024-10-12, 4:01 p.m.
+data types and values are equal. Ex: is true because both operands are numbers and the
 data types and values are equal. Ex: is true because both operands are numbers and the
 same value, but is false because "3" is a string, and 3 is a number. The non-identity
+same value, but is false because "3" is a string, and 3 is a number. The non-identity
+operator is the opposite of the identity operator. Ex: is false because both
 operator is the opposite of the identity operator. Ex: is false because both
 operands are the same type and value, but is true because "3" is a string, and 3 is a
+operands are the same type and value, but is true because "3" is a string, and 3 is a
+number.
 number.
 Other comparison operators also convert a string to a number when comparing a string with a
+Other comparison operators also convert a string to a number when comparing a string with a
+number. Ex: is true because 2 is less than the number 12. When comparing two strings,
 number. Ex: is true because 2 is less than the number 12. When comparing two strings,
 JavaScript uses Unicode values to compare characters. Ex:
+JavaScript uses Unicode values to compare characters. Ex:
+has a smaller Unicode value than "d".
 has a smaller Unicode value than "d".
 • <= rlno" is true because "c"
+• <= rlno" is true because "c"
+A common error when comparing two values for equality is to use a single instead of or
 A common error when comparing two values for equality is to use a single instead of or
 Ex: assigns with "Sue" instead of asking if equals "Sue".
+Ex: assigns with "Sue" instead of asking if equals "Sue".
+What is Unicode?
 What is Unicode?
 Unicode is a computing industry standard that assigns a unique number to
+Unicode is a computing industry standard that assigns a unique number to
+characters in over one hundred different languages, including multiple symbol sets
 characters in over one hundred different languages, including multiple symbol sets
 and emoji. The Unicode numbers for capital A-Z range from 65 to 90, and lowercase
+and emoji. The Unicode numbers for capital A-Z range from 65 to 90, and lowercase
+a-z range from 97 to 122.
 a-z range from 97 to 122.
 I PARTICIPATION I . ACTIVITY 3.3.5: Comparison operators.
+I PARTICIPATION I . ACTIVITY 3.3.5: Comparison operators.
+Is the if statement true or false?
 Is the if statement true or false?
 1) score = 2 ;
+1) score = 2 ;
+if (score == "2" )
 if (score == "2" )
 score = 10 ;
+score = 10 ;
 0 true
+0 true
+0 false
 0 false
 2) score = 2 ;
+2) score = 2 ;
+if (score = "5 0 " )
 if (score = "5 0 " )
 score = 100 ;
+score = 100 ;
+0 true
 0 true
 0 false
+0 false
+□
 □
 0
 0
+0
+0
+score = 2;
 score = 2;
 if (score === "2") {
+if (score === "2") {
+score = 10;
 score = 10;
 }
+}
+status = "10";
 status = "10";
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 25 of 119 2024-10-12, 4:01 p.m.
+25 of 119 2024-10-12, 4:01 p.m.
+3)
 3)
 4)
+4)
+5)
 5)
 0 true
+0 true
+0 false
 0 false
 if (status > 5 )
+if (status > 5 )
+length = 0 ;
 length = 0 ;
 0 true
+0 true
+0 false
 0 false
 status = " good" ;
+status = " good" ;
+if (status > "bad" )
 if (status > "bad" )
 bonus
+bonus
 0 true
+0 true
+0 false
 0 false
 += 2 ;
++= 2 ;
+6) status = " charge " ;
 6) status = " charge " ;
 if (status <= " chance " )
+if (status <= " chance " )
+bonus += 2 ;
 bonus += 2 ;
 0 true
-0 false
-7) l owerCaseLetters = "abc " ;
-upperCaseLetters = "ABC " ;
-if (l owerCaseLetters >
-upperCaseLetters ) {
-l ength++;
 0 true
 0 false
+0 false
+7) l owerCaseLetters = "abc " ;
+7) l owerCaseLetters = "abc " ;
+upperCaseLetters = "ABC " ;
+upperCaseLetters = "ABC " ;
+if (l owerCaseLetters >
+if (l owerCaseLetters >
+upperCaseLetters ) {
+upperCaseLetters ) {
+l ength++;
+l ength++;
+0 true
+0 true
+0 false
+0 false
+Nested statements and else-if statement
 Nested statements and else-if statement
 0
 0
 0
 0
 0
+0
+0
+0
+0
+0
+If and else block statements can include any valid statements, including another if or if-else
 If and else block statements can include any valid statements, including another if or if-else
 statement. An if or if-else statement that appears inside another if or if-else statement is called a
+statement. An if or if-else statement that appears inside another if or if-else statement is called a
 nested statement.
+nested statement.
+I PARTICIPATION I n
 I PARTICIPATION I n
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 26 of 119 2024-10-12, 4:01 p.m.
+26 of 119 2024-10-12, 4:01 p.m.
+I ACTIVITY
 I ACTIVITY
 3.3.6: Nested if-else statement example.
+3.3.6: Nested if-else statement example.
+let userAge = 18 ;
 let userAge = 18 ;
 if (userAge <= 12 )
+if (userAge <= 12 )
+console . l og ("Enjoy your early years. " );
 console . l og ("Enjoy your early years. " );
 else {
+else {
+cons ole . l og ("You are at least 13. " );
 cons ole . l og ("You are at least 13. " );
 if (u s e rAge >= 18 ) {
+if (u s e rAge >= 18 ) {
+cons ole . l og ( "You are old enough to vote ." );
 cons ole . l og ( "You are old enough to vote ." );
 else {
+else {
+cons ole . l og ( "You are too young to vote ." ) ;
 cons ole . l og ( "You are too young to vote ." ) ;
 Animation content:
+Animation content:
+The following code is displayed:
 The following code is displayed:
 let userAge = 18;
+let userAge = 18;
+if (userAge <= 12) {
 if (userAge <= 12) {
 console.log("Enjoy your early years.");
+console.log("Enjoy your early years.");
 }
+}
+else {
 else {
 console.log("You are at least 13.");
+console.log("You are at least 13.");
+if (userAge >= 18) {
 if (userAge >= 18) {
 console.log("You are old enough to vote.");
+console.log("You are old enough to vote.");
+}
 }
 else {
+else {
+}
+}
 }
 }
 console.log("You are too young to vote.");
+console.log("You are too young to vote.");
+userAge~
 userAge~
 ,
+,
+You are at least 13.
 You are at least 13.
 You are old enough to vote.
+You are old enough to vote.
+In step 1, the variable userAge is allocated memory and initialized to 18. Step 2 runs the first line
 In step 1, the variable userAge is allocated memory and initialized to 18. Step 2 runs the first line
 in the else block and the string You are at least 13. is displayed in the console. Step 3 runs the
+in the else block and the string You are at least 13. is displayed in the console. Step 3 runs the
+code in the nested if statement and the string You are old enough to vote. is displayed in the
 code in the nested if statement and the string You are old enough to vote. is displayed in the
 console.
+console.
+Animation captions:
 Animation captions:
 1. userAge is 18. Since 18 <= 12 is false, the outer if-else statement's else block executes.
+1. userAge is 18. Since 18 <= 12 is false, the outer if-else statement's else block executes.
+2. After outputting to the console, the nested if-else statement executes.
 2. After outputting to the console, the nested if-else statement executes.
 3. 18 >= 18 is true, so the if block executes.
+3. 18 >= 18 is true, so the if block executes.
+4. No more statements exist in the nested if-else statement or the outer if-else statement.
 4. No more statements exist in the nested if-else statement or the outer if-else statement.
 grade score
+grade score
 // else statements
+// else statements
+{
 {
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 27 of 119 2024-10-12, 4:01 p.m.
+27 of 119 2024-10-12, 4:01 p.m.
+A common situation is when several nested if-else statements are needed to execute one and only
 A common situation is when several nested if-else statements are needed to execute one and only
 one block of statements. The else-if statement is an alternative to nested if-else statements that
+one block of statements. The else-if statement is an alternative to nested if-else statements that
+produces an easier-to-read list of statement blocks.
 produces an easier-to-read list of statement blocks.
 In the example below, the variable is assigned with A, B, C, D, or F depending on the
+In the example below, the variable is assigned with A, B, C, D, or F depending on the
+variable. The code segment on the left uses nested if-else statements. The code segment on the
 variable. The code segment on the left uses nested if-else statements. The code segment on the
 right performs the same logic with else-if statements.
+right performs the same logic with else-if statements.
+Figure 3.3.1: Nested if-else statements vs. else-if statements.
 Figure 3.3.1: Nested if-else statements vs. else-if statements.
 II Nested if-else statemen
+II Nested if-else statemen
+if (score >= 90 )
 if (score >= 90 )
 grade = "A" ;
+grade = "A" ;
+else {
 else {
 if (score >= 80 )
+if (score >= 80 )
 grade = "B" ;
+grade = "B" ;
+else {
 else {
 if (score >= 70 )
+if (score >= 70 )
 grade = "C" ;
+grade = "C" ;
+else {
 else {
 if (score >= 60 )
+if (score >= 60 )
 grade = "D" ;
+grade = "D" ;
+else {
 else {
 grade "F" ;
+grade "F" ;
+II else-if statements
 II else-if statements
 if (score >= 90 )
+if (score >= 90 )
+grade = "A" ;
 grade = "A" ;
 else if (score >= 80 ) {
+else if (score >= 80 ) {
+grade = "B" ;
 grade = "B" ;
 else if (score >= 70 ) {
+else if (score >= 70 ) {
+grade = "C" ;
 grade = "C" ;
 else if (score >= 60 ) {
+else if (score >= 60 ) {
+grade = "D" ;
 grade = "D" ;
 else {
+else {
+grade "F" ;
 grade "F" ;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 28 of 119 2024-10-12, 4:01 p.m.
+28 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . . ACTIVITY 3.3.7: Nested if-else practice.
 I PARTICIPATION I . . ACTIVITY 3.3.7: Nested if-else practice.
 Use a nested if-else statement or an else-if statement to examine the variable
+Use a nested if-else statement or an else-if statement to examine the variable
+golfScore.
 golfScore.
 • If golf Score is above 90, output to the console "Keep trying!"
+• If golf Score is above 90, output to the console "Keep trying!"
+• Otherwise, if golf Score is above 80, output to the console "Nice job!"
 • Otherwise, if golf Score is above 80, output to the console "Nice job!"
 • Otherwise, output to the console "Ready to go pro!"
+• Otherwise, output to the console "Ready to go pro!"
+Test your code with values above 90, between 81 and 90, and 80 and below to ensure your
 Test your code with values above 90, between 81 and 90, and 80 and below to ensure your
 logic is correct.
+logic is correct.
+I PARTICIPATION I . . ACTIVITY 3.3.8: Nested 1f and if-else statements.
 I PARTICIPATION I . . ACTIVITY 3.3.8: Nested 1f and if-else statements.
 What is numBoxes at the end of each code segment?
+What is numBoxes at the end of each code segment?
+1) numApples = 2 ;
 1) numApples = 2 ;
 numOranges = 5 ;
+numOranges = 5 ;
+numBoxes = 0 ;
 numBoxes = 0 ;
 if (numApples % 2 ! = 0 ) {
+if (numApples % 2 ! = 0 ) {
+numBoxes l ;
 numBoxes l ;
 e l se {
+e l se {
+if (numApples +
 if (numApples +
 numOranges > 10 )
+numOranges > 10 )
+numBoxes 2 ;
 numBoxes 2 ;
 e l se {
+e l se {
 numBoxes 99 ;
+numBoxes 99 ;
+Check Show answer
 Check Show answer
 □
 □
+□
+□
+0
 0
 numApples = 2;
+numApples = 2;
+numOranges = 5;
 numOranges = 5;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 29 of 119 2024-10-12, 4:01 p.m.
+29 of 119 2024-10-12, 4:01 p.m.
+2)
 2)
 numBoxes = 0 ;
+numBoxes = 0 ;
+if (numApples > 0 ) {
 if (numApples > 0 ) {
 if (numOranges > 10 )
+if (numOranges > 10 )
+numBoxes = 4 ;
 numBoxes = 4 ;
 numBoxes++;
+numBoxes++;
+else {
 else {
 numBoxes 99 ;
+numBoxes 99 ;
+Check Show answer
 Check Show answer
 3) produce = "carrots" ;
+3) produce = "carrots" ;
+if (produce == "apples" )
 if (produce == "apples" )
 numBoxes = l ;
+numBoxes = l ;
+else if (produce
 else if (produce
 "bananas" ) {
+"bananas" ) {
+numBoxes = 2 ;
 numBoxes = 2 ;
 else if (produce
+else if (produce
+"carrots" ) {
 "carrots" ) {
 numBoxes = 3 ;
+numBoxes = 3 ;
+else {
 else {
 numBoxes 4 ;
+numBoxes 4 ;
+Check Show answer
 Check Show answer
 Logical operators
+Logical operators
+JavaScript logical operators perform AND, OR, and NOT logic.
 JavaScript logical operators perform AND, OR, and NOT logic.
 Table 3.3.2: Logical operators.
+Table 3.3.2: Logical operators.
+Logical
 Logical
 operator
+operator
+Name Description
 Name Description
 0
 0
+0
+0
+Example
 Example
 (1 < 2 && 2 < 3) //
+(1 < 2 && 2 < 3) //
+true
 true
 (1 < 2 || 2 < 0) //
+(1 < 2 || 2 < 0) //
+true
 true
 !(2 == 2) // false
+!(2 == 2) // false
+&& ||
 && ||
 (1 < 2 && 2 < 3 || 3 < 4) &&
+(1 < 2 && 2 < 3 || 3 < 4) &&
+|| && || ()
 || && || ()
 && ||
+&& ||
+(a < 0 || a > 1 && b > 2) (a < 0 || (a > 1 && b > 2))
 (a < 0 || a > 1 && b > 2) (a < 0 || (a > 1 && b > 2))
 !(score > 10)
+!(score > 10)
+score <= 10
 score <= 10
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 30 of 119 2024-10-12, 4:01 p.m.
+30 of 119 2024-10-12, 4:01 p.m.
+Logical
 Logical
 Name Description Example
+Name Description Example
+operator
 operator
 && And True if both sides are true
+&& And True if both sides are true
+-
 -
 - I I - - - , , ,
+- I I - - - , , ,
+I I Or True if either side is true ~
 I I Or True if either side is true ~
 -
+-
+I Not
 I Not
 True if expression is not
+True if expression is not
+true
 true
 Multiple and conditions may be combined into a single complex condition. Ex:
+Multiple and conditions may be combined into a single complex condition. Ex:
+. Complex conditions are evaluated from left to right, but has
 . Complex conditions are evaluated from left to right, but has
 higher precedence than , so is evaluated before . Good practice is to use parentheses
+higher precedence than , so is evaluated before . Good practice is to use parentheses
+around conditions that use and to explicitly indicate the order of evaluation. Ex:
 around conditions that use and to explicitly indicate the order of evaluation. Ex:
 is better expressed as:
+is better expressed as:
+Logic involving "not" can be difficult for humans to correctly read or understand. Ex: "Are you not
 Logic involving "not" can be difficult for humans to correctly read or understand. Ex: "Are you not
 hungry?" is more difficult for a human to understand than the equivalent "Are you satisfied?" Good
+hungry?" is more difficult for a human to understand than the equivalent "Are you satisfied?" Good
+practice is to avoid using the not operator when possible. Ex: is better expressed
 practice is to avoid using the not operator when possible. Ex: is better expressed
 as:
+as:
+I PARTICIPATION I 3.3.9: Evaluating complex conditions.
 I PARTICIPATION I 3.3.9: Evaluating complex conditions.
 ACTIVITY
+ACTIVITY
+What is de c i s i on at the end of each code segment?
 What is de c i s i on at the end of each code segment?
 1) homeTeam = 2 ;
+1) homeTeam = 2 ;
+v i s itingTeam = 5 ;
 v i s itingTeam = 5 ;
 if (home Team > 10 I I
+if (home Team > 10 I I
+visitingTeam > 0 ) {
 visitingTeam > 0 ) {
 decision = l ;
+decision = l ;
+e l se {
 e l se {
 decision 0 ;
+decision 0 ;
+Check Show answer
 Check Show answer
 □
+□
+0
 0
 homeTeam = 2;
+homeTeam = 2;
+visitingTeam = 5;
 visitingTeam = 5;
 if (!(homeTeam > 10 &&
+if (!(homeTeam > 10 &&
+visitingTeam > 0)) {
 visitingTeam > 0)) {
 true if (18)
+true if (18)
+true
 true
 false if (null) false
+false if (null) false
+null
 null
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 31 of 119 2024-10-12, 4:01 p.m.
+31 of 119 2024-10-12, 4:01 p.m.
+2)
 2)
 ~ - -- - ...., -•• -:;i - -- -••• ~ '"' I I l
+~ - -- - ...., -•• -:;i - -- -••• ~ '"' I I l
+decision = l ;
 decision = l ;
 else {
+else {
 decision 0 ;
+decision 0 ;
+Check Show answer
 Check Show answer
 3) homeTeam = 2 ;
+3) homeTeam = 2 ;
+visitingTeam = 5 ;
 visitingTeam = 5 ;
 if (homeTeam > 10 I I
+if (homeTeam > 10 I I
+(visitingTeam != 2 &&
 (visitingTeam != 2 &&
 visitingTeam > 0 ))
+visitingTeam > 0 ))
+decision = l ;
 decision = l ;
 else {
+else {
+decision 0 ;
 decision 0 ;
 Check Show answer
+Check Show answer
 I CHALLENGE I . . ACTIVITY 3.3.1: Cond1t1onals.
+I CHALLENGE I . . ACTIVITY 3.3.1: Cond1t1onals.
+5707 04.20654 7 6.qx3zqy7
 5707 04.20654 7 6.qx3zqy7

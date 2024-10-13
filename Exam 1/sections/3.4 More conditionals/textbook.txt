@@ -1,286 +1,564 @@
 Truthy and falsy
+Truthy and falsy
+A truthy value is a non-Boolean value that evaluates to in a Boolean context. Ex:
 A truthy value is a non-Boolean value that evaluates to in a Boolean context. Ex:
 0
 0
+0
+0
+□
 □
 evaluates to because non-zero numbers are truthy values. A falsy value is a non-Boolean
+evaluates to because non-zero numbers are truthy values. A falsy value is a non-Boolean
+value that evaluates to
 value that evaluates to
 is a falsy value.
+is a falsy value.
+in a Boolean context. Ex: evaluates to because
 in a Boolean context. Ex: evaluates to because
 if (32)
+if (32)
+true false
 true false
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 32 of 119 2024-10-12, 4:01 p.m.
+32 of 119 2024-10-12, 4:01 p.m.
+Table 3.4.1: Truthy values.
 Table 3.4.1: Truthy values.
 Example Description
+Example Description
+Non-zero
 Non-zero
 number
+number
+if ("cat")
 if ("cat")
 Non-empty
+Non-empty
+string
 string
 if (myObj ect) Object variable
+if (myObj ect) Object variable
+if (myArray) Array variable
 if (myArray) Array variable
 Table 3.4.2: Falsy values.
+Table 3.4.2: Falsy values.
+Example Description -if ( 0) Zero -
 Example Description -if ( 0) Zero -
 if ( " " ) Empty string
+if ( " " ) Empty string
+~
 ~
 if (NaN) Not a number
+if (NaN) Not a number
+,__
 ,__
 if (undefined)
+if (undefined)
+Variable that has not been assigned a
 Variable that has not been assigned a
 value
+value
+,__
 ,__
 if (null) No object value
+if (null) No object value
+I PARTICIPATION I ACTIVITY 3.4.1: Truthy and falsy values.
 I PARTICIPATION I ACTIVITY 3.4.1: Truthy and falsy values.
 Indicate if the if statement's condition evaluates to
+Indicate if the if statement's condition evaluates to
+1) if (undefined)
 1) if (undefined)
 0 true
+0 true
 0 false
+0 false
+or i Co'"'
 or i Co'"'
 0
 0
+0
+0
+if (999)
 if (999)
 if (0)
+if (0)
+?
 ?
 : condition true expression1
+: condition true expression1
 expression2
+expression2
+expression1 :
 expression1 :
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 33 of 119 2024-10-12, 4:01 p.m.
+33 of 119 2024-10-12, 4:01 p.m.
+2) 0
 2) 0
 0 true
+0 true
+0 false
 0 false
 3) 0
+3) 0
 0 true
+0 true
+0 false
 0 false
 4) if ( " " ) 0
+4) if ( " " ) 0
 0 true
+0 true
+0 false
 0 false
 5) if ( " " ) 0
+5) if ( " " ) 0
 0 true
+0 true
+0 false
 0 false
 6) if ("false") 0
+6) if ("false") 0
 0 true
+0 true
+0 false
 0 false
 7) if (myArray) 0
+7) if (myArray) 0
+0 true
 0 true
 0 false
+0 false
+Conditional (ternary) operator
 Conditional (ternary) operator
 The conditional operator allows developers to write concise conditional statements. The
+The conditional operator allows developers to write concise conditional statements. The
+conditional operator ( or ternary operator) has three operands separated by a question mark ( )
 conditional operator ( or ternary operator) has three operands separated by a question mark ( )
 and colon ( ). If the evaluates to , then the value of is returned,
+and colon ( ). If the evaluates to , then the value of is returned,
+otherwise the value of is returned.
 otherwise the value of is returned.
 Construct 3.4.1: Conditional (ternary) operator.
+Construct 3.4.1: Conditional (ternary) operator.
 condi tion ? expres~
+condi tion ? expres~
+expression2
 expression2
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 34 of 119 2024-10-12, 4:01 p.m.
+34 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY I 3.4.2: Evaluating the conditional operator. □
+ACTIVITY I 3.4.2: Evaluating the conditional operator. □
+•
 •
 score = 75 ;
+score = 75 ;
+console . log (score >= 60 ? "passing" "failing" );
 console . log (score >= 60 ? "passing" "failing" );
 registeredEarly = fa l se ;
+registeredEarly = fa l se ;
+age = 20 ;
 age = 20 ;
 fee = registeredEarl y I I age <= 18 ? 10 15 ;
+fee = registeredEarl y I I age <= 18 ? 10 15 ;
+consol e . l og ("Fee is$" + fee );
 consol e . l og ("Fee is$" + fee );
 Animation content:
+Animation content:
+The following code is displayed:
 The following code is displayed:
 score= 75;
+score= 75;
+console.log(score >= 60? "passing" : "failing");
 console.log(score >= 60? "passing" : "failing");
 registeredEarly = false;
+registeredEarly = false;
+age= 20;
 age= 20;
 fee = registered Early II age <= 18? 1 0 : 15;
+fee = registered Early II age <= 18? 1 0 : 15;
+console.log("Fee is$"+ fee);
 console.log("Fee is$"+ fee);
 75 score
+75 score
+false registered Early
 false registered Early
 20
+20
+15
 15
 passing
+passing
+Feeis$15
 Feeis$15
 age
+age
+fee
 fee
 Step 1 and 2 run the first 2 lines. The left side of the? operator, score>= 60, evaluates to true so
+Step 1 and 2 run the first 2 lines. The left side of the? operator, score>= 60, evaluates to true so
+the entire expression evaluates to passing and passing is displayed to the console.
 the entire expression evaluates to passing and passing is displayed to the console.
 Step 3 and 4 run the remaining lines of code. The left side of the? operator evaluates to false so
+Step 3 and 4 run the remaining lines of code. The left side of the? operator evaluates to false so
+the entire expression evaluates to 15. fee is assigned 15 and the last line displays Fee is $7 5 to
 the entire expression evaluates to 15. fee is assigned 15 and the last line displays Fee is $7 5 to
 the console.
+the console.
+Animation captions:
 Animation captions:
 1. 75 >= 60 evaluates to true.
+1. 75 >= 60 evaluates to true.
+2. Ternary operator returns "passing", so "passing" is displayed in the console.
 2. Ternary operator returns "passing", so "passing" is displayed in the console.
 3. false II 20 <= 18 is false.
+3. false II 20 <= 18 is false.
+4. Ternary operator returns 15, so fee is assigned 15 and output to the console .
 4. Ternary operator returns 15, so fee is assigned 15 and output to the console .
 lateStatus
+lateStatus
+currTime
 currTime
 lateStatus = currTime > 60
+lateStatus = currTime > 60
+"yep" : "nope";
 "yep" : "nope";
 y
+y
+x x
 x x
 y = (x > 0) ?
+y = (x > 0) ?
+;
 ;
 boardType
+boardType
+year = 1985;
 year = 1985;
 boardType = year >= 2015
+boardType = year >= 2015
+? "hoverboard" :
 ? "hoverboard" :
 "skateboard";
+"skateboard";
+priority
 priority
 attempt = 4;
+attempt = 4;
+priority = 2;
 priority = 2;
 attempt > 3 ? priority++
+attempt > 3 ? priority++
+: priority--;
 : priority--;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 35 of 119 2024-10-12, 4:01 p.m.
+35 of 119 2024-10-12, 4:01 p.m.
+ACTIVITY 3.4.3: Cond1t1onal operator. I PARTICIPATION I . .
 ACTIVITY 3.4.3: Cond1t1onal operator. I PARTICIPATION I . .
 1) Complete the code to assign
+1) Complete the code to assign
+with "yep" if
 with "yep" if
 is greater than 60,
+is greater than 60,
+and "nope" otherwise.
 and "nope" otherwise.
 Check Show answer
+Check Show answer
+2) Complete the code to assign
 2) Complete the code to assign
 with if is greater than 0, and
+with if is greater than 0, and
+-1 otherwise.
 -1 otherwise.
 Check Show answer
+Check Show answer
+3) What is after the
 3) What is after the
 following statements?
-Check Show answer
-4) What is after the
 following statements?
 Check Show answer
+Check Show answer
+4) What is after the
+4) What is after the
+following statements?
+following statements?
+Check Show answer
+Check Show answer
 □
+□
+0
+0
+0
+0
 0
 0
 0
 0
 ===
+===
+// Statements executed when
 // Statements executed when
 expression's value matches
+expression's value matches
 // expression's value matches
+// expression's value matches
+// no cases match
 // no cases match
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 36 of 119 2024-10-12, 4:01 p.m.
+36 of 119 2024-10-12, 4:01 p.m.
+Switch statement
 Switch statement
 The switch statement is an alternative to writing multiple else-if statements. A switch statement
+The switch statement is an alternative to writing multiple else-if statements. A switch statement
+compares an expression's value to several cases using strict equality ( ) and executes the first
 compares an expression's value to several cases using strict equality ( ) and executes the first
 matching case's statements. If no case matches, an optional default case's statements execute.
+matching case's statements. If no case matches, an optional default case's statements execute.
+The break statement stops executing a case's statements and causes the statement immediately
 The break statement stops executing a case's statements and causes the statement immediately
 following the switch statement to execute. Omitting the break statement causes the next case's
+following the switch statement to execute. Omitting the break statement causes the next case's
+statements to execute, even though the case does not match.
 statements to execute, even though the case does not match.
 Construct 3.4.2: switch statement.
+Construct 3.4.2: switch statement.
+switch (express i o n )
 switch (express i o n )
 case val ue l :
+case val ue l :
+II valuel
 II valuel
 break; I I optional
+break; I I optional
+case val ue2 :
 case val ue2 :
 II Statements executed when
+II Statements executed when
+value2
 value2
 break; I I optional
+break; I I optional
+II ...
 II ...
 default :
+default :
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY
+ACTIVITY
+II Statements executed when
 II Statements executed when
 I 3.4.4: Evaluating the switch statement.
+I 3.4.4: Evaluating the switch statement.
+change = 10 ;
 change = 10 ;
 switch (change )
+switch (change )
+case 1 :
 case 1 :
 co i n = "penny" ;
+co i n = "penny" ;
+break ;
 break ;
 case 5 :
+case 5 :
+10 change
 10 change
 "dime" coin
+"dime" coin
+co i n = "nickel " ;
 co i n = "nickel " ;
 break ;
+break ;
+case 10 :
 case 10 :
 co i n = "dime " ;
+co i n = "dime " ;
+break ;
 break ;
 case 25 :
+case 25 :
+[dime _J
 [dime _J
 co i n = "quarter" ;
+co i n = "quarter" ;
+break ;
 break ;
 □
+□
+default:
 default:
 coin = "unknown";
+coin = "unknown";
 }
+}
+console.log(coin);
 console.log(coin);
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 37 of 119 2024-10-12, 4:01 p.m.
+37 of 119 2024-10-12, 4:01 p.m.
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+change= 1 0;
 change= 1 0;
 switch (change) {
+switch (change) {
+}
 }
 case 1:
+case 1:
+coin = "penny";
 coin = "penny";
 break;
+break;
+case 5:
 case 5:
 coin = "nickel";
+coin = "nickel";
+break;
 break;
 case 1 0:
+case 1 0:
+coin = "dime";
 coin = "dime";
 break;
+break;
+case 25:
 case 25:
 coin = "quarter";
+coin = "quarter";
+break;
 break;
 default:
+default:
+coin = "unknown";
 coin = "unknown";
 console.log(coin);
+console.log(coin);
+Step 1 assigns change to 10. Steps 2 through 4 compare the value and variable type of change
 Step 1 assigns change to 10. Steps 2 through 4 compare the value and variable type of change
 with the value of each case. change has the same type and value as 10 so the case 10: block is
+with the value of each case. change has the same type and value as 10 so the case 10: block is
+executed. coin is declared and assigned the string dime.
 executed. coin is declared and assigned the string dime.
 Step 5 runs the break; line and no more cases are checked or run. This includes the default: block.
+Step 5 runs the break; line and no more cases are checked or run. This includes the default: block.
+The last line of code is run and dime is displayed on the console.
 The last line of code is run and dime is displayed on the console.
 Animation captions:
+Animation captions:
+1. switch statement examines the change variable.
 1. switch statement examines the change variable.
 2. change=== 1 is false, so the case does not match.
+2. change=== 1 is false, so the case does not match.
+3. change=== 5 is false, so the case does not match.
 3. change=== 5 is false, so the case does not match.
 4. change=== 10 is true, so the case matches, and the case's statements are executed.
+4. change=== 10 is true, so the case matches, and the case's statements are executed.
 5. Break statement stops executing the switch statement. The code after the switch executes,
+5. Break statement stops executing the switch statement. The code after the switch executes,
+outputting "dime" to the console.
 outputting "dime" to the console.
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 38 of 119 2024-10-12, 4:01 p.m.
+38 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.4.5: switch statement.
 I PARTICIPATION I . ACTIVITY 3.4.5: switch statement.
 Refer to the switch statement below.
+Refer to the switch statement below.
+switch (item) {
 switch (item) {
 case "apple" :
+case "apple" :
+case "orange " :
 case "orange " :
 fruits ++;
+fruits ++;
+break;
 break;
 case "milk" :
+case "milk" :
+drinks++;
 drinks++;
 case "cheese" :
+case "cheese" :
+dairy++;
 dairy++;
 break;
+break;
+case "beef" :
 case "beef" :
 case "chicken" :
+case "chicken" :
+meat++;
 meat++;
 break;
+break;
+defaul t :
 defaul t :
 other++;
+other++;
+1) If i tern is "beef", what variables are
 1) If i tern is "beef", what variables are
 incremented?
+incremented?
+0 other
 0 other
 0 meat only
+0 meat only
+0 meat and other
 0 meat and other
 2) If i tern is "milk", what variables are
+2) If i tern is "milk", what variables are
 incremented?
+incremented?
+0 other
 0 other
 0 drinks only
+0 drinks only
+0 drinks and dairy
 0 drinks and dairy
 3) If i tern is "Apple", what variable is
+3) If i tern is "Apple", what variable is
+incremented?
 incremented?
 0 other
+0 other
+0 fruits
 0 fruits
 0 Nothing is incremented.
+0 Nothing is incremented.
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY I 3.4.6: Practice with the switch statement.
+ACTIVITY I 3.4.6: Practice with the switch statement.
+□
 □
 0
 0
 0
+0
+0
+0
 □
+□
+condition)
 condition)
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 39 of 119 2024-10-12, 4:01 p.m.
+39 of 119 2024-10-12, 4:01 p.m.
+Convert the group of else-if statements into an equivalent switch statement.
 Convert the group of else-if statements into an equivalent switch statement.
 I CHALLENGE I . . ACTIVITY 3.4.1: More cond1t1onals . □
+I CHALLENGE I . . ACTIVITY 3.4.1: More cond1t1onals . □
+5707 04.20654 7 6.qx3zqy7
 5707 04.20654 7 6.qx3zqy7

@@ -1,258 +1,509 @@
 0
+0
+□
+□
 □
 □
 y = 2 * (x + 1)
+y = 2 * (x + 1)
++
 +
 // x = 3
+// x = 3
+x = 1 + 2;
 x = 1 + 2;
 // x = 1
+// x = 1
+x = 2 - 1;
 x = 2 - 1;
 // x = 6
+// x = 6
+x = 2 * 3;
 x = 2 * 3;
 // x = 0.5
+// x = 0.5
+x = 1 / 2;
 x = 1 / 2;
 %
+%
+// x = 0
 // x = 0
 x = 4 % 2;
+x = 4 % 2;
+**
 **
 // x = 2 * 2 * 2 =
+// x = 2 * 2 * 2 =
+8
 8
 x = 2 ** 3;
+x = 2 ** 3;
+++
 ++
 // Same as x = x +
+// Same as x = x +
+1
 1
 x++;
+x++;
+--
 --
 // Same as x = x -
+// Same as x = x -
 1
+1
+x--;
 x--;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 11 of 119 2024-10-12, 4:01 p.m.
+11 of 119 2024-10-12, 4:01 p.m.
+Arithmetic operators
 Arithmetic operators
 An expression is a combination of items like variables, numbers, operators, and parentheses, that
+An expression is a combination of items like variables, numbers, operators, and parentheses, that
+evaluates to a value like 2 * (x + 1 ). Expressions are commonly used on the right side of an
 evaluates to a value like 2 * (x + 1 ). Expressions are commonly used on the right side of an
 assignment statement, as in
+assignment statement, as in
+An arithmetic operator is used in an expression to perform an arithmetic computation. Ex: The
 An arithmetic operator is used in an expression to perform an arithmetic computation. Ex: The
 arithmetic operator for addition is . JavaScript arithmetic operators are summarized in the table
+arithmetic operator for addition is . JavaScript arithmetic operators are summarized in the table
+below.
 below.
 Table 3.2.1: JavaScript arithmetic operators.
+Table 3.2.1: JavaScript arithmetic operators.
+Arithmetic
 Arithmetic
 Description Example
+Description Example
+operator
 operator
 + Add
++ Add
+- Subtract
 - Subtract
 * Multiply
+* Multiply
+I Divide
 I Divide
 Modulus
+Modulus
+(remainder)
 (remainder)
 Exponentiation
+Exponentiation
+= Increment
 = Increment
 Decrement
+Decrement
+() ** * /
 () ** * /
 % + - 7 + 3 * 2
+% + - 7 + 3 * 2
+* + (7 + 3) * 2 ()
 * + (7 + 3) * 2 ()
 *
+*
+points = 10;
 points = 10;
 points--;
+points--;
 points = 6;
+points = 6;
+points++;
 points++;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 12 of 119 2024-10-12, 4:01 p.m.
+12 of 119 2024-10-12, 4:01 p.m.
+Expressions are computed using the same rules as basic arithmetic. Expressions in parentheses
 Expressions are computed using the same rules as basic arithmetic. Expressions in parentheses
 have highest precedence, followed by exponentiation ( ). Multiplication ( ), division ( ), and
+have highest precedence, followed by exponentiation ( ). Multiplication ( ), division ( ), and
+modulus ( ) have precedence over addition ( ) and subtraction ( ). Ex: The expression
 modulus ( ) have precedence over addition ( ) and subtraction ( ). Ex: The expression
 = 7 + 6 = 13 because has precedence over , but
+= 7 + 6 = 13 because has precedence over , but
+precedence over
 precedence over
 I PARTICIPATION I . . . ACTIVITY 3.2. 7: Arithmetic practice.
+I PARTICIPATION I . . . ACTIVITY 3.2. 7: Arithmetic practice.
+What is points at the end of each code segment?
 What is points at the end of each code segment?
 1) points = 3 + 5 * 2 ;
+1) points = 3 + 5 * 2 ;
+Check
 Check
 2) points
+2) points
+points
 points
 5 ;
+5 ;
+Check
 Check
 Show answer
+Show answer
+4 ;
 4 ;
 (3 + points ) %
+(3 + points ) %
+Show answer
 Show answer
 3) scal e = 5 ;
+3) scal e = 5 ;
+points = 3 ** 2 * scale ;
 points = 3 ** 2 * scale ;
 Check Show answer
+Check Show answer
+4)
 4)
 Check Show answer
+Check Show answer
+5)
 5)
 = 7 O * 2 = 20 because has
+= 7 O * 2 = 20 because has
+□
 □
 0
 0
 0
 0
 0
+0
+0
+0
+0
+0
+// Same as x = x +
 // Same as x = x +
 2
+2
+x += 2;
 x += 2;
 // Same as x = x -
+// Same as x = x -
+2
 2
 x -= 2;
+x -= 2;
+// Same as x = x *
 // Same as x = x *
 3
+3
+x *= 3;
 x *= 3;
 // Same as x = x /
+// Same as x = x /
+3
 3
 x /= 3;
+x /= 3;
+// Same as x = x %
 // Same as x = x %
 4
+4
+x %= 4;
 x %= 4;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 13 of 119 2024-10-12, 4:01 p.m.
+13 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
 Check Show answer
 Compound assignment operators
+Compound assignment operators
+A compound assignment operator combines an assignment statement with an arithmetic
 A compound assignment operator combines an assignment statement with an arithmetic
 operation. Common JavaScript compound assignment operators are summarized in the table
+operation. Common JavaScript compound assignment operators are summarized in the table
+below.
 below.
 Table 3.2.2: Compound assignment operators.
+Table 3.2.2: Compound assignment operators.
+Assignment
 Assignment
 Description Example
+Description Example
+operator -
 operator -
 += Add to
++= Add to
+-
 -
 Subtract - =
+Subtract - =
+from
 from
 -
+-
+*= Multiply by
 *= Multiply by
 -
+-
+/= Divide by
 /= Divide by
 -
+-
+%= Mod by
 %= Mod by
 I PARTICIPATION I . . . ACTIVITY 3.2.2: Practice with compound assignment operators. □
+I PARTICIPATION I . . . ACTIVITY 3.2.2: Practice with compound assignment operators. □
+1) What compound assignment 0
 1) What compound assignment 0
 points
+points
+points = 5;
 points = 5;
 points ___ 2;
+points ___ 2;
+points
 points
 +
++
 "back" + "pack" "backpack"
+"back" + "pack" "backpack"
++
++
++
++
 +
 +
 +
 +
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 14 of 119 2024-10-12, 4:01 p.m.
+14 of 119 2024-10-12, 4:01 p.m.
+2)
 2)
 operator makes
+operator makes
+become 2.5?
 become 2.5?
 Check Show answer
+Check Show answer
+What is ?
 What is ?
 points = 2 ;
+points = 2 ;
+points *= 3 + l ;
 points *= 3 + l ;
 Check Show answer
+Check Show answer
+0
 0
 3) What is p oint s? 0
+3) What is p oint s? 0
+points = 4 ;
 points = 4 ;
 points %= 2 ;
+points %= 2 ;
+Check Show answer
 Check Show answer
 Arithmetic with numbers and strings
+Arithmetic with numbers and strings
+The operator is also the string concatenation operator. String concatenation appends one string
 The operator is also the string concatenation operator. String concatenation appends one string
 after the end of another string, forming a single string. Ex: is
+after the end of another string, forming a single string. Ex: is
+The JavaScript interpreter determines if means "add" or "concatenate" based on the operands on
 The JavaScript interpreter determines if means "add" or "concatenate" based on the operands on
 either side of the operator. An operand is the value or values that an operator works on, like the
+either side of the operator. An operand is the value or values that an operator works on, like the
+number 2 or variable x.
 number 2 or variable x.
 • If both operands are numbers, performs addition. Ex: 2 + 3 = 5.
+• If both operands are numbers, performs addition. Ex: 2 + 3 = 5.
+• If both operands are strings, performs string concatenation. Ex: "2" + "3" = "23".
 • If both operands are strings, performs string concatenation. Ex: "2" + "3" = "23".
 • If one operand is a number and the other a string, performs string concatenation. The
+• If one operand is a number and the other a string, performs string concatenation. The
+number is converted into a string, and the two strings are concatenated into a single string.
 number is converted into a string, and the two strings are concatenated into a single string.
 Ex: "2" + 3 = "2" + "3" = "23".
+Ex: "2" + 3 = "2" + "3" = "23".
+For all other arithmetic operators, combining a number and a string in an arithmetic expression
 For all other arithmetic operators, combining a number and a string in an arithmetic expression
 parseInt("5") + 2 = 5 + 2 = 7 parseFloat("2.4") + 6 = 2.4 + 6 = 8.4
+parseInt("5") + 2 = 5 + 2 = 7 parseFloat("2.4") + 6 = 2.4 + 6 = 8.4
+2 * 3 = 6
 2 * 3 = 6
 2 * "3" =
+2 * "3" =
+2 * 3 = 6
 2 * 3 = 6
 string to
+string to
+number
 number
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 15 of 119 2024-10-12, 4:01 p.m.
+15 of 119 2024-10-12, 4:01 p.m.
+converts the string operand to a number and then performs the arithmetic operation. Ex: "2" * 3 = 2
 converts the string operand to a number and then performs the arithmetic operation. Ex: "2" * 3 = 2
 * 3 = 6.
+* 3 = 6.
+I PARTICIPATION I 3.2.3: Type conversion in arithmetic operations.
 I PARTICIPATION I 3.2.3: Type conversion in arithmetic operations.
 ACTIVITY
+ACTIVITY
+number to
 number to
 string
+string
+Animation content:
 Animation content:
 2 + 3 = 5
+2 + 3 = 5
+2 + "3" =
 2 + "3" =
 "2" + "3" = "23"
+"2" + "3" = "23"
+Step 1 shows an example of a number+ number expression:
 Step 1 shows an example of a number+ number expression:
 2 + 3 = 5.
+2 + 3 = 5.
+Step 2 shows an example of a number+ string expression:
 Step 2 shows an example of a number+ string expression:
 2 + "3" =
+2 + "3" =
+"2" + "3" = "23".
 "2" + "3" = "23".
 □
+□
+The number 2 gets automatically converted to a string then the string 3 is concatenated to the
 The number 2 gets automatically converted to a string then the string 3 is concatenated to the
 converted string 2.
+converted string 2.
+Step 3 shows an example of the number* number expression:
 Step 3 shows an example of the number* number expression:
 2 * 3 = 6.
+2 * 3 = 6.
+Step 4 shows an example of a number* string expression:
 Step 4 shows an example of a number* string expression:
 2 * "3" =
+2 * "3" =
+2 * 3 = 6.
 2 * 3 = 6.
 The string 3 gets automatically converted to a number and multiplied with the number 2.
+The string 3 gets automatically converted to a number and multiplied with the number 2.
+Animation captions:
 Animation captions:
 1. number+ number= number
+1. number+ number= number
+2. number+ string = string
 2. number+ string = string
 3. number* number= number
+3. number* number= number
+4. number* string = number
 4. number* string = number
 The JavaScript functions parselnt() and parseF/oat() convert strings into numbers. Ex:
+The JavaScript functions parselnt() and parseF/oat() convert strings into numbers. Ex:
+,and
 ,and
 parseInt() parseFloat() NaN
+parseInt() parseFloat() NaN
+parseInt("dog") NaN
 parseInt("dog") NaN
 true false
+true false
+isNaN()
 isNaN()
 isNaN("dog") true
+isNaN("dog") true
+isNaN("123") false
 isNaN("123") false
 secretCode =
+secretCode =
+parseFloat("3.2") +
 parseFloat("3.2") +
 parseInt("2.7");
+parseInt("2.7");
 secretCode = 3 +
+secretCode = 3 +
+parseInt("pig");
 parseInt("pig");
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 16 of 119 2024-10-12, 4:01 p.m.
+16 of 119 2024-10-12, 4:01 p.m.
+If or are given a non-number to parse, the functions return
 If or are given a non-number to parse, the functions return
 NaN is a JavaScript value that means Not a Number. Ex: is
+NaN is a JavaScript value that means Not a Number. Ex: is
+The JavaScript function isNaN() returns if the argument is not a number, otherwise.
 The JavaScript function isNaN() returns if the argument is not a number, otherwise.
 When the argument is non-numeric, the function attempts to convert the argument into a
+When the argument is non-numeric, the function attempts to convert the argument into a
+number. Ex: is because the non-numeric value "dog" cannot be converted
 number. Ex: is because the non-numeric value "dog" cannot be converted
 into a number. But is because "123" can be converted into the number 123.
+into a number. But is because "123" can be converted into the number 123.
+I PARTICIPATION I 3 2 4 A . h . . . h b d .
 I PARTICIPATION I 3 2 4 A . h . . . h b d .
 ACTIVITY . . : rit metIc practice wit num ers an strings.
+ACTIVITY . . : rit metIc practice wit num ers an strings.
+What is s e c retCode at the end of each code segment? Type "quotes" around strings. If
 What is s e c retCode at the end of each code segment? Type "quotes" around strings. If
 not a number, type NaN.
+not a number, type NaN.
+1) secretCode = 10 + "ten" ;
 1) secretCode = 10 + "ten" ;
 Check Show answer
+Check Show answer
+2) secretCode " 3 " I " 6 " ;
 2) secretCode " 3 " I " 6 " ;
 Check Show answer
+Check Show answer
+3) secretCode " 3 " + 5 * 2 ;
 3) secretCode " 3 " + 5 * 2 ;
 Check Show answer
+Check Show answer
+4)
 4)
 Check Show answer
+Check Show answer
+5)
 5)
 □
+□
+0
+0
+0
+0
+0
 0
 0
 0
 0
 0
 { }
+{ }
+// to execute when condition is
 // to execute when condition is
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 17 of 119 2024-10-12, 4:01 p.m.
+17 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
 Check Show answer
 6) I I true = 1 , false
+6) I I true = 1 , false
+secretCode = 2 +
 secretCode = 2 +
 isNaN ( "oink" ) +
+isNaN ( "oink" ) +
+is NaN ( "5" ) ;
 is NaN ( "5" ) ;
 0
+0
+Check Show answer
 Check Show answer
 I CHALLENGE I . . ACTIVITY 3.2.1 : Arithmetic operators.
+I CHALLENGE I . . ACTIVITY 3.2.1 : Arithmetic operators.
+570104.2065416.qx3zqy7
 570104.2065416.qx3zqy7
 Exploring further:
+Exploring further:
 • Arithmetic operators from M DN
+• Arithmetic operators from M DN
+• MDN documentation for Qarselnt()_, QarseFloat()_, and isNaNO_
 • MDN documentation for Qarselnt()_, QarseFloat()_, and isNaNO_

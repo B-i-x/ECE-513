@@ -1,308 +1,607 @@
 While loop
+While loop
+Three general-purpose looping constructs exist while, do-while, and for loops. The while loop is a
 Three general-purpose looping constructs exist while, do-while, and for loops. The while loop is a
 looping structure that checks if the loop's condition is true before executing the loop body,
+looping structure that checks if the loop's condition is true before executing the loop body,
+repeating until the condition is false. The loop body is the set of statements that a loop repeatedly
 repeating until the condition is false. The loop body is the set of statements that a loop repeatedly
 executes.
+executes.
+Construct 3.5.1: while loop.
 Construct 3.5.1: while loop.
 I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
 ACTIVITY
 while (cor
+while (cor
+{
 {
 body
+body
+I 3.5.1: Executing a while loop.
 I 3.5.1: Executing a while loop.
 i = 1 ;
+i = 1 ;
+whi le (i <= 4 )
 whi le (i <= 4 )
 consol e . l og ( i );
+consol e . l og ( i );
+i ++;
 i ++;
 conso l e . l og (" Done! " );
+conso l e . l og (" Done! " );
+□
 □
 l
+l
+while (true);
 while (true);
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 40 of 119 2024-10-12, 4:01 p.m.
+40 of 119 2024-10-12, 4:01 p.m.
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+i = 1;
 i = 1;
 while (i <= 4) {
+while (i <= 4) {
+console.log(i);
 console.log(i);
 i++;
+i++;
+}
 }
 console.log("Done!");
+console.log("Done!");
+'"-------)
 '"-------)
 Step 1 runs line 1 and variable i is allocated memory.
+Step 1 runs line 1 and variable i is allocated memory.
+Step 3 displays the integer 1 in the console.
 Step 3 displays the integer 1 in the console.
 In step 4 i is now assigned the value 2.
+In step 4 i is now assigned the value 2.
+Step 6 displays the strings 2, 3, 4, and Donel all displayed on new lines in the console.
 Step 6 displays the strings 2, 3, 4, and Donel all displayed on new lines in the console.
 Animation captions:
+Animation captions:
+1. Assign i with 1.
 1. Assign i with 1.
 2. 1 <= 4 is true, so the loop's body executes.
+2. 1 <= 4 is true, so the loop's body executes.
+3. Output i to the console.
 3. Output i to the console.
 4. Increment i.
+4. Increment i.
+5. End of loop so go back to the top and re-evaluate the condition.
 5. End of loop so go back to the top and re-evaluate the condition.
 6. Keep executing loop until i <= 4 is false.
+6. Keep executing loop until i <= 4 is false.
+Developers must be careful to avoid writing infinite loops. An infinite loop is a loop that never stops
 Developers must be careful to avoid writing infinite loops. An infinite loop is a loop that never stops
 executing. Ex: is an infinite loop because the loop's condition is never false.
+executing. Ex: is an infinite loop because the loop's condition is never false.
+JavaScript infinite loop with Chrome's 'Page Unresponsive11 message
 JavaScript infinite loop with Chrome's 'Page Unresponsive11 message
 If the web browser is running JavaScript that contains an infinite loop, the web
+If the web browser is running JavaScript that contains an infinite loop, the web
+browser tab will cease to respond to user input.
 browser tab will cease to respond to user input.
 Page Unresponsive
+Page Unresponsive
+he allowing page has become un s.p-onsive,, You can
 he allowing page has become un s.p-onsive,, You can
 wai or it to become responsive or kill it.
+wai or it to become responsive or kill it.
+• [j https.://cs.li.:11rding.ed u/fmccown/ est.h tml
 • [j https.://cs.li.:11rding.ed u/fmccown/ est.h tml
 )(
+)(
+c <= 20
 c <= 20
 c < 20
+c < 20
+c
 c
 let c = 10;
+let c = 10;
+while (c <= 20); {
 while (c <= 20); {
 console.log(c);
+console.log(c);
 c += 5;
+c += 5;
+}
 }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 41 of 119 2024-10-12, 4:01 p.m.
+41 of 119 2024-10-12, 4:01 p.m.
+[ Kill 7
 [ Kill 7
 I PARTICIPATION I . ACTIVITY 3.5.2: while loop.
+I PARTICIPATION I . ACTIVITY 3.5.2: while loop.
+1) What are the first and last numbers
 1) What are the first and last numbers
 output by the code segment?
+output by the code segment?
+le t c = 100 ;
 le t c = 100 ;
 while (c > 0 ) {
+while (c > 0 ) {
+consol e . l og (c );
 consol e . l og (c );
 C -= 10 ;
+C -= 10 ;
+0 100 and 0.
 0 100 and 0.
 0 90 and 0.
+0 90 and 0.
+0 100and10.
 0 100and10.
 2) What condition makes the loop
+2) What condition makes the loop
+output the even numbers 2 through
 output the even numbers 2 through
 20?
+20?
+le t c = 2 ;
 le t c = 2 ;
 while ( _ ) {
+while ( _ ) {
+consol e . l og (c );
 consol e . l og (c );
 C += 2 ;
+C += 2 ;
+0 C >= 20
 0 C >= 20
 0 r' <'= ?n
+0 r' <'= ?n
+0
 0
 3) What is the value of when the loop
+3) What is the value of when the loop
+terminates?
 terminates?
 Wait
+Wait
 □
+□
+0
+0
+0
 0
 0
 0
 );
+);
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 42 of 119 2024-10-12, 4:01 p.m.
+42 of 119 2024-10-12, 4:01 p.m.
+0 25
 0 25
 0 20
-0 The loop never terminates.
-4) What is c when the loop terminates?
-let c = 10 ;
-while (c <= 20 )
-consol e . l og (c );
-C += 5 ;
-0 15
 0 20
 0 The loop never terminates.
+0 The loop never terminates.
+4) What is c when the loop terminates?
+4) What is c when the loop terminates?
+let c = 10 ;
+let c = 10 ;
+while (c <= 20 )
+while (c <= 20 )
+consol e . l og (c );
+consol e . l og (c );
+C += 5 ;
+C += 5 ;
+0 15
+0 15
+0 20
+0 20
+0 The loop never terminates.
+0 The loop never terminates.
+Do-while loop
 Do-while loop
 0
+0
+The do-while loop executes the loop body before checking the loop's condition to determine if the
 The do-while loop executes the loop body before checking the loop's condition to determine if the
 loop should execute again, repeating until the condition is false.
+loop should execute again, repeating until the condition is false.
+Construct 3.5.2: do-while loop.
 Construct 3.5.2: do-while loop.
 do {
+do {
+body
 body
 } while
+} while
+(conditi on
 (conditi on
 IAP ACRTTIVICITIPYA TION I 3.5.3: Executing a do-while loop.
+IAP ACRTTIVICITIPYA TION I 3.5.3: Executing a do-while loop.
+i = l ;
 i = l ;
 do {
+do {
+consol e . l og ( i );
 consol e . l og ( i );
 i ++;
+i ++;
+} while ( i <= 4 ) ;
 } while ( i <= 4 ) ;
 cons o l e . l og ("Done!" );
+cons o l e . l og ("Done!" );
 □
+□
+l
 l
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 43 of 119 2024-10-12, 4:01 p.m.
+43 of 119 2024-10-12, 4:01 p.m.
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+i = 1;
 i = 1;
 do {
+do {
+console.log(i);
 console.log(i);
 i++;
+i++;
+} while (i <= 4);
 } while (i <= 4);
 console.log("Done!");
+console.log("Done!");
+'"------)
 '"------)
 In step 2, i now stores 2 in memory and 1 is displayed in the console before the loop condition
+In step 2, i now stores 2 in memory and 1 is displayed in the console before the loop condition
+line is run .
 line is run .
 In step 3, the strings 2, 3, 4, and Done are all displayed in the console on new lines.
+In step 3, the strings 2, 3, 4, and Done are all displayed in the console on new lines.
+Animation captions:
 Animation captions:
 1. Assign i with 1.
+1. Assign i with 1.
+2. do . .while loop executes the loop body, evaluating the loop condition after the first execution.
 2. do . .while loop executes the loop body, evaluating the loop condition after the first execution.
 3. The loop repeatedly executes until i <= 4 is false.
+3. The loop repeatedly executes until i <= 4 is false.
+I PARTICIPATION I . ACTIVITY 3.5.4: do-while loop.
 I PARTICIPATION I . ACTIVITY 3.5.4: do-while loop.
 1) What is the last number output
+1) What is the last number output
+to the console?
 to the console?
 let c = 10 ;
+let c = 10 ;
+do {
 do {
 consol e . l og (c );
+consol e . l og (c );
+c--;
 c--;
 while (c >= 5 );
+while (c >= 5 );
+Check Show answer
 Check Show answer
 2) Write a condition that executes
+2) Write a condition that executes
+the do-while loop as long as the
 the do-while loop as long as the
 user enters a negative number.
+user enters a negative number.
 □
+□
+0
+0
 0
 0
 let num;
+let num;
 do {
+do {
+while
 while
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 44 of 119 2024-10-12, 4:01 p.m.
+44 of 119 2024-10-12, 4:01 p.m.
+num = prompt ("Enter a
 num = prompt ("Enter a
 negative number: " );
+negative number: " );
+} while ( __ );
 } while ( __ );
 Check Show answer
+Check Show answer
+3) What is the last number output
 3) What is the last number output
 to the console?
+to the console?
+let x = 1 ;
 let x = 1 ;
 do
+do
+let y = O;
 let y = O;
 do {
+do {
+consol e . l og (x + y );
 consol e . l og (x + y );
 y++;
+y++;
+while (y < 3 );
 while (y < 3 );
 x++ ;
+x++ ;
+while (x < 4 );
 while (x < 4 );
 Check Show answer
+Check Show answer
+IAP ACRTTIVICITIPYA TION I 3 .5. 5 : p ractI•c e wi•t h t h e w h"II e an d do -w hI" Ie Io ops.
 IAP ACRTTIVICITIPYA TION I 3 .5. 5 : p ractI•c e wi•t h t h e w h"II e an d do -w hI" Ie Io ops.
 A given insect population doubles every week. If 2 insects exist on the first week, how
+A given insect population doubles every week. If 2 insects exist on the first week, how
+many weeks will pass until the insect population exceeds 10,000 insects? Ex: 2 insects
 many weeks will pass until the insect population exceeds 10,000 insects? Ex: 2 insects
 exist at the end of week 1, 4 exist on week 2, 8 exist on week 3, etc. Use a loop to
+exist at the end of week 1, 4 exist on week 2, 8 exist on week 3, etc. Use a loop to
+output the insect population each week until the population exceeds 10,000 insects.
 output the insect population each week until the population exceeds 10,000 insects.
 Researchers have discovered that every 4 weeks a disease is killing 40% of the insect
+Researchers have discovered that every 4 weeks a disease is killing 40% of the insect
+population after the population has reproduced . If 2 insects exist on the first week, how
 population after the population has reproduced . If 2 insects exist on the first week, how
 many weeks will pass until the insect population exceeds 10,000 insects? Ex: 2 insects
+many weeks will pass until the insect population exceeds 10,000 insects? Ex: 2 insects
+exist at the end of week 1, 4 exist on week 2, 8 exist on week 3, and 9.6 (16 - 40%) exist on
 exist at the end of week 1, 4 exist on week 2, 8 exist on week 3, and 9.6 (16 - 40%) exist on
 week 4. Write a second do-while loop that outputs the insect population each week until
+week 4. Write a second do-while loop that outputs the insect population each week until
+the population exceeds 10,000 insects.
 the population exceeds 10,000 insects.
 For loop
+For loop
+0
 0
 □
+□
+condition;
 condition;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 45 of 119 2024-10-12, 4:01 p.m.
+45 of 119 2024-10-12, 4:01 p.m.
+A for loop collects three parts - the loop variable initialization, loop condition, and loop variable
 A for loop collects three parts - the loop variable initialization, loop condition, and loop variable
 update - all at the top of the loop. A for loop executes the initialization expression, evaluates the
+update - all at the top of the loop. A for loop executes the initialization expression, evaluates the
+loop's condition, and executes the loop body if the condition is true. After the loop body executes,
 loop's condition, and executes the loop body if the condition is true. After the loop body executes,
 the final expression is evaluated, and the loop condition is checked to determine if the loop should
+the final expression is evaluated, and the loop condition is checked to determine if the loop should
+execute again.
 execute again.
 Construct 3. 5.3: for loop.
+Construct 3. 5.3: for loop.
+for (initialization ; cond
 for (initialization ; cond
 finalExpression )
+finalExpression )
+body
 body
 I PARTICIPATION
+I PARTICIPATION
+ACTIVITY I 3.5.6: Executing a for loop.
 ACTIVITY I 3.5.6: Executing a for loop.
 for (i = 1 ; i <= 4 ; i +J ) {
+for (i = 1 ; i <= 4 ; i +J ) {
+conso le . l og (i );
 conso le . l og (i );
 ! onsole . l og ("Done!" );
+! onsole . l og ("Done!" );
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+for (i = 1; i <= 4; i++) {
 for (i = 1; i <= 4; i++) {
 console.log(i);
+console.log(i);
+}
 }
 console. log("Done!");
+console. log("Done!");
+1
 1
 2
+2
+3
 3
 4
+4
+Done!
 Done!
 In step 1, i is allocated memory and stores 1.
+In step 1, i is allocated memory and stores 1.
+In step 3, 1 is displayed in the console.
 In step 3, 1 is displayed in the console.
 In step 4, i now stores the value 2.
+In step 4, i now stores the value 2.
+□
 □
 In step 5, i keeps incrementing until i stores 5. 2, 3, 4, and Done! are displayed in the console on
+In step 5, i keeps incrementing until i stores 5. 2, 3, 4, and Done! are displayed in the console on
+for (c = 100; ______; c--) {
 for (c = 100; ______; c--) {
 console.log(c);
+console.log(c);
+}
 }
 c < 50
+c < 50
 c > 50
+c > 50
+c >= 50
 c >= 50
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 46 of 119 2024-10-12, 4:01 p.m.
+46 of 119 2024-10-12, 4:01 p.m.
+new lines
 new lines
 Animation captions:
+Animation captions:
+1. for loop's initial expression assigns i with 1.
 1. for loop's initial expression assigns i with 1.
 2. for loop's condition is then evaluated. 1 <= 4 is true, so the loop's statements are executed.
+2. for loop's condition is then evaluated. 1 <= 4 is true, so the loop's statements are executed.
+3. Output i to the console.
 3. Output i to the console.
 4. After the loop executes, the final expression is evaluated, which increments i.
+4. After the loop executes, the final expression is evaluated, which increments i.
+5. Loop repeatedly executes until i <= 4 is false.
 5. Loop repeatedly executes until i <= 4 is false.
 I PARTICIPATION I
+I PARTICIPATION I
+ACTIVITY 3.5.7: For loops.
 ACTIVITY 3.5.7: For loops.
 1) Which loop always executes the loop
+1) Which loop always executes the loop
+body at least once?
 body at least once?
 0 while
+0 while
+0 do-while
 0 do-while
 0 for
+0 for
+2) What numbers are output by the code
 2) What numbers are output by the code
 segment?
+segment?
+for ( c = 5 ; c < 10 ; c += 2 ) {
 for ( c = 5 ; c < 10 ; c += 2 ) {
 con sol e . l og (c );
+con sol e . l og (c );
+0 5, 7,9
 0 5, 7,9
 0 5, 6, 7, 8, 9
+0 5, 6, 7, 8, 9
+0 Infinite loop
 0 Infinite loop
 3) What condition causes the for loop to
+3) What condition causes the for loop to
 output the numbers 100 down to 50,
+output the numbers 100 down to 50,
+inclusively?
 inclusively?
 0
 0
 0
+0
+0
+0
 □
+□
+0
+0
+0
 0
 0
 0
 // (missing 4 and 5)
+// (missing 4 and 5)
+// Iterate immediately
 // Iterate immediately
 // 1 2 3 (missing 4) 5
+// 1 2 3 (missing 4) 5
+continue
 continue
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 47 of 119 2024-10-12, 4:01 p.m.
+47 of 119 2024-10-12, 4:01 p.m.
+4) What numbers are output by the code
 4) What numbers are output by the code
 segment?
+segment?
+f o r (x = l ; x <= 3 ; x++) {
 f o r (x = l ; x <= 3 ; x++) {
 f or (y = 2 ; y <= 4; y++)
+f or (y = 2 ; y <= 4; y++)
+consol e . l og (y );
 consol e . l og (y );
 0 2,3,4
+0 2,3,4
+0 2, 3,4,2, 3,4, 2, 3,4
 0 2, 3,4,2, 3,4, 2, 3,4
 0 2, 3, 4, 5, 6, 7, 8, 9, 10
+0 2, 3, 4, 5, 6, 7, 8, 9, 10
+break and continue statements
 break and continue statements
 Two jump statements alter the normal execution of a loop. The break statement
+Two jump statements alter the normal execution of a loop. The break statement
+breaks out of a loop prematurely. The continue statement causes a loop to iterate
 breaks out of a loop prematurely. The continue statement causes a loop to iterate
 again without executing the remaining statements in the loop.
+again without executing the remaining statements in the loop.
+f or ( c = 1 ; c <= 5 ; c++) {
 f or ( c = 1 ; c <= 5 ; c++) {
 if ( C == 4 ) {
+if ( C == 4 ) {
+break ; II Leave the loop
 break ; II Leave the loop
 consol e . l og (c ); II 1 2 3 (missi
+consol e . l og (c ); II 1 2 3 (missi
+f or ( c = 1 ; c <= 5 ; c++) {
 f or ( c = 1 ; c <= 5 ; c++) {
 if ( C == 4) {
+if ( C == 4) {
+continue ; II Iterate again i
 continue ; II Iterate again i
 consol e . l og (c ); II (missi
+consol e . l og (c ); II (missi
+Some developers use break and continUE to write short and concise code, but
 Some developers use break and continUE to write short and concise code, but
 jump statements may introduce subtle logic errors that are difficult to find. This
+jump statements may introduce subtle logic errors that are difficult to find. This
+material does not use jump statements.
 material does not use jump statements.
 I CHALLENGE I
+I CHALLENGE I
+ACTIVITY 3-5-1: Loops.
 ACTIVITY 3-5-1: Loops.
 5707 04.2065416 qx3zqy7
+5707 04.2065416 qx3zqy7
+0
 0
 □
+□
+function
 function
 ()
+()
+{}
 {}
 parameter1, parameter2,
+parameter1, parameter2,
+// to execute when function is
 // to execute when function is
 "function");
 "function");
+"function");
+"function");
+10
 10
 About to call function
+About to call function
+Returned from function
 Returned from function
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+48 of 119 2024-10-12, 4:01 p.m.
 48 of 119 2024-10-12, 4:01 p.m.

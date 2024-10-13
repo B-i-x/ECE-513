@@ -1,1476 +1,2913 @@
 An array is an ordered collection of values called elements. Each array element is stored in a
+An array is an ordered collection of values called elements. Each array element is stored in a
+numeric location called an index. An array is initialized by assigning an array variable with brackets
 numeric location called an index. An array is initialized by assigning an array variable with brackets
 containing comma-separated values.
+containing comma-separated values.
+Array elements may be of the same type or different types. Arrays increase in size as elements are
 Array elements may be of the same type or different types. Arrays increase in size as elements are
 added and decrease as elements are removed.
+added and decrease as elements are removed.
+I PARTICIPATION I 3 8 1 I . . 1 • • d d. I . I
 I PARTICIPATION I 3 8 1 I . . 1 • • d d. I . I
 ACTIVITY . . : nitIa Izing an Isp aying array e ements.
+ACTIVITY . . : nitIa Izing an Isp aying array e ements.
+let scores = [ ] ;
 let scores = [ ] ;
 scores [OJ 6 ;
+scores [OJ 6 ;
+scores [l ] = 15 ; Fl Fl
 scores [l ] = 15 ; Fl Fl
 □
+□
+scores[2] = 8;
 scores[2] = 8;
 console.log(scores[0]);
+console.log(scores[0]);
+console.log(scores[1]);
 console.log(scores[1]);
 console.log(scores[2]);
+console.log(scores[2]);
+let teams = ["Tigers", "Bisons",
 let teams = ["Tigers", "Bisons",
 "Eagles", "Cobras"];
+"Eagles", "Cobras"];
+console.log(teams);
 console.log(teams);
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 67 of 119 2024-10-12, 4:01 p.m.
+67 of 119 2024-10-12, 4:01 p.m.
+Animation content:
 Animation content:
 The following code is shown below:
+The following code is shown below:
+let scores = 0;
 let scores = 0;
 scores[O] = 6;
-scores[1] = 1 5;
-scores[2] = 8;
-console.log(scores[O]);
-console.log(scores[1]);
-console.log(scores[2]);
-let teams = ["Tigers", "Bisons",
-"Eagles", "Cobras"];
-console.log(teams);
-Step 2 runs the following code:
 scores[O] = 6;
 scores[1] = 1 5;
-scores[2] = 8;.
-I I
-The memory allocated to the array scores grows as more indices in the array get assigned
-values. Values 6, 15, and 8 are shown stored under the variable scores at indices 0, 1 and 2
-respectively.
-In step 3, the following lines of code are run:
+scores[1] = 1 5;
+scores[2] = 8;
+scores[2] = 8;
+console.log(scores[O]);
 console.log(scores[O]);
 console.log(scores[1]);
+console.log(scores[1]);
+console.log(scores[2]);
+console.log(scores[2]);
+let teams = ["Tigers", "Bisons",
+let teams = ["Tigers", "Bisons",
+"Eagles", "Cobras"];
+"Eagles", "Cobras"];
+console.log(teams);
+console.log(teams);
+Step 2 runs the following code:
+Step 2 runs the following code:
+scores[O] = 6;
+scores[O] = 6;
+scores[1] = 1 5;
+scores[1] = 1 5;
+scores[2] = 8;.
+scores[2] = 8;.
+I I
+I I
+The memory allocated to the array scores grows as more indices in the array get assigned
+The memory allocated to the array scores grows as more indices in the array get assigned
+values. Values 6, 15, and 8 are shown stored under the variable scores at indices 0, 1 and 2
+values. Values 6, 15, and 8 are shown stored under the variable scores at indices 0, 1 and 2
+respectively.
+respectively.
+In step 3, the following lines of code are run:
+In step 3, the following lines of code are run:
+console.log(scores[O]);
+console.log(scores[O]);
+console.log(scores[1]);
+console.log(scores[1]);
+console.log(scores[2]);
 console.log(scores[2]);
 6, 15, and 8 are displayed in the console.
+6, 15, and 8 are displayed in the console.
+In step 4, a new array teams is allocated memory to store 4 strings. The 4 strings are assigned to
 In step 4, a new array teams is allocated memory to store 4 strings. The 4 strings are assigned to
 indices in the array in the order they are listed.
+indices in the array in the order they are listed.
 In step 5, the array teams is logged to the console. Tigers,Bisons,Eagles,Cobras is displayed in
+In step 5, the array teams is logged to the console. Tigers,Bisons,Eagles,Cobras is displayed in
+console
 console
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 68 of 119 2024-10-12, 4:01 p.m.
+68 of 119 2024-10-12, 4:01 p.m.
+Animation captions:
 Animation captions:
 1. An empty array called "scores" is declared with [ ].
+1. An empty array called "scores" is declared with [ ].
+2. Three elements are added to the scores array at indexes 0, 1, and 2.
 2. Three elements are added to the scores array at indexes 0, 1, and 2.
 3. The three elements are output to the console.
+3. The three elements are output to the console.
+4. The teams array is initialized with four elements.
 4. The teams array is initialized with four elements.
 5. All four elements are output to the console separated by commas.
+5. All four elements are output to the console separated by commas.
+IP ARTICIPATION I 3 B 2 I . . 1· . d d. I . I
 IP ARTICIPATION I 3 B 2 I . . 1· . d d. I . I
 ACTIVITY .. : nitIa Izing an Isp aying array e ements.
+ACTIVITY .. : nitIa Izing an Isp aying array e ements.
+1) Initialize names to an empty
 1) Initialize names to an empty
 array.
+array.
+let names =
 let names =
 Check Show answer
+Check Show answer
+2) How many elements does
 2) How many elements does
 names have?
+names have?
+l et names = [] ;
 l et names = [] ;
 names [O] "Sue" ;
+names [O] "Sue" ;
+names [ 1 ] "Bob" ;
 names [ 1 ] "Bob" ;
 names [2] "Jeff" ;
+names [2] "Jeff" ;
+Check Show answer
 Check Show answer
 3) What is output to the console?
+3) What is output to the console?
+l et names = [] ;
 l et names = [] ;
 names [O] " Sue " ;
+names [O] " Sue " ;
+names [l] = "Bob " ;
 names [l] = "Bob " ;
 names [2] = "Jeff" ;
+names [2] = "Jeff" ;
+consol e . log (names [O] +
 consol e . log (names [O] +
 names [l] );
+names [l] );
+Check Show answer
 Check Show answer
 4) What is the largest number
+4) What is the largest number
 □
+□
+0
+0
+0
+0
 0
 0
 0
 0
 myArray.method();
+myArray.method();
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 69 of 119 2024-10-12, 4:01 p.m.
+69 of 119 2024-10-12, 4:01 p.m.
+name Index can be to output a
 name Index can be to output a
 name?
+name?
+l et names = ["Maria" ,
 l et names = ["Maria" ,
 "Braden" , "Jaden" , "Aditya" ] ;
+"Braden" , "Jaden" , "Aditya" ] ;
+consol e . l og (names [nameindex ] );
 consol e . l og (names [nameindex ] );
 Check Show answer
+Check Show answer
+5) What is output to the console?
 5) What is output to the console?
 l et nums = [5 , 2 , 9 , 3 ] ;
+l et nums = [5 , 2 , 9 , 3 ] ;
+nums [O] = nums [l] +
 nums [O] = nums [l] +
 nums [2] ;
+nums [2] ;
+consol e . l og (nums [O] );
 consol e . l og (nums [O] );
 Check Show answer
+Check Show answer
+6) Write the simplest code to
 6) Write the simplest code to
 output all elements in pets.
+output all elements in pets.
+let pets = [ "cats" , "dogs" ,
 let pets = [ "cats" , "dogs" ,
 "fish" ];
+"fish" ];
+console . log ( );
 console . log ( );
 Check Show answer
+Check Show answer
+Adding and removing array elements
 Adding and removing array elements
 0
 0
+0
+0
+An array is an Array object that defines numerous methods for manipulating arrays. A method is a
 An array is an Array object that defines numerous methods for manipulating arrays. A method is a
 function that is attached to an object and operates on data stored in the object. Methods are called
+function that is attached to an object and operates on data stored in the object. Methods are called
+by prefacing the method with the object. Ex:
 by prefacing the method with the object. Ex:
 Table 3.8.1: Array methods for adding and removing array elements.
+Table 3.8.1: Array methods for adding and removing array elements.
+Method I Description I Example
 Method I Description I Example
 let nums = [2, 4, 6];
+let nums = [2, 4, 6];
+nums.push(8); // nums = [2, 4, 6, 8]
 nums.push(8); // nums = [2, 4, 6, 8]
 let nums = [2, 4, 6];
+let nums = [2, 4, 6];
+let x = nums.pop(); // returns 6, nums =
 let x = nums.pop(); // returns 6, nums =
 [2, 4]
+[2, 4]
+let nums = [2, 4, 6];
 let nums = [2, 4, 6];
 nums.unshift(0); // nums = [0, 2, 4, 6]
+nums.unshift(0); // nums = [0, 2, 4, 6]
+let nums = [2, 4, 6];
 let nums = [2, 4, 6];
 let x = nums.shift(); // returns 2, nums
+let x = nums.shift(); // returns 2, nums
+= [4, 6]
 = [4, 6]
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 70 of 119 2024-10-12, 4:01 p.m.
+70 of 119 2024-10-12, 4:01 p.m.
+Method Description Example
 Method Description Example
 Adds a
+Adds a
+push(value)
 push(value)
 value to
+value to
+the end of
 the end of
 the array
+the array
+Removes
 Removes
 the last
+the last
+array
 array
 pop()
+pop()
+element
 element
 and
+and
+returns
 returns
 the
+the
+element
 element
 Adds a
+Adds a
+value to
 value to
 unshift(va/ue)
+unshift(va/ue)
+the
 the
 beginning
+beginning
+of the
 of the
 array
+array
+Removes
 Removes
 the first
+the first
+array
 array
 shift()
+shift()
+element
 element
 and
+and
+returns
 returns
 the
+the
+element
 element
 = [2, 4, 6, 8, 10];
+= [2, 4, 6, 8, 10];
+// Deletes all elements from index 3 to
 // Deletes all elements from index 3 to
 splice(3); // nums = [2, 4, 6]
+splice(3); // nums = [2, 4, 6]
+// Deletes 2 elements starting splice(0, 2); // nums [6]
 // Deletes 2 elements starting splice(0, 2); // nums [6]
 // Adds
+// Adds
+3, 5 starting at index 0
 3, 5 starting at index 0
 splice(0, 0, 3, 5); // nums = [3,
+splice(0, 0, 3, 5); // nums = [3,
+// Adds
 // Adds
 7, 9, 11 starting at index 2
+7, 9, 11 starting at index 2
+splice(2, 0, 7, 9, 11); // nums =
 splice(2, 0, 7, 9, 11); // nums =
 [3, 5, 7, 9, 11, 6]
+[3, 5, 7, 9, 11, 6]
+shift
 shift
 splice
+splice
 push
+push
+length
 length
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 71 of 119 2024-10-12, 4:01 p.m.
+71 of 119 2024-10-12, 4:01 p.m.
+Method Description Example
 Method Description Example
 Adds or let nums
+Adds or let nums
+removes II Delet
 removes II Delet
 elements the end
+elements the end
+from nums . spl
 from nums . spl
 splice( startinglndex,
+splice( startinglndex,
+anywhere II Delet s start_nq at index 0
 anywhere II Delet s start_nq at index 0
 in the nums . spl 1ms = r 61
+in the nums . spl 1ms = r 61
+numE/em ToDelete,
 numE/em ToDelete,
 array and
+array and
+valuesToAdd) II returns nums . spl
 valuesToAdd) II returns nums . spl
 the 5, 6]
+the 5, 6]
+deleted II elements nums . spl
 deleted II elements nums . spl
 (if any) [3, 5 , ;
+(if any) [3, 5 , ;
+I PARTICIPATION I . . ACTIVITY 3.8.3: Adding and removing array elements.
 I PARTICIPATION I . . ACTIVITY 3.8.3: Adding and removing array elements.
 The six individuals in the line array are waiting in line. Write the JavaScript code to add
+The six individuals in the line array are waiting in line. Write the JavaScript code to add
+or remove elements to/from the array to simulate the following events:
 or remove elements to/from the array to simulate the following events:
 1. The person at the front of the line (index 0) leaves the line ( ).
+1. The person at the front of the line (index 0) leaves the line ( ).
+2. The person at the end of the line cuts in front of the person at the front of the line
 2. The person at the end of the line cuts in front of the person at the front of the line
 (pop and unshift).
+(pop and unshift).
+3. Two new people named "Poe" and "Snoke" cut into line behind the second person in
 3. Two new people named "Poe" and "Snoke" cut into line behind the second person in
 line (splice) .
+line (splice) .
+4. The fifth person in line leaves the line (spl ).
 4. The fifth person in line leaves the line (spl ).
 5. A new person named "Han" enters the back of the line ( ).
+5. A new person named "Han" enters the back of the line ( ).
+Finally, display the contents of the line array to view the new line occupants. A correct
 Finally, display the contents of the line array to view the new line occupants. A correct
 solution will show: Leia, Finn, Poe, Snoke, Maz, Han.
+solution will show: Leia, Finn, Poe, Snoke, Maz, Han.
+Looping through an array
 Looping through an array
 □
+□
+The array property length contains the number of elements in the array. The
 The array property length contains the number of elements in the array. The
 helpful for looping through an array using a for loop.
+helpful for looping through an array using a for loop.
+property is
 property is
 Figure 3.8.1: Looping through an array with a for loop.
+Figure 3.8.1: Looping through an array with a for loop.
+let groceries = ["bread", "milk", "peanut butter"];
 let groceries = ["bread", "milk", "peanut butter"];
 // Display all elements in groceries array
+// Display all elements in groceries array
 for (i = 0; i < groceries length; i++) {
+for (i = 0; i < groceries length; i++) {
+groceries[i]);
 groceries[i]);
 of
 of
+of
+of
+, "peanut butter"];
 , "peanut butter"];
 // groceries array
+// groceries array
+Array forEach()
 Array forEach()
 "peanut butter"];
+"peanut butter"];
+// groceries array
 // groceries array
 groceries.forEach(function(item, index) {
+groceries.forEach(function(item, index) {
+console.log(index + " - " + item);
 console.log(index + " - " + item);
 });
+});
+0 - bread
 0 - bread
 1 - milk
+1 - milk
+2 - peanut butter
 2 - peanut butter
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 72 of 119 2024-10-12, 4:01 p.m.
+72 of 119 2024-10-12, 4:01 p.m.
+l.UL \ .L - V i .L '-- <:JLU G t::=L.Lt::=::i • .Lt::=11<:JLll i
 l.UL \ .L - V i .L '-- <:JLU G t::=L.Lt::=::i • .Lt::=11<:JLll i
 consol e . log (i + " - " + groceri
+consol e . log (i + " - " + groceri
+0 - bread
 0 - bread
 1 - milk
+1 - milk
+2 - peanut butter
 2 - peanut butter
 The for-of loop is a simplified for loop that loops through an entire array. The array name is placed
+The for-of loop is a simplified for loop that loops through an entire array. The array name is placed
+after the keyword in a for-of loop. Each time through the loop, the next array element is assigned
 after the keyword in a for-of loop. Each time through the loop, the next array element is assigned
 to the variable in front of the keyword.
+to the variable in front of the keyword.
+Figure 3.8.2: Looping through an array with a for-of loop.
 Figure 3.8.2: Looping through an array with a for-of loop.
 The
+The
+let groceri es = ["bread" , "milk"
 let groceri es = ["bread" , "milk"
 II Display all elements in grace
+II Display all elements in grace
+for (let item of groceries ) {
 for (let item of groceries ) {
 console . log (item);
+console . log (item);
+bread
 bread
 milk
+milk
+peanut butter
 peanut butter
 method forEach() also loops through an array. The method takes a
+method forEach() also loops through an array. The method takes a
+function as an argument. The function is called for each array element in order, passing the
 function as an argument. The function is called for each array element in order, passing the
 element and the element index to the function.
+element and the element index to the function.
+Figure 3.8.3: Looping through an array with the forEach() method.
 Figure 3.8.3: Looping through an array with the forEach() method.
 let groceries = ["bread" , "milk" ,
+let groceries = ["bread" , "milk" ,
 II Display all elements in groceri
+II Display all elements in groceri
+crroc-:P. r i P. s . f o rF,i'l c-:h ( f1rn c-:t_ i on ( i t_P.m . i
 crroc-:P. r i P. s . f o rF,i'l c-:h ( f1rn c-:t_ i on ( i t_P.m . i
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 73 of 119 2024-10-12, 4:01 p.m.
+73 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.8.4: Looping through an array.
 I PARTICIPATION I . ACTIVITY 3.8.4: Looping through an array.
 1) What is autos. length?
+1) What is autos. length?
 let autos = [ " Chevrolet " ,
+let autos = [ " Chevrolet " ,
+" Dodge " , "Ford" , "Ram" ];
 " Dodge " , "Ford" , "Ram" ];
 0 0
+0 0
+0 3
 0 3
 0 4
+0 4
+2) What is output to the console?
 2) What is output to the console?
 let autos = [ " Chevrolet " ,
-" Dodge " , "Ford" , "Ram" ];
-f o r (i = 0 ; i < 2 ; i ++) {
-cons ole . l og (autos [ i ]);
-0 Chevrolet, Dodge
-0 Chevrolet, Dodge, Ford
-0 Chevrolet, Dodge, Ford, Ram
-3) What is output to the console?
 let autos = [ " Chevrolet " ,
 " Dodge " , "Ford" , "Ram" ];
+" Dodge " , "Ford" , "Ram" ];
+f o r (i = 0 ; i < 2 ; i ++) {
+f o r (i = 0 ; i < 2 ; i ++) {
+cons ole . l og (autos [ i ]);
+cons ole . l og (autos [ i ]);
+0 Chevrolet, Dodge
+0 Chevrolet, Dodge
+0 Chevrolet, Dodge, Ford
+0 Chevrolet, Dodge, Ford
+0 Chevrolet, Dodge, Ford, Ram
+0 Chevrolet, Dodge, Ford, Ram
+3) What is output to the console?
+3) What is output to the console?
+let autos = [ " Chevrolet " ,
+let autos = [ " Chevrolet " ,
+" Dodge " , "Ford" , "Ram" ];
+" Dodge " , "Ford" , "Ram" ];
+f o r (i = 0 ; i < autos . length ;
 f o r (i = 0 ; i < autos . length ;
 i ++) {
+i ++) {
+if ( i % 2 == 0 ) {
 if ( i % 2 == 0 ) {
 cons ole . l og (autos [ i ]);
+cons ole . l og (autos [ i ]);
+0 Chevrolet, Dodge, Ford, Ram
 0 Chevrolet, Dodge, Ford, Ram
 0 Chevrolet, Ford
+0 Chevrolet, Ford
+0 Dodge, Ram
 0 Dodge, Ram
 4) What is output to the console?
+4) What is output to the console?
 □
+□
+0
+0
+0
+0
 0
 0
 0
 0
 ncScores[0]
+ncScores[0]
 dukeScores ncScores
+dukeScores ncScores
+winningTeam
 winningTeam
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 74 of 119 2024-10-12, 4:01 p.m.
+74 of 119 2024-10-12, 4:01 p.m.
 let autos = ["Chevrolet" ,
+let autos = ["Chevrolet" ,
+"Dodge" , "Ford" , "Ram" ] ;
 "Dodge" , "Ford" , "Ram" ] ;
 autos . f orE ach (function (i tem,
+autos . f orE ach (function (i tem,
+index ) {
 index ) {
 } ) ;
+} ) ;
+if (index % 3 == 0 ) {
 if (index % 3 == 0 ) {
 consol e . l og (i tem);
+consol e . l og (i tem);
+}
 }
 0 Chevrolet, Dodge, Ford, Ram
+0 Chevrolet, Dodge, Ford, Ram
+0 Chevrolet, Ford
 0 Chevrolet, Ford
 0 Chevrolet, Ram
+0 Chevrolet, Ram
+5) What is missing in the for-of loop to
 5) What is missing in the for-of loop to
 display all the elements in the autos
+display all the elements in the autos
+array?
 array?
 6)
+6)
+let autos = ["Chevrolet" ,
 let autos = ["Chevrolet" ,
 "Dodge" , "Ford" , "Ram" ] ;
+"Dodge" , "Ford" , "Ram" ] ;
+for ( ) {
 for ( ) {
 consol e . l og (auto );
+consol e . l og (auto );
+0 let auto of autos
 0 let auto of autos
 0 let item of autos
+0 let item of autos
+0 let autos of auto
 0 let autos of auto
 Which loop is best for looping through
+Which loop is best for looping through
+an array in reverse order (from last
 an array in reverse order (from last
 element to first element)?
+element to first element)?
+0 for loop
 0 for loop
 0 for-of loop
+0 for-of loop
+0 forEach() loop
 0 forEach() loop
 I PARTICIPATION I . . ACTIVITY 3.8.5: Practice looping.
+I PARTICIPATION I . . ACTIVITY 3.8.5: Practice looping.
+Duke and North Carolina have a famous basketball rivalry dating back to 1920. The
 Duke and North Carolina have a famous basketball rivalry dating back to 1920. The
 number of points each team has scored in head-to-head competition over five years is
+number of points each team has scored in head-to-head competition over five years is
+provided in the dukeScores and ncScores arrays. Ex: North Carolina won the first
 provided in the dukeScores and ncScores arrays. Ex: North Carolina won the first
 game 76-72 since dukeScores [ o J is 72 and n is 76.
+game 76-72 since dukeScores [ o J is 72 and n is 76.
 Write a for loop that examines the and arrays and places "D" in
+Write a for loop that examines the and arrays and places "D" in
+the array if Duke won or "N" if North Carolina won, for every game. Ex:
 the array if Duke won or "N" if North Carolina won, for every game. Ex:
 0
 0
+0
+0
+□
 □
 ) {
+) {
+{
 {
 examScores));
+examScores));
+findAverage(examScores));
 findAverage(examScores));
 examScores
+examScores
+0
 0
 1
+1
+2
 2
 3
+3
+Average is 79.25
 Average is 79.25
 84
+84
+90
 90
 65
+65
 98
+98
+New average is 84.25
 New average is 84.25
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 75 of 119 2024-10-12, 4:01 p.m.
+75 of 119 2024-10-12, 4:01 p.m.
+winningTeam [ o J should be "N" because North Carolina won 76-72, and
 winningTeam [ o J should be "N" because North Carolina won 76-72, and
 winningTeam [ 1 J should be "D" because Duke won 74-73.
+winningTeam [ 1 J should be "D" because Duke won 74-73.
+Then display the contents of the winningTeam array using a for-of or forEach() loop.
 Then display the contents of the winningTeam array using a for-of or forEach() loop.
 Passing arrays to functions
+Passing arrays to functions
+An array can be passed to a function as an argument. A function may modify an array argument's
 An array can be passed to a function as an argument. A function may modify an array argument's
 elements.
+elements.
+IAP ACRTTIVICITIPYA TION I 3.8.6: Passing arrays to functions.
 IAP ACRTTIVICITIPYA TION I 3.8.6: Passing arrays to functions.
 function f i ndAverage (numbers ) {
+function f i ndAverage (numbers ) {
+let sum = 0;
 let sum = 0;
 for (l et i = 0 ; i < numbers . l ength ; i ++
+for (l et i = 0 ; i < numbers . l ength ; i ++
+sum += numbers [ i ];
 sum += numbers [ i ];
 return sum / numbers . l ength ;
+return sum / numbers . l ength ;
+function g i veBonus (scores , bonus )
 function g i veBonus (scores , bonus )
 for (let i = 0 ; i < scores . l ength ; i ++)
+for (let i = 0 ; i < scores . l ength ; i ++)
+scores [ i ] += bonus ;
 scores [ i ] += bonus ;
 let examScores = [79 , 85 , 60 , 93 ] ;
+let examScores = [79 , 85 , 60 , 93 ] ;
+conso l e . l og ("Average i s " + findAverage (ex.
 conso l e . l og ("Average i s " + findAverage (ex.
 g i veBonus (examScores , 5 );
+g i veBonus (examScores , 5 );
+conso l e . l og ( "New average is " + f i ndAverag,
 conso l e . l og ( "New average is " + f i ndAverag,
 Animation content:
+Animation content:
+The following code is displayed:
 The following code is displayed:
 function flndAverage(numbers) {
+function flndAverage(numbers) {
+let sum= O;
 let sum= O;
 }
+}
+for (let i = O; i < numbers.length; i++) {
 for (let i = O; i < numbers.length; i++) {
 sum+= numbers[i];
+sum+= numbers[i];
+}
 }
 return sum/ numbers.length;
+return sum/ numbers.length;
+function giveBonus(scores, bonus) {
 function giveBonus(scores, bonus) {
 □
+□
+i++) {
 i++) {
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 76 of 119 2024-10-12, 4:01 p.m.
+76 of 119 2024-10-12, 4:01 p.m.
 for (let i = O; i < scores.length; i++) {
+for (let i = O; i < scores.length; i++) {
+scores[i] += bonus;
 scores[i] += bonus;
 }
 }
+}
+}
+let examScores = [79, 85, 60, 93];
 let examScores = [79, 85, 60, 93];
 console.log("Average is 11 + flndAverage(examScores));
+console.log("Average is 11 + flndAverage(examScores));
+giveBonus(examScores, 5);
 giveBonus(examScores, 5);
 console.log("New average is 11 + flndAverage(examScores));
+console.log("New average is 11 + flndAverage(examScores));
+The flndAverage() parameter numbers and the giveBonus() parameter scores both reference the
 The flndAverage() parameter numbers and the giveBonus() parameter scores both reference the
 same memory used by the examScore argument. The function flndAverage() is able to get values
+same memory used by the examScore argument. The function flndAverage() is able to get values
+stored in the indices of examScores. The function giveBonus() is able to change values in
 stored in the indices of examScores. The function giveBonus() is able to change values in
 examScores because the parameter scores reference the same block of memory as
+examScores because the parameter scores reference the same block of memory as
+examScores. The parameter stores a copy of the reference to examScores rather than making a
 examScores. The parameter stores a copy of the reference to examScores rather than making a
 copy of the array examScores.
+copy of the array examScores.
+Animation captions:
 Animation captions:
 1. The examScores array is passed to the flndAverage() function.
+1. The examScores array is passed to the flndAverage() function.
+2. flndAverage's numbers parameter refers to the same array as examScores.
 2. flndAverage's numbers parameter refers to the same array as examScores.
 3. flndAverage() sums the scores in the numbers array, divides the sum by 4, and returns the
+3. flndAverage() sums the scores in the numbers array, divides the sum by 4, and returns the
+result.
 result.
 4. examScores is passed to the giveBonus() function. The scores parameter and examScores
+4. examScores is passed to the giveBonus() function. The scores parameter and examScores
+argument refer to the same array.
 argument refer to the same array.
 5. The for loop adds 5 to each element in scores, which also changes examScores.
+5. The for loop adds 5 to each element in scores, which also changes examScores.
+6. Since examScores is changed, the new average is 5 points higher than before.
 6. Since examScores is changed, the new average is 5 points higher than before.
 I PARTICIPATION I . . ACTIVITY 3.8.7: Passing arrays to functions.
+I PARTICIPATION I . . ACTIVITY 3.8.7: Passing arrays to functions.
+Match the value to the corresponding array element after the code below executes.
 Match the value to the corresponding array element after the code below executes.
 function makeOdd (numbers ) {
+function makeOdd (numbers ) {
+f o r (let i = O; i < numbers . length ;
 f o r (let i = O; i < numbers . length ;
 if (numbers [ i ] % 2 == 0 ) {
+if (numbers [ i ] % 2 == 0 ) {
+numbers [ i ]++;
 numbers [ i ]++;
 let ages = [10, 3 , 5 , 8];
+let ages = [10, 3 , 5 , 8];
+makeOdd (ages );
 makeOdd (ages );
 □
+□
+indexOf()
 indexOf()
 lastIndexOf()
+lastIndexOf()
+searchValue
 searchValue
 startingPosition
+startingPosition
+indexOf() array.length - 1 lastIndexOf()
 indexOf() array.length - 1 lastIndexOf()
 92, 75, 64, 88,
+92, 75, 64, 88,
+92); // 1
 92); // 1
 92, 2); // 5
+92, 2); // 5
+100); //
 100); //
 lastIndexOf(92); // 5
+lastIndexOf(92); // 5
 lastIndexOf(92, 4); // 1
+lastIndexOf(92, 4); // 1
+lastIndexOf(50); //
 lastIndexOf(50); //
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 77 of 119 2024-10-12, 4:01 p.m.
+77 of 119 2024-10-12, 4:01 p.m.
+If unable to drag and drop, refresh the page.
 If unable to drag and drop, refresh the page.
 11 3 5 9
+11 3 5 9
+Searching an array
 Searching an array
 ages[0]
+ages[0]
+ages[1]
 ages[1]
 ages[2]
+ages[2]
+ages[3]
 ages[3]
 Reset
+Reset
+The array methods indexOf() and /astlndexOf() search an array and return the index of the first
 The array methods indexOf() and /astlndexOf() search an array and return the index of the first
 found value or -1 if the value is not found. searches from the beginning of the array to
+found value or -1 if the value is not found. searches from the beginning of the array to
+the end. searches from the end of the array to the beginning. Both functions take
 the end. searches from the end of the array to the beginning. Both functions take
 two arguments:
+two arguments:
+I
 I
 1. - The value to search for
+1. - The value to search for
+2. - Optional argument that indicates the index at which the search
 2. - Optional argument that indicates the index at which the search
 should begin (default is O for and for )
+should begin (default is O for and for )
+Figure 3.8.4: Searching for array elements.
 Figure 3.8.4: Searching for array elements.
 l et scores
+l et scores
 92 l ;
+92 l ;
+[80 , 9
 [80 , 9
 s = scores . indexOf (
 s = scores . indexOf (
 s = scores . indexOf (
+s = scores . indexOf (
+s = scores . indexOf (
+s = scores . indexOf (
 - 1
+- 1
+s = scores . lastinde
 s = scores . lastinde
 s = scores . l ast inde
+s = scores . l ast inde
+s = scores . lastinde
 s = scores . lastinde
 - 1
+- 1
+I I
 I I
 artists
+artists
+let artists = ["Raphael", "Titian", "Masaccio", "Botticelli", "Titian"];
 let artists = ["Raphael", "Titian", "Masaccio", "Botticelli", "Titian"];
 artists.indexOf("Botticelli")
+artists.indexOf("Botticelli")
+indexOf()
 indexOf()
 enteredUsername
+enteredUsername
+enteredPassword true
 enteredPassword true
 validCredentials()
+validCredentials()
+sort()
+sort()
 sort()
 sort()
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 78 of 119 2024-10-12, 4:01 p.m.
+78 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY
+ACTIVITY
+Refer to the
 Refer to the
 7)
+7)
+returns 3.
 returns 3.
 0 True
+0 True
+0 False
 0 False
 3.8.8: Searching an array.
+3.8.8: Searching an array.
+array.
 array.
 2) artists. lastindexOf ("Titian")
+2) artists. lastindexOf ("Titian")
+returns 1.
 returns 1.
 0 True
-0 False
-3) artists. indexOf ("Michaelangelo")
-returns NaN.
 0 True
 0 False
+0 False
+3) artists. indexOf ("Michaelangelo")
+3) artists. indexOf ("Michaelangelo")
+returns NaN.
+returns NaN.
+0 True
+0 True
+0 False
+0 False
+I PARTICIPATION I . . ACTIVITY 3.8.9: Practice searching an array.
 I PARTICIPATION I . . ACTIVITY 3.8.9: Practice searching an array.
 The validCredentials () function contains two parallel arrays of usernames and
+The validCredentials () function contains two parallel arrays of usernames and
+passwords. Modify validCredentials () to use the method to search the
 passwords. Modify validCredentials () to use the method to search the
 usernames array for the given enteredUsern . If the username is found, the same
+usernames array for the given enteredUsern . If the username is found, the same
+location in the passwords array should contain the . Return if
 location in the passwords array should contain the . Return if
 the passwords are equal, false otherwise. val
+the passwords are equal, false otherwise. val
+false if the given username was not found .
 false if the given username was not found .
 Sorting an array
+Sorting an array
+should also return
 should also return
 0
 0
 0
+0
+0
+0
+□
 □
 The array method sort() sorts an array in ascending (increasing) order. 's default behavior
+The array method sort() sorts an array in ascending (increasing) order. 's default behavior
+is to sort each element as a string using the string's Unicode values. Sorting by Unicode values may
 is to sort each element as a string using the string's Unicode values. Sorting by Unicode values may
 yield unsatisfactory results for arrays that store numbers. Ex: 7 O is sorted before 2 because "7 O" is
+yield unsatisfactory results for arrays that store numbers. Ex: 7 O is sorted before 2 because "7 O" is
+< "2" when comparing the Unicode values of "7" to "2".
 < "2" when comparing the Unicode values of "7" to "2".
 The method can sort elements in other ways by passing a comparison function to
+The method can sort elements in other ways by passing a comparison function to
+sort() sort()
 sort() sort()
 1000, 4];
+1000, 4];
+// values: [1000, 200, 30, 4]
 // values: [1000, 200, 30, 4]
 // ascending order: [4, 30, 200,
+// ascending order: [4, 30, 200,
+{
 {
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 79 of 119 2024-10-12, 4:01 p.m.
+79 of 119 2024-10-12, 4:01 p.m.
+. The comparison function returns a number that helps
 . The comparison function returns a number that helps
 order of the array's elements:
+order of the array's elements:
+determine the sorting
 determine the sorting
 • Returns a value< 0 if the first argument should appear before the second argument.
+• Returns a value< 0 if the first argument should appear before the second argument.
+• Returns a value > 0 if the first argument should appear after the second argument.
 • Returns a value > 0 if the first argument should appear after the second argument.
 • Returns O if the order of the first and second arguments does not matter.
+• Returns O if the order of the first and second arguments does not matter.
+Figure 3.8.5: Sorting an array of numbers.
 Figure 3.8.5: Sorting an array of numbers.
 l et numbers = [200 , 30 , 100
+l et numbers = [200 , 30 , 100
+II Sort based on Unicode va
 II Sort based on Unicode va
 numbers . sort ();
+numbers . sort ();
+II Sort numbers in ascendin
 II Sort numbers in ascendin
 1000]
+1000]
+numbers . sort (function (a , b )
 numbers . sort (function (a , b )
 return a - b ;
+return a - b ;
+} ) ;
 } ) ;
 I PARTICIPATION I . ACTIVITY 3.8.1 0: Sorting arrays.
+I PARTICIPATION I . ACTIVITY 3.8.1 0: Sorting arrays.
+1) What is output to the console?
 1) What is output to the console?
 let names = ["Sue " ,
+let names = ["Sue " ,
+"Bob" , "Jeff" ] ;
 "Bob" , "Jeff" ] ;
 names . sort ();
+names . sort ();
+consol e . log (names [ 0 ] );
 consol e . log (names [ 0 ] );
 Check Show answer
+Check Show answer
+2) What is output to the console?
 2) What is output to the console?
 □
+□
+0
+0
 0
 0
 let names = ["Sue",
+let names = ["Sue",
+"Bob", "Jeff"];
 "Bob", "Jeff"];
 names.sort(function(a, b)
+names.sort(function(a, b)
+{
 {
 if (a > b) {
+if (a > b) {
+return -1;
 return -1;
 }
+}
+else if (a < b) {
 else if (a < b) {
 return 1;
+return 1;
+}
 }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 80 of 119 2024-10-12, 4:01 p.m.
+80 of 119 2024-10-12, 4:01 p.m.
+return 0 ;
 return 0 ;
 } ) ;
+} ) ;
+consol e . l og (names [ 0]);
 consol e . l og (names [ 0]);
 Check Show answer
+Check Show answer
+3) What is output to the console?
 3) What is output to the console?
 let totals = [ 90 , 4 , 21 ,
+let totals = [ 90 , 4 , 21 ,
+34 l ;
 34 l ;
 total s . sort ();
+total s . sort ();
+consol e . log (totals [0]);
 consol e . log (totals [0]);
 Check Show answer
+Check Show answer
+4) What is output to the console?
 4) What is output to the console?
 let totals = [ 99 , 4 , 25 0 ,
+let totals = [ 99 , 4 , 25 0 ,
+38 l;
 38 l;
 totals . sort (fun cti on (a ,
+totals . sort (fun cti on (a ,
+b ) {
 b ) {
 return b - a ;
+return b - a ;
+} ) ;
 } ) ;
 consol e . log (total s [0]);
+consol e . log (total s [0]);
+Check Show answer
 Check Show answer
 I CHALLENGE I
+I CHALLENGE I
 ACTIVITY 3.8.1: Arrays.
+ACTIVITY 3.8.1: Arrays.
+5707 04.20654 7 6.qx3zqy7
 5707 04.20654 7 6.qx3zqy7
 0
 0
+0
+0
+□
 □
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 81 of 119 2024-10-12, 4:01 p.m.
+81 of 119 2024-10-12, 4:01 p.m.
+Exploring further: 3.9 Objects
 Exploring further: 3.9 Objects
 • Array object (MON)
+• Array object (MON)
+Objects and properties
 Objects and properties
 An object is an unordered collection of properties. An object property is a name-value pair, where
+An object is an unordered collection of properties. An object property is a name-value pair, where
+the name is an identifier and the value is any data type. Objects are often defined with an object
 the name is an identifier and the value is any data type. Objects are often defined with an object
 literal. An object literal (also called an object initializer) is a comma-separated list of property
+literal. An object literal (also called an object initializer) is a comma-separated list of property
+name and value pairs.
 name and value pairs.
 I PARTICIPATION I 3 g 1 C . b' · h b" 1· I ACTIVITY .. : reating an o Ject wit an o ~ect Itera .
+I PARTICIPATION I 3 g 1 C . b' · h b" 1· I ACTIVITY .. : reating an o Ject wit an o ~ect Itera .
+l et book = {} ;
 l et book = {} ;
 book = {
+book = {
+t i t l e : "Outliers " , I publi shed : 2 011 ,
 t i t l e : "Outliers " , I publi shed : 2 011 ,
 keywords : [ " success " ,
+keywords : [ " success " ,
+} ;
 } ;
 " high-achievers " ]
+" high-achievers " ]
+consol e . l og (book . title );
 consol e . l og (book . title );
 consol e . l og (book . keywords [ 0]);
+consol e . l og (book . keywords [ 0]);
+book = {
 book = {
 t i t l e : "Out liers " ,
+t i t l e : "Out liers " ,
+publi shed : 2 011 ,
 publi shed : 2 011 ,
 keywords : [ " success " , " h i gh- ach i evers " ] ,
+keywords : [ " success " , " h i gh- ach i evers " ] ,
+author : {
 author : {
 f i rs t Name : "Malcolm" ,
+f i rs t Name : "Malcolm" ,
+l astName : "Gladwell " } _J } .
 l astName : "Gladwell " } _J } .
 c : nso l e . l og (book . aut hor . l as t Name );
+c : nso l e . l og (book . aut hor . l as t Name );
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+let book= D;
 let book= D;
 book= {
+book= {
+title: "Outliers",
 title: "Outliers",
 publi shed: 2011 ,
+publi shed: 2011 ,
+Outliers
 Outliers
 success
+success
 Gladwell
+Gladwell
+□
 □
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 82 of 119 2024-10-12, 4:01 p.m.
+82 of 119 2024-10-12, 4:01 p.m.
 keywords: ["success", "high-achievers"]
+keywords: ["success", "high-achievers"]
+};
 };
 console.log(book.title);
+console.log(book.title);
+console.log(book.keywords[0]);
 console.log(book.keywords[0]);
 book= {
-title: "Outliers",
-published: 2011,
-keywords: ["success", "high-achievers"].
-author: {
-}
-};
-flrstName: "Malcolm",
-lastName: "Gladwell"
-console.log(book.author.lastName);
-Step 1 runs the code: let book={};.
-Step 2 runs the code: book= {
-title: "Outliers",
-published: 2011,
-keywords: ["success", "high-achievers"]
-};.
-Step 3 runs the code: console.log(book.title);
-console.log(book.keywords[0]);.
-Outliers and success are displayed in console, each on new lines.
-Step 4 runs the code:
 book= {
 title: "Outliers",
+title: "Outliers",
+published: 2011,
 published: 2011,
 keywords: ["success", "high-achievers"].
+keywords: ["success", "high-achievers"].
+author: {
 author: {
 }
-};.
+}
+};
+};
+flrstName: "Malcolm",
 flrstName: "Malcolm",
 lastName: "Gladwell"
+lastName: "Gladwell"
+console.log(book.author.lastName);
+console.log(book.author.lastName);
+Step 1 runs the code: let book={};.
+Step 1 runs the code: let book={};.
+Step 2 runs the code: book= {
+Step 2 runs the code: book= {
+title: "Outliers",
+title: "Outliers",
+published: 2011,
+published: 2011,
+keywords: ["success", "high-achievers"]
+keywords: ["success", "high-achievers"]
+};.
+};.
+Step 3 runs the code: console.log(book.title);
+Step 3 runs the code: console.log(book.title);
+console.log(book.keywords[0]);.
+console.log(book.keywords[0]);.
+Outliers and success are displayed in console, each on new lines.
+Outliers and success are displayed in console, each on new lines.
+Step 4 runs the code:
+Step 4 runs the code:
+book= {
+book= {
+title: "Outliers",
+title: "Outliers",
+published: 2011,
+published: 2011,
+keywords: ["success", "high-achievers"].
+keywords: ["success", "high-achievers"].
+author: {
+author: {
+}
+}
+};.
+};.
+flrstName: "Malcolm",
+flrstName: "Malcolm",
+lastName: "Gladwell"
+lastName: "Gladwell"
+Step 5 runs the last line of code and Gladwell is displayed on a new line in the console
 Step 5 runs the last line of code and Gladwell is displayed on a new line in the console
 Animation captions:
+Animation captions:
+1. book is assigned an empty object literal.
 1. book is assigned an empty object literal.
 2. book is assigned an object literal with three properties: title, published, keywords.
+2. book is assigned an object literal with three properties: title, published, keywords.
+"social media"],
 "social media"],
 isbn = "1591846013";
+isbn = "1591846013";
+book.isbn("1591846013");
 book.isbn("1591846013");
 book.author = "Jack";
+book.author = "Jack";
+book.author.firstName
 book.author.firstName
 = "Jack";
+= "Jack";
 book.author.lastName =
+book.author.lastName =
+"Jack";
 "Jack";
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 83 of 119 2024-10-12, 4:01 p.m.
+83 of 119 2024-10-12, 4:01 p.m.
+3. Display the title and first keyword of the book object.
 3. Display the title and first keyword of the book object.
 4. book is assigned an object literal with an embedded object literal that is assigned to the
+4. book is assigned an object literal with an embedded object literal that is assigned to the
+author property.
 author property.
 5. Display the last name of the book's author.
+5. Display the last name of the book's author.
+I PARTICIPATION I . . . ACTIVITY 3.9.2: Accessing obJect properties.
 I PARTICIPATION I . . . ACTIVITY 3.9.2: Accessing obJect properties.
 Refer to the book object below.
+Refer to the book object below.
+l et book = {
 l et book = {
 } ;
+} ;
+title : "Hatching Twitter " ,
 title : "Hatching Twitter " ,
 published : 2013 ,
+published : 2013 ,
+keywords : [ "origins" , "betrayal" , s
 keywords : [ "origins" , "betrayal" , s
 author : {
+author : {
+firstName : "Nick" ,
 firstName : "Nick" ,
 lastName : "Bil ton "
+lastName : "Bil ton "
+□
 □
 1) Which statement changes the 0
+1) Which statement changes the 0
 published year to 2014?
+published year to 2014?
+Q book.Published 2014;
 Q book.Published 2014;
 Q book.published 2014;
 Q book.published 2014;
+Q book.published 2014;
+Q book.published 2014;
+2) Which statement adds a new property
 2) Which statement adds a new property
 called "isbn" with the value
+called "isbn" with the value
+"1 591846013"?
 "1 591846013"?
 0
 0
 0
+0
+0
+0
+book.isbn
 book.isbn
 "1591846013";
+"1591846013";
 3) What statement replaces "Nick" with
+3) What statement replaces "Nick" with
+"Jack"?
 "Jack"?
 0
 0
 0
 0
 0
+0
+0
+0
+0
+0
+this
 this
 this.someProperty
+this.someProperty
 firstName + " " +
+firstName + " " +
+// that "Susan Cain"
 // that "Susan Cain"
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 84 of 119 2024-10-12, 4:01 p.m.
+84 of 119 2024-10-12, 4:01 p.m.
+4) What is missing from the code below
 4) What is missing from the code below
 to remove "social media" from the
+to remove "social media" from the
+book's keywords? The array method
 book's keywords? The array method
 pop () removes the last element
+pop () removes the last element
+from an array.
 from an array.
 ___ . pop ();
+___ . pop ();
+0 keywords
 0 keywords
 0 book.keywords[2]
+0 book.keywords[2]
+0 book.keywords
 0 book.keywords
 Methods
+Methods
+Assigning an object's property name with an anonymous function creates a method. Methods
 Assigning an object's property name with an anonymous function creates a method. Methods
 0
+0
+access the object's properties using the keyword , followed by a period, before the property
 access the object's properties using the keyword , followed by a period, before the property
 name. Ex:
+name. Ex:
+Figure 3.9.1: Defining a method in an object literal.
 Figure 3.9.1: Defining a method in an object literal.
 let book = {
-title : "Quiet" ,
-author : {
-} ,
-firstName : "Susan" ,
-lastName : "Cain"
-II Define a method
-getAuthorName () {
-return this . author . firstNa
-this . author . lastName ;
-} ;
-II Call a method that returns "S
-let name = book . getAuthorName ();
-Figure 3.9.2: Defining a method for an existing object.
 let book = {
 title : "Quiet" ,
+title : "Quiet" ,
+author : {
+author : {
+} ,
+} ,
+firstName : "Susan" ,
+firstName : "Susan" ,
+lastName : "Cain"
+lastName : "Cain"
+II Define a method
+II Define a method
+getAuthorName () {
+getAuthorName () {
+return this . author . firstNa
+return this . author . firstNa
+this . author . lastName ;
+this . author . lastName ;
+} ;
+} ;
+II Call a method that returns "S
+II Call a method that returns "S
+let name = book . getAuthorName ();
+let name = book . getAuthorName ();
+Figure 3.9.2: Defining a method for an existing object.
+Figure 3.9.2: Defining a method for an existing object.
+let book = {
+let book = {
+title : "Quiet" ,
+title : "Quiet" ,
+author :
 author :
 book.assignMiddleInitial =
+book.assignMiddleInitial =
+function(middleInitial) {
 function(middleInitial) {
 this.author.middleInitial =
+this.author.middleInitial =
+middleInitial;
 middleInitial;
 };
+};
+book.assignMiddleInitial("H");
 book.assignMiddleInitial("H");
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 85 of 119 2024-10-12, 4:01 p.m.
+85 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.9.3: ObJect methods.
 I PARTICIPATION I . ACTIVITY 3.9.3: ObJect methods.
 Refer to the above figures.
+Refer to the above figures.
+1) A method may be defined inside or
 1) A method may be defined inside or
 outside an object literal.
+outside an object literal.
 0 True
+0 True
+0 False
 0 False
 2) The method below outputs ''I'm
+2) The method below outputs ''I'm
+reading 'Quiet'.".
 reading 'Quiet'.".
 book . read = function ()
+book . read = function ()
+console . log ("I'm reading '"
 console . log ("I'm reading '"
 + title + "' . " ) ;
++ title + "' . " ) ;
+} ;
 } ;
 0 True
-0 False
-3) The method below creates a new
-object property.
 0 True
 0 False
+0 False
+3) The method below creates a new
+3) The method below creates a new
+object property.
+object property.
+0 True
+0 True
+0 False
+0 False
+□
 □
 0
 0
 0
+0
+0
+0
+score
+score
 score
 score
 get set
+get set
 get property() { return someValue; }
+get property() { return someValue; }
+set property(value) { ... }
 set property(value) { ... }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 86 of 119 2024-10-12, 4:01 p.m.
+86 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . . . ACTIVITY 3. 9.4: Practice creating obJects and methods.
 I PARTICIPATION I . . . ACTIVITY 3. 9.4: Practice creating obJects and methods.
 Create an object called game that represents a competition between two opponents or
+Create an object called game that represents a competition between two opponents or
+teams. Add the following properties to game, and assign any value to each property:
 teams. Add the following properties to game, and assign any value to each property:
 1. winner - An object with properties name and
+1. winner - An object with properties name and
+2. loser - An object with properties name and
 2. loser - An object with properties name and
 Add the following methods to game:
+Add the following methods to game:
+1. getMarginOfVictory () - Returns the difference between the winner's score and
 1. getMarginOfVictory () - Returns the difference between the winner's score and
 the loser's score
+the loser's score
+2. showsummary () - Outputs to the console the winner's name and score, the loser's
 2. showsummary () - Outputs to the console the winner's name and score, the loser's
 name and score, and the margin of victory
+name and score, and the margin of victory
+Call the two methods to verify the methods work correctly. Example output:
 Call the two methods to verify the methods work correctly. Example output:
 Broncos : 24
+Broncos : 24
+Panthers : 10
 Panthers : 10
 Margi n of v i c t ory : 14
+Margi n of v i c t ory : 14
+Accessor properties
 Accessor properties
 □
+□
+An object property may need to be computed when retrieved, or setting a property may require
 An object property may need to be computed when retrieved, or setting a property may require
 executing some code to perform data validation. The and keywords define getters and
+executing some code to perform data validation. The and keywords define getters and
+setters for a property.
 setters for a property.
 • A getter is a function that is called when an object's property is retrieved. Syntax to define a
+• A getter is a function that is called when an object's property is retrieved. Syntax to define a
+getter:
 getter:
 • A setter is a function that is called when an object's property is set to a value. Syntax to define
+• A setter is a function that is called when an object's property is set to a value. Syntax to define
+a setter:
 a setter:
 An accessor property is an object property that has a getter or a setter or both.
+An accessor property is an object property that has a getter or a setter or both.
+Figure 3.9.3: Defining an accessor property called 'area'.
 Figure 3.9.3: Defining an accessor property called 'area'.
 l et r ectang l e
+l et r ectang l e
+wi dth : 5 ,
 wi dth : 5 ,
 h e i gh t : 8 ,
+h e i gh t : 8 ,
+get a r ea ()
 get a r ea ()
 return this .wi dth * this . h e i gh t ;
+return this .wi dth * this . h e i gh t ;
+} '
 } '
 this.secondOpponentScore) {
+this.secondOpponentScore) {
+> this.firstOpponentScore) {
 > this.firstOpponentScore) {
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 87 of 119 2024-10-12, 4:01 p.m.
+87 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.9.5: Accessor properties.
 I PARTICIPATION I . ACTIVITY 3.9.5: Accessor properties.
 Refer to the game object.
+Refer to the game object.
+let game = {
 let game = {
 } ;
+} ;
+firstOpponent : "Serena Williams " ,
 firstOpponent : "Serena Williams " ,
 firstOpponentScore : 2 ,
+firstOpponentScore : 2 ,
+secondOpponent : "Garbine Muguruza " ,
 secondOpponent : "Garbine Muguruza " ,
 secondOpponentScore : 0 ,
+secondOpponentScore : 0 ,
+get winner () {
 get winner () {
 if (this . firstOpponentScore > thi
+if (this . firstOpponentScore > thi
+return this . firstOpponent ;
 return this . firstOpponent ;
 else if (this . secondOpponentScore
+else if (this . secondOpponentScore
+return this . secondOpponent ;
 return this . secondOpponent ;
 else {
+else {
+return "Tie" ;
 return "Tie" ;
 1) The code below outputs "Serena
+1) The code below outputs "Serena
+Williams".
 Williams".
 console . log (game . winner ());
+console . log (game . winner ());
+0 True
 0 True
 0 False
+0 False
+2) The code below outputs "Maria
 2) The code below outputs "Maria
 Sharapova" .
+Sharapova" .
+game . winner = "Maria
 game . winner = "Maria
 Sharapova" ;
+Sharapova" ;
 console . log (game . winner );
+console . log (game . winner );
+□
 □
 0
 0
+0
+0
+nextSong
 nextSong
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 88 of 119 2024-10-12, 4:01 p.m.
+88 of 119 2024-10-12, 4:01 p.m.
 0 True
+0 True
+0 False
 0 False
 3) The ma tchDa te setter below sets
+3) The ma tchDa te setter below sets
+the date property to the given
 the date property to the given
 value.
+value.
+let game = {
 let game = {
 } ;
+} ;
 date : 1111
+date : 1111
+set matchDate (value )
 set matchDate (value )
 date = value ;
+date = value ;
+} ,
 } ,
 0 True
+0 True
+0 False
 0 False
 4) What sets the game's match date to
+4) What sets the game's match date to
+the Date object?
 the Date object?
 let game = {
+let game = {
+} ;
 } ;
 date : 1111
+date : 1111
+set matchDate (value )
 set matchDate (value )
 this . date = value ;
+this . date = value ;
+} ,
 } ,
 II Wimbledon 2016 women's
+II Wimbledon 2016 women's
+championship
 championship
 let champDate = new Date (2016 ,
+let champDate = new Date (2016 ,
+5 , 9 );
 5 , 9 );
 O game.matchDate =
+O game.matchDate =
+champ Date;
 champ Date;
 0 game.matchDate(champDate);
+0 game.matchDate(champDate);
+I PARTICIPATION I . . . ACTIVITY 3.9.6: Practice creating accessor properties.
 I PARTICIPATION I . . . ACTIVITY 3.9.6: Practice creating accessor properties.
 The musicQueue object contains a songs property listing all the songs in the music
+The musicQueue object contains a songs property listing all the songs in the music
+queue. Add an accessor property called "next" with the following functions::
 queue. Add an accessor property called "next" with the following functions::
 • Getter - Returns the song in the songs array at index . Then increments
+• Getter - Returns the song in the songs array at index . Then increments
+next Song by one so the next song in the queue will be retrieved the next time the
 next Song by one so the next song in the queue will be retrieved the next time the
 0
 0
 0
+0
+0
+0
+nextSong songs
 nextSong songs
 songs
+songs
+musicQueue
 musicQueue
 x = y;
 x = y;
+x = y;
+x = y;
+String
 String
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 89 of 119 2024-10-12, 4:01 p.m.
+89 of 119 2024-10-12, 4:01 p.m.
+getter is accessed. If - is beyond the boundaries of the
 getter is accessed. If - is beyond the boundaries of the
 nextSong should be assigned 0.
+nextSong should be assigned 0.
+• Setter - Sets nextsong to the given value. If the value is outside the
 • Setter - Sets nextsong to the given value. If the value is outside the
 bounds, nextSong should be assigned 0.
+bounds, nextSong should be assigned 0.
+array,
 array,
 array's
+array's
+If the next property is implemented correctly, the for loop under the will
 If the next property is implemented correctly, the for loop under the will
 display each song three times. The code under the for loop tests the setter and should
+display each song three times. The code under the for loop tests the setter and should
+display the song in comments.
 display the song in comments.
 Passing objects to functions
+Passing objects to functions
+JavaScript data types can be divided into two categories: primitives and references.
 JavaScript data types can be divided into two categories: primitives and references.
 1. A primitive is data that is not an object and includes no methods. Primitive types include:
+1. A primitive is data that is not an object and includes no methods. Primitive types include:
+boolean, number, string, null, and undefined.
 boolean, number, string, null, and undefined.
 2. A reference is a logical memory address. Only objects are reference types.
+2. A reference is a logical memory address. Only objects are reference types.
+Assigning a variable with a primitive creates a copy of the primitive. Ex: If y is 2, then
 Assigning a variable with a primitive creates a copy of the primitive. Ex: If y is 2, then
 means x is assigned with a copy of y. Assigning a variable with a reference creates a copy of the
+means x is assigned with a copy of y. Assigning a variable with a reference creates a copy of the
+reference. Ex: If y refers to an object, then means x is assigned with a copy of y's reference.
 reference. Ex: If y refers to an object, then means x is assigned with a copy of y's reference.
 Both x and y refer to the same object.
+Both x and y refer to the same object.
+When a primitive is passed to a function, the parameter is assigned a copy of the argument.
 When a primitive is passed to a function, the parameter is assigned a copy of the argument.
 Changing the parameter does not change the argument.
+Changing the parameter does not change the argument.
+When an object is passed to a function, the parameter is also assigned a copy of the argument.
 When an object is passed to a function, the parameter is also assigned a copy of the argument.
 However, the parameter and argument are both a reference to the same object. Changing the
+However, the parameter and argument are both a reference to the same object. Changing the
+parameter reference to a new object does not change the argument, but changing the parameter's
 parameter reference to a new object does not change the argument, but changing the parameter's
 properties does change the argument's properties.
+properties does change the argument's properties.
+I
 I
 Primitive wrappers
+Primitive wrappers
+All primitives, except for null and undefined, have equivalent objects that wrap the
 All primitives, except for null and undefined, have equivalent objects that wrap the
 primitive values and provide methods for interacting with the primitives. Ex: A string
+primitive values and provide methods for interacting with the primitives. Ex: A string
+primitive has a String class that provides various methods for manipulating a
 primitive has a String class that provides various methods for manipulating a
 string. Calling "abc". toUpperCase () converts the primitive string into a
+string. Calling "abc". toUpperCase () converts the primitive string into a
+object, calls the method, and returns the string primitive ''ABC".
 object, calls the method, and returns the string primitive ''ABC".
 function changeThings(x, y, z) {
+function changeThings(x, y, z) {
+x = 33;
 x = 33;
 y.width 20;
+y.width 20;
+{ title: Games",
 { title: Games",
 author: }
+author: }
+5;
 5;
 rectangle = {
+rectangle = {
+width: 3,
 width: 3,
 height: };
+height: };
+{
 {
 title: Twilight",
+title: Twilight",
+author: };
 author: };
 changeThings(level, rectangle, book);
+changeThings(level, rectangle, book);
+console.log(level);
 console.log(level);
 console.log(rectangle.console.log(book.title);
+console.log(rectangle.console.log(book.title);
+level 5
 level 5
 width
+width
+title
 title
 author
+author
+Twilight
 Twilight
 Stephenie Meyer
+Stephenie Meyer
+x
 x
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 90 of 119 2024-10-12, 4:01 p.m.
+90 of 119 2024-10-12, 4:01 p.m.
+ACT1v1TY 3.9.7: Passing primitives and references to a function. I PARTICIPATION I
 ACT1v1TY 3.9.7: Passing primitives and references to a function. I PARTICIPATION I
 functi on changeThi ngs (x , y , z ) 7 X = 33 ;
+functi on changeThi ngs (x , y , z ) 7 X = 33 ;
+y .wi dth = 20 ;
 y .wi dth = 20 ;
 z = { t i tle : "The Hunger Games " ,
+z = { t i tle : "The Hunger Games " ,
+autho r : "Suzanne Collins" };
 autho r : "Suzanne Collins" };
 let level = 5 ;
+let level = 5 ;
+let re c tangle
 let re c tangle
 width : 3 ,
+width : 3 ,
+height : 16
 height : 16
 } ;
+} ;
+let book = {
 let book = {
 title : "Twilight " ,
+title : "Twilight " ,
+a utho r : " Stephenie Meyer"
 a utho r : " Stephenie Meyer"
 } ;
+} ;
+changeThings (level , re c tangle , b ook);
 changeThings (level , re c tangle , b ook);
 cons ole . l og (level );
+cons ole . l og (level );
+cons ole . l og (re c tangle .width);
 cons ole . l og (re c tangle .width);
 cons ole . l og (book . title );
+cons ole . l og (book . title );
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+function changeThings(x, y, z) {
 function changeThings(x, y, z) {
 X = 33;
+X = 33;
+}
 }
 y.width = 20;
+y.width = 20;
+z = { title: "The Hunger Games",
 z = { title: "The Hunger Games",
 author: "Suzanne Collins " };
+author: "Suzanne Collins " };
+let level = 5;
 let level = 5;
 let rectangle = {
+let rectangle = {
+width : 3,
 width : 3,
 height: 16
+height: 16
+};
 };
 let book= {
+let book= {
+title: "Twilight",
 title: "Twilight",
 author: "Stephenie Meyer"
+author: "Stephenie Meyer"
+};
 };
 changeThings(level, rectangle, book);
+changeThings(level, rectangle, book);
+console. log(level);
 console. log(level);
 level §
+level §
+rectangle
 rectangle
 book
+book
+~ X
 ~ X
 y
+y
+z
 z
 5
+5
+20
 20
 Twilight
+Twilight
+JI 20 II width
 JI 20 II width
 16 height
+16 height
+.4
 .4
 .4 The Hunger Games title
+.4 The Hunger Games title
+Suzanne Collins author
 Suzanne Collins author
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 91 of 119 2024-10-12, 4:01 p.m.
+91 of 119 2024-10-12, 4:01 p.m.
+console.log(rectangle.width);
 console.log(rectangle.width);
 console.log(book.title);
+console.log(book.title);
+Step 1 runs the following line of code:
 Step 1 runs the following line of code:
 Let level = 5;. Level is allocated memory and stores the value 5 at level's memory address.
+Let level = 5;. Level is allocated memory and stores the value 5 at level's memory address.
+Step 2 runs the following code:
 Step 2 runs the following code:
 let rectangle = {
+let rectangle = {
+width: 3,
 width: 3,
 height 16
+height 16
+};
 };
 let book= {
+let book= {
+title: ''Twilight",
 title: ''Twilight",
 author: "Stephenie Meyer"
+author: "Stephenie Meyer"
+};.
 };.
 Rectangle is allocated memory but stores the memory address that stores the values of width
+Rectangle is allocated memory but stores the memory address that stores the values of width
+and height. The memory allocated to rectangle is shown pointing to the blocks of memory that
 and height. The memory allocated to rectangle is shown pointing to the blocks of memory that
 are allocated to width and height. The same applies to the object book.
+are allocated to width and height. The same applies to the object book.
+Step 3 runs the following code:
 Step 3 runs the following code:
 changeThings(level, rectangle, book.
+changeThings(level, rectangle, book.
+The parameter y is shown pointing to the same block of memory rectangle points to and
 The parameter y is shown pointing to the same block of memory rectangle points to and
 parameter z points to the same block of memory that book points to.
+parameter z points to the same block of memory that book points to.
+Step 4 runs the following code in changeThings: x = 33;.
 Step 4 runs the following code in changeThings: x = 33;.
 Step 5 runs the following code in changeThings: y.width = 20;
+Step 5 runs the following code in changeThings: y.width = 20;
+Step 6 runs the following code in change Things: z = { title: 'The Hunger Games",
 Step 6 runs the following code in change Things: z = { title: 'The Hunger Games",
 author: "Suzanne Collins"};
+author: "Suzanne Collins"};
+In step, 7 the function change Things returns and runs the following code:
 In step, 7 the function change Things returns and runs the following code:
 console.log(level);
+console.log(level);
+console.log(rectangle.width);
 console.log(rectangle.width);
 console.log(book.title);.
+console.log(book.title);.
+5, 20, and Twilight are displayed in the console.
 5, 20, and Twilight are displayed in the console.
 After returning x, y, and z have their memory deallocated. Since the memory that stored the
+After returning x, y, and z have their memory deallocated. Since the memory that stored the
+object z referred to no longer has a reference, the object gets deallocated memory.
 object z referred to no longer has a reference, the object gets deallocated memory.
 Animation captions:
+Animation captions:
+1. level is a number, which is a primitive type.
 1. level is a number, which is a primitive type.
 2. rectangle and book are objects. Each object refers to the object's location in memory.
+2. rectangle and book are objects. Each object refers to the object's location in memory.
+3. The call to change Things() assigns a copy of each argument to the x, y, and z parameters. y
 3. The call to change Things() assigns a copy of each argument to the x, y, and z parameters. y
 refers to the same object as rectangle, and z refers to the same object as book.
+refers to the same object as rectangle, and z refers to the same object as book.
+4. Assigning x a new number does not change level.
 4. Assigning x a new number does not change level.
 5. Assigning y.width a new number changes rectangle.width since bothy and rectangle refer
+5. Assigning y.width a new number changes rectangle.width since bothy and rectangle refer
+to the same object.
 to the same object.
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 92 of 119 2024-10-12, 4:01 p.m.
+92 of 119 2024-10-12, 4:01 p.m.
+6. Assigning z a new object does not change book since z and book refer to different objects.
 6. Assigning z a new object does not change book since z and book refer to different objects.
 7. After returning from change Things(), rectangle.width is the only value that has changed.
+7. After returning from change Things(), rectangle.width is the only value that has changed.
+I PARTICIPATION I . . . ACTIVITY 3.9.8: Passing objects to functions.
 I PARTICIPATION I . . . ACTIVITY 3.9.8: Passing objects to functions.
 Refer to the code below.
+Refer to the code below.
+fun c ti on changeMovie (movie )
 fun c ti on changeMovie (movie )
 movie . title = "The Avengers " ;
+movie . title = "The Avengers " ;
+movie . released = 2012 ;
 movie . released = 2012 ;
 movie = {
+movie = {
+title : "Avengers: Endgame" ,
 title : "Avengers: Endgame" ,
 released : 2019 };
+released : 2019 };
+let avengersMovie = {
 let avengersMovie = {
 } ;
+} ;
+title : "Avengers: Infinity War " ,
 title : "Avengers: Infinity War " ,
 released : 2018
+released : 2018
+1) What is output to the console?
 1) What is output to the console?
 changeMovie (avengersMovie );
+changeMovie (avengersMovie );
+console . log (avengersMovie . title );
 console . log (avengersMovie . title );
 0 Avengers: Infinity War
+0 Avengers: Infinity War
+0 The Avengers
 0 The Avengers
 0 Avengers: Endgame
+0 Avengers: Endgame
+2) What is output to the console?
 2) What is output to the console?
 let myMovie = avengersMovie ;
+let myMovie = avengersMovie ;
+myMovie . title = "Avengers: Age of
 myMovie . title = "Avengers: Age of
 Ultron " ;
+Ultron " ;
+console . log (avengersMovie . title );
 console . log (avengersMovie . title );
 0 Avengers: Infinity War
+0 Avengers: Infinity War
+0 The Avengers
 0 The Avengers
 0 Avengers: Age of Ultron
+0 Avengers: Age of Ultron
+I CHALLENGE I . ACTIVITY 3.9.1: Objects.
 I CHALLENGE I . ACTIVITY 3.9.1: Objects.
 5707 04.20654 7 6.qx3zqy7
+5707 04.20654 7 6.qx3zqy7
+□
 □
 0
 0
+0
+0
+□
 □
 myMap["key"]
+myMap["key"]
+stateCapitals["CO"]);
 stateCapitals["CO"]);
 stateCapitals
+stateCapitals
+AR Little Rock
 AR Little Rock
 CO Denver
+CO Denver
+NM Santa Fe
 NM Santa Fe
 CO capital is Denver
+CO capital is Denver
+TX Austin
 TX Austin
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 93 of 119 2024-10-12, 4:01 p.m.
+93 of 119 2024-10-12, 4:01 p.m.
+Exploring further: 3.1 O Maps
 Exploring further: 3.1 O Maps
 • Working with objects (MON).
+• Working with objects (MON).
+Objects as maps
 Objects as maps
 A map or associative array is a data structure that maps keys to values. Each key/value pair in a
+A map or associative array is a data structure that maps keys to values. Each key/value pair in a
+map is called an element.
 map is called an element.
 JavaScript objects can be used as maps, in which the key is the object property and the value is the
+JavaScript objects can be used as maps, in which the key is the object property and the value is the
+property's value. When an object is used as a map, individual elements are accessed by key using
 property's value. When an object is used as a map, individual elements are accessed by key using
 brackets. Ex:
+brackets. Ex:
+IAP ACRTTIVICITIPYA TION I 3.10.1: State capitals in an obJ·ect map.
 IAP ACRTTIVICITIPYA TION I 3.10.1: State capitals in an obJ·ect map.
 l et stateCapi ta l s = {
+l et stateCapi ta l s = {
+AR : " Little Rock" ,
 AR : " Little Rock" ,
 CO : " Denver " ,
+CO : " Denver " ,
+NM : "Sante Fe "
 NM : "Sante Fe "
 } ;
+} ;
+consol e . l og ( "CO capital is " + stateCapi tal
 consol e . l og ( "CO capital is " + stateCapi tal
 stateCapi ta l s [ " TX" ] = "Austin" ;
+stateCapi ta l s [ " TX" ] = "Austin" ;
+Animation content:
 Animation content:
 Static figure:
+Static figure:
+Begin code segment:
 Begin code segment:
 let stateCapitals = {
+let stateCapitals = {
+AR: "Little Rock",
 AR: "Little Rock",
 CO: "Denver",
+CO: "Denver",
+NM: "Sante Fe"
 NM: "Sante Fe"
 };
+};
+console.log("CO capital is "+ stateCapitals["CO"]);
 console.log("CO capital is "+ stateCapitals["CO"]);
 □
+□
+contacts["Dave"].email
 contacts["Dave"].email
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 94 of 119 2024-10-12, 4:01 p.m.
+94 of 119 2024-10-12, 4:01 p.m.
+stateCapitals[''TX"] = "Austin";
 stateCapitals[''TX"] = "Austin";
 End code segment.
+End code segment.
+Memory for stateCapitals shows four elements with two letter state codes as keys and capitals
 Memory for stateCapitals shows four elements with two letter state codes as keys and capitals
 as values: AR/''Little Rock", CO/"Denver", NM/"Santa Fe", and TX/"Austin".
+as values: AR/''Little Rock", CO/"Denver", NM/"Santa Fe", and TX/"Austin".
+Console displays:
 Console displays:
 CO capital is Denver
+CO capital is Denver
+Animation captions:
 Animation captions:
 1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+elements.
 elements.
 2. The map's value for key "CO" is "Denver".
+2. The map's value for key "CO" is "Denver".
+3. The capital of Texas, with key ''TX" and value "Austin", is added to the map.
 3. The capital of Texas, with key ''TX" and value "Austin", is added to the map.
 I PARTICIPATION I . ACTIVITY 3.10.2: ObJect maps.
+I PARTICIPATION I . ACTIVITY 3.10.2: ObJect maps.
+Refer to the object map below.
 Refer to the object map below.
 l et contacts = {
+l et contacts = {
+Rosa : {
 Rosa : {
 } ;
+} ;
+} '
 } '
 phone : "303-555-4321" ,
+phone : "303-555-4321" ,
+email : "rosa@gmail.com"
 email : "rosa@gmail.com"
 Dave : {
+Dave : {
+} '
 } '
 phone : "501-533-9988" ,
+phone : "501-533-9988" ,
+email : "dave@yahoo.com"
 email : "dave@yahoo.com"
 Li : {
+Li : {
+phone : "213-511-6758" ,
 phone : "213-511-6758" ,
 email : "li@msn.com"
+email : "li@msn.com"
+1) What outputs Dave's email address?
 1) What outputs Dave's email address?
 console . log ( __ );
+console . log ( __ );
+0 ["Dave"] .email
 0 ["Dave"] .email
 0 contacts.email
+0 contacts.email
+0
 0
 □
+□
+0
 0
 in
+in
+variable in object)
 variable in object)
 stateCapitals
+stateCapitals
 AR Little Rock
+AR Little Rock
+CO Denver
 CO Denver
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 95 of 119 2024-10-12, 4:01 p.m.
+95 of 119 2024-10-12, 4:01 p.m.
+2) What assigns a Twitter username to
 2) What assigns a Twitter username to
 Rosa?
+Rosa?
+--- = "@rosaLuvsCats " ;
 --- = "@rosaLuvsCats " ;
 0 contact s ["Rosa "] . t witte r
+0 contact s ["Rosa "] . t witte r
+0 contact s ["rosa "] . t witte r
 0 contact s ["rosa "] . t witte r
 0 contact s ["Rosa "] . email
+0 contact s ["Rosa "] . email
+3) What adds John to the contact s
 3) What adds John to the contact s
 map?
+map?
+___ = { phone : " 111-2222 " ,
 ___ = { phone : " 111-2222 " ,
 email : " john@work.org" };
+email : " john@work.org" };
+0 contact s ["John"] .email
 0 contact s ["John"] .email
 0 contact s
+0 contact s
 0 contact s ["John"]
+0 contact s ["John"]
+For-in loop
 For-in loop
 0
 0
+0
+0
+The for-in loop iterates over an object's properties in arbitrary order and is ideal for looping through
 The for-in loop iterates over an object's properties in arbitrary order and is ideal for looping through
 an object map's elements. The for-in loop declares a variable on the left side of the keyword and
+an object map's elements. The for-in loop declares a variable on the left side of the keyword and
+an object on the right. In each iteration, the variable is assigned with each of the object's properties.
 an object on the right. In each iteration, the variable is assigned with each of the object's properties.
 Construct 3.10.1: for-in loop.
+Construct 3.10.1: for-in loop.
+for (let vari ab
 for (let vari ab
 {
+{
+body
 body
 I PARTICIPATION
+I PARTICIPATION
+ACTIVITY I 3.10.3: Looping through an object map.
 ACTIVITY I 3.10.3: Looping through an object map.
 let stateCapitals = {
+let stateCapitals = {
+AR : "Little Rock" ,
 AR : "Little Rock" ,
 CO : " Denver " ,
+CO : " Denver " ,
+NM : "Sante Fe "
 NM : "Sante Fe "
 □
+□
+};
 };
 console.log("All capitals:");
+console.log("All capitals:");
+for (let state in stateCapitals) {
 for (let state in stateCapitals) {
 console.log(state + " is " + stateCapitals[state]);
+console.log(state + " is " + stateCapitals[state]);
+}
 }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 96 of 119 2024-10-12, 4:01 p.m.
+96 of 119 2024-10-12, 4:01 p.m.
+Animation content:
 Animation content:
 Static figure:
+Static figure:
+Begin code snippet:
 Begin code snippet:
 let stateCapitals = {
+let stateCapitals = {
+};
 };
 AR: "Little Rock",
+AR: "Little Rock",
+CO: "Denver",
 CO: "Denver",
 NM: "Sante Fe"
+NM: "Sante Fe"
+console.log("AII capitals:");
 console.log("AII capitals:");
 for (let state in stateCapitals) {
+for (let state in stateCapitals) {
+console.log(state +" is "+ stateCapitals[statel);
 console.log(state +" is "+ stateCapitals[statel);
 }
+}
+End code snippet.
 End code snippet.
 Console displays:
+Console displays:
+All capitals:
 All capitals:
 AR is Little Rock
+AR is Little Rock
+CO is Denver
 CO is Denver
 NM is Sante Fe
+NM is Sante Fe
+Animation captions:
 Animation captions:
 1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+1. An object map called stateCapitals is initialized with three key/value pairs, creating three
+elements.
 elements.
 2. The for-in loop declares variable state inside the for-in statement.
+2. The for-in loop declares variable state inside the for-in statement.
+3. The for-in loop assigns each key to the state variable, one at a time. The loop body outputs
 3. The for-in loop assigns each key to the state variable, one at a time. The loop body outputs
 each element.
+each element.
+I PARTICIPATION I
 I PARTICIPATION I
 ACTIVITY 3.10.4: For-in loop. □
+ACTIVITY 3.10.4: For-in loop. □
+let contacts = {
 let contacts = {
 Rosa: {
+Rosa: {
+phone: "303-555-4321",
 phone: "303-555-4321",
 email: "rosa@gmail.com"
+email: "rosa@gmail.com"
+},
 },
 Dave: {
+Dave: {
+phone: "501-533-9988",
 phone: "501-533-9988",
 email: "dave@yahoo.com"
+email: "dave@yahoo.com"
+},
 },
 Li: {
+Li: {
+phone: "213-511-6758",
 phone: "213-511-6758",
 email: "li@msn.com"
+email: "li@msn.com"
+}
 }
 };
+};
+contacts
 contacts
 for (______) {
+for (______) {
+console log(name + ": " +
 console log(name + ": " +
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 97 of 119 2024-10-12, 4:01 p.m.
+97 of 119 2024-10-12, 4:01 p.m.
+Refer to the object map below.
 Refer to the object map below.
 7) Which expression loops through the
+7) Which expression loops through the
+map to output all names
 map to output all names
 and phone numbers?
+and phone numbers?
+..__,..._,, J..L..._, ..._,, ....L... ,.__, • ....L. ..._,,':::I \ J..LI...A..LL L'--' I
 ..__,..._,, J..L..._, ..._,, ....L... ,.__, • ....L. ..._,,':::I \ J..LI...A..LL L'--' I
 contacts [name ] . phone );
+contacts [name ] . phone );
+}
 }
 0 let contacts
+0 let contacts
+0 let name in contacts
 0 let name in contacts
 0 let contacts in name
+0 let contacts in name
+2) What is missing to assign email with
 2) What is missing to assign email with
 each contact's email address?
+each contact's email address?
+f o r (l et name in contacts )
 f o r (l et name in contacts )
 l et email =
+l et email =
+i f (email . inc ludes ( "msn " ))
 i f (email . inc ludes ( "msn " ))
 consol e . l og (name );
+consol e . l og (name );
+0 contacts.email
 0 contacts.email
 0 name.email
+0 name.email
 0 contacts[name] .email
+0 contacts[name] .email
+IAP ACRTTIVICITIPYA TION I 3.10.5: Practice with obJ·ect maps.
 IAP ACRTTIVICITIPYA TION I 3.10.5: Practice with obJ·ect maps.
 0
 0
+0
+0
+□
 □
 courses
+courses
+title
 title
 description creditHours
+description creditHours
+length
 length
 true
+true
+false
 false
 {
+{
+,
 ,
 stateCapitals);
+stateCapitals);
+//
 //
 length); // 3
+length); // 3
+// Evaluates true
 // Evaluates true
 if ("NM" in stateCapitals) {
+if ("NM" in stateCapitals) {
+console.log("NM exists");
 console.log("NM exists");
 }
+}
+// Remove the NM/Santa Fe pair
 // Remove the NM/Santa Fe pair
 delete stateCapitals["NM"];
+delete stateCapitals["NM"];
 // Evaluates false
+// Evaluates false
+if ("NM" in stateCapitals) {
 if ("NM" in stateCapitals) {
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 98 of 119 2024-10-12, 4:01 p.m.
+98 of 119 2024-10-12, 4:01 p.m.
+Create an object map called that stores a university department's course
 Create an object map called that stores a university department's course
 number as the key and an object as the value. The object has three properties:
+number as the key and an object as the value. The object has three properties:
+. Example courses:
 . Example courses:
 • 770 - Introduction to Programming, Develop algorithms for computers, 5.
+• 770 - Introduction to Programming, Develop algorithms for computers, 5.
+• 250 - Web Development, Build web applications, 3.
 • 250 - Web Development, Build web applications, 3.
 • 31 O - Operating Systems, Process management and memory management, 3.
+• 31 O - Operating Systems, Process management and memory management, 3.
+• 430 - Artificial Intelligence, Simulate human thinking, 2.
 • 430 - Artificial Intelligence, Simulate human thinking, 2.
 Then, write a for-in loop that displays the course number and title for only those courses
+Then, write a for-in loop that displays the course number and title for only those courses
+that are 3 credit hours.
 that are 3 credit hours.
 Other object map operations
+Other object map operations
+Other common operations performed on object maps include:
 Other common operations performed on object maps include:
 • Get number of elements. The Object.keys() method returns an array of an object's property
+• Get number of elements. The Object.keys() method returns an array of an object's property
+names. The array's property returns the number of elements in the object map.
 names. The array's property returns the number of elements in the object map.
 • Check for key. The in operator returns if an object contains the given property and
+• Check for key. The in operator returns if an object contains the given property and
+returns otherwise.
 returns otherwise.
 • Remove element. The delete operator removes a key/property from a map or object.
+• Remove element. The delete operator removes a key/property from a map or object.
+Figure 3.10.1: Object map operations example.
 Figure 3.10.1: Object map operations example.
 let stateCapital s = I
+let stateCapital s = I
+AR : "Little Rock " ,
 AR : "Little Rock " ,
 CO : "Denver" ,
+CO : "Denver" ,
+NM : "Sante Fe "
 NM : "Sante Fe "
 } ;
+} ;
+let states =
 let states =
 Ob j ect . keys (stateCapj
+Ob j ect . keys (stateCapj
+consol e . l og (states );
 consol e . l og (states );
 AR, CO,NM
+AR, CO,NM
+console . log (states . lE
 console . log (states . lE
 length);
+length);
+students
 students
 if (________) {
+if (________) {
+console.log("Hello, "
 console.log("Hello, "
 + students[888].name);
++ students[888].name);
+}
 }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 99 of 119 2024-10-12, 4:01 p.m.
+99 of 119 2024-10-12, 4:01 p.m.
+I PARTICIPATION I . ACTIVITY 3.10.6: in and delete operators.
 I PARTICIPATION I . ACTIVITY 3.10.6: in and delete operators.
 Refer to the object map below.
+Refer to the object map below.
+let students = {
 let students = {
 123 : { name : "Tiara" , gpa : 3 . 3 } '
+123 : { name : "Tiara" , gpa : 3 . 3 } '
+444 : { name : "Lee" , gpa : 2 . 0 } '
 444 : { name : "Lee" , gpa : 2 . 0 } '
 987 : { name : "Braden" , gpa : 3 . 1 }
+987 : { name : "Braden" , gpa : 3 . 1 }
+} ;
 } ;
 1) Remove Lee from students.
+1) Remove Lee from students.
+delete
 delete
 Check Show answer
+Check Show answer
+2) Assuming students has three elements before
 2) Assuming students has three elements before
 the code executes, what number is output to the
+the code executes, what number is output to the
+console?
 console?
 delete students ["Braden " ];
+delete students ["Braden " ];
+consol e . log (Ob j ect . keys (students ) . l er
 consol e . log (Ob j ect . keys (students ) . l er
 Check Show answer
+Check Show answer
+3) What is missing to check if
 3) What is missing to check if
 student ID 888 is in ?
+student ID 888 is in ?
+□
 □
 0
 0
 0
+0
+0
+0
+Map
+Map
 Map
 Map
 [key, value]
+[key, value]
+stateCapitals
 stateCapitals
 AR Little Rock
+AR Little Rock
+CO Denver
 CO Denver
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 100 of 119 2024-10-12, 4:01 p.m.
+100 of 119 2024-10-12, 4:01 p.m.
+Check Show answer
 Check Show answer
 4) What is output to the console?
+4) What is output to the console?
+for (let i d in students )
 for (let i d in students )
 {
+{
+delete students [ i d ];
 delete students [ i d ];
 if (123 in students ) {
+if (123 in students ) {
+consol e . l og ("yes" );
 consol e . l og ("yes" );
 else {
+else {
+consol e . l og ("no" );
 consol e . l og ("no" );
 Check Show answer
+Check Show answer
+Map object
 Map object
 The Map object is a newer alternative to using objects for storing key/value pairs. Common
+The Map object is a newer alternative to using objects for storing key/value pairs. Common
+methods and properties of the object include:
 methods and properties of the object include:
 0
+0
+• The set(key, value) method sets a key/value pair. If the key is new, a new element is added to
 • The set(key, value) method sets a key/value pair. If the key is new, a new element is added to
 the map. If the key already exists, the new value replaces the existing value.
+the map. If the key already exists, the new value replaces the existing value.
+• The get(key) method gets a key's associated value.
 • The get(key) method gets a key's associated value.
 • The has(key) method returns true if a map contains a key, false otherwise.
+• The has(key) method returns true if a map contains a key, false otherwise.
+• The delete(key) method removes a map element.
 • The delete(key) method removes a map element.
 • The size property is the number of elements in the map.
+• The size property is the number of elements in the map.
+The for-of loop, which is often used to loop through an array, is ideal for looping through a
 The for-of loop, which is often used to loop through an array, is ideal for looping through a
 Each of the map's key/value pairs are assigned to the
+Each of the map's key/value pairs are assigned to the
+of loop, as illustrated in the animation below.
 of loop, as illustrated in the animation below.
 variables declared in the for-
+variables declared in the for-
+I PARTICIPATION I . . AcTiviTv 3.7 0.7: State capitals in a Map.
 I PARTICIPATION I . . AcTiviTv 3.7 0.7: State capitals in a Map.
 let stateCapi tal s = new Map ();
+let stateCapi tal s = new Map ();
+stateCapi tal s . set ("AR" , "Little Rock " );
 stateCapi tal s . set ("AR" , "Little Rock " );
 stateCapital s . set ("CO" , "Denver" );
+stateCapital s . set ("CO" , "Denver" );
+□
 □
 stateCapitals.set("NM", "Santa Fe");
+stateCapitals.set("NM", "Santa Fe");
+console.log("Size of map is " + stateCapitals.size);
 console.log("Size of map is " + stateCapitals.size);
 if (stateCapitals.has("CO")) {
+if (stateCapitals.has("CO")) {
+console.log("CO capital is " + stateCapitals.get("CO"));
 console.log("CO capital is " + stateCapitals.get("CO"));
 }
+}
+console.log("All capitals:");
 console.log("All capitals:");
 for (let [state, capital] of stateCapitals) {
+for (let [state, capital] of stateCapitals) {
 console.log(state + " is " + capital);
+console.log(state + " is " + capital);
+}
 }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 101 of 119 2024-10-12, 4:01 p.m.
+101 of 119 2024-10-12, 4:01 p.m.
+Animation content:
 Animation content:
 The following code is displayed:
+The following code is displayed:
+let stateCapitals = new Map();
 let stateCapitals = new Map();
 stateCapitals.set("AR", "Little Rock");
-stateCapitals.set("CO", "Denver");
-stateCapitals.set("NM", "Santa Fe");
-console.log("Size of map is"+ stateCapitals.size);
-if (stateCapitals.has("CO")) {
-console.log("CO capital is"+ stateCapitals.get("CO"));
-}
-console.log("AII capitals:");
-for (let [state, capital] of stateCapitals) {
-console.log(state +"is"+ capital);
-}
-Step 1 runs the first line and stateCapitals is initialized to a map object with nothing stored.
-Step 2 runs the following code:
 stateCapitals.set("AR", "Little Rock");
 stateCapitals.set("CO", "Denver");
-stateCapitals.set("NM", "Santa Fe");.
-The map stateCapitals is populated with keys: AR, CO, and NM. Each key is associated with a
-memory location storing the strings: Little Rock, Denver, and Sante Fe.
-Step 3 runs the following line of code:
-console.log("Size of map is"+ stateCapitals.size);.
-Size of map is 3 is displayed in the console.
-Step 4 runs the following if block:
+stateCapitals.set("CO", "Denver");
+stateCapitals.set("NM", "Santa Fe");
+stateCapitals.set("NM", "Santa Fe");
+console.log("Size of map is"+ stateCapitals.size);
+console.log("Size of map is"+ stateCapitals.size);
+if (stateCapitals.has("CO")) {
 if (stateCapitals.has("CO")) {
 console.log("CO capital is"+ stateCapitals.get("CO"));
+console.log("CO capital is"+ stateCapitals.get("CO"));
+}
+}
+console.log("AII capitals:");
+console.log("AII capitals:");
+for (let [state, capital] of stateCapitals) {
+for (let [state, capital] of stateCapitals) {
+console.log(state +"is"+ capital);
+console.log(state +"is"+ capital);
+}
+}
+Step 1 runs the first line and stateCapitals is initialized to a map object with nothing stored.
+Step 1 runs the first line and stateCapitals is initialized to a map object with nothing stored.
+Step 2 runs the following code:
+Step 2 runs the following code:
+stateCapitals.set("AR", "Little Rock");
+stateCapitals.set("AR", "Little Rock");
+stateCapitals.set("CO", "Denver");
+stateCapitals.set("CO", "Denver");
+stateCapitals.set("NM", "Santa Fe");.
+stateCapitals.set("NM", "Santa Fe");.
+The map stateCapitals is populated with keys: AR, CO, and NM. Each key is associated with a
+The map stateCapitals is populated with keys: AR, CO, and NM. Each key is associated with a
+memory location storing the strings: Little Rock, Denver, and Sante Fe.
+memory location storing the strings: Little Rock, Denver, and Sante Fe.
+Step 3 runs the following line of code:
+Step 3 runs the following line of code:
+console.log("Size of map is"+ stateCapitals.size);.
+console.log("Size of map is"+ stateCapitals.size);.
+Size of map is 3 is displayed in the console.
+Size of map is 3 is displayed in the console.
+Step 4 runs the following if block:
+Step 4 runs the following if block:
+if (stateCapitals.has("CO")) {
+if (stateCapitals.has("CO")) {
+console.log("CO capital is"+ stateCapitals.get("CO"));
+console.log("CO capital is"+ stateCapitals.get("CO"));
+}.
 }.
 CO capital is Denver is displayed in the console.
+CO capital is Denver is displayed in the console.
+email: "rosa@gmail.com" }],
 email: "rosa@gmail.com" }],
 email: "dave@yahoo.com" }],
+email: "dave@yahoo.com" }],
+email: "li@msn.com" }]
 email: "li@msn.com" }]
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 102 of 119 2024-10-12, 4:01 p.m.
+102 of 119 2024-10-12, 4:01 p.m.
+Step 5 runs the following code:
 Step 5 runs the following code:
 console.log("AII capitals:");
+console.log("AII capitals:");
+for (let [state, capital] of stateCapitals) {
 for (let [state, capital] of stateCapitals) {
 console.log(state +" is "+ capital);
+console.log(state +" is "+ capital);
+}.
 }.
 The following lines are displayed in the console:
+The following lines are displayed in the console:
+All capitals:
 All capitals:
 AR is Little Rock
+AR is Little Rock
+CO is Denver
 CO is Denver
 NM is Sante Fe
+NM is Sante Fe
+Animation captions:
 Animation captions:
 1. A new Map object is created with the Map() constructor.
+1. A new Map object is created with the Map() constructor.
+2. The set() method adds three key/value pairs to the stateCapitals Map.
 2. The set() method adds three key/value pairs to the stateCapitals Map.
 3. The size property returns 3 because stateCapitals has three key/value pairs.
+3. The size property returns 3 because stateCapitals has three key/value pairs.
+4. The has() method returns true because "CO" is one of the keys in stateCapitals. The get()
 4. The has() method returns true because "CO" is one of the keys in stateCapitals. The get()
 method returns the value associated with "CO".
+method returns the value associated with "CO".
+5. The for-of loop assigns each key/value pair to variables state and capital.
 5. The for-of loop assigns each key/value pair to variables state and capital.
 I PARTICIPATION I . ACTIVITY 3.10.8: Map obJect.
+I PARTICIPATION I . ACTIVITY 3.10.8: Map obJect.
+Refer to the map below.
 Refer to the map below.
 l et contacts = new Map ( [
+l et contacts = new Map ( [
+l ) ;
 l ) ;
 [ "Rosa" , { phone : "303-555-4321" , em
+[ "Rosa" , { phone : "303-555-4321" , em
+[ "Dave" , { phone : "501-533-9988" , em
 [ "Dave" , { phone : "501-533-9988" , em
 [ "Li" , { phone : "213-511-6758" , em
+[ "Li" , { phone : "213-511-6758" , em
+1) What is output to the console?
 1) What is output to the console?
 console . log (contacts . size );
+console . log (contacts . size );
+0 0
 0 0
 0 2
+0 2
+0 3
 0 3
 2) What is output to the console?
+2) What is output to the console?
+contacts . set ("Li" , {
 contacts . set ("Li" , {
 phone : "213-444-6758" ,
+phone : "213-444-6758" ,
+email : "li@email.com" } ) ;
 email : "li@email.com" } ) ;
 console . log (contacts . size );
+console . log (contacts . size );
+□
 □
 0
 0
+0
+0
+contacts.delete("Li");
 contacts.delete("Li");
 console.log(contacts.size);
+console.log(contacts.size);
+console.log(______);
 console.log(______);
 contacts.get("Dave")
+contacts.get("Dave")
+contacts.get("Dave").email
 contacts.get("Dave").email
 contacts["Dave"].email
+contacts["Dave"].email
+if (contacts.has("John")) {
 if (contacts.has("John")) {
 console.log(contacts.get("John").phone);
+console.log(contacts.get("John").phone);
+}
 }
 else {
+else {
+console.log("Missing");
 console.log("Missing");
 }
+}
+email phone
 email phone
 let rosa = contacts.get("Rosa");
+let rosa = contacts.get("Rosa");
+rosa.twitter = "@rosaLuvsCats";
 rosa.twitter = "@rosaLuvsCats";
 contacts.get("Rosa").twitter
+contacts.get("Rosa").twitter
+= "@rosaLuvsCats";
 = "@rosaLuvsCats";
 contacts.set("Rosa").twitter
+contacts.set("Rosa").twitter
+= "@rosaLuvsCats";
 = "@rosaLuvsCats";
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 103 of 119 2024-10-12, 4:01 p.m.
+103 of 119 2024-10-12, 4:01 p.m.
 0 0
+0 0
+0 3
 0 3
 0 4
+0 4
+3) What is output to the console?
 3) What is output to the console?
 0 0
+0 0
+0 2
 0 2
 0 3
+0 3
+4) What outputs Dave's email address?
 4) What outputs Dave's email address?
 0
 0
 0
+0
+0
+0
+5) What is output to the console?
 5) What is output to the console?
 0 John's phone number
+0 John's phone number
+0 The string "Missing"
 0 The string "Missing"
 0 An empty string
+0 An empty string
+6) The code below assigns a Twitter
 6) The code below assigns a Twitter
 username to Rosa while leaving Rosa's
+username to Rosa while leaving Rosa's
 and properties unaltered.
+and properties unaltered.
+How can the code be simplified?
 How can the code be simplified?
 0
 0
@@ -1478,30 +2915,62 @@ How can the code be simplified?
 0
 0
 0
+0
+0
+0
+0
+0
+0
+String
+String
+String
 String
 String
 String
 "test".charAt(1) String
+"test".charAt(1) String
+"test".length charAt() ≥
 "test".length charAt() ≥
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 104 of 119 2024-10-12, 4:01 p.m.
+104 of 119 2024-10-12, 4:01 p.m.
+contacts . set ("Rosa" , {
 contacts . set ("Rosa" , {
 Q twi tter = "@rosaLuvsCats"
+Q twi tter = "@rosaLuvsCats"
+} ) ;
 } ) ;
 7) Which expression loops through the
+7) Which expression loops through the
+contacts map to output all names
 contacts map to output all names
 and phone numbers?
+and phone numbers?
+f o r ( __ ) {
 f o r ( __ ) {
 con sol e . l og (name +
+con sol e . l og (name +
+contac t . p h one );
 contac t . p h one );
 ". " +
+". " +
+}
 }
 0 let contact of
+0 let contact of
+contacts
 contacts
 0 let [name, contact] of
+0 let [name, contact] of
+contacts
 contacts
 0 let name of contacts
+0 let name of contacts
+I CHALLENGE I ACTIVITY 3.7o. 7: Maps.
 I CHALLENGE I ACTIVITY 3.7o. 7: Maps.
 5707 04.2065416 qx3zqy7
+5707 04.2065416 qx3zqy7
 Exploring further:
+Exploring further:
+• Mar,2 object (MON)_
 • Mar,2 object (MON)_
