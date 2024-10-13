@@ -125,3 +125,5 @@ for area in subsections:
 
             except Exception as e:
                 print(f"Error processing {filepath}: {e}")
+
+        time.sleep(1)  # Sleep to avoid rate limits
