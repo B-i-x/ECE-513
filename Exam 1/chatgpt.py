@@ -1,7 +1,10 @@
-from openai import OpenAI
-client = OpenAI()
+import openai
+import os
 
-completion = client.chat.completions.create(
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+
+completion = openai.chat.completions.create(
     model="gpt-4o-mini",
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
