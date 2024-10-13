@@ -1,567 +1,1116 @@
-2. 5 Box model
+Box model components
 Box model components
 HTML elements take up space on the webpage. The box model describes the size of each element
+HTML elements take up space on the webpage. The box model describes the size of each element
+as a series of nested boxes. The box model is important to understand when considering design
 as a series of nested boxes. The box model is important to understand when considering design
 and layout.
+and layout.
+• Content: The innermost box contains the content of the element, such as text and images.
 • Content: The innermost box contains the content of the element, such as text and images.
 • Padding: The padding box contains the content box and adds a transparent area around the
+• Padding: The padding box contains the content box and adds a transparent area around the
+content.
 content.
 • Border: The border box contains the padded content and adds an optionally colored area
+• Border: The border box contains the padded content and adds an optionally colored area
+around the padding.
 around the padding.
 • Margin: The margin box contains all three boxes and adds a transparent area around the
+• Margin: The margin box contains all three boxes and adds a transparent area around the
+border.
 border.
 Figure 2.5.1: Box model with labeled boxes.
+Figure 2.5.1: Box model with labeled boxes.
+Margin
 Margin
 Border
+Border
+.: ················ ·· ··· ····· ······· ······· ·· ····· ···· ···· ··· ····· ··········,.
 .: ················ ·· ··· ····· ······· ······· ·· ····· ···· ···· ··· ····· ··········,.
 I Padding I
+I Padding I
 •, I- ---------------------------------I ••
+•, I- ---------------------------------I ••
+: I I :
 : I I :
 : I :
 : I :
+: I :
+: I :
+.• I .•
 .• I .•
 : Content :
+: Content :
+2024-10-12, 3:24 p.m.
 2024-10-12, 3:24 p.m.
 padding: 5px;
+padding: 5px;
+border: 2px solid blue;
 border: 2px solid blue;
 margin: 10px;
+margin: 10px;
+After
 After
 Content
+Content
+Before margin
 Before margin
 border
+border
+padding
 padding
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 47 of 98 2024-10-12, 3:24 p.m.
+47 of 98 2024-10-12, 3:24 p.m.
 -----
+-----
+' I
 ' I
 I
 I
+I
+I
+I- ------------------------ --- ------I
 I- ------------------------ --- ------I
 The CSS properties that control the padding, border, and margin are:
+The CSS properties that control the padding, border, and margin are:
+.-
 .-
 • The padding property specifies the padding thickness. Ex:
+• The padding property specifies the padding thickness. Ex:
+padding around the content.
 padding around the content.
 creates a 5 pixel
+creates a 5 pixel
+• The border property specifies the border's thickness, style, and color. Ex:
 • The border property specifies the border's thickness, style, and color. Ex:
 creates a solid blue border that is 2 pixels thick.
+creates a solid blue border that is 2 pixels thick.
+• The margin property specifies the margin thickness. Ex:
 • The margin property specifies the margin thickness. Ex:
 margin.
+margin.
+creates a 1 O pixel
 creates a 1 O pixel
 The content, padding, margin, and border boxes are rendered according to the following rules:
+The content, padding, margin, and border boxes are rendered according to the following rules:
+• The content is displayed with a background according to the element's background color.
 • The content is displayed with a background according to the element's background color.
 • The padding is transparent and will be displayed using the same color as the element's
+• The padding is transparent and will be displayed using the same color as the element's
+background.
 background.
 • The border can be either colored or transparent. If transparent, the border will be displayed
+• The border can be either colored or transparent. If transparent, the border will be displayed
+with the same color as the padding.
 with the same color as the padding.
 • The margin is transparent and will be displayed using the background color of the parent
+• The margin is transparent and will be displayed using the background color of the parent
+element. I PARTICIPATION
 element. I PARTICIPATION
 ACTIVITY 2.5.1: Box model displayed.
+ACTIVITY 2.5.1: Box model displayed.
+div { background- co l or : b l ue ; }
 div { background- co l or : b l ue ; }
 #content {
+#content {
+paddi ng : 5px;
 paddi ng : 5px;
 border : 5px solid b l ack ;
+border : 5px solid b l ack ;
+margi n : 5px ;
 margi n : 5px ;
 <div>Before</div>
+<div>Before</div>
+<div id=" content " >Content</div>
 <div id=" content " >Content</div>
 <div>After</div>
+<div>After</div>
+□
 □
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 48 of 98 2024-10-12, 3:24 p.m.
+48 of 98 2024-10-12, 3:24 p.m.
+A block of CSS is shown:
 A block of CSS is shown:
 div { background-color: blue;}
+div { background-color: blue;}
+#content {
 #content {
 }
+}
+padding: 5px;
 padding: 5px;
 border: 5px solid black;
+border: 5px solid black;
+margin: 5px;
 margin: 5px;
 A block of HTML is also shown:
+A block of HTML is also shown:
+<div>Before</div>
 <div>Before</div>
 <div id="content">Content</div>
+<div id="content">Content</div>
+<div>After</div>
 <div>After</div>
 Together the HTML and CSS displays three div elements on a screen. The first element is shown
+Together the HTML and CSS displays three div elements on a screen. The first element is shown
+in a blue box across the top of the screen and has the text "Before". The second is shown under
 in a blue box across the top of the screen and has the text "Before". The second is shown under
 the first element with a 5 pixel transparent margin that surrounds the 5 pixel black border. Inside
+the first element with a 5 pixel transparent margin that surrounds the 5 pixel black border. Inside
+the border there is a 5 pixel padding that surrounds the div content, which has the text "Content".
 the border there is a 5 pixel padding that surrounds the div content, which has the text "Content".
 Both the padding and the div element have the background color blue. The third div element is
+Both the padding and the div element have the background color blue. The third div element is
+displayed under the second div element. The third div is shown as a blue box spanning across the
 displayed under the second div element. The third div is shown as a blue box spanning across the
 screen with the text "After".
+screen with the text "After".
+Animation captions:
 Animation captions:
 1. The box model describes the space each HTML element takes as a box. Each div element
+1. The box model describes the space each HTML element takes as a box. Each div element
+is displayed with a blue background, and each box is highlighted with a light blue outline.
 is displayed with a blue background, and each box is highlighted with a light blue outline.
 2. Padding surrounds the content element with transparent space, which is displayed using
+2. Padding surrounds the content element with transparent space, which is displayed using
+the element's background color.
 the element's background color.
 3. The border surrounds the content and padding and is colored black.
+3. The border surrounds the content and padding and is colored black.
+4. The margin surrounds the border with transparent space and separates the element from
 4. The margin surrounds the border with transparent space and separates the element from
 other elements.
+other elements.
+I PARTICIPATION I . ACTIVITY 2.5.2: Choose the correct display color. □
 I PARTICIPATION I . ACTIVITY 2.5.2: Choose the correct display color. □
 Given the HTML and CSS below, choose which color each box will be displayed.
+Given the HTML and CSS below, choose which color each box will be displayed.
+<style>
 <style>
 div {
+div {
+background: white;
 background: white;
 border: 2px solid blue;
+border: 2px solid blue;
+}
 }
 span {
+span {
+background: yellow;
 background: yellow;
 border: 1px solid black;
+border: 1px solid black;
+padding: 2px;
 padding: 2px;
 margin: 2px;
+margin: 2px;
+}
 }
 emergency broadcast system.</div>
+emergency broadcast system.</div>
+padding margin
 padding margin
 margin: 20px;
+margin: 20px;
+margin: 10px 20px;
 margin: 10px 20px;
 margin: 10px 30px 20px;
+margin: 10px 30px 20px;
+margin: 10px 30px 20px 40px;
 margin: 10px 30px 20px 40px;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 49 of 98 2024-10-12, 3:24 p.m.
+49 of 98 2024-10-12, 3:24 p.m.
+</ style>
 </ style>
 <div>This is a <span>test</span> of the
+<div>This is a <span>test</span> of the
+If unable to drag and drop, refresh the page.
 If unable to drag and drop, refresh the page.
 black yellow white blue
+black yellow white blue
+span element's padding
 span element's padding
 span element's border
+span element's border
+span's margin
 span's margin
 div's border
+div's border
+Box sizing
 Box sizing
 The and properties may have from 1 to 4 values:
+The and properties may have from 1 to 4 values:
+• One value - Specifies uniform thickness around the box. Ex:
 • One value - Specifies uniform thickness around the box. Ex:
 margin thickness around the box.
+margin thickness around the box.
+Reset
 Reset
 specifies 20px
+specifies 20px
+• Two values - Specifies top and bottom, right and left thickness. Ex: rr argin: .1 up ~ .t. upx
 • Two values - Specifies top and bottom, right and left thickness. Ex: rr argin: .1 up ~ .t. upx
 specifies 1 0px top and bottom margins and 20px right and left margins.
+specifies 1 0px top and bottom margins and 20px right and left margins.
+• Three values - Specifies top, right and left, and bottom thickness. Ex:
 • Three values - Specifies top, right and left, and bottom thickness. Ex:
 specifies 1 0px top margin, 30px right and left margins, and
+specifies 1 0px top margin, 30px right and left margins, and
+20px bottom margin.
 20px bottom margin.
 • Four values - Specifies top, right, bottom, and left thickness. Ex:
+• Four values - Specifies top, right, bottom, and left thickness. Ex:
+specifies 1 0px top margin, 30px right margin, 20px
 specifies 1 0px top margin, 30px right margin, 20px
 bottom margin, and 40px left margin.
+bottom margin, and 40px left margin.
 padding border margin -top
+padding border margin -top
+-left -bottom -right padding-top:5px;
 -left -bottom -right padding-top:5px;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 50 of 98 2024-10-12, 3:24 p.m.
+50 of 98 2024-10-12, 3:24 p.m.
+Example 2.5.1: Example with non-uniform margin and padding thickness.
 Example 2.5.1: Example with non-uniform margin and padding thickness.
 <style>
+<style>
+hl {
 hl {
 margin : 40px 30px ;
+margin : 40px 30px ;
+padding : 20px 50px 40px ;
 padding : 20px 50px 40px ;
 background-color : khaki ;
+background-color : khaki ;
+</ style>
 </ style>
 <hl>The Box Model </hl>
+<hl>The Box Model </hl>
+40px
 40px
 50px 20px
+50px 20px
+3opx - The Box Model
 3opx - The Box Model
 40px
 40px
+40px
+40px
+~ 30px
 ~ 30px
 The ,and CSS properties can apply only to one side by adding a
+The ,and CSS properties can apply only to one side by adding a
+, or suffix to the CSS property. Ex: specifies 5
 , or suffix to the CSS property. Ex: specifies 5
 pixels of padding above the content.
+pixels of padding above the content.
 Example 2.5.2: Example specifying one side of the box.
+Example 2.5.2: Example specifying one side of the box.
+darkcyan;
 darkcyan;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 51 of 98 2024-10-12, 3:24 p.m.
+51 of 98 2024-10-12, 3:24 p.m.
+<style>
 <style>
 hl {
+hl {
+border-left : Spx solid darkcy,
 border-left : Spx solid darkcy,
 margin-right : 30px ;
+margin-right : 30px ;
+padding-top : 20px ;
 padding-top : 20px ;
 background-color : lightcyan ;
+background-color : lightcyan ;
+</style>
 </style>
 <hl>The Box Model</hl>
+<hl>The Box Model</hl>
+ITh;dBg;; Model
 ITh;dBg;; Model
 border-left
+border-left
+I PARTICIPATION I . ACTIVITY 2.5.3: Box model properties.
 I PARTICIPATION I . ACTIVITY 2.5.3: Box model properties.
 1) What CSS declaration sets the
+1) What CSS declaration sets the
+margin to have a uniform space
 margin to have a uniform space
 of 20 pixels?
+of 20 pixels?
+Check Show answer
 Check Show answer
 2) What CSS declaration changes
+2) What CSS declaration changes
+the top and bottom padding to
 the top and bottom padding to
 be 20 pixels and right and left to
+be 20 pixels and right and left to
+be 30 pixels?
 be 30 pixels?
 Check Show answer
+Check Show answer
+3) What CSS declaration changes
 3) What CSS declaration changes
 the right padding to be 1 0 pixels
+the right padding to be 1 0 pixels
+wide?
 wide?
 Check Show answer
+Check Show answer
+marg·n-right
 marg·n-right
 □
+□
+0
+0
+0
 0
 0
 0
 width height
+width height
+width: 20px;
 width: 20px;
 height: 30px;
+height: 30px;
+height
 height
 <div id="nopadding">Controlling the content size</div>
+<div id="nopadding">Controlling the content size</div>
+<div id="padding">Controlling the content size</div>
 <div id="padding">Controlling the content size</div>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 52 of 98 2024-10-12, 3:24 p.m.
+52 of 98 2024-10-12, 3:24 p.m.
+Content width and height
 Content width and height
 A block element's content spans the width of the enclosing parent element by default, but the
+A block element's content spans the width of the enclosing parent element by default, but the
+content size can be changed with the and CSS properties:
 content size can be changed with the and CSS properties:
 • The width property specifies the content's width. Ex:
+• The width property specifies the content's width. Ex:
+20px wide.
 20px wide.
 , • ? n-r::,::><::: makes the content
+, • ? n-r::,::><::: makes the content
+• The height property specifies the content's height. Ex:
 • The height property specifies the content's height. Ex:
 30px high.
+30px high.
+Example 2.5.3: Example using width and height properties.
 Example 2.5.3: Example using width and height properties.
 makes the content
+makes the content
+Two <div> elements have the same width and property values. However, the
 Two <div> elements have the same width and property values. However, the
 second <div> appears larger because of the additional padding.
+second <div> appears larger because of the additional padding.
+<style>
 <style>
 #nopadding {
+#nopadding {
 width : 200px ;
+width : 200px ;
+height : lOOpx ;
 height : lOOpx ;
 background-color : li ghtgreen ;
+background-color : li ghtgreen ;
+font-size : 30px ;
 font-size : 30px ;
 #padding {
+#padding {
+padding : 50px ;
 padding : 50px ;
 width : 200px ;
+width : 200px ;
+height : lOOpx ;
 height : lOOpx ;
 background-color : khaki ;
+background-color : khaki ;
+font-size : 30px ;
 font-size : 30px ;
 </style>
+</style>
+Controlling the
 Controlling the
 content size 100 px
+content size 100 px
+200 px ! 50 px
 200 px ! 50 px
 __ Controlling the
+__ Controlling the
+50 px content size
 50 px content size
 .. ..
+.. ..
+50 px
 50 px
 width height <span>
+width height <span>
 display inline-block
+display inline-block
+and <span id="span2">Span 2</
 and <span id="span2">Span 2</
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 53 of 98 2024-10-12, 3:24 p.m.
+53 of 98 2024-10-12, 3:24 p.m.
+! 50 px
 ! 50 px
 ~------
+~------
+A common error is to use or on inline elements. An inline element like has a
 A common error is to use or on inline elements. An inline element like has a
 width and height that is equal to the size of the element's content. The width and height cannot be
+width and height that is equal to the size of the element's content. The width and height cannot be
+changed unless the inline element's property is changed to _Lll~_;_rn:: ~~V\.., ;_,_,
 changed unless the inline element's property is changed to _Lll~_;_rn:: ~~V\.., ;_,_,
 Example 2.5.4: Example using width and height properties on an inline
+Example 2.5.4: Example using width and height properties on an inline
+element.
 element.
 <style>
+<style>
+#spanl {
 #spanl {
 wi dth : 80px ; /* Ign ored */
+wi dth : 80px ; /* Ign ored */
+height : 40px ; /* Ign ored */
 height : 40px ; /* Ign ored */
 background-color : lightgreen ;
+background-color : lightgreen ;
+#span2
 #span2
 d isplay : inline-block ;
+d isplay : inline-block ;
+wi dth : 80px ;
 wi dth : 80px ;
 height : 40px ;
+height : 40px ;
+background-color : khaki ;
 background-color : khaki ;
 </ style>
+</ style>
+<p>
 <p>
 <span i d= "spanl" >Span l </ span>
+<span i d= "spanl" >Span l </ span>
+span>
 span>
 </ p>
+</ p>
+Span 1 and Span 2
 Span 1 and Span 2
 I PARTICIPATION I . ACTIVITY 2.5.4: Compute the size.
+I PARTICIPATION I . ACTIVITY 2.5.4: Compute the size.
+1) What is the total <div> width?
 1) What is the total <div> width?
 □
+□
+0
 0
 <style>
+<style>
+div {
 div {
 width: 200px;
+width: 200px;
+padding: 10px;
 padding: 10px;
 border: 2px solid
+border: 2px solid
+green;
 green;
 margin: 5px;
+margin: 5px;
+}
 }
 </style>
+</style>
+<div>How wide am I?</div>
 <div>How wide am I?</div>
 pixels
+pixels
+<div>
 <div>
 <style>
+<style>
+div {
 div {
 height: 100px;
+height: 100px;
+margin: 10px 5px;
 margin: 10px 5px;
 }
-</style>
-<div>How tall am I?</div>
-pixels
-<div>
-<style>
-div {
-width: 100px;
-margin-left: 10px;
-margin-right: 15px;
-padding: 2px 5px 10px
-20px;
 }
 </style>
+</style>
+<div>How tall am I?</div>
+<div>How tall am I?</div>
+pixels
+pixels
+<div>
+<div>
+<style>
+<style>
+div {
+div {
+width: 100px;
+width: 100px;
+margin-left: 10px;
+margin-left: 10px;
+margin-right: 15px;
+margin-right: 15px;
+padding: 2px 5px 10px
+padding: 2px 5px 10px
+20px;
+20px;
+}
+}
+</style>
+</style>
 <div>How wide am I?</div>
+<div>How wide am I?</div>
+pixels
 pixels
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 54 of 98 2024-10-12, 3:24 p.m.
+54 of 98 2024-10-12, 3:24 p.m.
+Check Show answer
 Check Show answer
 2) What is the total height? 0
+2) What is the total height? 0
+Check Show answer
 Check Show answer
 3) What is the total width? 0
+3) What is the total width? 0
+<h1>
 <h1>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 55 of 98 2024-10-12, 3:24 p.m.
+55 of 98 2024-10-12, 3:24 p.m.
+Check Show answer
 Check Show answer
 4) The default <strong> content
+4) The default <strong> content
+width is 115px. What is the total
 width is 115px. What is the total
 <strong> width?
+<strong> width?
+<style>
 <style>
 strong {
+strong {
+width : 200px ;
 width : 200px ;
 margin : 5px ;
+margin : 5px ;
+</ style>
 </ style>
 <strong>How wi de am I ?</
+<strong>How wi de am I ?</
+strong>
 strong>
 pixels
+pixels
+Check Show answer
 Check Show answer
 Chrome DevTools
+Chrome DevTools
+The Chrome DevTools display the margin, border, padding, and content sizes for all
 The Chrome DevTools display the margin, border, padding, and content sizes for all
 elements. The screens hot below shows the size of the element with the
+elements. The screens hot below shows the size of the element with the
+content (509 x 37 pixels) at the center.
 content (509 x 37 pixels) at the center.
 C') The Box Model X + □ X
+C') The Box Model X + □ X
+C ()) fi le:///C:/temp/ es .html *
 C ()) fi le:///C:/temp/ es .html *
 The Box Model
+The Box Model
+~ oJ !:lemen s Console Sources etwork Performance Memory Application » X
 ~ oJ !:lemen s Console Sources etwork Performance Memory Application » X
 doct, .e 1
+doct, .e 1
+<ht ml>
 <ht ml>
 ► <head >--</head>
+► <head >--</head>
+"' <body>
 "' <body>
 hl The Box Mode / hl == $fJ
+hl The Box Mode / hl == $fJ
+</ body>
 </ body>
 </ iltrnl >
+</ iltrnl >
+------
 ------
 Styles Computed Event Listene rs »
+Styles Computed Event Listene rs »
+Filter
 Filter
 }
+}
+11.IY I !:'.4 WJI 1,11 1., i n .. ..:,1,.1.,11 I. ■ u~,r, J
 11.IY I !:'.4 WJI 1,11 1., i n .. ..:,1,.1.,11 I. ■ u~,r, J
 l!iargin-·i.nline-end: @px;
+l!iargin-·i.nline-end: @px;
+font-wei.g/Jt : bot d;
 font-wei.g/Jt : bot d;
 :hov .el s +. . ...
+:hov .el s +. . ...
+0
 0
 border
+border
+border-width: 5px;
 border-width: 5px;
 border-style: dashed;
+border-style: dashed;
+border-color: green;
 border-color: green;
 solid black;
+solid black;
+dashed red;
 dashed red;
 dotted blue;
+dotted blue;
+none green;
 none green;
 border: 5px double gray;
+border: 5px double gray;
 border: 5px groove orange;
+border: 5px groove orange;
+border: 5px ridge pink;
 border: 5px ridge pink;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 56 of 98 2024-10-12, 3:24 p.m.
+56 of 98 2024-10-12, 3:24 p.m.
+margin 40
 margin 40
 bor :::l ~r
+bor :::l ~r
+I"'-----------------, ! p;dding 20 l
 I"'-----------------, ! p;dding 20 l
 30 -i so I sog • 3 7 1 so! - 30
+30 -i so I sog • 3 7 1 so! - 30
+' i l _ -----40 -------_ J
 ' i l _ -----40 -------_ J
 40
+40
+htm I body h 1
 htm I body h 1
 Border styles
+Border styles
+The property combines the border width, style, and color. Each CSS property may also be
 The property combines the border width, style, and color. Each CSS property may also be
 specified separately:
+specified separately:
+• The border-width property specifies the border's width. Ex:
 • The border-width property specifies the border's width. Ex:
 a border that is 5px thick.
+a border that is 5px thick.
+• The border-style property specifies the border's style. Ex:
 • The border-style property specifies the border's style. Ex:
 specifies a border that is dashed.
+specifies a border that is dashed.
+• The border-color property specifies the border's color. Ex:
 • The border-color property specifies the border's color. Ex:
 specifies a border that is green.
+specifies a border that is green.
+Table 2.5.1: Common border styles.
 Table 2.5.1: Common border styles.
 Style CSS example
+Style CSS example
+Isolid
 Isolid
 border: 2px so
+border: 2px so
+1---
 1---
 dashed border: 2px da
+dashed border: 2px da
+dotted border: 2px do
 dotted border: 2px do
 none border: 2px no
+none border: 2px no
+double
 double
 groove
+groove
+ridge
 ridge
 specifies
+specifies
+Displayed
 Displayed
 I example I
+I example I
+r-----,
 r-----,
 : example :
+: example :
+.L.. .-....- ...-...-...-......I
 .L.. .-....- ...-...-...-......I
 ..\. e...x..a..m...p..l.e.. ....\
+..\. e...x..a..m...p..l.e.. ....\
+example
 example
 II example II
+II example II
+example
 example
 I example
+I example
+style
 style
 zyBooks
+zyBooks
+57 of98
 57 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 inset border: 5px inset brown;
+inset border: 5px inset brown;
+I example I
 I example I
 -=
+-=
+outset border: 5px outset yellow;
 outset border: 5px outset yellow;
 example
+example
+I PARTICIPATION I . . . ACTIVITY 2.5.5: Modify the padding, border, and margin.
 I PARTICIPATION I . . . ACTIVITY 2.5.5: Modify the padding, border, and margin.
 Modify the CSS declarations for the span and p rules to meet each requirement below:
+Modify the CSS declarations for the span and p rules to meet each requirement below:
+1. Padding on the span: 5 pixels left, and 5 pixels right.
 1. Padding on the span: 5 pixels left, and 5 pixels right.
 2. Border on the span: 2 pixels solid black above (use -top
+2. Border on the span: 2 pixels solid black above (use -top
+suffix), and 4 pixels solid
 suffix), and 4 pixels solid
 gray below (use -bot tom).
+gray below (use -bot tom).
+3. Padding on the paragraph: 10 pixels on all sides.
 3. Padding on the paragraph: 10 pixels on all sides.
 4. Border on the paragraph: 10 pixels, light green, ridge style (use border-style,
+4. Border on the paragraph: 10 pixels, light green, ridge style (use border-style,
+border-color, and border-width).
 border-color, and border-width).
 5. Margin on the paragraph: 5 pixels on all sides.
+5. Margin on the paragraph: 5 pixels on all sides.
+I HTML I css I
 I HTML I css I
 1 <p>
+1 <p>
+2 The typical filler text is the <span> Lorem Ipsum</span> .
 2 The typical filler text is the <span> Lorem Ipsum</span> .
 3 According to lipsum.com, this text has been standard dummy text since the
+3 According to lipsum.com, this text has been standard dummy text since the
+4 </p>
 4 </p>
 +....r +---,-.-.--r,-,+ -~
++....r +---,-.-.--r,-,+ -~
+Render webpage
 Render webpage
 Reset code
+Reset code
+□
 □
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
+The typical filler text is the Lorem
 The typical filler text is the Lorem
 Ipsum . According to lipsum.com,
+Ipsum . According to lipsum.com,
 this text has been standard dummy
+this text has been standard dummy
+text since the 1500s.
 text since the 1500s.
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 58 of 98 2024-10-12, 3:24 p.m.
+58 of 98 2024-10-12, 3:24 p.m.
+Your webpage
 Your webpage
 The typical filler text is the Lorem Ipsum.
+The typical filler text is the Lorem Ipsum.
+According to lipsum.com, this text has been
 According to lipsum.com, this text has been
 standard dummy text since the 1500s.
+standard dummy text since the 1500s.
+► View solution
 ► View solution
 Expected webpage
+Expected webpage
+Margin collapsing and horizontal centering
 Margin collapsing and horizontal centering
 Vertical margins of two elements can sometimes combine or collapse into a single vertical space.
+Vertical margins of two elements can sometimes combine or collapse into a single vertical space.
+Horizontal margins never collapse. Ex: Adjoining margins of two vertically stacked block elements
 Horizontal margins never collapse. Ex: Adjoining margins of two vertically stacked block elements
 collapse. The resulting margin size equals the top element's bottom margin or the bottom
+collapse. The resulting margin size equals the top element's bottom margin or the bottom
+element's top margin, whichever is larger.
 element's top margin, whichever is larger.
 Example 2.5.5: Collapsed margins.
+Example 2.5.5: Collapsed margins.
+The following HTML demonstrates a collapsed margin. The vertical space between the
 The following HTML demonstrates a collapsed margin. The vertical space between the
 inner div elements is collapsed to 10 pixels, while the horizontal space between the span
+inner div elements is collapsed to 10 pixels, while the horizontal space between the span
+elements is 20 pixels.
 elements is 20 pixels.
 HTML and CSS Rendered webpage
+HTML and CSS Rendered webpage
+style
 style
 margin auto
+margin auto
+auto
 auto
 margin:auto
+margin:auto
+display:inline
 display:inline
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 59 of 98 2024-10-12, 3:24 p.m.
+59 of 98 2024-10-12, 3:24 p.m.
+<styl.e>
 <styl.e>
 . outer {
+. outer {
+border : 2px dotted black ;
 border : 2px dotted black ;
 .inner {
+.inner {
+margin : lOpx ;
 margin : lOpx ;
 border : lpx solid gray ;
+border : lpx solid gray ;
+span {
 span {
 margin : lOpx ;
+margin : lOpx ;
+background : lightgray;
 background : lightgray;
 </ style>
+</ style>
+<div class="outer" >
 <div class="outer" >
 <div class="inner">
+<div class="inner">
+<span>First</
 <span>First</
 span><span>element</span>
+span><span>element</span>
+</div>
 </div>
 <div class="inner">
+<div class="inner">
+Second element
 Second element
 </div>
 </div>
+</div>
+</div>
+I First element
 I First element
 !second element
+!second element
+When an element has the property set to , the browser will compute the left and right
 When an element has the property set to , the browser will compute the left and right
 margins to use up the remaining width of the parent element. The margin value is useful for
+margins to use up the remaining width of the parent element. The margin value is useful for
+horizontally centering an element in the parent element. A common error is to use
 horizontally centering an element in the parent element. A common error is to use
 on elements that do not have the width specified or have , such as span
+on elements that do not have the width specified or have , such as span
+elements.
 elements.
 Example 2.5.6: Horizontal centering.
+Example 2.5.6: Horizontal centering.
+L HTML and CSS Rendered webpage
 L HTML and CSS Rendered webpage
 <body>
+<body>
+<div style="width:300px;
 <div style="width:300px;
 margin:auto;">Some text</div>
+margin:auto;">Some text</div>
+</body>
 </body>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 60 of 98 2024-10-12, 3:24 p.m.
+60 of 98 2024-10-12, 3:24 p.m.
+I
 I
 <style>
+<style>
+. outer {
 . outer {
 border : 2px dotted
+border : 2px dotted
+black;
 black;
 .inne r
+.inne r
+margin : auto ;
 margin : auto ;
 width : lOOpx ;
+width : lOOpx ;
+border : lpx solid
 border : lpx solid
 gray ;
+gray ;
+</ style>
 </ style>
 <div class="outer">
+<div class="outer">
+<div class="inner">
 <div class="inner">
 Cente r ed content
+Cente r ed content
+</div>
 </div>
 <div class="inner">
+<div class="inner">
+Second e l eme nt
 Second e l eme nt
 </div>
 </div>
+</div>
+</div>
+PARTICIPATION I . ACTIVITY 2.5.6: Margins.
 PARTICIPATION I . ACTIVITY 2.5.6: Margins.
 1) If two elements are stacked on top of
+1) If two elements are stacked on top of
+each other and both have
 each other and both have
 margin: 2 Opx, the total margin
-between the two elements is 40px.
-0 True
-0 False
-2) If two elements are horizontally
-adjacent to each other and both have
 margin: 2 Opx, the total margin
 between the two elements is 40px.
+between the two elements is 40px.
+0 True
 0 True
 0 False
+0 False
+2) If two elements are horizontally
+2) If two elements are horizontally
+adjacent to each other and both have
+adjacent to each other and both have
+margin: 2 Opx, the total margin
+margin: 2 Opx, the total margin
+between the two elements is 40px.
+between the two elements is 40px.
+0 True
+0 True
+0 False
+0 False
+3) The text is horizontally centered in the
 3) The text is horizontally centered in the
 web browser.
+web browser.
+Centered
 Centered
 content
+content
+Second
 Second
 element
+element
+................................ ~~~~'"························
 ................................ ~~~~'"························
 □
+□
+0
+0
+0
 0
 0
 0
 zyBooks
+zyBooks
+61 of98
 61 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 0 True
+0 True
+0 False
 0 False
 I CHALLENGE I ACTIVITY 2.5.1: Box model.
+I CHALLENGE I ACTIVITY 2.5.1: Box model.
+5707 04.2065416 qx3zqy7
 5707 04.2065416 qx3zqy7
 Start
+Start
+For the <span> element, set the border all around to be 5 pixels, dashed, and coral.
 For the <span> element, set the border all around to be 5 pixels, dashed, and coral.
 SHOW EXPECTED
+SHOW EXPECTED
+I css I HTML I
 I css I HTML I
 1 span {
+1 span {
+2
 2
 3 /* Your solution goes here*/
+3 /* Your solution goes here*/
+4
 4
 5 }
+5 }
+1 2
 1 2
 Check Next
+Check Next
+View your last submission v
 View your last submission v
 Exploring further:
+Exploring further:
+• Box model from W3 Consortium.
 • Box model from W3 Consortium.
 3 4 5
+3 4 5
+□
 □
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
+*
 *
 .highlight *.highlight
 .highlight *.highlight
+.highlight *.highlight
+.highlight *.highlight
+,
 ,
 <ol> <ul>
 <ol> <ul>
+<ol> <ul>
+<ol> <ul>
+ul, ol {
 ul, ol {
 background-color:
+background-color:
+gray;
 gray;
 color: white;
+color: white;
+font-weight: bold;
 font-weight: bold;
 }
+}
+>
 >
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+62 of 98 2024-10-12, 3:24 p.m.
 62 of 98 2024-10-12, 3:24 p.m.

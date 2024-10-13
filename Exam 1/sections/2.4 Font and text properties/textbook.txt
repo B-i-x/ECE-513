@@ -1,895 +1,647 @@
 Font properties
+Font properties
+Many CSS properties control the font properties for displaying text. CSS font properties include:
 Many CSS properties control the font properties for displaying text. CSS font properties include:
 • The font-family property specifies the font family, such as "Times New Roman" or serif.
+• The font-family property specifies the font family, such as "Times New Roman" or serif.
+• The font-size property changes the font size, such as 12 o %, smal 1, or 12px.
 • The font-size property changes the font size, such as 12 o %, smal 1, or 12px.
 • The font-weight property specifies the font weight, such as normal or bold.
+• The font-weight property specifies the font weight, such as normal or bold.
+• The font-style property changes the text style, such as normal, italic, or oblique.
 • The font-style property changes the text style, such as normal, italic, or oblique.
 • The font-variant property specifies the variant of the text, such as normal or small-caps.
+• The font-variant property specifies the variant of the text, such as normal or small-caps.
+• The font property is shorthand for setting several font properties at the same time. Ex:
 • The font property is shorthand for setting several font properties at the same time. Ex:
 font: italic 12pt Georgia, serif;
+font: italic 12pt Georgia, serif;
+The font-family property contains a list of fonts specified as a family name or a generic family
 The font-family property contains a list of fonts specified as a family name or a generic family
 separated by commas.
+separated by commas.
+• A family name is the name of a specific font, like 'Times New Roman", "Arial", or "Georgia".
 • A family name is the name of a specific font, like 'Times New Roman", "Arial", or "Georgia".
 Family names containing spaces must be wrapped in quotations marks, while family names
+Family names containing spaces must be wrapped in quotations marks, while family names
+without spaces do not.
 without spaces do not.
 • A generic family is a general group of fonts, like serif, sans-serif, cursive, fantasy, or
+• A generic family is a general group of fonts, like serif, sans-serif, cursive, fantasy, or
+monospace. Ex: Times New Roman and Georgia are both serif fonts because the fonts
 monospace. Ex: Times New Roman and Georgia are both serif fonts because the fonts
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
+font-family: Arial, Helvetica, sans-serif;
 font-family: Arial, Helvetica, sans-serif;
 Garamond
+Garamond
+Georgia
 Georgia
 Times New
+Times New
+Roman
 Roman
 Arial
+Arial
+Helvetica
 Helvetica
 Verdana
+Verdana
+Brush Script MT
 Brush Script MT
 Comic Sans MS
+Comic Sans MS
+Lucida
 Lucida
 Handwriting
+Handwriting
+Impact
 Impact
 Luminari
+Luminari
 Consolas
+Consolas
+Courier New
 Courier New
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 38 of 98 2024-10-12, 3:24 p.m.
+38 of 98 2024-10-12, 3:24 p.m.
+contain serifs, which are small strokes attached to the end of larger strokes on each letter.
 contain serifs, which are small strokes attached to the end of larger strokes on each letter.
 The web browser will use the first font listed that is available. Good practice is to start the list with
+The web browser will use the first font listed that is available. Good practice is to start the list with
+the intended font and end with a generic family. Ex:
 the intended font and end with a generic family. Ex:
 Table 2.4.1: Generic family names.
+Table 2.4.1: Generic family names.
+Generic
 Generic
 Distinguishing features Example fonts
+Distinguishing features Example fonts
+family
 family
 Serif
+Serif
+"Embellishments" like finishing strokes or
 "Embellishments" like finishing strokes or
 flare ends
+flare ends
+Sans-Serif Plain stroke ends
 Sans-Serif Plain stroke ends
 Cursive
+Cursive
+Cursive or calligraphy characteristics like
 Cursive or calligraphy characteristics like
 joined strokes
+joined strokes
+Fantasy Decorative
 Fantasy Decorative
 Monos pace
+Monos pace
+Constant width for letters, punctuation, and
 Constant width for letters, punctuation, and
 space
+space
+..,.....,
 ..,.....,
 Web fonts
+Web fonts
+A limited number of fonts are available on all platforms: Arial, Courier New, Georgia,
 A limited number of fonts are available on all platforms: Arial, Courier New, Georgia,
 Times New Roman, and Verdana. Web developers can expand the number of fonts
+Times New Roman, and Verdana. Web developers can expand the number of fonts
+sans-serif;
 sans-serif;
 The Shins</span>, because their
+The Shins</span>, because their
 is thought-provoking!
+is thought-provoking!
+<p>
+<p>
 <p>
 <p>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 39 of 98 2024-10-12, 3:24 p.m.
+39 of 98 2024-10-12, 3:24 p.m.
+available by using web fonts. A web font is a CSS feature that allows custom fonts to
 available by using web fonts. A web font is a CSS feature that allows custom fonts to
 be downloaded to the web browser. See the links in "Exploring further" for more
+be downloaded to the web browser. See the links in "Exploring further" for more
+information.
 information.
 I PARTICIPATION I . . ACTIVITY 2.4.1 : Computing font properties.
+I PARTICIPATION I . . ACTIVITY 2.4.1 : Computing font properties.
+Given the HTML below, answer the following questions regarding font properties.
 Given the HTML below, answer the following questions regarding font properties.
 <style>
+<style>
+p {
 p {
 font - family : "Verdana" , "Arial" , san
+font - family : "Verdana" , "Arial" , san
+#band {
 #band {
 font - style : italic ;
+font - style : italic ;
+#music {
 #music {
 font - variant : small - caps ;
+font - variant : small - caps ;
+</ style>
 </ style>
 <p >
+<p >
+My favor i te band i s <span id="band" >
 My favor i te band i s <span id="band" >
 <span id="music" >mus i c </ span> i s tho
+<span id="music" >mus i c </ span> i s tho
+</p>
 </p>
 1) What is the most preferred font
+1) What is the most preferred font
+for the <p> element?
 for the <p> element?
 Check Show answer
+Check Show answer
+2) What is the second most
 2) What is the second most
 preferred font for the
+preferred font for the
+element?
 element?
 Check Show answer
+Check Show answer
+3) What is the third most preferred
 3) What is the third most preferred
 font for the element?
+font for the element?
 □
+□
+0
+0
+0
 0
 0
 0
 xx-small x-small small
+xx-small x-small small
+medium large x-large xx-large
 medium large x-large xx-large
 smaller larger
+smaller larger
+cm
 cm
 mm
+mm
+in
 in
 px
+px
+pt
 pt
 pc
+pc
+em
 em
 rem <html>
+rem <html>
+vw
 vw
 vh
+vh
+%
 %
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 40 of 98 2024-10-12, 3:24 p.m.
+40 of 98 2024-10-12, 3:24 p.m.
+Check Show answer
 Check Show answer
 4) What is the text variant for the
+4) What is the text variant for the
+<span> element with the
 <span> element with the
 music id?
+music id?
+Check Show answer
 Check Show answer
 Font sizes
+Font sizes
+0
 0
 The font size can be specified using a predefined size name, a relative size name, or a number with
+The font size can be specified using a predefined size name, a relative size name, or a number with
+an absolute or relative size unit. The predefined size names are
 an absolute or relative size unit. The predefined size names are
 , and , where medium is the default size. The relative size
+, and , where medium is the default size. The relative size
+names are and which change the font size for an element to be smaller or larger
 names are and which change the font size for an element to be smaller or larger
 than the font size of the parent element.
+than the font size of the parent element.
+An absolute size is a size that is fixed and independent of other CSS sizes. Absolute size units
 An absolute size is a size that is fixed and independent of other CSS sizes. Absolute size units
 include:
+include:
+• - centimeters
 • - centimeters
 • - millimeters
+• - millimeters
+• - inches
 • - inches
 • - pixels (7 px = 1 /96in)
+• - pixels (7 px = 1 /96in)
+• - points (7 pt = 1 /72in)
 • - points (7 pt = 1 /72in)
 • - pica (7 pc = 12pt)
+• - pica (7 pc = 12pt)
+A relative size is a size that is relative to another size. Some common relative size units include:
 A relative size is a size that is relative to another size. Some common relative size units include:
 • - Relative to the element's font size. Ex: 2em = 2 x current font size.
+• - Relative to the element's font size. Ex: 2em = 2 x current font size.
+• - Relative to the root element's font size. Ex: 1.5rem = 1.5 x element's font size.
 • - Relative to the root element's font size. Ex: 1.5rem = 1.5 x element's font size.
 • - 1 % of the viewport's width. Ex: 1 0vw = 10% of browser's width.
+• - 1 % of the viewport's width. Ex: 1 0vw = 10% of browser's width.
+• - 1 % of the viewport's height. Ex: 5vh = 5% of browser's height.
 • - 1 % of the viewport's height. Ex: 5vh = 5% of browser's height.
 • - Percentage of the element's font size. Ex: 120% = 20% larger than the current font size.
+• - Percentage of the element's font size. Ex: 120% = 20% larger than the current font size.
+Most web browsers use a default font size of 16px. However, users who struggle to read 16px
 Most web browsers use a default font size of 16px. However, users who struggle to read 16px
 fonts may change the browser's default font size to a larger size. Good practice is to use relative
+fonts may change the browser's default font size to a larger size. Good practice is to use relative
+font sizes, which scale with changes to the default browser font size.
 font sizes, which scale with changes to the default browser font size.
 Table 2.4.2: Example font sizes.
+Table 2.4.2: Example font sizes.
+font-size: x-large;
 font-size: x-large;
 font-size: smaller;
+font-size: smaller;
+font-size: 1.5rem;
 font-size: 1.5rem;
 }
+}
+p {
 p {
 font-size: 50%;
+font-size: 50%;
+}
 }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 41 of 98 2024-10-12, 3:24 p.m.
+41 of 98 2024-10-12, 3:24 p.m.
+Example CSS Displayed
 Example CSS Displayed
 You must be the change you wish to
-see in the world.
-You must be the change you wish to see in the world.
-~
-f ont- s ize: 1 6p x ; You must be the change you wish to see in the world.
-font- s ize: 1.5rem;
 You must be the change you wish to
 see in the world.
+see in the world.
+You must be the change you wish to see in the world.
+You must be the change you wish to see in the world.
+~
+~
+f ont- s ize: 1 6p x ; You must be the change you wish to see in the world.
+f ont- s ize: 1 6p x ; You must be the change you wish to see in the world.
+font- s ize: 1.5rem;
+font- s ize: 1.5rem;
+You must be the change you wish to
+You must be the change you wish to
+see in the world.
+see in the world.
+font- s ize: 12 0%
 font- s ize: 12 0%
 You must be the change you wish to see in the
+You must be the change you wish to see in the
+world.
 world.
 I PARTICIPATION I . ACTIVITY 2.4.2: Font sizes.
+I PARTICIPATION I . ACTIVITY 2.4.2: Font sizes.
+Assume the browser's default font size is 16px. What size does the given p selector make
 Assume the browser's default font size is 16px. What size does the given p selector make
 each paragraph?
+each paragraph?
+1)
 1)
 2)
+2)
+3)
 3)
 p {
+p {
+font-size :
 font-size :
 0 16px
+0 16px
+0 1 Bpx
 0 1 Bpx
 0 20px
+0 20px
+p {
 p {
 0 Bpx
+0 Bpx
+0 16px
 0 16px
 0 24px
+0 24px
+1 8px ;
 1 8px ;
 □
+□
+0
+0
+0
 0
 0
 0
 left right center justify
+left right center justify
+overline line-through underline none
 overline line-through underline none
 uppercase lowercase capitalize
+uppercase lowercase capitalize
+text-align: right
 text-align: right
 text-align: center
+text-align: center
+justify
 justify
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 42 of 98 2024-10-12, 3:24 p.m.
+42 of 98 2024-10-12, 3:24 p.m.
+0 Bpx
 0 Bpx
 0 16px
+0 16px
+0 24px
 0 24px
 Text properties
+Text properties
+Many CSS properties control how text is displayed. Some common CSS text properties include:
 Many CSS properties control how text is displayed. Some common CSS text properties include:
 • The text-align property changes the horizontal alignment of text for an element. Possible
+• The text-align property changes the horizontal alignment of text for an element. Possible
+values are: , and
 values are: , and
 • The text-decoration property can add or remove text decorations like underlining or a -l+Rethrough.
+• The text-decoration property can add or remove text decorations like underlining or a -l+Rethrough.
+Possible values are: , and
 Possible values are: , and
 • The text-transform property converts letters to UPPERCASE, lowercase, or Capitalizes Initial
+• The text-transform property converts letters to UPPERCASE, lowercase, or Capitalizes Initial
+Letters. Possible values are: , and
 Letters. Possible values are: , and
 • The text-indent property specifies the first line's indentation amount.
+• The text-indent property specifies the first line's indentation amount.
+Table 2.4.3: Text alignment examples.
 Table 2.4.3: Text alignment examples.
 Alignment CSS example Displayed
+Alignment CSS example Displayed
 -
+-
+Example of wrapped text
 Example of wrapped text
 left t ext-a lig n : l e ft using the horizontal
+left t ext-a lig n : l e ft using the horizontal
+alignment CSS property.
 alignment CSS property.
 -
+-
+Example of wrapped text
 Example of wrapped text
 right t ext-a lig n : righ using the horizontal
+right t ext-a lig n : righ using the horizontal
 alignment CSS property.
+alignment CSS property.
+Example of wrapped text
 Example of wrapped text
 center t ext-a lig n : cent, using the horizontal
+center t ext-a lig n : cent, using the horizontal
+alignment CSS property.
 alignment CSS property.
 -
+-
+Example of wrapped text
 Example of wrapped text
 justify text-align: jus t using the horizontal
+justify text-align: jus t using the horizontal
+alignment CSS property.
 alignment CSS property.
 Underlined links
+Underlined links
+text-decoration:none
 text-decoration:none
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 43 of 98 2024-10-12, 3:24 p.m.
+43 of 98 2024-10-12, 3:24 p.m.
+The CSS is commonly used to remove the default
 The CSS is commonly used to remove the default
 underline from links. The underline helps users quickly identify links, so developers
+underline from links. The underline helps users quickly identify links, so developers
+should use caution when removing link underlines. Relying solely on color to identify
 should use caution when removing link underlines. Relying solely on color to identify
 links can be problematic to users that are color blind or insensitive.
+links can be problematic to users that are color blind or insensitive.
+I PARTICIPATION I . ACTIVITY 2.4.3: Text alignment.
 I PARTICIPATION I . ACTIVITY 2.4.3: Text alignment.
 Provide the CSS value that correctly styles the example text as displayed.
+Provide the CSS value that correctly styles the example text as displayed.
+1)
 1)
 Gears and Pulleys
+Gears and Pulleys
+The untold story of power
 The untold story of power
 transference.
+transference.
+text-align:
 text-align:
 2) r
+2) r
+Check Show answer
 Check Show answer
 The following sentences
+The following sentences
+are examples of a pangram,
 are examples of a pangram,
 a sentence that contains all
+a sentence that contains all
+of the letters of the
 of the letters of the
 alphabet. The quick brown
+alphabet. The quick brown
+fox jumped over a lazy dog.
 fox jumped over a lazy dog.
 Pack my box with five
+Pack my box with five
+dozen liquor jugs.
 dozen liquor jugs.
 Jackdaws love my big
+Jackdaws love my big
+sphinx of quartz. The five
 sphinx of quartz. The five
 boxing wizards jump
+boxing wizards jump
+quickly. How vexingly quick
 quickly. How vexingly quick
 daft zebras jump! Bright
+daft zebras jump! Bright
+vixens jump; dozy fowl
 vixens jump; dozy fowl
 quack. Forsaking monastic
+quack. Forsaking monastic
+tradition, twelve jovial friars
 tradition, twelve jovial friars
 gave up their vocation for a
+gave up their vocation for a
+questionable existence on
 questionable existence on
 the flying trapeze.
+the flying trapeze.
 □
+□
+0
+0
 0
 0
 Knowledge comes, wisdom lingers. - Lord Tennyson</p>
+Knowledge comes, wisdom lingers. - Lord Tennyson</p>
+text-transform:
 text-transform:
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 44 of 98 2024-10-12, 3:24 p.m.
+44 of 98 2024-10-12, 3:24 p.m.
 text-align:
+text-align:
+Check Show answer
 Check Show answer
 3)
+3)
+Due: July 4, 1776 ;
 Due: July 4, 1776 ;
 ,
+,
+text-align:
 text-align:
 Check Show answer
+Check Show answer
+I PARTICIPATION I . ACTIVITY 2.4.4: Text properties.
 I PARTICIPATION I . ACTIVITY 2.4.4: Text properties.
 Given the HTML below, select the correct text property and value to display the rendered
+Given the HTML below, select the correct text property and value to display the rendered
+browser text.
 browser text.
 <style>
+<style>
+p {
 p {
 </ style>
+</ style>
+<p >Knowl edge comes , but wi sdom linge r s .
 <p >Knowl edge comes , but wi sdom linge r s .
 1)
+1)
+2)
 2)
 : Knowledge comes, but wisdom
+: Knowledge comes, but wisdom
+: .lingers. - Lord TennY-son
 : .lingers. - Lord TennY-son
 '
+'
+text-decoration: 0 overline
 text-decoration: 0 overline
 text-decoration: 0 underline
+text-decoration: 0 underline
+text-transform: 0 underline
 text-transform: 0 underline
 Knowledge Comes, But Wisdom
+Knowledge Comes, But Wisdom
+Lingers. - Lord Tennyson
 Lingers. - Lord Tennyson
 0
 0
+0
+0
+□
 □
 0
 0
+0
+0
 zyBooks
+zyBooks
+45 of98
 45 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 3)
+3)
+uppercase
 uppercase
 text-decoration: 0 capitalize
+text-decoration: 0 capitalize
+text-transform: 0 capitalize
 text-transform: 0 capitalize
 Knowledge comes,
+Knowledge comes,
+but wisdom lingers. -
 but wisdom lingers. -
 Lord Tennyson
+Lord Tennyson
+0 text-indent: 20px
 0 text-indent: 20px
 0 text-indent: -20px
+0 text-indent: -20px
+0 text-indent: true
 0 text-indent: true
 I CHALLENGE I . ACTIVITY 2.4.1 : Font and text properties.
+I CHALLENGE I . ACTIVITY 2.4.1 : Font and text properties.
+5707 04.20654 7 6.qx3zqy7
 5707 04.20654 7 6.qx3zqy7
 Start
+Start
+For the <p> element, set font-size to 120%, and set font-variant to small-caps.
 For the <p> element, set font-size to 120%, and set font-variant to small-caps.
 SHOW EXPECTED
+SHOW EXPECTED
+1 p {
 1 p {
 2
+2
+I css I HTML I
 I css I HTML I
 3 /* Your solution goes here*/
+3 /* Your solution goes here*/
+4
 4
 5 }
+5 }
+1 2
 1 2
 0
+0
+□
 □
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
 zyBooks
+zyBooks
+46 of98
 46 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 Check Next
-View your last submission v
-Exploring further:
-• CSS Fonts from W3Schools
-• CSS Text from W3Schools
-• CSS Web Fonts from W3Schools
-• What's the best font size for the web? by Robert Mohns
-2. 5 Box model
-Box model components
-HTML elements take up space on the webpage. The box model describes the size of each element
-as a series of nested boxes. The box model is important to understand when considering design
-and layout.
-• Content: The innermost box contains the content of the element, such as text and images.
-• Padding: The padding box contains the content box and adds a transparent area around the
-content.
-• Border: The border box contains the padded content and adds an optionally colored area
-around the padding.
-• Margin: The margin box contains all three boxes and adds a transparent area around the
-border.
-Figure 2.5.1: Box model with labeled boxes.
-Margin
-Border
-.: ················ ·· ··· ····· ······· ······· ·· ····· ···· ···· ··· ····· ··········,.
-I Padding I
-•, I- ---------------------------------I ••
-: I I :
-: I :
-: I :
-.• I .•
-: Content :
-2024-10-12, 3:24 p.m.
-padding: 5px;
-border: 2px solid blue;
-margin: 10px;
-After
-Content
-Before margin
-border
-padding
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-47 of 98 2024-10-12, 3:24 p.m.
------
-' I
-I
-I
-I- ------------------------ --- ------I
-The CSS properties that control the padding, border, and margin are:
-.-
-• The padding property specifies the padding thickness. Ex:
-padding around the content.
-creates a 5 pixel
-• The border property specifies the border's thickness, style, and color. Ex:
-creates a solid blue border that is 2 pixels thick.
-• The margin property specifies the margin thickness. Ex:
-margin.
-creates a 1 O pixel
-The content, padding, margin, and border boxes are rendered according to the following rules:
-• The content is displayed with a background according to the element's background color.
-• The padding is transparent and will be displayed using the same color as the element's
-background.
-• The border can be either colored or transparent. If transparent, the border will be displayed
-with the same color as the padding.
-• The margin is transparent and will be displayed using the background color of the parent
-element. I PARTICIPATION
-ACTIVITY 2.5.1: Box model displayed.
-div { background- co l or : b l ue ; }
-#content {
-paddi ng : 5px;
-border : 5px solid b l ack ;
-margi n : 5px ;
-<div>Before</div>
-<div id=" content " >Content</div>
-<div>After</div>
-□
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-48 of 98 2024-10-12, 3:24 p.m.
-A block of CSS is shown:
-div { background-color: blue;}
-#content {
-}
-padding: 5px;
-border: 5px solid black;
-margin: 5px;
-A block of HTML is also shown:
-<div>Before</div>
-<div id="content">Content</div>
-<div>After</div>
-Together the HTML and CSS displays three div elements on a screen. The first element is shown
-in a blue box across the top of the screen and has the text "Before". The second is shown under
-the first element with a 5 pixel transparent margin that surrounds the 5 pixel black border. Inside
-the border there is a 5 pixel padding that surrounds the div content, which has the text "Content".
-Both the padding and the div element have the background color blue. The third div element is
-displayed under the second div element. The third div is shown as a blue box spanning across the
-screen with the text "After".
-Animation captions:
-1. The box model describes the space each HTML element takes as a box. Each div element
-is displayed with a blue background, and each box is highlighted with a light blue outline.
-2. Padding surrounds the content element with transparent space, which is displayed using
-the element's background color.
-3. The border surrounds the content and padding and is colored black.
-4. The margin surrounds the border with transparent space and separates the element from
-other elements.
-I PARTICIPATION I . ACTIVITY 2.5.2: Choose the correct display color. □
-Given the HTML and CSS below, choose which color each box will be displayed.
-<style>
-div {
-background: white;
-border: 2px solid blue;
-}
-span {
-background: yellow;
-border: 1px solid black;
-padding: 2px;
-margin: 2px;
-}
-emergency broadcast system.</div>
-padding margin
-margin: 20px;
-margin: 10px 20px;
-margin: 10px 30px 20px;
-margin: 10px 30px 20px 40px;
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-49 of 98 2024-10-12, 3:24 p.m.
-</ style>
-<div>This is a <span>test</span> of the
-If unable to drag and drop, refresh the page.
-black yellow white blue
-span element's padding
-span element's border
-span's margin
-div's border
-Box sizing
-The and properties may have from 1 to 4 values:
-• One value - Specifies uniform thickness around the box. Ex:
-margin thickness around the box.
-Reset
-specifies 20px
-• Two values - Specifies top and bottom, right and left thickness. Ex: rr argin: .1 up ~ .t. upx
-specifies 1 0px top and bottom margins and 20px right and left margins.
-• Three values - Specifies top, right and left, and bottom thickness. Ex:
-specifies 1 0px top margin, 30px right and left margins, and
-20px bottom margin.
-• Four values - Specifies top, right, bottom, and left thickness. Ex:
-specifies 1 0px top margin, 30px right margin, 20px
-bottom margin, and 40px left margin.
-padding border margin -top
--left -bottom -right padding-top:5px;
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-50 of 98 2024-10-12, 3:24 p.m.
-Example 2.5.1: Example with non-uniform margin and padding thickness.
-<style>
-hl {
-margin : 40px 30px ;
-padding : 20px 50px 40px ;
-background-color : khaki ;
-</ style>
-<hl>The Box Model </hl>
-40px
-50px 20px
-3opx - The Box Model
-40px
-40px
-~ 30px
-The ,and CSS properties can apply only to one side by adding a
-, or suffix to the CSS property. Ex: specifies 5
-pixels of padding above the content.
-Example 2.5.2: Example specifying one side of the box.
-darkcyan;
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-51 of 98 2024-10-12, 3:24 p.m.
-<style>
-hl {
-border-left : Spx solid darkcy,
-margin-right : 30px ;
-padding-top : 20px ;
-background-color : lightcyan ;
-</style>
-<hl>The Box Model</hl>
-ITh;dBg;; Model
-border-left
-I PARTICIPATION I . ACTIVITY 2.5.3: Box model properties.
-1) What CSS declaration sets the
-margin to have a uniform space
-of 20 pixels?
-Check Show answer
-2) What CSS declaration changes
-the top and bottom padding to
-be 20 pixels and right and left to
-be 30 pixels?
-Check Show answer
-3) What CSS declaration changes
-the right padding to be 1 0 pixels
-wide?
-Check Show answer
-marg·n-right
-□
-0
-0
-0
-width height
-width: 20px;
-height: 30px;
-height
-<div id="nopadding">Controlling the content size</div>
-<div id="padding">Controlling the content size</div>
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-52 of 98 2024-10-12, 3:24 p.m.
-Content width and height
-A block element's content spans the width of the enclosing parent element by default, but the
-content size can be changed with the and CSS properties:
-• The width property specifies the content's width. Ex:
-20px wide.
-, • ? n-r::,::><::: makes the content
-• The height property specifies the content's height. Ex:
-30px high.
-Example 2.5.3: Example using width and height properties.
-makes the content
-Two <div> elements have the same width and property values. However, the
-second <div> appears larger because of the additional padding.
-<style>
-#nopadding {
-width : 200px ;
-height : lOOpx ;
-background-color : li ghtgreen ;
-font-size : 30px ;
-#padding {
-padding : 50px ;
-width : 200px ;
-height : lOOpx ;
-background-color : khaki ;
-font-size : 30px ;
-</style>
-Controlling the
-content size 100 px
-200 px ! 50 px
-__ Controlling the
-50 px content size
-.. ..
-50 px
-width height <span>
-display inline-block
-and <span id="span2">Span 2</
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-53 of 98 2024-10-12, 3:24 p.m.
-! 50 px
-~------
-A common error is to use or on inline elements. An inline element like has a
-width and height that is equal to the size of the element's content. The width and height cannot be
-changed unless the inline element's property is changed to _Lll~_;_rn:: ~~V\.., ;_,_,
-Example 2.5.4: Example using width and height properties on an inline
-element.
-<style>
-#spanl {
-wi dth : 80px ; /* Ign ored */
-height : 40px ; /* Ign ored */
-background-color : lightgreen ;
-#span2
-d isplay : inline-block ;
-wi dth : 80px ;
-height : 40px ;
-background-color : khaki ;
-</ style>
-<p>
-<span i d= "spanl" >Span l </ span>
-span>
-</ p>
-Span 1 and Span 2
-I PARTICIPATION I . ACTIVITY 2.5.4: Compute the size.
-1) What is the total <div> width?
-□
-0
-<style>
-div {
-width: 200px;
-padding: 10px;
-border: 2px solid
-green;
-margin: 5px;
-}
-</style>
-<div>How wide am I?</div>
-pixels
-<div>
-<style>
-div {
-height: 100px;
-margin: 10px 5px;
-}
-</style>
-<div>How tall am I?</div>
-pixels
-<div>
-<style>
-div {
-width: 100px;
-margin-left: 10px;
-margin-right: 15px;
-padding: 2px 5px 10px
-20px;
-}
-</style>
-<div>How wide am I?</div>
-pixels
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-54 of 98 2024-10-12, 3:24 p.m.
-Check Show answer
-2) What is the total height? 0
-Check Show answer
-3) What is the total width? 0
-<h1>
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-55 of 98 2024-10-12, 3:24 p.m.
-Check Show answer
-4) The default <strong> content
-width is 115px. What is the total
-<strong> width?
-<style>
-strong {
-width : 200px ;
-margin : 5px ;
-</ style>
-<strong>How wi de am I ?</
-strong>
-pixels
-Check Show answer
-Chrome DevTools
-The Chrome DevTools display the margin, border, padding, and content sizes for all
-elements. The screens hot below shows the size of the element with the
-content (509 x 37 pixels) at the center.
-C') The Box Model X + □ X
-C ()) fi le:///C:/temp/ es .html *
-The Box Model
-~ oJ !:lemen s Console Sources etwork Performance Memory Application » X
-doct, .e 1
-<ht ml>
-► <head >--</head>
-"' <body>
-hl The Box Mode / hl == $fJ
-</ body>
-</ iltrnl >
-------
-Styles Computed Event Listene rs »
-Filter
-}
-11.IY I !:'.4 WJI 1,11 1., i n .. ..:,1,.1.,11 I. ■ u~,r, J
-l!iargin-·i.nline-end: @px;
-font-wei.g/Jt : bot d;
-:hov .el s +. . ...
-0
-border
-border-width: 5px;
-border-style: dashed;
-border-color: green;
-solid black;
-dashed red;
-dotted blue;
-none green;
-border: 5px double gray;
-border: 5px groove orange;
-border: 5px ridge pink;
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-56 of 98 2024-10-12, 3:24 p.m.
-margin 40
-bor :::l ~r
-I"'-----------------, ! p;dding 20 l
-30 -i so I sog • 3 7 1 so! - 30
-' i l _ -----40 -------_ J
-40
-htm I body h 1
-Border styles
-The property combines the border width, style, and color. Each CSS property may also be
-specified separately:
-• The border-width property specifies the border's width. Ex:
-a border that is 5px thick.
-• The border-style property specifies the border's style. Ex:
-specifies a border that is dashed.
-• The border-color property specifies the border's color. Ex:
-specifies a border that is green.
-Table 2.5.1: Common border styles.
-Style CSS example
-Isolid
-border: 2px so
-1---
-dashed border: 2px da
-dotted border: 2px do
-none border: 2px no
-double
-groove
-ridge
-specifies
-Displayed
-I example I
-r-----,
-: example :
-.L.. .-....- ...-...-...-......I
-..\. e...x..a..m...p..l.e.. ....\
-example
-II example II
-example
-I example
-style
-zyBooks
-57 of98
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
-inset border: 5px inset brown;
-I example I
--=
-outset border: 5px outset yellow;
-example
-I PARTICIPATION I . . . ACTIVITY 2.5.5: Modify the padding, border, and margin.
-Modify the CSS declarations for the span and p rules to meet each requirement below:
-1. Padding on the span: 5 pixels left, and 5 pixels right.
-2. Border on the span: 2 pixels solid black above (use -top
-suffix), and 4 pixels solid
-gray below (use -bot tom).
-3. Padding on the paragraph: 10 pixels on all sides.
-4. Border on the paragraph: 10 pixels, light green, ridge style (use border-style,
-border-color, and border-width).
-5. Margin on the paragraph: 5 pixels on all sides.
-I HTML I css I
-1 <p>
-2 The typical filler text is the <span> Lorem Ipsum</span> .
-3 According to lipsum.com, this text has been standard dummy text since the
-4 </p>
-+....r +---,-.-.--r,-,+ -~
-Render webpage
-Reset code
-□
-2024-10-12, 3:24 p.m.
-The typical filler text is the Lorem
-Ipsum . According to lipsum.com,
-this text has been standard dummy
-text since the 1500s.
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-58 of 98 2024-10-12, 3:24 p.m.
-Your webpage
-The typical filler text is the Lorem Ipsum.
-According to lipsum.com, this text has been
-standard dummy text since the 1500s.
-► View solution
-Expected webpage
-Margin collapsing and horizontal centering
-Vertical margins of two elements can sometimes combine or collapse into a single vertical space.
-Horizontal margins never collapse. Ex: Adjoining margins of two vertically stacked block elements
-collapse. The resulting margin size equals the top element's bottom margin or the bottom
-element's top margin, whichever is larger.
-Example 2.5.5: Collapsed margins.
-The following HTML demonstrates a collapsed margin. The vertical space between the
-inner div elements is collapsed to 10 pixels, while the horizontal space between the span
-elements is 20 pixels.
-HTML and CSS Rendered webpage
-style
-margin auto
-auto
-margin:auto
-display:inline
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-59 of 98 2024-10-12, 3:24 p.m.
-<styl.e>
-. outer {
-border : 2px dotted black ;
-.inner {
-margin : lOpx ;
-border : lpx solid gray ;
-span {
-margin : lOpx ;
-background : lightgray;
-</ style>
-<div class="outer" >
-<div class="inner">
-<span>First</
-span><span>element</span>
-</div>
-<div class="inner">
-Second element
-</div>
-</div>
-I First element
-!second element
-When an element has the property set to , the browser will compute the left and right
-margins to use up the remaining width of the parent element. The margin value is useful for
-horizontally centering an element in the parent element. A common error is to use
-on elements that do not have the width specified or have , such as span
-elements.
-Example 2.5.6: Horizontal centering.
-L HTML and CSS Rendered webpage
-<body>
-<div style="width:300px;
-margin:auto;">Some text</div>
-</body>
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-60 of 98 2024-10-12, 3:24 p.m.
-I
-<style>
-. outer {
-border : 2px dotted
-black;
-.inne r
-margin : auto ;
-width : lOOpx ;
-border : lpx solid
-gray ;
-</ style>
-<div class="outer">
-<div class="inner">
-Cente r ed content
-</div>
-<div class="inner">
-Second e l eme nt
-</div>
-</div>
-PARTICIPATION I . ACTIVITY 2.5.6: Margins.
-1) If two elements are stacked on top of
-each other and both have
-margin: 2 Opx, the total margin
-between the two elements is 40px.
-0 True
-0 False
-2) If two elements are horizontally
-adjacent to each other and both have
-margin: 2 Opx, the total margin
-between the two elements is 40px.
-0 True
-0 False
-3) The text is horizontally centered in the
-web browser.
-Centered
-content
-Second
-element
-................................ ~~~~'"························
-□
-0
-0
-0
-zyBooks
-61 of98
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
-0 True
-0 False
-I CHALLENGE I ACTIVITY 2.5.1: Box model.
-5707 04.2065416 qx3zqy7
-Start
-For the <span> element, set the border all around to be 5 pixels, dashed, and coral.
-SHOW EXPECTED
-I css I HTML I
-1 span {
-2
-3 /* Your solution goes here*/
-4
-5 }
-1 2
 Check Next
 View your last submission v
+View your last submission v
 Exploring further:
-• Box model from W3 Consortium.
-3 4 5
-□
-2024-10-12, 3:24 p.m.
-*
-.highlight *.highlight
-.highlight *.highlight
-,
-<ol> <ul>
-<ol> <ul>
-ul, ol {
-background-color:
-gray;
-color: white;
-font-weight: bold;
-}
->
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-62 of 98 2024-10-12, 3:24 p.m.
+Exploring further:
+• CSS Fonts from W3Schools
+• CSS Fonts from W3Schools
+• CSS Text from W3Schools
+• CSS Text from W3Schools
+• CSS Web Fonts from W3Schools
+• CSS Web Fonts from W3Schools
+• What's the best font size for the web? by Robert Mohns
+• What's the best font size for the web? by Robert Mohns

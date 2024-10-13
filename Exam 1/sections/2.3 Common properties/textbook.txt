@@ -1,672 +1,1327 @@
 Color property
+Color property
+5
 5
 The color CSS property changes the text color to a specified color value. A color value can be
+The color CSS property changes the text color to a specified color value. A color value can be
+specified in several ways:
 specified in several ways:
 • CSS defines 140 color names. Ex: white, blue, black, gray, forestgreen, magenta.
+• CSS defines 140 color names. Ex: white, blue, black, gray, forestgreen, magenta.
+2024-10-12, 3:24 p.m.
 2024-10-12, 3:24 p.m.
 rgb(0, 0, 0) rgb(0, 0, 255) rgb(255, 255, 0)
+rgb(0, 0, 0) rgb(0, 0, 255) rgb(255, 255, 0)
+rgb(255, 255, 255)
 rgb(255, 255, 255)
 #RRGGBB
+#RRGGBB
+#000000 #0000FF #FFFF00 #FFFFFF
 #000000 #0000FF #FFFF00 #FFFFFF
 hsl(0, 0%, 0%)
+hsl(0, 0%, 0%)
+hsl(120, 100%, 50%) hsl(0, 100%, 25%)
 hsl(120, 100%, 50%) hsl(0, 100%, 25%)
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 21 of 98 2024-10-12, 3:24 p.m.
+21 of 98 2024-10-12, 3:24 p.m.
+• An RGB color value specifies a color using the rgb(red, green, blue) function by indicating the
 • An RGB color value specifies a color using the rgb(red, green, blue) function by indicating the
 red, green, and blue intensities. Each intensity for red, green, and blue is between O and 255,
+red, green, and blue intensities. Each intensity for red, green, and blue is between O and 255,
+where O is the lowest intensity and 255 is the highest.
 where O is the lowest intensity and 255 is the highest.
 Ex: is black, is blue, is yellow, and
+Ex: is black, is blue, is yellow, and
+is white.
 is white.
 • A hexadecimal color specifies a color using the format by indicating the red, green,
+• A hexadecimal color specifies a color using the format by indicating the red, green,
+and blue intensities. Each intensity for red, green, and blue is between 00 and FF hexadecimal
 and blue intensities. Each intensity for red, green, and blue is between 00 and FF hexadecimal
 numbers, where 00 is the lowest intensity and FF is the highest.
+numbers, where 00 is the lowest intensity and FF is the highest.
+Ex: is black, is blue, is yellow, and is white.
 Ex: is black, is blue, is yellow, and is white.
 • An HSL color value specifies a color using the hsl(hue, saturation, lightness) function by
+• An HSL color value specifies a color using the hsl(hue, saturation, lightness) function by
+indicating the hue, saturation, and lightness values. The hue value ranges between O and 360,
 indicating the hue, saturation, and lightness values. The hue value ranges between O and 360,
 and the saturation and lightness values range between 0% and 100%. Ex:
+and the saturation and lightness values range between 0% and 100%. Ex:
+is black, is green, and is dark red.
 is black, is green, and is dark red.
 The HSL color specification method is harder to understand and is not used as frequently as
+The HSL color specification method is harder to understand and is not used as frequently as
+the RGB and hexadecimal color specification methods.
 the RGB and hexadecimal color specification methods.
 • The RGB and HSL color values can add an alpha value to allow for transparency. The RGBA
+• The RGB and HSL color values can add an alpha value to allow for transparency. The RGBA
+color value specifies a color using the rgba(red, green, blue, alpha) function by indicating the
 color value specifies a color using the rgba(red, green, blue, alpha) function by indicating the
 red, green, blue, and alpha intensities. The HSLA color value specifies a color using the
+red, green, blue, and alpha intensities. The HSLA color value specifies a color using the
+hsla(hue, saturation, lightness, alpha) function by indicating the hue, saturation, lightness,
 hsla(hue, saturation, lightness, alpha) function by indicating the hue, saturation, lightness,
 and alpha intensities. The intensities have the same ranges as for RGB or HSL color values,
+and alpha intensities. The intensities have the same ranges as for RGB or HSL color values,
+but the alpha intensity is between O and 1. An alpha of O means fully transparent, 1 means
 but the alpha intensity is between O and 1. An alpha of O means fully transparent, 1 means
 fully opaque, and 0.5 means half transparent.
+fully opaque, and 0.5 means half transparent.
+Color picker.
 Color picker.
 rgb( o ~ , o ~ , o ~ )
+rgb( o ~ , o ~ , o ~ )
+Each va lue ranges Oto 255
 Each va lue ranges Oto 255
 Red
+Red
+Green
 Green
 Blue
+Blue
+#000000
 #000000
 Value ranges 000000 to FFFFFF
+Value ranges 000000 to FFFFFF
+color
 color
 byname black
+byname black
+byrgb
 byrgb
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 22 of 98 2024-10-12, 3:24 p.m.
+22 of 98 2024-10-12, 3:24 p.m.
+I PARTICIPATION I ACTIVITY 2.3.1: Color values and names.
 I PARTICIPATION I ACTIVITY 2.3.1: Color values and names.
 Use the color picker above to help match each color value to the color name.
+Use the color picker above to help match each color value to the color name.
+If unable to drag and drop, refresh the page.
 If unable to drag and drop, refresh the page.
 #FFD700 #0000FF rgb(144, 238, 144) #006400 #FFFFFF
+#FFD700 #0000FF rgb(144, 238, 144) #006400 #FFFFFF
+rgb(80, 80, 80)
 rgb(80, 80, 80)
 Blue
+Blue
+Black
 Black
 White
+White
+DarkGreen
 DarkGreen
 LightGreen
+LightGreen
+Gray
 Gray
 Gold
+Gold
+Reset
 Reset
 I PARTICIPATION I
+I PARTICIPATION I
+ACTIVITY 2.3.2: CSS text color.
 ACTIVITY 2.3.2: CSS text color.
 Modify or add one CSS rule for each requirement below to change the text
+Modify or add one CSS rule for each requirement below to change the text
+property as specified.
 property as specified.
 1. By color name: change the text color for b:
+1. By color name: change the text color for b:
+blue.
 blue.
 2. By RGB values: change the text color for b
+2. By RGB values: change the text color for b
+class elements from
 class elements from
 class elements from black
+class elements from black
+□
 □
 rgb(0, 0, 0)
+rgb(0, 0, 0)
+□
 □
 to
+to
+rgb(0, 0, 0)
 rgb(0, 0, 0)
 byhsl
+byhsl
+hsl(0, 0%, 0%)
 hsl(0, 0%, 0%)
 The text is blue
+The text is blue
+The text is green
 The text is green
 The text is cyan
+The text is cyan
 zyBooks
+zyBooks
+23 of98
 23 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 (rgb ( o, o, o)) to green by modifying the second number to be 255.
+(rgb ( o, o, o)) to green by modifying the second number to be 255.
+3. By HSL values: change the text color for class elements from black
 3. By HSL values: change the text color for class elements from black
 (hs l ( o, o % , o % ) ) to cyan by modifying the first number to be 200, the second
+(hs l ( o, o % , o % ) ) to cyan by modifying the first number to be 200, the second
+number to 100%, and the third number to 50%.
 number to 100%, and the third number to 50%.
 l HTML I css
+l HTML I css
+1 <[0 class ="byname" >The text is blue</p8
 1 <[0 class ="byname" >The text is blue</p8
 2
+2
+3 <p class ="byrgb" >The text is green</p>
 3 <p class ="byrgb" >The text is green</p>
 4
+4
+5 <p class ="byhsl" >The text is cyan</p>
 5 <p class ="byhsl" >The text is cyan</p>
 6
+6
+Render webpage
 Render webpage
 Your webpage
+Your webpage
+The text is blue
 The text is blue
 The text is green
+The text is green
+The text is cyan
 The text is cyan
 ► View solution
+► View solution
+Reset code
 Reset code
 Expected webpage
+Expected webpage
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
+transparent none
+transparent none
 transparent none
 transparent none
 Fluffy, soft, white clouds.
+Fluffy, soft, white clouds.
+Without the sun, black.
 Without the sun, black.
 Fluffy, soft, and white are the clouds.
+Fluffy, soft, and white are the clouds.
+The sky is light blue.
 The sky is light blue.
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 24 of 98 2024-10-12, 3:24 p.m.
+24 of 98 2024-10-12, 3:24 p.m.
+Background properties
 Background properties
 Every element in a webpage has a set of background properties. The web browser first draws the
+Every element in a webpage has a set of background properties. The web browser first draws the
+element's background and then the element's content. If the element's background is not fully
 element's background and then the element's content. If the element's background is not fully
 opaque, the element's parent is visible under the element's content. Common background
+opaque, the element's parent is visible under the element's content. Common background
+properties include:
 properties include:
 • The background-color property specifies the background color.
+• The background-color property specifies the background color.
+• The background-image property specifies a background image.
 • The background-image property specifies a background image.
 • The background property is shorthand for setting several of the element's background
+• The background property is shorthand for setting several of the element's background
+properties at the same time.
 properties at the same time.
 Background colors are specified using color names, a color function (RGB, RGBA, HSL, HSLA), or
+Background colors are specified using color names, a color function (RGB, RGBA, HSL, HSLA), or
+one of the values such as . Background images are specified with the value or
 one of the values such as . Background images are specified with the value or
 the url('URL) function, where URL indicates the location of the image. By default, the initial
+the url('URL) function, where URL indicates the location of the image. By default, the initial
+background color is and background image is , which means the element's
 background color is and background image is , which means the element's
 parent's background will display underneath the elemenfs content. When a background color and
+parent's background will display underneath the elemenfs content. When a background color and
+image are both specified, the background image is rendered on top of the color. I PARTICIPATION I . . ACTIVITY 2.3.3: Styling background color and image.
 image are both specified, the background image is rendered on top of the color. I PARTICIPATION I . . ACTIVITY 2.3.3: Styling background color and image.
 <style>
+<style>
+p {
 p {
 background-color : LightSkyBlue;
+background-color : LightSkyBlue;
+. c l ouds {
 . c l ouds {
 background-image : url ( 'clouds.png' ) ;
+background-image : url ( 'clouds.png' ) ;
+</ style>
 </ style>
 <p >
+<p >
+The sky i s light b l ue .
 The sky i s light b l ue .
 </p>
+</p>
+<p c l ass ="clouds">
 <p c l ass ="clouds">
 Fluffy , soft , and wh i te are the clouds
+Fluffy , soft , and wh i te are the clouds
+</p>
 </p>
 <p >
+<p >
+Wi thout the sun, b l ack.
 Wi thout the sun, b l ack.
 </ p>
+</ p>
+Animation content:
 Animation content:
 A block of HTML is shown with a style block containing CSS:
+A block of HTML is shown with a style block containing CSS:
+<style>
 <style>
 □
+□
+different languages.</p>
 different languages.</p>
 "color: #ffff00">
+"color: #ffff00">
+"image: url('smiley.gif')">Hola</li>
 "image: url('smiley.gif')">Hola</li>
 "green url('smiley.gif')">Olá</li>
+"green url('smiley.gif')">Olá</li>
+"image: url('clouds.png');">
 "image: url('clouds.png');">
 "blue">Salut</li>
+"blue">Salut</li>
 "url('smiley.gif')">Hej</li>
+"url('smiley.gif')">Hej</li>
+"transparent url('smiley.gif')">Bog</
 "transparent url('smiley.gif')">Bog</
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 25 of 98 2024-10-12, 3:24 p.m.
+25 of 98 2024-10-12, 3:24 p.m.
+p{
 p{
 background-color: LightSkyBlue;
+background-color: LightSkyBlue;
+}
 }
 .clouds {
+.clouds {
+background-image: url('clouds.png');
 background-image: url('clouds.png');
 }
+}
+<p>
 <p>
 The sky is light blue.
+The sky is light blue.
+</p>
 </p>
 <p class="clouds">
+<p class="clouds">
+Fluffy, soft, and white are
 Fluffy, soft, and white are
 the clouds.
+the clouds.
+</p>
 </p>
 <p>
+<p>
+Without the sun, black.
 Without the sun, black.
 </p>
+</p>
+The browser displays three lines of text:
 The browser displays three lines of text:
 Line 1: 'The sky is light blue." with a light blue background color.
+Line 1: 'The sky is light blue." with a light blue background color.
+Line 2: "Fluffy, soft, and white are the clouds." with an image of clouds in the background.
 Line 2: "Fluffy, soft, and white are the clouds." with an image of clouds in the background.
 Line 3: "Without the sun, black." with a light blue background color.
+Line 3: "Without the sun, black." with a light blue background color.
+Animation captions:
 Animation captions:
 1. The elements display with transparent backgrounds.
+1. The elements display with transparent backgrounds.
+2. The p element has a LightSkyBlue background color.
 2. The p element has a LightSkyBlue background color.
 3. The clouds class uses a background image that displays over the p element's background.
+3. The clouds class uses a background image that displays over the p element's background.
+I PARTICIPATION I . . . ACTIVITY 2.3.4: Determining background properties.
 I PARTICIPATION I . . . ACTIVITY 2.3.4: Determining background properties.
 Given the HTML below, indicate the background properties used for the elements.
+Given the HTML below, indicate the background properties used for the elements.
+Assume that the smiley.gif image has a transparent background.
 Assume that the smiley.gif image has a transparent background.
 <p >Below is the word "Hello" in differe
+<p >Below is the word "Hello" in differe
+<ul id="americas" style="background-col
 <ul id="americas" style="background-col
 <li id="hola" style="background-imag
+<li id="hola" style="background-imag
+<li id="ola" style="background: gree
 <li id="ola" style="background: gree
 </ul>
+</ul>
+<ul id="europe" style="background-image
 <ul id="europe" style="background-image
 <li id="salut" style="background: bl
+<li id="salut" style="background: bl
+<li id="hej" style="background: red
 <li id="hej" style="background: red
 <li id="bog" style="background: tran
+<li id="bog" style="background: tran
+li>
 li>
 </ul>
+</ul>
+. <lo>
 . <lo>
 ., .-.r-:.f= I\H -...._ u ,,,.._ 1 -, / / 1 .; -...._
+., .-.r-:.f= I\H -...._ u ,,,.._ 1 -, / / 1 .; -...._
+□
 □
 float clear
+float clear
+float
 float
 none
-left
-right
-clear
 none
 left
+left
 right
+right
+clear
+clear
+none
+none
+left
+left
+right
+right
+both
 both
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 26 of 98 2024-10-12, 3:24 p.m.
+26 of 98 2024-10-12, 3:24 p.m.
+If unable to drag and drop, refresh the page.
 If unable to drag and drop, refresh the page.
 blue smiley face on red
+blue smiley face on red
+smiley face on clouds
 smiley face on clouds
 Float and clear properties
+Float and clear properties
+smiley face on green
 smiley face on green
 Hola
+Hola
+Ola
 Ola
 Salut
+Salut
+Hej
 Hej
 Bog
+Bog
+smiley face on yellow
 smiley face on yellow
 Reset
+Reset
+CSS properties and control how text flows around HTML elements, making
 CSS properties and control how text flows around HTML elements, making
 webpages look like a magazine or newspaper article where the article's text wraps around the
+webpages look like a magazine or newspaper article where the article's text wraps around the
+images in the page.
 images in the page.
 The float property specifies whether the element will float to the right or left of the element's parent
+The float property specifies whether the element will float to the right or left of the element's parent
+container, allowing text to flow around the element. Values for the property include:
 container, allowing text to flow around the element. Values for the property include:
 • - Element does not float (default value)
+• - Element does not float (default value)
+• - Element floats to parent container's left side
 • - Element floats to parent container's left side
 • - Element floats to parent container's right side
+• - Element floats to parent container's right side
+The clear property moves elements below previously floated elements. Values for the
 The clear property moves elements below previously floated elements. Values for the
 property include:
+property include:
+• - Element allowed to float (default value)
 • - Element allowed to float (default value)
 • - Stop floating on parent container's left side
+• - Stop floating on parent container's left side
+• - Stop floating on parent container's right side
 • - Stop floating on parent container's right side
 • - Stop floating on both sides
+• - Stop floating on both sides
 <img src="ducatiSmallv1.jpg"
+<img src="ducatiSmallv1.jpg"
+alt="Yellow and black
 alt="Yellow and black
 motorcycle">
+motorcycle">
+<p>
 <p>
 The Ducati Streetfighter 848 is
+The Ducati Streetfighter 848 is
+the bike
 the bike
 you've been looking for!
+you've been looking for!
+</p>
 </p>
 <p>
+<p>
+Call us for a quote!
 Call us for a quote!
 </p>
+</p>
+<img src="ducatiSmallv1.jpg"
 <img src="ducatiSmallv1.jpg"
 alt="Yellow and black
+alt="Yellow and black
+motorcycle"
 motorcycle"
 style="float:left">
+style="float:left">
+<p>
 <p>
 The Ducati Streetfighter 848 is
+The Ducati Streetfighter 848 is
+the bike
 the bike
 you've been looking for!
+you've been looking for!
+</p>
 </p>
 <p>
+<p>
 Call us for a quote!
+Call us for a quote!
+</p>
 </p>
 <img src="ducatiSmallv1.jpg"
+<img src="ducatiSmallv1.jpg"
+alt="Yellow and black
 alt="Yellow and black
 motorcycle"
+motorcycle"
+style="float:right">
 style="float:right">
 <p>
+<p>
+The Ducati Streetfighter 848 is
 The Ducati Streetfighter 848 is
 the bike
+the bike
+you've been looking for!
 you've been looking for!
 </p>
+</p>
+<p>
 <p>
 Call us for a quote!
+Call us for a quote!
+</p>
 </p>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 27 of 98 2024-10-12, 3:24 p.m.
+27 of 98 2024-10-12, 3:24 p.m.
+Table 2.3.1: Float examples.
 Table 2.3.1: Float examples.
 HTML and CSS
+HTML and CSS
+No floating
 No floating
 Float left
+Float left
+Float right
 Float right
 Clear both
+Clear both
+Render
 Render
 The Ducati Streetfighter 848 is the bike
+The Ducati Streetfighter 848 is the bike
+you 1ve been looking for!
 you 1ve been looking for!
 Call us for a quote!
 Call us for a quote!
-The Ducati
-Streetfighter
-848isthe
-bike you1ve
-been looking
-for!
+Call us for a quote!
 Call us for a quote!
 The Ducati
-Streetfighter
-848isthe
 The Ducati
 Streetfighter
+Streetfighter
+848isthe
+848isthe
+bike you1ve
+bike you1ve
+been looking
+been looking
+for!
+for!
+Call us for a quote!
+Call us for a quote!
+The Ducati
+The Ducati
+Streetfighter
+Streetfighter
+848isthe
+848isthe
+The Ducati
+The Ducati
+Streetfighter
+Streetfighter
+848isthe
 848isthe
 zyBooks
+zyBooks
+28 of98
 28 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 <img src="ducatiSmallvl.jpg"
+<img src="ducatiSmallvl.jpg"
+alt="Yellow and black
 alt="Yellow and black
 motorcycle "
+motorcycle "
+style="float:left">
 style="float:left">
 <p>
+<p>
+The Ducati Streetfighter 848 is
 The Ducati Streetfighter 848 is
 the bike
+the bike
+you've been looking for!
 you've been looking for!
 </p >
+</p >
+<p style="clear:both">
 <p style="clear:both">
 Call us for a quote!
+Call us for a quote!
+</p >
 </p >
 I PARTICIPATION I . . ACTIVITY 2.3.5: Floating images.
+I PARTICIPATION I . . ACTIVITY 2.3.5: Floating images.
+Call us for a quote!
 Call us for a quote!
 Modify the CSS below to float to the right the first image with floatright
+Modify the CSS below to float to the right the first image with floatright
+class, to float
 class, to float
 to the left the second image with floatleft class, and to clear floating elements on
+to the left the second image with floatleft class, and to clear floating elements on
+both sides of the p element with nofloats class.
 both sides of the p element with nofloats class.
 1 <hl>Classifieds</~1>
+1 <hl>Classifieds</~1>
+2
 2
 3 <p>
+3 <p>
+I HTML I css
 I HTML I css
 4 <img src="https: //resources. zybooks. com/WebProgramming/smallCatvl. jpg"
+4 <img src="https: //resources. zybooks. com/WebProgramming/smallCatvl. jpg"
+5 class="floatright" >
 5 class="floatright" >
 6 Adorable female cat available for adoption. We found Fluffy during at
+6 Adorable female cat available for adoption. We found Fluffy during at
+7 She is house-trained and very cuddly. Call 555-1234.
 7 She is house-trained and very cuddly. Call 555-1234.
 8 </p>
+8 </p>
+9
 9
 10 <p class="nofloats" >
+10 <p class="nofloats" >
+11 <img src="https: //resources. zybooks. com/WebProgramming/smallDogvl. jpg"
 11 <img src="https: //resources. zybooks. com/WebProgramming/smallDogvl. jpg"
 12 class="floatleft" >
+12 class="floatleft" >
+13 Looking for new home for puppy. Goes by the name "Bowser".
 13 Looking for new home for puppy. Goes by the name "Bowser".
 14 </p>
+14 </p>
+15
 15
 16 <p>
+16 <p>
+17 Call 555-4321 for more information.
 17 Call 555-4321 for more information.
 1 S'.I ✓ /n,
+1 S'.I ✓ /n,
+Render webpage
 Render webpage
 Reset code
+Reset code
+□
 □
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
+"basketball">
 "basketball">
 Classifieds
+Classifieds
+Adorable female
 Adorable female
 cat available
+cat available
+for adoption.
 for adoption.
 We found Fluffy
+We found Fluffy
+during a
 during a
 thunderstorm.
+thunderstorm.
+She is housetrained
 She is housetrained
 and
+and
+very cuddly. Call 555-1234.
 very cuddly. Call 555-1234.
 Looking for new
+Looking for new
+home for puppy.
 home for puppy.
 Goes by the
+Goes by the
 name "Bowser".
+name "Bowser".
+Call 555-4321
 Call 555-4321
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 29 of 98 2024-10-12, 3:24 p.m.
+29 of 98 2024-10-12, 3:24 p.m.
+Your webpage
 Your webpage
 Classifieds
+Classifieds
+Expected webpage
 Expected webpage
 le
+le
+Ac
 Ac
 Cc
+Cc
+fc
 fc
 WE
+WE
+dL
 dL
 tt
+tt
+St
 St
 Adorable tr
+Adorable tr
+female cat available for adoption . We
 female cat available for adoption . We
 found Fluffy during a thunderstorm . She
+found Fluffy during a thunderstorm . She
+is house-trained and very cuddly. Call
 is house-trained and very cuddly. Call
 555-1234 .
+555-1234 .
+► View solution
 ► View solution
 VE
+VE
+I
 I
 I PARTICIPATION I . ACTIVITY 2.3.6: Float and clear properties.
+I PARTICIPATION I . ACTIVITY 2.3.6: Float and clear properties.
+Refer to the HTML below.
 Refer to the HTML below.
 <div>
+<div>
+<img src="basketball.png" a l t ="baske
 <img src="basketball.png" a l t ="baske
 <p >Say what? < / p>
+<p >Say what? < / p>
+<p >Let ' s s hoot some hoops! </ p>
 <p >Let ' s s hoot some hoops! </ p>
 < / div>
+< / div>
+1) If the float property is not used, what
 1) If the float property is not used, what
 does the HTML display?
+does the HTML display?
 0
+0
+Say what?
 Say what?
 Let's shoot some hoopsl
+Let's shoot some hoopsl
 0
+0
+Say what?
 Say what?
 O Let's shoot
+O Let's shoot
+Say what?
 Say what?
 Let's shoot
+Let's shoot
+some hoops!
 some hoops!
 □
+□
+0
 0
 inline span a
+inline span a
+block p h1 div
 block p h1 div
 none style
+none style
 inline-block
+inline-block
+list-item
 list-item
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 30 of 98 2024-10-12, 3:24 p.m.
+30 of 98 2024-10-12, 3:24 p.m.
+2)
 2)
 3)
+3)
+some hoops!
 some hoops!
 What CSS rule produces the following
+What CSS rule produces the following
 result?
+result?
+Say what?
 Say what?
 Let's shoot
+Let's shoot
+some hoopsl
 some hoopsl
 0 div float: left;
+0 div float: left;
+0 img float: left;
 0 img float: left;
 0 p { float: left; }
+0 p { float: left; }
+Assuming the ball image floats right,
 Assuming the ball image floats right,
 what CSS rule produces the following
+what CSS rule produces the following
+result?
 result?
 Say what?
+Say what?
+Let's shoot some hoops!
 Let's shoot some hoops!
 Q div
+Q div
+0 img
 0 img
 clear: both;
 clear: both;
+clear: both;
+clear: both;
+0 p { clear: both; }
 0 p { clear: both; }
 Display property
+Display property
+The display property controls the layout of the element on a webpage. Values for the display
 The display property controls the layout of the element on a webpage. Values for the display
 property include:
+property include:
+• - Displays the element as an inline element, like or elements.
 • - Displays the element as an inline element, like or elements.
 • - Displays the element as a block element, like , , or • • v elements.
+• - Displays the element as a block element, like , , or • • v elements.
+• - Hides the element from being displayed, like elements.
 • - Hides the element from being displayed, like elements.
 0
 0
+0
+0
+• - Displays the contents of the element as a block element, but formats the
 • - Displays the contents of the element as a block element, but formats the
 element as an inline element.
+element as an inline element.
+• - Displays the contents of the element as a list item element. I =~~~~~;~•110" I 2.3.7 Using the display property. □
 • - Displays the contents of the element as a list item element. I =~~~~~;~•110" I 2.3.7 Using the display property. □
 .display1 {
+.display1 {
+color: aliceblue;
 color: aliceblue;
 }
-.{
-color: lemonchiffon;
 }
 .{
+.{
+color: lemonchiffon;
+color: lemonchiffon;
+}
+}
+.{
+.{
+color: }
 color: }
 display1">
+display1">
 Actions speak louder than display2">the sword.
+Actions speak louder than display2">the sword.
+come to display3">span>.
 come to display3">span>.
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 31 of 98 2024-10-12, 3:24 p.m.
+31 of 98 2024-10-12, 3:24 p.m.
+.display l {
 .display l {
 background- color : aliceblue ;
+background- color : aliceblue ;
+display : inline ;
 display : inline ;
 .display2
+.display2
+background- color : lemonchiffon ;
 background- color : lemonchiffon ;
 display : block;
+display : block;
+. display3 {
 . display3 {
 background- color : mintcream;
+background- color : mintcream;
+display : none ;
 display : none ;
 <p class="displayl ">
+<p class="displayl ">
+Ac ti ons spe a k l ouder t ha n words.
 Ac ti ons spe a k l ouder t ha n words.
 </p>
+</p>
+<p>
 <p>
 The <span class="display2 " >pen</ span>
+The <span class="display2 " >pen</ span>
+is mightier than t he s word.
 is mightier than t he s word.
 </p>
+</p>
+<p>
 <p>
 All good things c ome t o those who
+All good things c ome t o those who
+<span class="display3 " >wait</span> .
 <span class="display3 " >wait</span> .
 </p>
+</p>
+Actions speak louder than words.
 Actions speak louder than words.
 The
+The
+Animation content:
 Animation content:
 Stylesheet:
+Stylesheet:
+.display1 {
 .display1 {
 background-color: aliceblue;
+background-color: aliceblue;
+}
 }
 .display2 {
+.display2 {
+pen
 pen
 is mightier than the sword.
+is mightier than the sword.
+All good things come to those who .
 All good things come to those who .
 background-color: lemonchiffon;
+background-color: lemonchiffon;
+}
 }
 .display3 {
+.display3 {
+background-color: mintcream;
 background-color: mintcream;
 }
+}
+HTML:
 HTML:
 <p class="display1 ">
+<p class="display1 ">
+Actions speak louder than words.
 Actions speak louder than words.
 </p>
+</p>
+<p>
 <p>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 32 of 98 2024-10-12, 3:24 p.m.
+32 of 98 2024-10-12, 3:24 p.m.
+The <span class="display2">pen</span> is mightier than the sword.
 The <span class="display2">pen</span> is mightier than the sword.
 </p>
+</p>
+<p>
 <p>
 All good things come to those who <span class="display2">wait</span>.
+All good things come to those who <span class="display2">wait</span>.
+</p>
 </p>
 Step 1: The browser displays: "Actions speak louder than words." with a blue background that
+Step 1: The browser displays: "Actions speak louder than words." with a blue background that
+spans the entire browser width.
 spans the entire browser width.
 Step 2: After changing the CSS, the blue background shrinks to displaying only behind the
+Step 2: After changing the CSS, the blue background shrinks to displaying only behind the
+paragraph's words .
 paragraph's words .
 Step 3: The browser displays 'The pen is mightier than the sword.", and the word "pen" has a
+Step 3: The browser displays 'The pen is mightier than the sword.", and the word "pen" has a
+yellow background.
 yellow background.
 Step 4: After changing the CSS, the word "pen" moves to the next line, and the yellow background
+Step 4: After changing the CSS, the word "pen" moves to the next line, and the yellow background
+expands to fill the browser width.
 expands to fill the browser width.
 Step 5: The browser displays "All good things come to those who wait.". After changing the CSS,
+Step 5: The browser displays "All good things come to those who wait.". After changing the CSS,
+the word "wait" disappears, and the period slides to the left after "who" and a space.
 the word "wait" disappears, and the period slides to the left after "who" and a space.
 Animation captions:
+Animation captions:
+1. The p element is a block element, and a block element fills the width of the element's
 1. The p element is a block element, and a block element fills the width of the element's
 container.
+container.
+2. Adding display:inline to the display1 class makes the p element be treated as an inline
 2. Adding display:inline to the display1 class makes the p element be treated as an inline
 element. The blue background now is only as wide as the paragraph contents.
+element. The blue background now is only as wide as the paragraph contents.
+3. The span element is an inline element, so the span's content is shown on the same line as
 3. The span element is an inline element, so the span's content is shown on the same line as
 the surrounding text.
+the surrounding text.
+4. Adding display:block to the display2 class make the span be treated as a block element.
 4. Adding display:block to the display2 class make the span be treated as a block element.
 The span's content now displays on a separate line.
+The span's content now displays on a separate line.
+5. The span's content displays by default, but adding display:none to the display3 class hides
 5. The span's content displays by default, but adding display:none to the display3 class hides
 the span's contents.
+the span's contents.
+I PARTICIPATION I . ACTIVITY 2.3.8: Display CSS values. □
 I PARTICIPATION I . ACTIVITY 2.3.8: Display CSS values. □
 Provide the CSS display value that correctly styles the following HTML as displayed.
+Provide the CSS display value that correctly styles the following HTML as displayed.
+<style>
 <style>
 .animal {
+.animal {
+background: yellow;
 background: yellow;
 display: _____;
+display: _____;
+}
 }
 </style>
+</style>
+<p>
 <p>
 My favorite breed of
+My favorite breed of
+<span class="animal">cat</span>
 <span class="animal">cat</span>
 is Russian Blue.
+is Russian Blue.
 </p>
+</p>
+display:
+display:
+display:
 display:
 display:
 display:
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 33 of 98 2024-10-12, 3:24 p.m.
+33 of 98 2024-10-12, 3:24 p.m.
+7)
 7)
 2)
+2)
+3)
 3)
 4)
+4)
+My favorite breed of cat is
 My favorite breed of cat is
 Russian Blue.
-Check Show answer
-My favorite breed of is
 Russian Blue.
 Check Show answer
+Check Show answer
+My favorite breed of is
+My favorite breed of is
+Russian Blue.
+Russian Blue.
+Check Show answer
+Check Show answer
+--------------- -----------------------,
 --------------- -----------------------,
 My favorite breed of i
+My favorite breed of i
+cat
 cat
 is Russian Blue.
+is Russian Blue.
+------------ --------------- ------------
 ------------ --------------- ------------
 Check Show answer
+Check Show answer
+My favorite breed of
 My favorite breed of
 • cat
+• cat
 is Russian Blue.
+is Russian Blue.
+0
+0
+0
+0
 0
 0
 0
 0
 <html>
+<html>
+--my-variable: red;
 --my-variable: red;
 var(--my-variable);
+var(--my-variable);
 --color);
+--color);
+The sun rises and sets.
 The sun rises and sets.
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 34 of 98 2024-10-12, 3:24 p.m.
+34 of 98 2024-10-12, 3:24 p.m.
+display:
 display:
 Check Show answer
+Check Show answer
+CSS variables
 CSS variables
 Many websites have complex stylesheets with repeated values. Ex: The same background color
+Many websites have complex stylesheets with repeated values. Ex: The same background color
+may be used in numerous places, and changing the background color requires searching and
 may be used in numerous places, and changing the background color requires searching and
 replacing throughout the stylesheet. CSS variables simplify the process of creating CSS values that
+replacing throughout the stylesheet. CSS variables simplify the process of creating CSS values that
+are used repeatedly in a stylesheet.
 are used repeatedly in a stylesheet.
 A CSS variable is a custom CSS property that defines a value. A CSS variable is declared in a CSS
+A CSS variable is a custom CSS property that defines a value. A CSS variable is declared in a CSS
+selector that defines the variable's scope. A CSS variable can have global scope by declaring the
 selector that defines the variable's scope. A CSS variable can have global scope by declaring the
 variable in the :root selector, which targets the highest DOM element: the element.
+variable in the :root selector, which targets the highest DOM element: the element.
+A CSS variable is defined with two dashes preceding the variable name. Ex:
 A CSS variable is defined with two dashes preceding the variable name. Ex:
 A CSS variable is accessed with the var() function. Ex:
+A CSS variable is accessed with the var() function. Ex:
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY I 2.3.9: Using CSS variables.
+ACTIVITY I 2.3.9: Using CSS variables.
+<style>
 <style>
 : root {
+: root {
+p {
 p {
 --main- color : red ;
+--main- color : red ;
+--main- bg- color : ye llow ;
 --main- bg- color : ye llow ;
 col or : var (--main- color );
+col or : var (--main- color );
+background- color : var (--main- bg- coloi
 background- color : var (--main- bg- coloi
 </ style>
+</ style>
+<p >The s un r i ses a nd set s . </p>
 <p >The s un r i ses a nd set s . </p>
 Animation content:
+Animation content:
+A block of HTML is shown with a style block containing CSS:
 A block of HTML is shown with a style block containing CSS:
 <style>
+<style>
+:root {
 :root {
 □
+□
+color
 color
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 35 of 98 2024-10-12, 3:24 p.m.
+35 of 98 2024-10-12, 3:24 p.m.
+--main-color: red;
 --main-color: red;
 --main-bg-color: yellow;
+--main-bg-color: yellow;
+}
 }
 p{
+p{
+}
 }
 color: var(--main-color);
+color: var(--main-color);
+background-color: var(--ma i n-bg-color);
 background-color: var(--ma i n-bg-color);
 </style>
+</style>
+<p> The sun rises and sets.</p>
 <p> The sun rises and sets.</p>
 This code block displays a line of text that says "The sun rises and sets." in red colored text with a
+This code block displays a line of text that says "The sun rises and sets." in red colored text with a
+yellow background.
 yellow background.
 Animation captions:
+Animation captions:
+1. A CSS variable defined in the :root selector has global scope.
 1. A CSS variable defined in the :root selector has global scope.
 2. The CSS variables main-color and main-bg-color are initialized with the color values red and
+2. The CSS variables main-color and main-bg-color are initialized with the color values red and
+yellow, respectively.
 yellow, respectively.
 3. The p selector uses the CSS variables main-color and main-bg-color to set the paragraph's
+3. The p selector uses the CSS variables main-color and main-bg-color to set the paragraph's
+text and background colors.
 text and background colors.
 I PARTICIPATION I . ACTIVITY 2.3.10: CSS variables.
+I PARTICIPATION I . ACTIVITY 2.3.10: CSS variables.
+1) What selector must a CSS variable be
 1) What selector must a CSS variable be
 declared in to have global scope?
+declared in to have global scope?
+0 : root
 0 : root
 0 p
+0 p
+Q div
 Q div
 2) What is the proper syntax to declare a
+2) What is the proper syntax to declare a
+CSS variable set to black?
 CSS variable set to black?
 0 section-color: black;
+0 section-color: black;
+--section-color: 0 black;
 --section-color: 0 black;
 0 --section-color black;
+0 --section-color black;
+3) What is the proper syntax to use a
 3) What is the proper syntax to use a
 CSS variable called --sectionrn
+CSS variable called --sectionrn
 l nr?
+l nr?
+□
 □
 0
 0
 0
+0
+0
+0
 zyBooks
+zyBooks
+36 of98
 36 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 color: --section- 0 color;
+color: --section- 0 color;
+color: var(--Section- 0 color);
 color: var(--Section- 0 color);
 O color: var(--sectioncolor);
+O color: var(--sectioncolor);
+4) Suppose --main-color from the
 4) Suppose --main-color from the
 animation above is used in 200
+animation above is used in 200
+different CSS rules. Besides the
 different CSS rules. Besides the
 : root rule, how many CSS rules
+: root rule, how many CSS rules
+would need to be modified if -main-
 would need to be modified if -main-
 color is changed to blue?
+color is changed to blue?
+0 0
 0 0
 0 1
+0 1
+0 200
 0 200
 I CHALLENGE I . ACTIVITY 2.3.1 : Common properties.
+I CHALLENGE I . ACTIVITY 2.3.1 : Common properties.
+570104.2065416.qx3zqy7
 570104.2065416.qx3zqy7
 Start
+Start
+For the <p> element, set background-color to rgb(7 00, 100, 250) . SHOW EXPECTED
 For the <p> element, set background-color to rgb(7 00, 100, 250) . SHOW EXPECTED
 I css I HTML I
+I css I HTML I
+1 p {
 1 p {
 2
+2
+3 /* Your solution goes here*/
 3 /* Your solution goes here*/
 4
+4
+5 }
 5 }
 0
+0
+□
 □
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
 zyBooks
+zyBooks
+37 of98
 37 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 1 2 3
+1 2 3
+Check Next
 Check Next
 View your last submission v
+View your last submission v
+Exploring further:
 Exploring further:
 • HTML Color Names from W3Schools.
+• HTML Color Names from W3Schools.
+• CSS Legal Color Values from W3Schools.
 • CSS Legal Color Values from W3Schools.
 • Color HSL from W3Schools.
+• Color HSL from W3Schools.
 • CSS Background ProgertY- from W3Schools.
+• CSS Background ProgertY- from W3Schools.
+• CSS Display, Progerty from W3Schools.
 • CSS Display, Progerty from W3Schools.

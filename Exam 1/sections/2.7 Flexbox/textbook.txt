@@ -1,392 +1,773 @@
 Flexbox container and items
+Flexbox container and items
+The Flexible Box or flexbox is a CSS layout mode that provides an efficient way to lay out elements
 The Flexible Box or flexbox is a CSS layout mode that provides an efficient way to lay out elements
 in a container so the elements behave predictably when the container is resized or viewed on
+in a container so the elements behave predictably when the container is resized or viewed on
+different screen sizes.
 different screen sizes.
 A flex container is an element that has the CSS property display set to flex to create a blocklevel
+A flex container is an element that has the CSS property display set to flex to create a blocklevel
+flex container or inline-f lex to create an inline flex container. Ex:
 flex container or inline-f lex to create an inline flex container. Ex:
 <div style=" display: flex" >. Flex containers hold flex items. A flex item is a child element
+<div style=" display: flex" >. Flex containers hold flex items. A flex item is a child element
+of a flex container that is positioned and sized according to various CSS flexbox properties. I PARTICIPATION I 2.7.1 : Flexbox example renders three div elements on the same
 of a flex container that is positioned and sized according to various CSS flexbox properties. I PARTICIPATION I 2.7.1 : Flexbox example renders three div elements on the same
 ACTIVITY row.
+ACTIVITY row.
+<div i d="container">
 <div i d="container">
 <div>A</ div>
+<div>A</ div>
+<div>B</ div>
 <div>B</ div>
 <div>C</ div>
+<div>C</ div>
+</ div>
 </ div>
 /* flex c ontainer */
+/* flex c ontainer */
+#contai ner {
 #contai ner {
 d i spl ay : fl ex ;
+d i spl ay : fl ex ;
+border : lpx green so lid ;
 border : lpx green so lid ;
 paddi ng : Spx;
+paddi ng : Spx;
+/* flex items */
 /* flex items */
 #contai ner > div
+#contai ner > div
+paddi ng : lOpx ;
 paddi ng : lOpx ;
 border : lpx b l ue solid ;
+border : lpx b l ue solid ;
+□
 □
 2024-10-12, 3:24 p.m.
+2024-10-12, 3:24 p.m.
+items container
 items container
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 76 of 98 2024-10-12, 3:24 p.m.
+76 of 98 2024-10-12, 3:24 p.m.
+l ___ J
 l ___ J
 Animation content:
+Animation content:
+Two blocks of code are displayed, the first in HTML:
 Two blocks of code are displayed, the first in HTML:
 <div id="container">
+<div id="container">
+<div>A</div>
 <div>A</div>
 <div>B</div>
+<div>B</div>
+<div>C</div>
 <div>C</div>
 </div>,
+</div>,
+the second in CSS:
 the second in CSS:
 /* flex container*/
+/* flex container*/
+#container {
 #container {
 }
+}
+display: flex;
 display: flex;
 border: 1 px green solid;
+border: 1 px green solid;
+padding: 5px;
 padding: 5px;
 /* flex items*/
+/* flex items*/
+#container> div {
 #container> div {
 padding: 1 Opx;
+padding: 1 Opx;
+border: 1 px blue solid;
 border: 1 px blue solid;
 }
+}
+A screen is displayed below. The first scene shows A, B, and C vertically aligned on the left
 A screen is displayed below. The first scene shows A, B, and C vertically aligned on the left
 without CSS. Next the flex container block is highlighted and A, B, and C display left-aligned in a
+without CSS. Next the flex container block is highlighted and A, B, and C display left-aligned in a
+row. Lastly the flex items block is highlighted and A, B, and Care formatted.
 row. Lastly the flex items block is highlighted and A, B, and Care formatted.
 Animation captions:
+Animation captions:
+1. Without any CSS, the A, B, and C div elements display vertically, each filling the browser
 1. Without any CSS, the A, B, and C div elements display vertically, each filling the browser
 width .
+width .
+2. Setting the CSS display property to "flex" makes the outer div the flex container. The flex
 2. Setting the CSS display property to "flex" makes the outer div the flex container. The flex
 items now display on the same row.
+items now display on the same row.
+3. The flex items have padding and blue borders.
 3. The flex items have padding and blue borders.
 I PARTICIPATION I . . ACTIVITY 2.7.2: Flexbox container and items.
+I PARTICIPATION I . . ACTIVITY 2.7.2: Flexbox container and items.
+Refer to the animation above.
 Refer to the animation above.
 1) The flex container has
+1) The flex container has
+item(s) .
 item(s) .
 flex
+flex
+□
 □
 0
+0
+#container
 #container
 row row-reverse column column-reverse
+row row-reverse column column-reverse
+gap: 10px;
 gap: 10px;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 77 of 98 2024-10-12, 3:24 p.m.
+77 of 98 2024-10-12, 3:24 p.m.
+0 1
 0 1
 0 2
+0 2
+0 3
 0 3
 2) Removing __ from the
+2) Removing __ from the
+rule displays all flex
 rule displays all flex
 items vertically on separate rows.
+items vertically on separate rows.
+0 display: flex;
 0 display: flex;
 0 border: lpx green
+0 border: lpx green
+solid;
 solid;
 0 padding: 5px;
+0 padding: 5px;
+3) Flex items appear __ within a flex
 3) Flex items appear __ within a flex
 container by default.
+container by default.
+0 left aligned
 0 left aligned
 0 centered
+0 centered
+0 right-aligned
 0 right-aligned
 Flex container properties
+Flex container properties
+Several CSS properties modify the default behavior of a flex container:
 Several CSS properties modify the default behavior of a flex container:
 • The flex-direction property defines the direction of flex items within the container using
+• The flex-direction property defines the direction of flex items within the container using
+values:
 values:
 (default)
+(default)
+A C
 A C
 B B
+B B
+C A
 C A
 0
 0
+0
+0
+• The gap property defines the space between flex items. Ex:
 • The gap property defines the space between flex items. Ex:
 between all items.
+between all items.
+puts a 1 Opx gap
 puts a 1 Opx gap
 flex-start flex-end space-between space-around space-evenly
+flex-start flex-end space-between space-around space-evenly
+nowrap wrap wrap-reverse
 nowrap wrap wrap-reverse
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 78 of 98 2024-10-12, 3:24 p.m.
+78 of 98 2024-10-12, 3:24 p.m.
+B
 B
 C
+C
+• The justify-content property justifies the flex items within the container using values:
 • The justify-content property justifies the flex items within the container using values:
 (default) center
+(default) center
+GE]
 GE]
 • The flex-wrap property determines if or how flex items wrap onto multiple rows when the
+• The flex-wrap property determines if or how flex items wrap onto multiple rows when the
+container is not wide enough to hold all items, using values:
 container is not wide enough to hold all items, using values:
 (default)
+(default)
+A B C
 A B C
 C A B -
+C A B -
+I PARTICIPATION I . . ACTIVITY 2.7.3: Flex container properties for photos.
 I PARTICIPATION I . . ACTIVITY 2.7.3: Flex container properties for photos.
 The webpage below uses a flexbox to display three photos with captions.
+The webpage below uses a flexbox to display three photos with captions.
+Make the following CSS modifications to the flex container. After each modification,
 Make the following CSS modifications to the flex container. After each modification,
 render the webpage to verify the modification works properly.
+render the webpage to verify the modification works properly.
+1. Add a gap property to the flex container to put a 20px gap between the photos.
 1. Add a gap property to the flex container to put a 20px gap between the photos.
 2. Add a flex-direction property to the flex container to display the photos in
+2. Add a flex-direction property to the flex container to display the photos in
+reverse.
 reverse.
 3. Add a justify-content property to the flex container to display the photos
+3. Add a justify-content property to the flex container to display the photos
+centered in the browser window.
 centered in the browser window.
 □
+□
+wrap
 wrap
 zyBooks
+zyBooks
 I
+I
+79 of98
 79 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 4. Add a flex-wrap property to the flex container so the photos wrap to the next row
+4. Add a flex-wrap property to the flex container so the photos wrap to the next row
+when the browser width is reduced .
 when the browser width is reduced .
 Note: The window that renders the webpage can be resized using the small handle in the
+Note: The window that renders the webpage can be resized using the small handle in the
+bottom-right corner.
 bottom-right corner.
 I HTML I css I
+I HTML I css I
+1 <[div} id="container"> li
 1 <[div} id="container"> li
 2 <div class="photo"> f
+2 <div class="photo"> f
+3 <img src ="https: //resources. zybooks. com/WebProgramming/ducatiSmalh
 3 <img src ="https: //resources. zybooks. com/WebProgramming/ducatiSmalh
 4 <p>
+4 <p>
+5 Ducati motorcycle
 5 Ducati motorcycle
 6 </p>
+6 </p>
+7 </div>
 7 </div>
 8 <div class="photo">
+8 <div class="photo">
+9 <img src ="https://resources.zybooks.com/WebProgramming/kyotoRestaur
 9 <img src ="https://resources.zybooks.com/WebProgramming/kyotoRestaur
 10 <p>
+10 <p>
+11 Japanese restaurant
 11 Japanese restaurant
 12 </p>
+12 </p>
+13 </div>
 13 </div>
 14 <div class="photo">
+14 <div class="photo">
+15 <img src ="https://resources.zybooks.com/WebProgramming/lakelvl.jpg"
 15 <img src ="https://resources.zybooks.com/WebProgramming/lakelvl.jpg"
 16 <p>
+16 <p>
+17 Lake in Colorado
 17 Lake in Colorado
 Render webpage Reset code
+Render webpage Reset code
+Your webpage
 Your webpage
 Japanese restaurant
+Japanese restaurant
+Ducati motorcycle Lake in Colorado
 Ducati motorcycle Lake in Colorado
 ► View solution
+► View solution
+2024-10-12, 3:24 p.m.
 2024-10-12, 3:24 p.m.
 <div>
+<div>
+<div id="container">
 <div id="container">
 <img src="madrid.jpg" alt="Madrid">
+<img src="madrid.jpg" alt="Madrid">
+<img src="hanoi.jpg" alt="Hanoi">
 <img src="hanoi.jpg" alt="Hanoi">
 <img src="islamabad.jpg" alt="Islamabad">
+<img src="islamabad.jpg" alt="Islamabad">
+</div>
 </div>
 flex-direction
+flex-direction
+row
 row
 row-reverse
+row-reverse
+column-reverse
 column-reverse
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 80 of 98 2024-10-12, 3:24 p.m.
+80 of 98 2024-10-12, 3:24 p.m.
+ACTIVITY 2.7.4: Flex container properties. I PARTICIPATION I
 ACTIVITY 2.7.4: Flex container properties. I PARTICIPATION I
 Refer to the HTML below. Assume a CSS rule exists that makes the a flex
+Refer to the HTML below. Assume a CSS rule exists that makes the a flex
+container.
 container.
 7) What value
+7) What value
+displays Madrid on the right side of
 displays Madrid on the right side of
 the grid container with all three
+the grid container with all three
+images on the same row?
 images on the same row?
 0
 0
 0
+0
+0
+0
+2) What justify-content value puts
 2) What justify-content value puts
 an equal amount of space on either
+an equal amount of space on either
+side of the three images but leaves no
 side of the three images but leaves no
 space between the images?
+space between the images?
+0 center
 0 center
 0 space-between
+0 space-between
+0 space-around
 0 space-around
 3) What flex-wrap value makes the
+3) What flex-wrap value makes the
+Islamabad image appear below
 Islamabad image appear below
 Madrid if the grid container is not
+Madrid if the grid container is not
+wide enough to show all three images
 wide enough to show all three images
 on the same row?
+on the same row?
+0 nowrap
 0 nowrap
 0 wrap
+0 wrap
+0 wrap-reverse
 0 wrap-reverse
 Flex item properties
+Flex item properties
+A flex item's width is determined by the combination of three CSS properties:
 A flex item's width is determined by the combination of three CSS properties:
 0
 0
 0
+0
+0
+0
+auto
+auto
 auto
 auto
 "html">Home</a></li>
+"html">Home</a></li>
+"products.html">Products</a></li>
 "products.html">Products</a></li>
 "html">About</a></li>
+"html">About</a></li>
+Products About Home Products About
 Products About Home Products About
 nav li {
+nav li {
+flex-basis: 100px;
 flex-basis: 100px;
 flex-shrink: 0;
+flex-shrink: 0;
+background-color: gold;
 background-color: gold;
 text-align: center;
+text-align: center;
+}
 }
 : 1;
+: 1;
 background-color: gold;
+background-color: gold;
+align: center;
 align: center;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 81 of 98 2024-10-12, 3:24 p.m.
+81 of 98 2024-10-12, 3:24 p.m.
+• The flex-basis property sets the initial length of a flex item. The values can be (the
 • The flex-basis property sets the initial length of a flex item. The values can be (the
 default), a percentage, or a length unit. The default value makes the flex item the same
+default), a percentage, or a length unit. The default value makes the flex item the same
+initial length as the content.
 initial length as the content.
 • The flex-grow property sets a proportion that determines how much of the available
+• The flex-grow property sets a proportion that determines how much of the available
+container space should be assigned to the item. The default is 0, meaning the size should be
 container space should be assigned to the item. The default is 0, meaning the size should be
 based on the item's content.
+based on the item's content.
+• The flex-shrink property sets a proportion that determines the item's minimum size. The
 • The flex-shrink property sets a proportion that determines the item's minimum size. The
 default is 1, meaning the size should shrink at the same rate as other items when the
+default is 1, meaning the size should shrink at the same rate as other items when the
+container width shrinks. A value of O means the item should not change sizes when the
 container width shrinks. A value of O means the item should not change sizes when the
 container width shrinks.
+container width shrinks.
+I PARTICIPATION I 2.7.5: Changing flex item properties.
 I PARTICIPATION I 2.7.5: Changing flex item properties.
 ACTIVITY
+ACTIVITY
 <nav>
+<nav>
+<ul>
 <ul>
 <li><a href="index.
+<li><a href="index.
+<li><a href="produc
 <li><a href="produc
 <li><a href="about.
+<li><a href="about.
+nav ul {
 nav ul {
 </ ul>
+</ ul>
+</ nav>
 </ nav>
 d i spl ay : fl ex ;
+d i spl ay : fl ex ;
+li st- styl e - type : none ;
 li st- styl e - type : none ;
 paddi ng : 0;
+paddi ng : 0;
+nav li {
 nav li {
 f l ex- grow :
+f l ex- grow :
+backgrounc
 backgrounc
 text- a ligr
+text- a ligr
+□
 □
 Home Products About
+Home Products About
+[Hom, P, _ I] [' _I,____-_______,I! J
 [Hom, P, _ I] [' _I,____-_______,I! J
 Animation content:
+Animation content:
+A code block of HTML is displayed:
 A code block of HTML is displayed:
 <nav>
+<nav>
+<ul>
 <ul>
 <li><a href="index.html">Home</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
 <li><a href="products.html">Products</a></li>
 <li><a href="about.html">About</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
 </ul>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 82 of 98 2024-10-12, 3:24 p.m.
+82 of 98 2024-10-12, 3:24 p.m.
+</nav>
 </nav>
 Next three code blocks of CSS are shown. The first block shows the following:
+Next three code blocks of CSS are shown. The first block shows the following:
+nav ul {
 nav ul {
 }
+}
 display: flex;
+display: flex;
+list-style-type: none;
 list-style-type: none;
 padding: O;
+padding: O;
+The second:
 The second:
 nav Ii {
-}
-flex-grow: 1;
-background-color: gold;
-text-align: center;
-And the third:
 nav Ii {
 }
+}
+flex-grow: 1;
+flex-grow: 1;
+background-color: gold;
+background-color: gold;
+text-align: center;
+text-align: center;
+And the third:
+And the third:
+nav Ii {
+nav Ii {
+}
+}
+flex-basis: 1 OOpx;
 flex-basis: 1 OOpx;
 flex-shrink: O;
+flex-shrink: O;
 background-color: gold;
+background-color: gold;
+text-align: center;
 text-align: center;
 Below each CSS code block there is a screen displaying the output. The first shows Home,
+Below each CSS code block there is a screen displaying the output. The first shows Home,
+Product, and About in a row across the top. The second first shows the three nav links leftaligned
 Product, and About in a row across the top. The second first shows the three nav links leftaligned
 in a row when flex-grow is 0, then portions the nav links evenly when flex-grow is 1. The
+in a row when flex-grow is 0, then portions the nav links evenly when flex-grow is 1. The
+third box shows the three nav links changing container size when the browser is resized when
 third box shows the three nav links changing container size when the browser is resized when
 flex-shrink is 0, then flex-shrink is changed to 1, preventing the containers from resizing.
+flex-shrink is 0, then flex-shrink is changed to 1, preventing the containers from resizing.
+Animation captions:
 Animation captions:
 1. A website's navigation links are displayed in an unordered list.
+1. A website's navigation links are displayed in an unordered list.
+2. Making the ul element a flex container places the nav links on the same row.
 2. Making the ul element a flex container places the nav links on the same row.
 3. By default, the Ii elements have flex-basis:auto and flex-grow:O, so Ii elements are only as
+3. By default, the Ii elements have flex-basis:auto and flex-grow:O, so Ii elements are only as
+wide as the item's content.
 wide as the item's content.
 4. Changing flex-grow from the default Oto 1 gives all Ii elements the same proportion. The
+4. Changing flex-grow from the default Oto 1 gives all Ii elements the same proportion. The
+elements fill the flex container.
 elements fill the flex container.
 5. Replacing "flex-grow:1" with "flex-basis:1 OOpx" makes each Ii element 1 OOpx wide.
+5. Replacing "flex-grow:1" with "flex-basis:1 OOpx" makes each Ii element 1 OOpx wide.
+6. Resizing the browser changes the container size. When the container shrinks, the Ii
 6. Resizing the browser changes the container size. When the container shrinks, the Ii
 elements shrink to fill the available space.
+elements shrink to fill the available space.
+7. Changing flex-shrink from the default 1 to O prevents the Ii elements from shrinking when
 7. Changing flex-shrink from the default 1 to O prevents the Ii elements from shrinking when
 the browser is resized .
+the browser is resized .
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY I 2.7.6: Flex item properties. □
+ACTIVITY I 2.7.6: Flex item properties. □
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en">
+<head>
 <head>
 <title>ACME Widgets</title>
+<title>ACME Widgets</title>
+<style>
 <style>
 body {
+body {
+font-family: Arial;
 font-family: Arial;
 }
+}
+header {
 header {
 display: flex;
+display: flex;
+justify-content: space-between;
 justify-content: space-between;
 }
+}
+header h1 {
 header h1 {
 margin: 6px;
+margin: 6px;
+}
 }
 nav ul {
+nav ul {
+display: flex;
 display: flex;
 list-style-type: none;
+list-style-type: none;
+padding: 0;
 padding: 0;
 margin: 0;
+margin: 0;
+width: 500px;
 width: 500px;
 }
+}
+nav li {
 nav li {
 background-color: gold;
+background-color: gold;
+margin: 5px;
 margin: 5px;
 padding: 10px;
+padding: 10px;
+text-align: center;
 text-align: center;
 }
+}
+nav a {
 nav a {
 color: black;
+color: black;
+text-decoration: none;
 text-decoration: none;
 }
+}
+</style>
 </style>
 </head>
+</head>
+<body>
 <body>
 <header>
+<header>
+<h1>ACME Widgets</h1>
 <h1>ACME Widgets</h1>
 <nav>
+<nav>
+<ul>
 <ul>
 <li><a href="index.html">Home</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></<li><a href="services.html">Services</a></li>
 <li><a href="products.html">Products</a></<li><a href="services.html">Services</a></li>
 <li><a href="about.html">About</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
 </ul>
 </nav>
+</nav>
+</header>
 </header>
 </body>
+</body>
+</html>
 </html>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 83 of 98 2024-10-12, 3:24 p.m.
+83 of 98 2024-10-12, 3:24 p.m.
+•
 •
 Refer to the webpage below.
+Refer to the webpage below.
+:/li>
 :/li>
 flex-basis
+flex-basis
+<nav>
 <nav>
 auto
+auto
+<nav>
 <nav>
 nav li
+nav li
+nav {
 nav {
 flex-basis: 50%;
+flex-basis: 50%;
+}
 }
 flex-grow: 0;
+flex-grow: 0;
+flex-grow: 1;
 flex-grow: 1;
 flex-grow: 50%;
+flex-grow: 50%;
+header h1
 header h1
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 84 of 98 2024-10-12, 3:24 p.m.
+84 of 98 2024-10-12, 3:24 p.m.
+1) How many flex containers exist in the
 1) How many flex containers exist in the
 webpage?
+webpage?
 0 0
+0 0
+0 1
 0 1
 0 2
+0 2
+2) The heading "ACME Widgets" appears
 2) The heading "ACME Widgets" appears
 __ the navigation links in the
+__ the navigation links in the
+browser.
 browser.
 0 to the left of
+0 to the left of
+0 to the right of
 0 to the right of
 0 above
+0 above
+3) What is the for the
 3) What is the for the
 flex item?
+flex item?
+0
 0
 0 0
+0 0
+0 1
 0 1
 4) How wide is the flex item?
+4) How wide is the flex item?
+5)
 5)
 0 Just wide enough to hold all
+0 Just wide enough to hold all
+the navigation links
 the navigation links
 0 Half the width of the webpage
+0 Half the width of the webpage
+0 Entire width of the web page
 0 Entire width of the web page
 In addition to the CSS below, __
+In addition to the CSS below, __
 must be added to the
+must be added to the
+the Ii elements fill half the row.
 the Ii elements fill half the row.
 0
 0
 0
+0
+0
+0
+rule so
 rule so
 6) Adding __ to the rule
+6) Adding __ to the rule
 prevents the heading from shrinking
+prevents the heading from shrinking
+when the browser is resized.
 when the browser is resized.
 0
 0
@@ -394,235 +775,467 @@ when the browser is resized.
 0
 0
 0
+0
+0
+0
+0
+0
+0
+flex-grow flex-shrink flex-basis
 flex-grow flex-shrink flex-basis
 flex: 0 1 auto;
+flex: 0 1 auto;
+flex-grow: 0; flex-shrink: 1; flex-basis: auto;
 flex-grow: 0; flex-shrink: 1; flex-basis: auto;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 85 of 98 2024-10-12, 3:24 p.m.
+85 of 98 2024-10-12, 3:24 p.m.
+0 flex-shrink: none;
 0 flex-shrink: none;
 0 flex-shrink: 1;
+0 flex-shrink: 1;
+0 flex-shrink: O;
 0 flex-shrink: O;
 The flex property
+The flex property
+The shorthand property flex specifies
 The shorthand property flex specifies
 is the same as
+is the same as
+., and ~.: -=-== ::., ..::._.=, .::_ .: together. Ex:
 ., and ~.: -=-== ::., ..::._.=, .::_ .: together. Ex:
 I PARTICIPATION
+I PARTICIPATION
 ACTIVITY I 2.7.7: Flexbox layout using the flex property. □
+ACTIVITY I 2.7.7: Flexbox layout using the flex property. □
+r
 r
 I
 I
+I
+I
+\...
 \...
 <body>
-<header>Header</header>
-<!-- Flexbox layout -->
-<div id="container">
-<nav>Nav</nav>
-<main>Ma i n</main>
-<aside>As i de</aside>
-</div>
-<footer>Footer</ footer>
-</body>
-Header
-I'
-Nav Main Aside
-I II
-Footer
-Animation content:
-Two blocks of code are shown. The HTML:
 <body>
 <header>Header</header>
-<!-- Flexbox layout-->
+<header>Header</header>
+<!-- Flexbox layout -->
+<!-- Flexbox layout -->
+<div id="container">
 <div id="container">
 <nav>Nav</nav>
+<nav>Nav</nav>
+<main>Ma i n</main>
+<main>Ma i n</main>
+<aside>As i de</aside>
+<aside>As i de</aside>
+</div>
+</div>
+<footer>Footer</ footer>
+<footer>Footer</ footer>
+</body>
+</body>
+Header
+Header
+I'
+I'
+Nav Main Aside
+Nav Main Aside
+I II
+I II
+Footer
+Footer
+Animation content:
+Animation content:
+Two blocks of code are shown. The HTML:
+Two blocks of code are shown. The HTML:
+<body>
+<body>
+<header>Header</header>
+<header>Header</header>
+<!-- Flexbox layout-->
+<!-- Flexbox layout-->
+<div id="container">
+<div id="container">
+<nav>Nav</nav>
+<nav>Nav</nav>
 <main>Main</main>
+<main>Main</main>
+"'
 "'
 I
 I
+I
+I
+~
 ~
 #container {
+#container {
+display : flex ;
 display : flex ;
 nav
+nav
+flex : 0 1 20%;
 flex : 0 1 20%;
 main
+main
+flex : 0 1 60%;
 flex : 0 1 60%;
 aside
+aside
+flex : 0 1 20%;
 flex : 0 1 20%;
 -4 A~
+-4 A~
 flex-grow flex-basis
+flex-grow flex-basis
+flex-shrink
 flex-shrink
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 86 of 98 2024-10-12, 3:24 p.m.
+86 of 98 2024-10-12, 3:24 p.m.
+<aside>Aside</aside>
 <aside>Aside</aside>
 </div>
+</div>
+<footer>Footer</footer>
 <footer>Footer</footer>
 </body>
+</body>
+and the CSS:
 and the CSS:
 #container {
+#container {
+display: flex;
 display: flex;
 }
+}
+nav {
 nav {
 flex: 0 1 20%;
-}
-main {
-flex: 0 1 60%;
-}
-aside {
 flex: 0 1 20%;
 }
+}
+main {
+main {
+flex: 0 1 60%;
+flex: 0 1 60%;
+}
+}
+aside {
+aside {
+flex: 0 1 20%;
+flex: 0 1 20%;
+}
+}
+In the CSS flex property, the 0 controls flex-grow, the 1 controls flex-shrink, and the percentage
 In the CSS flex property, the 0 controls flex-grow, the 1 controls flex-shrink, and the percentage
 controls flex-basis. Below is a screen displaying header spanning the width at the top of body,
+controls flex-basis. Below is a screen displaying header spanning the width at the top of body,
+footer spanning the width at the bottom of body, and between the two is <nav> occupying 20% of
 footer spanning the width at the bottom of body, and between the two is <nav> occupying 20% of
 the left side of body, main occupying 60% of the middle of body, and aside occupying the
+the left side of body, main occupying 60% of the middle of body, and aside occupying the
+remaining 20% of body on the right side.
 remaining 20% of body on the right side.
 Animation captions:
+Animation captions:
+1. <header> and <footer> span the entire width of <body>, but the <div> is a flex container that
 1. <header> and <footer> span the entire width of <body>, but the <div> is a flex container that
 displays the flex items on the same row.
+displays the flex items on the same row.
+2. <nav>, <main>, and <aside> all have flex-grow= 0, so all three flex items' width should be
 2. <nav>, <main>, and <aside> all have flex-grow= 0, so all three flex items' width should be
 based on each item's content.
+based on each item's content.
+3. <nav>, <main>, and <aside> all have flex-shrink= 1, so all three flex items shrink at the same
 3. <nav>, <main>, and <aside> all have flex-shrink= 1, so all three flex items shrink at the same
 rate when the browser is resized.
+rate when the browser is resized.
+4. <nav> occupies 20% of the row, <main> occupies 60%, and <aside> occupies 20%. 20% +
 4. <nav> occupies 20% of the row, <main> occupies 60%, and <aside> occupies 20%. 20% +
 60% + 20% = 1 00% of the row.
+60% + 20% = 1 00% of the row.
+I PARTICIPATION I . . ACTIVITY 2.7.8: Flex item properties.
 I PARTICIPATION I . . ACTIVITY 2.7.8: Flex item properties.
 Refer to the animation above.
+Refer to the animation above.
+1) Which property makes the Main flex
 1) Which property makes the Main flex
 item wider than Nav and Aside?
+item wider than Nav and Aside?
+□
 □
 0
+0
+flex-grow
 flex-grow
 flex-basis
+flex-basis
+flex-shrink
 flex-shrink
 nav { flex: 1 1 auto; }
+nav { flex: 1 1 auto; }
+main { flex: 3.5 1 auto; }
 main { flex: 3.5 1 auto; }
 aside { flex: 1 1 auto; }
+aside { flex: 1 1 auto; }
+#container { display: flex;
 #container { display: flex;
 flex-direction:
+flex-direction:
+row;
 row;
 justify-content:
+justify-content:
+center; }
 center; }
 nav { flex: 0 1 auto; }
+nav { flex: 0 1 auto; }
+main { flex: 0 1 auto; }
 main { flex: 0 1 auto; }
 aside { flex: 0 1 auto; }
+aside { flex: 0 1 auto; }
+#container { display: flex;
 #container { display: flex;
 flex-direction: column; }
+flex-direction: column; }
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+87 of 98 2024-10-12, 3:24 p.m.
 87 of 98 2024-10-12, 3:24 p.m.
 0
 0
 0
+0
+0
+0
+2) How do the changes below affect the
 2) How do the changes below affect the
 webpage?
+webpage?
+0 All three flex items are equal
 0 All three flex items are equal
 width.
+width.
+0 Nav and Aside are wider than
 0 Nav and Aside are wider than
 Main.
+Main.
+0 The layout will be nearly the
 0 The layout will be nearly the
 same as before.
+same as before.
+3) How do the changes below affect the
 3) How do the changes below affect the
 webpage?
+webpage?
+All three flex items are default
 All three flex items are default
 0 width and centered horizontally
+0 width and centered horizontally
+in the flex container.
 in the flex container.
 0 Nav and aside are wider than
+0 Nav and aside are wider than
+Main.
 Main.
 All three flex items will be
+All three flex items will be
+0 default width, aligned to the
 0 default width, aligned to the
 left.
+left.
+4) How does the change below affect
 4) How does the change below affect
 the webpage?
+the webpage?
+0 No changes.
 0 No changes.
 0
 0
 0
+0
+0
+0
 zyBooks
+zyBooks
+88 of98
 88 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 O All three flex items are stacked
+O All three flex items are stacked
+on top of one another.
 on top of one another.
 O The direction of the flex items
+O The direction of the flex items
+is reversed .
 is reversed .
 I PARTICIPATION I . ACTIVITY 2.7.9: Flexbox practice.
+I PARTICIPATION I . ACTIVITY 2.7.9: Flexbox practice.
+The webpage displays three years of Grammy Award nominations for Album of the Year.
 The webpage displays three years of Grammy Award nominations for Album of the Year.
 Each year's nomination is placed in a <section>
+Each year's nomination is placed in a <section>
+element.
 element.
 Alter the webpage to display the three sections in a single row:
+Alter the webpage to display the three sections in a single row:
+1. Add a single <div> element that surrounds all three sections.
 1. Add a single <div> element that surrounds all three sections.
 2. Add the proper CSS so the <div> becomes a flex container and displays each
+2. Add the proper CSS so the <div> becomes a flex container and displays each
+section on a single row.
 section on a single row.
 3. Add a flex property to the section rule that sets flex-grow to 0, flex-shrink to 1,
+3. Add a flex property to the section rule that sets flex-grow to 0, flex-shrink to 1,
+and flex-basis to 250px.
 and flex-basis to 250px.
 4. Add a flex-wrap property that makes the sections wrap to the next row when the
+4. Add a flex-wrap property that makes the sections wrap to the next row when the
+browser is resized.
 browser is resized.
 After adding the HTML and CSS above, render the webpage. Resize the rendered
+After adding the HTML and CSS above, render the webpage. Resize the rendered
+webpage's window and verify that the sections wrap to the next row when the window
 webpage's window and verify that the sections wrap to the next row when the window
 isn't wide enough to display the sections side-by-side.
+isn't wide enough to display the sections side-by-side.
+I HTML I css I
 I HTML I css I
 1 <lb_b>Grammy Nominees for Album of the Year</hl>
+1 <lb_b>Grammy Nominees for Album of the Year</hl>
+2
 2
 3 <section>
+3 <section>
+4 <h2> 2020</h2>
 4 <h2> 2020</h2>
 5 <ul>
+5 <ul>
+6 <li><cite> Folklore</cite> by Taylor Swift</li>
 6 <li><cite> Folklore</cite> by Taylor Swift</li>
 7 <li><cite>Future Nostalgia</cite> by Dua Lipa</li>
+7 <li><cite>Future Nostalgia</cite> by Dua Lipa</li>
+8 <li><cite>Hollywood's Bleeding</cite> by Post Malone</li>
 8 <li><cite>Hollywood's Bleeding</cite> by Post Malone</li>
 9 <li><cite>Chilombo</cite> by Jhene Aiko</li>
+9 <li><cite>Chilombo</cite> by Jhene Aiko</li>
+10 <li><cite>Black Pumas (Deluxe Edition) </cite> by Black Pumas </li>
 10 <li><cite>Black Pumas (Deluxe Edition) </cite> by Black Pumas </li>
 11 <li><cite>Everyday Life</cite> by Coldplay</li>
+11 <li><cite>Everyday Life</cite> by Coldplay</li>
+12 <li><cite>Djesse Vol.3 </cite> by Jacob Collier</li>
 12 <li><cite>Djesse Vol.3 </cite> by Jacob Collier</li>
 13 <li><cite>Women In Music Pt. III</cite> by HAIM</li>
+13 <li><cite>Women In Music Pt. III</cite> by HAIM</li>
+14 </ul>
 14 </ul>
 15 </section>
+15 </section>
+16 <section>
 16 <section>
 17 <h2> 2019</h2>
+17 <h2> 2019</h2>
+HI
 HI
 □
+□
+2024-10-12, 3:24 p.m.
 2024-10-12, 3:24 p.m.
 by Black Pumas
+by Black Pumas
 zyBooks
+zyBooks
+89 of98
 89 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 Render webpage Reset code
+Render webpage Reset code
+Your webpage
 Your webpage
 Grammy Nominees for Album of the Year
+Grammy Nominees for Album of the Year
+2020
 2020
 • Folklore by Taylor Swift
+• Folklore by Taylor Swift
+• Future Nostalgia by Dua Lipa
 • Future Nostalgia by Dua Lipa
 • Hollywood's Bleeding by Post Malone
+• Hollywood's Bleeding by Post Malone
+• Chilombo by Jhene Aiko
 • Chilombo by Jhene Aiko
 • Black Pumas (Deluxe Edition) • Everyday Life by Coldplay
+• Black Pumas (Deluxe Edition) • Everyday Life by Coldplay
+• Djesse Vol.3 by Jacob Collier
 • Djesse Vol.3 by Jacob Collier
 • Women In Music Pt. Ill by HAIM
+• Women In Music Pt. Ill by HAIM
+2019
 2019
 ► View solution
+► View solution
+I CHALLENGE I ACTIVITY 2.7.1: Flexbox.
 I CHALLENGE I ACTIVITY 2.7.1: Flexbox.
 570104.2065416.qx3zqy7
+570104.2065416.qx3zqy7
+Start
 Start
 For the element with class container, set display to flex and width to 105px.
+For the element with class container, set display to flex and width to 105px.
+SHOW EXPECTED
 SHOW EXPECTED
 1 . container {
+1 . container {
+2
 2
 I css I HTML I
+I css I HTML I
+3 /* Your solution goes here*/
 3 /* Your solution goes here*/
 4
+4
+5 }
 5 }
 6 . container > div {
+6 . container > div {
+7
 7
 8
+8
+9
 9
 10 }
+10 }
+background-color :
 background-color :
 border : 2px solid
+border : 2px solid
+padding : 6px;
 padding : 6px;
 lightblue;
+lightblue;
+blue;
 blue;
 □
+□
+2024-10-12, 3:24 p.m.
 2024-10-12, 3:24 p.m.
 zyBooks
+zyBooks
+90 of98
 90 of98
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 1 2 3
+1 2 3
+Check Next
 Check Next
 View your last submission v
+View your last submission v
+Exploring further:
 Exploring further:
 • HTML LaY-outs from W3Schools
+• HTML LaY-outs from W3Schools
+• CSS Flexbox from W3Schools
 • CSS Flexbox from W3Schools
