@@ -1,496 +1,980 @@
 Modifying an element's inline style
+Modifying an element's inline style
+JavaScript can manipulate a webpage's CSS to dynamically alter the looks of a webpage. Ex:
 JavaScript can manipulate a webpage's CSS to dynamically alter the looks of a webpage. Ex:
 JavaScript can change a background color when a button is clicked, or change the visibility of an
+JavaScript can change a background color when a button is clicked, or change the visibility of an
+error message when an input field is left blank. The CSS Object Model (CSSOM) is a set of AP ls
 error message when an input field is left blank. The CSS Object Model (CSSOM) is a set of AP ls
 that allow JavaScript to manipulate CSS properties of a webpage.
+that allow JavaScript to manipulate CSS properties of a webpage.
+Every element in the DOM has a style property that holds the inline styles set on the element. The
 Every element in the DOM has a style property that holds the inline styles set on the element. The
 style object implements the CSSOM interface CSSStyleDeclaration, which provides methods for
+style object implements the CSSOM interface CSSStyleDeclaration, which provides methods for
+accessing, modifying, and removing CSS properties:
 accessing, modifying, and removing CSS properties:
 • The getPropertyValue() method returns the value of an element's CSS property or an empty
+• The getPropertyValue() method returns the value of an element's CSS property or an empty
+string if the property is not set. Ex: elem. style. getPropertyVal ue ("co l or") gets the
 string if the property is not set. Ex: elem. style. getPropertyVal ue ("co l or") gets the
 element's color value.
+element's color value.
+• The setProperty() method sets the value of an element's CSS property. Ex:
 • The setProperty() method sets the value of an element's CSS property. Ex:
 elem. style. set Property (" col or", "blue") sets the element's color to blue.
+elem. style. set Property (" col or", "blue") sets the element's color to blue.
+• The removeProperty() method removes an element's CSS property. Ex:
 • The removeProperty() method removes an element's CSS property. Ex:
 elem. style. remove Property ("col or") removes the element's color property.
+elem. style. remove Property ("col or") removes the element's color property.
+The style CSS properties can alternatively be accessed and modified using JavaScript property
 The style CSS properties can alternatively be accessed and modified using JavaScript property
 names. Ex: elem. style. color = "blue" is equivalent to
+names. Ex: elem. style. color = "blue" is equivalent to
+elem. style. set Property ("col or", "blue"). CSS property names that have dashes are
 elem. style. set Property ("col or", "blue"). CSS property names that have dashes are
 converted into property names that use camel case. Ex: bac kground-col or becomes the
+converted into property names that use camel case. Ex: bac kground-col or becomes the
+JavaScript property backgroundColo r .
 JavaScript property backgroundColo r .
 2024-10-12, 4:47 p.m.
+2024-10-12, 4:47 p.m.
+"100px; height: 100px;
 "100px; height: 100px;
 color: green">
+color: green">
+"mydiv");
 "mydiv");
 "width");
+"width");
+"px");
 "px");
 "color", "red"); element.style
+"color", "red"); element.style
+width
 width
 height
+height
+background-color
 background-color
 "100px"
 "100px"
+"100px"
+"100px"
 200px"
+200px"
+"red"
 "red"
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 127 of 159 2024-10-12, 4:47 p.m.
+127 of 159 2024-10-12, 4:47 p.m.
+I PARTICIPATION
 I PARTICIPATION
 ACTIVITY I 4.10.1: Modifying inline CSS style.
+ACTIVITY I 4.10.1: Modifying inline CSS style.
+<div i d="mydiv" styl e ="width: l00px ; heigl
 <div i d="mydiv" styl e ="width: l00px ; heigl
 background- col or :
+background- col or :
+</ div>
 </ div>
 l et myDi v = document . getEl ementByi d ("mydi,
+l et myDi v = document . getEl ementByi d ("mydi,
+l et wi dth = myDi v . styl e . getPropertyVal ue ('
 l et wi dth = myDi v . styl e . getPropertyVal ue ('
 wi dth = parsel nt (wi dth ) + 100 ;
+wi dth = parsel nt (wi dth ) + 100 ;
+myDi v . styl e . setProperty ("width" , wi dth + '
 myDi v . styl e . setProperty ("width" , wi dth + '
 myDi v . style . setPropert y ("background-color'
+myDi v . style . setPropert y ("background-color'
+myDi v . styl e . removeProperty ("width" );
 myDi v . styl e . removeProperty ("width" );
 Animation content:
+Animation content:
+Step 1: The following HTML is displayed:
 Step 1: The following HTML is displayed:
 <div id="mydiv" style="width: 1 00px; height: 1 00px;
+<div id="mydiv" style="width: 1 00px; height: 1 00px;
+background-color: green">
 background-color: green">
 </div>
+</div>
+A green square is displayed on the browser.
 A green square is displayed on the browser.
 Step 2: A list called element.style is created as follows.
+Step 2: A list called element.style is created as follows.
+width = 100 px
 width = 100 px
 weight= 100 px
+weight= 100 px
+background-color= green
 background-color= green
 Step 3: The following JavaScript is displayed:
+Step 3: The following JavaScript is displayed:
+let myDiv = document.getElementByld("mydiv");
 let myDiv = document.getElementByld("mydiv");
 let width = myDiv.style.getPropertyValue("width");
+let width = myDiv.style.getPropertyValue("width");
+width= parselnt(width) + 100;
 width= parselnt(width) + 100;
 myDiv.style.setProperty("width", width + "px");
+myDiv.style.setProperty("width", width + "px");
+myDiv.style.setProperty("background-color", "red");
 myDiv.style.setProperty("background-color", "red");
 myDiv.style.removeProperty("width");
+myDiv.style.removeProperty("width");
+□
 □
 "span");
+"span");
+getPropertyValue("color"));
 getPropertyValue("color"));
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 128 of 159 2024-10-12, 4:47 p.m.
+128 of 159 2024-10-12, 4:47 p.m.
+The line of code reading "let width = myDiv.style.getPropertyValue("width");" is highlighted and set
 The line of code reading "let width = myDiv.style.getPropertyValue("width");" is highlighted and set
 to the value of "1 00px".
+to the value of "1 00px".
+Step 4: The following lines of code are highlighted.
 Step 4: The following lines of code are highlighted.
 width = parselnt(width) + 100;
+width = parselnt(width) + 100;
+myDiv.style.setProperty("width", width+ "px");
 myDiv.style.setProperty("width", width+ "px");
 "width" is set to 200px, and the green square is expanded to be 200 pixels wide.
+"width" is set to 200px, and the green square is expanded to be 200 pixels wide.
+Step 5: The line of code reading "myDiv.style.setProperty("background-color", "red");" is
 Step 5: The line of code reading "myDiv.style.setProperty("background-color", "red");" is
 highlighted. "Background-color" is set to red, and the square changes color to red.
+highlighted. "Background-color" is set to red, and the square changes color to red.
+Step 6: The line of code reading "myDiv.style.removeProperty("width");" is highlighted. "width" is
 Step 6: The line of code reading "myDiv.style.removeProperty("width");" is highlighted. "width" is
 removed from elementary.style, and the red square becomes as wide as the webpage.
+removed from elementary.style, and the red square becomes as wide as the webpage.
+Animation captions:
 Animation captions:
 1. The inline style properties make the <div> a green 1 00px wide square.
+1. The inline style properties make the <div> a green 1 00px wide square.
+2. The DOM maintains a list of the div's style properties and values.
 2. The DOM maintains a list of the div's style properties and values.
 3. The element.style.getPropertyValue() method returns the 1 00px width as a string.
+3. The element.style.getPropertyValue() method returns the 1 00px width as a string.
+4. 1 00px is added to width, and element.style.setProperty() sets the div's width to 200px. The
 4. 1 00px is added to width, and element.style.setProperty() sets the div's width to 200px. The
 browser automatically renders the div with the new width.
+browser automatically renders the div with the new width.
+5. Changing the div's background color to red automatically renders the div red.
 5. Changing the div's background color to red automatically renders the div red.
 6. removeProperty() removes the width property, so the <div> by default spans the entire
+6. removeProperty() removes the width property, so the <div> by default spans the entire
+browser width .
 browser width .
 I PARTICIPATION I 4 1 0 2 M d"f . . 1· I
+I PARTICIPATION I 4 1 0 2 M d"f . . 1· I
+ACTIVITY . . : 0 I ying In ine sty e.
 ACTIVITY . . : 0 I ying In ine sty e.
 Refer to the HTML and JavaScript below.
+Refer to the HTML and JavaScript below.
+<span styl e ="color: green " >TEST</span>
 <span styl e ="color: green " >TEST</span>
 <script>
+<script>
+l et span = document . querySelector ("span
 l et span = document . querySelector ("span
 </ script>
+</ script>
+1) What does the code below output to the console?
 1) What does the code below output to the console?
 consol e . l og (span . styl e . getPropertyVaJ
+consol e . l og (span . styl e . getPropertyVaJ
+0 c o l or
 0 c o l or
 □
+□
+0
 0
 green
+green
+rgb(0, 255, 0)
 rgb(0, 255, 0)
 console.log(span.style.getPropertyValue("width"));
+console.log(span.style.getPropertyValue("width"));
+false
 false
 setProperty(backgroundstyle.
+setProperty(backgroundstyle.
+setProperty("backgrounddocument.
 setProperty("backgrounddocument.
 styleSheets
+styleSheets
+CSSStyleSheet
 CSSStyleSheet
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 129 of 159 2024-10-12, 4:47 p.m.
+129 of 159 2024-10-12, 4:47 p.m.
+0
+0
 0
 0
 2) What does the code below output to the console?
+2) What does the code below output to the console?
+0 An empty string
 0 An empty string
 0 The span's pixel width
+0 The span's pixel width
+0
 0
 3) What is needed to set the span's background
+3) What is needed to set the span's background
+color?
 color?
 span .
+span .
+0 setProperty("backgroundcolor",
 0 setProperty("backgroundcolor",
 "lightblue")
+"lightblue")
+0 style.setProperty(backgrounc
 0 style.setProperty(backgrounc
 color, lightblue)
+color, lightblue)
+0 style.setProperty("backgrour
 0 style.setProperty("backgrour
 color", "lightblue")
+color", "lightblue")
+4) What is equivalent to the following
 4) What is equivalent to the following
 code?
+code?
+span . styl e . setProperty ("fontfamily
 span . styl e . setProperty ("fontfamily
 " , "Arial" );
+" , "Arial" );
+0 span . style . font-family
 0 span . style . font-family
 = "Arial";
+= "Arial";
+0 span.style.fontFamily
 0 span.style.fontFamily
 = "Arial";
+= "Arial";
+0 span.style.fontfamily
 0 span.style.fontfamily
 = "Arial";
+= "Arial";
+Modifying a stylesheet
 Modifying a stylesheet
 0
 0
 0
+0
+0
+0
+The document.sty/eSheets object is a list of the stylesheets used in the webpage. Each stylesheet
 The document.sty/eSheets object is a list of the stylesheets used in the webpage. Each stylesheet
 in is a CSSSty/eSheet object, which maintains a list of the stylesheet's
+in is a CSSSty/eSheet object, which maintains a list of the stylesheet's
+CSS rules in the property called cssRules. Two methods allow CSS rules to be
 CSS rules in the property called cssRules. Two methods allow CSS rules to be
 added or removed:
+added or removed:
+document.styleSheets[0].insertRule("p { color: blue; }")
 document.styleSheets[0].insertRule("p { color: blue; }")
 document.styleSheets[0].deleteRule(0)
+document.styleSheets[0].deleteRule(0)
+style
 style
 CSSStyleDeclaration
+CSSStyleDeclaration
+getPropertyValue() setProperty()
 getPropertyValue() setProperty()
 removeProperty()
+removeProperty()
+document.styleSheets[0].cssRules[0].style.setProperty("color", "blue")
 document.styleSheets[0].cssRules[0].style.setProperty("color", "blue")
 cssRules
+cssRules
+changeRule()
 changeRule()
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 130 of 159 2024-10-12, 4:47 p.m.
+130 of 159 2024-10-12, 4:47 p.m.
+• The insertRu/e() method inserts a new rule into the stylesheet. Ex:
 • The insertRu/e() method inserts a new rule into the stylesheet. Ex:
 inserts a new
+inserts a new
+paragraph rule that makes the text color blue.
 paragraph rule that makes the text color blue.
 • The deleteRule() method deletes a rule at a given index number from the stylesheet. Ex:
+• The deleteRule() method deletes a rule at a given index number from the stylesheet. Ex:
+deletes the first CSS rule from the first
 deletes the first CSS rule from the first
 stylesheet.
+stylesheet.
+The CSS properties from a CSS rule are accessible from the rule's_-.,_ .:. property, which
 The CSS properties from a CSS rule are accessible from the rule's_-.,_ .:. property, which
 implements the
+implements the
+modified, and removed with
 modified, and removed with
 . Ex:
+. Ex:
+interface. So a rule's CSS properties can be accessed,
 interface. So a rule's CSS properties can be accessed,
 , and
+, and
+sets the stylesheet's first rule's color to blue.
 sets the stylesheet's first rule's color to blue.
 Security issue
+Security issue
+For security reasons, some browsers like Chrome restrict the property
 For security reasons, some browsers like Chrome restrict the property
 from being accessed by JavaScript when the stylesheet is loaded off the computer's
+from being accessed by JavaScript when the stylesheet is loaded off the computer's
+disk. The JavaScript and stylesheet must be downloaded from a web server for
 disk. The JavaScript and stylesheet must be downloaded from a web server for
 c ssRules to be accessible.
+c ssRules to be accessible.
+I PARTICIPATION I . ACTIVITY 4.10.3: Insert, modify, and delete CSS rules.
 I PARTICIPATION I . ACTIVITY 4.10.3: Insert, modify, and delete CSS rules.
 The webpage below displays a menu of food items with 3 buttons underneath:
+The webpage below displays a menu of food items with 3 buttons underneath:
+1. Insert Rule button - Calls insertRule () to add a new paragraph rule that turns the
 1. Insert Rule button - Calls insertRule () to add a new paragraph rule that turns the
 menu items' font color blue.
+menu items' font color blue.
+2. Change Rule button - Calls changeRule ( to change the paragraph rule's color to
 2. Change Rule button - Calls changeRule ( to change the paragraph rule's color to
 red.
+red.
+3. Delete Rule button - Calls deleteRule () to delete the paragraph rule, which turns
 3. Delete Rule button - Calls deleteRule () to delete the paragraph rule, which turns
 the font color back to green.
+the font color back to green.
+Click the three buttons in order to watch the font color change from green to blue, blue to
 Click the three buttons in order to watch the font color change from green to blue, blue to
 red, and finally back to green.
+red, and finally back to green.
+Make the following modifications:
 Make the following modifications:
 1. Add code to insertRule () that inserts the rule
+1. Add code to insertRule () that inserts the rule
+□
 □
 .{ weight: }
+.{ weight: }
+changeRule() .price
 changeRule() .price
 font-style italic
+font-style italic
+deleteRule() .price
 deleteRule() .price
 Ham sandwich - $5
+Ham sandwich - $5
+Spinach salad - $4.50
 Spinach salad - $4.50
 Insert Rule Change Rule Delete Rule
+Insert Rule Change Rule Delete Rule
 zyBooks
+zyBooks
+13lofl59
 13lofl59
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 .price { font-weight: bold; } so the prices appear bold.
+.price { font-weight: bold; } so the prices appear bold.
+2. Add code to changeRule () that changes the . pr ice rule to include the property
 2. Add code to changeRule () that changes the . pr ice rule to include the property
 set to so the prices appear bold and italic.
+set to so the prices appear bold and italic.
+3. Add code to deleteRule () that deletes the . rule so the font weight and
 3. Add code to deleteRule () that deletes the . rule so the font weight and
 style returns to normal .
+style returns to normal .
+After making the modifications, click the 3 buttons in order to verify the price font changes
 After making the modifications, click the 3 buttons in order to verify the price font changes
 as expected.
+as expected.
+1 <body'1>
 1 <body'1>
 2 <div id="menu" >
+2 <div id="menu" >
+3 <hl>Menu</hl>
 3 <hl>Menu</hl>
 4 <p>
+4 <p>
+HTML CSS [ JavaScript j
 HTML CSS [ JavaScript j
 5 Ham sandwich - <span class="price" >$5 </span>
+5 Ham sandwich - <span class="price" >$5 </span>
+6 </p>
 6 </p>
 7 <p>
+7 <p>
+8 Spinach salad - <span class="price" >$4.50</span>
 8 Spinach salad - <span class="price" >$4.50</span>
 9 </p>
+9 </p>
+10 <p>
 10 <p>
 11 Hamburger - <span class="price" >$5.50</span>
+11 Hamburger - <span class="price" >$5.50</span>
+12 </p>
 12 </p>
 13 </div>
+13 </div>
+14
 14
 15 <p>
+15 <p>
+16 <button id="insertRuleBtn" >Insert Rule</ button>
 16 <button id="insertRuleBtn" >Insert Rule</ button>
 17 <button id="changeRuleBtn" >Change Rule</ button>
+17 <button id="changeRuleBtn" >Change Rule</ button>
+1s:I ✓ h11++nn irl- "rlolo+oR11loR+n" , nolo+o R11lo,-/ h11++nn ,
 1s:I ✓ h11++nn irl- "rlolo+oR11loR+n" , nolo+o R11lo,-/ h11++nn ,
 Render webpage
+Render webpage
+Your webpage
 Your webpage
 Menu
+Menu
+Hamburger - $5.50
 Hamburger - $5.50
 Reset code
+Reset code
+[ ] [ ] [ ]
 [ ] [ ] [ ]
 2024-10-12, 4:47 p.m.
+2024-10-12, 4:47 p.m.
+"styles.css">
 "styles.css">
 "www.brainyquote.com/quotes/
+"www.brainyquote.com/quotes/
+indecisive, but now I'm not sure."
 indecisive, but now I'm not sure."
 Tommy Cooper</span>
+Tommy Cooper</span>
+sans-serif;
 sans-serif;
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 132 of 159 2024-10-12, 4:47 p.m.
+132 of 159 2024-10-12, 4:47 p.m.
+► View solution
 ► View solution
 I PARTICIPATION I . . ACTIVITY 4.10.4: Modifying stylesheet rules.
+I PARTICIPATION I . . ACTIVITY 4.10.4: Modifying stylesheet rules.
+Refer to the HTML and CSS below.
 Refer to the HTML and CSS below.
 < !DOCTYPE HTML>
+< !DOCTYPE HTML>
+<html lang="en">
 <html lang="en">
 <head>
+<head>
+<title>Funny Quotes</title>
 <title>Funny Quotes</title>
 <link rel="stylesheet" href="styl
+<link rel="stylesheet" href="styl
+</head>
 </head>
 <body>
+<body>
+<blockquote cite="https://www.bra
 <blockquote cite="https://www.bra
 tomrny_cooper 189072 ">
+tomrny_cooper 189072 ">
+"I used to think I was indecis
 "I used to think I was indecis
 - <span class="attribution" >To:
+- <span class="attribution" >To:
+</blockquote>
 </blockquote>
 </body>
+</body>
+</html>
 </html>
 /* styles.css */
+/* styles.css */
+body {
 body {
 color : white ;
+color : white ;
+font - family : Arial , Helvetica , sans -
 font - family : Arial , Helvetica , sans -
 blockquote
+blockquote
+background- color : darkgreen ;
 background- color : darkgreen ;
 width : 200px ;
+width : 200px ;
+padding : 15px;
 padding : 15px;
 border- radius : 5px ;
+border- radius : 5px ;
+1) What is the value of
 1) What is the value of
 document.styleSheets.length?
+document.styleSheets.length?
+0 0
 0 0
 0 1
+0 1
+0 2
 0 2
 2) If the webpage is modified with the
+2) If the webpage is modified with the
+HTML below, what is the value of
 HTML below, what is the value of
 document.styleSheets.length?
+document.styleSheets.length?
+□
 □
 0
 0
+0
+0
+<link rel="stylesheet"
 <link rel="stylesheet"
 href="styles.css">
+href="styles.css">
+<style>
 <style>
 div { color: brown; }
+div { color: brown; }
+</style>
 </style>
 document.styleSheets[0].cssRules.length
+document.styleSheets[0].cssRules.length
+document.styleSheets[0].insertRule(".attribution
 document.styleSheets[0].insertRule(".attribution
 { color: yellow; }");
+{ color: yellow; }");
+body
 body
 document.styleSheets[0].deleteRule(0);
+document.styleSheets[0].deleteRule(0);
+blockquote
 blockquote
 let quoteRule =
+let quoteRule =
+document.styleSheets[0].cssRules[1];
 document.styleSheets[0].cssRules[1];
 quoteRule.style.setProperty("color",
+quoteRule.style.setProperty("color",
+"orange");
 "orange");
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 133 of 159 2024-10-12, 4:47 p.m.
+133 of 159 2024-10-12, 4:47 p.m.
+0 0
 0 0
 0 1
+0 1
+0 2
 0 2
 3) What is the value of
+3) What is the value of
+?
 ?
 0 0
+0 0
+0 1
 0 1
 0 2
+0 2
+4) What is the font color of 11Tommy Cooper11 after the code
 4) What is the font color of 11Tommy Cooper11 after the code
 below executes?
+below executes?
+0 yellow
 0 yellow
 0 white
+0 white
+0 black
 0 black
 5) Assuming the first rule is , what is the
+5) Assuming the first rule is , what is the
+quote1s font color after the code below
 quote1s font color after the code below
 executes?
+executes?
+0 yellow
 0 yellow
 0 white
+0 white
+0 black
 0 black
 6) Assuming the second rule is
+6) Assuming the second rule is
+what is the quote1s font color after the code
 what is the quote1s font color after the code
 below executes?
+below executes?
+0
+0
+0
+0
 0
 0
 0
 0
 <div class="account warning"> classList
+<div class="account warning"> classList
+classList
+classList
 classList
 classList
 elem.classList.add("mystyle") mystyle
+elem.classList.add("mystyle") mystyle
+classList
 classList
 elem.classList.remove("mystyle") mystyle
+elem.classList.remove("mystyle") mystyle
+classList
 classList
 elem.classList.toggle("mystyle") mystyle
+elem.classList.toggle("mystyle") mystyle
+elem.className = "cat adopted" cat adopted
 elem.className = "cat adopted" cat adopted
 className
+className
+classList classList
 classList classList
 className
+className
+isStrongPassword()
 isStrongPassword()
 isStrongPassword() false
+isStrongPassword() false
+hidden
 hidden
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 134 of 159 2024-10-12, 4:47 p.m.
+134 of 159 2024-10-12, 4:47 p.m.
+0 orange
 0 orange
 0 white
+0 white
+0 black
 0 black
 Adding and removing classes
+Adding and removing classes
+Using the CSSOM to manipulate CSS properties and stylesheets is useful and sometimes
 Using the CSSOM to manipulate CSS properties and stylesheets is useful and sometimes
 necessary, but mixing CSS with JavaScript code blurs the separation between a web application's
+necessary, but mixing CSS with JavaScript code blurs the separation between a web application's
+presentation and functionality. Good practice is to declare CSS classes that perform the styling and
 presentation and functionality. Good practice is to declare CSS classes that perform the styling and
 use JavaScript to add and remove classes to and from DOM nodes as needed.
+use JavaScript to add and remove classes to and from DOM nodes as needed.
+Every DOM node has a c/assList property that lists the classes assigned to the node. Ex: The div
 Every DOM node has a c/assList property that lists the classes assigned to the node. Ex: The div
 node created from has a with items "account"
+node created from has a with items "account"
+and "warning". Methods exist to add and remove items:
 and "warning". Methods exist to add and remove items:
 • The add() method adds a class to the node's . Ex:
+• The add() method adds a class to the node's . Ex:
+adds the class to the element's list of
 adds the class to the element's list of
 classes.
+classes.
+• The remove() method removes a class from the node's . Ex:
 • The remove() method removes a class from the node's . Ex:
 removes the class
+removes the class
+list of classes.
 list of classes.
 from the element's
+from the element's
+• The toggle() method adds the class to the node's if the class is not present. If
 • The toggle() method adds the class to the node's if the class is not present. If
 the class is already present, the class is removed. Ex:
+the class is already present, the class is removed. Ex:
+toggles the class on or off.
 toggles the class on or off.
 A DOM node's class list can also be modified directly using the c/assName property, which is a
+A DOM node's class list can also be modified directly using the c/assName property, which is a
+space-delimited list of the classes assigned to the node. Ex:
 space-delimited list of the classes assigned to the node. Ex:
 assigns the and classes to the element
+assigns the and classes to the element
+and removes any previously assigned classes from the node. All classes assigned to
 and removes any previously assigned classes from the node. All classes assigned to
 are also added to the node's . Adding and removing properties with is
+are also added to the node's . Adding and removing properties with is
+often easier than using
 often easier than using
 I PARTICIPATION I ACTIVITY 4.10.5: Add and remove classes.
+I PARTICIPATION I ACTIVITY 4.10.5: Add and remove classes.
+The webpage below asks the user to enter a strong password that meets 3 criteria. When
 The webpage below asks the user to enter a strong password that meets 3 criteria. When
 the user clicks the Submit button, the i s Stro nc is called with the
+the user clicks the Submit button, the i s Stro nc is called with the
+password entered.
 password entered.
 • If the password does not meet all 3 criteria,
+• If the password does not meet all 3 criteria,
+and an error message is displayed by removing the
 and an error message is displayed by removing the
 returns
+returns
+class from the error
 class from the error
 □
+□
+isStrongPassword() true
 isStrongPassword() true
 hidden
+hidden
+submitBtnClick()
 submitBtnClick()
 isStrongPassword() true error-textbox
+isStrongPassword() true error-textbox
+isStrongPassword() false error-textbox
 isStrongPassword() false error-textbox
 error
 error
+error
+error
+<li>
 <li>
 zyBooks
+zyBooks
+135 of 159
 135 of 159
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 message.
+message.
+• If the password meets all 3 criteria, isStrongPassword () returns and the
 • If the password meets all 3 criteria, isStrongPassword () returns and the
 class is added to the error message to hide the error message.
+class is added to the error message to hide the error message.
+Enter some passwords that cause the error message to be visible and then hidden. Ex:
 Enter some passwords that cause the error message to be visible and then hidden. Ex:
 Enter "abc" and press Submit to see the error message, then "abcdef1" to hide the error
+Enter "abc" and press Submit to see the error message, then "abcdef1" to hide the error
+message.
 message.
 Modify the submi tBtnClick () function to do the following:
+Modify the submi tBtnClick () function to do the following:
+1. If isStrongPassword () returns true, then remove the textbox class
 1. If isStrongPassword () returns true, then remove the textbox class
 from the password text box.
+from the password text box.
+2. If isStrongPassword () returns false, then add the textbox class to
 2. If isStrongPassword () returns false, then add the textbox class to
 the password text box.
+the password text box.
+After making the modifications, verify the password text box is highlighted in red only
 After making the modifications, verify the password text box is highlighted in red only
 when entering an invalid password.
+when entering an invalid password.
+For an extra challenge, add the class to the criteria that is violated when an invalid
 For an extra challenge, add the class to the criteria that is violated when an invalid
 password is entered. Ex: If the password is not long enough, add the class to the
+password is entered. Ex: If the password is not long enough, add the class to the
+first so the item becomes red.
 first so the item becomes red.
 1 <b od}'',C >
+1 <b od}'',C >
+HTML CSS [ JavaScript j
 HTML CSS [ JavaScript j
 2 <pe> Choose a strong password that meets the following criteria:
+2 <pe> Choose a strong password that meets the following criteria:
+3 </pe>
 3 </pe>
 4 <ob
+4 <ob
+5 <lie>At least 6 characters long. </lie>
 5 <lie>At least 6 characters long. </lie>
 6 <lie> Contains at least 1 digit. </lie>
+6 <lie> Contains at least 1 digit. </lie>
+7 <liC> Is not "passwordl" .</lb
 7 <liC> Is not "passwordl" .</lb
 8 </ob
+8 </ob
+9 <form e>
 9 <form e>
 10 <label for=" password" e> Password: </ labeb
+10 <label for=" password" e> Password: </ labeb
+11 <i nput type="text" id="password" e>
 11 <i nput type="text" id="password" e>
 12 <span class="error hidden" id="errorMsg" e> Invalid password </spane>
+12 <span class="error hidden" id="errorMsg" e> Invalid password </spane>
+13 <dive>
 13 <dive>
 14 <input type="button" id="submitBtn" value="Submit" e>
+14 <input type="button" id="submitBtn" value="Submit" e>
+15 </dive>
 15 </dive>
 16 </form e>
+16 </form e>
+--:, 17 </bodv
 --:, 17 </bodv
 1s:l
+1s:l
+Render webpage
 Render webpage
 Reset code
+Reset code
+2024-10-12, 4:47 p.m.
 2024-10-12, 4:47 p.m.
 yellow; }
+yellow; }
+line-through; }
 line-through; }
 children's center</li>
+children's center</li>
+Choose a strong password that meets the following criteria:
 Choose a strong password that meets the following criteria:
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 136 of 159 2024-10-12, 4:47 p.m.
+136 of 159 2024-10-12, 4:47 p.m.
+Your webpage
 Your webpage
 followin!
+followin!
+1. At least 6 characters long.
 1. At least 6 characters long.
 2. Contains at least 1 digit.
+2. Contains at least 1 digit.
+3. Is not "password 1 ".
 3. Is not "password 1 ".
 Password:
+Password:
+----------
 ----------
 [ Submit ]
+[ Submit ]
+► View solution
 ► View solution
 I PARTICIPATION I . . ACTIVITY 4.10.6: Adding and removing classes.
+I PARTICIPATION I . . ACTIVITY 4.10.6: Adding and removing classes.
+Refer to the HTML, CSS, and JavaScript below:
 Refer to the HTML, CSS, and JavaScript below:
 <style>
+<style>
+.important { backgr ound - col o r : ye llo
 .important { backgr ound - col o r : ye llo
 .complete { t ext-decor at i on : line - t h
+.complete { t ext-decor at i on : line - t h
+</ style>
 </ style>
 <body>
+<body>
+<p>
 <p>
 To - do li st :
+To - do li st :
+</ p>
 </ p>
 <ul>
+<ul>
+<li>Study f o r hi story exam</ li>
 <li>Study f o r hi story exam</ li>
 <li>Get groceries f or d inner</ li>
+<li>Get groceries f or d inner</ li>
+<li>Volunteer at the child ren' s c
 <li>Volunteer at the child ren' s c
 <li>Vacuum a nd d ust r oom</ li>
+<li>Vacuum a nd d ust r oom</ li>
+</ ul>
 </ ul>
 </ body>
+</ body>
+□
 □
 // Add click callback to each <li>
+// Add click callback to each <li>
+const listItems = document.querySelectorAll("li");
 const listItems = document.querySelectorAll("li");
 for (let item of listItems) {
+for (let item of listItems) {
+item.addEventListener("click", listItemClick);
 item.addEventListener("click", listItemClick);
 }
+}
+listItemClick()
 listItemClick()
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 137 of 159 2024-10-12, 4:47 p.m.
+137 of 159 2024-10-12, 4:47 p.m.
+function l istitemCli ck (e )
 function l istitemCli ck (e )
 II Get clicked <li>
+II Get clicked <li>
+let i tem = e . ta r get ;
 let i tem = e . ta r get ;
 Write the JavaScript code that is inserted into l:
+Write the JavaScript code that is inserted into l:
+requested operation.
 requested operation.
 1) Add the important class to the
+1) Add the important class to the
 clicked <li>.
+clicked <li>.
+Check Show answer
 Check Show answer
 2) Remove the complete class from
+2) Remove the complete class from
+the clicked <li>.
 the clicked <li>.
 Check Show answer
+Check Show answer
+3) Toggle the important class on the
 3) Toggle the important class on the
 clicked <li>.
+clicked <li>.
+Check Show answer
 Check Show answer
 Exploring further:
+Exploring further:
+to perform the
 to perform the
 • An Introduction and Guide to the CSS Object Model (CSSOM)_ from css-tricks.com
+• An Introduction and Guide to the CSS Object Model (CSSOM)_ from css-tricks.com
+• Using-..ctY-namic styling information from MDN
 • Using-..ctY-namic styling information from MDN
 • Element.classlist from MDN
+• Element.classlist from MDN
+• Working with the new CSS Typed Object Model from Google
 • Working with the new CSS Typed Object Model from Google
 0
 0
 0
+0
+0
+0
 zyBooks
+zyBooks
+138 of 159
 138 of 159
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 I ~~~,';;;~~•• I 4.10.1 Modifying CSS with JavaScript
+I ~~~,';;;~~•• I 4.10.1 Modifying CSS with JavaScript
+5707 04.2065416 qx3zqy7
 5707 04.2065416 qx3zqy7
 Start
+Start
+Complete the JavaScript code to set the paragraph's inline style to use the 16px font size
 Complete the JavaScript code to set the paragraph's inline style to use the 16px font size
 and remove the paragraph's text transform property. SHOW EXPECTED
+and remove the paragraph's text transform property. SHOW EXPECTED
+[ HTML I JavaScript j
 [ HTML I JavaScript j
 1 <p id="helloMessage" style="font-size: 20px; text-transform: uppercase" >
+1 <p id="helloMessage" style="font-size: 20px; text-transform: uppercase" >
+2 Hello, Olympic contestants!
 2 Hello, Olympic contestants!
 3 </p>
+3 </p>
+1 2 3
 1 2 3
 Check Next
+Check Next
+View your last submission v
 View your last submission v

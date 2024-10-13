@@ -1,539 +1,1064 @@
 <form> element
+<form> element
+The <form> element allows the web browser to submit information from the user to the server. The
 The <form> element allows the web browser to submit information from the user to the server. The
 <form> element has two primary attributes:
+<form> element has two primary attributes:
+1. The action attribute indicates the URL where the form data should be sent. Typically the URL
 1. The action attribute indicates the URL where the form data should be sent. Typically the URL
 2024-10-12, 4:47 p.m.
+2024-10-12, 4:47 p.m.
+example.com database
 example.com database
 First name Last name
+First name Last name
+...
 ...
 John
+John
 Jane
+Jane
+Buck
 Buck
 Doe
 Doe
+Doe
+Doe
 Rogers
+Rogers
+...
+...
+...
 ...
 ...
 ...
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 23 of 159 2024-10-12, 4:47 p.m.
+23 of 159 2024-10-12, 4:47 p.m.
+uses HTTPS so the form data is encrypted.
 uses HTTPS so the form data is encrypted.
 2. The method attribute indicates the HTTP request type the browser will use to communicate
+2. The method attribute indicates the HTTP request type the browser will use to communicate
+with the server. The method is either GET or POST. GET is the default method if no method is
 with the server. The method is either GET or POST. GET is the default method if no method is
 specified. I PARTICIPATION
+specified. I PARTICIPATION
+ACTIVITY 4.3.1: Submitting form data to a server.
 ACTIVITY 4.3.1: Submitting form data to a server.
 r "'
+r "'
+First Name: Sarah ~ I Last Name: Connor =1 [ J Sarah Connor
 First Name: Sarah ~ I Last Name: Connor =1 [ J Sarah Connor
 Submit
+Submit
+<form act i on="https : //example . com/apply" method=" POST ">
 <form act i on="https : //example . com/apply" method=" POST ">
 <p >
+<p >
+<label for=" first " >Fi rst Name: </label>
 <label for=" first " >Fi rst Name: </label>
 <input type=" text " name=" first " id=" first ">
+<input type=" text " name=" first " id=" first ">
+<I p>
 <I p>
 <p >
+<p >
+<label for="last " >Last Name: </label>
 <label for="last " >Last Name: </label>
 <input type=" text " name=" last " id="last ">
+<input type=" text " name=" last " id="last ">
+<I p>
 <I p>
 <input type=" submit ">
+<input type=" submit ">
+</form>
 </form>
 Animation content:
+Animation content:
+Begin HTML code:
 Begin HTML code:
 <form action="https://example.com/ apply" method="POST'>
+<form action="https://example.com/ apply" method="POST'>
+< p >
 < p >
 <label for="flrst"> First Name:</label>
+<label for="flrst"> First Name:</label>
+<input type="text" name="flrst" id= "flrst">
 <input type="text" name="flrst" id= "flrst">
 </p >
+</p >
+< p >
 < p >
 <label for= "last">Last Name:</label>
+<label for= "last">Last Name:</label>
+<input type="text" name="last" id="last">
 <input type="text" name="last" id="last">
 </p >
+</p >
 <input type= "submit">
+<input type= "submit">
+□
 □
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 24 of 159 2024-10-12, 4:47 p.m.
+24 of 159 2024-10-12, 4:47 p.m.
+</form>
 </form>
 End HTML code.
+End HTML code.
+A form is displayed with the input boxes "First Name" and "Last Name" with a button at the
 A form is displayed with the input boxes "First Name" and "Last Name" with a button at the
 bottom called "Submit." The user inputs "Sarah" for the first name, and "Connor" for the last name.
+bottom called "Submit." The user inputs "Sarah" for the first name, and "Connor" for the last name.
+When the user presses the button, the information is sent to a database on the server. The
 When the user presses the button, the information is sent to a database on the server. The
 "Database on server" is also shown, with "Sarah" highlighted in the "First Name" column, and
+"Database on server" is also shown, with "Sarah" highlighted in the "First Name" column, and
+"Connor" highlighted in the "Last Name" column.
 "Connor" highlighted in the "Last Name" column.
 Animation captions:
+Animation captions:
+1. The <form> tag specifies that form data should be posted to example.com.
 1. The <form> tag specifies that form data should be posted to example.com.
 2. The opening <form> and closing </form> tags surround <label> and <input> elements that
+2. The opening <form> and closing </form> tags surround <label> and <input> elements that
+allow the user to enter a first and last name.
 allow the user to enter a first and last name.
 3. The user enters information in the form and clicks the submit button.
+3. The user enters information in the form and clicks the submit button.
+4. The browser sends the form data to the server. The server adds the submitted name to a
 4. The browser sends the form data to the server. The server adds the submitted name to a
 database.
+database.
+I PARTICIPATION I ACTIVITY 4.3.2: <form> element.
 I PARTICIPATION I ACTIVITY 4.3.2: <form> element.
 Refer to the HTML below.
+Refer to the HTML below.
+<form action="https://google.com/">
 <form action="https://google.com/">
 </ form>
+</ form>
+1) To which server will the browser
 1) To which server will the browser
 send the form data?
+send the form data?
+Check Show answer
 Check Show answer
 2) Which method will the browser
+2) Which method will the browser
+use to communicate with the
 use to communicate with the
 server?
+server?
+Check Show answer
 Check Show answer
 GET method
+GET method
 □
+□
+0
+0
 0
 0
 first=Rick&last=Deckard
+first=Rick&last=Deckard
+http://example.com/apply?first=Rick&last=Deckard
 http://example.com/apply?first=Rick&last=Deckard
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 25 of 159 2024-10-12, 4:47 p.m.
+25 of 159 2024-10-12, 4:47 p.m.
+The GET method is a technique used by a web browser to submit information to a web server by
 The GET method is a technique used by a web browser to submit information to a web server by
 altering the URL of the HTTP request. When a user clicks the submit button in a form that uses the
+altering the URL of the HTTP request. When a user clicks the submit button in a form that uses the
+GET method, the browser performs the following steps:
 GET method, the browser performs the following steps:
 1. Collect all data from the form fields into a query string. The query string is a set of
+1. Collect all data from the form fields into a query string. The query string is a set of
+name=value pairs separated by the ampersand character (&). Each name is specified as an
 name=value pairs separated by the ampersand character (&). Each name is specified as an
 attribute of the HTML field, and the value is the user-entered data. Ex: The first and last field
+attribute of the HTML field, and the value is the user-entered data. Ex: The first and last field
+names and values in the animation below become the string: .c, -· st.-I',._;__ '- i-. °' j__e1.;:, L-
 names and values in the animation below become the string: .c, -· st.-I',._;__ '- i-. °' j__e1.;:, L-
 2. Create a URL with the server page and name=value pairs. The URL is composed of the action
+2. Create a URL with the server page and name=value pairs. The URL is composed of the action
+attribute specified in the form, the question mark character(?), and the query string. Ex:
 attribute specified in the form, the question mark character(?), and the query string. Ex:
 3. Use the newly created URL to create and send an HTTP GET request.
+3. Use the newly created URL to create and send an HTTP GET request.
+4. Display or update the webpage using the HTTP response received from the server.
 4. Display or update the webpage using the HTTP response received from the server.
 IAP ACRTTIVICITIPYA TION I 4.3.3: Using the GET method to submit form data to a server.
+IAP ACRTTIVICITIPYA TION I 4.3.3: Using the GET method to submit form data to a server.
+r
 r
 Web server
+Web server
+Thank you, Rick Deckard! example.com
 Thank you, Rick Deckard! example.com
 <body>
+<body>
+GET request
 GET request
 https://example.com/apply?first=Rick&last=Deckard
+https://example.com/apply?first=Rick&last=Deckard
+<form action="https://example.com/apply">
 <form action="https://example.com/apply">
 <p>
+<p>
+<label for="first" >First Name : </ label>
 <label for="first" >First Name : </ label>
 <input type="text" name="first" i d="first">
+<input type="text" name="first" i d="first">
+</ p>
 </ p>
 <p>
+<p>
+<label for="last" >Last Name : </ label>
 <label for="last" >Last Name : </ label>
 <input type="text" name="last" i d="last">
+<input type="text" name="last" i d="last">
+</ p>
 </ p>
 <input type="submit">
+<input type="submit">
+</ form>
 </ form>
 </ body>
+</ body>
+Animation content:
 Animation content:
 The following code snippet is displayed:
+The following code snippet is displayed:
 □
+□
+"example.org/">
 "example.org/">
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 26 of 159 2024-10-12, 4:47 p.m.
+26 of 159 2024-10-12, 4:47 p.m.
+<body>
 <body>
 <form action="https://example.com/apply">
+<form action="https://example.com/apply">
+<label for="flrst">First Name:</label>
 <label for="flrst">First Name:</label>
 <input type="text" name="flrst" id="flrst">
+<input type="text" name="flrst" id="flrst">
+<label for="last">Last Name:</label>
 <label for="last">Last Name:</label>
 <input type="text" name="last" id="last">
+<input type="text" name="last" id="last">
+<input type="submit">
 <input type="submit">
 </form>
+</form>
+</body>
 </body>
 End of code snippet. A form is displayed with the inputs "First Name" and "Last Name" and a
+End of code snippet. A form is displayed with the inputs "First Name" and "Last Name" and a
+button called "Submit." The first name is filled in with "Rick" and the last name is filled in with
 button called "Submit." The first name is filled in with "Rick" and the last name is filled in with
 "Deckard." When the submit button is clicked, the first and last name are used to create the URL
+"Deckard." When the submit button is clicked, the first and last name are used to create the URL
+for example.com with the flrst=Rick and last=Deckard appended onto the end. The browser then
 for example.com with the flrst=Rick and last=Deckard appended onto the end. The browser then
 uses a GET request with the created URL to submit the form data to the web server. Then the
+uses a GET request with the created URL to submit the form data to the web server. Then the
+web server responds with a new page that shows one line ''Thank you, Rick Deckard!"
 web server responds with a new page that shows one line ''Thank you, Rick Deckard!"
 Animation captions:
+Animation captions:
+1. The user enters information in the form and clicks the submit button.
 1. The user enters information in the form and clicks the submit button.
 2. The browser creates a query string of name=value pairs for each form field, separated by&.
+2. The browser creates a query string of name=value pairs for each form field, separated by&.
+3. The query string is appended to the URL from the form action.
 3. The query string is appended to the URL from the form action.
 4. The browser uses the new URL to submit the form data to the web server.
+4. The browser uses the new URL to submit the form data to the web server.
+5. The web server responds with a new webpage.
 5. The web server responds with a new webpage.
 Warning
+Warning
+Because submitting form data with the GET method places the form data in the URL,
 Because submitting form data with the GET method places the form data in the URL,
 the data is visible to anyone who sees the URL. The GET method should not be used
+the data is visible to anyone who sees the URL. The GET method should not be used
+to submit private information like phone numbers, credit card information, etc.
 to submit private information like phone numbers, credit card information, etc.
 I PARTICIPATION I ACTIVITY 4.3.4: GET method.
+I PARTICIPATION I ACTIVITY 4.3.4: GET method.
+Refer to the form below.
 Refer to the form below.
 <form method="GET" act i on="http://examp
+<form method="GET" act i on="http://examp
+<input type="text" name="item">
 <input type="text" name="item">
 <input type="text" name="price">
+<input type="text" name="price">
+<input type="submit">
 <input type="submit">
 </ form>
+</ form>
+□
 □
 bananas=2.50
+bananas=2.50
 action
+action
+first=Sarah&last=Connor
 first=Sarah&last=Connor
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 27 of 159 2024-10-12, 4:47 p.m.
+27 of 159 2024-10-12, 4:47 p.m.
+1) What is the query string if the user
 1) What is the query string if the user
 submits "bananas" and "2.50" in the text
+submits "bananas" and "2.50" in the text
+boxes?
 boxes?
 0
+0
+0 method=bana nas&action=2 . 50
 0 method=bana nas&action=2 . 50
 0 i tem=bananas&pri ce=2 . 50
+0 i tem=bananas&pri ce=2 . 50
+2) What URL does the browser request if
 2) What URL does the browser request if
 the user submits "bananas" and "2.50"
+the user submits "bananas" and "2.50"
+in the text boxes?
 in the text boxes?
 0 http://exa mple.org/
+0 http://exa mple.org/
+O http://example.org/
 O http://example.org/
 item=bananas&price= 2.50
+item=bananas&price= 2.50
+O http://example.org/?
 O http://example.org/?
 item=bananas&price= 2.50
+item=bananas&price= 2.50
+POST method
 POST method
 0
 0
+0
+0
+The POST method is a technique used by a web browser to submit information to a web server by
 The POST method is a technique used by a web browser to submit information to a web server by
 sending the information in the HTTP request body. When the user clicks the submit button in a
+sending the information in the HTTP request body. When the user clicks the submit button in a
+form that uses the POST method, the browser performs the following:
 form that uses the POST method, the browser performs the following:
 1. Create an HTTP POST request using the URL from the form's attribute.
+1. Create an HTTP POST request using the URL from the form's attribute.
+2. Create a query string from the form data. Ex:
 2. Create a query string from the form data. Ex:
 3. Place the query string in the HTTP request message body, and send the request.
+3. Place the query string in the HTTP request message body, and send the request.
+4. Display or update the webpage using the HTTP response received from the server.
 4. Display or update the webpage using the HTTP response received from the server.
 The left side of the figure below shows a webpage opened in Chrome. The Dev Tools show the
+The left side of the figure below shows a webpage opened in Chrome. The Dev Tools show the
+page's form, which is POSTing to a zyBooks URL. The user entered her name Sarah Connor before
 page's form, which is POSTing to a zyBooks URL. The user entered her name Sarah Connor before
 pressing Submit. On the right, the user has pressed Submit, and the DevTools show the details of
+pressing Submit. On the right, the user has pressed Submit, and the DevTools show the details of
+the HTTP request. The Payload tab shows the query string created from the form data.
 the HTTP request. The Payload tab shows the query string created from the form data.
 Figure 4.3.1: Chrome DevTools showing form data in POST request.
+Figure 4.3.1: Chrome DevTools showing form data in POST request.
+0 Form Example X + V - □ X
 0 Form Example X + V - □ X
 0 HTTP Request Detai ls X + V - □ X
+0 HTTP Request Detai ls X + V - □ X
+~ ➔ C CD Fi le I ( :/ temp/example.html ~ ➔ C i wp.zybooks.com/ form-viewer.php I=? * • □
 ~ ➔ C CD Fi le I ( :/ temp/example.html ~ ➔ C i wp.zybooks.com/ form-viewer.php I=? * • □
 First name:l~sa_rah ___ ~ HTTP request details
+First name:l~sa_rah ___ ~ HTTP request details
+Last name: ~l co_nn_or ___ ~
 Last name: ~l co_nn_or ___ ~
 I Submit I Detail name Value
+I Submit I Detail name Value
+Hostname wp.zybooks.com
 Hostname wp.zybooks.com
 r-, r, _, ... • ..... ,., r, - ·
+r-, r, _, ... • ..... ,., r, - ·
+<form>
 <form>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 28 of 159 2024-10-12, 4:47 p.m.
+28 of 159 2024-10-12, 4:47 p.m.
+Lk QJ t tements Lonso1e Kecoraer • y : .,...
 Lk QJ t tements Lonso1e Kecoraer • y : .,...
 • <body>
+• <body>
+• <fo rm a ct ion="ht tps : / /'i1p . zybooks. com/ f orm- vi ewer. php" met hod="POST" >
 • <fo rm a ct ion="ht tps : / /'i1p . zybooks. com/ f orm- vi ewer. php" met hod="POST" >
 <label for =" first " >first name: </label>
+<label for =" first " >first name: </label>
+<input t ype: "text " ida: "first" name z "f irst ">
 <input t ype: "text " ida: "first" name z "f irst ">
 </p>
+</p>
+<label for== " last">Last name: </label>
 <label for== " last">Last name: </label>
 <i nput t ype==" text" id• ,. last" name s " last">
+<i nput t ype==" text" id• ,. last" name s " last">
+</p>
 </p>
 <i nput t ype== " submit" value== "Submi t " >
+<i nput t ype== " submit" value== "Submi t " >
+</p>
 </p>
 </f orm>
+</f orm>
+</ body>
 </ body>
 </html>
+</html>
+<!doctype>
 <!doctype>
 Styles Computed Layout Event Listeners DOM Breakpoints Properties »
+Styles Computed Layout Event Listeners DOM Breakpoints Properties »
+Filter :hov .els
 Filter :hov .els
 Lk aJ t:lements Lonso1e Network n
+Lk aJ t:lements Lonso1e Network n
+e IS) 'i' Q_ D Preserve log r.i Disable cache No throttl ing • 9-, (I
 e IS) 'i' Q_ D Preserve log r.i Disable cache No throttl ing • 9-, (I
 !
+!
+Filter 0 Invert O Hide data URLs
 Filter 0 Invert O Hide data URLs
 All Fetch/XHR JS CSS 1mg Media Font Doc WS Wasm Manifest Other
+All Fetch/XHR JS CSS 1mg Media Font Doc WS Wasm Manifest Other
+D Has blocked cookies D Blocked Requests D 3rd-party requests
 D Has blocked cookies D Blocked Requests D 3rd-party requests
 ~n llmn Dn
+~n llmn Dn
+/
 /
 400ms
+400ms
+Name x Headers Payload Preview Response »
 Name x Headers Payload Preview Response »
 (!I form-viewer.php • Form Data view parsed I fir s t =Sarah&last:Connor
+(!I form-viewer.php • Form Data view parsed I fir s t =Sarah&last:Connor
+1 / 2 requests 534 B / 1.2 kB
 1 / 2 requests 534 B / 1.2 kB
 If a form field contains binary data such as an image, the normal format of the query string is not
+If a form field contains binary data such as an image, the normal format of the query string is not
+sufficient to encode the binary data. To accommodate binary data, a POST request can be split into
 sufficient to encode the binary data. To accommodate binary data, a POST request can be split into
 multiple parts. The element's enctype attribute value "multipart/form-data" indicates the
+multiple parts. The element's enctype attribute value "multipart/form-data" indicates the
+web browser should split a POST request into multiple parts, where each input field is sent as a
 web browser should split a POST request into multiple parts, where each input field is sent as a
 separate part of the HTTP request message. I PARTICIPATION I . . ACTIVITY 4.3.5: Using the POST method to submit form data to a server.
+separate part of the HTTP request message. I PARTICIPATION I . . ACTIVITY 4.3.5: Using the POST method to submit form data to a server.
+First Name: Rick
 First Name: Rick
 Last Name: Deckard 7
+Last Name: Deckard 7
+Upload picture:
 Upload picture:
 [ Submit J
+[ Submit J
+<body>
 <body>
 Web server
+Web server
+example.com
 example.com
 POST request
+POST request
+!first=Rick !
 !first=Rick !
 ! last=Deckard I
+! last=Deckard I
+<form action="https://exampl e.com/appl y " method="POST"
 <form action="https://exampl e.com/appl y " method="POST"
 enctype="mu l t i part/ f o r m- data">
+enctype="mu l t i part/ f o r m- data">
+<p>
 <p>
 <label for="first " >Fi rst Name : </ label>
+<label for="first " >Fi rst Name : </ label>
+<input type=" text " name="fi rst " i d="first ">
 <input type=" text " name="fi rst " i d="first ">
 </ p>
+</ p>
+<p>
 <p>
 <label for="last " >Last Name : </ label>
+<label for="last " >Last Name : </ label>
+<input type=" text " name="last " i d="last ">
 <input type=" text " name="last " i d="last ">
 </ p>
+</ p>
+<p>
 <p>
 <label for="p i c " >Up l oad p i cture: </ label>
+<label for="p i c " >Up l oad p i cture: </ label>
+<input type="file " name=" p i c " i d="p i c ">
 <input type="file " name=" p i c " i d="p i c ">
 </ p>
+</ p>
+□
 □
 "example.org/">
+"example.org/">
+<input type="submit">
 <input type="submit">
 </form>
+</form>
+</body>
 </body>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 29 of 159 2024-10-12, 4:47 p.m.
+29 of 159 2024-10-12, 4:47 p.m.
+Animation content:
 Animation content:
 The following code snippet is displayed:
+The following code snippet is displayed:
+<body>
 <body>
 <form action="https://example.com/apply" method="POST"
+<form action="https://example.com/apply" method="POST"
+enctype="multipart/form-data">
 enctype="multipart/form-data">
 <label for="flrst">First Name:</label>
+<label for="flrst">First Name:</label>
+<input type="text" name="flrst" id="flrst">
 <input type="text" name="flrst" id="flrst">
 <label for="last">Last Name:</label>
+<label for="last">Last Name:</label>
+<input type="text" name="last" id="last">
 <input type="text" name="last" id="last">
 <label for="pic">Upload picture:</label>
+<label for="pic">Upload picture:</label>
+<input type="flle" name="pic" id="pic">
 <input type="flle" name="pic" id="pic">
 <input type="submit">
+<input type="submit">
+</form>
 </form>
 </body>
+</body>
+End of code snippet. A form is displayed with the inputs "First Name", "Last Name", and "Upload
 End of code snippet. A form is displayed with the inputs "First Name", "Last Name", and "Upload
 Picture" with a button called "Submit." The first name is filled in with "Rick" and the last name is
+Picture" with a button called "Submit." The first name is filled in with "Rick" and the last name is
+filled in with "Deckard", and the uploaded picture is an eagle head. When the submit button is
 filled in with "Deckard", and the uploaded picture is an eagle head. When the submit button is
 clicked, the first name, last name and picture were added to the POST request, which is then sent
+clicked, the first name, last name and picture were added to the POST request, which is then sent
+to the server.
 to the server.
 Animation captions:
+Animation captions:
+1. The user enters information in the form, including a picture to upload to the server, and
 1. The user enters information in the form, including a picture to upload to the server, and
 presses Submit.
+presses Submit.
+2. The browser collects the form data into multiple parts and adds each part to the POST
 2. The browser collects the form data into multiple parts and adds each part to the POST
 request.
+request.
+3. The POST request is then sent to the server.
 3. The POST request is then sent to the server.
 I PARTICIPATION I AcTiviTv 4.3.6: POST method.
+I PARTICIPATION I AcTiviTv 4.3.6: POST method.
+Refer to the form below.
 Refer to the form below.
 <form method="POST" action="http://exam
+<form method="POST" action="http://exam
+<input type="text" name="item">
 <input type="text" name="item">
 <input type="text" name="price">
+<input type="text" name="price">
+<input type="submit">
 <input type="submit">
 </ form>
+</ form>
+□
 □
 oranges=1.99
+oranges=1.99
+method=oranges&action=1.99
 method=oranges&action=1.99
 item=oranges&price=1.99
+item=oranges&price=1.99
+→
 →
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 30 of 159 2024-10-12, 4:47 p.m.
+30 of 159 2024-10-12, 4:47 p.m.
+1) What is the query string if the user
 1) What is the query string if the user
 submits "oranges" and "1 .99" in the text
+submits "oranges" and "1 .99" in the text
+boxes?
 boxes?
 0
 0
 0
+0
+0
+0
+2) What URL does the browser request if
 2) What URL does the browser request if
 the user submits "oranges" and "1 .99"
+the user submits "oranges" and "1 .99"
+in the text boxes?
 in the text boxes?
 0 http://example.org/
 0 http://example.org/
+0 http://example.org/
+0 http://example.org/
+oranges=7 .99
 oranges=7 .99
 0 http://example.org/?
+0 http://example.org/?
+item=oranges&price=7 .99
 item=oranges&price=7 .99
 3) What changes about the form data
+3) What changes about the form data
+when enctype="mul tipart/
 when enctype="mul tipart/
 form-data" is added to the < form>
+form-data" is added to the < form>
+tag?
 tag?
 0 Nothing changes since binary
+0 Nothing changes since binary
+data is not submitted.
 data is not submitted.
 0 Each name/value pair is
+0 Each name/value pair is
+separated into multiple parts.
 separated into multiple parts.
 0 The form data is encrypted.
+0 The form data is encrypted.
+Escaping form data
 Escaping form data
 The&,?, and = characters have special meaning in a query string. If a user enters
+The&,?, and = characters have special meaning in a query string. If a user enters
+characters like&,?,=, or white space characters like space, newline, or tab, the
 characters like&,?,=, or white space characters like space, newline, or tab, the
 characters must be escaped, meaning the characters must be transformed into
+characters must be escaped, meaning the characters must be transformed into
+other representations. The browser rules for escaping form data are as follows:
 other representations. The browser rules for escaping form data are as follows:
 • Space - +
+• Space - +
+• All other reserved characters, newline, and tab %XX where XX is the ASCII
 • All other reserved characters, newline, and tab %XX where XX is the ASCII
 hex value of the character
+hex value of the character
+Ex: If "7 + 2 = ?" is entered into a textbox, the browser escapes the values producing
 Ex: If "7 + 2 = ?" is entered into a textbox, the browser escapes the values producing
 0
 0
 0
+0
+0
+0
+<input>
 <input>
 <input> type
 <input> type
+<input> type
+<input> type
+value
+value
 value
 value
 name
+name
+"twitter.com/status" method="POST">
 "twitter.com/status" method="POST">
 < input type "text" name "status" id="status" placeholder="Your
+< input type "text" name "status" id="status" placeholder="Your
+status">
 status">
 <input type="submit" value="Send status">
+<input type="submit" value="Send status">
+</form>
 </form>
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 31 of 159 2024-10-12, 4:47 p.m.
+31 of 159 2024-10-12, 4:47 p.m.
+"1 +%2B+2+%3D+%3F". 2B is the ASCII hex value for"+", 3D is the ASCII value for"=",
 "1 +%2B+2+%3D+%3F". 2B is the ASCII hex value for"+", 3D is the ASCII value for"=",
 and 3F is the ASCII value for"?".
+and 3F is the ASCII value for"?".
+The web server unescapes the form data to determine what the original values are.
 The web server unescapes the form data to determine what the original values are.
 Form widgets
+Form widgets
+A widget is an interactive component (usually graphical) that the browser uses to interact with a
 A widget is an interactive component (usually graphical) that the browser uses to interact with a
 user. Ex: Buttons, drop-down menus, and data entry fields.
+user. Ex: Buttons, drop-down menus, and data entry fields.
+The <input> element allows the user to enter information into a webpage. The
 The <input> element allows the user to enter information into a webpage. The
 a void element with five primary attributes:
+a void element with five primary attributes:
+element is
 element is
 • The type attribute indicates the widget type. Common types include text, password, submit,
+• The type attribute indicates the widget type. Common types include text, password, submit,
+and button.
 and button.
 • The name attribute names the widget and sends the widget's value when the widget's form is
+• The name attribute names the widget and sends the widget's value when the widget's form is
+submitted.
 submitted.
 • The id attribute is used to give a widget a unique identifier.
+• The id attribute is used to give a widget a unique identifier.
+• The placeholder attribute specifies text that first appears in a text widget, typically for giving
 • The placeholder attribute specifies text that first appears in a text widget, typically for giving
 the user a hint as to the expected value.
+the user a hint as to the expected value.
+• The value attribute specifies a default value for a widget.
 • The value attribute specifies a default value for a widget.
 A text box widget is an
+A text box widget is an
+enter a single line of text.
 enter a single line of text.
 element with the attribute of "text" that allows users to
+element with the attribute of "text" that allows users to
+The web browser displays a submit button widget for an tag with the attribute of
 The web browser displays a submit button widget for an tag with the attribute of
 "submit", which sends the associated form's data to the server when clicked. A submit button uses
+"submit", which sends the associated form's data to the server when clicked. A submit button uses
+the attribute to specify the button's text.
 the attribute to specify the button's text.
 The HTML below asks for a message to tweet. The text box widget does not use the
+The HTML below asks for a message to tweet. The text box widget does not use the
+attribute because no default tweet message makes sense. The submit button does not use the
 attribute because no default tweet message makes sense. The submit button does not use the
 attribute because the submit button's value is not needed by the web server.
+attribute because the submit button's value is not needed by the web server.
+Figure 4.3.2: Complete HTML form sending status to Twitter using a secure
 Figure 4.3.2: Complete HTML form sending status to Twitter using a secure
 HTTP POST request.
+HTTP POST request.
+<form act i on="https://twitter.com/stc
 <form act i on="https://twitter.com/stc
 ;nnnT t-un~= t-~vt-" n~m~= c::t-~t-,,c::" ir
+;nnnT t-un~= t-~vt-" n~m~= c::t-~t-,,c::" ir
+lvour statt1. .. 11 Send .s1 atu'i I
 lvour statt1. .. 11 Send .s1 atu'i I
 id
+id
+"username">Username:</
 "username">Username:</
 label>
+label>
+<input type="text" id="username">
 <input type="text" id="username">
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 32 of 159 2024-10-12, 4:47 p.m.
+32 of 159 2024-10-12, 4:47 p.m.
+I PARTICIPATION I . . ACTIVITY 4.3.7: <input> attributes.
 I PARTICIPATION I . . ACTIVITY 4.3.7: <input> attributes.
 Match each <input> attribute to the corresponding effect.
+Match each <input> attribute to the corresponding effect.
+If unable to drag and drop, refresh the page.
 If unable to drag and drop, refresh the page.
 name value id placeholder
+name value id placeholder
+Labels and text areas
 Labels and text areas
 type
+type
+Indicates which kind of widget is
 Indicates which kind of widget is
 displayed by the browser.
+displayed by the browser.
+Allows the server to identify which
 Allows the server to identify which
 data came from which widget.
+data came from which widget.
+Uniquely identifies the specific input
 Uniquely identifies the specific input
 element to the browser.
+element to the browser.
+Allows the input to start with a
 Allows the input to start with a
 default value.
+default value.
+Provides a hint to the user about
 Provides a hint to the user about
 the information being requested.
+the information being requested.
+Reset
 Reset
 □
+□
+The <label> element displays descriptive text associated with a specific widget. A label has a for
 The <label> element displays descriptive text associated with a specific widget. A label has a for
 attribute whose value should match the attribute for the widget being labeled. Labels help
+attribute whose value should match the attribute for the widget being labeled. Labels help
+people using screen readers understand what input is expected.
 people using screen readers understand what input is expected.
 Figure 4.3.3: HTML for a label associated with a text box.
+Figure 4.3.3: HTML for a label associated with a text box.
+<label for ="usernamE
 <label for ="usernamE
 ,_,__, ,
+,_,__, ,
 <textarea>
+<textarea>
+cols="50">To summarize...</
 cols="50">To summarize...</
 zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 33 of 159 2024-10-12, 4:47 p.m.
+33 of 159 2024-10-12, 4:47 p.m.
+eniame:
 eniame:
 A text area widget allows users to enter multiple lines of text and is created with the <textarea>
+A text area widget allows users to enter multiple lines of text and is created with the <textarea>
+element. A element has optional rows and cols attributes to specify the initial size of
 element. A element has optional rows and cols attributes to specify the initial size of
 the text area.
+the text area.
+Figure 4.3.4: HTML for a textarea.
 Figure 4.3.4: HTML for a textarea.
 <textarea name="summary" rows ="4" c
+<textarea name="summary" rows ="4" c
+textarea>
 textarea>
 I To summaci,e • • •
+I To summaci,e • • •
+I PARTICIPATION I . ACTIVITY 4.3.8: Text inputs.
 I PARTICIPATION I . ACTIVITY 4.3.8: Text inputs.
 The following HTML form contains a text box, text area, and submit button. Pressing the
+The following HTML form contains a text box, text area, and submit button. Pressing the
+submit button submits the form data to form-viewer.php, which displays the submitted
 submit button submits the form data to form-viewer.php, which displays the submitted
 form data.
+form data.
+1. Add another text box with a "last" name. Also change the size of the text area so that
 1. Add another text box with a "last" name. Also change the size of the text area so that
 the text area has 7 rows and 50 columns of text. Make your webpage match the
+the text area has 7 rows and 50 columns of text. Make your webpage match the
+expected webpage.
 expected webpage.
 2. Type some data into the form and press Submit. Note that the form data appears in
+2. Type some data into the form and press Submit. Note that the form data appears in
+the query string of the resulting webpage because the form uses the GET method.
 the query string of the resulting webpage because the form uses the GET method.
 3. Change the form's method from "GET' to "POST'. Render the webpage, type some
+3. Change the form's method from "GET' to "POST'. Render the webpage, type some
+data into the form, and press Submit. The form data no longer appears in the query
 data into the form, and press Submit. The form data no longer appears in the query
 string of the resulting webpage although the submitted data is present.
+string of the resulting webpage although the submitted data is present.
+□
 □
 zyBooks
+zyBooks
+34 of 159
 34 of 159
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 1
+1
+2
 2
 3
+3
+4
 4
 5
+5
+6
 6
 7
+7
+8
 8
 9
+9
+10
 10
 11
+11
+12
 12
 13
+13
+14
 14
 <forij action=" https: / /wp. zybooks. com/form-viewer. php" target="_blank" met ho
+<forij action=" https: / /wp. zybooks. com/form-viewer. php" target="_blank" met ho
+<p>
 <p>
 <label for="first" >First name: </ label>
+<label for="first" >First name: </ label>
+<i nput type="text" id="first" name="first" placeholder="Text box" >
 <i nput type="text" id="first" name="first" placeholder="Text box" >
 </p>
+</p>
+<p>
 <p>
 <label for="address" >Address: </ label>
+<label for="address" >Address: </ label>
+<textarea id="address" name="address" placeholder="Text area with 2 r
 <textarea id="address" name="address" placeholder="Text area with 2 r
 </p>
+</p>
+<p>
 <p>
 <i nput type="submit" value="Submit">
+<i nput type="submit" value="Submit">
+</p>
 </p>
 7 </form
+7 </form
+Renderwebpage Reset code
 Renderwebpage Reset code
 Your webpage Expected webpage
+Your webpage Expected webpage
+First name: I Text box First name: I Text box
 First name: I Text box First name: I Text box
 '----------'
+'----------'
+Text area with 2
 Text area with 2
 Address: rows and 20 cols
+Address: rows and 20 cols
+[ Submit ]
 [ Submit ]
 ► View solution
+► View solution
+I PARTICIPATION I . ACTIVITY 4.3.9: Text inputs.
 I PARTICIPATION I . ACTIVITY 4.3.9: Text inputs.
 1) Which element creates a text box
+1) Which element creates a text box
+widget?
 widget?
 0 <input>
+0 <input>
+0 <text>
 0 <text>
 l
+l
+Last name: [ Second text box
 Last name: [ Second text box
 Address:
+Address:
+Text area with 7 rows and 50 cols
 Text area with 7 rows and 50 cols
 [ Submit ]
+[ Submit ]
+□
 □
 0
+0
 2024-10-12, 4:47 p.m.
+2024-10-12, 4:47 p.m.
+textarea>
 textarea>
 zyBooks https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 0 <textarea>
+0 <textarea>
+2) Which attribute must be set to create
 2) Which attribute must be set to create
 a text box widget?
+a text box widget?
+0 type
 0 type
 0 no attribute
+0 no attribute
 0 name
+0 name
+0 id
 0 id
 3) Which element creates a widget
+3) Which element creates a widget
+capable of holding multiple lines of
 capable of holding multiple lines of
 text?
+text?
+0 <input>
 0 <input>
 0 <text>
+0 <text>
+0 <textarea>
 0 <textarea>
 4) Which attribute inside the <label>
+4) Which attribute inside the <label>
+tag is used to associate the label with
 tag is used to associate the label with
 a widget?
+a widget?
+0 id
 0 id
 0 for
+0 for
+0 name
 0 name
 I CHALLENGE I . . ACTIVITY 4.3.1: Building forms.
+I CHALLENGE I . . ACTIVITY 4.3.1: Building forms.
+570104.2065416.qx3zqy7
 570104.2065416.qx3zqy7
 Start
+Start
+Add a <label> with content "First name", associated to a text <input> with name and id of
 Add a <label> with content "First name", associated to a text <input> with name and id of
 flrstName, and placeholder of Ann. SHOW EXPECTED
+flrstName, and placeholder of Ann. SHOW EXPECTED
+1 <form action="https://wp.zybooks.com/form-viewer.php" target="_blank" metho
 1 <form action="https://wp.zybooks.com/form-viewer.php" target="_blank" metho
 2 <p>
+2 <p>
+3
 3
 4 <!-- Your solution goes here-->
+4 <!-- Your solution goes here-->
+5
 5
 6 </p>
+6 </p>
+7 <p>
 7 <p>
 8 <i nput type="submit" value="Submit">
+8 <i nput type="submit" value="Submit">
 9 </p>
+9 </p>
+10 </form>
 10 </form>
 0
 0
 0
+0
+0
+0
+□
 □
 35 of 159 2024-10-12, 4:47 p.m.
+35 of 159 2024-10-12, 4:47 p.m.
 zyBooks
+zyBooks
+36 of 159
 36 of 159
 https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
 1 2 3
+1 2 3
+Check Next
 Check Next
 View your last submission v
+View your last submission v
+Exploring further:
 Exploring further:
 • encty_Qe attribute from W3Schools
+• encty_Qe attribute from W3Schools
+• Sending form data from Mozilla Developer Network
 • Sending form data from Mozilla Developer Network
