@@ -6,7 +6,7 @@ import math
 
 def main():
     # Read the questions from the CSV file
-    with open('questions_answers.csv', 'r', encoding='utf-8') as csvfile:
+    with open('questions_answers_harder.csv', 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         questions_list = list(reader)
 
@@ -56,7 +56,7 @@ def main():
             p.add_run(question['Answer'])
 
         # Save the document
-        doc_filename = f'practice/easy/Random_Questions_Set_{doc_num}.docx'
+        doc_filename = f'practice/harder/Random_Questions_Set_{doc_num}.docx'
         document.save(doc_filename)
         print(f"Document '{doc_filename}' has been created successfully.")
 
