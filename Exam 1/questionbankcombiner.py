@@ -72,10 +72,10 @@ for area in subsections:
         for file in files:
             filepath = os.path.join(subdir, file)
             
-            if "questions" in file:
+            if "questions_" in file:
                 questions = parse_questions(filepath)
                 all_questions.update(questions)
-            elif "answers" in file:
+            elif "answers_" in file:
                 answers = parse_answers(filepath)
                 all_answers.update(answers)
 
@@ -95,7 +95,7 @@ for qid in all_questions:
 csv_columns = ['ID', 'Question', 'Answer']
 
 # Write the combined data into a CSV file
-with open('questions_answers.csv', 'w', newline='', encoding='utf-8') as csvfile:
+with open('questions_answers_harder.csv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
     writer.writeheader()
     for data in combined_data:

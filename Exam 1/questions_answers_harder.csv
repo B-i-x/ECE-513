@@ -1,0 +1,1403 @@
+ID,Question,Answer
+1.1.1,"Multiple Choice: What do IP addresses primarily allow computers to do on the internet?
+- (A) Connect to local networks
+- (B) Communicate with each other
+- (C) Store data securely
+- (D) Process information faster",(B) Communicate with each other
+1.1.2,"Fill in the blank: An IP address is usually represented numerically and typically consists of __ bits in IPv4.
+- 32",32
+1.1.3,"Multiple Choice: Which version of the Internet Protocol uses 128-bit addresses?
+- (A) IPv2
+- (B) IPv4
+- (C) IPv6
+- (D) IPv8",(C) IPv6
+1.1.4,Short Answer: How many unique addresses can IPv4 represent?,4 billion
+1.1.5,"Multiple Choice: When a computer sends a packet to a domain name, what is the first step taken?
+- (A) Sending the packet to a random server
+- (B) Contacting a browser history
+- (C) Contacting a DNS server to resolve an IP address
+- (D) Storing the packet temporarily",(C) Contacting a DNS server to resolve an IP address
+1.1.6,"Multiple Answers: Which of the following are top-level domains (TLDs)?
+- (A) .com
+- (B) .net
+- (C) .edu
+- (D) .jpg","(A) .com, (B) .net, (C) .edu"
+1.1.7,"Fill in the blank: A URL is short for __.
+- Uniform Resource Locator",Uniform Resource Locator
+1.1.8,"Short Answer: What is the hostname in the URL ""https://www.cdc.gov/alcohol""?",www.cdc.gov
+1.1.9,"Multiple Choice: What does a 404 status code typically indicate?
+- (A) The server is busy
+- (B) Page not found
+- (C) The internet is down
+- (D) Successful connection",(B) Page not found
+1.1.10,"Multiple Choice: What organization manages the assignment of top-level domains?
+- (A) IANA
+- (B) WHO
+- (C) IEEE
+- (D) W3C",(A) IANA
+1.10.1,"Multiple Choice: What is an HTML entity used for in a webpage?
+- (A) To create new HTML elements
+- (B) To define CSS styles
+- (C) To represent special characters or symbols
+- (D) To embed JavaScript code",(C) To represent special characters or symbols
+1.10.2,"Multiple Choice: Which of the following is an example of specifying an HTML entity using its name?
+- (A) &#169;
+- (B) &#x000A9;
+- (C) &copy;
+- (D) &for_all;",(C) &copy;
+1.10.3,"Fill in the Blank: The decimal format for the HTML umbrella symbol is _______.
+- Answer: 9730",9730
+1.10.4,"Fill in the Blank: The Euro symbol can be written in HTML as _______.
+- Answer: &euro;",&euro;
+1.10.5,"Short Answer: How can emoji characters be displayed on a web page?
+- Answer: Emoji characters can be displayed using decimal or hexadecimal entities.",Emoji characters can be displayed using decimal or hexadecimal entities.
+1.10.6,"Multiple Choice: How should the character < be displayed using HTML entities if it's not part of a tag?
+- (A) &gt;
+- (B) &lt;
+- (C) &amp;
+- (D) &le;",(B) &lt;
+1.10.7,"Multiple Choice: Which HTML entity correctly displays the ampersand character (&) when it does not start an entity name?
+- (A) &amp;
+- (B) &cet;
+- (C) &and;
+- (D) &anp;",(A) &amp;
+1.10.8,"Multiple Answers: Which of the following methods can be used to specify HTML entities? (Select all that apply)
+- (A) Entity names
+- (B) Decimal numbers
+- (C) Binary numbers
+- (D) Hexadecimal numbers",(A) Entity names; (B) Decimal numbers; (D) Hexadecimal numbers
+1.10.9,"Fill in the Blank: The hexadecimal entity for the happy face emoji is _______.
+- Answer: &#x1F600;",&#x1F600;
+1.10.10,"Short Answer: What should you use instead of the < character directly in HTML to avoid confusion with tags?
+- Answer: Use the entity &lt; instead of the < character directly.",Use the entity &lt; instead of the < character directly.
+1.2.1,"Multiple Choice: What does the acronym HTML stand for?
+- (A) HyperText Module Language
+- (B) HyperText Markup Language
+- (C) HyperTransfer Markup Language
+- (D) HyperTransfer Module Language",(B) HyperText Markup Language
+1.2.2,"Multiple Choice: In HTML, what does the `<meta charset=""UTF-8"">` tag specify?
+- (A) The script language of the document
+- (B) The style of the document
+- (C) The character encoding of the document
+- (D) The connection protocol for the document",(C) The character encoding of the document
+1.2.3,Short Answer: What HTML tag is used to specify the document's title that appears in the browser's titlebar?,`<title>`
+1.2.4,"Fill in the Blank: In HTML, an element attribute is specified in the form ________.","name=""value"""
+1.2.5,"Multiple Choice: Which of the following does NOT require a closing tag in HTML?
+- (A) `<p>`
+- (B) `<div>`
+- (C) `<strong>`
+- (D) `<br>`",(D) `<br>`
+1.2.6,"Multiple Choice: What is required at the beginning of an HTML document to specify the document type?
+- (A) <!ELEMENT html>
+- (B) <!DOCTYPE html>
+- (C) <html xml=""true"">
+- (D) <DOCTYPE>",(B) <!DOCTYPE html>
+1.2.7,"Multiple Answers: Which of the following are minimal parts of an HTML document as defined by the HTML Living Standard? (Select all that apply)
+- (A) `<DOCTYPE html>`
+- (B) `<head>`
+- (C) `<body>`
+- (D) `<footer>`","(A) `<DOCTYPE html>`, (B) `<head>`, (C) `<body>`"
+1.2.8,Short Answer: What mode is a webpage rendered in if the DOCTYPE is omitted or characters precede it in the document?,Quirks mode
+1.2.9,"Fill in the Blank: The `<head>` element contains the document title, document metadata, and various other elements that are typically __________.",not displayed in the webpage
+1.2.10,"Multiple Choice: Which tag is incorrectly paired with its function?
+- (A) `<meta>` - Specifies metadata
+- (B) `<body>` - Contains content to be rendered
+- (C) `<html>` - Renders images
+- (D) `<head>` - Contains the document title",(C) `<html>` - Renders images
+1.3.1,"Multiple Choice: Which HTML element is used to create a paragraph in an HTML document?  
+- (A) <div>  
+- (B) <span>  
+- (C) <p>  
+- (D) <section>",(C) <p>
+1.3.2,Fill in the Blank: Multiple spaces in HTML are displayed as a ________ when rendered by browsers.,single space
+1.3.3,Short Answer: What is a common error involving paragraph tags in HTML?,"A common error is forgetting the closing <p> tag or trying to nest one paragraph inside another, which can lead to HTML validation errors."
+1.3.4,"Multiple Choice: The <br> element in HTML is used to:  
+- (A) Create a new paragraph  
+- (B) Create a line break  
+- (C) Bold the text  
+- (D) Italicize the text",(B) Create a line break
+1.3.5,"Multiple Answers: Select all the HTML elements that are italicized by default:  
+- (A) <em>  
+- (B) <strong>  
+- (C) <cite>  
+- (D) <i>","(A) <em>, (C) <cite>, (D) <i>"
+1.3.6,"Fill in the Blank: Headings in an HTML document range from <h1> to <h__>, with <h1> being the largest and generally used for the main title of the document.",6
+1.3.7,Short Answer: What is the purpose of using the <section> element in HTML?,"The <section> element is used to create a collection of related content, helping to organize the document into sections."
+1.3.8,"Multiple Choice: Which HTML element is used to denote a piece of text as strong or important?  
+- (A) <em>  
+- (B) <b>  
+- (C) <strong>  
+- (D) <i>",(C) <strong>
+1.3.9,Short Answer: Describe the semantic difference between the <em> and <strong> HTML elements.,"The <em> element is used for emphasized text with italic styling by default, while the <strong> element is used for text of strong importance with bold styling by default."
+1.3.10,"Multiple Choice: Which element is a void element in HTML and does not require a closing tag?  
+- (A) <p>  
+- (B) <section>  
+- (C) <br>  
+- (D) <h1>",(C) <br>
+1.4.1,"Multiple Choice: How does an HTML comment start and end?
+- (A) <!-- and -->
+- (B) // and //
+- (C) /* and */
+- (D) [ and ]",(A) <!-- and -->
+1.4.2,"Multiple Choice: What is a common error when using HTML comments?
+- (A) Forgetting to end the comment
+- (B) Trying to put a comment inside of another comment
+- (C) Using uppercase letters in comments
+- (D) Placing comments at the end of the document",(B) Trying to put a comment inside of another comment
+1.4.3,"Fill in the blank: HTML comments are often used by developers to leave __________ for themselves or others.
+- Notes",Notes
+1.4.4,"Short Answer: Rewrite the HTML code using a comment so that the second paragraph is not displayed: `<p>This paragraph will self-destruct in five seconds. Good luck...</p>`
+
+- Answer: `<!-- <p>This paragraph will self-destruct in five seconds. Good luck...</p> -->`",`<!-- <p>This paragraph will self-destruct in five seconds. Good luck...</p> -->`
+1.4.5,"Multiple Choice: What should you do to a paragraph in HTML to prevent it from showing in the preview window?
+- (A) Delete the paragraph
+- (B) Add it to the end of the document
+- (C) Wrap it in a comment
+- (D) Use a different tag",(C) Wrap it in a comment
+1.4.6,"Multiple Answer: Select all that are valid uses of the HTML comment tag.
+- [ ] Display secret messages
+- [ ] Leave notes for developers
+- [ ] Tell the browser to ignore certain parts of the HTML
+- [ ] Create nested comments within comments","Leave notes for developers, Tell the browser to ignore certain parts of the HTML"
+1.4.7,"Short Answer: Identify whether the following HTML is valid or invalid: `<p>This sentence does < !-not--> contain a comment</p>`
+
+- Answer: Invalid",Invalid
+1.4.8,"Short Answer: Identify whether the following HTML is valid or invalid: `<p>Bananas grow <!--in bushes.</p>--> on a tree.`
+
+- Answer: Invalid",Invalid
+1.4.9,"Multiple Choice: How should you modify the existing HTML to prevent the second line from being visible: `<p>Roses are <!--purple--> red. Violets are<!-turquoise. <!--green.--> black.-->blue.</p>`
+
+- (A) Wrap with `/* */`
+- (B) Use single line comments //
+- (C) Wrap in `<!-- -->`
+- (D) Use parentheses ()",(C) Wrap in `<!-- -->`
+1.4.10,"Multiple Choice: Which part of the book contains activity-based exercises for practicing comments in HTML?
+- (A) Activity 1.4.1
+- (B) Activity 1.5.1
+- (C) Activity 2.1
+- (D) Appendix A",(A) Activity 1.4.1
+1.5.1,"Multiple Choice: What is the main use of the `<img>` element in HTML?  
+- (A) To define a paragraph  
+- (B) To create a hyperlink  
+- (C) To display an image  
+- (D) To define a list",(C) To display an image
+1.5.2,"Multiple Choice: Which of the following attributes is required for the `<img>` element?  
+- (A) href  
+- (B) title  
+- (C) alt  
+- (D) class",(C) alt
+1.5.3,Short Answer: What is the aspect ratio of an image that is 1000 pixels wide and 500 pixels high?,2:1
+1.5.4,Fill in the Blank: The `<img>` element retrieves the image using the ____ attribute.,src
+1.5.5,"Multiple Choice: Which image format supports animation and uses lossless compression?  
+- (A) JPEG  
+- (B) PNG  
+- (C) GIF  
+- (D) SVG",(C) GIF
+1.5.6,"Multiple Choice: When defining a favicon for a webpage, which HTML element is used?  
+- (A) `<img>`  
+- (B) `<icon>`  
+- (C) `<image>`  
+- (D) `<link>`",(D) `<link>`
+1.5.7,"Multiple Choice: Which image format would be most appropriate for saving a detailed digital photograph?  
+- (A) PNG  
+- (B) GIF  
+- (C) JPEG  
+- (D) SVG",(C) JPEG
+1.5.8,"Multiple Choice: Which attribute of the `<img>` tag provides a text description for accessibility?  
+- (A) src  
+- (B) alt  
+- (C) title  
+- (D) href",(B) alt
+1.5.9,"Multiple Choice: Which statement about the width and height attributes of an `<img>` element is true?  
+- (A) Specifying both width and height will always maintain the image’s original aspect ratio.  
+- (B) Specifying only the width will adjust the height automatically to maintain the aspect ratio.  
+- (C) Specifying the height will stretch the image regardless of the width setting.  
+- (D) Specifying both will never alter the image’s appearance.",(B) Specifying only the width will adjust the height automatically to maintain the aspect ratio.
+1.5.10,"Multiple Choice: Which attribute should be modified to ensure an `<img>` element can still convey information if an image file is missing?  
+- (A) src  
+- (B) alt  
+- (C) title  
+- (D) href",(B) alt
+1.6.1,"Fill in the blank: An unordered list is a collection of items shown using bullets and created with the _____ element.  
+- <ul>",<ul>
+1.6.2,"Multiple Choice: Which HTML element is used to define a list item in an unordered or ordered list?  
+- (A) <ul>  
+- (B) <ol>  
+- (C) <li>  
+- (D) <list>",(C) <li>
+1.6.3,"Multiple Choice: What type of bullets are used by default for unordered lists without any style modification?  
+- (A) Square bullets  
+- (B) Disc bullets  
+- (C) Circle bullets  
+- (D) None",(B) Disc bullets
+1.6.4,Short Answer: What attribute of the <ol> element is used to specify the numbering type in an ordered list?,type
+1.6.5,"Fill in the blank: The CSS property _____ is used to modify the bullet or numbering style in lists.  
+- list-style-type",list-style-type
+1.6.6,"Multiple Choice: In the code snippet `<ol type=""A"">`, what will be the numbering format for the list items?  
+- (A) Numbers (1, 2, 3, …)  
+- (B) Lowercase letters (a, b, c, …)  
+- (C) Uppercase letters (A, B, C, …)  
+- (D) Roman numerals (i, ii, iii, …)","(C) Uppercase letters (A, B, C, …)"
+1.6.7,"Short Answer: When nesting ordered lists within a list item of another ordered list, what number does the nested list start with by default?",1
+1.6.8,"Multiple Answers: Identify all lines with errors from the following list elements:  
+1) <ul>  
+2) <li>Apples<li>  
+3) <li>Oranges  
+4) </ul>  
+- (A) 1  
+- (B) 2  
+- (C) 3  
+- (D) 4",(B) 2
+1.6.9,"Fill in the blank: To meet the HTML Living Standard, a nested list should be placed _____ an item's <li> and </li> tags.  
+- INSIDE",INSIDE
+1.6.10,Short Answer: Which element is used for a sequenced collection of list items that are usually shown using numbers or letters?,<ol>
+1.7.1,"Multiple Choice: What is the main function of the `<a>` element in HTML?
+- (A) To define a section in a webpage
+- (B) To include a script file
+- (C) To display an image
+- (D) To create a hyperlink",(D) To create a hyperlink
+1.7.2,Fill in the blank: The attribute used within the `<a>` tag to specify the destination URL is the _______ attribute.,href
+1.7.3,"Multiple Choice: Which of the following URLs uses the `mailto` scheme?
+- (A) `https://example.com`
+- (B) `ftp://example.com`
+- (C) `mailto:info@example.com`
+- (D) `file://example.com`",(C) `mailto:info@example.com`
+1.7.4,Short Answer: What happens when a hyperlink with a `mailto` scheme is clicked?,It opens an email program addressed to the specified email address.
+1.7.5,"Multiple Choice: Which of the following options is NOT a valid relative URL?
+- (A) `test.html`
+- (B) `../images/photo.png`
+- (C) `http://example.com/page.html`
+- (D) `files/report.pdf`",(C) `http://example.com/page.html`
+1.7.6,"Multiple Answer: Which of the following are rules for an `id` attribute in a fragment identifier? Select all that apply.
+- (A) It can start with a number
+- (B) It cannot contain whitespace characters
+- (C) It is case sensitive
+- (D) It must be unique within the document","(B) It cannot contain whitespace characters, (C) It is case sensitive, (D) It must be unique within the document"
+1.7.7,"Multiple Choice: How can a hyperlink be set to open in a new tab or window by using the `target` attribute?
+- (A) `target=""_new""`
+- (B) `target=""_blank""`
+- (C) `target=""_self""`
+- (D) `target=""_window""`","(B) `target=""_blank""`"
+1.7.8,"Fill in the blanks: A graphical hyperlink, or image link, uses an _______ inside a hyperlink instead of text. The attribute used to describe the image for accessibility is _______.","image, alt"
+1.7.9,"Multiple Choice: What is incorrect about the following hyperlink? `<a href=""caleb@gmail.com"">email me</a>`
+- (A) The `href` attribute doesn't start with ""mailto:""
+- (B) ""email me"" is not a valid link text
+- (C) The email is missing a subject line
+- (D) The link should use ""http""","(A) The `href` attribute doesn't start with ""mailto:"""
+1.7.10,Short Answer: How does a URL create a section link to a specific part of a webpage?,By appending a hash `#` followed by a fragment identifier to the URL.
+1.8.1,"Multiple Choice: What is a parent container in a web document?
+- (A) A container that contains interactive elements
+- (B) A container that contains the entire HTML document
+- (C) A container that resides inside another element
+- (D) A container that another element resides in",(D) A container that another element resides in
+1.8.2,"Multiple Choice: Which element is used for marking up self-contained content that could be reused independently, such as a news article?
+- (A) <footer>
+- (B) <article>
+- (C) <section>
+- (D) <nav>",(B) <article>
+1.8.3,Fill in the blank: The <div> element is a generic element for creating _______ containers.,block
+1.8.4,Short Answer: Name two block elements that typically start and end on new lines.,"<p>, <h1>"
+1.8.5,"Multiple Choice: Which of the following elements is used to create inline containers without semantic meaning?
+- (A) <span>
+- (B) <div>
+- (C) <section>
+- (D) <p>",(A) <span>
+1.8.6,"Multiple Answers: Which elements are considered block elements? Select all that apply.
+- (A) <div>
+- (B) <span>
+- (C) <p>
+- (D) <h1>","(A) <div>, (C) <p>, (D) <h1>"
+1.8.7,"Fill in the blank: According to best practices, elements like <_______> and <_______> should be used for containers with semantic meaning, while <div> and <span> should be used for presentation.","<address>, <article>"
+1.8.8,"Multiple Choice: What is the main purpose of the <address> container?
+- (A) To contain introductory content
+- (B) To provide the document's primary content
+- (C) To contain a person's or organization's contact information
+- (D) To contain a specific chapter of a document",(C) To contain a person's or organization's contact information
+1.8.9,Short Answer: Describe what an inline element does concerning space in the parent container.,An inline element fills the minimum space possible in the parent container and can only contain text or other inline elements.
+1.8.10,"Multiple Choice: If you were to add a government logo and search box to the top of a webpage, which container should you place them in?
+- (A) <nav>
+- (B) <footer>
+- (C) <header>
+- (D) <main>",(C) <header>
+1.9.1,"Multiple Choice: Which HTML tag is used to create a table row?
+- (A) <td>
+- (B) <th>
+- (C) <tr>
+- (D) <table>",(C) <tr>
+1.9.2,Fill in the blank: The HTML element used to create a table cell containing data is called the _______ element.,<td>
+1.9.3,"Multiple Choice: When wanting to create a table header cell, which HTML element is appropriate?
+- (A) <caption>
+- (B) <thead>
+- (C) <th>
+- (D) <td>",(C) <th>
+1.9.4,Short Answer: What HTML element should be used immediately after the <table> tag to define a table's title?,<caption>
+1.9.5,"Multiple Choice: Where does the <caption> element appear in relation to the table?
+- (A) Inside the first table row
+- (B) Immediately before the closing </table> tag
+- (C) Centered above the table
+- (D) Below the table headers",(C) Centered above the table
+1.9.6,"Fill in the blank: To specify a cell that spans across multiple columns, use the _______ attribute in the <td> or <th> element.",colspan
+1.9.7,"Multiple Answers: Which elements are typically used in tables to improve accessibility for screen readers? (Select all that apply)
+- (A) <th> with scope attribute
+- (B) <caption>
+- (C) <tfoot>
+- (D) <colgroup>","(A) <th> with scope attribute, (B) <caption>"
+1.9.8,Short Answer: What attribute would you use to make a table header cell apply to a row instead of a column for accessibility purposes?,scope
+1.9.9,"Multiple Choice: Which property in a CSS style rule would you modify to display borders around table cells?
+- (A) background-color
+- (B) margin
+- (C) border
+- (D) padding",(C) border
+1.9.10,Fill in the blank: A single table cell that spans multiple rows uses the attribute called _______ applied to <td> or <th> elements.,rowspan
+2.1.1,"Multiple Choice: What does the acronym CSS stand for?
+- (A) Critical Style Sections
+- (B) Cascading Style Sheets
+- (C) Computer Styled Scheme
+- (D) Creative Style Script",(B) Cascading Style Sheets
+2.1.2,Fill in the Blank: A CSS rule consists of a selector followed by a __________ block between braces.,declaration
+2.1.3,Short Answer: What separator is used to divide multiple declarations in a CSS declaration block?,Semicolon (;)
+2.1.4,"Multiple Choice: Which part of a CSS rule specifies the HTML elements to which the style applies?
+- (A) Property
+- (B) Value
+- (C) Selector
+- (D) Declaration",(C) Selector
+2.1.5,"Multiple Answers: Which of the following are valid ways to apply CSS to an HTML document? (Select all that apply)
+- (A) Inline styles
+- (B) Embedded stylesheets
+- (C) External stylesheets
+- (D) Inline JavaScript","(A) Inline styles, (B) Embedded stylesheets, (C) External stylesheets"
+2.1.6,Fill in the Blank: An embedded stylesheet places CSS rules in an HTML document's head using a __________ element.,<style>
+2.1.7,"Short Answer: In CSS, which rule can be used to override all other declarations and specificity?",!important
+2.1.8,"Multiple Choice: In case of a conflict between an inline style and an external stylesheet, which one will take precedence?
+- (A) External stylesheet
+- (B) Embedded stylesheet
+- (C) Browser default styles
+- (D) Inline style",(D) Inline style
+2.1.9,"Fill in the Blank: When a CSS conflict occurs between a parent and child element, the __________ element's declaration will take precedence.",child
+2.1.10,Short Answer: What is the good practice mentioned in the content to avoid forgetting to add semicolons when updating a CSS declaration block?,Place each declaration on a separate line and add a semicolon to the end of each declaration block even when it’s not required.
+2.2.1,"Multiple Choice: Which CSS selector would you use to apply styles to all paragraph elements?
+- (A) .p
+- (B) #p
+- (C) p
+- (D) p#",(C) p
+2.2.2,"Fill in the blank: To target an HTML element with the ID attribute set to ""mainContent"", the correct CSS syntax is ________________.",#mainContent
+2.2.3,Short Answer: What is the primary distinction between a class selector and an ID selector in CSS?,"An ID selector must be unique within the document, while a class selector can be applied to multiple elements."
+2.2.4,"Multiple Answers: Which of the following statements about CSS class and ID selectors are correct? (Select all that apply)
+- (A) An ID selector is specified with a period character.
+- (B) A class selector can be used to style multiple elements.
+- (C) ID selectors must be unique within a document.
+- (D) Class selectors can be combined with other selectors.",(B) A class selector can be used to style multiple elements. (C) ID selectors must be unique within a document. (D) Class selectors can be combined with other selectors.
+2.2.5,"Fill in the blank: In the CSS rule "".button:hover { background-color: yellow; }"", "".button:hover"" is an example of a _______________.",pseudo-class selector
+2.2.6,"Multiple Choice: If you have a class attribute on an HTML element as <span class=""info highlight"">, which CSS selector would correctly select this element?
+- (A) .info.highlight
+- (B) .info .highlight
+- (C) info.highlight
+- (D) .highlight.info",(A) .info.highlight
+2.2.7,Fill in the blank: The CSS rule to make all <em> elements inside an <h2> element blue would be: ____________.,h2 em { color: blue; }
+2.2.8,Short Answer: Explain what a descendant selector is and provide an example.,"A descendant selector matches elements that are contained within another specified element. Example: ""div p"" selects all <p> elements inside a <div> element."
+2.2.9,"Multiple Choice: Which CSS pseudo-class would you use to change the style of an element when a mouse pointer is over it?
+- (A) :active
+- (B) :hover
+- (C) :focus
+- (D) :visited",(B) :hover
+2.2.10,Fill in the blank: The CSS selector to select only the first child of a parent element is written as ______________.,:first-child
+2.3.1,"Multiple Choice: Which CSS property is used to change the background color of an element?
+- (A) background-image
+- (B) color
+- (C) background-opacity
+- (D) background-color",(D) background-color
+2.3.2,Fill in the blank: A color specified using the format #RRGGBB is called a __________ color.,hexadecimal
+2.3.3,"Multiple Answers: Which of the following CSS functions can specify colors in a webpage?
+- [ ] hsl()
+- [ ] rgb()
+- [ ] font-size()
+- [ ] rgba()",[ ] hsl() [ ] rgb() [x] rgba()
+2.3.4,Short Answer: What is the range of values for the alpha component in an RGBA color specification?,Between 0 and 1
+2.3.5,"Multiple Choice: Which CSS property allows elements to flow around floated objects?
+- (A) display
+- (B) opacity
+- (C) float
+- (D) clear",(D) clear
+2.3.6,Short Answer: How many CSS color names are defined according to the provided text?,140
+2.3.7,"Fill in the blank: A CSS variable is declared using two dashes followed by the variable name, and accessed with the __________ function.",var()
+2.3.8,"Multiple Choice: What is the default background color value that displays the parent’s background underneath the content?
+- (A) #FFFFFF
+- (B) rgba(255,255,255,1)
+- (C) transparent
+- (D) none",(C) transparent
+2.3.9,Short Answer: Provide an example of how you would modify the RGB values to change a text color to green.,"rgb(0, 255, 0)"
+2.3.10,Fill in the blank: The display property value that hides an element from being displayed is __________.,none
+2.4.1,"Multiple Choice: Which CSS property is used to specify the weight of a font?
+- (A) font-style
+- (B) font-variant
+- (C) font-weight
+- (D) font-family",(C) font-weight
+2.4.2,Fill in the Blank: The __________ property is shorthand for setting several font properties at the same time.,font
+2.4.3,"Multiple Choice: What is a family name in the context of CSS font properties?
+- (A) The general group of fonts like serif or sans-serif
+- (B) The specific name of a font like ""Times New Roman""
+- (C) The shorthand property to define multiple font features
+- (D) The default fallback font used by browsers","(B) The specific name of a font like ""Times New Roman"""
+2.4.4,Short Answer: List two generic font families mentioned in the content.,"serif, sans-serif"
+2.4.5,"Multiple Choice: Which of the following units is not used to specify an absolute font size in CSS?
+- (A) cm
+- (B) em
+- (C) px
+- (D) in",(B) em
+2.4.6,Fill in the Blank: The CSS property that changes letters to UPPERCASE or lowercase is called __________.,text-transform
+2.4.7,"Multiple Choice: Which CSS property is commonly used to remove the default underline from links?
+- (A) text-transform
+- (B) text-decoration
+- (C) text-indent
+- (D) text-align",(B) text-decoration
+2.4.8,Fill in the Blank: Most web browsers use a default font size of __________.,16px
+2.4.9,"Multiple Answers: Which of the following are considered relative size units in CSS? (Select all that apply)
+- (A) cm
+- (B) em
+- (C) rem
+- (D) vh","(B) em, (C) rem, (D) vh"
+2.4.10,Short Answer: What is the intended purpose of starting a font-family list with a specific font and ending with a generic family?,To use the first available font in the list while ensuring a fallback to a similar style if the intended font is not available.
+2.5.1,"Multiple Choice: What is the innermost component of the box model?
+- (A) Padding
+- (B) Content
+- (C) Border
+- (D) Margin",(B) Content
+2.5.2,"Multiple Choice: Which CSS property is used to set the space between the border and the content?
+- (A) Margin
+- (B) Padding
+- (C) Border
+- (D) Width",(B) Padding
+2.5.3,"Fill in the blank: The ____ property specifies the thickness, style, and color of the border.
+- Answer: border",border
+2.5.4,"Multiple Choice: What type of border style does the declaration ""border: 5px groove orange;"" produce?
+- (A) Dotted
+- (B) Groove
+- (C) Double
+- (D) Inset",(B) Groove
+2.5.5,"Short Answer: How would you specify a CSS rule to apply 10px of margin on all sides of an element?
+- Answer: margin: 10px;",margin: 10px;
+2.5.6,"Multiple Answers: Which of the following are CSS properties related to the box model? (Select all that apply)
+- [ ] background-color
+- [ ] padding
+- [ ] display
+- [ ] margin","padding, margin"
+2.5.7,"Short Answer: In CSS, how can you horizontally center a block element with a fixed width?
+- Answer: Set the element's margin to ""margin: auto;"".","Set the element's margin to ""margin: auto;""."
+2.5.8,"Multiple Choice: Which element displays a transparent area using the background color of the parent element?
+- (A) Content
+- (B) Padding
+- (C) Border
+- (D) Margin",(D) Margin
+2.5.9,"Fill in the blank: In the box model, the ____ surrounds both the content and the padding.
+- Answer: border",border
+2.5.10,"Multiple Choice: If two vertically stacked block elements have margins, how does CSS handle their margins?
+- (A) Adds both margins together
+- (B) The larger margin is applied
+- (C) The smaller margin is applied
+- (D) Margins are ignored",(B) The larger margin is applied
+2.6.1,"Multiple Choice: Which character is used to specify the universal selector in CSS?
+- (A) Dollar sign ($)
+- (B) Asterisk (*)
+- (C) Hash (#)
+- (D) Ampersand (&)",(B) Asterisk (*)
+2.6.2,"Short Answer: In CSS, how do you specify a child selector?",A child selector is specified in CSS using a greater-than character (>): `parent > child`.
+2.6.3,"Multiple Choice: What is the function of a multiple selector in CSS?
+- (A) To apply unique styles to a single element
+- (B) To combine several selectors to apply the same style to all listed elements
+- (C) To reset browser default styles
+- (D) To select elements based on their ID",(B) To combine several selectors to apply the same style to all listed elements
+2.6.4,"Fill in the Blank: In CSS, the greater-than character (>) is used to specify a ________ selector.",child
+2.6.5,"Multiple Choice: How would you change the background color of `em` elements that are direct children of `p` elements to green?
+- (A) em > p { background-color: green; }
+- (B) p em { background-color: green; }
+- (C) p > em { background-color: green; }
+- (D) em + p { background-color: green; }",(C) p > em { background-color: green; }
+2.6.6,"Multiple Answers: Which of the following are combinators in CSS? Select all that apply.
+- (A) Universal selector
+- (B) Descendant selector
+- (C) Child selector
+- (D) Adjacent sibling selector","(B) Descendant selector, (C) Child selector, (D) Adjacent sibling selector"
+2.6.7,"Short Answer: What is an attribute selector, and how is it used in CSS?","An attribute selector is used in CSS to select elements with a specific attribute or attribute value. It is specified with square brackets, such as `[attribute]` or `[attribute=""value""]`."
+2.6.8,Fill in the Blank: The CSS selector `ol > li` matches all list items that are direct children of ________ lists.,ordered
+2.6.9,"Multiple Choice: If you want to style all `a` elements with a specific class, which selector would you use?
+- (A) a[attr=""class""]
+- (B) .class a
+- (C) a.class
+- (D) *a[class]",(C) a.class
+2.6.10,Short Answer: Explain the difference between the general sibling selector and the adjacent sibling selector in CSS.,"The general sibling selector (`~`) matches all elements of the specified type that are siblings of a given element, while the adjacent sibling selector (`+`) matches only the first element of the specified type immediately following a specified sibling."
+2.7.1,"Multiple Choice: What CSS property should be applied to an element to make it a flex container?
+- (A) `display: block;`
+- (B) `display: inline;`
+- (C) `display: flex;`
+- (D) `display: grid;`",(C) `display: flex;`
+2.7.2,Fill in the Blank: The CSS property used to define the direction of flex items within a flex container is called the _____________________.,The CSS property used to define the direction of flex items within a flex container is called the `flex-direction`.
+2.7.3,"Multiple Choice: Which of the following CSS properties is used to set the alignment of flex items within the container, distributing them evenly?
+- (A) `align-items`
+- (B) `justify-content`
+- (C) `flex-wrap`
+- (D) `align-content`",(B) `justify-content`
+2.7.4,"Multiple Choice: Which CSS property allows flex items to wrap onto multiple rows when the container's width is insufficient?
+- (A) `flex-direction`
+- (B) `justify-content`
+- (C) `flex-wrap`
+- (D) `align-items`",(C) `flex-wrap`
+2.7.5,Short Answer: Explain what the `flex-basis` property does in the context of a flex item.,"The `flex-basis` property sets the initial length of a flex item, either as a fixed size or as a percentage of the container's size."
+2.7.6,"Multiple Choice: By default, how do flex items appear in a flex container?
+- (A) Stacked vertically
+- (B) Stacked horizontally
+- (C) Aligned to the right
+- (D) Centered",(B) Stacked horizontally
+2.7.7,"Multiple Answers: Which of the following properties can control the behavior of flex items regarding size and growth? (Select all that apply.)
+- (A) `flex-grow`
+- (B) `flex-shrink`
+- (C) `flex-direction`
+- (D) `flex-basis`","(A) `flex-grow`, (B) `flex-shrink`, (D) `flex-basis`"
+2.7.8,"Fill in the Blank: The shorthand CSS property `flex` combines ______________, ________________, and _______________ properties.","The shorthand CSS property `flex` combines `flex-grow`, `flex-shrink`, and `flex-basis` properties."
+2.7.9,Short Answer: Describe the effect of setting the `justify-content` property to `space-around` in a flex container.,Setting `justify-content` to `space-around` distributes the flex items evenly with equal space around them within the flex container.
+2.7.10,"Multiple Choice: In a flex container, if you want all elements to appear as a single line even when there is insufficient space, which `flex-wrap` property value should you use?
+- (A) `wrap`
+- (B) `nowrap`
+- (C) `wrap-reverse`
+- (D) `wrap-around`",(B) `nowrap`
+3.1.1,"Multiple Choice: Who invented JavaScript in 1995?  
+- (A) Bill Gates  
+- (B) Brendan Eich  
+- (C) Tim Berners-Lee  
+- (D) Linus Torvalds",(B) Brendan Eich
+3.1.2,Fill in the blank: JavaScript was standardized by ___ International in 1997 and called ECMAScript.,Ecma
+3.1.3,Short Answer: What is the primary use of JavaScript in modern web browsers?,To allow web pages to dynamically respond to user events and change content
+3.1.4,"Multiple Answers: Select all that are true about ECMAScript and JavaScript.  
+- (A) ECMAScript and JavaScript refer to the same language.  
+- (B) JavaScript engines use Just-In-Time (JIT) compilation.  
+- (C) JavaScript is only for web applications.  
+- (D) Brendan Eich named ECMAScript.",(A) ECMAScript and JavaScript refer to the same language.  (B) JavaScript engines use Just-In-Time (JIT) compilation.
+3.1.5,"Multiple Choice: Which of the following is a good JavaScript naming convention?  
+- (A) totalPoints  
+- (B) total_points  
+- (C) TotalPoints  
+- (D) TOTALPOINTS",(A) totalPoints
+3.1.6,Fill in the blank: A constant is an initialized variable whose value cannot change and is declared with the ___ keyword.,const
+3.1.7,"Multiple Choice: Which of the following data types is not explicitly supported by JavaScript?  
+- (A) number  
+- (B) boolean  
+- (C) integer  
+- (D) array",(C) integer
+3.1.8,Short Answer: What happens when two JavaScript statements are on the same line without a semicolon separating them?,A syntax error occurs if there are no semicolons separating them.
+3.1.9,"Fill in the blanks: JavaScript requires that a variable be declared before it is assigned a value. This is typically done using the ___ keyword for variables, and the ___ keyword for constants.",let; const
+3.1.10,"Multiple Choice: Which function is used in JavaScript to display a dialog box that allows the user to type input?  
+- (A) alert()  
+- (B) prompt()  
+- (C) console.log()  
+- (D) document.write()",(B) prompt()
+3.10.1,"Multiple Choice: What is an object map commonly known as in programming?
+- (A) An array
+- (B) A function
+- (C) A map or associative array
+- (D) A string",(C) A map or associative array
+3.10.2,"Multiple Choice: In JavaScript object maps, how is the value of a key usually accessed?
+- (A) Using a period (.)
+- (B) Using parentheses ()
+- (C) Using brackets []
+- (D) Using a semicolon ;",(C) Using brackets []
+3.10.3,Short Answer: What JavaScript object method returns an array of an object's property names?,Object.keys()
+3.10.4,"Multiple Choice: Which operator is used in JavaScript to check for the existence of a key in an object?
+- (A) exists
+- (B) in
+- (C) has
+- (D) contains",(B) in
+3.10.5,"Short Answer: When using a `for-in` loop to iterate over an object map, what does the loop variable represent during each iteration?",The loop variable represents each key of the object map during each iteration.
+3.10.6,Fill in the Blank: The __ operator removes a key/property from a map or object in JavaScript.,delete
+3.10.7,"Multiple Choice: What method adds a new key/value pair to a `Map` object or updates the value if the key already exists?
+- (A) add()
+- (B) append()
+- (C) set()
+- (D) update()",(C) set()
+3.10.8,"Multiple Choice: Which JavaScript object operation deletes an element with a specific key?
+- (A) .remove()
+- (B) .filter()
+- (C) .delete()
+- (D) .erase()",(C) .delete()
+3.10.9,"Multiple Choice: Which loop is specifically ideal for iterating over arrays but can also be used to iterate over Map objects?
+- (A) for-in loop
+- (B) forEach loop
+- (C) for-of loop
+- (D) while loop",(C) for-of loop
+3.10.10,"Multiple Answers: Which of the following are properties or methods associated with JavaScript Map objects? (Select all that apply)
+- (A) .push()
+- (B) .size
+- (C) .get(key)
+- (D) .set(key, value)
+- (E) .pop()","(B) .size, (C) .get(key), (D) .set(key, value)"
+3.11.1,"Multiple Choice: What method returns the character at a specified index in a string as a string?
+- (A) substring()
+- (B) indexOf()
+- (C) charAt()
+- (D) trim()",(C) charAt()
+3.11.2,Fill in the blank: The method ________ returns an integer indicating the index of the first occurrence of a specified text in a string or -1 if the text is not found.,indexOf
+3.11.3,"Multiple Choice: How can you determine the number of characters in a string?
+- (A) Use the size property
+- (B) Use the length property
+- (C) Call the getSize() method
+- (D) Use the charCount method",(B) Use the length property
+3.11.4,"Short Answer: What value does the property `length` return when called on the string ""Hello, World!""?",13
+3.11.5,"Multiple Answers: Which methods can be used to extract substrings from a string? (Select all that apply)
+- (A) substr()
+- (B) substring()
+- (C) slice()
+- (D) extract()","(A) substr(), (B) substring()"
+3.11.6,Fill in the blank: The method ________ replaces a specified value with another value in a string and returns the modified string.,replace
+3.11.7,"Multiple Choice: What will `s.toUpperCase()` return if `s` is ""good morning""?
+- (A) ""good morning""
+- (B) ""Good Morning""
+- (C) ""GOOD MORNING""
+- (D) ""good Morning""","(C) ""GOOD MORNING"""
+3.11.8,Fill in the blank: The ________ method splits a string into an array of strings based on a specified delimiter.,split
+3.11.9,Short Answer: What method would you use to remove whitespace from both ends of a string?,trim
+3.11.10,"Multiple Choice: What does a template literal use to embed variables or expressions directly within a string?
+- (A) Curly braces only
+- (B) ${} within back-ticks
+- (C) Double quotes
+- (D) Single quotes",(B) ${} within back-ticks
+3.2.1,"Multiple Choice: What is the result of the expression `3 + 5 * 2`?
+- (A) 10
+- (B) 13
+- (C) 16
+- (D) 17",(C) 13
+3.2.2,"Short Answer: Using JavaScript, what will the value of `x` be after executing the following code snippet?
+
+```javascript
+var x = 4;
+x++;
+x *= 3;
+```",15
+3.2.3,"Fill in the blank: In JavaScript, the operator `__` is used for exponentiation.",**
+3.2.4,"Multiple Choice: What will be the value of `secretCode` after the following JavaScript code executes?
+
+```javascript
+secretCode = 10 + ""ten"";
+```
+
+- (A) 20
+- (B) 10 + 10
+- (C) ""10ten""
+- (D) NaN","(C) ""10ten"""
+3.2.5,"Multiple Answers: Which of the following JavaScript operators perform arithmetic computations? (Select all that apply)
+- (A) +
+- (B) +
+- (C) +=
+- (D) %","(A), (D)"
+3.2.6,"Short Answer: What is the precedence order for the following arithmetic operations in JavaScript: division, addition, parentheses, and multiplication?","Parentheses, Multiplication, Division, Addition"
+3.2.7,"Fill in the blank: The JavaScript function `parseInt(""123"")` will return the number __.",123
+3.2.8,"Multiple Choice: After executing `x = parseInt(""abc"")`, what will the value of `x` be?
+- (A) 0
+- (B) NaN
+- (C) ""abc""
+- (D) undefined",(B) NaN
+3.2.9,"Short Answer: What is the result of the expression `""5"" * 2` in JavaScript?",10
+3.2.10,"Multiple Choice: What is the difference in result between the following JavaScript expressions: `2 + ""3""` and `2 + 3`?
+- (A) Both result in the number 5
+- (B) The first results in the string ""23"" and the second results in the number 5
+- (C) Both result in the string ""5""
+- (D) The first results in the number 5 and the second results in the string ""23""","(B) The first results in the string ""23"" and the second results in the number 5"
+3.3.1,"Multiple Choice: What is the purpose of an if statement in programming?  
+- (A) To declare a variable  
+- (B) To iterate through a list  
+- (C) To execute a group of statements if a condition is true  
+- (D) To define a function",(C) To execute a group of statements if a condition is true
+3.3.2,"Multiple Choice: In JavaScript, how many spaces does this material recommend for indenting statements inside braces?  
+- (A) 1 space  
+- (B) 2 spaces  
+- (C) 3 spaces  
+- (D) 4 spaces",(C) 3 spaces
+3.3.3,"Short Answer: What will be logged to the console after the following JavaScript code is executed?  
+```
+let fee = 30;
+let age = 12;
+if (age < 18) {
+  fee -= 5;
+}
+if (age < 5) {
+  fee = 0;
+}
+console.log(""fee is $"" + fee);
+```","""fee is $25"""
+3.3.4,"Multiple Choice: If `bonus = 19`, what is the final value of `numitems` in the code?
+```
+numitems = 1;
+if (bonus > 10)
+  numitems = numitems + 3;
+```
+- (A) 1  
+- (B) 3  
+- (C) 4  
+- (D) 5",(C) 4
+3.3.5,"Fill in the Blank: An ______ statement in programming executes a block of statements if the statement's condition is true, and another block if the condition is false.",if-else
+3.3.6,"Multiple Choice: What output is logged to the console with the following code snippet?
+```
+let age = 6;
+if (age % 2 == 0) {
+  console.log(""age is even"");
+} else {
+  console.log(""age is odd"");
+}
+```
+- (A) ""age is odd""  
+- (B) ""age is even""","(B) ""age is even"""
+3.3.7,"Multiple Choice: Which comparison operator checks for strict equality including type?  
+- (A) ==  
+- (B) !=  
+- (C) ===  
+- (D) *=",(C) ===
+3.3.8,"Short Answer: What is the final value of `numitems` if `bonus = 12` in the following code?
+```
+if (bonus < 12) {
+  numitems = 100;
+} else {
+  numitems = 200;
+}
+```",200
+3.3.9,"Multiple Answers: Which of the following describe logical operators in JavaScript?
+- (A) && - true if both sides are true
+- (B) || - true if both sides are true
+- (C) ! - true if expression is not true
+- (D) && - true if either side is true","(A) && - true if both sides are true, (C) ! - true if expression is not true"
+3.3.10,Fill in the Blank: Using braces around single statements in if or else blocks in JavaScript is considered _______ practice as it results in more readable code and is less susceptible to logic errors.,good
+3.4.1,"Multiple Choice: Which of the following values is considered a truthy value in JavaScript?  
+- (A) 0  
+- (B) """"  
+- (C) NaN  
+- (D) ""cat""","(D) ""cat"""
+3.4.2,"Multiple Choice: What does the expression `(score >= 60 ? ""passing"" : ""failing"")` return if `score` is 75?  
+- (A) ""passing""  
+- (B) ""failing""  
+- (C) true  
+- (D) false","(A) ""passing"""
+3.4.3,"Multiple Answers: Which of the following are falsy values in JavaScript? (Select all that apply)  
+- (A) 0  
+- (B) ""false""  
+- (C) null  
+- (D) undefined","(A) 0, (C) null, (D) undefined"
+3.4.4,"Short Answer: What is the output of the following switch statement if `change` is set to 25?
+
+```javascript
+let change = 25;
+let coin;
+switch (change) {
+  case 1:
+    coin = ""penny"";
+    break;
+  case 5:
+    coin = ""nickel"";
+    break;
+  case 10:
+    coin = ""dime"";
+    break;
+  case 25:
+    coin = ""quarter"";
+    break;
+  default:
+    coin = ""unknown"";
+}
+console.log(coin);
+```","""quarter"""
+3.4.5,"Fill in the Blank: When using the conditional (ternary) operator `x ? y : z;`, if `x` evaluates to false, the value of ________ is returned.",z
+3.4.6,"Multiple Choice: In a switch statement, what purpose does the `break` statement serve?  
+- (A) Stops the entire program.  
+- (B) Exits the current loop.  
+- (C) Prevents fall-through to additional cases.  
+- (D) Compares variable types.",(C) Prevents fall-through to additional cases.
+3.4.7,"Short Answer: What will be the output when the following code is executed?
+
+```javascript
+let age = 16;
+let result = age >= 18 ? ""adult"" : ""minor"";
+console.log(result);
+```","""minor"""
+3.4.8,"Multiple Choice: What happens if the `break` statement is omitted in a case block of a switch statement?  
+- (A) The program crashes.  
+- (B) The next case's statements execute as well.  
+- (C) The switch statement stops completely.  
+- (D) The default case is executed.",(B) The next case's statements execute as well.
+3.4.9,"Fill in the Blank: In JavaScript, a ________ string is considered a falsy value.",Empty
+3.4.10,"Multiple Choice: When converting a group of else-if statements to a switch statement, under which condition should the switch be used?  
+- (A) When comparing string values only.   
+- (B) When using strict comparison of a single expression to multiple values.  
+- (C) When the conditions are mutually exclusive.  
+- (D) When working with functions.",(B) When using strict comparison of a single expression to multiple values.
+3.5.1,"Multiple Choice: What is a characteristic of a while loop?
+- (A) It executes the loop body before checking the loop's condition.
+- (B) It combines loop initialization, condition, and final expression.
+- (C) It checks the loop's condition before executing the loop body.
+- (D) It always executes at least once.",(C) It checks the loop's condition before executing the loop body.
+3.5.2,Fill in the Blank: A while loop repeats until the condition becomes _______.,false
+3.5.3,"Multiple Choice: Which of the following is an example of an infinite loop?
+- (A) `while (i < 10) { i++; }`
+- (B) `while (i < 10) { console.log(i); }`
+- (C) `while (true) { i++; }`
+- (D) `while (i > 10) { i--; }`",(C) `while (true) { i++; }`
+3.5.4,"Short Answer: List the numbers output by the following code segment:
+
+```javascript
+let c = 100;
+while (c > 0) {
+    console.log(c);
+    c -= 10;
+}
+```","100, 90, 80, 70, 60, 50, 40, 30, 20, 10"
+3.5.5,"Multiple Choice: How does a do-while loop differ from a while loop?
+- (A) A do-while loop is the same as a while loop.
+- (B) A do-while loop checks the condition before executing the loop body.
+- (C) A do-while loop executes the loop body before checking the condition.
+- (D) A do-while loop cannot be used for infinite loops.",(C) A do-while loop executes the loop body before checking the condition.
+3.5.6,"Short Answer: What is the first and last number output by the following code segment using a for loop?
+
+```javascript
+for (c = 5; c < 10; c += 2) {
+    console.log(c);
+}
+```",5 and 9
+3.5.7,"Multiple Choice: Which loop is guaranteed to execute its body at least once?
+- (A) while
+- (B) do-while
+- (C) for
+- (D) foreach",(B) do-while
+3.5.8,"Fill in the Blank: To avoid an infinite loop, developers need to ensure that the loop's _______ will eventually evaluate to false.",condition
+3.5.9,"Multiple Choice: What is the key part of a for loop that is evaluated at the end of each iteration?
+- (A) Initialization
+- (B) Condition
+- (C) Final expression
+- (D) Loop body execution",(C) Final expression
+3.5.10,"Multiple Choice: What is the last number output by the following do-while loop?
+
+```javascript
+let c = 10;
+do {
+    console.log(c);
+    c--;
+} while (c >= 5);
+```
+
+- (A) 0
+- (B) 1
+- (C) 5
+- (D) 10",(C) 5
+3.6.1,"Multiple Choice: What is a function in JavaScript?
+- (A) A collection of HTML elements
+- (B) A named group of statements
+- (C) A type of database
+- (D) A styling method in CSS",(B) A named group of statements
+3.6.2,"Fill in the Blank: JavaScript functions are declared using the ______ keyword followed by the function name and parameter list in parentheses.
+- Answer: function",function
+3.6.3,"Multiple Choice: What is a parameter in the context of JavaScript functions?
+- (A) A global variable
+- (B) A variable that supplies the function with input
+- (C) The return value of a function
+- (D) A CSS class",(B) A variable that supplies the function with input
+3.6.4,"Short Answer: What is the result of calling `displaySum(2, 5, 3);` in the provided function `displaySum(x, y, z)`?
+- Answer: 10",10
+3.6.5,"Fill in the Blank: Invoking a function's name, known as a ______, causes the function's statements to execute.
+- Answer: function call",function call
+3.6.6,"Multiple Choice: What will be the output of `console.log(findAverage(6, 7));` in the provided `findAverage(num1, num2)` function?
+- (A) 7
+- (B) 6
+- (C) 6.5
+- (D) 13",(C) 6.5
+3.6.7,"Short Answer: Provide an example of a function name that uses camelCase as recommended for JavaScript.
+- Answer: displayLargest",displayLargest
+3.6.8,"Multiple Answers: Which of the following are true about JavaScript arrow functions?
+- (A) They are always named functions
+- (B) They can be assigned to variables
+- (C) They must contain a return statement
+- (D) They can have a single expression returned implicitly","(B) They can be assigned to variables, (D) They can have a single expression returned implicitly"
+3.6.9,"Multiple Choice: What is output if the function `findSmallest(5, 2);` is executed using the provided `findSmallest(x, y)` function?
+- (A) 5
+- (B) 2
+- (C) 3
+- (D) 0",(B) 2
+3.6.10,"Fill in the Blank: A function that is missing a return statement returns ______.
+- Answer: undefined",undefined
+3.7.1,Fill in the blank: A JavaScript variable's _______ is the context in which the variable can be accessed.,scope
+3.7.2,"Multiple Choice: Which keyword was added to JavaScript in 2015 that allows for block scope?
+- (A) var
+- (B) let
+- (C) const
+- (D) scope",(B) let
+3.7.3,Short Answer: What type of error occurs when attempting to access a variable declared with 'let' outside its block scope?,ReferenceError
+3.7.4,"Multiple Choice: What is the scope of a variable declared with 'var' inside a function?
+- (A) Block scope
+- (B) Global scope
+- (C) Function scope
+- (D) Thread scope",(C) Function scope
+3.7.5,"Multiple Answers: In the following code snippet, which variables will throw a ReferenceError when accessed outside their respective functions?
+```javascript
+function example() {
+  var a = 10;
+  let b = 20;
+}
+console.log(a);
+console.log(b);
+```
+- (A) a
+- (B) b
+- (C) Both a and b
+- (D) Neither",(C) Both a and b
+3.7.6,"Fill in the blank: A variable declared using 'var' outside a function has _______ scope, meaning it is accessible from anywhere in the code.",global
+3.7.7,"Multiple Choice: In a web browser, global variables are usually assigned as properties to which object?
+- (A) document
+- (B) window
+- (C) navigator
+- (D) global",(B) window
+3.7.8,Short Answer: What keyword should you use to ensure a variable inside a function does not accidentally become a global variable?,let
+3.7.9,"Multiple Choice: What is the output of the following code?
+```javascript
+function addNumber(x) {
+  sum += x;
+}
+let sum = 0;
+addNumber(2);
+addNumber(5);
+console.log(sum);
+```
+- (A) 0
+- (B) 2
+- (C) 5
+- (D) 7",(D) 7
+3.7.10,"Multiple Choice: What does assigning a value to 'location' in the global object potentially affect?
+- (A) Browser's loading URL
+- (B) Browser's page title
+- (C) Browser's cookie storage
+- (D) Browser's navigation history",(A) Browser's loading URL
+3.8.1,"Multiple Choice: What is an array in programming?
+- (A) A single value stored at a specific location
+- (B) An unordered collection of properties
+- (C) An ordered collection of values called elements
+- (D) A function that operates on numbers",(C) An ordered collection of values called elements
+3.8.2,Fill in the Blank: An array is initialized by assigning an array variable with brackets containing ____________-separated values.,comma
+3.8.3,Short Answer: What does the method `push()` do in the context of arrays?,The `push()` method adds a value to the end of the array.
+3.8.4,"Multiple Answers: Which of the following statements about arrays are true? (Select all that apply.)
+- (A) Array elements must be of the same type.
+- (B) Array elements can be of different types.
+- (C) Arrays decrease in size as elements are removed.
+- (D) Arrays cannot change in size after initialization.","(B), (C)"
+3.8.5,"Multiple Choice: What is the difference between `indexOf()` and `lastIndexOf()` methods in arrays?
+- (A) `indexOf()` searches from the end of the array to the beginning
+- (B) `indexOf()` and `lastIndexOf()` do the same operation
+- (C) `indexOf()` searches from the beginning of the array to the end, while `lastIndexOf()` searches from the end to the beginning
+- (D) `lastIndexOf()` and `indexOf()` return different data types","(C) `indexOf()` searches from the beginning of the array to the end, while `lastIndexOf()` searches from the end to the beginning"
+3.8.6,Short Answer: How would you loop through all the elements of an array using a for-of loop in JavaScript? Provide a general code snippet.,for (let item of arrayName) { console.log(item); }
+3.8.7,Fill in the Blank: The `sort()` method by default sorts elements as strings using their ____________ values.,Unicode
+3.8.8,"Multiple Choice: In the given code snippet `let x = nums.pop();`, what does `x` contain after execution?
+- (A) The first element of array `nums`
+- (B) The last element removed from array `nums`
+- (C) The new length of array `nums`
+- (D) The sum of all elements of array `nums`",(B) The last element removed from array `nums`
+3.8.9,"Short Answer: When an array is passed to a function, what is actually being passed in terms of memory?",A reference to the memory where the array is stored is passed.
+3.8.10,"Multiple Choice: Which method can be used to remove the first array element and return it?
+- (A) `shift()`
+- (B) `unshift()`
+- (C) `splice()`
+- (D) `pop()`",(A) `shift()`
+3.9.1,"Multiple Choice: What is an object in JavaScript?
+- (A) An ordered collection of elements
+- (B) A name-value pair with a strict order
+- (C) An unordered collection of properties
+- (D) A fixed array of properties",(C) An unordered collection of properties
+3.9.2,Fill in the Blank: An object property is a ___________.,name-value pair
+3.9.3,"Multiple Choice: Which code snippet successfully changes the `published` year of the `book` object to 2014?
+- (A) `book.Published = 2014;`
+- (B) `book.published = 2014;`
+- (C) `book.published 2014;`
+- (D) `published.book = 2014;`",(B) `book.published = 2014;`
+3.9.4,"Multiple Choice: Which statement correctly adds an ""isbn"" property with the value ""1591846013"" to the `book` object?
+- (A) `book.isbn(""1591846013"");`
+- (B) `book.isbn = ""1591846013"";`
+- (C) `isbn.book = ""1591846013"";`
+- (D) `book[""isbn""] = ""1591846013"";`","(B) `book.isbn = ""1591846013"";`"
+3.9.5,"Short Answer: What will be the output of the following code?
+```javascript
+console.log(book.author.lastName);
+```
+Assuming the `book` object is defined with the `author` object.",Gladwell
+3.9.6,"Multiple Choice: In the provided method definition:
+```javascript
+getAuthorName() {
+    return this.author.firstName + "" "" + this.author.lastName;
+}
+```
+What will `console.log(book.getAuthorName())` display if `book.author.firstName` is ""Susan"" and `book.author.lastName` is ""Cain""?
+
+- (A) ""Susan""
+- (B) ""Cain""
+- (C) ""Susan Cain""
+- (D) ""undefined undefined""","(C) ""Susan Cain"""
+3.9.7,"Multiple Answer: Which of the following statements are true about passing objects to functions in JavaScript?
+- (A) A copy of the object is passed.
+- (B) Both parameters and arguments refer to the same object.
+- (C) Changing parameter properties also changes argument properties.
+- (D) Changing parameter references assigns a new object to the argument.","(B), (C)"
+3.9.8,"Fill in the Blank: When a JavaScript method is defined with an anonymous function assigned to an object's property, it is called a ___________.",method
+3.9.9,"Short Answer: Given the object `let book = { title: ""Quiet"", author: { firstName: ""Susan"", lastName: ""Cain"" } };`, write the method to add a middle initial ""H"" to the author's name.",`book.assignMiddleInitial = function(middleInitial) { this.author.middleInitial = middleInitial; };`
+3.9.10,"Multiple Choice: After executing the `changeThings` function, what is the value of `rectangle.width`?
+- (A) 3
+- (B) 5
+- (C) 20
+- (D) 33",(C) 20
+4.1.1,"Multiple Choice: What is represented by a Date object in JavaScript?
+- (A) Current date and time as a string
+- (B) The number of seconds since the Unix Epoch
+- (C) A single moment in time based on the number of milliseconds since the Unix Epoch
+- (D) A formatted date string in local time zone",(C) A single moment in time based on the number of milliseconds since the Unix Epoch
+4.1.2,"Fill in the Blank: The Unix Epoch is defined as the moment in time at January 1, 1970, at what time standard?
+- __________",UTC (Coordinated Universal Time)
+4.1.3,Short Answer: What is the default way to create a new Date object in JavaScript to represent the current date and time?,`let currDateTime = new Date();`
+4.1.4,"Multiple Choice: Which method in a Date object would you use to get the day of the month?
+- (A) getDay()
+- (B) getDate()
+- (C) getMonth()
+- (D) getYear()",(B) getDate()
+4.1.5,"Short Answer: If the following code is executed, what will be the date stored in `georgeBirthday`? `let georgeBirthday = new Date(1732, 1, 22);`","February 22, 1732"
+4.1.6,"Multiple Choice: When using the Date constructor `new Date(year, month, day)`, what is the range of values for the month parameter?
+- (A) 1-12
+- (B) 0-11
+- (C) 1-11
+- (D) 0-10",(B) 0-11
+4.1.7,"Multiple Answers: Which of the following are valid methods to set properties in a Date object?
+- [ ] setDay()
+- [ ] setFullYear()
+- [ ] setMonth()
+- [ ] setTimezone()",[ ] setFullYear() [ ] setMonth()
+4.1.8,"Fill in the Blank: In JavaScript's Date object, the method `getMilliseconds()` returns the milliseconds, which can range from 0 to _______.",999
+4.1.9,"Multiple Choice: How can you initialize a Date object to represent exactly one second past the Unix Epoch?
+- (A) `new Date(1)`
+- (B) `new Date(1000)`
+- (C) `new Date(0)`
+- (D) `new Date(-1000)`",(B) `new Date(1000)`
+4.1.10,"Multiple Choice: Which of the following is the correct command to log the current date and time to the console in JavaScript?
+- (A) `console.log(new Date());`
+- (B) `console.log(Date.now());`
+- (C) `console.log(Date.getTime());`
+- (D) `console.log(Date.current());`",(A) `console.log(new Date());`
+4.10.1,"Multiple Choice: Which JavaScript method is used to get the value of a CSS property of an element?
+- (A) getStyleProperty()
+- (B) getPropertyValue()
+- (C) fetchStyle()
+- (D) getCSSProperty()",(B) getPropertyValue()
+4.10.2,"Multiple Choice: How can JavaScript modify an element's background color to ""red"" using inline styles?
+- (A) element.setStyle(""background-color"", ""red"")
+- (B) element.style.setProperty(""background"", ""red"")
+- (C) element.style.backgroundColor = ""red""
+- (D) element.updateStyle(""backgroundColor"", ""red"")","(C) element.style.backgroundColor = ""red"""
+4.10.3,Fill in the blank: The method _____________ is used to set the value of an element's CSS property.,setProperty()
+4.10.4,"Multiple Answer: Which of the following methods allow accessing, modifying, and removing CSS properties?
+- [ ] getPropertyValue()
+- [ ] addClass()
+- [ ] setProperty()
+- [ ] removeProperty()","getPropertyValue(), setProperty(), removeProperty()"
+4.10.5,"Multiple Choice: When a property name in CSS has a dash, what happens when accessed via JavaScript?
+- (A) It remains unchanged.
+- (B) It is converted to snake case.
+- (C) It is converted to camel case.
+- (D) It is ignored.",(C) It is converted to camel case.
+4.10.6,"Short Answer: What is the JavaScript equivalent of the CSS property name ""background-color""?",backgroundColor
+4.10.7,"Multiple Choice: What does myDiv.style.removeProperty(""width"") do in JavaScript?
+- (A) It sets the width property to zero.
+- (B) It removes the width property from the element's inline CSS.
+- (C) It hides the element.
+- (D) It changes the width to 100px.",(B) It removes the width property from the element's inline CSS.
+4.10.8,"Short Answer: Write the JavaScript code that changes the font family of a span element to ""Arial"" using the setProperty method.","span.style.setProperty(""fontFamily"", ""Arial"");"
+4.10.9,"Multiple Choice: Which interface provides a set of APIs to manipulate CSS properties of a webpage?
+- (A) DOM
+- (B) HTMLLayout
+- (C) CSSOM
+- (D) JSStyle",(C) CSSOM
+4.10.10,"Fill in the blank: In the context of modifying a stylesheet, the method ____________ inserts a new rule into the stylesheet.",insertRule()
+4.11.1,"Multiple Choice: What is the role of data validation in web applications?
+- (A) To store data securely in databases
+- (B) To check input for correctness and ensure data integrity
+- (C) To enhance the visual design of web forms
+- (D) To automate form submissions",(B) To check input for correctness and ensure data integrity
+4.11.2,Fill in the Blank: Data validation can either be performed while the user enters form data by adding a JavaScript function as the __________ handler or immediately prior to submitting the entire form as the form's __________ handler.,change; submit
+4.11.3,"Multiple Choice: Which JavaScript method is used to prevent a form from being submitted if validation fails?
+- (A) stopPropagation()
+- (B) stopDefault()
+- (C) preventDefault()
+- (D) cancelEvent()",(C) preventDefault()
+4.11.4,"Short Answer: When using JavaScript for form validation, what is the purpose of the isNaN() function?",The isNaN() function is used to check if a value is not a number (NaN).
+4.11.5,"Multiple Answers: Which attributes can be used in HTML for automatic form validation without JavaScript? Select all that apply.
+- (A) required
+- (B) pattern
+- (C) maxlength
+- (D) novalidate","(A) required, (B) pattern, (C) maxlength"
+4.11.6,"Fill in the Blank: In an HTML form, the __________ attribute is used to specify that an input field cannot be empty and must have a value before form submission.",required
+4.11.7,"Multiple Choice: When should the JavaScript parseFloat() function be used in form validation?
+- (A) To convert string input to a boolean
+- (B) To check if input is an array
+- (C) To convert string input to a float for numerical validation
+- (D) To apply CSS styles conditionally",(C) To convert string input to a float for numerical validation
+4.11.8,Short Answer: Explain how CSS pseudo-classes like :valid and :invalid can be useful in form validation.,"CSS pseudo-classes like :valid and :invalid indicate whether an input field meets the validation requirements, allowing for visual feedback without JavaScript."
+4.11.9,"Fill in the Blank: A __________ must contain exactly 16 digits, as a common example of format validation for user-entered data in web forms.",credit card number
+4.11.10,"Multiple Choice: What happens if a browser does not support a particular HTML input element used for validation?
+- (A) The browser crashes
+- (B) The unsupported element is transformed into a text input
+- (C) JavaScript automatically takes over validation
+- (D) The form submission is blocked",(B) The unsupported element is transformed into a text input
+4.2.1,"Multiple Choice: What can regular expressions be defined with in JavaScript, as demonstrated in the text?
+- (A) RegExp object only
+- (B) Between two forward slashes only
+- (C) RegExp object or between two forward slashes
+- (D) As part of a string by enclosing in single quotes",(C) RegExp object or between two forward slashes
+4.2.2,"Fill in the Blank: The RegExp method ________ returns true if the string matches the regex, and false otherwise.",test
+4.2.3,"Multiple Choice: Which of the following strings does NOT match the regex /w+hy/?
+- (A) why
+- (B) hy
+- (C) wwwwhy
+- (D) whywhy",(D) whywhy
+4.2.4,"Short Answer: What does the regex pattern /c\/1/ test for in the string ""abc/123""?","False (the regex looks specifically for ""c/1"" sequence)"
+4.2.5,"Multiple Choice: Which special character in regular expressions matches any single character except the newline?
+- (A) \w
+- (B) \d
+- (C) .
+- (D) *",(C) .
+4.2.6,"Multiple Answers: Which of the following regex patterns match the string ""able""?
+- (A) /a.b/
+- (B) /a\Wb/
+- (C) /a\.b/
+- (D) /a\wb/","(A) /a.b/ [The character ""."" matches any character]"
+4.2.7,Fill in the Blank: A regular expression pattern that performs a case-insensitive match is modified by the ______ modifier.,i
+4.2.8,"Short Answer: In the context of regex, what do parentheses ""()"" do in a pattern?","Parentheses are used to ""remember"" different parts of a matched string."
+4.2.9,"Multiple Choice: How many times does the regex /moo/gi find matches in the string ""Moo the cow mooed at the moon""?
+- (A) 1
+- (B) 2
+- (C) 3
+- (D) 4",(C) 3
+4.2.10,"Fill in the Blank: The regex pattern that matches any string beginning with one or more digits followed by ""star,"" with possible spaces between the letters of ""star,"" is written as ______.",\d+\s*s\s*t\s*a\s*r
+4.3.1,"Multiple Choice: What is the primary purpose of the `<form>` element in HTML?
+- (A) To display images
+- (B) To define text styles
+- (C) To submit user information to a server
+- (D) To create hyperlinks",(C) To submit user information to a server
+4.3.2,"Multiple Choice: Which attribute in the `<form>` element specifies the URL where the form data should be sent?
+- (A) method
+- (B) action
+- (C) id
+- (D) name",(B) action
+4.3.3,Fill in the blank: The default HTTP request method used by the `<form>` element if no `method` attribute is specified is the _______ method.,GET
+4.3.4,"Multiple Choice: Which of the following is not a valid widget type for the `<input>` element?
+- (A) text
+- (B) file
+- (C) color
+- (D) image",(C) color
+4.3.5,"Multiple Choice: What is the significance of the `enctype` attribute with the value ""multipart/form-data"" in a form?
+- (A) It encrypts the form data
+- (B) It splits form data into multiple parts for each input field
+- (C) It compresses the form data
+- (D) It makes the form submission faster",(B) It splits form data into multiple parts for each input field
+4.3.6,Fill in the blank: The ______________ attribute inside a `<label>` tag is used to associate the label with a specific input widget.,for
+4.3.7,"Short Answer: What transformation does the browser perform if a user enters a string with reserved characters like `&`, `?`, and `=` into a form?","The browser escapes the reserved characters by transforming them into a different representation, usually by URL encoding them."
+4.3.8,"Multiple Answers: Which of the following are considered primary attributes of the `<input>` element? (Select all that apply)
+- (A) method
+- (B) type
+- (C) name
+- (D) value","(B) type, (C) name, (D) value"
+4.3.9,"Multiple Choice: In which part of the HTTP request is form data sent when using the POST method?
+- (A) In the URL query string
+- (B) In the path of the URL
+- (C) In the body of the request
+- (D) As HTTP headers",(C) In the body of the request
+4.3.10,Short Answer: Describe the potential security concern when using the GET method to submit form data.,"The data is visible in the URL, which can be seen by anyone and stored in server logs. Therefore, private information should not be sent using the GET method."
+4.4.1,"Multiple Choice: What type of input allows users to select multiple options in a form?
+- (A) Radio button
+- (B) Checkbox
+- (C) Password
+- (D) Drop-down menu",(B) Checkbox
+4.4.2,Fill in the blank: The _______ attribute in a checkbox input element makes it selected by default.,checked
+4.4.3,"Short Answer: What is sent to the server when a checkbox is checked and submitted, but the value attribute is not specified?","The value ""on"" is sent."
+4.4.4,"Multiple Choice: Which attribute allows users to select more than one option in a list box?
+- (A) size
+- (B) multiple
+- (C) value
+- (D) type",(B) multiple
+4.4.5,"Multiple Answers: Choose all that apply. Which elements or attributes are used to group related form inputs?
+- (A) <fieldset>
+- (B) name
+- (C) id
+- (D) <legend>","(A) <fieldset>, (D) <legend>"
+4.4.6,"Multiple Choice: In a password input field, which attribute limits the number of characters the user can type?
+- (A) size
+- (B) width
+- (C) maxlength
+- (D) minlength",(C) maxlength
+4.4.7,"Fill in the blank: To ensure secure transmission of form data containing passwords, the form should use _______ URLs.",HTTPS
+4.4.8,"Short Answer: How is a boolean attribute, such as the disabled attribute, treated when it is present in an HTML element?",A boolean attribute is true when present and false when absent.
+4.4.9,"Multiple Choice: Why is good practice to use label elements with checkboxes?
+- (A) To make the checkbox larger
+- (B) To enable selecting the checkbox by clicking the label
+- (C) To add placeholders for the checkbox
+- (D) To style the checkbox with CSS",(B) To enable selecting the checkbox by clicking the label
+4.4.10,"Fill in the blank: A _______ button is used to submit form data, whereas a button of type ""button"" is typically used with JavaScript for other actions.",submit
+4.5.1,"Multiple Choice: What styling property is used to ensure all labels have the same width and margin in forms?
+- (A) width: 100%;
+- (B) display: inline-block;
+- (C) text-align: center;
+- (D) display: flex;",(B) display: inline-block;
+4.5.2,"Fill in the blank: To improve the appearance of a button and provide a visual cue that it is pressable, change the default mouse cursor to a __________ icon.",pointer
+4.5.3,"Multiple Choice: Which CSS property and value set is used to make the border of input fields look softer?
+- (A) border: 2px solid #000;
+- (B) border: 1px dashed #aaa;
+- (C) border: 1px solid #aaa; border-radius: 4px;
+- (D) border: 3px double #ccc;",(C) border: 1px solid #aaa; border-radius: 4px;
+4.5.4,Short Answer: What CSS rule would you add to make the labels of input elements right-aligned in a form?,text-align: right;
+4.5.5,"Multiple Choice: When styling forms, what CSS selector is used to consistently style text inputs, email inputs, and drop-down menus?
+- (A) input[type=text], input[type=email], select
+- (B) input, textarea, button
+- (C) input[type=button], select, textarea
+- (D) fieldset, legend, label","(A) input[type=text], input[type=email], select"
+4.5.6,"Multiple Answers: What visual cues help a user know that a blue rectangle with ""Register"" is a button?
+- The button has rounded corners.
+- The pointer icon appears when hovering over the button.
+- The button has a thick border.
+- The button color changes when hovering.",The button has rounded corners.; The pointer icon appears when hovering over the button.; The button color changes when hovering.
+4.5.7,"Multiple Choice: What CSS property should be set to improve the usability of labels as clickable elements in forms?
+- (A) cursor: crosshair;
+- (B) cursor: pointer;
+- (C) cursor: default;
+- (D) cursor: wait;",(B) cursor: pointer;
+4.5.8,"Fill in the blank: To create custom radio buttons, the content before the label is displayed as a single empty space within a __________ border.",circular
+4.5.9,"Multiple Choice: Which property/value setting hides traditional browser radio buttons?
+- (A) visibility: hidden;
+- (B) appearance: none;
+- (C) display: none;
+- (D) opacity: 0;",(B) appearance: none;
+4.5.10,Short Answer: How do you style an input field to have a red border indicating an error when the input is invalid?,Use the selector input:invalid { border: 2px solid red; }.
+4.6.1,"Multiple Choice: Which HTML element is used to include JavaScript code within an HTML document?
+- (A) <style>
+- (B) <script>
+- (C) <link>
+- (D) <div>",(B) <script>
+4.6.2,Fill in the blank: The Document Object Model (DOM) is created from a document's ______.,HTML
+4.6.3,Short Answer: What method is used in JavaScript to output HTML into the document and alter the DOM?,document.writeln()
+4.6.4,"Multiple Choice: Which window object property is useful for determining if the webpage is loaded with HTTPS or HTTP?
+- (A) window.location
+- (B) window.navigator
+- (C) window.innerHeight
+- (D) window.innerWidth",(A) window.location
+4.6.5,"Multiple Answers: Which window object methods can display a dialog box to the user? (Select all that apply)
+- (A) window.alert()
+- (B) window.confirm()
+- (C) window.open()
+- (D) console.log()","(A) window.alert(), (B) window.confirm()"
+4.6.6,"Multiple Choice: In the console object, which method is used to display errors?
+- (A) console.log()
+- (B) console.warn()
+- (C) console.error()
+- (D) console.dir()",(C) console.error()
+4.6.7,Fill in the Blank: Minified JavaScript is typically stored in a file with a ______ file extension.,""".min.js"""
+4.6.8,"Short Answer: What JavaScript attribute allows the browser to load the webpage concurrently with loading the JavaScript, but not process the JavaScript until the webpage is completely loaded?",defer
+4.6.9,"Multiple Choice: Which attribute, when used with the <script> tag, causes the browser to continue reading HTML without waiting for the JavaScript file to load?
+- (A) defer
+- (B) type
+- (C) async
+- (D) src",(C) async
+4.6.10,Short Answer: Describe the process of minification in JavaScript.,"Minification is the process of removing unnecessary characters (like whitespace and comments) from JavaScript code so the code executes the same but with fewer characters, often renaming identifiers into shorter ones to reduce space."
+4.7.1,"Multiple Choice: What is the root node of a DOM tree created from the HTML document?
+- (A) <title>
+- (B) <body>
+- (C) <html>
+- (D) <head>",(C) <html>
+4.7.2,"Multiple Answers: Which of the following nodes can be a child node in a DOM tree?
+- (A) Element node
+- (B) Attribute node
+- (C) Text node
+- (D) Root node","(A) Element node, (C) Text node"
+4.7.3,"Fill in the Blank: In the DOM, an __________ node represents the textual content within an element.",Text
+4.7.4,"Short Answer: How many child nodes can an 'ol' element have if it contains the list items <li>Gold</li>, <li>Silver</li>, and <li>Bronze</li>?",3
+4.7.5,"Multiple Choice: Which DOM method returns a single node rather than an array?
+- (A) document.getElementsByTagName
+- (B) document.querySelectorAll
+- (C) document.getElementById
+- (D) document.getElementsByClassName",(C) document.getElementById
+4.7.6,"Multiple Choices: Which of the following HTMLCollection methods would you use to access the first element in a search? 
+- (A) length()
+- (B) querySelector()
+- (C) [0]
+- (D) item()",(C) [0]
+4.7.7,Fill in the Blank: The __________ property gets or sets a DOM node’s text content without HTML tags.,textContent
+4.7.8,"Multiple Choice: What DOM method would you use to remove an element’s attribute?
+- (A) removeAttribute
+- (B) setAttribute
+- (C) getAttribute
+- (D) modifyAttribute",(A) removeAttribute
+4.7.9,"Short Answer: Which attribute of the script tag makes sure that the script in ""dom.js"" executes only after the parsing of the webpage?",defer
+4.7.10,"Multiple Choice: By modifying the 'innerHTML' property, you can:
+- (A) Only retrieve textual content
+- (B) Set or get both the content and the structure of a node
+- (C) Retrieve attribute values
+- (D) Delete a node",(B) Set or get both the content and the structure of a node
+4.8.1,"Multiple Choice: Which DOM property refers to the node's parent?
+- (A) children
+- (B) childNodes
+- (C) parentNode
+- (D) nextElementSibling",(C) parentNode
+4.8.2,"Multiple Answer: Which of the following are properties used to access a node's sibling nodes in the DOM? (Select all that apply.)
+- (A) previousElementSibling
+- (B) nextElementSibling
+- (C) parentNode
+- (D) children","(A) previousElementSibling, (B) nextElementSibling"
+4.8.3,"Fill in the Blank: The method ________ is used to create a new text node containing specified text in the DOM.
+- createTextNode()",createTextNode()
+4.8.4,"Multiple Choice: What does the children property of a DOM node contain?
+- (A) All the node's children, including whitespace text nodes
+- (B) Only the element nodes that are the node's children
+- (C) Text nodes only
+- (D) Sibling nodes",(B) Only the element nodes that are the node's children
+4.8.5,"Short Answer: How do you create a new DOM element node using JavaScript?
+Answer: Use the createElement() method with the name of the desired element as the argument.",Use the createElement() method with the name of the desired element as the argument.
+4.8.6,"Multiple Choice: Which method is used to remove a node from the DOM?
+- (A) appendChild()
+- (B) cloneNode()
+- (C) removeChild()
+- (D) insertBefore()",(C) removeChild()
+4.8.7,"Fill in the Blank: To append a new child node to an existing node in the DOM, you use the ________ method.
+- appendChild()",appendChild()
+4.8.8,"Multiple Answer: Which methods can modify the DOM structure by changing node locations? (Select all that apply.)
+- (A) appendChild()
+- (B) insertBefore()
+- (C) removeChild()
+- (D) querySelector()","(A) appendChild(), (B) insertBefore(), (C) removeChild()"
+4.8.9,"Multiple Choice: Which method should be used to insert a DOM node before an existing child node?
+- (A) appendChild()
+- (B) insertBefore()
+- (C) cloneNode()
+- (D) createElement()",(B) insertBefore()
+4.8.10,"Short Answer: What argument does the cloneNode() method take to determine if it should also clone the node's children?
+Answer: A boolean argument (true or false).",A boolean argument (true or false).
+4.9.1,"Multiple Choice: What term describes a programming style where code runs only in response to specific events?
+- (A) Synchronous programming
+- (B) Event-driven programming
+- (C) Procedural programming
+- (D) Object-oriented programming",(B) Event-driven programming
+4.9.2,"Multiple Choice: Which of the following events is NOT typically involved in the event capturing or bubbling phases?
+- (A) Blur
+- (B) Focus
+- (C) Click
+- (D) Load",(D) Load
+4.9.3,"Fill in the Blank: In JavaScript, the method used to stop the default behavior of an event is called __________.",preventDefault()
+4.9.4,"Short Answer: What does the term ""event handler"" refer to in web development?","An event handler is a piece of code that runs in response to a specific event occurring on a webpage, such as a user action or a network response."
+4.9.5,"Multiple Choice: Which of these HTML tags is commonly used to embed an event handler in the document directly?
+- (A) <p onclick=""myFunction()"">
+- (B) <p>
+- (C) <div>
+- (D) <button>","(A) <p onclick=""myFunction()"">"
+4.9.6,"Multiple Answers: Which of the following are events for which web developers might write event handlers? (Select all that apply)
+- (A) Click
+- (B) Keydown
+- (C) Input
+- (D) Resize","(A) Click, (B) Keydown, (C) Input"
+4.9.7,Fill in the Blank: The __________ event is triggered when the user's input value is modified in an input or textarea element.,Input
+4.9.8,"Multiple Choice: When registering an event handler using addEventListener, what does the optional third parameter control?
+- (A) Whether the event handler is asynchronous
+- (B) Whether the event is handled during the capturing or bubbling phase
+- (C) The type of event to listen for
+- (D) The priority of event handling",(B) Whether the event is handled during the capturing or bubbling phase
+4.9.9,Short Answer: How does the addEventListener() method differ from setting the DOM node event handler property directly?,"The addEventListener() method allows for multiple handlers for a single event on an element and keeps content and functionality separate, unlike setting the DOM node event handler property directly, which only allows one handler."
+4.9.10,"Fill in the Blank: In HTML, the attribute used to register a handler that adds ""on"" to the event name, such as ""onmousemove"", is known as a(n) __________.",Event attribute
