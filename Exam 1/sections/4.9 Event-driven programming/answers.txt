@@ -1,0 +1,19 @@
+[4.9.1] (A) A user action or occurrence detected by the browser
+
+[4.9.2] (B) A programming style where code runs in response to events
+
+[4.9.3] (A) click, (B) keydown, (C) submit
+
+[4.9.4] (B) It registers an event handler to respond to a specific event.
+
+[4.9.5] (A) The input box is highlighted in green when focused.
+
+[4.9.6] (A) It triggers when an element loses focus.
+
+[4.9.7] (A) Embedding the event handler in the HTML as an attribute, (B) Using `addEventListener()`, (C) Overwriting the event property on a DOM node
+
+[4.9.8] (A) It prevents the browser's default action for the event.
+
+[4.9.9] (B) Capturing phase
+
+[4.9.10] (A) It prevents further propagation of the current event in the capturing or bubbling phase.

@@ -1400,3 +1400,669 @@ console.log(game.winner);
 (B) Garbine Muguruza
 (C) undefined
 (D) Error",(A) Serena Williams
+4.1.1,"Multiple Choice: What is the purpose of the JavaScript `Date` object?
+
+- (A) To represent a date as a string
+- (B) To represent a specific moment in time, measured in milliseconds since January 1, 1970 (Unix Epoch)
+- (C) To convert a date to a number
+- (D) To store multiple dates in an array","(B) To represent a specific moment in time, measured in milliseconds since January 1, 1970 (Unix Epoch)"
+4.1.2,"Multiple Choice: What is the output of the following code?
+
+let currDateTime = new Date();
+console.log(currDateTime);
+
+- (A) The current time in UTC
+- (B) The current time in the local time zone
+- (C) Jan 1, 1970, 00:00:00 UTC
+- (D) An error",(B) The current time in the local time zone
+4.1.3,"Multiple Choice: What is the result of the following code?
+
+let oneSecPastEpoch = new Date(1000);
+console.log(oneSecPastEpoch);
+
+- (A) Jan 1, 1970, 00:00:01 UTC
+- (B) Dec 31, 1969, 18:00:01 UTC
+- (C) Jan 1, 1970, 00:00:01 GMT-0500
+- (D) Undefined","(B) Dec 31, 1969, 18:00:01 UTC"
+4.1.4,"Multi-Select: Which of the following are valid `Date` object constructors in JavaScript? (Select all that apply)
+
+- (A) `new Date()`
+- (B) `new Date(""2024-01-01"")`
+- (C) `new Date(2024, 0, 1)`
+- (D) `new Date(1000)`","(A) `new Date()`, (B) `new Date(""2024-01-01"")`, (C) `new Date(2024, 0, 1)`, (D) `new Date(1000)`"
+4.1.5,"Multiple Choice: What is the output of the following code?
+
+let georgeBirthday = new Date(1732, 1, 22);
+console.log(georgeBirthday);
+
+- (A) Jan 22, 1732
+- (B) Feb 22, 1732
+- (C) Mar 22, 1732
+- (D) Undefined","(B) Feb 22, 1732"
+4.1.6,"Multiple Choice: Which of the following methods gets the full year from a `Date` object?
+
+- (A) `getYear()`
+- (B) `getFullYear()`
+- (C) `getDate()`
+- (D) `getMonth()`",(B) `getFullYear()`
+4.1.7,"Multiple Choice: What is the output of this code?
+
+let theFuture = new Date(2035, 9, 21, 7, 28, 0);
+console.log(theFuture);
+
+- (A) Sun Oct 21 2035 07:28:00 GMT-0500
+- (B) Sun Nov 21 2035 07:28:00 GMT-0500
+- (C) Sun Oct 21 2035 00:00:00 UTC
+- (D) Undefined",(A) Sun Oct 21 2035 07:28:00 GMT-0500
+4.1.8,"Multiple Choice: What happens if you pass only the year to the `Date` constructor?
+
+- (A) It creates a date on January 1st of that year.
+- (B) It creates a date on December 31st of that year.
+- (C) It throws an error.
+- (D) It defaults to the current date.",(A) It creates a date on January 1st of that year.
+4.1.9,"Multiple Choice: What does the `setFullYear()` method do in JavaScript?
+
+- (A) Sets the year for the `Date` object to a 2-digit year.
+- (B) Sets the year for the `Date` object to a 4-digit year.
+- (C) Sets the year, month, and date for the `Date` object.
+- (D) It doesn't exist in JavaScript.",(B) Sets the year for the `Date` object to a 4-digit year.
+4.1.10,"Multiple Choice: Which of the following methods can be used to get the day of the week from a `Date` object?
+
+- (A) `getWeekDay()`
+- (B) `getDay()`
+- (C) `getDate()`
+- (D) `getFullDay()`",(B) `getDay()`
+4.10.1,"Multiple Choice: Which JavaScript method is used to get the value of an element's CSS property?
+
+- (A) `getPropertyValue()`
+- (B) `setProperty()`
+- (C) `removeProperty()`
+- (D) `querySelector()`",(A) `getPropertyValue()`
+4.10.2,"Multiple Choice: What happens when you use the `setProperty()` method in JavaScript?
+
+- (A) It changes the value of an element's CSS property.
+- (B) It removes an element's CSS property.
+- (C) It adds a new CSS property to the element.
+- (D) It replaces the element with a new one.",(A) It changes the value of an element's CSS property.
+4.10.3,"Multi-Select: Which of the following methods can modify the inline style of a DOM element? (Select all that apply)
+
+- (A) `setProperty()`
+- (B) `getPropertyValue()`
+- (C) `removeProperty()`
+- (D) `addEventListener()`","(A) `setProperty()`, (C) `removeProperty()`"
+4.10.4,"Multiple Choice: What is the output of the following code?
+
+let myDiv = document.getElementById(""mydiv"");
+myDiv.style.setProperty(""width"", ""200px"");
+myDiv.style.setProperty(""background-color"", ""red"");
+
+- (A) The div's width changes to 200px and the background color changes to red.
+- (B) The div's width changes to 100px and the background color stays green.
+- (C) The div is hidden.
+- (D) The code throws an error.",(A) The div's width changes to 200px and the background color changes to red.
+4.10.5,"Multiple Choice: What does the `removeProperty()` method do in JavaScript?
+
+- (A) It removes a CSS property from an element's inline style.
+- (B) It removes the entire element from the DOM.
+- (C) It deletes the parent element of the node.
+- (D) It replaces the existing CSS property with a new one.",(A) It removes a CSS property from an element's inline style.
+4.10.6,"Multiple Choice: What is the effect of the following code?
+
+let myDiv = document.getElementById(""mydiv"");
+myDiv.style.removeProperty(""width"");
+
+- (A) The div's width is removed, making it span the entire width of the page.
+- (B) The div is deleted from the DOM.
+- (C) The div's background color changes.
+- (D) The div's height is set to 0.","(A) The div's width is removed, making it span the entire width of the page."
+4.10.7,"Multi-Select: Which of the following are valid ways to modify an element's style in JavaScript? (Select all that apply)
+
+- (A) `element.style.width = ""100px""`
+- (B) `element.style.setProperty(""color"", ""blue"")`
+- (C) `element.style.removeProperty(""height"")`
+- (D) `element.style.getElementById(""width"")`","(A) `element.style.width = ""100px""`, (B) `element.style.setProperty(""color"", ""blue"")`, (C) `element.style.removeProperty(""height"")`"
+4.10.8,"Multiple Choice: Which CSS property is modified in the following code?
+
+document.getElementById(""box"").style.backgroundColor = ""blue"";
+
+- (A) `background-color`
+- (B) `color`
+- (C) `border-color`
+- (D) `width`",(A) `background-color`
+4.10.9,"Multiple Choice: What happens when `getPropertyValue(""width"")` is called on an element?
+
+- (A) It returns the current value of the element's width property.
+- (B) It sets the element's width to 100px.
+- (C) It removes the width property from the element.
+- (D) It adds a new width property to the element.",(A) It returns the current value of the element's width property.
+4.10.10,"Multiple Choice: What is the purpose of the CSS Object Model (CSSOM)?
+
+- (A) To provide APIs for accessing and manipulating CSS styles via JavaScript.
+- (B) To store JavaScript functions.
+- (C) To create HTML elements.
+- (D) To validate CSS properties.",(A) To provide APIs for accessing and manipulating CSS styles via JavaScript.
+4.11.1,"Multiple Choice: What is the purpose of form data validation in web development?
+
+- (A) To check that the user input is in the correct format before submitting it to the server.
+- (B) To automatically correct invalid user input.
+- (C) To prevent the form from being submitted if the server is down.
+- (D) To allow users to bypass filling out the form.",(A) To check that the user input is in the correct format before submitting it to the server.
+4.11.2,"Multiple Choice: What does the `preventDefault()` method do in a form's submit handler?
+
+- (A) It prevents the form from being submitted to the server.
+- (B) It clears all the input fields in the form.
+- (C) It changes the form's action URL.
+- (D) It submits the form automatically without user input.",(A) It prevents the form from being submitted to the server.
+4.11.3,"Multi-Select: Which of the following are common methods for performing form validation using JavaScript? (Select all that apply)
+
+- (A) Validating data while the user is typing
+- (B) Validating data immediately after the form is submitted
+- (C) Using regular expressions to validate patterns like ZIP codes
+- (D) Using server-side validation only","(A) Validating data while the user is typing, (B) Validating data immediately after the form is submitted, (C) Using regular expressions to validate patterns like ZIP codes"
+4.11.4,"Multiple Choice: What is the purpose of the `required` attribute in HTML form input elements?
+
+- (A) To ensure that the field has a value before the form can be submitted.
+- (B) To prevent the user from modifying the input field.
+- (C) To provide a default value for the input field.
+- (D) To limit the length of the input field.",(A) To ensure that the field has a value before the form can be submitted.
+4.11.5,"Multiple Choice: What happens if a form input field is marked as `required` but left empty when submitting the form?
+
+- (A) The form will not submit, and the field will be highlighted as invalid.
+- (B) The form will submit with an empty value.
+- (C) The form will automatically fill in the required field.
+- (D) The form will be submitted, but a warning will be shown.","(A) The form will not submit, and the field will be highlighted as invalid."
+4.11.6,"Multiple Choice: What is the output of the following validation code?
+
+```html
+<input type=""text"" id=""zipCode"" pattern=""\d{5}"" required>
+(A) It checks that the input is a 5-digit number and is required.
+(B) It checks that the input is exactly 5 letters.
+(C) It checks that the input can be a number or letters.
+(D) It does not perform any validation.",(A) It checks that the input is a 5-digit number and is required.
+4.11.7,"Multi-Select: Which of the following are ways to ensure a user enters valid input in a form field? (Select all that apply)
+
+(A) Using the pattern attribute with a regular expression
+(B) Using JavaScript to validate input during the input event
+(C) Using the min and max attributes for numerical input
+(D) Using CSS to highlight invalid fields","(A) Using the `pattern` attribute with a regular expression, (B) Using JavaScript to validate input during the `input` event, (C) Using the `min` and `max` attributes for numerical input"
+4.11.8,"Multiple Choice: What happens when isNaN() is used in form validation?
+
+(A) It checks if the value entered is not a number.
+(B) It checks if the value entered is a string.
+(C) It replaces the current value with a number.
+(D) It submits the form only if the value is a number.",(A) It checks if the value entered is not a number.
+4.11.9,"Multiple Choice: What is the role of regular expressions in validating form input?
+
+(A) To match the input against specific patterns such as phone numbers or ZIP codes.
+(B) To automatically correct input errors.
+(C) To prevent the form from being submitted.
+(D) To highlight invalid fields in the form.",(A) To match the input against specific patterns such as phone numbers or ZIP codes.
+4.11.10,"Multiple Choice: How does the maxlength attribute help with form validation?
+
+(A) It limits the number of characters a user can enter into a field.
+(B) It prevents users from submitting the form.
+(C) It automatically corrects the length of input.
+(D) It replaces the entered text with a default value.)",(A) It limits the number of characters a user can enter into a field.
+4.2.1,"Multiple Choice: What does the `test()` method do in JavaScript regular expressions?
+
+- (A) It searches for a match in a string and returns the matched substring.
+- (B) It tests if a string matches a pattern and returns true or false.
+- (C) It replaces a substring that matches a pattern.
+- (D) It splits a string into an array of substrings.",(B) It tests if a string matches a pattern and returns true or false.
+4.2.2,"Multiple Choice: What is the output of the following code?
+
+let re = /ab/;
+let words = [""ban"", ""babble"", ""make"", ""flab""];
+words.forEach(function(word) {
+  if (re.test(word)) {
+    console.log(word + "" matches!"");
+  }
+});
+
+- (A) ban matches!, babble matches!
+- (B) babble matches!, flab matches!
+- (C) make matches!
+- (D) No output","(B) babble matches!, flab matches!"
+4.2.3,"Multi-Select: Which of the following characters are considered special characters in regular expressions? (Select all that apply)
+
+- (A) `*`
+- (B) `+`
+- (C) `/`
+- (D) `$`","(A) `*`, (B) `+`, (D) `$`"
+4.2.4,"Multiple Choice: What does the following regular expression match?
+
+/[aeiou]/g
+
+- (A) Matches a single vowel in a string.
+- (B) Matches all vowels in a string.
+- (C) Matches all consonants in a string.
+- (D) Matches numbers in a string.",(B) Matches all vowels in a string.
+4.2.5,"Multiple Choice: What does the `replace()` method do when using regular expressions in JavaScript?
+
+- (A) Finds a string and deletes it.
+- (B) Replaces one or more matches of a pattern with a specified replacement.
+- (C) Tests if a string matches a pattern.
+- (D) Returns an array of matched substrings.",(B) Replaces one or more matches of a pattern with a specified replacement.
+4.2.6,"Multiple Choice: What does the regex `/ab*c/` match?
+
+- (A) ""ac""
+- (B) ""abc""
+- (C) ""abbbbbbc""
+- (D) All of the above",(D) All of the above
+4.2.7,"Multi-Select: Which of the following are valid uses of square brackets `[]` in regular expressions? (Select all that apply)
+
+- (A) To specify a range of characters to match.
+- (B) To negate a set of characters.
+- (C) To group parts of a regular expression together.
+- (D) To match exactly one of the characters in the set.","(A) To specify a range of characters to match., (B) To negate a set of characters., (D) To match exactly one of the characters in the set."
+4.2.8,"Multiple Choice: What will the regex `/^ab/` match?
+
+- (A) Any string containing ""ab"".
+- (B) A string starting with ""ab"".
+- (C) A string ending with ""ab"".
+- (D) A string where ""ab"" appears anywhere.","(B) A string starting with ""ab""."
+4.2.9,"Multiple Choice: What does the `exec()` method return when there is no match in JavaScript?
+
+- (A) undefined
+- (B) false
+- (C) null
+- (D) an empty string",(C) null
+4.2.10,"Multiple Choice: Which of the following regex patterns would match ""cat"", ""bat"", and ""mat""?
+
+- (A) /c|b|m/
+- (B) /cat|bat|mat/
+- (C) /c(b|m)at/
+- (D) /(c|b|m)at/",(D) /(c|b|m)at/
+4.3.1,"(A) It specifies the URL where the form data should be sent.
+
+[4.3.2] (B) GET
+
+[4.3.3] (A) The form data is added to the URL as query parameters.
+
+[4.3.4] (A) `<input>`, (B) `<form>`, (C) `<label>`
+
+[4.3.5] (A) It specifies how the form data should be encoded when submitted.
+
+[4.3.6] (A) The form data is sent to the server with ""first=Rick&last=Deckard"" in the request body.
+
+[4.3.7] (A) It adds descriptive text to a form field.
+
+[4.3.8] (A) GET sends data as part of the URL, while POST sends data in the request body.
+
+[4.3.9] (A) text, (B) password, (C) file
+
+[4.3.10] (A) It provides a hint to the user as to what value should be entered.",Multiple Choice: What is the purpose of the `action` attribute in a `<form>` element?
+4.4.1,"Multiple Choice: What does the `checked` attribute do in a checkbox input?
+
+- (A) It specifies the value of the checkbox.
+- (B) It sets the checkbox to be selected by default.
+- (C) It prevents the checkbox from being unselected.
+- (D) It submits the checkbox value as ""on"" to the server.",(B) It sets the checkbox to be selected by default.
+4.4.2,"Multiple Choice: What happens when a checkbox is not selected in a form submission?
+
+- (A) The browser sends a null value.
+- (B) The browser does not send the checkbox value at all.
+- (C) The browser sends a value of ""false"".
+- (D) The browser sends the default value ""off"".",(B) The browser does not send the checkbox value at all.
+4.4.3,"Multi-Select: Which of the following are valid attributes for a checkbox input in HTML? (Select all that apply)
+
+- (A) `checked`
+- (B) `value`
+- (C) `name`
+- (D) `method`","(A) `checked`, (B) `value`, (C) `name`"
+4.4.4,"Multiple Choice: What does the `for` attribute in a `<label>` tag do?
+
+- (A) Associates the label with a specific form element using the element's `id`.
+- (B) Makes the label clickable.
+- (C) Specifies the form's action URL.
+- (D) Makes the label submit the form when clicked.",(A) Associates the label with a specific form element using the element's `id`.
+4.4.5,"Multiple Choice: What is the difference between checkboxes and radio buttons?
+
+- (A) Only checkboxes can be used in forms.
+- (B) Checkboxes allow multiple selections, while radio buttons only allow one selection per group.
+- (C) Radio buttons are limited to numerical input.
+- (D) Radio buttons can be selected or deselected, while checkboxes cannot.","(B) Checkboxes allow multiple selections, while radio buttons only allow one selection per group."
+4.4.6,"Multiple Choice: What is sent to the server when a radio button is selected?
+
+- (A) The name and value of the selected radio button.
+- (B) Only the name of the selected radio button.
+- (C) The name of the form element.
+- (D) A boolean value.",(A) The name and value of the selected radio button.
+4.4.7,"Multiple Choice: What happens if no radio button in a group is selected when the form is submitted?
+
+- (A) The browser sends a null value.
+- (B) The browser sends an empty string.
+- (C) The browser does not send the name or value of the radio button group.
+- (D) The browser sends the first radio button's value by default.",(C) The browser does not send the name or value of the radio button group.
+4.4.8,"Multi-Select: Which of the following input types allow the user to select multiple options in a form? (Select all that apply)
+
+- (A) `checkbox`
+- (B) `radio`
+- (C) `select` with the `multiple` attribute
+- (D) `textarea`","(A) `checkbox`, (C) `select` with the `multiple` attribute"
+4.4.9,"Multiple Choice: What does the `value` attribute in a checkbox represent?
+
+- (A) The text shown next to the checkbox.
+- (B) The value sent to the server if the checkbox is selected.
+- (C) The default state of the checkbox.
+- (D) The color of the checkbox.",(B) The value sent to the server if the checkbox is selected.
+4.4.10,"Multiple Choice: What is the default value sent to the server if a checkbox is selected and no `value` attribute is specified?
+
+- (A) ""true""
+- (B) ""on""
+- (C) ""checked""
+- (D) An empty string","(B) ""on"""
+4.5.1,"Multiple Choice: What must be set to make the `label` element's width adjustable?
+
+- (A) display: inline
+- (B) display: block
+- (C) display: inline-block
+- (D) width: auto",(C) display: inline-block
+4.5.2,"Multiple Choice: What CSS property is used to control the spacing between labels and form inputs?
+
+- (A) padding
+- (B) margin
+- (C) border
+- (D) line-height",(B) margin
+4.5.3,"Multiple Choice: What is the effect of adding `box-sizing: border-box` to input fields?
+
+- (A) It includes padding and borders in the element's width and height.
+- (B) It excludes padding and borders from the element's width and height.
+- (C) It adds extra spacing around the element.
+- (D) It removes any styling from the input fields.",(A) It includes padding and borders in the element's width and height.
+4.5.4,"Multi-Select: Which of the following attributes can be used to style form inputs for better usability? (Select all that apply)
+
+- (A) padding
+- (B) border-radius
+- (C) color
+- (D) box-shadow","(A) padding, (B) border-radius, (C) color, (D) box-shadow"
+4.5.5,"Multiple Choice: What happens when you set `cursor: pointer` on a submit button?
+
+- (A) The button becomes clickable, but the pointer does not change.
+- (B) The cursor changes to a hand icon when hovering over the button.
+- (C) The button cannot be clicked.
+- (D) The button changes color on hover.",(B) The cursor changes to a hand icon when hovering over the button.
+4.5.6,"Multiple Choice: What is the result of the following HTML code?
+
+<input type=""submit"" value=""Register"" style=""background-color: #09f; color: white; padding: 10px; border-radius: 4px;"">
+
+- (A) A blue, rounded submit button with white text
+- (B) A gray submit button with rounded corners
+- (C) A blue submit button with black text
+- (D) A gray button with no text","(A) A blue, rounded submit button with white text"
+4.5.7,"Multiple Choice: What is the effect of adding `background-color: lightblue;` to an input's `:focus` state?
+
+- (A) The input field turns blue when clicked.
+- (B) The input field turns light blue when it gains focus.
+- (C) The input field loses focus after being clicked.
+- (D) The input text changes to light blue.",(B) The input field turns light blue when it gains focus.
+4.5.8,"Multiple Choice: What does the `border-radius` property do when applied to form elements?
+
+- (A) It removes the borders from the element.
+- (B) It makes the element's corners rounded.
+- (C) It increases the size of the borders.
+- (D) It changes the color of the borders.",(B) It makes the element's corners rounded.
+4.5.9,"Multiple Choice: What is the purpose of setting `:hover` on a submit button?
+
+- (A) It ensures the button changes color when hovered over.
+- (B) It disables the button when hovered.
+- (C) It changes the text color of the button.
+- (D) It resizes the button when clicked.",(A) It ensures the button changes color when hovered over.
+4.5.10,"Multi-Select: Which of the following CSS properties can be applied to improve the usability of input fields in a form? (Select all that apply)
+
+- (A) padding
+- (B) border
+- (C) width
+- (D) height","(A) padding, (B) border, (C) width, (D) height"
+4.6.1,"Multiple Choice: What is the Document Object Model (DOM) in relation to JavaScript?
+
+- (A) A model representing the visual design of a webpage
+- (B) A data structure representing the content, structure, and style of a document
+- (C) A method for storing variables in JavaScript
+- (D) A technique for minimizing JavaScript files","(B) A data structure representing the content, structure, and style of a document"
+4.6.2,"Multiple Choice: Which of the following methods is used to select an HTML element by its `id`?
+
+- (A) document.querySelector()
+- (B) document.getElementById()
+- (C) document.getElementsByClassName()
+- (D) document.selectById()",(B) document.getElementById()
+4.6.3,"Multiple Choice: What does the following code do?
+
+let para = document.createElement('p');
+document.body.appendChild(para);
+
+- (A) It creates a new paragraph and appends it to the document body.
+- (B) It removes the first paragraph in the body.
+- (C) It replaces the first paragraph in the body with a new one.
+- (D) It adds a new CSS style to all paragraphs.",(A) It creates a new paragraph and appends it to the document body.
+4.6.4,"Multi-Select: Which of the following are common methods used to interact with the DOM in JavaScript? (Select all that apply)
+
+- (A) document.getElementById()
+- (B) document.createElement()
+- (C) document.addEventListener()
+- (D) document.removeAttribute()","(A) document.getElementById(), (B) document.createElement(), (C) document.addEventListener()"
+4.6.5,"Multiple Choice: What will be the output of this JavaScript code?
+
+<div id=""myDiv"">Hello</div>
+<script>
+document.getElementById(""myDiv"").innerHTML = ""Goodbye"";
+</script>
+
+- (A) ""Hello"" will be replaced with ""Goodbye""
+- (B) ""Hello"" will remain unchanged
+- (C) The div will be removed from the DOM
+- (D) The code will cause an error","(A) ""Hello"" will be replaced with ""Goodbye"""
+4.6.6,"Multiple Choice: Which of the following methods adds an event listener to an HTML element?
+
+- (A) addEventListener()
+- (B) attachListener()
+- (C) setEvent()
+- (D) createListener()",(A) addEventListener()
+4.6.7,"Multiple Choice: What is the window object in JavaScript?
+
+- (A) It represents the browser's window or frame that displays the document.
+- (B) It represents an HTML element in the DOM.
+- (C) It is a method for creating pop-up windows.
+- (D) It is a method for closing a webpage.",(A) It represents the browser's window or frame that displays the document.
+4.6.8,"Multiple Choice: Which property of the window object can be used to get the current URL of a webpage?
+
+- (A) window.location.href
+- (B) window.url
+- (C) window.currentURL
+- (D) window.pageURL",(A) window.location.href
+4.6.9,"Multiple Choice: What is the purpose of the console.log() method in JavaScript?
+
+- (A) To display content in an alert box.
+- (B) To log information or errors to the browser's console for debugging.
+- (C) To change the content of a webpage.
+- (D) To modify the style of an HTML element.",(B) To log information or errors to the browser's console for debugging.
+4.6.10,"Multiple Choice: How can you check if a webpage is using HTTPS or HTTP using JavaScript?
+
+- (A) window.protocol
+- (B) window.location.protocol
+- (C) document.protocol
+- (D) window.getProtocol()",(B) window.location.protocol
+4.7.1,"Multiple Choice: What is the root node in a DOM tree?
+
+- (A) The `<head>` element
+- (B) The `<body>` element
+- (C) The `<html>` element
+- (D) The first `<div>` element",(C) The `<html>` element
+4.7.2,"Multiple Choice: Which of the following is created when an HTML attribute is added to an element?
+
+- (A) A text node
+- (B) A comment node
+- (C) An attribute node
+- (D) An element node",(C) An attribute node
+4.7.3,"Multi-Select: Which of the following are valid DOM node types? (Select all that apply)
+
+- (A) Element node
+- (B) Attribute node
+- (C) Text node
+- (D) Document node","(A) Element node, (B) Attribute node, (C) Text node, (D) Document node"
+4.7.4,"Multiple Choice: What is the purpose of the `document.createElement()` method in the DOM?
+
+- (A) To create a new text node
+- (B) To remove an existing element
+- (C) To create a new element node
+- (D) To modify an existing element's content",(C) To create a new element node
+4.7.5,"Multiple Choice: Which of the following is true about the DOM?
+
+- (A) It is a representation of the HTML structure in the browser.
+- (B) It is only used for static web pages.
+- (C) It does not allow manipulation of HTML elements.
+- (D) It can only be modified using CSS.",(A) It is a representation of the HTML structure in the browser.
+4.7.6,"Multiple Choice: What happens when you modify the `textContent` property of a DOM element?
+
+- (A) It replaces the element with a new element.
+- (B) It updates the text inside the element.
+- (C) It changes the element's CSS styling.
+- (D) It removes the element from the DOM.",(B) It updates the text inside the element.
+4.7.7,"Multi-Select: Which of the following methods are used to search for nodes in the DOM? (Select all that apply)
+
+- (A) `document.getElementById()`
+- (B) `document.querySelector()`
+- (C) `document.createTextNode()`
+- (D) `document.getElementsByTagName()`","(A) `document.getElementById()`, (B) `document.querySelector()`, (D) `document.getElementsByTagName()`"
+4.7.8,"Multiple Choice: What does the `appendChild()` method do in the DOM?
+
+- (A) It replaces an existing child node.
+- (B) It removes a child node.
+- (C) It adds a new child node to an element.
+- (D) It moves a node to the beginning of the parent element.",(C) It adds a new child node to an element.
+4.7.9,"Multiple Choice: What is the difference between `innerHTML` and `textContent` in the DOM?
+
+- (A) `innerHTML` sets both HTML and text content, while `textContent` sets only the text content.
+- (B) `textContent` can be used to set HTML content, but `innerHTML` cannot.
+- (C) `textContent` preserves HTML formatting, while `innerHTML` does not.
+- (D) `innerHTML` and `textContent` are functionally identical.","(A) `innerHTML` sets both HTML and text content, while `textContent` sets only the text content."
+4.7.10,"Multiple Choice: Which DOM method is used to remove an attribute from an element?
+
+- (A) `removeChild()`
+- (B) `removeAttribute()`
+- (C) `setAttribute()`
+- (D) `deleteNode()`",(B) `removeAttribute()`
+4.8.1,"Multiple Choice: What does the `parentNode` property do in the DOM?
+
+- (A) It returns the parent node of the current node.
+- (B) It adds a new parent node to the current node.
+- (C) It removes the parent node of the current node.
+- (D) It replaces the parent node of the current node.",(A) It returns the parent node of the current node.
+4.8.2,"Multiple Choice: Which of the following methods is used to add a new child node to the end of a parent node's child list?
+
+- (A) `removeChild()`
+- (B) `insertBefore()`
+- (C) `appendChild()`
+- (D) `cloneNode()`",(C) `appendChild()`
+4.8.3,"Multi-Select: Which of the following are valid methods for modifying the DOM structure? (Select all that apply)
+
+- (A) `appendChild()`
+- (B) `insertBefore()`
+- (C) `removeChild()`
+- (D) `createTextNode()`","(A) `appendChild()`, (B) `insertBefore()`, (C) `removeChild()`"
+4.8.4,"Multiple Choice: What does the `nextElementSibling` property return?
+
+- (A) The next sibling node, regardless of type
+- (B) The next element node that shares the same parent
+- (C) The last child node in the current parent
+- (D) The first child node of the parent",(B) The next element node that shares the same parent.
+4.8.5,"Multiple Choice: What happens when you call `removeChild()` on a DOM node?
+
+- (A) It moves the child node to another parent.
+- (B) It deletes the child node from the DOM.
+- (C) It hides the child node without removing it.
+- (D) It duplicates the child node.",(B) It deletes the child node from the DOM.
+4.8.6,"Multiple Choice: What does the `cloneNode(true)` method do in JavaScript?
+
+- (A) It creates a copy of a node and its children.
+- (B) It creates a copy of a node without its children.
+- (C) It moves a node to another part of the DOM.
+- (D) It deletes a node from the DOM.",(A) It creates a copy of a node and its children.
+4.8.7,"Multi-Select: Which of the following methods can be used to create a new node in the DOM? (Select all that apply)
+
+- (A) `createElement()`
+- (B) `createTextNode()`
+- (C) `cloneNode()`
+- (D) `insertBefore()`","(A) `createElement()`, (B) `createTextNode()`"
+4.8.8,"Multiple Choice: What is the difference between `childNodes` and `children` properties?
+
+- (A) `childNodes` includes text nodes, while `children` includes only element nodes.
+- (B) `children` includes all node types, while `childNodes` includes only element nodes.
+- (C) `childNodes` includes only the first child, while `children` includes all children.
+- (D) `children` includes only the first child, while `childNodes` includes all children.","(A) `childNodes` includes text nodes, while `children` includes only element nodes."
+4.8.9,"Multiple Choice: Which method is used to insert a node before another node in the DOM?
+
+- (A) `removeChild()`
+- (B) `appendChild()`
+- (C) `insertBefore()`
+- (D) `createElement()`",(C) `insertBefore()`
+4.8.10,"Multiple Choice: What does the `previousElementSibling` property return in the DOM?
+
+- (A) The previous sibling node of any type
+- (B) The previous element node that shares the same parent
+- (C) The last sibling of the parent node
+- (D) The first sibling of the parent node",(B) The previous element node that shares the same parent.
+4.9.1,"Multiple Choice: What is an event in JavaScript?
+
+- (A) A user action or occurrence detected by the browser
+- (B) A method to style HTML elements
+- (C) A type of variable in JavaScript
+- (D) A function that loads the page",(A) A user action or occurrence detected by the browser
+4.9.2,"Multiple Choice: What is event-driven programming?
+
+- (A) Programming that responds only to events triggered by the user
+- (B) A programming style where code runs in response to events
+- (C) A method to organize JavaScript files
+- (D) A way to trigger events automatically without user interaction",(B) A programming style where code runs in response to events
+4.9.3,"Multi-Select: Which of the following are common events in JavaScript? (Select all that apply)
+
+- (A) click
+- (B) keydown
+- (C) submit
+- (D) colorchange","(A) click, (B) keydown, (C) submit"
+4.9.4,"Multiple Choice: What does the `addEventListener()` method do?
+
+- (A) It triggers an event immediately after a function call.
+- (B) It registers an event handler to respond to a specific event.
+- (C) It removes an event from the DOM.
+- (D) It adds an event to the CSS styling.",(B) It registers an event handler to respond to a specific event.
+4.9.5,"Multiple Choice: What is the output of the following code?
+
+document.querySelector(""#name"").addEventListener(""focus"", function() {
+this.style.border = ""1px solid green"";
+});
+
+- (A) The input box is highlighted in green when focused.
+- (B) The input box disappears when focused.
+- (C) The input box changes to red when focused.
+- (D) The event is canceled when focused.",(A) The input box is highlighted in green when focused.
+4.9.6,"Multiple Choice: What is the purpose of the `blur` event in JavaScript?
+
+- (A) It triggers when an element loses focus.
+- (B) It triggers when an element is clicked.
+- (C) It triggers when an element is hovered over.
+- (D) It cancels all ongoing events.",(A) It triggers when an element loses focus.
+4.9.7,"Multi-Select: Which of the following are valid ways to register an event handler in JavaScript? (Select all that apply)
+
+- (A) Embedding the event handler in the HTML as an attribute
+- (B) Using `addEventListener()`
+- (C) Overwriting the event property on a DOM node
+- (D) Using the CSS `event-handler` property","(A) Embedding the event handler in the HTML as an attribute, (B) Using `addEventListener()`, (C) Overwriting the event property on a DOM node"
+4.9.8,"Multiple Choice: What does the `preventDefault()` method do in an event handler?
+
+- (A) It prevents the browser's default action for the event.
+- (B) It removes the event listener from the DOM.
+- (C) It triggers a default action for the event.
+- (D) It logs the event to the console.",(A) It prevents the browser's default action for the event.
+4.9.9,"Multiple Choice: Which phase comes first in the DOM event model?
+
+- (A) Bubbling phase
+- (B) Capturing phase
+- (C) At target phase
+- (D) Callback phase",(B) Capturing phase
+4.9.10,"Multiple Choice: What does the `stopPropagation()` method do in an event handler?
+
+- (A) It prevents further propagation of the current event in the capturing or bubbling phase.
+- (B) It stops the current event from completing.
+- (C) It cancels the event and removes all listeners.
+- (D) It triggers the event multiple times.",(A) It prevents further propagation of the current event in the capturing or bubbling phase.

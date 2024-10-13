@@ -1,0 +1,19 @@
+[4.11.1] (A) To check that the user input is in the correct format before submitting it to the server.
+
+[4.11.2] (A) It prevents the form from being submitted to the server.
+
+[4.11.3] (A) Validating data while the user is typing, (B) Validating data immediately after the form is submitted, (C) Using regular expressions to validate patterns like ZIP codes
+
+[4.11.4] (A) To ensure that the field has a value before the form can be submitted.
+
+[4.11.5] (A) The form will not submit, and the field will be highlighted as invalid.
+
+[4.11.6] (A) It checks that the input is a 5-digit number and is required.
+
+[4.11.7] (A) Using the `pattern` attribute with a regular expression, (B) Using JavaScript to validate input during the `input` event, (C) Using the `min` and `max` attributes for numerical input
+
+[4.11.8] (A) It checks if the value entered is not a number.
+
+[4.11.9] (A) To match the input against specific patterns such as phone numbers or ZIP codes.
+
+[4.11.10] (A) It limits the number of characters a user can enter into a field.

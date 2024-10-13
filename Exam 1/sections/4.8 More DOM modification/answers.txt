@@ -1,0 +1,19 @@
+[4.8.1] (A) It returns the parent node of the current node.
+
+[4.8.2] (C) `appendChild()`
+
+[4.8.3] (A) `appendChild()`, (B) `insertBefore()`, (C) `removeChild()`
+
+[4.8.4] (B) The next element node that shares the same parent.
+
+[4.8.5] (B) It deletes the child node from the DOM.
+
+[4.8.6] (A) It creates a copy of a node and its children.
+
+[4.8.7] (A) `createElement()`, (B) `createTextNode()`
+
+[4.8.8] (A) `childNodes` includes text nodes, while `children` includes only element nodes.
+
+[4.8.9] (C) `insertBefore()`
+
+[4.8.10] (B) The previous element node that shares the same parent.

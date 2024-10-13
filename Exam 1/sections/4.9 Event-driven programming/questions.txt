@@ -1,0 +1,84 @@
+---
+[4.9.1] Multiple Choice: What is an event in JavaScript?
+
+- (A) A user action or occurrence detected by the browser
+- (B) A method to style HTML elements
+- (C) A type of variable in JavaScript
+- (D) A function that loads the page
+---
+
+[4.9.2] Multiple Choice: What is event-driven programming?
+
+- (A) Programming that responds only to events triggered by the user
+- (B) A programming style where code runs in response to events
+- (C) A method to organize JavaScript files
+- (D) A way to trigger events automatically without user interaction
+---
+
+[4.9.3] Multi-Select: Which of the following are common events in JavaScript? (Select all that apply)
+
+- (A) click
+- (B) keydown
+- (C) submit
+- (D) colorchange
+---
+
+[4.9.4] Multiple Choice: What does the `addEventListener()` method do?
+
+- (A) It triggers an event immediately after a function call.
+- (B) It registers an event handler to respond to a specific event.
+- (C) It removes an event from the DOM.
+- (D) It adds an event to the CSS styling.
+---
+
+[4.9.5] Multiple Choice: What is the output of the following code?
+
+document.querySelector("#name").addEventListener("focus", function() {
+this.style.border = "1px solid green";
+});
+
+- (A) The input box is highlighted in green when focused.
+- (B) The input box disappears when focused.
+- (C) The input box changes to red when focused.
+- (D) The event is canceled when focused.
+---
+
+[4.9.6] Multiple Choice: What is the purpose of the `blur` event in JavaScript?
+
+- (A) It triggers when an element loses focus.
+- (B) It triggers when an element is clicked.
+- (C) It triggers when an element is hovered over.
+- (D) It cancels all ongoing events.
+---
+
+[4.9.7] Multi-Select: Which of the following are valid ways to register an event handler in JavaScript? (Select all that apply)
+
+- (A) Embedding the event handler in the HTML as an attribute
+- (B) Using `addEventListener()`
+- (C) Overwriting the event property on a DOM node
+- (D) Using the CSS `event-handler` property
+---
+
+[4.9.8] Multiple Choice: What does the `preventDefault()` method do in an event handler?
+
+- (A) It prevents the browser's default action for the event.
+- (B) It removes the event listener from the DOM.
+- (C) It triggers a default action for the event.
+- (D) It logs the event to the console.
+---
+
+[4.9.9] Multiple Choice: Which phase comes first in the DOM event model?
+
+- (A) Bubbling phase
+- (B) Capturing phase
+- (C) At target phase
+- (D) Callback phase
+---
+
+[4.9.10] Multiple Choice: What does the `stopPropagation()` method do in an event handler?
+
+- (A) It prevents further propagation of the current event in the capturing or bubbling phase.
+- (B) It stops the current event from completing.
+- (C) It cancels the event and removes all listeners.
+- (D) It triggers the event multiple times.
+---

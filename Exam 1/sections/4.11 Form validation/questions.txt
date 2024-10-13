@@ -1,0 +1,78 @@
+---
+[4.11.1] Multiple Choice: What is the purpose of form data validation in web development?
+
+- (A) To check that the user input is in the correct format before submitting it to the server.
+- (B) To automatically correct invalid user input.
+- (C) To prevent the form from being submitted if the server is down.
+- (D) To allow users to bypass filling out the form.
+---
+
+[4.11.2] Multiple Choice: What does the `preventDefault()` method do in a form's submit handler?
+
+- (A) It prevents the form from being submitted to the server.
+- (B) It clears all the input fields in the form.
+- (C) It changes the form's action URL.
+- (D) It submits the form automatically without user input.
+---
+
+[4.11.3] Multi-Select: Which of the following are common methods for performing form validation using JavaScript? (Select all that apply)
+
+- (A) Validating data while the user is typing
+- (B) Validating data immediately after the form is submitted
+- (C) Using regular expressions to validate patterns like ZIP codes
+- (D) Using server-side validation only
+---
+
+[4.11.4] Multiple Choice: What is the purpose of the `required` attribute in HTML form input elements?
+
+- (A) To ensure that the field has a value before the form can be submitted.
+- (B) To prevent the user from modifying the input field.
+- (C) To provide a default value for the input field.
+- (D) To limit the length of the input field.
+---
+
+[4.11.5] Multiple Choice: What happens if a form input field is marked as `required` but left empty when submitting the form?
+
+- (A) The form will not submit, and the field will be highlighted as invalid.
+- (B) The form will submit with an empty value.
+- (C) The form will automatically fill in the required field.
+- (D) The form will be submitted, but a warning will be shown.
+---
+
+[4.11.6] Multiple Choice: What is the output of the following validation code?
+
+```html
+<input type="text" id="zipCode" pattern="\d{5}" required>
+(A) It checks that the input is a 5-digit number and is required.
+(B) It checks that the input is exactly 5 letters.
+(C) It checks that the input can be a number or letters.
+(D) It does not perform any validation.
+---
+
+[4.11.7] Multi-Select: Which of the following are ways to ensure a user enters valid input in a form field? (Select all that apply)
+
+(A) Using the pattern attribute with a regular expression
+(B) Using JavaScript to validate input during the input event
+(C) Using the min and max attributes for numerical input
+(D) Using CSS to highlight invalid fields
+---
+[4.11.8] Multiple Choice: What happens when isNaN() is used in form validation?
+
+(A) It checks if the value entered is not a number.
+(B) It checks if the value entered is a string.
+(C) It replaces the current value with a number.
+(D) It submits the form only if the value is a number.
+---
+[4.11.9] Multiple Choice: What is the role of regular expressions in validating form input?
+
+(A) To match the input against specific patterns such as phone numbers or ZIP codes.
+(B) To automatically correct input errors.
+(C) To prevent the form from being submitted.
+(D) To highlight invalid fields in the form.
+---
+[4.11.10] Multiple Choice: How does the maxlength attribute help with form validation?
+
+(A) It limits the number of characters a user can enter into a field.
+(B) It prevents users from submitting the form.
+(C) It automatically corrects the length of input.
+(D) It replaces the entered text with a default value.)

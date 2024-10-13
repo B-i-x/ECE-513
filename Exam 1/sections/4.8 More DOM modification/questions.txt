@@ -1,0 +1,80 @@
+---
+[4.8.1] Multiple Choice: What does the `parentNode` property do in the DOM?
+
+- (A) It returns the parent node of the current node.
+- (B) It adds a new parent node to the current node.
+- (C) It removes the parent node of the current node.
+- (D) It replaces the parent node of the current node.
+---
+
+[4.8.2] Multiple Choice: Which of the following methods is used to add a new child node to the end of a parent node's child list?
+
+- (A) `removeChild()`
+- (B) `insertBefore()`
+- (C) `appendChild()`
+- (D) `cloneNode()`
+---
+
+[4.8.3] Multi-Select: Which of the following are valid methods for modifying the DOM structure? (Select all that apply)
+
+- (A) `appendChild()`
+- (B) `insertBefore()`
+- (C) `removeChild()`
+- (D) `createTextNode()`
+---
+
+[4.8.4] Multiple Choice: What does the `nextElementSibling` property return?
+
+- (A) The next sibling node, regardless of type
+- (B) The next element node that shares the same parent
+- (C) The last child node in the current parent
+- (D) The first child node of the parent
+---
+
+[4.8.5] Multiple Choice: What happens when you call `removeChild()` on a DOM node?
+
+- (A) It moves the child node to another parent.
+- (B) It deletes the child node from the DOM.
+- (C) It hides the child node without removing it.
+- (D) It duplicates the child node.
+---
+
+[4.8.6] Multiple Choice: What does the `cloneNode(true)` method do in JavaScript?
+
+- (A) It creates a copy of a node and its children.
+- (B) It creates a copy of a node without its children.
+- (C) It moves a node to another part of the DOM.
+- (D) It deletes a node from the DOM.
+---
+
+[4.8.7] Multi-Select: Which of the following methods can be used to create a new node in the DOM? (Select all that apply)
+
+- (A) `createElement()`
+- (B) `createTextNode()`
+- (C) `cloneNode()`
+- (D) `insertBefore()`
+---
+
+[4.8.8] Multiple Choice: What is the difference between `childNodes` and `children` properties?
+
+- (A) `childNodes` includes text nodes, while `children` includes only element nodes.
+- (B) `children` includes all node types, while `childNodes` includes only element nodes.
+- (C) `childNodes` includes only the first child, while `children` includes all children.
+- (D) `children` includes only the first child, while `childNodes` includes all children.
+---
+
+[4.8.9] Multiple Choice: Which method is used to insert a node before another node in the DOM?
+
+- (A) `removeChild()`
+- (B) `appendChild()`
+- (C) `insertBefore()`
+- (D) `createElement()`
+---
+
+[4.8.10] Multiple Choice: What does the `previousElementSibling` property return in the DOM?
+
+- (A) The previous sibling node of any type
+- (B) The previous element node that shares the same parent
+- (C) The last sibling of the parent node
+- (D) The first sibling of the parent node
+---

@@ -1,0 +1,19 @@
+[4.10.1] (A) `getPropertyValue()`
+
+[4.10.2] (A) It changes the value of an element's CSS property.
+
+[4.10.3] (A) `setProperty()`, (C) `removeProperty()`
+
+[4.10.4] (A) The div's width changes to 200px and the background color changes to red.
+
+[4.10.5] (A) It removes a CSS property from an element's inline style.
+
+[4.10.6] (A) The div's width is removed, making it span the entire width of the page.
+
+[4.10.7] (A) `element.style.width = "100px"`, (B) `element.style.setProperty("color", "blue")`, (C) `element.style.removeProperty("height")`
+
+[4.10.8] (A) `background-color`
+
+[4.10.9] (A) It returns the current value of the element's width property.
+
+[4.10.10] (A) To provide APIs for accessing and manipulating CSS styles via JavaScript.
