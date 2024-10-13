@@ -40,6 +40,9 @@ def split_sections(input_filepath):
             section_content = []
         else:
             # Add line to the current section content
+            # Add line to the current section content if it doesn't contain 'Salehi'
+            if 'Salehi' not in line:
+                section_content.append(line)
             section_content.append(line)
     
     # Save the last section encountered
