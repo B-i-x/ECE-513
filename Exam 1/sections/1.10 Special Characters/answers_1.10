@@ -1,0 +1,10 @@
+[1.10.1] (C) To represent special characters or symbols  
+[1.10.2] (C) &copy;  
+[1.10.3] 9730  
+[1.10.4] &euro;  
+[1.10.5] Emoji characters can be displayed using decimal or hexadecimal entities.  
+[1.10.6] (B) &lt;  
+[1.10.7] (A) &amp;  
+[1.10.8] (A) Entity names; (B) Decimal numbers; (D) Hexadecimal numbers  
+[1.10.9] &#x1F600;  
+[1.10.10] Use the entity &lt; instead of the < character directly.

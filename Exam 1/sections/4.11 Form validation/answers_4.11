@@ -1,0 +1,10 @@
+[4.11.1] (B) To check input for correctness and ensure data integrity
+[4.11.2] change; submit
+[4.11.3] (C) preventDefault()
+[4.11.4] The isNaN() function is used to check if a value is not a number (NaN).
+[4.11.5] (A) required, (B) pattern, (C) maxlength
+[4.11.6] required
+[4.11.7] (C) To convert string input to a float for numerical validation
+[4.11.8] CSS pseudo-classes like :valid and :invalid indicate whether an input field meets the validation requirements, allowing for visual feedback without JavaScript.
+[4.11.9] credit card number
+[4.11.10] (B) The unsupported element is transformed into a text input

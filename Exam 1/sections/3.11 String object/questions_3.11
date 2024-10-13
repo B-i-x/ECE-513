@@ -1,0 +1,62 @@
+
+---
+
+[3.11.1] Multiple Choice: What method returns the character at a specified index in a string as a string?
+- (A) substring()
+- (B) indexOf()
+- (C) charAt()
+- (D) trim()
+
+---
+
+[3.11.2] Fill in the blank: The method ________ returns an integer indicating the index of the first occurrence of a specified text in a string or -1 if the text is not found.
+
+---
+
+[3.11.3] Multiple Choice: How can you determine the number of characters in a string?
+- (A) Use the size property
+- (B) Use the length property
+- (C) Call the getSize() method
+- (D) Use the charCount method
+
+---
+
+[3.11.4] Short Answer: What value does the property `length` return when called on the string "Hello, World!"?
+
+---
+
+[3.11.5] Multiple Answers: Which methods can be used to extract substrings from a string? (Select all that apply)
+- (A) substr()
+- (B) substring()
+- (C) slice()
+- (D) extract()
+
+---
+
+[3.11.6] Fill in the blank: The method ________ replaces a specified value with another value in a string and returns the modified string.
+
+---
+
+[3.11.7] Multiple Choice: What will `s.toUpperCase()` return if `s` is "good morning"?
+- (A) "good morning"
+- (B) "Good Morning"
+- (C) "GOOD MORNING"
+- (D) "good Morning"
+
+---
+
+[3.11.8] Fill in the blank: The ________ method splits a string into an array of strings based on a specified delimiter.
+
+---
+
+[3.11.9] Short Answer: What method would you use to remove whitespace from both ends of a string?
+
+---
+
+[3.11.10] Multiple Choice: What does a template literal use to embed variables or expressions directly within a string?
+- (A) Curly braces only
+- (B) ${} within back-ticks
+- (C) Double quotes
+- (D) Single quotes
+
+---

@@ -1,0 +1,75 @@
+
+---
+
+[3.9.1] Multiple Choice: What is an object in JavaScript?
+- (A) An ordered collection of elements
+- (B) A name-value pair with a strict order
+- (C) An unordered collection of properties
+- (D) A fixed array of properties
+
+---
+
+[3.9.2] Fill in the Blank: An object property is a ___________.
+---
+
+[3.9.3] Multiple Choice: Which code snippet successfully changes the `published` year of the `book` object to 2014?
+- (A) `book.Published = 2014;`
+- (B) `book.published = 2014;`
+- (C) `book.published 2014;`
+- (D) `published.book = 2014;`
+
+---
+
+[3.9.4] Multiple Choice: Which statement correctly adds an "isbn" property with the value "1591846013" to the `book` object?
+- (A) `book.isbn("1591846013");`
+- (B) `book.isbn = "1591846013";`
+- (C) `isbn.book = "1591846013";`
+- (D) `book["isbn"] = "1591846013";`
+
+---
+
+[3.9.5] Short Answer: What will be the output of the following code?
+```javascript
+console.log(book.author.lastName);
+```
+Assuming the `book` object is defined with the `author` object.
+
+---
+
+[3.9.6] Multiple Choice: In the provided method definition:
+```javascript
+getAuthorName() {
+    return this.author.firstName + " " + this.author.lastName;
+}
+```
+What will `console.log(book.getAuthorName())` display if `book.author.firstName` is "Susan" and `book.author.lastName` is "Cain"?
+
+- (A) "Susan"
+- (B) "Cain"
+- (C) "Susan Cain"
+- (D) "undefined undefined"
+
+---
+
+[3.9.7] Multiple Answer: Which of the following statements are true about passing objects to functions in JavaScript?
+- (A) A copy of the object is passed.
+- (B) Both parameters and arguments refer to the same object.
+- (C) Changing parameter properties also changes argument properties.
+- (D) Changing parameter references assigns a new object to the argument.
+
+---
+
+[3.9.8] Fill in the Blank: When a JavaScript method is defined with an anonymous function assigned to an object's property, it is called a ___________.
+---
+
+[3.9.9] Short Answer: Given the object `let book = { title: "Quiet", author: { firstName: "Susan", lastName: "Cain" } };`, write the method to add a middle initial "H" to the author's name.
+
+---
+
+[3.9.10] Multiple Choice: After executing the `changeThings` function, what is the value of `rectangle.width`?
+- (A) 3
+- (B) 5
+- (C) 20
+- (D) 33
+
+---

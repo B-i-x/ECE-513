@@ -1,0 +1,62 @@
+
+---
+
+[4.11.1] Multiple Choice: What is the role of data validation in web applications?
+- (A) To store data securely in databases
+- (B) To check input for correctness and ensure data integrity
+- (C) To enhance the visual design of web forms
+- (D) To automate form submissions
+
+---
+
+[4.11.2] Fill in the Blank: Data validation can either be performed while the user enters form data by adding a JavaScript function as the __________ handler or immediately prior to submitting the entire form as the form's __________ handler.
+
+---
+
+[4.11.3] Multiple Choice: Which JavaScript method is used to prevent a form from being submitted if validation fails?
+- (A) stopPropagation()
+- (B) stopDefault()
+- (C) preventDefault()
+- (D) cancelEvent()
+
+---
+
+[4.11.4] Short Answer: When using JavaScript for form validation, what is the purpose of the isNaN() function?
+
+---
+
+[4.11.5] Multiple Answers: Which attributes can be used in HTML for automatic form validation without JavaScript? Select all that apply.
+- (A) required
+- (B) pattern
+- (C) maxlength
+- (D) novalidate
+
+---
+
+[4.11.6] Fill in the Blank: In an HTML form, the __________ attribute is used to specify that an input field cannot be empty and must have a value before form submission.
+
+---
+
+[4.11.7] Multiple Choice: When should the JavaScript parseFloat() function be used in form validation?
+- (A) To convert string input to a boolean
+- (B) To check if input is an array
+- (C) To convert string input to a float for numerical validation
+- (D) To apply CSS styles conditionally
+
+---
+
+[4.11.8] Short Answer: Explain how CSS pseudo-classes like :valid and :invalid can be useful in form validation.
+
+---
+
+[4.11.9] Fill in the Blank: A __________ must contain exactly 16 digits, as a common example of format validation for user-entered data in web forms.
+
+---
+
+[4.11.10] Multiple Choice: What happens if a browser does not support a particular HTML input element used for validation?
+- (A) The browser crashes
+- (B) The unsupported element is transformed into a text input
+- (C) JavaScript automatically takes over validation
+- (D) The form submission is blocked
+
+---

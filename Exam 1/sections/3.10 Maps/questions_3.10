@@ -1,0 +1,71 @@
+  
+---
+
+[3.10.1] Multiple Choice: What is an object map commonly known as in programming?
+- (A) An array
+- (B) A function
+- (C) A map or associative array
+- (D) A string
+
+---
+
+[3.10.2] Multiple Choice: In JavaScript object maps, how is the value of a key usually accessed?
+- (A) Using a period (.)
+- (B) Using parentheses ()
+- (C) Using brackets []
+- (D) Using a semicolon ;
+
+---
+
+[3.10.3] Short Answer: What JavaScript object method returns an array of an object's property names?
+
+---
+
+[3.10.4] Multiple Choice: Which operator is used in JavaScript to check for the existence of a key in an object?
+- (A) exists
+- (B) in
+- (C) has
+- (D) contains
+
+---
+
+[3.10.5] Short Answer: When using a `for-in` loop to iterate over an object map, what does the loop variable represent during each iteration?
+
+---
+
+[3.10.6] Fill in the Blank: The __ operator removes a key/property from a map or object in JavaScript.
+
+---
+
+[3.10.7] Multiple Choice: What method adds a new key/value pair to a `Map` object or updates the value if the key already exists?
+- (A) add()
+- (B) append()
+- (C) set()
+- (D) update()
+
+---
+
+[3.10.8] Multiple Choice: Which JavaScript object operation deletes an element with a specific key?
+- (A) .remove()
+- (B) .filter()
+- (C) .delete()
+- (D) .erase()
+
+---
+
+[3.10.9] Multiple Choice: Which loop is specifically ideal for iterating over arrays but can also be used to iterate over Map objects?
+- (A) for-in loop
+- (B) forEach loop
+- (C) for-of loop
+- (D) while loop
+
+---
+
+[3.10.10] Multiple Answers: Which of the following are properties or methods associated with JavaScript Map objects? (Select all that apply)
+- (A) .push()
+- (B) .size
+- (C) .get(key)
+- (D) .set(key, value)
+- (E) .pop()
+
+---

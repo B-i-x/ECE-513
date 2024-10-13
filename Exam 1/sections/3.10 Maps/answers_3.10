@@ -1,0 +1,10 @@
+[3.10.1] (C) A map or associative array
+[3.10.2] (C) Using brackets []
+[3.10.3] Object.keys()
+[3.10.4] (B) in
+[3.10.5] The loop variable represents each key of the object map during each iteration.
+[3.10.6] delete
+[3.10.7] (C) set()
+[3.10.8] (C) .delete()
+[3.10.9] (C) for-of loop
+[3.10.10] (B) .size, (C) .get(key), (D) .set(key, value)

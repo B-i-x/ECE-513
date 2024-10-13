@@ -1,0 +1,10 @@
+[4.10.1] (B) getPropertyValue()
+[4.10.2] (C) element.style.backgroundColor = "red"
+[4.10.3] setProperty()
+[4.10.4] getPropertyValue(), setProperty(), removeProperty()
+[4.10.5] (C) It is converted to camel case.
+[4.10.6] backgroundColor
+[4.10.7] (B) It removes the width property from the element's inline CSS.
+[4.10.8] span.style.setProperty("fontFamily", "Arial");
+[4.10.9] (C) CSSOM
+[4.10.10] insertRule()

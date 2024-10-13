@@ -1,0 +1,10 @@
+[3.11.1] (C) charAt()
+[3.11.2] indexOf
+[3.11.3] (B) Use the length property
+[3.11.4] 13
+[3.11.5] (A) substr(), (B) substring()
+[3.11.6] replace
+[3.11.7] (C) "GOOD MORNING"
+[3.11.8] split
+[3.11.9] trim
+[3.11.10] (B) ${} within back-ticks

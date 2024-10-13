@@ -1,0 +1,67 @@
+  
+---
+
+[1.10.1] Multiple Choice: What is an HTML entity used for in a webpage?
+- (A) To create new HTML elements
+- (B) To define CSS styles
+- (C) To represent special characters or symbols
+- (D) To embed JavaScript code
+
+---
+
+[1.10.2] Multiple Choice: Which of the following is an example of specifying an HTML entity using its name?
+- (A) &#169;
+- (B) &#x000A9;
+- (C) &copy;
+- (D) &for_all;
+
+---
+
+[1.10.3] Fill in the Blank: The decimal format for the HTML umbrella symbol is _______.
+- Answer: 9730
+
+---
+
+[1.10.4] Fill in the Blank: The Euro symbol can be written in HTML as _______.
+- Answer: &euro;
+
+---
+
+[1.10.5] Short Answer: How can emoji characters be displayed on a web page?
+- Answer: Emoji characters can be displayed using decimal or hexadecimal entities.
+
+---
+
+[1.10.6] Multiple Choice: How should the character < be displayed using HTML entities if it's not part of a tag?
+- (A) &gt;
+- (B) &lt;
+- (C) &amp;
+- (D) &le;
+
+---
+
+[1.10.7] Multiple Choice: Which HTML entity correctly displays the ampersand character (&) when it does not start an entity name?
+- (A) &amp;
+- (B) &cet;
+- (C) &and;
+- (D) &anp;
+
+---
+
+[1.10.8] Multiple Answers: Which of the following methods can be used to specify HTML entities? (Select all that apply)
+- (A) Entity names
+- (B) Decimal numbers
+- (C) Binary numbers
+- (D) Hexadecimal numbers
+
+---
+
+[1.10.9] Fill in the Blank: The hexadecimal entity for the happy face emoji is _______.
+- Answer: &#x1F600;
+
+---
+
+[1.10.10] Short Answer: What should you use instead of the < character directly in HTML to avoid confusion with tags?
+- Answer: Use the entity &lt; instead of the < character directly.
+
+---
