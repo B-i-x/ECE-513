@@ -1,27 +1,32 @@
+---
+
 [3.4.1] Multiple Choice: Which of the following is considered a falsy value in JavaScript?
    - (A) "0"
    - (B) 1
    - (C) 0
    - (D) "false"
-
+---
 [3.4.2] Multiple Choice: What is the output of the following code?
 let x = 10; console.log(x ? "Truthy" : "Falsy");
 - (A) "Truthy"
 - (B) "Falsy"
 - (C) undefined
 - (D) NaN
+---
 
 [3.4.3] Multi-Select: Which of the following values are considered truthy in JavaScript? (Select all that apply)
 - (A) "Hello"
 - (B) null
 - (C) 1
 - (D) 0
+---
 
 [3.4.4] Multiple Choice: What does the ternary operator allow you to do in JavaScript?
 - (A) Declare multiple variables in one statement
 - (B) Write an if-else condition in a single line
 - (C) Loop through arrays more efficiently
 - (D) Create functions without naming them
+---
 
 [3.4.5] Multiple Choice: What will be the value of `result` after the following code executes?
 let age = 25; let result = age >= 18 ? "Adult" : "Minor";
@@ -29,18 +34,21 @@ let age = 25; let result = age >= 18 ? "Adult" : "Minor";
 - (B) "Minor"
 - (C) undefined
 - (D) NaN
+---
 
 [3.4.6] Multi-Select: Which of the following are valid ternary operator expressions in JavaScript? (Select all that apply)
 - (A) `let x = (a > b) ? "a is larger" : "b is larger";`
 - (B) `x ? "Yes" : "No";`
 - (C) `age > 18 ? console.log("Adult") : console.log("Minor");`
 - (D) `result ? "Valid" : "Invalid";`
+---
 
 [3.4.7] Multiple Choice: What is the main difference between using a switch statement and an if-else chain?
 - (A) Switch uses strict equality (===) while if-else does not
 - (B) If-else can only evaluate strings while switch can evaluate numbers
 - (C) If-else is faster in execution than switch
 - (D) Switch allows for more flexible comparisons than if-else
+---
 
 [3.4.8] Multiple Choice: In the following switch statement, what will be the value of `coin`?
 let change = 10; 
@@ -60,12 +68,14 @@ switch (change) {
 - (B) "nickel"
 - (C) "dime"
 - (D) "unknown"
+---
 
 [3.4.9] Multiple Choice: In a switch statement, what happens if a case block does not include a `break` statement?
 - (A) The code execution stops and no further cases are evaluated
 - (B) The next case's block is executed, even if it does not match
 - (C) The default case is automatically executed
 - (D) The code throws an error
+---
 
 [3.4.10] Multi-Select: Which of the following are valid switch statement structures? (Select all that apply)
 - (A) `switch (fruit) { case "apple": eat(); break; case "orange": peel(); break; }`

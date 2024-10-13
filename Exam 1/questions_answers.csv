@@ -44,6 +44,44 @@ ID,Question,Answer
    - (C) inactive
    - (D) readonly",(A) disabled
 1.10.5,True/False: The `<label>` element is optional for `<input>` elements but recommended for accessibility.,True
+1.2.1,True/False: The <body> tag can contain any number of <head> tags to structure the document metadata repeatedly.,False
+1.2.2,"Multiple Choice: What does the <link> tag primarily use within an HTML document?
+   - (A) To link JavaScript files
+   - (B) To establish connections between different HTML pages
+   - (C) To connect the document to external stylesheets
+   - (D) To embed responsive meta tags",(C) To connect the document to external stylesheets
+1.2.3,"Multiple Choice: Which tag is used to define an independent, self-contained content that could be syndicated?
+   - (A) <div>
+   - (B) <section>
+   - (C) <article>
+   - (D) <span>",(C) <article>
+1.2.4,"Multiple Choice: What is the function of the <nav> element?
+   - (A) To define a container for navigation links
+   - (B) To create a network of connected data
+   - (C) To mark the non-scrollable sections of a webpage
+   - (D) To navigate through the JavaScript functions in the code",(A) To define a container for navigation links
+1.2.5,"Multiple Choice: How is document type declaration (<DOCTYPE>) incorrectly described?
+   - (A) It defines the HTML version being used.
+   - (B) It is necessary for ensuring modern standards compliance.
+   - (C) It activates the browser's quirks mode when omitted.
+   - (D) It is an HTML element that contains metadata.",(D) It is an HTML element that contains metadata.
+1.2.6,True/False: The <aside> tag is used to denote content that is tangentially related to the content around it.,True
+1.2.7,"Multiple Choice: Which statement is true about the <footer> element?
+   - (A) It should only appear once at the bottom of the document.
+   - (B) It can be used multiple times within sections or articles.
+   - (C) It is deprecated in HTML5.
+   - (D) It is reserved for bottom page copyrights only.",(B) It can be used multiple times within sections or articles.
+1.2.8,"Multiple Choice: What does the 'charset' attribute in a <meta> tag specify?
+   - (A) The character encoding for the HTML document
+   - (B) The set of characters allowed in the document's comments
+   - (C) The website's character count limits
+   - (D) The character encoding for URLs within the document",(A) The character encoding for the HTML document
+1.2.9,True/False: Inline styles added directly to HTML elements using the 'style' attribute are discouraged in modern web development practices.,True
+1.2.10,"Multiple Choice: Which tag is specifically designed to programmatically access the content?
+   - (A) <script>
+   - (B) <output>
+   - (C) <template>
+   - (D) <object>",(A) <script>
 1.3.1,True/False: The <p> tag is used to create line breaks in HTML documents.,False
 1.3.2,"Multiple Choice: What is the purpose of the <p> tag in an HTML document?
    - (A) To define a line break
@@ -955,47 +993,40 @@ if (bonus < 12) {
    - (A) ""0""
    - (B) 1
    - (C) 0
-   - (D) ""false""
-
-[3.4.2] Multiple Choice: What is the output of the following code?
+   - (D) ""false""",(C) 0
+3.4.2,"Multiple Choice: What is the output of the following code?
 let x = 10; console.log(x ? ""Truthy"" : ""Falsy"");
 - (A) ""Truthy""
 - (B) ""Falsy""
 - (C) undefined
-- (D) NaN
-
-[3.4.3] Multi-Select: Which of the following values are considered truthy in JavaScript? (Select all that apply)
+- (D) NaN","(A) ""Truthy"""
+3.4.3,"Multi-Select: Which of the following values are considered truthy in JavaScript? (Select all that apply)
 - (A) ""Hello""
 - (B) null
 - (C) 1
-- (D) 0
-
-[3.4.4] Multiple Choice: What does the ternary operator allow you to do in JavaScript?
+- (D) 0","(A) ""Hello"", (C) 1"
+3.4.4,"Multiple Choice: What does the ternary operator allow you to do in JavaScript?
 - (A) Declare multiple variables in one statement
 - (B) Write an if-else condition in a single line
 - (C) Loop through arrays more efficiently
-- (D) Create functions without naming them
-
-[3.4.5] Multiple Choice: What will be the value of `result` after the following code executes?
+- (D) Create functions without naming them",(B) Write an if-else condition in a single line
+3.4.5,"Multiple Choice: What will be the value of `result` after the following code executes?
 let age = 25; let result = age >= 18 ? ""Adult"" : ""Minor"";
 - (A) ""Adult""
 - (B) ""Minor""
 - (C) undefined
-- (D) NaN
-
-[3.4.6] Multi-Select: Which of the following are valid ternary operator expressions in JavaScript? (Select all that apply)
+- (D) NaN","(A) ""Adult"""
+3.4.6,"Multi-Select: Which of the following are valid ternary operator expressions in JavaScript? (Select all that apply)
 - (A) `let x = (a > b) ? ""a is larger"" : ""b is larger"";`
 - (B) `x ? ""Yes"" : ""No"";`
 - (C) `age > 18 ? console.log(""Adult"") : console.log(""Minor"");`
-- (D) `result ? ""Valid"" : ""Invalid"";`
-
-[3.4.7] Multiple Choice: What is the main difference between using a switch statement and an if-else chain?
+- (D) `result ? ""Valid"" : ""Invalid"";`","(A), (B), (C)"
+3.4.7,"Multiple Choice: What is the main difference between using a switch statement and an if-else chain?
 - (A) Switch uses strict equality (===) while if-else does not
 - (B) If-else can only evaluate strings while switch can evaluate numbers
 - (C) If-else is faster in execution than switch
-- (D) Switch allows for more flexible comparisons than if-else
-
-[3.4.8] Multiple Choice: In the following switch statement, what will be the value of `coin`?
+- (D) Switch allows for more flexible comparisons than if-else",(A) Switch uses strict equality (===) while if-else does not
+3.4.8,"Multiple Choice: In the following switch statement, what will be the value of `coin`?
 let change = 10; 
 switch (change) { 
     case 1: coin = ""penny""; 
@@ -1012,38 +1043,87 @@ switch (change) {
 - (A) ""penny""
 - (B) ""nickel""
 - (C) ""dime""
-- (D) ""unknown""
-
-[3.4.9] Multiple Choice: In a switch statement, what happens if a case block does not include a `break` statement?
+- (D) ""unknown""","(C) ""dime"""
+3.4.9,"Multiple Choice: In a switch statement, what happens if a case block does not include a `break` statement?
 - (A) The code execution stops and no further cases are evaluated
 - (B) The next case's block is executed, even if it does not match
 - (C) The default case is automatically executed
-- (D) The code throws an error
-
-[3.4.10] Multi-Select: Which of the following are valid switch statement structures? (Select all that apply)
+- (D) The code throws an error","(B) The next case's block is executed, even if it does not match"
+3.4.10,"Multi-Select: Which of the following are valid switch statement structures? (Select all that apply)
 - (A) `switch (fruit) { case ""apple"": eat(); break; case ""orange"": peel(); break; }`
 - (B) `switch (num) { case 1: one(); case 2: two(); break; }`
 - (C) `switch (day) { case ""Monday"": rest(); break; default: work(); }`
-- (D) `switch (value) { case true: accept(); default: decline(); }`",Answer not found
-3.5.1,"(C) The `while` loop checks the condition before running the loop body, while the `do-while` loop checks the condition after.
+- (D) `switch (value) { case true: accept(); default: decline(); }`","(A), (C)"
+3.5.1,"Multiple Choice: What is the key difference between a `while` loop and a `do-while` loop in JavaScript?
 
-[3.5.2] (A) 1, 2, 3, Done!
+- (A) The `while` loop always runs at least once, while the `do-while` loop might not run at all.
+- (B) The `do-while` loop checks the condition before running the loop body.
+- (C) The `while` loop checks the condition before running the loop body, while the `do-while` loop checks the condition after.
+- (D) There is no difference between `while` and `do-while`.","(C) The `while` loop checks the condition before running the loop body, while the `do-while` loop checks the condition after."
+3.5.2,"Multiple Choice: What is the output of the following code?
 
-[3.5.3] (C) `do-while` loop, (D) Infinite loop
+let i = 1; while (i <= 3) { 
+    console.log(i); i++; 
+    } 
+    console.log(""Done!"");
 
-[3.5.4] (C) The loop body will never execute.
 
-[3.5.5] (B) To exit the loop immediately
+- (A) 1, 2, 3, Done!
+- (B) 1, 2, 3
+- (C) 1, 2, 3, 4, Done!
+- (D) Done!","(A) 1, 2, 3, Done!"
+3.5.3,"Multi-Select: Which of the following loops always execute at least once? (Select all that apply)
 
-[3.5.6] (A) 10, 9, 8, 7, 6
+- (A) `while` loop
+- (B) `for` loop
+- (C) `do-while` loop
+- (D) Infinite loop","(C) `do-while` loop, (D) Infinite loop"
+3.5.4,"Multiple Choice: What happens if the condition in a `for` loop is initially false?
 
-[3.5.7] (A) `for (let i = 0; i < 10; i++) { console.log(i); }`, (B) `for (let x = 10; x > 0; x--) { console.log(x); }`, (C) `for (let i = 1; i <= 5; i++) { if (i === 3) break; }`
+- (A) The loop runs infinitely.
+- (B) The loop will execute once.
+- (C) The loop body will never execute.
+- (D) The condition will be ignored.",(C) The loop body will never execute.
+3.5.5,"Multiple Choice: What is the purpose of the `break` statement in a loop?
 
-[3.5.8] (A) It skips the rest of the loop body for the current iteration and jumps to the next iteration.
+- (A) To skip to the next iteration of the loop
+- (B) To exit the loop immediately
+- (C) To stop the loop and re-enter after one iteration
+- (D) To continue the loop from the last point",(B) To exit the loop immediately
+3.5.6,"Multiple Choice: What is the output of the following code?
+let count = 10; do { 
+    console.log(count); count--; 
+    } while (count > 5);
 
-[3.5.9] (B) 1, 2, 4, 5
+- (A) 10, 9, 8, 7, 6
+- (B) 9, 8, 7, 6, 5
+- (C) 10, 9, 8, 7, 6, 5
+- (D) The code will not execute.","(A) 10, 9, 8, 7, 6"
+3.5.7,"Multi-Select: Which of the following are valid uses of the `for` loop in JavaScript? (Select all that apply)
 
-[3.5.10] (A) The program runs forever, causing the browser to crash.",Multiple Choice: What is the key difference between a `while` loop and a `do-while` loop in JavaScript?
+- (A) `for (let i = 0; i < 10; i++) { console.log(i); }`
+- (B) `for (let x = 10; x > 0; x--) { console.log(x); }`
+- (C) `for (let i = 1; i <= 5; i++) { if (i === 3) break; }`
+- (D) `for (let i = 0; i++) { console.log(i); }`","(A) `for (let i = 0; i < 10; i++) { console.log(i); }`, (B) `for (let x = 10; x > 0; x--) { console.log(x); }`, (C) `for (let i = 1; i <= 5; i++) { if (i === 3) break; }`"
+3.5.8,"Multiple Choice: What does the `continue` statement do in a loop?
+
+- (A) It skips the rest of the loop body for the current iteration and jumps to the next iteration.
+- (B) It exits the loop immediately.
+- (C) It stops the loop temporarily and then resumes from where it left off.
+- (D) It restarts the loop from the beginning.",(A) It skips the rest of the loop body for the current iteration and jumps to the next iteration.
+3.5.9,"Multiple Choice: What is the output of the following code?
+for (let i = 1; i <= 5; i++) { if (i === 3) continue; console.log(i); }
+
+- (A) 1, 2, 3, 4, 5
+- (B) 1, 2, 4, 5
+- (C) 1, 2, 3
+- (D) 3, 4, 5","(B) 1, 2, 4, 5"
+3.5.10,"Multiple Choice: What is the effect of an infinite loop in JavaScript?
+
+- (A) The program runs forever, causing the browser to crash.
+- (B) The program runs forever, but the browser continues to respond.
+- (C) The loop stops after a fixed number of iterations.
+- (D) The loop automatically terminates after 1000 iterations.","(A) The program runs forever, causing the browser to crash."
 3.6.1,"Multiple Choice: What is the correct syntax to declare a function in JavaScript?
 
 - (A) function myFunc {}
@@ -1673,25 +1753,72 @@ words.forEach(function(word) {
 - (B) /cat|bat|mat/
 - (C) /c(b|m)at/
 - (D) /(c|b|m)at/",(D) /(c|b|m)at/
-4.3.1,"(A) It specifies the URL where the form data should be sent.
+4.3.1,"Multiple Choice: What is the purpose of the `action` attribute in a `<form>` element?
 
-[4.3.2] (B) GET
+- (A) It specifies the URL where the form data should be sent.
+- (B) It specifies the method of submitting the form (GET or POST).
+- (C) It validates the form input before submission.
+- (D) It styles the form element.",(A) It specifies the URL where the form data should be sent.
+4.3.2,"Multiple Choice: What is the default method used if the `method` attribute is not specified in a form?
 
-[4.3.3] (A) The form data is added to the URL as query parameters.
+- (A) POST
+- (B) GET
+- (C) PUT
+- (D) DELETE",(B) GET
+4.3.3,"Multiple Choice: What happens when a form with the `GET` method is submitted?
 
-[4.3.4] (A) `<input>`, (B) `<form>`, (C) `<label>`
+- (A) The form data is added to the URL as query parameters.
+- (B) The form data is hidden and sent in the request body.
+- (C) The form data is saved in local storage.
+- (D) The form submission is cancelled if the data is invalid.",(A) The form data is added to the URL as query parameters.
+4.3.4,"Multi-Select: Which of the following elements are typically used to create a form? (Select all that apply)
 
-[4.3.5] (A) It specifies how the form data should be encoded when submitted.
+- (A) `<input>`
+- (B) `<form>`
+- (C) `<label>`
+- (D) `<span>`","(A) `<input>`, (B) `<form>`, (C) `<label>`"
+4.3.5,"Multiple Choice: What does the `enctype` attribute do in a form element?
 
-[4.3.6] (A) The form data is sent to the server with ""first=Rick&last=Deckard"" in the request body.
+- (A) It specifies how the form data should be encoded when submitted.
+- (B) It specifies the URL where the form should be submitted.
+- (C) It specifies the HTTP method to use when submitting the form.
+- (D) It formats the form data as JSON.",(A) It specifies how the form data should be encoded when submitted.
+4.3.6,"Multiple Choice: What is the output of the following code?
 
-[4.3.7] (A) It adds descriptive text to a form field.
+<form action=""https://example.com/apply"" method=""POST"">
+  <input type=""text"" name=""first"" value=""Rick"">
+  <input type=""text"" name=""last"" value=""Deckard"">
+  <input type=""submit"">
+</form>
 
-[4.3.8] (A) GET sends data as part of the URL, while POST sends data in the request body.
+- (A) The form data is sent to the server with ""first=Rick&last=Deckard"" in the request body.
+- (B) The form data is sent to the server with ""first=Rick&last=Deckard"" in the URL.
+- (C) The form data is saved to local storage.
+- (D) The form data is appended to the document body.","(A) The form data is sent to the server with ""first=Rick&last=Deckard"" in the request body."
+4.3.7,"Multiple Choice: What does the `label` element do in a form?
 
-[4.3.9] (A) text, (B) password, (C) file
+- (A) It adds descriptive text to a form field.
+- (B) It validates the input data.
+- (C) It adds styling to a form field.
+- (D) It hides the form field.",(A) It adds descriptive text to a form field.
+4.3.8,"Multiple Choice: What is the primary difference between the `GET` and `POST` methods when submitting form data?
 
-[4.3.10] (A) It provides a hint to the user as to what value should be entered.",Multiple Choice: What is the purpose of the `action` attribute in a `<form>` element?
+- (A) GET sends data as part of the URL, while POST sends data in the request body.
+- (B) GET is faster than POST.
+- (C) POST can only be used for file uploads.
+- (D) POST does not send data.","(A) GET sends data as part of the URL, while POST sends data in the request body."
+4.3.9,"Multi-Select: Which of the following input types are valid in an HTML form? (Select all that apply)
+
+- (A) text
+- (B) password
+- (C) file
+- (D) hyperlink","(A) text, (B) password, (C) file"
+4.3.10,"Multiple Choice: What does the `placeholder` attribute do in an `<input>` element?
+
+- (A) It provides a hint to the user as to what value should be entered.
+- (B) It pre-populates the input field with a default value.
+- (C) It hides the input field until the form is submitted.
+- (D) It validates the input data before submission.",(A) It provides a hint to the user as to what value should be entered.
 4.4.1,"Multiple Choice: What does the `checked` attribute do in a checkbox input?
 
 - (A) It specifies the value of the checkbox.
