@@ -1,0 +1,80 @@
+---
+[4.4.1] Multiple Choice: What does the `checked` attribute do in a checkbox input?
+
+- (A) It specifies the value of the checkbox.
+- (B) It sets the checkbox to be selected by default.
+- (C) It prevents the checkbox from being unselected.
+- (D) It submits the checkbox value as "on" to the server.
+---
+
+[4.4.2] Multiple Choice: What happens when a checkbox is not selected in a form submission?
+
+- (A) The browser sends a null value.
+- (B) The browser does not send the checkbox value at all.
+- (C) The browser sends a value of "false".
+- (D) The browser sends the default value "off".
+---
+
+[4.4.3] Multi-Select: Which of the following are valid attributes for a checkbox input in HTML? (Select all that apply)
+
+- (A) `checked`
+- (B) `value`
+- (C) `name`
+- (D) `method`
+---
+
+[4.4.4] Multiple Choice: What does the `for` attribute in a `<label>` tag do?
+
+- (A) Associates the label with a specific form element using the element's `id`.
+- (B) Makes the label clickable.
+- (C) Specifies the form's action URL.
+- (D) Makes the label submit the form when clicked.
+---
+
+[4.4.5] Multiple Choice: What is the difference between checkboxes and radio buttons?
+
+- (A) Only checkboxes can be used in forms.
+- (B) Checkboxes allow multiple selections, while radio buttons only allow one selection per group.
+- (C) Radio buttons are limited to numerical input.
+- (D) Radio buttons can be selected or deselected, while checkboxes cannot.
+---
+
+[4.4.6] Multiple Choice: What is sent to the server when a radio button is selected?
+
+- (A) The name and value of the selected radio button.
+- (B) Only the name of the selected radio button.
+- (C) The name of the form element.
+- (D) A boolean value.
+---
+
+[4.4.7] Multiple Choice: What happens if no radio button in a group is selected when the form is submitted?
+
+- (A) The browser sends a null value.
+- (B) The browser sends an empty string.
+- (C) The browser does not send the name or value of the radio button group.
+- (D) The browser sends the first radio button's value by default.
+---
+
+[4.4.8] Multi-Select: Which of the following input types allow the user to select multiple options in a form? (Select all that apply)
+
+- (A) `checkbox`
+- (B) `radio`
+- (C) `select` with the `multiple` attribute
+- (D) `textarea`
+---
+
+[4.4.9] Multiple Choice: What does the `value` attribute in a checkbox represent?
+
+- (A) The text shown next to the checkbox.
+- (B) The value sent to the server if the checkbox is selected.
+- (C) The default state of the checkbox.
+- (D) The color of the checkbox.
+---
+
+[4.4.10] Multiple Choice: What is the default value sent to the server if a checkbox is selected and no `value` attribute is specified?
+
+- (A) "true"
+- (B) "on"
+- (C) "checked"
+- (D) An empty string
+---

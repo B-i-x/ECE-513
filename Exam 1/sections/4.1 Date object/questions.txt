@@ -1,0 +1,92 @@
+---
+[4.1.1] Multiple Choice: What is the purpose of the JavaScript `Date` object?
+
+- (A) To represent a date as a string
+- (B) To represent a specific moment in time, measured in milliseconds since January 1, 1970 (Unix Epoch)
+- (C) To convert a date to a number
+- (D) To store multiple dates in an array
+---
+
+[4.1.2] Multiple Choice: What is the output of the following code?
+
+let currDateTime = new Date();
+console.log(currDateTime);
+
+- (A) The current time in UTC
+- (B) The current time in the local time zone
+- (C) Jan 1, 1970, 00:00:00 UTC
+- (D) An error
+---
+
+[4.1.3] Multiple Choice: What is the result of the following code?
+
+let oneSecPastEpoch = new Date(1000);
+console.log(oneSecPastEpoch);
+
+- (A) Jan 1, 1970, 00:00:01 UTC
+- (B) Dec 31, 1969, 18:00:01 UTC
+- (C) Jan 1, 1970, 00:00:01 GMT-0500
+- (D) Undefined
+---
+
+[4.1.4] Multi-Select: Which of the following are valid `Date` object constructors in JavaScript? (Select all that apply)
+
+- (A) `new Date()`
+- (B) `new Date("2024-01-01")`
+- (C) `new Date(2024, 0, 1)`
+- (D) `new Date(1000)`
+---
+
+[4.1.5] Multiple Choice: What is the output of the following code?
+
+let georgeBirthday = new Date(1732, 1, 22);
+console.log(georgeBirthday);
+
+- (A) Jan 22, 1732
+- (B) Feb 22, 1732
+- (C) Mar 22, 1732
+- (D) Undefined
+---
+
+[4.1.6] Multiple Choice: Which of the following methods gets the full year from a `Date` object?
+
+- (A) `getYear()`
+- (B) `getFullYear()`
+- (C) `getDate()`
+- (D) `getMonth()`
+---
+
+[4.1.7] Multiple Choice: What is the output of this code?
+
+let theFuture = new Date(2035, 9, 21, 7, 28, 0);
+console.log(theFuture);
+
+- (A) Sun Oct 21 2035 07:28:00 GMT-0500
+- (B) Sun Nov 21 2035 07:28:00 GMT-0500
+- (C) Sun Oct 21 2035 00:00:00 UTC
+- (D) Undefined
+---
+
+[4.1.8] Multiple Choice: What happens if you pass only the year to the `Date` constructor?
+
+- (A) It creates a date on January 1st of that year.
+- (B) It creates a date on December 31st of that year.
+- (C) It throws an error.
+- (D) It defaults to the current date.
+---
+
+[4.1.9] Multiple Choice: What does the `setFullYear()` method do in JavaScript?
+
+- (A) Sets the year for the `Date` object to a 2-digit year.
+- (B) Sets the year for the `Date` object to a 4-digit year.
+- (C) Sets the year, month, and date for the `Date` object.
+- (D) It doesn't exist in JavaScript.
+---
+
+[4.1.10] Multiple Choice: Which of the following methods can be used to get the day of the week from a `Date` object?
+
+- (A) `getWeekDay()`
+- (B) `getDay()`
+- (C) `getDate()`
+- (D) `getFullDay()`
+---

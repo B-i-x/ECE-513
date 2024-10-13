@@ -1,0 +1,90 @@
+---
+[4.2.1] Multiple Choice: What does the `test()` method do in JavaScript regular expressions?
+
+- (A) It searches for a match in a string and returns the matched substring.
+- (B) It tests if a string matches a pattern and returns true or false.
+- (C) It replaces a substring that matches a pattern.
+- (D) It splits a string into an array of substrings.
+---
+
+[4.2.2] Multiple Choice: What is the output of the following code?
+
+let re = /ab/;
+let words = ["ban", "babble", "make", "flab"];
+words.forEach(function(word) {
+  if (re.test(word)) {
+    console.log(word + " matches!");
+  }
+});
+
+- (A) ban matches!, babble matches!
+- (B) babble matches!, flab matches!
+- (C) make matches!
+- (D) No output
+---
+
+[4.2.3] Multi-Select: Which of the following characters are considered special characters in regular expressions? (Select all that apply)
+
+- (A) `*`
+- (B) `+`
+- (C) `/`
+- (D) `$`
+---
+
+[4.2.4] Multiple Choice: What does the following regular expression match?
+
+/[aeiou]/g
+
+- (A) Matches a single vowel in a string.
+- (B) Matches all vowels in a string.
+- (C) Matches all consonants in a string.
+- (D) Matches numbers in a string.
+---
+
+[4.2.5] Multiple Choice: What does the `replace()` method do when using regular expressions in JavaScript?
+
+- (A) Finds a string and deletes it.
+- (B) Replaces one or more matches of a pattern with a specified replacement.
+- (C) Tests if a string matches a pattern.
+- (D) Returns an array of matched substrings.
+---
+
+[4.2.6] Multiple Choice: What does the regex `/ab*c/` match?
+
+- (A) "ac"
+- (B) "abc"
+- (C) "abbbbbbc"
+- (D) All of the above
+---
+
+[4.2.7] Multi-Select: Which of the following are valid uses of square brackets `[]` in regular expressions? (Select all that apply)
+
+- (A) To specify a range of characters to match.
+- (B) To negate a set of characters.
+- (C) To group parts of a regular expression together.
+- (D) To match exactly one of the characters in the set.
+---
+
+[4.2.8] Multiple Choice: What will the regex `/^ab/` match?
+
+- (A) Any string containing "ab".
+- (B) A string starting with "ab".
+- (C) A string ending with "ab".
+- (D) A string where "ab" appears anywhere.
+---
+
+[4.2.9] Multiple Choice: What does the `exec()` method return when there is no match in JavaScript?
+
+- (A) undefined
+- (B) false
+- (C) null
+- (D) an empty string
+---
+
+[4.2.10] Multiple Choice: Which of the following regex patterns would match "cat", "bat", and "mat"?
+
+- (A) /c|b|m/
+- (B) /cat|bat|mat/
+- (C) /c(b|m)at/
+- (D) /(c|b|m)at/
+---

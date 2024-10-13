@@ -1,0 +1,19 @@
+[4.6.1] (B) A data structure representing the content, structure, and style of a document
+
+[4.6.2] (B) document.getElementById()
+
+[4.6.3] (A) It creates a new paragraph and appends it to the document body.
+
+[4.6.4] (A) document.getElementById(), (B) document.createElement(), (C) document.addEventListener()
+
+[4.6.5] (A) "Hello" will be replaced with "Goodbye"
+
+[4.6.6] (A) addEventListener()
+
+[4.6.7] (A) It represents the browser's window or frame that displays the document.
+
+[4.6.8] (A) window.location.href
+
+[4.6.9] (B) To log information or errors to the browser's console for debugging.
+
+[4.6.10] (B) window.location.protocol

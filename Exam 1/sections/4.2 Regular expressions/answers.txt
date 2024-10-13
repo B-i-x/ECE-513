@@ -1,0 +1,19 @@
+[4.2.1] (B) It tests if a string matches a pattern and returns true or false.
+
+[4.2.2] (B) babble matches!, flab matches!
+
+[4.2.3] (A) `*`, (B) `+`, (D) `$`
+
+[4.2.4] (B) Matches all vowels in a string.
+
+[4.2.5] (B) Replaces one or more matches of a pattern with a specified replacement.
+
+[4.2.6] (D) All of the above
+
+[4.2.7] (A) To specify a range of characters to match., (B) To negate a set of characters., (D) To match exactly one of the characters in the set.
+
+[4.2.8] (B) A string starting with "ab".
+
+[4.2.9] (C) null
+
+[4.2.10] (D) /(c|b|m)at/

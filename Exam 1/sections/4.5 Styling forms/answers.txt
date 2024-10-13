@@ -1,0 +1,19 @@
+[4.5.1] (C) display: inline-block
+
+[4.5.2] (B) margin
+
+[4.5.3] (A) It includes padding and borders in the element's width and height.
+
+[4.5.4] (A) padding, (B) border-radius, (C) color, (D) box-shadow
+
+[4.5.5] (B) The cursor changes to a hand icon when hovering over the button.
+
+[4.5.6] (A) A blue, rounded submit button with white text
+
+[4.5.7] (B) The input field turns light blue when it gains focus.
+
+[4.5.8] (B) It makes the element's corners rounded.
+
+[4.5.9] (A) It ensures the button changes color when hovered over.
+
+[4.5.10] (A) padding, (B) border, (C) width, (D) height

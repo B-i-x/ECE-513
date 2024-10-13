@@ -1,0 +1,88 @@
+---
+[4.6.1] Multiple Choice: What is the Document Object Model (DOM) in relation to JavaScript?
+
+- (A) A model representing the visual design of a webpage
+- (B) A data structure representing the content, structure, and style of a document
+- (C) A method for storing variables in JavaScript
+- (D) A technique for minimizing JavaScript files
+---
+
+[4.6.2] Multiple Choice: Which of the following methods is used to select an HTML element by its `id`?
+
+- (A) document.querySelector()
+- (B) document.getElementById()
+- (C) document.getElementsByClassName()
+- (D) document.selectById()
+---
+
+[4.6.3] Multiple Choice: What does the following code do?
+
+let para = document.createElement('p');
+document.body.appendChild(para);
+
+- (A) It creates a new paragraph and appends it to the document body.
+- (B) It removes the first paragraph in the body.
+- (C) It replaces the first paragraph in the body with a new one.
+- (D) It adds a new CSS style to all paragraphs.
+---
+
+[4.6.4] Multi-Select: Which of the following are common methods used to interact with the DOM in JavaScript? (Select all that apply)
+
+- (A) document.getElementById()
+- (B) document.createElement()
+- (C) document.addEventListener()
+- (D) document.removeAttribute()
+---
+
+[4.6.5] Multiple Choice: What will be the output of this JavaScript code?
+
+<div id="myDiv">Hello</div>
+<script>
+document.getElementById("myDiv").innerHTML = "Goodbye";
+</script>
+
+- (A) "Hello" will be replaced with "Goodbye"
+- (B) "Hello" will remain unchanged
+- (C) The div will be removed from the DOM
+- (D) The code will cause an error
+---
+
+[4.6.6] Multiple Choice: Which of the following methods adds an event listener to an HTML element?
+
+- (A) addEventListener()
+- (B) attachListener()
+- (C) setEvent()
+- (D) createListener()
+---
+
+[4.6.7] Multiple Choice: What is the window object in JavaScript?
+
+- (A) It represents the browser's window or frame that displays the document.
+- (B) It represents an HTML element in the DOM.
+- (C) It is a method for creating pop-up windows.
+- (D) It is a method for closing a webpage.
+---
+
+[4.6.8] Multiple Choice: Which property of the window object can be used to get the current URL of a webpage?
+
+- (A) window.location.href
+- (B) window.url
+- (C) window.currentURL
+- (D) window.pageURL
+---
+
+[4.6.9] Multiple Choice: What is the purpose of the console.log() method in JavaScript?
+
+- (A) To display content in an alert box.
+- (B) To log information or errors to the browser's console for debugging.
+- (C) To change the content of a webpage.
+- (D) To modify the style of an HTML element.
+---
+
+[4.6.10] Multiple Choice: How can you check if a webpage is using HTTPS or HTTP using JavaScript?
+
+- (A) window.protocol
+- (B) window.location.protocol
+- (C) document.protocol
+- (D) window.getProtocol()
+---

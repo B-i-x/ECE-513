@@ -1,0 +1,82 @@
+---
+[4.5.1] Multiple Choice: What must be set to make the `label` element's width adjustable?
+
+- (A) display: inline
+- (B) display: block
+- (C) display: inline-block
+- (D) width: auto
+---
+
+[4.5.2] Multiple Choice: What CSS property is used to control the spacing between labels and form inputs?
+
+- (A) padding
+- (B) margin
+- (C) border
+- (D) line-height
+---
+
+[4.5.3] Multiple Choice: What is the effect of adding `box-sizing: border-box` to input fields?
+
+- (A) It includes padding and borders in the element's width and height.
+- (B) It excludes padding and borders from the element's width and height.
+- (C) It adds extra spacing around the element.
+- (D) It removes any styling from the input fields.
+---
+
+[4.5.4] Multi-Select: Which of the following attributes can be used to style form inputs for better usability? (Select all that apply)
+
+- (A) padding
+- (B) border-radius
+- (C) color
+- (D) box-shadow
+---
+
+[4.5.5] Multiple Choice: What happens when you set `cursor: pointer` on a submit button?
+
+- (A) The button becomes clickable, but the pointer does not change.
+- (B) The cursor changes to a hand icon when hovering over the button.
+- (C) The button cannot be clicked.
+- (D) The button changes color on hover.
+---
+
+[4.5.6] Multiple Choice: What is the result of the following HTML code?
+
+<input type="submit" value="Register" style="background-color: #09f; color: white; padding: 10px; border-radius: 4px;">
+
+- (A) A blue, rounded submit button with white text
+- (B) A gray submit button with rounded corners
+- (C) A blue submit button with black text
+- (D) A gray button with no text
+---
+
+[4.5.7] Multiple Choice: What is the effect of adding `background-color: lightblue;` to an input's `:focus` state?
+
+- (A) The input field turns blue when clicked.
+- (B) The input field turns light blue when it gains focus.
+- (C) The input field loses focus after being clicked.
+- (D) The input text changes to light blue.
+---
+
+[4.5.8] Multiple Choice: What does the `border-radius` property do when applied to form elements?
+
+- (A) It removes the borders from the element.
+- (B) It makes the element's corners rounded.
+- (C) It increases the size of the borders.
+- (D) It changes the color of the borders.
+---
+
+[4.5.9] Multiple Choice: What is the purpose of setting `:hover` on a submit button?
+
+- (A) It ensures the button changes color when hovered over.
+- (B) It disables the button when hovered.
+- (C) It changes the text color of the button.
+- (D) It resizes the button when clicked.
+---
+
+[4.5.10] Multi-Select: Which of the following CSS properties can be applied to improve the usability of input fields in a form? (Select all that apply)
+
+- (A) padding
+- (B) border
+- (C) width
+- (D) height
+---

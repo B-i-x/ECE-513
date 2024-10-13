@@ -1,0 +1,19 @@
+[4.3.1] (A) It specifies the URL where the form data should be sent.
+
+[4.3.2] (B) GET
+
+[4.3.3] (A) The form data is added to the URL as query parameters.
+
+[4.3.4] (A) `<input>`, (B) `<form>`, (C) `<label>`
+
+[4.3.5] (A) It specifies how the form data should be encoded when submitted.
+
+[4.3.6] (A) The form data is sent to the server with "first=Rick&last=Deckard" in the request body.
+
+[4.3.7] (A) It adds descriptive text to a form field.
+
+[4.3.8] (A) GET sends data as part of the URL, while POST sends data in the request body.
+
+[4.3.9] (A) text, (B) password, (C) file
+
+[4.3.10] (A) It provides a hint to the user as to what value should be entered.

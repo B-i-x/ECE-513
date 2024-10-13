@@ -1,0 +1,19 @@
+[4.7.1] (C) The `<html>` element
+
+[4.7.2] (C) An attribute node
+
+[4.7.3] (A) Element node, (B) Attribute node, (C) Text node, (D) Document node
+
+[4.7.4] (C) To create a new element node
+
+[4.7.5] (A) It is a representation of the HTML structure in the browser.
+
+[4.7.6] (B) It updates the text inside the element.
+
+[4.7.7] (A) `document.getElementById()`, (B) `document.querySelector()`, (D) `document.getElementsByTagName()`
+
+[4.7.8] (C) It adds a new child node to an element.
+
+[4.7.9] (A) `innerHTML` sets both HTML and text content, while `textContent` sets only the text content.
+
+[4.7.10] (B) `removeAttribute()`

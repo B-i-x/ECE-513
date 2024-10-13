@@ -1,0 +1,80 @@
+---
+[4.7.1] Multiple Choice: What is the root node in a DOM tree?
+
+- (A) The `<head>` element
+- (B) The `<body>` element
+- (C) The `<html>` element
+- (D) The first `<div>` element
+---
+
+[4.7.2] Multiple Choice: Which of the following is created when an HTML attribute is added to an element?
+
+- (A) A text node
+- (B) A comment node
+- (C) An attribute node
+- (D) An element node
+---
+
+[4.7.3] Multi-Select: Which of the following are valid DOM node types? (Select all that apply)
+
+- (A) Element node
+- (B) Attribute node
+- (C) Text node
+- (D) Document node
+---
+
+[4.7.4] Multiple Choice: What is the purpose of the `document.createElement()` method in the DOM?
+
+- (A) To create a new text node
+- (B) To remove an existing element
+- (C) To create a new element node
+- (D) To modify an existing element's content
+---
+
+[4.7.5] Multiple Choice: Which of the following is true about the DOM?
+
+- (A) It is a representation of the HTML structure in the browser.
+- (B) It is only used for static web pages.
+- (C) It does not allow manipulation of HTML elements.
+- (D) It can only be modified using CSS.
+---
+
+[4.7.6] Multiple Choice: What happens when you modify the `textContent` property of a DOM element?
+
+- (A) It replaces the element with a new element.
+- (B) It updates the text inside the element.
+- (C) It changes the element's CSS styling.
+- (D) It removes the element from the DOM.
+---
+
+[4.7.7] Multi-Select: Which of the following methods are used to search for nodes in the DOM? (Select all that apply)
+
+- (A) `document.getElementById()`
+- (B) `document.querySelector()`
+- (C) `document.createTextNode()`
+- (D) `document.getElementsByTagName()`
+---
+
+[4.7.8] Multiple Choice: What does the `appendChild()` method do in the DOM?
+
+- (A) It replaces an existing child node.
+- (B) It removes a child node.
+- (C) It adds a new child node to an element.
+- (D) It moves a node to the beginning of the parent element.
+---
+
+[4.7.9] Multiple Choice: What is the difference between `innerHTML` and `textContent` in the DOM?
+
+- (A) `innerHTML` sets both HTML and text content, while `textContent` sets only the text content.
+- (B) `textContent` can be used to set HTML content, but `innerHTML` cannot.
+- (C) `textContent` preserves HTML formatting, while `innerHTML` does not.
+- (D) `innerHTML` and `textContent` are functionally identical.
+---
+
+[4.7.10] Multiple Choice: Which DOM method is used to remove an attribute from an element?
+
+- (A) `removeChild()`
+- (B) `removeAttribute()`
+- (C) `setAttribute()`
+- (D) `deleteNode()`
+---

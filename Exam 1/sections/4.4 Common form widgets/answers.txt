@@ -1,0 +1,19 @@
+[4.4.1] (B) It sets the checkbox to be selected by default.
+
+[4.4.2] (B) The browser does not send the checkbox value at all.
+
+[4.4.3] (A) `checked`, (B) `value`, (C) `name`
+
+[4.4.4] (A) Associates the label with a specific form element using the element's `id`.
+
+[4.4.5] (B) Checkboxes allow multiple selections, while radio buttons only allow one selection per group.
+
+[4.4.6] (A) The name and value of the selected radio button.
+
+[4.4.7] (C) The browser does not send the name or value of the radio button group.
+
+[4.4.8] (A) `checkbox`, (C) `select` with the `multiple` attribute
+
+[4.4.9] (B) The value sent to the server if the checkbox is selected.
+
+[4.4.10] (B) "on"

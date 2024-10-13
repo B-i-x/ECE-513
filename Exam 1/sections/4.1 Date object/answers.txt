@@ -1,0 +1,19 @@
+[4.1.1] (B) To represent a specific moment in time, measured in milliseconds since January 1, 1970 (Unix Epoch)
+
+[4.1.2] (B) The current time in the local time zone
+
+[4.1.3] (B) Dec 31, 1969, 18:00:01 UTC
+
+[4.1.4] (A) `new Date()`, (B) `new Date("2024-01-01")`, (C) `new Date(2024, 0, 1)`, (D) `new Date(1000)`
+
+[4.1.5] (B) Feb 22, 1732
+
+[4.1.6] (B) `getFullYear()`
+
+[4.1.7] (A) Sun Oct 21 2035 07:28:00 GMT-0500
+
+[4.1.8] (A) It creates a date on January 1st of that year.
+
+[4.1.9] (B) Sets the year for the `Date` object to a 4-digit year.
+
+[4.1.10] (B) `getDay()`
