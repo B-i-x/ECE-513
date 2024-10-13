@@ -52,7 +52,11 @@ for area in subsections:
             questions:
             ---
 
-            [1.2.1] True/False: The <body> tag can contain any number of <head> tags to structure the document metadata repeatedly.
+            [1.2.1] Multiple Choice: Which tag is used to define an independent, self-contained content that could be syndicated?
+            - (A) <div>
+            - (B) <section>
+            - (C) <article>
+            - (D) <span>
 
             ---
 
@@ -65,7 +69,7 @@ for area in subsections:
             ---
 
             answers:
-            [1.2.1] False
+            [1.2.1] (C) <article>
             [1.2.2] (C) To connect the document to external stylesheets
             The content is:
 
@@ -97,7 +101,8 @@ for area in subsections:
                     if 'questions:' in response and 'answers:' in response:
                         parts = response.split('answers:')
                         questions_part = parts[0].strip()
-                        answers_part = 'answers:' + parts[1].strip()
+                        questions_part = questions_part.replace('questions:', '')
+                        answers_part = parts[1].strip()
                     else:
                         print(f"Unexpected format in response for {filepath}. Saving entire response as questions.")
                         questions_part = response
