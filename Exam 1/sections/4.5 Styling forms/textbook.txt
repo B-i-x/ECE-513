@@ -1,0 +1,603 @@
+Styling forms with CSS
+2024-10-12, 4:47 p.m.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+48 of 159 2024-10-12, 4:47 p.m.
+Web forms are an important part of many websites. A usable form allows the user to quickly and
+painlessly enter data. Forms require CSS formatting to improve usability.
+Figure 4.5.1: HTML form without CSS styling and an improved form with
+styling.
+ame Name
+1--------~
+Email
+Email
+Service Basic
+Register
+I PARTICIPATION I ACTIVITY 4.5.7: Create a styled form.
+The webpage below displays a simple web form with little styling. Add the following CSS
+to create a more usable web form:
+1. Add a label selector that makes all labels have the same width and margin. Since
+a label is an inline element, the label's width cannot be changed without making a
+label an inline-block. Also, right-align the label text to improve the reader's ability to
+mentally link the label to the input field .
+label {
+width : SOpx ;
+display : inline - block;
+text- align : right ;
+margin- right : 8px ;
+Render the webpage and observe the labels are equal length and right aligned.
+2. Add a selector that gives the text input, email input, and drop-down menu the same
+consistent width with some padding to increase the size of the inputs. Also, change
+the border color and radius to give the inputs a softer look.
+□
+input[type=text], input[type=email], select {
+box-sizing: border-box;
+width: 250px;
+padding: 10px;
+border: 1px solid #aaa;
+border-radius: 4px;
+}
+input[type=submit] {
+width: 200px;
+background-color: #09f;
+color: white;
+padding: 15px;
+margin: 10px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+input[type=submit]:hover {
+background-color: #07d;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+49 of 159 2024-10-12, 4:47 p.m.
+Render the webpage and observe the inputs are equal size and are spaced out.
+3. Add styling to the submit button to create a blue button that looks less like a
+traditional browser button. Also, change the default mouse cursor to a pointer icon
+to give the user a visual cue that the button is pressable.
+Render the webpage and observe the Register button is blue and much larger.
+Moving the mouse over the button changes the pointer icon.
+4. To give the user another visual cue that the button is clickable, darken the button
+color when the mouse hovers over the button.
+Render the webpage and verify the Register button's color gets darker when the
+mouse hovers on the button.
+I HTML I css j
+Name
+Email
+Service
+Basic
+Register
+zyBooks
+50 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1
+2
+~(form1 action=" https: / /wp. zybooks. com/form-viewer. php" target="_blank" met
+<p>
+3 <label for="name" >Name</label>
+4
+5
+<i nput type="text" id="name" name="fullname">
+</p>
+6 <p>
+7 <label for="email" >Email </ label>
+8
+9
+<i nput type="email" id="email" name="email">
+</p>
+10
+11
+12
+13
+14
+15
+16
+17
+1s:l
+<p>
+<label for="service" >Service</ label>
+<select id="service" name="service">
+<option >Basic </option>
+<option >Prime</option>
+<option >Deluxe</option>
+</ select>
+</p>
+Render webpage Reset code
+Your webpage Expected webpage
+Name
+Email
+Service [ Basic v ]
+[ Register ]
+► View solution
+I PARTICIPATION I ACTIVITY 4.5.2: Form styles.
+1) In the example above, the label's
+width could not be changed until
+which CSS property/value was set?
+0 display: inline-block
+[ Basic
+□
+0
+2024-10-12, 4:47 p.m.
+display: block
+display: none
+input
+input[type=text]
+input[type=text],
+select
+boxsizing:
+border-box;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+51 of 159 2024-10-12, 4:47 p.m.
+0
+0
+2) What CSS selector selects only text 0
+inputs?
+0
+0
+0
+3) In the example above, what happens 0
+to the text and email inputs if
+- -----':::,. --- ~-- ---·· is removed
+from the input [type=text],
+input[type=email], select
+selector's rule?
+0 Inputs are no longer visible
+0 Inputs are no longer editable
+0 Inputs become wider
+4) In the example above, what visual 0
+cues help the user to know that the
+blue rectangle with "Register" in the
+middle is a button that can be
+pressed?
+0 The button has rounded
+corners.
+0 The pointer icon appears when
+hovering over the button.
+The pointer icon appears, and
+0 the button color changes when
+hovering over the button.
+Paragraphs vs. divs
+<p>
+<div>
+label>
+name="nickname">
+label>
+name="nickname">
+placeholder
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+52 of 159 2024-10-12, 4:47 p.m.
+The W3C recommends putting form elements in elements, but many leading
+web frameworks like Bootstrap use elements instead. Either container is
+acceptable, and this material uses both sty/es.
+<! -- Example div container -->
+<div>
+<label for= "nicknarne" >Nicknarne?</
+<input type= "text" id= "nicknarne"
+</div>
+<!-- Example p container -->
+<p>
+<label for= "nicknarne" >Nicknarne?</
+<input type= "text" i d = "nicknarne"
+</p>
+Proper use of field labels
+Form field labels should be placed uniformly in the same location on a website's web
+forms. The best places for labels are immediately above or to the left of an input
+field. Some developers use only the p l acehc HTML attribute in place of labels
+to save screen space and reduce clutter, especially on mobile devices. However,
+usability experts warn that placeholders used as labels can create a number of
+problems for users and should be avoided.
+Name
+Name Name
+Improving text input fields
+An input field can be further improved. Changing an input's border color or background color
+focuses the user's attention to the input. Ex: Changing the input border color to red may indicate an
+error with the input. Adding a commonly recognized icon to an input field can improve the user's
+ability to recognize the purpose of the input. Ex: Adding a search icon to a search input. I PARTICIPATION I . . ACTIVITY 4.5.3: Augmenting an input. □
+:invalid
+input:invalid {
+border: 2px solid red;
+}
+:focus
+input[type=text]:focus, input[type=email]:focus {
+background-color: lightblue;
+}
+background-image
+background-position background-repeat:no-repeat
+input[type=search] {
+float: right;
+background-image: url("https://resources.zybooks.com/
+WebProgramming/searchiconv1.png");
+background-position: 5px 5px;
+background-repeat: no-repeat;
+padding-left: 40px;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+53 of 159 2024-10-12, 4:47 p.m.
+The webpage below displays a web form on the left and a search box on the right. A
+partial email address is entered in the email input field. Add the following CSS:
+1. Add an selector at the end of the CSS stylesheet that sets an invalid
+input's border to red to indicate an error:
+Render the webpage and observe the email input now has a red border.
+2. Add a selector that applies styles to an input that has the focus, and
+change the background color to light blue:
+Render the webpage and observe that the name and email inputs become light blue
+when the inputs have the focus. The browser automatically places a border around
+an input that has the focus.
+3. Add a search icon to the search input by adding a that is
+positioned with . Set
+so the background image only displays once:
+Render the webpage and observe the search icon in the search input.
+I HTML I css j
+zyBooks
+54 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 <i nput type="search" placeholder="Search">
+2
+3
+4
+<form action="https://wp.zybooks.com/form-viewer.php" target="_blank" met
+<p>
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+1s:l
+<label for="name" >Name</label>
+<i nput type="text" id="name" name="fullname">
+</p>
+<p>
+<label for="email" >Email </ label>
+<i nput type="email" id="email" name="email" value="dara" >
+</p>
+<p>
+<label for="service" >Service</ label>
+<select id="service" name="service">
+<option >Basic </option>
+<option >Prime</option>
+<option >Deluxe</option>
+✓ / color+ ,
+Render webpage Reset code
+Your webpage
+Name
+Email
+[ dara
+Service
+[ Basic v]
+Register
+► View solution
+I PARTICIPATION I . ACTIVITY 4.5.4: Augmented inputs.
+1) Many browsers add a border around
+an input when the input has the
+focus .
+0 True
+[ Search
+□
+0
+2024-1 0-1 2, 4:47 p.m.
+:focus
+appearance none
+::before
+content
+<fieldset>
+<legend>Size:</legend>
+<div>
+<input id="small" type="radio" name="size"
+<label for="small">Small</label>
+</div>
+<div>
+<input id="medium" type="radio" name="size"
+<label for="medium">Medium</label>
+</div>
+<div>
+<input id="large" type="radio" name="size"
+<label for="large">Large</label>
+</div>
+</fieldset>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+55 of 159 2024-10-12, 4:47 p.m.
+0 False
+2) The selector normally
+selects more than one element at a
+time.
+0 True
+0 False
+3) Changing the email address to
+dara@gmail .com removes the red
+border.
+0 True
+0 False
+Styling radio buttons and checkboxes
+0
+0
+Radio buttons and checkboxes use the styling properties supplied by the browser and may differ
+between browsers. Styling radio buttons and checkboxes requires hiding the default widget, then
+displaying a custom widget before each label that changes appearance when checked or focused.
+The CSS property appearance is used to control a widget's appearance based on the operating
+system's theme. Setting to hides the widget.
+To display a custom radio button or checkbox, the pseudo-element selector and
+property are used to insert content before the label's content that looks like a radio
+button or checkbox. I PARTICIPATION I . . ACTIVITY 4.5.5: Styling radio buttons.
+input [type=radio ] + label {
+cursor : poi nter ;
+□
+input [type=radio ] {
+appearance : none ;
+margi n : 0 ;
+.. .LU - .:::,11tcL .L L..:J_l:-)C:: - .LO.U.1.1.. 110.HLC: -
+input [type=radio ] + label : :before
+content : " \OOaO " ; / *Space*/
+border- radi us : lOpx ;
+d i spl ay : i n li ne - b l ock ;
+wi dth : lem; he i ght : lem;
+text- a lign : center;
+line- height : lem;
+font - s i ze : 0 . 8em;
+margin- right : lOpx ;
+~,....,.,._ IT,....""' • -, -, •• . - -, -, I "" ,. -
+background-color: #aaa;
+border: 0.125em solid white;
+}
+input[type=radio]:checked + label::before {
+content: "\2022"; /* Bullet */
+color: white;
+background: green;
+}
+input[type=radio]:focus + label::before {
+box-shadow: 0 0 0 1px #888;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+56 of 159 2024-10-12, 4:47 p.m.
+Animation content:
+There are two blocks of code. The CSS:
+input[type=radio] + label {
+cursor: pointer;
+}
+input[type=radio] {
+position: absolute;
+height 1 px; width: 1 px;
+clip: rect(O O 1 1 );
+}
+input[type=radio] + label::before {
+}
+content: "\OOaO"; /* Non-breaking space*/
+border-radius: 1 Opx;
+display: inline-block;
+width: 1 em; height 1 em;
+text-align: center;
+line-height 1 em;
+font-size: 0.8em;
+margin-right: 1 Opx;
+background-color: #aaa;
+border: 0.125em solid white;
+input[type=radio]:checked + label::before {
+content: "\2022"; /*Bullet*/
+color: white;
+background: green;
+}
+input[type=radio]:focus + label::before {
+box-shadow: O O O 1 px #888;
+}
+and the HTML:
+<p>Size:</p>
+r g
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+57 of 159 2024-10-12, 4:47 p.m.
+<div>
+<input id="small" type="radio" name="size">
+<label for="small">Small</label>
+</div>
+<div>
+<input id="medium" type="radio" name="size">
+<label for="medium">Medium</label>
+</div>
+<div>
+<input id="large" type="radio" name="size">
+<label for="large">Large</label>
+</div>
+A screen shows three radio buttons labeled Small, Medium, and Large. cursor: pointer makes the
+cursor change when the user hovers over the radio button or the label. The input[type=radio]
+block positions the radio buttons off of the screen. To create custom radio buttons, add an empty
+space before the labels with a circular border, this is shown in the input[type=radio] + label::before
+CSS block. The input[type=radio]:checked + label::before CSS block changes the custom button to
+green empty space with a white dot in the middle when clicked. When a radio button has the
+focus, input[type=radio]:focus + label::before shows a grey shadow around the empty space.
+Animation captions:
+1. The default radio buttons are plain looking and cannot be styled.
+2. The+ selector selects <label> elements that are immediately after <input type="radio">
+elements.
+3. Changing the label's cursor to a pointer helps the user know the label is clickable.
+4. Changing setting appearance to none hides the radio buttons, but screen readers still "see"
+the radio buttons.
+5. ::before inserts the content \00a0, a non-breaking space, before the radio button label's
+content.
+6. Custom radio buttons are created by displaying a single empty space within a circular
+border.
+7. When a radio button is checked, a white bullet with green background replaces the previous
+content (the space).
+8. When a radio button has the focus, a gray shadow displays around the content before the
+label.
+I PARTICIPATION I
+ACTIVITY 4.5.6: Style the checkboxes.
+The webpage below displays three styled radio buttons followed by four unstyled
+checkboxes. Add the following CSS to style the checkboxes:
+□
+input[type=checkbox] + label {
+cursor: pointer;
+font-size: 1.3em;
+}
+input[type=checkbox] {
+appearance: none;
+margin: 0;
+}
+input[type=checkbox] + label::before {
+content: "\00a0"; /* Non-breaking space */
+display: inline-block;
+width: 16px;
+height: 16px;
+text-align: center;
+line-height: 1em;
+font-size: 0.8em;
+margin-right: 10px;
+border: 0.125em solid white; /* Push focus shadow away */
+background-color: #aaa;
+}
+input[type=checkbox]:checked + label::before {
+content: "\2713"; /* Checkmark */
+color: white;
+background: green;
+}
+input[type=checkbox]:focus + label::before {
+box-shadow: 0 0 0 1px gray;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+58 of 159 2024-10-12, 4:47 p.m.
+1. Add a rule that adds a pointer cursor to the checkboxes' labels:
+Render the webpage and verify that the cursor changes to a pointer when mousing
+over the checkbox labels.
+2. Add a rule that hides the checkboxes:
+Render the webpage and verify the default checkboxes are no longer visible.
+3. Add a rule that adds a gray square in front of the checkbox labels:
+Render the webpage and verify the checkboxes appear as squares.
+4. Add a rule to display a white checkmark with green background when a checkbox is
+checked:
+Render the webpage and verify that clicking on a checkbox displays a checkmark in
+the box.
+5. Add a rule to display a gray border around the checkbox that has the focus:
+Render the webpage and verify that the last clicked checkbox has a gray border.
+Size:
+Small
+Flavors:
+Raspberry
+zyBooks
+59 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+I HTML I css I
+1 <[i!_elds~
+2 <legend>Size: </legend>
+3 <div>
+4 <input id="small" type="radio" name="size" value="small" >
+5 <label for ="small" >Small </ label>
+6 </div>
+7 <div>
+8 <input id="medium" type="radio" name="size" value="medium" >
+9 <label for ="medium" >Medium</ label>
+10 </div>
+11 <div>
+12 <input id="large" type="radio" name="size" value="large" >
+13 <label for ="large" >Large </ label>
+14 </div>
+15 </fieldseb
+16
+17 <fieldset>
+1 s:l ,-1 ononrl,C1 :::.\/f''\t'"'\C' • / /1 ononrl,
+Render webpage Reset code
+Your webpage
+Size:------------Small
+Medium
+Large
+Flavors:-----------
+□ Raspberry
+D Grape
+D Cherry
+D Root Beer
+► View solution
+Expected webpage
+1
+Size:------------Small
+Medium
+Large
+Flavors:-----------Raspberry
+Grape
+Cherry
+Root Beer
+I PARTICIPATION I . . ACTIVITY 4.5.7: Styling radio buttons and checkboxes.
+1) Which label is selected by
+input[type=radio] + label?
+□
+0
+2024-10-12, 4:47 p.m.
+<input
+type="checkbox"><label></
+label>
+<input
+type="radio"><label></
+label>
+<label></label><input
+type="radio">
+display:none
+display:none
+display
+input:checked
+input[type=checkbox]:focus
+input[type=checkbox]:checked
+span::before {
+content: "Before";
+}
+<span>Test</span>
+Before<span>Test</
+span>
+<span>BeforeTest</
+span>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+60 of 159 2024-10-12, 4:47 p.m.
+0
+0
+0
+2) In the exercise above, the default
+radio buttons and checkboxes could
+have been hidden using the CSS
+. Why is hiding the
+radio buttons and checkboxes with
+not a good idea?
+0 Cross-browser support issues.
+Screen readers will think the
+0 radio buttons or checkboxes
+are not visible.
+0 The property should
+be avoided.
+3) Which CSS selector selects only checkboxes
+that are checked?
+0
+0
+0
+4) What does the DOM look like after the
+CSS and HTML below are rendered?
+0
+0
+0
+0
+0
+SHOW EXPECTED
+zyBooks
+61 ofl59
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+O <span>Test</
+span>Before
+I CHALLENGE I . ACTIVITY 4.5.1: Styling forms.
+5707 04.2065416 qx3zqy7
+Start
+For the <label> element, set display to inline-block, use a width of 40px, align the text to
+the left, and add a margin on the right of 6px. 1 label {
+2
+I css I HTML I
+3 /* Your solution goes here*/
+4
+5 }
+6 form {
+7 font : 10pt Arial;
+8 background-color : #eee;
+9 padding : 10px;
+10 }
+1 2
+Check Next
+View your last submission v
+3 4

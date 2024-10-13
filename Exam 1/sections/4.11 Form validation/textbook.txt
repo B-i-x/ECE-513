@@ -1,0 +1,594 @@
+Validating data in the web browser
+□
+Since data integrity is essential to most applications, many web forms require specific formats for
+users to enter data. Ex: A credit card must contain 16 digits, a date cannot have a fifteenth month,
+and only 50 valid names of states exist for the United States of America .
+2024-10-12, 4:47 p.m.
+Credit #:</"address"></"acceptTerms"
+>
+Credit Card #:
+Address:
+I accept the terms of sale:
+Submit
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+139 of 159 2024-10-12, 4:47 p.m.
+Data validation is checking input for correctness. While a web server must perform data validation
+on submitted data, a better user experience occurs when the web browser performs the same data
+validation before submitting. Any invalid data in the webpage can be immediately flagged as
+needing modifications without waiting for the server to respond.
+Data validation can either be performed while the user enters form data by adding a JavaScript
+function as the change handler for the appropriate field, or immediately prior to submitting the
+entire form by adding a function as the form's submit handler. I PARTICIPATION I . . . ACTIVITY 4.11.1 : Validating form input.
+< ! DOCTYPE html>
+<html>
+<head>
+<title>Purchase Form</title>
+<script src=" validate . js" defer></script>
+</head>
+<body>
+<form>
+<label for =" cardNumber " >Credi t Card # : </label>
+<input type=" text " name="cardNumber"
+i d="cardNumber">
+<label for =" address " >Address : </label>
+<textarea name=" address " i d= "address "></ textarea>
+<label for =" acceptTerms " >I accept the terms of
+sa l e : </label>
+<input type="checkbox" name="acceptTerms "
+i d="acceptTerms ">
+<input type=" submit" value=" Submit ">
+</form>
+</body>
+</html>
+Animation content:
+The following code is displayed.
+<!DOCTYPE html>
+<html>
+<title>Purchase Form</ title>
+<script src="validate.js" defer></ script>
+<body>
+<form>
+<label for="cardNumber">Credit Card #:</label>
+<input type="text" name="cardNumber"
+id="cardNumber">
+□
+I 12341234123412
+123 Main St.
+Anytown, KS 12345
+0
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+140 of 159 2024-10-12, 4:47 p.m.
+<label for="address">Address:</label>
+<textarea name="address" id="address"></textarea>
+<label for="acceptTerms">I accept the terms of
+sale:</label>
+<input type="checkbox" name="acceptTerms"
+id="acceptTerms">
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+A web form contains an input box labeled "Credit Card#: " and "Address:". A checkbox is labeled
+"I accept the terms of sale:" A button labeled "Submit" is at the bottom of the form.
+Step 1: The line of code reading "<script src="validate.js" defer></script>" is highlighted.
+Step 2: The user enters "12341234ABCD" into the "Credit Card#" field, and "123 Main St. Anytown,
+KS 12345" into the "Address" field, but does not submit the form.
+Step 3: The user presses the "Submit" button, and the "Credit Card#" and "I accept the terms of
+sale" fields are highlighted in red.
+Step 4: The user enters "1234123412341234" into the "Credit Card#" field, and checks the "I
+accept the terms of sale" field before pressing the "Submit" button. All data is registered as valid.
+Animation captions:
+1. The webpage uses JavaScript in validate.js to validate the web form.
+2. The user enters invalid form data and does not check the checkbox.
+3. When the user clicks the submit button, the browser executes code in validate.js to validate
+the form input and highlights invalid fields in red.
+4. The user must correct the form data before the browser submits the form data to the web
+server. After the user clicks the submit button again, the browser updates the page to
+reflect that all data is valid.
+IAP ACRTTIVICITIPYA TION I 4 .1 1 .2 : Id entI" f Y W hy t h e fiI e Id I•S i•n va lI"d .
+1) Enter 5-digit ZIP code:
+Iz1P
+n Some input characters are not
+□
+0
+value
+length value
+===
+indexOf()
+value
+isNaN()
+match()
+value
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+141 of 159 2024-10-12, 4:47 p.m.
+- digits.
+0 The input field is empty.
+0 The input is too long.
+2) Enter 5-digit ZIP code:
+1103
+O Some input characters are not
+digits.
+0 The input field is empty.
+0 The input length is incorrect.
+3) Enter 5-digit ZIP code:
+I 31M4N
+O Some input characters are not
+digits.
+0 The input field is empty.
+0 The input length is incorrect.
+Validating form input with JavaScript
+0
+0
+Each textual input element in an HTML document has a value attribute that is associated with the
+user-entered text. The attribute can be used to validate user-entered text by checking
+desired properties, such as:
+• Checking for a specific length using the property on the
+• Checking if entered text is a specific value using
+• Checking if the text contains a specific value using the string
+attribute
+• Checking if the text is a number using
+attribute
+method on the
+• Checking that text matches a desired pattern using a regular expression and the string
+method
+Drop-down menus also have a
+option.
+attribute that is associated with the user-selected menu
+Checkboxes and radio buttons have a checked attribute that is a boolean value indicating whether
+the user has chosen a particular checkbox or radio button. The checked attribute can be used to
+ensure an input element is either checked or unchecked before form submission. Ex: Agreeing to a
+website's terms of service.
+I
+Sale price:
+<input type="text" id="salePrice">
+<span id="errorMsg"></span>
+let salePriceWidget = document.querySelector("#salePrice");
+let errorMsg = document.querySelector("#errorMsg");
+errorMsg.innerHTML = "";
+if (salePriceWidget.value.length === 0) {
+errorMsg.innerHTML = "Sale price is missing.";
+}
+else if (isNaN(salePriceWidget.value)) {
+errorMsg.innerHTML = "Please enter a number.";
+}
+else {
+let salePrice = parseFloat(salePriceWidget.value);
+if (salePrice < 10 || salePrice > 1000) {
+errorMsg.innerHTML = "Must be between $10 and $1000.";
+}
+}
+9 Must be between $10 and $1000.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+142 of 159 2024-10-12, 4:47 p.m.
+ACT1v1TY 4.11 .3: Validating the sale price. I PARTICIPATION I
+Animation content:
+HTML code:
+<input type="text" id="salePrice">
+<span id="errorMsg"></span>
+JavaScript code:
+let salePriceWidget = document.querySelector("#salePrice");
+let errorMsg = document.querySelector("#errorMsg");
+errorMsg.innerHTML = "'';
+if (salePriceWidget.value.length === 0) {
+errorMsg.innerHTML = "Sale price is missing.";
+}
+else if (isNaN(salePriceWidget.value)) {
+errorMsg.innerHTML = "Please enter a number.";
+}
+een :i, ·1u ana :i,·1uuu.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+143 of 159 2024-10-12, 4:47 p.m.
+else {
+let salePrice = parseFloat(salePriceWidget.value);
+if (salePrice < 10 II salePrice > 1000) {
+}
+}
+errorMsg.innerHTML = "Must be between $10 and $1000.";
+Animation captions:
+1. The user can enter a sale price into the input field. The span displays validation error
+messages.
+2. The JavaScript code validates the entered price. If nothing is entered, the code displays an
+error message next to the text box.
+3. If the input is "dog", the next if statement calls isNaN() to detect the invalid input and shows
+an error message.
+4. If the input is a number like 9, parseFloat() converts the "9" string into the number 9.
+5. The if statement displays an error message when the price is not between $10 and $1000.
+IAP ACRTTIVICITIPYA TION I 4 .1 1 .4 : Us i•n g J ava Sc ri•p t to va l"Id ate i•n put fiI e Id s.
+1) What does the validation function
+return for checkGrade ( "-5")?
+function checkGrade (grade )
+return grade . length > 0 &&
+!isNaN (grade );
+}
+0 true
+0 false
+0 null
+2) What does the validation function
+return for checkGrade (" 95. 3")?
+function checkGrade (grade ) {
+return !isNaN (grade ) &&
+grade >= 0 && grade <=
+10 ;
+0 true
+0 false
+□
+0
+0
+preventDefault()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+144 of 159 2024-10-12, 4:47 p.m.
+3) What does the validation function
+return for
+checkTemperature("-40 11 )?
+fun c ti on
+che ckTemperature (temp ) {
+return temp . length > 0 &&
+isNaN (temp ) &&
+temp >= 0 && temp <=
+1000 ;
+}
+0 true
+0 false
+4) What does the validation function
+return for
+checkTemperature (" ")?
+fun c ti on
+che ckTemperature (temp )
+return temp . length > 0 &&
+isNaN (temp ) &&
+temp >= 0 && temp <=
+1000 ;
+}
+0 true
+0 false
+Validating form data upon submission
+Validating form data using JavaScript that executes when the user submits the form can be
+performed by:
+1. Register a handler for the form's submit event that executes a validation function.
+2. Within the validation function, inspect the form's input fields via the appropriate DOM
+elements and element attributes.
+0
+0
+3. If the form is invalid, call the method on the event to cancel the form
+submission and prevent the form data from being sent to the server.
+Figure 4.11.1: Ensuring a checkbox is selected before the form is
+submitted.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Terms of Service</title>
+<script src="validate.js" defer></script>
+</head>
+<body>
+<form id="tosForm" action="https://example.com" target="_blank"
+method="POST">
+<p>
+<label for="tos">I agree to the terms of service:</label>
+<input type="checkbox" id="tos">
+querySelector("#tos");
+// Cancel form submission tos not checked
+"#tosForm");
+checkForm);
+checkForm()
+style. backgroundColor Orange
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+145 of 159 2024-10-12, 4:47 p.m.
+........ ,, +- -. .,,...,...., ,.. '
+</ p>
+<input type=" submit ">
+< / form>
+</ body>
+</ html>
+II validate . js
+fun ction chec kFo rm (event )
+let t o sWi dget = document . querySe l e c t
+II Can cel f orm submissi on if t o s n o t
+if (! tosWidget . c hecked) {
+event . preventDefault ();
+let tos Form = document . querySe l e c tor ("#
+t o s Form . addEventListener ( " submi t " , c hec
+IAP ACRTTIVICITIPYA TION I 4 .1 1 .5 : p ractI.c e va II' d ati.n g f orm pri.o r to su b mI.s sI.o n.
+Complete the JavaScript checkForm () function so that
+- ~'- \.., ......... .J.. '--4..1..1.J~
+sets the input
+style. backgroundColor to LightGreen for each field that passes the validation
+check and sets the input field's backgr to if the validation
+fails.
+Validation rules:
+• The screen name field must not be empty.
+• The ZIP code field must be of length 5.
+• The TOS field must contain "yes".
+Note that some browsers will override the light green color with another color if the user
+chooses an autofill option instead of typing a value.
+□
+zyBooks
+146 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+HTML CSS [ JavaScript j
+1 <fort!!] id="tosForm" action="https://wp.zybooks.com/form-viewer.php" method="
+2 <label for="screenName" >Screen name: </ label>
+3 <i nput
+4 <label
+5 <i nput
+6 <label
+7 <i nput
+8 <i nput
+9 <l'f~
+10
+type="text" id="screenName" name="screenName">
+for="zip" >ZIP code: </ label>
+type="text" id="zip" name="zip" placeholder="5-digit ZIP code" >
+for="tos" >Type <strong>yes </strong> if you agree to the terms of
+type="text" name="agreement" id="tos">
+type="submit" value="Submit">
+Render webpage Reset code
+Your webpage Expected webpage
+Screen name: Screen name:
+ZIP code: ZIP code:
+[ 5-digit ZIP code [ 5-digit ZIP code
+Ty e yes if you agree to the terms of service: Type yes if you agree to the terms of service:
+[ Submit ] [ Submit ]
+► View solution
+Validating each field as data is entered
+Alternatively, form data can be validated as the user enters data in the form by:
+1. For each field that should be validated:
+2024-10-12, 4:47 p.m.
+preventDefault()
+></script>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+147 of 159 2024-10-12, 4:47 p.m.
+a. Register an input event handler for the field.
+b. Create a global variable to track whether the field is currently valid. In most cases, this
+global variable should be initialized to false since the form typically starts with the field
+as invalid.
+c. Modify the global variable as appropriate within the field's event handler.
+2. Register a submit event handler for the form that verifies the global variables for each field
+are true.
+3. If one or more of the global variables are false, call the method on the
+submit event to prevent the form from submitting to the server.
+The example below uses a regular expression to verify the user enters five digits for the ZIP code.
+Regular expressions are discussed in more detail elsewhere. The form does not submit unless the
+ZIP is valid.
+Figure 4.11.2: Checking a ZIP code field as the user updates the field.
+< !DOCTYPE html>
+<html l ang= "en" >
+<head>
+<meta charset="UTF- 8 ">
+<title>Terms o f Servi ce</ title>
+<script src="validate. js" defer><
+</ head>
+<body>
+<form id= "tos Form">
+<label for ="zip" >ZIP: </ label>
+<input type="text" id= "zip">
+<input type="submit">
+< / form>
+</ body>
+</ html>
+querySelector("#zip");
+checkZipCode);
+();
+"#tosForm");
+checkForm);
+tosAgreeValid
+tosAgreeValid
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+148 of 159 2024-10-12, 4:47 p.m.
+II validate.js
+let zipCodeValid = false ;
+let zipCodeWidget = document . querySelec
+zipCodeWidget . addEventListener ("input" ,
+function checkZipCode () {
+let regex = /A\d\d\d\d\d$/ ;
+let zip = zipCodeWidget . value . trim ()
+zipCodeValid = zip .match (regex );
+let tosForm = document . querySelector ("#
+tosForm . addEventListener ("submit" , chec
+function checkForm (event ) {
+if ( ! zipCodeValid) {
+event . preventDefault ();
+IAP ACRTTIVICITIPYA TION I 4 .1 1 .6 : p ractI.c e va II' d ati.n g f orm as d ata I•s entere d .
+The JavaScript code defines three boolean variables that must all be true for the form to
+submit: screenNameValid, zipCodeValid, and
+handlers exist:
+. Two input event
+• The checkScreenName () function is called when the screen name changes and
+assigns screenNameValid with true when the field is not empty.
+• The checkZipCode () function is called when the ZIP code changes and assigns
+zipCodeValid with true when the field contains five digits.
+Both functions also make the input widget's background orange if the input is invalid.
+Add a checkTosAgree () function that is called when the TOS agreement input
+changes. The function should assign tosAgreE with true when the user enters
+"yes". The function should also set the input widget's background to the default color if
+"yes" is typed and orange for all other input.
+HTML CSS I JavaScript j
+□
+zyBooks
+149 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1
+2
+~(form1 id="tosForm" action=" https: / /wp. zybooks. com/form-viewer. php" method="
+<label for="screenName" >Screen name: </ label>
+3
+4
+<i nput type="text" id="screenName" name="screenName">
+<label for="zip" >ZIP code: </ label>
+5
+6
+7
+<i nput type="text" id="zip" name="zip" placeholder="5-digit ZIP code" >
+<label for="tos" >Type <strong>yes </strong> if you agree to the terms of
+<i nput type="text" name="agreement" id="tos">
+8 <i nput type="submit" id="validate" value="Submit">
+9 </[form~
+10
+Render webpage Reset code
+Your webpage Expected webpage
+Screen name: Screen name:
+ZIP code: ZIP code:
+[ 5-digit ZIP code [ 5-digit ZIP code
+ou agree to the terms of service: ou agree to the terms of service:
+,--<-~~- ~ - ~ -----
+[ Submit ] [ Submit ]
+► View solution
+Using HTML form validation
+Some HTML form elements and attributes enable the browser to do form validation automatically,
+which reduces the need for JavaScript validation.
+Note
+2024-10-12, 4:47 p.m.
+"5" max="120">
+required>
+"password" minlength="10" maxlength="16">
+pattern="^\d{16}$" title="exactly 16
+required
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+150 of 159 2024-10-12, 4:47 p.m.
+A browser that does not support a particular HTML input element will transform an
+unsupported element into a text input, which then requires JavaScript to validate the
+form data.
+Some customized HTML input elements can only contain valid values, such as date or color.
+Customized elements are automatically checked by the browser and/or filled in by a pop-up input
+picker in the browser, ensuring the submitted value matches a common specification.
+Various element attributes allow the browser to do validation without using JavaScript:
+• The required attribute indicates that the field must have a value (text or selection) prior to
+submitting the form.
+• The max and min attributes indicate the maximum and minimum values respectively that can
+be entered in an input field with ranges, such as a date or number.
+• The maxlength and minlength attributes indicate the maximum and minimum length of input
+allowed by an input field.
+• The pattern attribute provides a regular expression that valid input must match.
+• The title attribute can be used to provide a description of valid input when using the pattern
+attribute.
+Figure 4.11 .3: Using HTML form validation.
+<form>
+<input type="range" name="age" min="S
+<input type="checkbox" name="agree" r
+<input type="password" name="password
+<input type="text" name="credit" patt
+digits ">
+<input type="submit">
+</form>
+Several CSS pseudo-classes exist to style input and form elements:
+• The :valid pseudo-class is active on an element when the element meets all the stated
+requirements in field attributes.
+• The :invalid pseudo-class is active on an element when one or more of the attributes in the
+field are not fully met.
+• The :required pseudo-class is active on an element if the element has the
+attribute set.
+• The :optional pseudo-class is active on an element if the element does not have the
+required
+zyBooks
+151 ofl59
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+attribute set.
+I PARTICIPATION I . . ACTIVITY 4.11.7: Practice with CSS pseudo-classes.
+The form below requires all three inputs to be supplied. A red rectangle appears around
+the form, and the rectangle turns green once all three inputs are given valid values. No
+JavaScript is used, only CSS pseudo-classes that are automatically applied by the
+browser.
+Make the following modifications:
+1. Add the following CSS rule to make each input's background red when the input
+contains invalid data:
+input : invalid {
+backgr ound - col o r : #ffdddd;
+2. Add the following CSS rule to make each input's background green when the input
+contains valid data:
+input :valid {
+backgr ound - col o r : #ddffdd;
+Render the webpage and verify each input is red until valid data is input, then the input
+turns green.
+I HTML I css l
+1 <form action="https://wp.zybooks.com/form-viewer.php" target="_blank" metho
+2 <label for="dob" >Date of birth: </ label>
+3 <input type="date" name="dob" id="dob" required>
+4
+5 <label for="creditCard" >Credit card number: </ label>
+6 <input type="text" name="creditCard" id="creditCard" maxlength="16" patt
+7 title="Exactly 16 digits" required>
+8
+9 <label for= "emailAddr" >Email address: </ label>
+10 <i nput type="email" name="emailAddr" id="emailAddr" required>
+11
+12 <i nput type="submit">
+13 </form1
+14
+□
+2024-10-12, 4:47 p.m.
+zyBooks
+152 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+Render webpage Reset code
+Your webpage Expected webpage
+Date of birth: Date of birth:
+I yyyy - mm - dd ~ I I yyyy - mm - dd ~
+Credit card number: Credit card number:
+Email address: Email address:
+Submit Query I Submit Query I
+► View solution
+I PARTICIPATION I . . . ACTIVITY 4.11.8: Form val1dat1on questions. □
+1) If all the fields in a form have been
+validated before submitting the form
+data to a server, does the server need
+to repeat the field validation?
+0 Yes
+0 No
+2) Is validating input fields as the user
+fills in each field better than validating
+the entire form after all the form data
+has been entered?
+0 Yes
+0 No
+3) If validation shows that a form input
+value is invalid, should the input value
+be reset to the initial value?
+0 Yes
+D
+D
+D
+2024-10-12, 4:47 p.m.
+zyBooks
+153 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+0 No
+4) Can web developers do all form data
+validation using HTML input element
+attributes and not use JavaScript
+validation?
+0 Yes
+0 No
+I CHALLENGE I . . ACTIVITY 4.11 .1: Form val1dat1on.
+570104.2065416.qx3zqy7
+Start
+In the validateForm() function, the if statement verifies the username is at least 3
+characters long. Display "Username is invalid" in the console log if the username does not
+meet the requirement. Use the event method preventDefault() to avoid submitting the
+form when the input is invalid. SHOW EXPECTED
+HTML I JavaScript j
+1 <form id=" userForm" action=" https: //learn. zybooks. com" method="POST" >
+2 <p>
+3 <label for="userName" >Username: </ label>
+4 <i nput type="text" id="userName">
+5 </p>
+6 <p>
+7 <label for="phoneNumber" >Phone number: </ label>
+8 <input type="text" id="phoneNumber">
+9 </p>
+10 <i nput type="submit" id="submitBtn">
+11 </form>
+1 2 3 4 5
+Check Next
+View your last submission v
+0
+□
+2024-10-12, 4:47 p.m.
+fullName
+email
+password
+passwordConfirm
+submit
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+154 of 159 2024-10-12, 4:47 p.m.
+Exploring further:
+• Form data va lidation from MDN

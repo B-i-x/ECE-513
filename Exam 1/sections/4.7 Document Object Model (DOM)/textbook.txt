@@ -1,0 +1,739 @@
+DOM structure
+The Document Object Model (DOM) is a data structure corresponding to the HTML document
+displayed in a web browser. A DOM tree is a visualization of the DOM data structure. A node is an
+individual object in the DOM tree. Nodes are created for each element, the text between an
+element's tags, and the element's attributes.
+• The root node is the node at the top of the DOM.
+• A child node is the node directly under another node. A node can have zero, one, or more child
+nodes (children).
+• A parent node is the node directly above another node. All nodes, except the root node, have
+one parent node. I PARTICIPATION
+ACTIVITY I 4.7.1: Creating the DOM from HTML.
+<html>
+<title>Moby-Di ck</ title>
+<body>
+<p c l ass ="big" >Call me I shmael. Some years ago . . . </ p>
+<p >There now is your i nsul ar c ity of the Manhattoes .. . </ p>
+</ body>
+</ html>
+html
+Legend
+areen - element node
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+80 of 159 2024-10-12, 4:47 p.m.
+Animation content:
+The following code snippet is displayed:
+<html>
+<title>Moby-Dick</title>
+<body>
+<p class="big">Call me Ishmael. Some years ago ... </p>
+<p> There now is your insular city of the Manhattoes ... </p>
+</body>
+<head>
+A legend contains a green element node, a blue text node, and a pink attribute node.
+A tree is shown. At the top of the tree is an element node named html with two child element
+nodes: head and body. Head has a child element node title, which also has a child text node
+"Moby-Dick". Body has two p child element nodes. The first p node has an attribute node
+connected to it labeled class=big, and a child text node that reads: "Ca ll me Ishmael. Some years
+ago ... ". The second p node has only one child text node that reads : "There now is your insular city
+of the Manhattoes ... ".
+Step 1:
+The web browser reads the HTML and creates the DOM's root node from the html element.
+Step 2:
+Although no head element exists in the HTML, a head node is created as a child of the html node.
+The title node is added as a child of the head node.
+Step 3:
+A text node is created for the title element's text content.
+Step 4:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+81 of 159 2024-10-12, 4:47 p.m.
+The body node is a child of the root node. The p element is contained within the body element, so
+the p node is a child of the body node.
+Step 5:
+An attribute node is created for the p element's class attribute. Attribute nodes are always
+connected to element nodes and are not considered children.
+Step 6:
+The browser continues reading the HTML and creating DOM nodes.
+Animation captions:
+1. The web browser reads the HTML and creates the DOM's root node from the html element.
+2. Although no head element exists in the HTML, a head node is created as a child of the html
+node. The title node is added as a child of the head node.
+3. A text node is created for the title element's text content.
+4. The body node is a child of the root node. The p element is contained within the body
+element, so the p node is a child of the body node.
+5. An attribute node is created for the p element's class attribute. Attribute nodes are always
+connected to element nodes and are not considered children.
+6. The browser continues reading the HTML and creating DOM nodes.
+An idealized representation of the DOM tree excludes text nodes that only contain whitespace.
+However, a web developer occasionally needs to know the complete DOM tree, which includes
+whitespace as shown in the example below.
+Figure 4.7.1: Complete DOM tree visualization with whitespace text nodes.
+< !DOCTYPE html>
+<html>
+<head>
+<title>Olympic medals </title>
+</head>
+<body>
+<ol>
+<li>Gold</ li>
+<li>Silver</li>
+<li>Bronze</li>
+</ol>
+</body>
+</html>
+title>
+running broadway shows:</p>
+"www.thephantomoftheopera.com/">The Phantom
+"www.chicagothemusical.com/">Chicago</a></li>
+"www.thelionking.com/">The Lion King</a></li>
+"www.catsthemusical.com/">Cats</a></li>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+82 of 159 2024-10-12, 4:47 p.m.
+◄·ilf&
+I PARTICIPATION I
+ACTIVITY 4.7.2: DOM structure.
+Refer to the HTML and resulting DOM below.
+< !DOCTYPE html>
+<html>
+<head>
+<title>Broadway Show Lengths </ tit
+</ head>
+<body>
+<p id="the_paragraph " >Longest run
+<ol>
+<li><a href="http://www.thepha
+of the Opera</ a >< / li>
+<li><a href="http://www.chicag
+<li><a href="http://www.thelio
+<li><a href="http://www.catsth
+</ ol>
+</ body>
+</ html>
+www.thcphantomofthcopcra.com
+□
+www.thclionking.com
+href
+www .chicagothemusical.com www .catsthemusical.com
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+83 of 159 2024-10-12, 4:47 p.m.
+◄111- • 1) Which node is the root of the DOM
+tree?
+0 html
+0 a
+0 body
+2) Which of the following DOM nodes is
+never a child node?
+0 Element node
+0 Attribute node
+0 Text node
+3) How many child nodes does the p
+element have?
+0 0
+0 1
+0 2
+4) How many child nodes does the ol
+element have?
+0 0
+0 2
+0 4
+5) Which DOM nodes never have child
+nodes?
+0 Element nodes
+0 Attribute nodes only
+0 Text nodes and attribute nodes
+Viewing the DOM in Chrome
+The Chrome DevTools can display an HTML document's DOM by pressing
+Ctrl+Shift+C on Windows or Ctrl+Option+C on a Mac. The DOM may differ from the
+HTML. Ex: The <head> element may be missing from the HTML file but is visible in
+0
+0
+0
+0
+0
+<meta> <title>
+<head>
+document
+id
+document.getElementById("early_languages")
+document.getElementsByTagName("li")
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+84 of 159 2024-10-12, 4:47 p.m.
+the DOM below because
+element.
+Cl Olympic medals X
+C I [j fi le:/1/C:/temp/medal s.html
+l. Gold
+2_ Silver
+3. B ronze
+Ci oJ
+== $1)
+and elements are always placed in the
+□ X
+Elemen s Console/o_ ces etwork Performance Memory Application » : X
+----- Styles Computed Event Listeners »
+• <head>
+<meta charset="UT -8
+<tit e>Olympi c edal s</ tit_e
+</ head
+• <body>
+• <o >
+< i Gol d</ li
+<-i SLver </ i >
+< i Bronze</ li
+</ ol
+</ body
+</ html
+<!doctype>
+Filter :hov .els
+Searching the DOM
+JavaScript is commonly used to search the DOM for a specific node or set of nodes and then
+change the nodes' attributes or content. Ex: In an email application, the user may click a Delete
+button to delete an email. The JavaScript must search the DOM for the node containing the email's
+contents and then change the contents to read "Email deleted".
+The object provides five primary methods that search the DOM for specific nodes:
+1. The document.getE/ementByld() method returns the DOM node whose attribute is the
+same as the method's parameter.
+Ex: returns the p node in the HTML
+below.
+2. The document.getE/ementsByTagName() method returns an array of all the DOM nodes
+whose type is the same as the method's parameter.
+Ex: returns an array containing the four Ii
+nodes from in the HTML below.
+class
+document.getElementsByClassName("traditional")
+ol class
+document.querySelectorAll("li a")
+querySelector()
+querySelectorAll()
+document.querySelector("li")
+getElementById() querySelector()
+Early Languages</title>
+></script>
+Early programming languages still in use:
+"w.wiki/4ZAb">Fortran - 1954</a></li>
+"w.wiki/4NzE">Lisp - 1958</a></li>
+dom.js
+getElementById("early_languages");
+querySelectorAll("li");
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+85 of 159 2024-10-12, 4:47 p.m.
+3. The document.getE/ementsByC/assName() method returns an array containing all the DOM
+nodes whose attribute matches the method's parameter.
+Ex:
+containing the node with the
+returns an array
+attribute matching the word traditional.
+4. The document.querySelectorA/1() method returns an array containing all the DOM nodes that
+match the CSS selector passed as the method's parameter.
+Ex: returns an array containing the two anchor
+nodes in the HTML below.
+5. The document.querySe/ector() method returns the first element found in the DOM that
+matches the CSS selector passed as the method's parameter. expects
+the same types of parameters as but only returns the first element
+found while navigating the DOM tree in a depth-first traversal.
+Ex: returns the Ii node about Fortran.
+A DOM search method name indicates whether the method returns one node or an array of nodes.
+If the method name starts with "getElements" or ends in "All", then the method returns an array,
+even if the array contains one node or is empty. and
+either return a single node or null if no node matches the method arguments. I PARTICIPATION I . . ACTIVITY 4.7.3: Searching the DOM by 1d and by element.
+PE h t ml >
+ang="en ">
+< ! DOCTY
+<html 1
+<head
+<
+>
+title>Earl y Programming Lan
+<s cript
+</ hea
+src="dom.js " defer><
+d>
+<bod '.J >
+<p i d="earl y_l anguages ">
+Earl y programmi ng l anguag
+< / p>
+<o 1 c l ass=" tradi t i onal">
+<li><a href=" https://w . wi
+<li><a href=" https://w.wi
+<li>COBOL
+<li>BAS IC
+< / ol>
+</ bod
+</html>
+y >
+- 1 95 9</ li>
+- 1964</li>
+dom
+l et para = document . getElem
+l et li stitems = document . qu,
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+86 of 159 2024-10-12, 4:47 p.m.
+Animation content:
+The following code is displayed.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Early Programming Languages</title>
+<script src="dom.js" defer></script>
+</head>
+<body>
+<p id="early_languages">
+Early programming languages still in use:
+</p>
+<ol class="traditional">
+<li><a href="https://w.wiki/4ZAb">Fortran - 1954</a></li>
+<li><a href="https://w.wiki/4NzE">Lisp -1958</a></li>
+<li>COBOL - 1959</li>
+<li>BASIC -1964</li>
+</ol>
+</body>
+</html>
+Step 1: The line of code reading "<script src="dom.js" defer></script>" is highlighted. dom.js is
+displayed as follows.
+let para = document.getElementByld("early_languages");
+let listltems = document.querySelectorAll("li");
+Step 2: The line of code assigning the para variable is highlighted and connects to the <p>
+element.
+Step 3: The line of code assigning the listltems variable is highlighted and connects to the <Ii>
+elements in the HTML.
+Animation captions:
+1. The webpage loads dom.js with the defer attribute, so the code in dom.js only executes
+after the webpage and DOM are finished loading.
+2. dom.js calls getElementByld() to find the paragraph with id "early_languages".
+3. dom.js calls querySelectorAII() to find all four Ii elements.
+getElementsByClassName()
+querySelectorAll()
+</title>
+"styles.css">
+script>
+in development:
+content</li>
+presentation</li>
+functionality</li>
+"en.wikipedia.org/wiki/Web_development">More
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+87 of 159 2024-10-12, 4:47 p.m.
+HTMLCollection and Nodelist
+Technically, getElementsByTagName () and
+return an HTMLCollection, and querySelec returns a NodeList.
+HTMLCollection is an interface representing a generic collection of elements. A
+NodeList is an object with a collection of nodes. HTMLCollection and NodeList both
+act like an array Both have a length property, and elements can be accessed with
+braces. Ex: el emen tLi st [ o J is the ftrst element in an HTMLCollection or NodeList.
+I PARTICIPATION I
+ACTIVITY 4.7.4: DOM traversal .
+Refer to the HTML below.
+< !DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web development l anguages<
+<link rel="stylesheet" href="styl
+<script src="dom. j s " defer></ scri:
+</head>
+<body>
+<p class="special">
+Languages used i n web developm
+</p>
+<ul id="list">
+<li id="item-l" >HTML for conte
+<li id="item-2" >CSS for presen
+<li id="item-3" >JavaScript for
+</ul>
+<p class="special">
+<a href="https://en.wikipedia.
+i nformati on</a >
+</p>
+</body>
+</html>
+Select the element(s) or value returned by the given search method.
+1) document . getEl ementByi d ("list" )
+0 ul element
+0 First Ii element
+□
+0
+document.getElementsByTagName("li")
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+88 of 159 2024-10-12, 4:47 p.m.
+2)
+0 All Ii elements
+0 ul element
+0 First Ii element
+0 All Ii elements
+3) document . getEl ementsByTagName ( 11ul 11 )
+[O l
+0 ul element
+0 First Ii element
+0 null
+4) document . querySe l ectorAll ( 11 li 11 )
+5)
+6)
+7)
+0 ul element
+0 First Ii element
+0 All Ii elements
+document . querySe l ector ( 11 #list 11 )
+0 ul element
+0 First Ii element
+0 null
+document . querySe l ector ( 11 .special 11 )
+0 First p element
+0 La st p element
+0 Both p elements
+document . querySe l ector ( 11 item-3 11 )
+0 ul element
+0 Last Ii element
+0 null
+Modifying DOM node attributes
+0
+0
+0
+0
+0
+0
+After searching the DOM for an element, JavaScript may be used to examine the element's
+attributes or to change the attributes. By modifying attributes, JavaScript programs can perform
+src
+src
+style
+<a href="https://www.nasa.gov/" id="nasa_link">NASA</a>
+href id
+nasaUrl = document.getElementById("nasa_link").href
+nasaUrl "https://www.nasa.gov/" href
+document.getElementById("nasa_link").href = "https://www.spacex.com/"
+document.getElementById("nasa_link").removeAttribute("href")
+I love the outdoors!
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+89 of 159 2024-10-12, 4:47 p.m.
+actions including:
+• Change which image is displayed by modifying an img element's attribute.
+• Determine which image is currently displayed by reading the img element's attribute.
+• Change an element's CSS styling by modifying an element's attribute.
+Every attribute for an HTML element has an identically named property in the element's DOM node.
+Ex: 1· " '"T7\ SA-:/u:.- hasa
+corresponding DOM node with properties named
+as both a getter and a setter.
+and . Each attribute property name acts
+• Getter: Using the property name to read the value allows a program to examine the attribute's
+value. Ex:
+the string
+attribute.
+assigns
+from the anchor element's
+• Setter: Writing to a property allows a program to modify the attribute, which is reflected in the
+rendered webpage. Ex:
+changes the element's hyperlink to the SpaceX URL.
+An element's attribute can be removed using the element method removeAttribute(). Ex:
+removes the
+link from the anchor element so that clicking on the HTML element no longer performs an action. I PARTICIPATION I . . . ACTIVITY 4.7.5: Modifying DOM node attributes.
+<body>
+<img src="mountai n.jpg "
+a l t ="Mountai n photo ">
+<p styl e =" co l or: green ">
+I love the outdoors!
+</ p>
+</ body>
+l et i mg = document . querySe l ector ("img " );
+img . src = "mountain . jpg" ;
+img . alt = "Mountain photo " ;
+l et p = document . querySe l ector ( "p " );
+p . styl e = " co l or : green " ;
+□
+tho n11trlnnrcl
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+90 of 159 2024-10-12, 4:47 p.m.
+Step 7: The following code is displayed.
+<body>
+<img src="mountain.jpg"
+alt="Mountain photo">
+<p>
+I love the outdoors!
+</p>
+</body>
+A photo of a lake is displayed with the text "I love the outdoors!" beneath the photograph.
+Step 2: The following code is added.
+let img = document.querySelector("img");
+img.src = "lake.jpg";
+img.alt = "Lake photo";
+let p = document.querySelector("p");
+p.style = "color: green";
+The first block of code is edited to read the following.
+<body>
+<img src="mountain.jpg"
+alt="Mountain photo">
+<p>
+I love the outdoors!
+</p>
+</body>
+A photo of a mountain is displayed with the text "I love the outdoors!" beneath the photograph.
+Step 3: The following lines of code are highlighted.
+let p = document.querySelector("p");
+p.style = "color: green";
+The first block of code is edited to read the following.
+<body>
+<img src="mountain.jpg"
+alt="Mountain photo">
+script>
+>
+"status" width="200"
+"route to the moon">
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+91 of 159 2024-10-12, 4:47 p.m.
+<p style="color: green">
+I love the outdoors!
+</p>
+</body>
+The line of text reading "I love the outdoors!" is now displayed in a green font.
+Animation captions:
+1. The webpage shows a photo of a lake with a sentence underneath.
+2. Changing the img element's src attribute causes the webpage to replace lake.jpg with
+mountain.jpg.
+3. Setting the p element's style attribute changes the paragraph's CSS styling, making the text
+green.
+IAP ACRTTIVICITIPYA TION I 4 .7. 6 : Re a d"i ng an d mo d"I fy i•n g DOM no d e attn" b ute va Iu es.
+Refer to the HTML below.
+< !DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ori on mission</title>
+<script src="dom. j s " defer></scri:
+</head>
+<body>
+<hl>Ori on Moon Mission Update</hl
+<img src="inFlight.png" id="statu
+alt="Image of spaceship en r
+</body>
+</html>
+1) Enter the missing attribute to make the
+image display success.png.
+let pie =
+document . getEl ementByi d ("status" );
+pie . __ = "success.png" ;
+Check Show answer
+2) Enter the node and attribute required to
+□
+0
+0
+document.querySelector("p").textContent = "$25.99";
+<p>$25.99</p>
+document.querySelector("p").innerHTML = "<strong>$25.99</strong>";
+<p><strong>$25.99</strong></p>
+innerHTML textContent
+textContent
+innerHTML
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+92 of 159 2024-10-12, 4:47 p.m.
+read the current image name.
+let p i e =
+document . getEl ementByi d ("status" );
+if ( __ != "success .png" ) {
+a l ert ("Wrong picture !" );
+Check Show answer
+3) Enter the method name to remove the
+image's width attribute.
+let p i e =
+document . getEl ementByi d ("status" );
+p i c . __ ("width" );
+Check Show answer
+Modifying DOM node content
+After searching the DOM for an element, JavaScript may be used to examine or change the
+element's content.
+Two common properties are used to get or set an element's content:
+1 . The textContent property gets or sets a DOM node's text content. Ex:
+changes the
+paragraph to
+2. The innerHTML property gets or sets a DOM node's content, including all of the node's
+children, using an HTML-formatted string. Ex:
+changes the paragraph to 1g></ p >.
+0
+The property uses an internal parser to create any new DOM nodes ...... - ....... ,.... - - ..... - - ,
+however, only creates or changes a single text node. For setting an element's text, is
+somewhat faster than because no HTML parsing is performed.
+I PARTICIPATION I 4 7 7 M d"f • b • h C d . HTML ACTIVITY . . : o I ying a we page wit text ontent an inner . □
+p.textContent = "Most common girl names in 2020:";
+let ol = document.querySelector("ol");
+ol.innerHTML = "<li>Emma</li><li>Olivia</li><li>Ava</li>";
+2. Olivia
+3. Ava
+<p>
+Most common girl names in 2020:
+</p>
+<ol>
+<li>Emily</li>
+<li>Hannah</li>
+<li>Madison</li>
+</ol>
+</body>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+93 of 159 2024-10-12, 4:47 p.m.
+Animation content:
+The following HTML is displayed:
+<body>
+<p>
+Most common girl names in 2020:
+</p>
+<ol>
+<li>Emily</li>
+<li>Hannah</li>
+<li>Madison</li>
+</ol>
+</body>
+The following JavaScript is displayed:
+let p = document.querySelector("p");
+p.textContent = "Most common girl names in 2020:";
+let ol = document.querySelector("ol");
+ol.innerHTML = "<li>Emma</li><li>Olivia</li><li>Ava</li>";
+Step 1: The line of code assigning p.textContent changes the HTML p element to read "Most
+common girl names in 2020:" and displays the text in the browser.
+Step 2: The line of code assigning ol.innerHTML changes the HTML Ii elements to the new names
+Emma, Olivia, and Ava. The new names replace the previous names in the browser.
+firstChild.nodeValue
+document. getElementById("saleprice").firstChild.nodeValue = "$25.99"
+innerText
+changePage()
+removeAttribute() hidden
+lastPlanet
+p4
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+94 of 159 2024-10-12, 4:47 p.m.
+Animation captions:
+1. Assigning the textContent property replaces the paragraph's text.
+2. Assigning the innerHTML property replaces the entire list.
+Less common ways to change node content
+The node Value property gets or sets the value of text nodes. As the DOM tree represents
+textual content separately from HTML elements, the textual content of an HTML element is
+the first child node of the HTML element's node. So, to access the textual content of an
+HTML element within the DOM, firstChilc
+the HTML's element's first child.
+is used to access the value of
+Ex:
+getElementByid ( "salepri
+7. Gets the DOM node for the element with id "saleprice".
+2. Uses first child to access the textual content node for the element.
+3. Uses n ode Value to update the content.
+The innerText property gets or sets a DOM node's rendered content. is similar
+to text Content, but innerText is aware of how text is rendered in the browser. Ex: In
+<p > Testing one</p >, text Content returns "Testing one" with spaces, but
+innerText returns ''Testing one" with the spaces collapsed into a single space.
+Modify the DOM nodes.
+An HTML element using the hidden attribute is not displayed by the web browser.
+Add JavaScript in the changePag
+button does the following:
+function so that clicking on the Use Current/.
+1. Uses removeAttribute ( ; to remove the attribute from the paragn
+p2, causing the paragraph to become visible.
+2. Uses the textcontent property of the span with id to change
+farthest planet to "Neptune".
+3. Uses the innerHTML property of the paragraph with id to add a link:
+en.wikipedia.org/wiki/Pluto">Source</a>
+getElementById()
+Pluto was discovered in 1930 and designated as a planet.
+planet
+Pluto was discovered in 1930 and designated as Pluto is the farthest planet from the Sun.
+Use Current Astronomy
+zyBooks
+95 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+<a href="https://en.wikipedia.org/wiki/Pluto">Source</a>
+Use an appropriate DOM search method like document. getElementByid () to a
+nodes.
+HTML I JavaScript J
+1 <1bodyp
+2 <hl>The farthest planet</hl>
+3
+4 <p id="pl" >Pluto was discovered in 1930 and designated as a planet. </p>
+5 <p id="p2" hidden >In 2006, Pluto was reclassified as a dwarf planet. </p>
+6 <p id="p3" ><span id="lastPlanet" >Pluto</span> is the farthest planet from the s
+7 <p id=" p4" ></p>
+8
+9 <i nput type="button" value="Use Current Astronomy" >
+10 </body
+11
+Render webpage Reset code
+Your webpage
+The farthest planet
+Pluto is the farthest planet from the Sun.
+[ Use Current Astronomy ]
+► View solution
+I PARTICIPATION I
+Expected webpage
+I
+The farthest plan,
+des
+S·
+[ ]
+n
+2024-10-12, 4:47 p.m.
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Sitcoms</title>
+<script src="sitcom.js" defer></script>
+</head>
+<body>
+<p>My <span>favorite</span> TV sitcoms:</p>
+<ol>
+<li><cite>The Office</cite></li>
+<li><cite>Community</cite></li>
+<li><cite>The Fresh Prince of Bel-Air</cite></li>
+</ol>
+</body>
+</html>
+let span = document.querySelector("span");
+__A__ favorite"
+Happy cite>";
+querySelectorAll
+innerHTML
+textContent
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+96 of 159 2024-10-12, 4:47 p.m.
+I ACTIVITY
+4.7.8: Changing DOM node content.
+Refer to the HTML and JavaScript below.
+sitcom.html
+sitcom.js
+span ._A_ = "least tavorite" ;
+let listitems = document ._B_ ("li" );
+for (let item of listitems ) {
+item . C = "<cite>Happy Hour</cite
+Match the letters to the missing JavaScript property or method.
+If unable to drag and drop, refresh the page.
+C A B
+quer
+inne
+text
+I CHALLENGE I
+Reset
+n
+Start
+zyBooks
+97 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+I ACTIVITY
+4.7.1: Using the Document Object Model.
+5707 04.2065416 qx3zqy7
+All steps in this Challenge Activity require calling a document method to search the DOM.
+Write the JavaScript to assign listNodes with all elements with a class name of
+'programming-language'.
+HTML I JavaScript j
+1 <hl>Top 10 TIOBE index for March 2018: </hl> <!-- https://www.tiobe.com/tiob
+2 <ol class="languages-list" >
+3 <li class=" programming-language" >Java</li>
+4 <li>C</li>
+5 <li class=" programming-language" >C++</li>
+6 <li class=" programming-language" >Python</li>
+7 <li class=" programming-language" >C#</li>
+8 <li>Visual Basic .NET</li>
+9 <li> PHP</li>
+10 <li> JavaScript</li>
+11 <li> Ruby</li>
+12 <li class=" programming-language" >SQL</li>
+13 </ol>
+1 2 3 4
+Check Next
+View your last submission v
+Exploring further:
+• Document Object Model (DOM). from MDN

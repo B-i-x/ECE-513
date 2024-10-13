@@ -1,0 +1,765 @@
+Events and event handlers
+An event is an action, usually caused by a user, that the web browser responds to. Ex: A mouse
+movement, a key press, or a network response from a web server. Typically, the occurrence and
+timing of an event are unpredictable, since the user or web server can perform an action at any
+time.
+Event-driven programming is a programming style where code runs only in response to various
+events. Code that runs in response to an event is called an event handler or event listener.
+The web browser supports event-driven programming to simplify handling the many events a
+webpage must process. When an event happens, the browser calls the event's specified handlers.
+The web browser internally implements the code for detecting events and executing event
+handlers.
+2024-10-12, 4:47 p.m.
+style
+"input");
+{
+function() {
+1px green";
+function() {
+1px blue";
+Name:
+Answer:
+Authur Dent
+42
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+107 of 159 2024-10-12, 4:47 p.m.
+The example below modifies an input's property, which sets the element's inline CSS styles.
+The input's border color changes colors when the input receives the focus or when focus is
+removed.
+IAP ACRTTIVICITIPYA TION I 4.9.1: Focus and blur event handling.
+<p >
+<label for="name " >Name: </label>
+<input type=" text " i d=" name ">
+</p>
+<p >
+<label for="answer" >Answer: </label>
+<input type="number " id=" answer ">
+</p>
+let inputs document . querySelectorAll ("
+for (let i 0 ; i < inputs . length ; i ++)
+l et i nput = i nputs [ i ];
+input . style . border = " lpx solid red" ;
+i nput . addEventListener (" focus " , funct
+thi s . styl e . border = " lpx solid gre
+} ) ;
+i nput . addEventLi stener ("blur " , funct i
+thi s . style . border = " lpx solid blu
+} ) ;
+Animation content:
+The following HTML is displayed:
+<p>
+<label for="name">Name:</label>
+<input type="text" id="name">
+</p>
+<p>
+<label for="answer">Answer:</label>
+<input type="number" id="answer">
+</p>
+The following JavaScript is displayed:
+let inputs = document.querySelectorAll("input");
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+108 of 159 2024-10-12, 4:47 p.m.
+for (let i = O; i < inputs.length; i++) {
+}
+let input = inputs[i];
+input.style.border= "7 px solid red";
+input.addEventlistener("focus", function() {
+this.style.border = "7 px solid green";
+});
+input.addEventlistener("blur", function() {
+this.style.border = "1 px solid blue";
+});
+The browser shows an input box labeled "Name: " and an input box labeled "Answer: ".
+Step 1: The "Name: " input box is clicked. The following lines of code are highlighted:
+input.addEventlistener("focus", function() {
+this.style.border = "1 px solid green";
+});
+The "Name: " input box is outlined in green.
+Step 2: "Authur Dent" is entered into the "Name: " input box.
+Step 3: The "Answer: " input box is clicked. The following lines of code are highlighted:
+input.addEventlistener("blur", function() {
+this.style.border = "1 px solid blue";
+});
+The "Name:" input box is outlined in blue, and the following lines of code are highlighted.
+input.addEventlistener("focus", function() {
+this.style.border = "1 px solid green";
+});
+The "Answer: " input box is outlined in green.
+Step 4: "42" is entered into the "Answer: " input box.
+Step 5: The user clicks outside of both input boxes, and the following lines of code are
+highlighted.
+mousemove keydown
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+109 of 159 2024-10-12, 4:47 p.m.
+input.addEventlistener("blur", function() {
+this .style.border= "1 px solid blue";
+});
+The "Answer:" input box is outlined in blue.
+Animation captions:
+1. User clicks in the Name input box. Browser calls the input element's focus event handler,
+which changes the element's style. Browser then gives focus to input box.
+2. User key presses are sent to Name input box.
+3. User clicks the Answer input box. Browser calls the Name element's blur event handler, then
+calls the Answer element's focus handler, and then gives focus to the Answer input box.
+4. User key presses are sent to Answer input box.
+5. When the user clicks elsewhere, the browser calls the Answer blur event handler.
+I PARTICIPATION I . . ACTIVITY 4.9.2: Event-driven programming. □
+1) The actions a web browser notices 0
+are called event handlers.
+0 True
+0 False
+2) A web developer must implement the 0
+code to detect events and call the
+appropriate handlers.
+0 True
+0 False
+3) A mouse click causes an event. 0
+0 True
+0 False
+Common events
+Each event is given a name that represents the corresponding action. Ex: The event name for a
+mouse movement is , and the event name for a key down is
+I PARTICIPATION I n
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+110 of 159 2024-10-12, 4:47 p.m.
+I ACTIVITY I
+4.9.3: Mouse and keyboard events.
+If unable to drag and drop, refresh the page.
+mouseout keyup mouseover mousemove click keydown
+Caused by a mouse click.
+Caused by mouse entering the area
+defined by an HTML element.
+Caused by mouse exiting the area
+defined by an HTML element.
+Caused by mouse moving within
+the area defined by an HTML
+element.
+Caused by the user pushing down a
+key on the keyboard.
+Caused by the user releasing a key
+on the keyboard.
+Reset
+The following are events for which web developers commonly write handlers:
+• A change event is caused by an element value being modified. Ex: Selecting an item in a radio
+button group causes a change event.
+• An input event is caused when the value of an input or textarea element is changed.
+• A load event is caused when the browser completes loading a resource and dependent
+resources. Usually load is used with the body element to execute code once all the webpage's
+CSS, JavaScript, images, etc. have finished loading.
+• A DOMContentLoaded event is caused when the HTML file has been loaded and parsed,
+although other related resources such as CSS, JavaScript, and image files may not yet be
+loaded.
+• A focus event is caused when an element becomes the current receiver of keyboard input. Ex:
+Clicking in an input field causes a focus event.
+<button onclick="clickHandler()">Click Me</button>
+onclick
+onmousemove
+document.querySelector("#myButton").onclick = clickHandler
+onclick
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+111 of 159 2024-10-12, 4:47 p.m.
+• A blur event is caused when an element loses focus and the element will no longer receive
+future keyboard input.
+• A submit event is caused when the user submits a form to the web server. I PARTICIPATION I ACTIVITY 4.9.4: Common browser events.
+1) A submit event occurs when any
+button is clicked.
+0 True
+0 False
+2) A blur event occurs when the mouse
+is moved over another input element.
+0 True
+0 False
+3) The DOMContentLoaded event is
+likely to occur before the load event.
+0 True
+0 Fal se
+Registering event handlers
+Handlers are written in three ways:
+1. Embedding the handler as part of the HTML. Ex:
+□
+0
+0
+0
+handler for the button element by using the
+sets the click event
+attribute. The attribute name used to
+register the handler adds the prefix "on" to the event name. Ex: The attribute for a mousemove
+event is . Embedding a handler in HTML mixes content and functionality and
+thus should be avoided whenever possible.
+2. Setting the DOM node event handler property directly using JavaScript. Ex:
+_ ..'...::.. = ~ ::: :_::.--_ =~2. : ::::- sets the
+click event handler for the element with an id of "myButton" by overwriting the
+JavaScript property. Using DOM node properties is better than embedding handlers within the
+HTML but has the disadvantage that setting the property only allows one handler for that
+element to be registered.
+3. Using the JavaScript addEventListener() method to register an event handler for a DOM
+object. Ex:
+document.querySelector("#myButton").addEventListener("click", clickHandler)
+addEventListener()
+addEventListener()
+keyupHandler() event.target
+this
+event.target this
+DOMContentLoaded", loadedHandler);
+("#name");
+keyupHandler);
+"!");
+Name? P a zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+112 of 159 2024-10-12, 4:47 p.m.
+registers a click event handler for the element with the id "myButton". Good practice is to use
+the method whenever possible, rather than using element attributes
+or overwriting JavaScript properties. The method allows for
+separation of content and functionality and allows multiple handlers to be registered with an
+element for the same event.
+Every handler has an optional event object parameter that provides details of the event. Ex: For a
+keyup event, the event object indicates which key was pressed and released, or for a click event,
+which element was clicked.
+In the animation below, uses
+where the keyup event occurred. Inside an event handler, the
+which the handler is attached. So and
+to access the text box object
+keyword refers to the element to
+both refer to the text box object in the
+event handler. I =~~~~~;~•110" I 4.9.5 Registering event handlers with addEventlistenerQ.
+< !DOCTYPE html >
+<html>
+<title>Keyup Demo</ title>
+<script>
+wi ndow . addEventLi stener ( "DOMContentLoaded" , l oadedHandle r ) ;
+funct i on l oadedHandl er () {
+l et textBox = document . querySelector ( " #name " ) ;
+textBox . addEventLi stener ( " keyup " , keyupHandl er ) ;
+function keyupHandl er (event ) {
+i f (event . key == "Enter " ) {
+l et textBox = event . target ;
+a l ert ( "Hello , " + textBox . va l ue + " ! " ) ;
+</script>
+<body>
+<label for=" id" >Name? </label>
+<input type=" text " i d=" name ">
+</body>
+</html>
+Animation content:
+The following HTML is displayed:
+□
+[ Pa m [ENTER]
+Hello, Pam!
+OK
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+113 of 159 2024-10-12, 4:47 p.m.
+<!DOCTYPE html>
+<html>
+<title>Keypress Demo</title>
+<script>
+window.addEventlistener("DOMContentloaded", loadedHandler);
+function loadedHandler() {
+let textBox = document.querySelector("#name");
+textBox.addEventlistener("keypress", keyupHandler);
+}
+function keyupHandler(event) {
+if (event.key== "Enter") {
+}
+}
+let textBox = event.target;
+alert("Hello, "+ textBox.value + "!");
+</script>
+<body>
+<label for="id">Name?</label>
+<input type="text" id="name">
+</body>
+</html>
+An input box labeled "Name?" is displayed on the browser.
+Step 7: The line of code reading "window.addEventlistener("DOMContentloaded",
+loadedHandler);" is highlighted.
+Step 2: The line of code reading "function loadedHandler()" is highlighted.
+Step 3: The line of code reading "textBox.addEventlistener("keyup", keyupHandler);" is highlighted.
+Step 4: "P" is entered in the "Name?" input box. The line of code reading "function
+keypressHandler(event)" is highlighted.
+Step 5: The code 'if (event.key== "Enter")' is highlighted and evaluated to false.
+Step 6: "Pam" is entered in the "Name?" input box, and then the user presses enter. The code 'if
+(event.key== "Enter")' is highlighted and evaluates to true.
+"black"
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+114 of 159 2024-10-12, 4:47 p.m.
+Step 7: The following lines of code are highlighted.
+let textBox = event.target;
+alert("Hello, "+ textBox.value + "!");
+An alert dialog reading "Hello, Pam!", with a button reading "ok" is shown on the browser.
+Animation captions:
+1. The window's addEventlistener() method registers the handler loadedHandler() for the
+DOMContentloaded event.
+2. After the rest of the HTML is loaded and parsed, the DOMContentloaded event occurs, and
+loadedHandler() is called.
+3. The text box's addEventlistener() method registers the handler keyupHandler() for the
+keyup event.
+4. When the user types the first letter, a keyup event occurs, which results in keyupHandler()
+being called.
+5. The event.key is a string representing the pressed key ("P" for key P).
+6. Each keyup causes keyupHandler() to execute. When the user presses Enter, event.key is
+"Enter", and the if statement is true.
+7. event.target is the text box object that caused the keyup event. An alert dialog displays
+"Hello, Pam!"
+I PARTICIPATION I 4 g 6 R . . h di • ddE L. () ACTIVITY .. : egIstering event an er using a vent Istener .
+The JavaScript code registers mouseover and mouseout event handlers for all elements
+that use the highlight class. Create and register a JavaScript event handler called
+myClickHandler () to handle click events for the same elements. The
+myClickHandler () function should reveal the hidden text by changing the
+style. color of the event. target to blac
+[ HTML [ JavaScript I CSS
+□
+Challenge your knowledge about eventdriven
+programming by guessing the text that
+is missing from each sentence below. Click
+the missing text to reveal the answer.
+Event handlers are also known as
+, because the
+handlers are "called back" when the
+appropriate event happens.
+Event-driven programming allows
+webpages to react to and
+.
+zyBooks
+115 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1
+2
+~[body>
+<p>
+3
+4
+5
+Challenge your knowledge about event-driven programming by guessine
+each sentence below. Click the missing text to reveal the answer.
+</p>
+6 <ul>
+7 <li>
+8 Event handlers are also known as
+9 <span class="highlight hide" >callback functions </span> ,
+10
+11
+because the handlers are "called back" when the appropriate ever
+</li>
+12 <li>
+13
+14
+15
+Event-driven programming allows webpages to react to
+<span class="highlight hide" >user actions </span> and
+<span class="highlight hide" >web server actions </span> .
+16
+17
+1s:l
+</li>
+</ul>
+✓ /hnM
+Render webpage Reset code
+Your webpage
+Challenge your knowledge about eventdriven
+programming by guessing the text that
+is missing from each sentence below. Click
+the missing text to reveal the answer.
+• Event handlers are also known as
+[:::::::::::::::::::::::::::::, because the
+handlers are "called back" when the
+appropriate event happens.
+• Event-driven programming allows
+~~~p~g~-~-~~--~~-1:l-~~-!o [::::::::::::::::::: and
+► View solution
+Expected webpage
+eventdriven
+• [::::::::::::::::::::::::::::], because the
+• webpages to react to r··---------------·; and
+r••••••-••••••••••••••••••••••i L •••••••••••••••••• J
+'' ''
+L •••••••••••••..•••.••••••.••• J
+I PARTICIPATION I . . ACTIVITY 4.9.7: Registering event handlers.
+Refer to the HTML below.
+□
+2024-10-12, 4:47 p.m.
+<body>
+<h1>Calculator</h1>
+<p>
+<input type="text" id="num1" size="5">
+<input type="text" id="num2" size="5">
+<span id="result"></span>
+</p>
+<input type="button" value="Add" id="addBtn">
+</body>
+loadedHandler()
+window.addEventListener("______",
+loadedHandler);
+addNumbers()
+function loadedHandler() {
+let addBtn =
+document.querySelector("#addBtn");
+addBtn.addEventListener("click",
+_______);
+}
+function addNumbers() {
+let num1 = parseFloat(
+document.querySelector("#num1").value);
+let num2 = parseFloat(
+document.querySelector("#num2").value);
+document.querySelector("#result").innerHTML
+= num1 + num2;
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+116 of 159 2024-10-12, 4:47 p.m.
+1) What event registers
+to be executed after
+the HTML has been loaded and parsed?
+0 click
+0 DOMContentloaded
+0 ready
+2) What is missing to register the
+function as a click event handler?
+0 addNumbers()
+0 addNumbers(1, 2)
+0 addNumbers
+0
+0
+function loadedHandler() {
+let addBtn =
+document.querySelector("#addBtn");
+addBtn.addEventListener("click",
+_______);
+}
+highlightField()
+highlightField()
+function
+highlightField(______) {
+if
+(event.target.style.background
+== "yellow") {
+event.target.style.background
+= "white";
+}
+else {
+event.target.style.background
+= "yellow";
+}
+}
+highlightField()
+textBox
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+117 of 159 2024-10-12, 4:47 p.m.
+3) What code registers an anonymous
+function as a click event handler for the
+add button?
+0 function addNumbers() { ... }
+0 function() { .. . }
+0 function { ... }
+4) The function is
+an event handler for the mouseover
+and mouseout events. What
+parameter is
+missing?
+0 event
+0 field
+0 color
+5) What parameter is
+missing to change the
+color to yellow?
+background
+0
+0
+0
+,
+addEventListener()
+false
+true
+3 biggest meteor strikes on Earth:
+1. Vredefort Dome, South Africa
+2. Chicxulub Crater, Mexico
+3. Sudbury Basin, Ontario, Canada
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+118 of 159 2024-10-12, 4:47 p.m.
+textBox . addEve nt Li stene r ("mouseover" ,
+hi ghli gh t Fie l d );
+function hi ghligh t Fie l d () {
+. s t yl e . backgr ound = "yellow" ;
+0 event.target
+0 event
+0 this
+Capturing, at target, and bubbling phases
+When an event occurs, the browser follows a simple DOM traversal process to determine which
+handlers are relevant and need to be called. The DOM traversal process has three phases:
+capturing, at target, and bubbling.
+1. In the event capturing phase, the browser traverses the DOM tree from the root to the event
+target node, at each node calling any event-specific handlers that were explicitly registered for
+activation during the capturing phase.
+2. In the at target phase, the browser calls all event-specific handlers registered on the target
+node.
+3. In the event bubbling phase, the browser traverses the DOM tree from the event target node
+back to the root node, at each node calling all event-specific handlers registered for the
+bubbling phase on the current node.
+The optional third parameter for the method indicates whether the
+handler is registered for the capturing phase or bubbling phase. If the third parameter is or
+not specified, or if the event handler is registered using any other mechanism, the browser registers
+the handler for the event bubbling phase. If the parameter is , the browser registers the
+handler for the capturing phase.
+Some events do not bubble, such as blur, focus, and change. When a non-bubbling event occurs,
+the browser will follow the event capturing phase, the at target phase, and then stop.
+I PARTICIPATION I . . ACTIVITY 4.9.8: Capturing and bubbling.
+< !DOCTYPE html>
+<html>
+<title>Meteors</title>
+<script src="meteors.js" defer></ script>
+<body>
+□
+<p>3 biggest meteor strikes on Earth:</p>
+<ol id="strikeList">
+<li>Vredefort Dome, South Africa</li>
+<li>Chicxulub Crater, Mexico</li>
+<li>Sudbury Basin, Ontario, Canada</li>
+</ol>
+</body>
+</html>
+// Register handler for event bubbling phase
+list.addEventListener("mouseover", function(e) {
+e.target.style.color = "red";
+});
+// Register handler for event capturing phase
+list.addEventListener("mouseout", function(e) {
+e.target.style.color = "black";
+}, true);
+Dome... Crater... Basin...
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+119 of 159 2024-10-12, 4:47 p.m.
+Animation content:
+The following HTML is displayed:
+<!DOCTYPE html>
+<html>
+<title>Meteors</title>
+<script src="meteors.js" defer></script>
+<body>
+<p>3 biggest meteor strikes on Earth:</p>
+<ol id="strikelist">
+<li>Vredefort Dome, South Africa</li>
+<li>Chicxulub Crater, Mexico</li>
+<li>Sudbury Basin, Ontario, Canada</li>
+</ol>
+</body>
+</html>
+The following JavaScript is displayed:
+list = document.getElementByld("strikelist");
+// Register handler for event bubbling phase
+list.addEventlistener("mouseover", function( e) {
+e.target.style.color = "red";
+});
+l l __ J l __ J l J _____)
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+120 of 159 2024-10-12, 4:47 p.m.
+// Register handler for event capturing phase
+list.addEventlistener("mouseout", function( e) {
+e.target.style.color = "black";
+}, true);
+The browser displays the following text.
+3 biggest meteor strikes on Earth:
+1. Vredefort Dome, South Africa
+2. Chicxulub Crater, Mexico
+3. Sudbury Basin, Ontario, Canada
+A tree is shown. The head node is labeled "html", and is connected to a node labeled "body". The
+"body" node is connected to a node labeled "p" and a node labeled "ol". Attached to the "p" node is
+a text node labeled "3 biggest. .. ". Attached to the "ol" node are three "Ii" nodes, each with their own
+children which contain text in the above list.
+Step 1: The mouse hovers over the first list item.
+Step 2: The DOM tree is traversed, and the "ol" node is highlighted.
+Step 3: The "Ii" node corresponding to the first element in the list is highlighted.
+Step 4: The "ol" node is highlighted once more. "phase: bubbling" is displayed beside the tree. The
+mouseover event handler is highlighted. The first item in the list turns red. The tree is traversed
+back up to the "html" node.
+Step 5: The mouse moves off the first list item. "Phase: capturing" is displayed beside the tree.
+The "ol" node is highlighted, and then the mouseout event handler is highlighted. The first list item
+turns black.
+Step 6: "phase: at target" is displayed next to the tree, and the Ii node corresponding to the first list
+item is highlighted.
+Step 7: "phase: bubbling" is displayed next to the tree. The tree's nodes are traversed back up to
+the "html" node.
+Animation captions:
+1. The user moves the mouse cursor over the list's first item. A mouseover event occurs with
+the first Ii node as the target node.
+2. Event capturing phase traverses the DOM tree from the root to the event target node. No
+capturing handlers are registered for the mouseover event.
+"div1");
+"div2");
+"div3");
+(){ alert("Capture 1"); }, true);
+(){ alert("Capture 2"); }, true);
+(){ alert("Capture 3"); }, true);
+(){ alert("Bubble 1"); });
+(){ alert("Bubble 3"); });
+div1
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+121 of 159 2024-10-12, 4:47 p.m.
+3. At target phase looks for mouseover event handlers registered on the target node, but no
+mouseover handlers are registered for the first Ii node.
+4. Event bubbling traverses DOM tree from the event node back to the root node. The ol node's
+bubbling event handler is called and changes the item's text to red.
+5. A mouseout event occurs targeting the first Ii node. Event capturing phase traverses the
+DOM tree from the root to event target node. The mouseout event handler turns the list
+item black.
+6. The at target phase looks for relevant mouseout event handlers registered on the target
+node, but no mouseout handlers are registered for the first Ii node.
+7. The event bubbling phase looks for any relevant mouseout event handlers by moving up the
+DOM tree, but no elements have mouseout handlers registered for the bubbling phase.
+I PARTICIPATION I . . ACTIVITY 4.9.9: Capturing and bubbling.
+Given the HTML and JavaScript below, match the order of alerts to the action performed
+by the user.
+<div id="divl">
+<div id="div2">
+<div id= "div3">
+</div>
+</div>
+</div>
+let d i v l
+let d i v2
+let d i v3
+document . getElement By i d ("div
+document . getElement By i d ("div
+document . getElement By i d ("div
+d i v l . addEvent Li stener ("click" , function
+d i v2 . addEvent Li stener ("click" , function
+d i v3 . addEvent Li stene r ("click" , function
+d i v l . addEvent Li stener ("click" , function
+d i v3 . addEvent Li stener ("click" , function
+If unable to drag and drop, refresh the page.
+Capture 1, Capture 2, Bubble 1 Capture 1, Bubble 1
+Capture 1, Capture 2, Capture 3, Bubble 3, Bubble 1
+User clicks on div with id.
+□
+div2
+div3
+stopPropagation()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+122 of 159 2024-10-12, 4:47 p.m.
+User clicks on div with id.
+User clicks on div with id.
+Reset
+I PARTICIPATION I . . ACTIVITY 4.9.10: Bubbling and capturing.
+1) The web browser performs the event
+capturing process before the bubbling
+process.
+0 True
+0 False
+2) If a web developer creates a "default"
+handler for a DOM node high in the
+tree and a more specific handler for a
+DOM node lower in the tree, the web
+browser will run both handlers for an
+event.
+0 True
+0 False
+3) Bubbling is the preferred process for
+the web browser to find appropriate
+handlers for an event.
+0 True
+0 False
+Preventing default behavior
+□
+0
+0
+0
+The event capturing and bubbling process can be stopped by calling the stopPropagation() method
+on the event object provided to the handler. Once i n n < l is called, the browser
+stops the traversal process but still calls relevant registered handlers on the current node.
+A web developer may want to prevent the browser from using a built-in handler for an event. Ex:
+Whenever a user clicks a form's submit button, the web browser sends the form data to the web
+server. The event object's preventDefault() method stops the web browser from performing the
+built-in handler. The built-in handlers that are often prevented are clicking elements, submitting
+preventSpaces()
+event. preventDefault()
+checkPassword()
+checkPassword() <span>
+zyBooks
+123 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+forms, and moving the mouse into or out of an element.
+The example below uses two event handlers for the password textbox:
+1. prevent Spaces () is a keydown event handler that listens for key presses. If the space key
+is pressed, preventDefaul t () stops the space from appearing in the textbox.
+2. checkPassword () is an input event handler that is called when the password input
+changes. checkPassword () displays Weak, Stronger, Moderate, or Strong in the element depending on various criteria for the password.
+Testing password strength.
+Start typing a password. Verify the message to the right of the widget changes as tr
+improved:
+• abc -Weak
+• abc1 - Stronger
+• abc1 D - Moderate
+• abc1 De - Strong
+1 <label for="password" >Password: </ label>
+2 <input type="text" id="password">
+3 <span id="strength" ></span>
+4
+Render webpage
+Reset code
+[ HTML I JavaScript j
+2024-10-12, 4:47 p.m.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+124 of 159 2024-10-12, 4:47 p.m.
+Your webpage
+Password:
+I PARTICIPATION I . . ACTIVITY 4.9.11 : Preventing default behavior.
+1) A web developer cannot prevent the
+web browser from performing built-in
+handlers.
+0 True
+0 False
+2) If a web developer creates a "default"
+handler for a DOM node high in the
+tree and a more specific handler for a
+DOM node lower in the tree,
+stopPropagation () can be called
+in the more specific handler to keep
+the browser from calling the default
+handler.
+0 True
+0 False
+3) In the example above, a user may
+press a space in the password
+textbox, but the space does not
+appear.
+0 True
+□
+0
+0
+0
+zyBooks
+125 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+0 False
+4) In the example above,
+checkPassword () prevents the
+built-in input handler from executing.
+0 True
+0 False
+5) In the example above, the password
+"qwerty1" causes the webpage to
+display "Strong".
+0 True
+0 False
+I CHALLENGE I . . ACTIVITY 4.9.1: Event-driven programming.
+570104.2065416.qx3zqy7
+Start
+Register the textSize event handler to handle blur changes for the input element. Note:
+The function counts the number of characters in the input.
+HTML I JavaScript j
+1 <label for=" userName" >User name: </ label>
+2 <input id="userName" type="text" ><br>
+3 <p id="stringlength" >0</p>
+4
+1 2 3
+0
+0
+□
+2024-10-12, 4:47 p.m.
+zyBooks
+126 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+Check Next
+View your last submission v
+Exploring further:
+• Event reference from MDN
+• EventTarget.addEventlistener()_ from MDN
+• Event flow tutorial from Java2s

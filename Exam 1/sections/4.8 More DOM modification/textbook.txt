@@ -1,0 +1,370 @@
+Accessing nodes
+2024-10-12, 4:47 p.m.
+let html = document.documentElement; html
+parentNode
+childNodes
+childNodes
+children
+nextElementSibling
+previousElementSibling
+childNodes children
+children
+childNodes
+title>
+geologic earth:</p>
+<li><a href="https://en.wikipedia.org/wiki/Hadean">a></
+li>
+<li><a href="https://en.wikipedia.org/wiki/Archean">Archean</
+a></li>
+<li><a href="https://en.wikipedia.org/wiki/
+Proterozoic">Proterozoic</a></li>
+<li><a href="https://en.wikipedia.org/wiki/
+Phanerozoic">Phanerozoic</a></li>
+</ol>
+</body>
+</html>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+98 of 159 2024-10-12, 4:47 p.m.
+The JavaScript object document.documentE/ement is the root of the DOM tree. Ex:
+assigns the variable with the HTML
+document's root node.
+DOM nodes have properties for accessing a node's parent, children, and siblings:
+1. The parentNode property refers to the node's parent. Ex: In the figure below, the ol node is the
+for all Ii nodes.
+2. The childNodes property is an array-like collection of objects for each of the node's children.
+Ex: In the figure below, the Ii nodes and whitespace text nodes are the ol node's
+3. The children property is similar to the except the array contains only element
+nodes and no text nodes. Ex: In the figure below, the Ii nodes are the ol node's
+4. The nextE/ementSibling property refers to the element node with the same parent following
+the current node in the document. Ex: In the figure below, the ol node is the p node's
+5. The previousE/ementSibling property refers to the element node with the same parent
+preceding the current node in the document. Ex: In the figure below, the p node is the ol
+node's
+A common error is to use the property instead of the property when
+iterating through the items of a list. The property only contains the list items, while the
+property also contains the whitespace text nodes between the list items.
+Figure 4.8.1: Example HTML for node properties.
+< ! DOCTYPE h tml >
+<html lang= "en" >
+<head>
+<meta charset="UTF-8" >
+<title>Geol ogi c eons of earth </ti
+</head>
+<body>
+<p >The four geol ogi c eons on eart
+<ol>
+/Hadean ' >Hadean</ a >< /
+!i..rchean" >Arc hean</
+</title>
+Languages development.</p>
+content</li>
+presentation</li>
+JavaScript functionality</li>
+].children[1]
+document.documentElement.children[1].parentNode
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+99 of 159 2024-10-12, 4:47 p.m.
+I PARTICIPATION
+ACTIVITY
+4.8.1 : Using nextElementSibling, previousElementSibling, and
+parentNode.
+Refer to the HTML below.
+< ! DOCTYPE html >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web deve l opmen t l a nguages<
+</head>
+<body>
+<p >La nguages used in web deve l opm
+<ul>
+<li id="item-l" >HTML for conte
+<li id="item-2" >CSS for presen
+<li id="item-3" >JavaScri pt for
+</ul>
+</body>
+</html>
+Select the HTML element or node referenced by the given property.
+7) document . documentElement
+0 html
+0 body
+0 meta
+2) document . documentElement . children [ l ]
+0 html
+0 body
+0 title
+3) document . documentElement . c hi l d ren [ l ] .
+0 p
+0 ul
+0 One of the Ii elements
+4)
+0 html
+0 body
+□
+0
+0
+0
+0
+previousElementSibling
+parentNode
+nextElementSibling
+childNodes[0]
+ol = document.getElementsByTagName("ol")[0];
+li = ol.getElementsByTagName("li")[0];
+ol.appendChild(li);
+ol = document.getElementsByTagName("ol")[0];
+items = ol.getElementsByTagName("li");
+ol.insertBefore(items[0], items[3]);
+removeChild()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+100 of 159 2024-10-12, 4:47 p.m.
+0 title
+5) document . getEl ementByi d ( 11 item-2 11 ) • pn
+0 Ii with id item-1
+0 Ii with id item-2
+0 Ii with id item-3
+6) document . getElementByid ( 11 item-2 11 ) • pa1
+0 Ii with id item-1
+0 Ii with id item-2
+0 ul
+7) document . getEl ementByi d ( 11 i tem-l 11 ) . ne)
+0 Ii with id item-1
+0 Ii with id item-2
+0 Ii with id item-3
+8) document . querySel ector ( 11ul 11 ) • c h i l dNoc
+0 Ii with id item-1
+0 Ii with id item-2
+0 text node
+Modifying the DOM structure
+Various DOM node methods can change a node's location within the DOM or remove nodes:
+0
+0
+0
+0
+• The appendChild() method appends a DOM node to the object's child nodes. The code below
+moves the ordered list's first list item to the last list item of the same ordered list.
+• The insertBefore() method inserts a DOM node as a child node before an object's existing
+child node. The code below moves the ordered list's first list item before the fourth list item.
+• The removeChild() method removes a node from the object's children. The most common
+usage pattern is to get a DOM node, n, and call on n's parent passing n as
+n.parentNode.removeChild(n)
+document
+document.createElement("p")
+document
+document.createTextNode("Hello there!")
+x.cloneNode(true) x.cloneNode(false)
+cloneNode()
+appendChild() insertBefore()
+script>
+"li");
+"Blue");
+"ol");
+querySelectorAll("li");
+true);
+itemNodes[2]);
+1. Red
+2. Green
+body
+ol
+li li
+Red Green
+li
+Blue
+colorList
+Blue
+clonedNode
+li
+Red
+3. Red
+4. Blue
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+101 of 159 2024-10-12, 4:47 p.m.
+an argument. Ex:
+The following methods are for creating new nodes or duplicating existing nodes:
+• The method createE/ement() returns a new element node, created from a string
+argument that names the HTML element. Ex: creates a
+new paragraph node.
+• The method createTextNode() returns a new text node containing the text
+specified by a string argument. Ex: • -- -- - -
+creates the text node with "Hello there!", which can then be appended to an element node.
+• The node method cloneNode() returns an identical copy of a DOM node. The method's
+boolean argument indicates whether the method should also clone the node's children. Ex:
+creates an identical tree rooted at x, but
+creates only a single node identical to x. A common error is to forget to modify any id
+attributes in the cloned tree. The method does not ensure that new nodes have
+unique id attributes.
+After creating or cloning a node, the node does not appear in the webpage until the node is
+attached to the DOM tree. A programmer must use or to add
+the new node to the existing DOM tree. I PARTICIPATION I . . ACTIVITY 4.8.2: Modifying the DOM structure.
+example.html
+< !DOCTYPE HTML>
+<html l ang= "en">
+<title>DOM Example</ title>
+<script src="script.js" defer>< / script
+<body>
+<ol>
+<li>Red</ li>
+<li>Green</ li>
+</ol >
+</ body>
+</ html>
+script.js
+l et listNode = document . createElement ("li
+l et textNode = document . createTextNode ("B
+l istNode . appendChild (textNode ) ;
+l et colorList = document . querySelector ("o
+col orLi st . appendChild (li stNode ) ;
+l e t itemNodes = col orLi st . querySe l ectorAl
+l et c l onedNode = i temNodes [ 0 ] . c l oneNode (t
+col orLi st . i nsertBefore (c l onedNode , itemNo
+D
+□
+□
+□ □ □ □
+0000
+clonedr ode
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+102 of 159 2024-10-12, 4:47 p.m.
+Animation content:
+The following code is displayed.
+example.html
+<!DOCTYPE HTML>
+<html lang="en">
+<title>DOM Example</title>
+<script src="script.js" defer></script>
+<body>
+<ol>
+<li>Red</li>
+<li>Green</li>
+</ol>
+</body>
+</html>
+script.js
+let listNode = document.createElement("li");
+let textNode = document.createTextNode("Blue");
+listNode.appendChild(textNode);
+let colorlist = document.querySelector("ol");
+colorlist.appendChild(listNode);
+let itemNodes = colorlist.querySelectorAll("li");
+let clonedNode = itemNodes[0].cloneNode(true);
+colorlist.insertBefore( cloned Node, itemNodes[2]);
+Step 1: The following lines of code are highlighted.
+<ol>
+<li>Red</li>
+<li>Green</li>
+</ol>
+A "body" node is created as the head node. An "ol" is connected to the "body" node, and is
+connected to two "Ii" listNode objects. The textNode objects "Red" and "Green" are attached to
+their respective "Ii" listNodes.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+103 of 159 2024-10-12, 4:47 p.m.
+The following ordered list is defined.
+1. Red
+2. Green
+Step 2: The line of code reading "let listNode = document.createElement("li");" is highlighted, and a
+node labeled "Ii" is created to represent the listNode. Next, the line of code reading "let textNode =
+document.createTextNode("Blue");" is highlighted, and a node labeled "blue" is created to
+represent the textNode. Next, the line of code reading "listNode.appendChild(textNode);" is
+highlighted, and the "blue" node is attached to the "Ii" node.
+Step 3: The following lines of code are highlighted.
+let colorlist = document.querySelector("ol");
+colorlist.appendChild(listNode);
+The listNode created in the previous step is connected to the "ol" node. The browser now reads
+the following.
+1. Red
+2. Green
+3. Blue
+Step 4: The following lines of code are highlighted.
+let itemNodes = colorlist.querySelectorAll("li");
+let clonedNode = itemNodes[O].cloneNode(true);
+A copy is created of the "Ii" node and its child "Red" node.
+Step 5: The line of code reading "colorlist.insertBefore(clonedNode, itemNodes[2]);" is
+highlighted. The cloned "Ii" and "Red" nodes are placed between the "Green" and "Blue" nodes. The
+browser is updated to read the following.
+1. Red
+2. Green
+3. Red
+4. Blue
+Animation captions:
+1. The HTML file defines an ordered list with two colors.
+2. After creating an element node and a text node, the text node is appended to the element
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+104 of 159 2024-10-12, 4:47 p.m.
+node. listNode becomes textNode's parent.
+3. appendChild() appends listNode to colorlist's child nodes. Since listNode is now attached
+to the DOM, the "Blue" list item appears in the browser.
+4. The cloneNode() method creates a copy of itemNodes[0] and child, duplicating the "Red" list
+item.
+5. insertBefore() inserts the cloned "Red" list item before the "Blue" list item, which changes
+the DOM.
+I PARTICIPATION I . . ACTIVITY 4.8.3: Adding and removing DOM nodes.
+If unable to drag and drop, refresh the page.
+insertBefore() removeChild() appendChild()
+A method on a DOM node which
+moves one DOM node to be a
+previous sibling to another DOM
+node.
+A method on a DOM node that
+deletes a DOM node from the DOM
+tree.
+A method on a DOM node that turns
+another DOM node into the first
+DOM node's last child.
+Reset
+I PARTICIPATION I . ACTIVITY 4.8.4: Creating new DOM nodes.
+1) Which DOM node method creates a
+copy of the node and the node's
+children?
+0 createElement()
+0 createTextNode()
+□
+□
+0
+document
+zyBooks
+105 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+0 cloneNode(true)
+0 cloneNode(false)
+2) Which method creates a
+new DOM node for a specific HTML
+element?
+0 create Element()
+0 createTextNode()
+0 cloneNode(true)
+0 cloneNode(false)
+3) Which document method creates a
+new DOM node to hold content?
+0 create Element()
+0 createTextNode()
+0 cloneNode(true)
+0 cloneNode(false)
+4) Which DOM node method creates a
+copy of another DOM node, but not
+the node's children?
+0 create Element()
+0 createTextNode()
+0 cloneNode(true)
+0 cloneNode(false)
+1 1~;1~\~~•e I 4.8.1 • Manipulating the Document Object Model.
+570104.2065416.qx3zqy7
+Start
+Assign newElement with a new Ii element. Assign textNode with a new textNode
+containing "Alex".
+[ HTML I JavaScript j
+1 <ul id="list">
+2 <li> Jan</li>
+3 <li> Ron </li>
+0
+0
+0
+□
+2024-10-12, 4:47 p.m.
+zyBooks
+106 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 2 3
+Check Next
+View your last submission v
+Exploring further:
+• Document Object Model (DOM). from MDN

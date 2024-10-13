@@ -1,0 +1,562 @@
+Introduction to regular expressions
+Programs often need to determine if a string conforms to a pattern. Ex: A user is asked for their
+phone number, and the program must recognize if the input is formatted like a phone number. Or
+perhaps a program needs to search through a large collection of DNA sequences and replace
+defective gene sequences with correct sequences. Developers use regular expressions to solve
+these types of problems.
+A regular expression (often shortened to regex) is a string pattern that is matched against a string.
+Regular expressions may be defined with a RegExp object or between two forward slashes. Ex:
+let re = new RegExp ( "abc") ; or more simply: let re = / abc/; The pattern "abc"
+matches any string that contains "abc". Ex: "abcde" matches but "abd" does not. The RegExp
+2024-10-12, 4:47 p.m.
+str
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+8 of 159 2024-10-12, 4:47 p.m.
+method test(str) returns true if the string matches the regex, and false otherwise.
+I PARTICIPATION I . I I
+ACTIVITY 4.2.1: Searching an array for the pattern ab.
+l et words = [ "ban " , "babbl e " , "make " , "fl ab " ] ;
+l et re = /ab/ ; babble matches!
+words . forEach (function (word )
+if (re . test (word )) {
+console . l og (word + " mat che s !" );
+}
+} ) ;
+Animation content:
+The following code snippet is displayed.
+let words = ["ban", "babble", "make", "flab"];
+let re = /ab/;
+words.forEach(function(word) {
+if (re.test(word)) {
+console.log(word +" matches!");
+}
+});
+Step 5: The console displays: babble matches!
+Step 6: The console displays: flab matches!
+Animation captions:
+flab matches!
+1. Define a regular expression that matches words containing "ab".
+2. Loop through each word in the words array.
+3. re.test("ban") returns false because "ban" does not contain "ab".
+4. re.test("babble") returns true because "babble" contains "ab".
+5. re.test("make") returns false because "make" does not contain "ab".
+6. re.test("flab") returns true because "flab" contains "ab".
+□
+/ab+c/
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+9 of 159 2024-10-12, 4:47 p.m.
+I PARTICIPATION I . . ACTIVITY 4.2.2: Simple regular expressions.
+1)
+2)
+3)
+4)
+The regex / run / matches the string
+"pruning".
+0 True
+0 False
+The regex / run / matches the string
+"pruning".
+0 True
+0 False
+What pattern would match the string
+"Regular Expression"?
+0 Exp
+0 exp
+What value is x?
+let re = /regex/ ;
+let x = re . test ("regular
+expression " );
+0 true
+0 false
+5) What value is x?
+let re = /c\/1/ ;
+let x = re . test ("abc/123 " );
+0 true
+0 fal se
+Special characters
+□
+0
+0
+0
+0
+0
+Regular expressions use characters with special meaning to create more sophisticated patterns.
+The+ character matches the preceding character at least once. Ex: matches one "a"
+followed by at least one "b" and one "c", so "abc" and "abbbbc" both match. However, "ac" does not
+match because the required "b" is missing.
+/(ab)+/
+/ab*c/
+/ab+c/
+/ab?c/
+/^ab/
+/ab$/
+/ab|cd/
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+10 of 159 2024-10-12, 4:47 p.m.
+Parentheses are used in a regex to match consecutive characters with *, +, and ?. Ex:
+matches one or more "ab", so "abab" and "abbb" both match. However, "acb" does not match
+because the "c" is between "a" and "b".
+Table 4.2.1: Selected special characters in regex patterns.
+Character Description Example -
+*
+Match the preceding character O or matches "abc", "abbbbc",
+more times. and "ac".
+Match the preceding character 1 or matches "abc" and "abbbbc"
++
+more times. but not "ac".
+?
+Match the preceding character O or matches "abc" and "ac", but
+1 time. not "abbc".
+A Match at the beginning. matches "abc" but not "cab".
+$ Match at the end. matches "cab" but not "abc".
+I
+Match string on the left OR string on
+matches "abc" and "bed".
+the right.
+I PARTICIPATION I . . ACTIVITY 4.2.3: Regex with special characters.
+1) What string does NOT match the
+regex /grea*t/?
+0 gret
+0 greaaat
+0 grat
+2) What string does NOT match the
+regex /w+hy/?
+0 why
+0 hy
+0 wwwwhy
+□
+0
+0
+/cat|bat|mat/
+bbatt
+at
+mat
+"boom"
+/ba?oom/
+/b\?oom/
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+11 of 159 2024-10-12, 4:47 p.m.
+3) What string does NOT match the 0
+regex ?
+0
+0
+0
+4) What regex matches the string 0
+?
+0
+0
+0 /bo?m/
+5) What regex matches the string 0
+"sleep like a baby"?
+0 / " like/
+0 /like$/
+0 / " sleep/
+6) What regex matches the string 0
+"that's easy"?
+0 /b?eas$/
+0 /b?sy$/
+0 /e+sy$/
+7) What regex matches the string 0
+"breaeak"?
+0 /bre+a+k/
+0 /br(ea)+k/
+0 /erlbk/
+8) What regex matches the string 0
+"what?"?
+0 /what?$/
+0 /what\?$/
+0 /what$/
+/[aeiou]/ /[0-9]/ ^
+[^str]
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+12 of 159 2024-10-12, 4:47 p.m.
+Character ranges
+Square brackets are used in regular expressions to match any character in a range of characters.
+Ex: matches any vowel, and matches any digit. The not operator ( ) negates
+a range. Ex:
+I PARTICIPATION
+ACTIVITY
+matches any character except s, t, or r.
+4.2.4: Regex with brackets.
+Fill in the blank so the regex matches the description.
+1) Match only the digits O through
+5.
+/ [ l /
+Check Show answer
+2) Match only the letters a through
+f.
+/ [ l /
+Check Show answer
+3) Match anything except a vowel
+(a, e, i, o, u). List characters in
+the regex alphabetically.
+/ [ l /
+Check Show answer
+Metacharacters
+A metacharacter is a character or character sequence that matches a class of characters in a
+regular expression. Ex: The period character matches any single character except the newline
+0
+0
+0
+0
+/ab.c/
+/a.b/
+/a\wb/
+/a\Wb/
+/a\db/
+/a\Db/
+/a\sb/
+/a\Sb/
+d\S\?/ /1\w+/ /\d\./
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+13 of 159 2024-10-12, 4:47 p.m.
+character. So matches "able" and "ab2c", but not "abc" since the period must match a
+single character. Other metacharacters begin with a backslash.
+Table 4.2.2: Selected metacharacters in regex patterns.
+Metacharacter Description Example
+f---
+. Match any single character except • matches 11aZb" and
+newline. "ab".
+Match any word character matches "aAb" and
+\w
+(alphanumeric and underscore). "a5b" but not "ab".
+\W Match any non-word character.
+matches 11a-b 11 and
+11a b11 but not "aZb11
+•
+\d Match any digit.
+matches 11a2b11 and
+11a9b", but not "aZb".
+\D Match any non-digit.
+matches 11aZb" and
+11a b11
+, but not 11a2b".
+Match any whitespace character (space, matches 11a b11 but
+\s
+tab, form feed, line feed) . not "a4b11
+•
+\S Match any non-whitespace character.
+matches 11a!b11 but
+not "ab".
+I PARTICIPATION I . ACTIVITY 4.2.5: Metacharacters in regex. □
+Match the regex to a string the regex matches.
+If unable to drag and drop, refresh the page.
+/9\d+/ /\W\W\D/ / 1\s\d/ /\
+123break
+/abc*/i i
+/aBc/i
+/^ab/m
+/ab$/m
+/ab/g
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+14 of 159 2024-10-12, 4:47 p.m.
+923 break
+break1 9
+()break
+5!?5break
+a.break
+Reset
+Mode modifiers
+A mode modifier (sometimes called a flag) changes how a regex matches and is placed after the
+second slash in a regex. Ex: specifies the mode modifier , which performs caseinsensitive
+matching.
+Table 4.2.3: Selected mode modifiers.
+Mode
+Description
+modifier
+i
+Case insensitivity - Pattern matches
+upper or lowercase.
+Multi line - Pattern with " and $
+m match beginning and end of any line
+in a multiline string.
+Global search - Pattern is matched
+g
+repeatedly instead of just once.
+I PARTICIPATION I . . ACTIVITY 4.2.6: Regex with mode modifiers.
+1) What string does NOT match the
+regex /great/i?
+Example
+matches "abc" and "AbC".
+matches the second line
+of "cab\nabc", and
+matches the first line.
+matches "ab" twice in
+"cababc".
+□
+0
+Great
+greaT
+TREAT
+/ly$/m
+quick
+most
+first
+quick
+mostly
+first
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+15 of 159 2024-10-12, 4:47 p.m.
+0
+0
+0
+2) What string does NOT match the
+regex ?
+0
+0
+quick
+0 most
+firstly
+3) How many times does the regex /
+moo/ g find a match in "Moo the cow
+mooed at the moon."
+0 1
+0 2
+0 3
+4) How many times does the regex /
+moo/ gi find a match in "Moo the cow
+mooed at the moon."
+0 1
+0 2
+0 3
+I ::~~~~;~•'10" I 4.2.7 Using regular expressions to identify secret messages.
+.....
+A criminal organization is using Reddit to communicate. To keep from being detected, the
+criminals are posting comments that look innocuous but use a secret pattern.
+• The pattern contains one or more digits followed by any number of characters,
+followed by the word "star". Ex: "3stars" and "99 bright stars!" should both match.
+0
+0
+0
+□
+posts
+zyBooks
+16ofl59
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+• The letters in the word "star" may be separated by a single space. Ex: "1 blast ark"
+and "1 st a r" should match.
+• The comments can include upper or lowercase characters. Ex: "2 STar" should
+match.
+Loop through the Reddit posts in the array and output to the console the lines that
+match the criminal's pattern. Use a single regex to identify the suspected posts. Hint: The
+2nd, 3rd, and 5th lines should match the regex.
+1 let posts = [
+2 "The starting time was 6pm. ",
+3 "If the 2nd string QB gets hurt, they have no starting QB." ,
+4 "My email is sisl@yahoo.com. Last are first." ,
+5 "Stare into the abyss 1 time." ,
+6 "90210 for Beverly Hills. Thick as TAR."
+7 ] ;
+8
+9 // Modify to output only Lines that match regex
+10 posts .forEach(function( line ) {
+11 console .log( line );
+12 } ) ;
+13
+Run JavaScript Reset code
+Your console output
+The starting time was 6pm.
+If the 2nd string QB gets hurt, they have no starting QB.
+My email is sisl@yahoo.com. Last are first.
+Stare into the abyss 1 time.
+90210 for Beverly Hills. Thick as TAR.
+► View solution
+2024-10-12, 4:47 p.m.
+"Raise console.log("match.");
+}
+zyBooks
+17ofl59
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+I CHALLENGE I . ACTIVITY 4.2.1: Regular expressions.
+5707 04.2065416 qx3zqy7
+Start
+Assign re with a regular expression that contains a letter (a-z or A-Z).
+1 let re/* Your solution goes here*/ ;
+1 2 3
+Check Next
+View your last submission v
+Determining what matches
+4
+The Reg Exp method exec(str) determines what part of the string str
+matches a regex. The
+exec() method returns a result array, or returns null
+if the pattern does not match.
+□
+Figure 4.2.1: Using exec() to discover what characters matched the regex.
+let re = / t.+r / ;
+let result = re . exec ("Raise the bar
+high." );
+if (result === null ) {
+c onso l e . l o g ("No match." );
+2024-10-12, 4:47 p.m.
+a(b+)c/
+(b+)
+exec()
+/(B.+)'(.+day)/;
+"When is Becky's
+// Index 0 full string that matched
+// Becky's birthday
+// Index first remembered part
+// Becky
+// Index remembered part
+// birthday
+tweets
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+18 of 159 2024-10-12, 4:47 p.m.
+Parentheses in a regex are used to "remember" different parts of a matched string. Ex: / ct
+remembers anything matching , so "bbb" is remembered when applying the regex to "abbbc".
+The remembered parts are accessible from the result array returned by . The first array
+element is the complete matched string, and the following elements are the remembered parts. If
+the regex contains no parentheses, the returned array contains only the complete string that
+matches.
+Figure 4.2.2: Remembering matches in a regex.
+let re = / (B.+) 's (.+d a y )
+let result = re . exec ("Whe
+birthday? " );
+II Index O is the full st
+console . log (result [O] );
+II Index 1 is the first r
+console . log (result [l] );
+II Index 2 is the second
+console . log (result [2] );
+I PARTICIPATION I . ACTIVITY 4.2.8: Extracting regex matches.
+Twitter wants to know which hashtags are currently trending and what websites are
+tweeted most often. A selection of tweets are given in the array. Create two
+regular expressions that will:
+1. Extract all the hashtags used in the tweets. A hashtag begins with a pound sign and
+contains all following word characters. Ex: #myHashTag. Output each hashtag to
+the console.
+2. Extract all the domain names from the UR Ls in the tweets. A URL begins with a
+protocol and double slash: "http://" or "https://". The domain name is the string of
+characters immediately after the double slash and before the next forward slash(/).
+□
+https://en.wikipedia. org/wiki/URL
+en. wikipedia. org
+.+? +
+& HardingCompSci hourofcode.com/us
+https://www.kickstarter
+t.co/MFyKHvd50H
+mashable.com/curry-knee-injury-zyBooks
+19 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+Ex: The domain name for https: //en. wiki/URL is
+org. Output each domain name to the console.
+Multiple hashtags and URLs may exist in a single tweet, so use the "g" mode modifier on
+both regexes and loop until the pattern is no longer found. To extract the domain name,
+use . +? to match the characters after the double slash and before the first slash. The +?
+operator is "lazy" and matches as few characters as possible, whereas+ matches as
+many characters as possible.
+1 canst tweets = [
+2 "Thank you to the Academy and the incredible cast & crew of #TheRevenant
+3 "@HardingCompSci department needs student volunteers for #HourOfCode htt
+4 "Checkout the most comfortable earbud on #Kickstarter and boost your #pr
+5 "Bootstrap 4 Cheat Sheet https: //t. co/MFyKHvd50H" ,
+6 "Curious to see how #StephenCurry handles injury. http://mashable.com/20
+7 ] ;
+8
+9 // Extract hashtags and domain names from URLs
+10 tweets .forEach(function(tweet ) {
+11 console . log (tweet );
+12 } ) ;
+13
+Run JavaScript Reset code
+Your console output
+Thank you to the Academy and the incredible cast & crew of #TheRevenant. #Oscars
+@HardingCompSci department needs student volunteers for #HourOfCode https://hourofcode
+Checkout the most comfortable earbud on #Kickstarter and boost your #productivity http
+Bootstrap 4 Cheat Sheet https://t.co/MFyKHvd50H
+Curious to see how #StephenCurry handles injury. http://mashable.com/2016/04/25/steph-
+► View solution
+2024-10-12, 4:47 p.m.
+);
+console.log(result[1]);
+zing
+ing
+ing zany zone
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+20 of 159 2024-10-12, 4:47 p.m.
+I PARTICIPATION ACTIVITY I 4.2.9: The exec() method. □
+What is output to the console?
+1) re = /\w+y/ ; 0
+resul t = re . exec ("zing zany
+zone " );
+consol e . l og (resul t [O] );
+0 zing
+0 zing zany
+0 zany
+2) re = /\w+y/ ; 0
+resul t = re . exec ("zing zane
+zone " );
+consol e . l og (resul t );
+0 undefined
+0 null
+0 false
+3) re = /\w+y/ ; 0
+resul t = re . exec ("zing zany
+zone " );
+consol e . l og (resul t [l] ) ;
+0 undefined
+0 null
+0 false
+4) re = /z(\w+)/ ; 0
+resul t = re . exec ("zing zany
+zone " );
+0
+0
+0
+zyBooks
+21 ofl59
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+5) re = /z\w+/g ;
+6)
+str = "zing zany zone " ;
+result = re . exec (str );
+while (result !== null )
+console . log (result [O]);
+result = re . exec (str );
+0 zing
+zing
+0 zany
+zone
+0 Infinite loop
+re = /\d+?/ ;
+str = " 012 3 " ;
+result = re . exec (str );
+consol e . log (result [O]);
+0 0
+0 3
+0 0123
+I CHALLENGE I . . ACTIVITY 4.2.2: Determining what matches.
+570104.2065416.qx3zqy7
+Start
+Write a statement to display the month from the regular expression match in result. Note:
+The given date is in day, month, year order.
+1 canst re = /( \d+) \- (\d+) \- (\d+)/ ;
+2 canst date = "17-8-2012" ; // Code will also be tested with value "8-11-92"
+3 canst result = re .exec( date );
+4
+5 /* Your solution goes here*/
+6
+0
+0
+□
+2024-10-12, 4:47 p.m.
+zyBooks
+22 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 2 3
+Check Next
+View your last submission v
+String methods that use regex
+Several String methods work with regular expressions:
+• match() returns an array of the matches made when matching the string
+against a regex.
+• replace() returns a new string that replaces matching strings with a
+replacement string.
+• search() returns the index of the ftrst match between the regex and the given
+string, or -1 if no match is found.
+• split() returns an array of strings created by separating the string into
+substrings based on a regex.
+Exploring further:
+• Regular Expressions (MDN)_
+• RegExr - For testing regular expressions

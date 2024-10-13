@@ -1,0 +1,654 @@
+Basics
+□
+2024-10-12, 4:47 p.m.
+zyBooks
+62 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+JavaScript allows webpages to be more interactive. JavaScript can execute in response to user
+in~~~ Md-i~lt:er the contents of the web page. Ex: A user clicks on a button, and JavaScript
+executes and changes the color of the webpage.
+• CSS Forms from W3Schools
+The Document ObTect Model (or DOM) is a date'! ~tructure that represen~s all parts of an HTML
+doc um~ ~- r ¥iW9~l¥g& wSteob9e~ eacfcWmk~ -~rm[1tRf!\~~11flrl¥1~®1W~Md is created from the
+doc u rfl e11igfillThkJ er§ Hl@i [~§Jr:5~6' Kfd-ci@ilififilhlt f a<r®refi@ffl:~eJ l'IJA1fi\1HJitoo@~ Ppr es en tat ion a n d /or
+behav.oReplacing Radio Buttons Without Replacing Radio Buttons from SitePoint
+A webpage's JavaScript code appears in the <script> element and is executed by the browser's
+JavaScript engine. I =~~~i~;~•110" I 4.6.7 • Writing JavaScript within the body of an HTML file.
+The JavaScript code below uses the document.writeln() method, which outputs HTML
+into the document and alters the DOM.
+1. Read the HTML and JavaScript below.
+2. Render the webpage to run the JavaScript code that displays a randomly generated
+response.
+3. Add more responses to the responses array, and render the webpage a few times
+until one of your new responses is displayed.
+1 <!DOCTYPE html>
+2 <html>
+3 <head>
+4 <title>Magic 8 Ball</title>
+5 <meta charset="UTF-8" >
+6 </head>
+7 <body>
+8 <hl>Magic 8 Ball</hl>
+9 <script>
+10
+11 // Possible 8 Ball responses
+12 let responses = [ "Without a doubt" , "Ask again later" , "Don't count c
+13
+14 // Display a randomly chosen response
+15 let randomNum = Math .floor(Math.random() * responses .length);
+16 document .writeln( "<p>Magic 8 Ball says ... <strong>" + responses [ randon
+17
+Render webpage
+Reset code
+□
+2024-10-12, 4:47 p.m.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+63 of 159 2024-10-12, 4:47 p.m.
+Your webpage
+Magic 8 Ball
+Magic 8 Ball says ... Ask again later.
+► View solution
+I PARTICIPATION I . . ACTIVITY 4.6.2: JavaScript Basics.
+1) The DOM is created from a
+document's HTML.
+0 True
+0 False
+2) The DOM is accessible via the global
+object named document.
+0 True
+0 False
+3) document. wri teln ( " <di v >test< /
+div>") adds a div element to the
+DOM.
+0 True
+0 False
+Window object
+□
+0
+0
+0
+JavaScript running in a web browser has access to the window object, which represents an open
+window document
+window window.document document
+window
+window.location.hostname
+window.navigator.userAgent
+window.innerWidth
+window
+window.alert("Hello")
+confirm()
+window.confirm("Are you sure?")
+window.open("https://www.twitter.com/")
+you like to see a popup window?");
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+64 of 159 2024-10-12, 4:47 p.m.
+browser window. In a tabbed browser, each tab has a o~ect. The o~ectisa
+property of the object and can be accessed as or just
+Other properties of the object include:
+• window.location is a location object that contains information about the window's current
+URL. Ex: is the URL'.s hostname.
+• window.navigator is a navigator object that contains information about the browser. Ex:
+returns the browser's user agent string.
+• window.innerHeight and window.innerWidth are the height and width in pixels of the
+window's content area. Ex: returns 600 if the browser's content area
+is 600 pixels wide.
+The object defines some useful methods:
+• window.alert() displays an alert dialog box. Ex:
+box with the message "Hello".
+displays a dialog
+• window.confirm() displays a confirmation dialog box with OK and Cancel buttons.
+returns true if OK is pressed and false if Cancel is pressed. Ex:
+displays a dialog box with the question.
+• window.open() opens a new browser window. Ex:
+opens a new browser that loads the
+Twitter webpage. I PARTICIPATION I . . . ACTIVITY 4.6.3: Using the window obJect.
+Use the window.confirm () method to ask if the user would like to see a pop up
+window:
+l et okPressed = window . confirm ( "Would y
+Then render the webpage, and click the OK button when prompted to see a small browser
+window created by window. open () . You may need to give your browser permission to
+show the popup window since many browsers prevent popups from displaying by default.
+□
+zyBooks
+65 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+HI
+<!DOCTYPE html>
+<html>
+<head>
+<title> JavaScript Demo</title>
+<meta charset="UTF-8" >
+</head>
+<body>
+<hl> Popup Demo</hl>
+<script>
+let okPressed = false ;
+if (okPressed ) {
+let myWindow = window .open ( "" , "width=250, height=100" );
+myWindow .document .writeln( "<hl>Hello, Popup!</hl>" );
+}
+</ script>
+,,/h,-.,-h , ,
+Render webpage Reset code
+Your webpage
+Popup Demo
+► View solution
+I PARTICIPATION I . . ACTIVITY 4.6.4: Window obJect.
+1) Can window object properties and
+methods be accessed without putting
+window. in front of the property or
+method?
+□
+0
+2024-10-12, 4:47 p.m.
+______);
+Document.writeln()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+66 of 159 2024-10-12, 4:47 p.m.
+0 Yes
+Q No
+2) What window object property is
+useful for determining if the webpage
+is loaded with HTTPS or HTTP?
+0 location
+0 navigator
+0 innerHeight
+3) What window object property likely produces the
+following output?
+document . writeln (window . navigator .
+IMoz illa / 5 . 0 (Windows NT 10.0 ; WOW64)
+App l eWebKi t / 537 . 36 Chrome / 53 . 0 . 2785.116
+0 language
+0 userAgent
+0 vendor
+4) The window method is ideal for
+displaying a pop-up advertisement.
+0 alert()
+0 confirm()
+0 open()
+Using the console
+0
+0
+0
+Modern browsers provide a console that allows the JavaScript code to produce informational and
+debugging output for the web developer, which does not affect the functionality or presentation of
+the webpage. By default, the console is not visible. The console is viewable in Chrome by pressing
+Ctrl+Shift+J in Windows/Linux or Cmd+Opt+J on a Mac.
+When a syntax error is present in JavaScript code or a run-time error occurs, the error is only made
+visible in the console. The figure below shows the syntax error created when the developer
+accidentally typed with a capital "D". The console appears underneath the
+webpage. Good practice is to leave the console open while writing and testing JavaScript code.
+Figure 4.6.1: Chrome console showing a syntax error on line 11 of test.html.
+"<p>Hello, JavaScript!</p>");
+console console
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+67 of 159 2024-10-12, 4:47 p.m.
+0 JavaScript Demo X + 0 □
+f- ➔ C © File J C:/ temp/ t est html *
+JavaScript Demo
+Elements Console Sources Network » 0 1 0
+[1B CS, top "' 0 Fi lter Default levels "' No Issues
+0 I.Jncaugh TypeE r ror : Doc ment. wr ite_n is n a f unction
+at test.html: 11
+>
+t est.html:11 / I
+X
+X
+0
+Syntax error Fi le name line number
+< !DOCTYPE html>
+<html l ang="en">
+<head>
+<meta charset= "UTF- 8 ">
+<title>JavaScript Demo</ title>
+< / head>
+<body>
+<hl>JavaScript Demo</ hl>
+<script>
+Document . write l n ( " <p >Hello , JavaSc
+</ script>
+< / body>
+< / html>
+The browser provides a object with a defined set of methods, or API, that the c onsoH
+object supports. An AP/ (Application Programming Interface) is a specification of the methods and
+objects that defines how a programmer should interact with software components. The console
+API includes the following methods:
+• console.log() displays informational data to the console.
+• console.warn() displays warnings to the console. The browser usually has a special indicator
+to differentiate a warning from the standard log message. Ex: A yellow warning box.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+68 of 159 2024-10-12, 4:47 p.m.
+• console.error() displays errors to the console. The browser usually has a special indicator to
+differentiate an error from a warning or the standard log message. Ex: A red error box.
+• console.dir() displays a JavaScript object to the console. The browser usually supports a
+method for compactly representing the object. Ex: A hierarchical tree representation allowing
+a developer to expand and collapse the object contents.
+Figure 4.6.2: console.log() output example.
+When the web browser console is open, both the webpage and the console are
+simultaneously visible.
+0 Co sole Output X +
+f- ➔ C (D File I C:/ temp/ tes .h ml
+Fruit I Like:
+• Apples
+• Oranges
+Elemen s Co sole Sources
+(IE] ~ op -. 0 Fil er
+Iles sage fo r the console.
+► 1 ... / ul
+>
+Console output
+0
+Network Perfotmance ))
+Defau It levels -.
+□
+*
+0
+No Issues
+test.html:17
+test.html:18
+console.log() can print both strings and concise representations of HTML elements.
+X
+X
+0
+);
+getElementsByTagName("ul")[0]);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+69 of 159 2024-10-12, 4:47 p.m.
+<body>
+<p>
+Fruit I Like:
+</p>
+<ul>
+<li>Apple s </li>
+<li>Oranges</ li>
+</ul>
+<script>
+con sol e . l og ("Message for the console ." )
+con sol e . l og (document. getElementsByTagNa
+</script>
+</body>
+I PARTICIPATION I ACTIVITY 4.6.5: Console methods.
+Match the console method with the best use for that method.
+If unable to drag and drop, refresh the page.
+warn() log() dir() error()
+Helping determine why code isn't
+working as expected.
+Displaying a structured JavaScript
+object.
+Checking that assumptions in code
+are correct.
+Reporting unexpected problems.
+Reset
+Loading JavaScript from an external file
+□
+Including JavaScript directly within an HTML file is common practice when using small amounts of
+JavaScript. However, writing JavaScript directly within the document may lead to problems as a
+webpage or website gets larger.
+<script>
+<script> src
+"bootstrap.js"></
+</script>
+<script /> <script src="bootstrap.js" />
+</script>
+Web server
+A piece of text.
+Some more text.
+Web browser
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+70 of 159 2024-10-12, 4:47 p.m.
+Good practice is to use elements to load JavaScript from an external file rather than
+writing the JavaScript directly within the HTML file. The element's attribute specifies
+a JavaScript file to load.
+Example 4.6.1: Loading JavaScript from an external file.
+<script src="boots
+script>
+A common error when loading an external JavaScript file is to forget the closing
+trying to use a self-closing tag as in
+modern browsers require a closing tag.
+I PARTICIPATION I . . ACTIVITY 4.6.6: Loading an external JavaScript file.
+index.html
+< !DOCTYPE html>
+<html>
+<title>JavaScri pt Example</ title>
+<script src="file.js" >< / script>
+<body>
+<p >A p i ece of text. </ p >
+<img src="dog.jpg" a l t ="dog">
+<p >Some more text. </ p>
+</ body>
+</ html>
+file .js
+a l ert ("Press enter to continue." );
+Animation content:
+The following code snippets are displayed:
+Index.html:
+<!DOCTYPE html>
+tag or
+. All
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+71 of 159 2024-10-12, 4:47 p.m.
+<html>
+<title>JavaScript Example</title>
+<script src="flle.js"></script>
+<body>
+<p>A piece of text.</p>
+<img src="dog.jpg" alt="dog">
+<p>Some more text.</p>
+</body>
+</html>
+flle.js:
+alert("Press enter to continue.");
+A web browser and a web server are also shown.
+Step 1:
+index.html code snippet is displayed coming from the web server when the web browser
+requests the code.
+Step 2:
+The code line" <script src="flle.js"></script>" is highlighted, which indicates to the browser that
+the browser should load JavaScript from an external file.
+Step 3:
+The web browser requests flle.js from the web server.
+Step 4:
+The code in flle.js "alert("Press enter to continue.");" is highlighted, and a box saying "Please enter
+to continue" shows up on the web browser.
+Step 5:
+After the user presses enter, the web browser finishes reading the javascript file and continues in
+the HTML file. The line" <p>A piece of text.</p>" is highlighted, and the line "A piece of text."
+appears on the web browser window.
+Step 6:
+The line " <img src="dog.jpg" alt="dog">" is highlighted, and a request is shown being made to the
+web server for the "dog.jpg" file. The image is then shown on the web browser under the "A piece
+of text" line.
+Step 7:
+The web browser finishes reading the HTML file, highlighting the line "<p>Some more text.</p>",
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+72 of 159 2024-10-12, 4:47 p.m.
+and showing "Some more text." on the web browser, under the dog image.
+Animation captions:
+1. The web server sends index.html to the web browser.
+2. Web browser reads the HTML file. The <script> tag with src attribute indicates the browser
+should load JavaScript from an external file.
+3. Web browser requests flle .js from the web server.
+4. Web browser reads and executes the JavaScript file. The alert() function displays a dialog
+box and waits for the user to press enter.
+5. After the user presses enter, web browser finishes reading the JavaScript file and continues
+reading the HTML file.
+6. Web browser requests the image file, and the web server responds with the image file.
+7. Web browser finishes reading HTML file.
+I PARTICIPATION I . . ACTIVITY 4.6.7: Downloading JavaScript files.
+1) A web browser will process the HTML
+following a script element that uses
+an external JavaScript file while the
+browser waits for the web server to
+return the JavaScript file.
+0 True
+0 False
+2) One script element can be used to
+include both inline JavaScript and a
+reference to an external JavaScript
+file.
+0 True
+0 False
+3) One script element can be used to
+reference multiple external JavaScript
+files.
+0 True
+0 False
+Loading JavaScript with async and defer
+□
+0
+0
+0
+<script>
+<script> async defer
+<script>
+<script>
+Web server
+A piece of text.
+Some more text.
+Web browser
+>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+73 of 159 2024-10-12, 4:47 p.m.
+Although the
+include the
+element can be included anywhere in the head or body, good practice is to
+element in the head with the or attributes set.
+The element's async attribute allows the browser to process the webpage concurrently
+with loading and processing the JavaScript.
+The element's defer attribute allows the browser to load the webpage concurrently with
+loading the JavaScript, but the JavaScript is not processed until the webpage is completely loaded.
+I PARTICIPATION I 4 6 8 U . h · b · h h · I ACTIVITY .. : sing t e async attn ute wit t e <script> e ement.
+< !DOCTYPE h tml >
+<html>
+index.html
+<title>Async Example</title>
+<script src=" fi l e . js" async></script>
+<body>
+<p >A p i ece of text. </p>
+<img src="dog . jpg" alt="dog ">
+<p >Some more text . </p >
+</body>
+</html>
+file.js
+a l ert (" Press enter to continue ." ) ;
+Animation content:
+The following code snippets are displayed:
+Index.html:
+<!DOCTYPE html>
+<html>
+<title>JavaScript Example</title>
+<script src="flle.js" async></script>
+<body>
+<p>A piece of text.</p>
+<img src="dog .jpg" alt="dog">
+<p>Some more text.</p>
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+74 of 159 2024-10-12, 4:47 p.m.
+</body>
+</html>
+file.js:
+alert("Press enter to continue.");
+A web browser window and a web server window are also shown.
+Step 1:
+Index.html code snippet is displayed coming from the web server when the web browser
+requests it. The line
+" <script src="file.js" async></script>" is highlighted. The web browser then makes a request to
+the web server for the file.jsm but keeps on going through the HTML code without waiting for the
+requested file to load. The code" <p>A piece of text.</p>" is then highlighted and the text "A piece
+of text." appears on the web browser.
+Step 2:
+The code" <img src="dog.jpg" alt="dog">" is then highlighted and the web browser makes a
+request to the web server for the dog.jpg file. At the same time, the web server returned the file.js
+file.
+Step 3:
+The web browser now displays the text "dog.jpg". Following is an alert window saying "Press
+enter to continue.".
+Step 4:
+The code "alert("Press enter to continue.");" is highlighted. Once the user presses enter, the
+"dog.jpg" file finishes loading and displays the correct image.
+Step 5:
+The web browser finishes reading the HTML file, highlighting the line "<p>Some more text.</p>".
+The text "Some more text." appears on the web browser window, below the dog image.
+Animation captions:
+1. Web browser reads index.html. <script> tag's async attribute causes browser to continue
+reading HTML without waiting for JavaScript file to load.
+2. Web server responds with file.js while the browser requests the image file.
+3. Web browser begins reading and executing the JavaScript file and pauses reading the
+HTML file. The web server concurrently responds to the image request.
+4. After the user presses enter, web browser finishes reading the JavaScript file and continues
+processing the HTML file by displaying the dog.jpg image that was received.
+5. Web browser finishes reading HTML file.
+Web server
+A piece of text.
+Some more text.
+Web browser
+>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+75 of 159 2024-10-12, 4:47 p.m.
+I =~~~~~;~•110" I 4 6 9 Using the defer attribute with the <script> element
+index.html
+< !DOCTYPE h t ml >
+<html>
+<title>Defer Example</ title>
+<script src=" fi l e.js " defer>< / script>
+<body>
+<p >A p i ece of text. </p>
+<img src="dog . jpg" alt="dog ">
+<p >Some more text . </p >
+</body>
+</html>
+file.js
+a l ert (" Press enter to continue ." ) ;
+Animation content:
+The following code snippets are displayed:
+Index.html:
+<!DOCTYPE html>
+<html>
+<title>JavaScript Example</title>
+<script src="flle.js" defer></script>
+<body>
+<p>A piece of text.</p>
+<img src="dog .jpg" alt="dog">
+<p>Some more text.</p>
+</body>
+</html>
+flle.js:
+alert("Press enter to continue.");
+A web browser window and a web server window are also shown.
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+76 of 159 2024-10-12, 4:47 p.m.
+Step 1:
+Index.html code snippet is displayed coming from the web server when the web browser
+requests the code. The line
+" <script src="flle.js" defer></ script>" is highlighted. The web browser then makes a request to
+the web server for the flle.jsm but keeps on going through the HTML code without waiting for the
+requested file to load. The code" <p>A piece of text.</p>" is then highlighted and the text "A piece
+of text." appears on the web browser.
+Step 2:
+The code" <img src="dog.jpg" alt="dog">" is then highlighted and the web browser makes a
+request to the web server for the dog.jpg file. At the same time, the web server returned the flle .js
+file.
+Step 3:
+The web browser now displays the text "dog .jpg". The web browser does not process the flle.js
+due to the defer attribute so the web browser continues to process the HTML. The dog image is
+displayed on the web browser. The web browser finishes reading the HTML file, highlighting the
+line "<p>Some more text.</ p>". The text "Some more text." appears on the web browser window,
+below the dog image.
+Step 4:
+After the web browser has finished processing the HTML file, the web browser then goes to
+process the flle.js file. An alert window is displayed on the web browser with the text "Please
+enter to continue.".
+Step 5:
+Once the user presses enter, the web browser finishes reading the Javascript file, and the alert
+window disappears.
+Animation captions:
+1. Web browser reads index.html. <script> tag's defer attribute causes browser to continue
+reading HTML without waiting for JavaScript file to load.
+2. Web server responds with the JavaScript file while the browser requests the image file.
+3. Web browser does not immediately process the JavaScript file due to the defer attribute.
+Instead, the browser continues to process the HTML.
+4. After reading the HTML file, the web browser reads and executes the JavaScript file.
+5. After the user presses enter, web browser finishes reading the JavaScript file.
+I PARTICIPATION
+ACTIVITY I 4.6.10: Loading JavaScript. □
+defer
+async
+defer
+async
+let a=10;
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+77 of 159 2024-10-12, 4:47 p.m.
+1) The browser interprets the
+and attributes for the script
+element the same.
+0 True
+0 False
+2) When using a third-party JavaScript
+library, the attribute is usually
+better than the attribute.
+0 True
+0 False
+3) When writing custom JavaScript, the
+defer attribute is usually better than
+the async attribute.
+0 True
+0 False
+4) Most webpages on the internet were
+written before the defer or async
+attributes were standardized.
+0 True
+0 False
+Miniflcation and obfuscation
+To reduce the amount of JavaScript that must be downloaded from a web server,
+developers often minify a website's JavaScript. Minification or minimization is the
+process of removing unnecessary characters (like whitespace and comments) from
+JavaScript code so the code executes the same but with fewer characters.
+Miniflcation software may also rename identifiers into shorter ones to reduce space.
+Ex: let t o t a lReturns = lo; may be converted into I._. U .J.. V / -
+Minified JavaScript is typically stored in a file with a ".min.js" file extension. An
+example of minified code from the Bootstrag groject is shown below.
+0
+0
+0
+0
+c,a.fn.button.function()
+document).on("bs.button.data-api",
+){d=a(c.target).closest(".btn");
+input[radio"],
+zyBooks
+78 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+II Excerpt from bootstrap .min.js
+a . fn . button=b , a . fn . button . Constructor=c , a . fn . button . noConflict=function ()
+{
+return a . fn . button=d , this }, a (document ) . on ("click.bs.button.data-api" ,
+' [ data-toggle"="but ton "] ' , function ( c ) { let d =a ( c . target ) . c l osest (". btn" ) ;
+b . call (d , "toggle" ), a (c . target ) . is ( 'input [type=" radio " ] ,
+A JavaScript obfuscator is software that converts JavaScript into an unreadable
+form that is very difficult to convert back into readable JavaScript. Developers
+obfuscate a website's JavaScript to prevent the code from being read or re-purposed
+by others. Obfuscated code may also be minified and appear in a ".min.js" file.
+I CHALLENGE I . . ACTIVITY 4.6.1: JavaScript with HTML.
+570104.2065416.qx3zqy7
+Start
+Use the document object's writeln() method to display the current URL in a <p> element in
+the webpage. Hint Provide document.writeln() with a string argument that uses the plus
+operator,+, to join p's starting tag, window.location.href, and p's ending tag.
+1 <hl>Demo</hl>
+2 <script>
+3 document .writeln(/* Your solution goes here*/);
+4 </ script>
+1
+Check Next
+View your last submission v
+2
+□
+2024-10-12, 4:47 p.m.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+79 of 159 2024-10-12, 4:47 p.m.
+Exploring further:
+• Window object from MDN
+• Console ob ject from MDN
+• asy:nc vs defer attributes from Growing with the Web
+• JavaScript miniflers: javascriQt-minifler.com and jscompress.com
+• JavaScript obfuscators: javascriptobfuscator.com and JS-obfus

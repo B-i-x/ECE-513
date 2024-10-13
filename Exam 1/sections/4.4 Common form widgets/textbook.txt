@@ -1,0 +1,447 @@
+Checkbox
+A checkbox is a widget for input elements with the type attribute of "checkbox", which allows
+users to check, or select, a value. A checkbox initially appears selected if the checked attribute is
+set. Ex: <input type=" checkbox" checked> creates a checked checkbox. The checked
+attribute is an example of a boolean attribute. A boolean attribute is an attribute that is true when
+present and false when absent. No value must be assigned to a boolean attribute.
+For each checkbox selected, the browser sends the checkbox's name and value to the server. If the
+value attribute is not specified, the default value of "on" is sent. If a checkbox is not selected, the
+browser does not send anything to the server. A common error on the server is failing to record all
+checkboxes in the form as the browser doesn't report any values for checkboxes not selected by the
+user.
+Good practice is to use label elements with checkboxes so the user can click the label to check and
+uncheck the associated checkbox. I PARTICIPATION I . . ACTIVITY 4.4.1: Submitting checkboxes to the server. □
+2024-10-12, 4:47 p.m.
+Web server
+http://example.survey">
+for="item1">1:</item1" item1">
+for="item2">2:</item2" item2">
+for="item3">3:</item3" item3">
+type="submit">
+Item 1:
+Item 2:
+Item 3:
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+37 of 159 2024-10-12, 4:47 p.m.
+r
+1:~
+ltem2:0
+ltem3:~
+Submit J
+<form action="http : // example . com/survey ">
+<p>
+<label for ="iteml " >Item 1: </ label>
+<input type="checkbox" name="iteml " id="iteml ">
+</p>
+<p>
+<label for ="item2" >Item 2 : </ label>
+<input type="checkbox" name="item2 " id="item2 ">
+</p>
+<p>
+<label for ="item3 " >Item 3 : </ label>
+<input type="checkbox" name="item3 " id="item3 ">
+</p>
+<input type =" submit ">
+</form>
+Animation content:
+The following code snippet is displayed:
+<form action="http://example.com/ survey">
+< p >
+<label for= "item1 ">Item 1 :</label>
+<input type="checkbox" name="item1 " id="item1 ">
+</p>
+< p >
+<label for= "item2">Item 2:</label>
+<input type="checkbox" name="item2" id="item2">
+</p>
+< p >
+<label for= "item3">Item 3:</label>
+<input type="checkbox" name="item3" id="item3">
+</p>
+<input type= "submit">
+</form>
+item1=on
+item3=on
+End of code snippet. A form is displayed with 3 checkboxes called "Item 1 ", "Item 2", and "Item 3"
+with a button called "Submit." Boxes 1 and 3 are selected and when the submit button is clicked,
+zyBooks
+38 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+"Item 1" and "Item 3" are sent to the web server with the value on. The "Web Server" is displayed,
+showing "item1 =on" and "item3=on."
+Animation captions:
+1. Each checkbox is displayed with a corresponding label.
+2. The user checks Item 1 and Item 3 checkboxes and clicks the submit button.
+3. For each selected checkbox, the checkbox's name and the value "on" are sent to the server.
+I PARTICIPATION I . ACTIVITY 4.4.2: Checkbox inputs.
+The following form contains a checkbox, which is initially checked . Click the submit button
+to view the form data sent to the server. Try adding another checkbox with the name
+"throw_party".
+1 <form action="https://wp.zybooks.com/form-viewer.php" target="_blank" metho
+2 <p>
+3 <label for="birthday_today" >Birthday today? </ label>
+4 <i nput type="checkbox" id="birthday_today" name="birthday_today" chec
+5 </p>
+6
+7 <p>
+8 <i nput type="submit" value="Submit">
+9 </Q>
+10 </fo~
+11
+Render webpage Reset code
+□
+2024-10-12, 4:47 p.m.
+type
+name
+name value
+<input type="radio" name="movie" value="ET">
+Birthday today?
+Throw party?
+Submit
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+39 of 159 2024-10-12, 4:47 p.m.
+Your webpage
+Birthday today? ~
+[ Submit ]
+► View solution
+Radio button
+Expected webpage
+B
+Tl
+A radio button is a widget for input elements with the attribute of "radio", which allows users
+to select exactly one value from possibly many values. The web browser groups radio buttons
+together with the same attribute, where each possible value in a group has an associated
+input. When submitting a form, the browser sends the selected radio button's and
+attribute. Ex: If the radio button is
+selected, "movie=ET" is sent to the server.
+The main difference between a radio button and checkbox is that only one radio button in a group
+can be selected, while any number of checkboxes can be selected. I PARTICIPATION I . ACTIVITY 4.4.3: Radio buttons.
+Try adding another radio option for the restaurants group with a value of Pizza Hut. Click
+the submit button to view the form data sent to server. Then, try adding another set of
+radio buttons to match the expected rendered HTML.
+□
+Select your favorite chain restaurant:
+Subway
+Starbucks
+Pizza Hut
+Select your favorite movie:
+Gone with the Wind
+Star Wars, Episode IV
+The Sound of Music
+E.T.: The Extra-Terrestrial
+Titanic
+Submit
+zyBooks
+40 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE4 13SalehiFall2024/c ...
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+HI
+<forij action=" https: / /wp. zybooks. com/form-viewer. php" target="_blank" met
+<p>Select your favorite chain restaurant: </p>
+<div>
+<i nput type="radio" name="restaurants" value="Subway" id="sub">
+<label for="sub" >Subway</ label>
+</div>
+<div>
+<i nput type="radio" name="restaurants" value="Starbucks" id="starB"
+<label for="starB" >Starbucks </ label>
+</div>
+<p>
+<i nput type="submit" value="Submit">
+<Ii:>>
+</ fo~ '
+Renderwebpage Reset code
+Your webpage Expected webpage
+Select your favorite chain restaurant:
+0 Subway
+0 Starbucks
+[ Submit ]
+► View solution
+0 0 0 0 0 0 0 0 [ ]
+I PARTICIPATION I . ACTIVITY 4.4.4: Checkboxes and radio buttons.
+Refer to the HTML below.
+□
+2024-10-12, 4:47 p.m.
+<form action="form-processor" method="POST">
+<p>Select a flavor:</p>
+<div>
+<input type="radio" name="flavor" value="1" checked>
+<label for="choc">Chocolate</label>
+</div>
+<div>
+<input type="radio" name="flavor" value="2">
+<label for="van">Vanilla</label>
+</div>
+<div>
+<input type="radio" name="flavor" value="3">
+<label for="straw">Strawberry</label>
+</div>
+<p>Select toppings:</p>
+<div>
+<input type="checkbox" name="topping-whip">
+<label for="whip">Whipped Cream</label>
+</div>
+<div>
+<input type="checkbox" name="topping-nuts" checked>
+<label for="nuts">Nuts</label>
+</div>
+<p>
+<input type="submit" value="Order">
+</p>
+</form>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+41 of 159 2024-10-12, 4:47 p.m.
+1) If the user clicks Order without
+changing anything in the form,
+how many items will be sent to
+the server?
+Check Show answer
+2) What is the maximum number
+of items that can be sent to the
+server?
+Check Show answer
+3) What is the minimum number of
+items that will be sent to the
+server?
+0
+0
+0
+"football">Football</option>
+"baseball">Baseball</option>
+"basketball">Basketball</
+"hockey">Hockey</option>
+<option value="soccer">Soccer</option>
+</select>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+42 of 159 2024-10-12, 4:47 p.m.
+Check Show answer
+4) The labels are not correctly
+associated with each input
+element. Which attribute should
+be added to each input element
+to correctly associate the labels
+with the input elements?
+Check Show answer
+Drop-down menu
+0
+The <select> element creates a drop-down menu (or drop-down list), which allows users to select
+one of several predefined values. The <option> element creates a value, or option, the user can
+select within a drop-down menu. When the user is not interacting with the menu, the drop-down
+menu usually displays the selected option.
+The difference between a drop-down menu and a radio button widget is that the drop-down menu
+only displays the options when interacting with the user, while a radio button widget always
+displays all options.
+Figure 4.4.1: Drop-down menu's default appearance (left) and when
+selecting an option (right).
+<select name="sport">
+<option val ue="footbal
+<option val ue="basebal
+<option val ue="basketb
+option>
+<option val ue="hockey"
+I footbal I .., I Baseball ..,
+Hockey
+Soccer
+size
+<select size="4">
+size
+multiple
+"flagcolors" size="4"
+Red</option>
+orange">Orange</option>
+yellow">Yellow</option>
+"green">Green</option>
+>Blue</option>
+"purple">Purple</option>
+"white">White</option>
+black">Black</option>
+<input type="button">
+<button> < input>
+<button> type
+type
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+43 of 159 2024-10-12, 4:47 p.m.
+List box
+A list box widget is created by specifying a size with the select element's attribute. Ex:
+more than
+list of options.
+creates a list box that shows four options at a time. If the list box contains
+options, the browser adds a vertical scrollbar so the user can scroll through the
+The attribute allows the user to select multiple options. On Windows, the user must
+hold down the control (Ctrl) button to select multiple options, and on a Mac, the user must hold
+down the command button. Many users are unaware of how to choose multiple options from a list
+box, so good practice is to use checkboxes instead.
+Figure 4.4.2: List box that allows multiple options to be selected.
+Buttons
+<select name="flagcolo
+multiple>
+<option value= "red">
+<option value= "orang
+<option value= "yello
+<option value="green
+<option value="blue"
+<option value="purpl
+<option value="white
+<option value= "black
+</ select>
+A button widget can be created using the <button> element or with / " -- I=iu. ;___ L :1 1-1e- u u L
+The element allows text and images to be displayed in a button, but an i nn11t > button
+only allows text.
+The element has a attribute that can be set to various values like "button" or
+"submit". The "button" type is typically used with JavaScript to perform an action when clicked. The
+"submit" type creates a submit button for a form. If the attribute is not specified, different
+browsers may choose different default types, so good practice is to always specify the type.
+"button" value="Home">
+button">
+"png"
+strong>
+type
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+44 of 159 2024-10-12, 4:47 p.m.
+Figure 4.4.3: HTML buttons.
+Styling widgets
+<input type="buttor
+<button type= "buttc
+<img src="home.pr
+a lt="home" ><br>
+<strong>Home</stJ
+</button>
+I Home I Home
+The default look of a form's widgets may differ depending on the browser and
+operating system. Developers use CSS to give widgets a more uniform look or to
+increase the widgets ' visual appeal.
+The image on the left shows the default button in Chrome. The button on the right
+has been styled with CSS.
+I Boring Button I
+Password field
+A password field is a widget for input elements with the attribute of "password", which allows
+users to enter a password without the password contents being displayed on-screen. Web
+browsers usually provide facilities to remember passwords at various websites to help users.
+Forms that submit passwords or any sensitive data should always submit with URLs that use
+HTTPS. Form data submitted with HTTP are not encrypted, but HTTPS encrypts form data.
+size
+maxlength size
+maxlength
+"secret" size="10"
+<fieldset>
+value="The Office" id="theOffice">
+label>
+value="Community" id="community">
+label>
+value="The Big Bang Theory"
+Bang Theory</label>
+value="Other" id="other">
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+45 of 159 2024-10-12, 4:47 p.m.
+The HTML below uses the attribute to limit the password field's width and uses the
+and
+attribute to limit the maximum number of characters the user can enter. The
+attributes can be used on text boxes as well.
+Figure 4.4.4: Password field that limits the number of characters to 10.
+Fieldset
+<input type="password" name="se
+maxl ength="l0">
+The <fieldset> element groups related form widgets together and draws a box around the related
+widgets. The <legend> element defines a caption for a
+Figure 4.4.5: Fieldset around related radio buttons.
+<fieldset>
+<legend>Favorite Sitcom</ legend>
+<input type="radio" name="sitcom" vaJ
+<label for= "theOffice" >The Offi c e </ lc
+<input type="radio" name="sitcom" vaJ
+<label for= "community" >Community</ lal
+<input type="radio" name="sitcom" vaJ
+id="bigBang">
+<label for= "bigBang" >The Big Ba ng ThE
+<input type="radio" name="sitcom" vaJ
+<label for= "other" >Other</ label>
+</ fieldset>
+FaYorite Sitcom-------------------..-.
+• he Office Community The Big Bang Theory
+I PARTICIPATION I 4.4.5: Menus, buttons, and passwords.
+ACTIVITY
+Other
+□
+<fieldset>
+<option>
+value
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+46 of 159 2024-10-12, 4:47 p.m.
+7) A can group drop-down 0
+menus, buttons, and other widgets.
+0 True
+0 False
+2) A drop-down menu only allows one 0
+option to be selected.
+0 True
+0 False
+3) An tag must have a 0
+attribute.
+0 True
+0 False
+4) Which element can create a button 0
+with an image?
+0 <button>
+0 <input>
+5) Buttons always submit form data to a 0
+server.
+0 True
+0 False
+6) Passwords from the password widget 0
+that are sent to the server using HTTP
+are safe from prying eyes.
+0 True
+0 False
+7) Which input element attribute limits 0
+the number of characters the user
+can type in a text box or password
+field?
+0 size
+0 maxlength
+I CHALLENGE ACTIVITY I 4.4.1: Building common widgets. □
+Start
+zyBooks
+47 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+5707 04.2065416 qx3zqy7
+Add a checkbox associated with each label. The first checkbox should have name and id
+of "first" and be initially checked . The second checkbox should have name and id of
+"second" and be initially not checked . SHOW EXPECTED
+1 <form action="https://wp.zybooks.com/form-viewer.php" target="_blank" metho
+2
+3 <p>
+4 <label for="first" >Like cats ?</ label>
+5 <!-- TODO: Add checkbox -->
+6 </p>
+7
+8 <p>
+9 <label for="second" >Like dogs? </ label>
+10 <!-- TODO: Add checkbox -->
+11 </p>
+12
+13
+14 <p>< input type="submit" value="Submit" ></p>
+15 </form>
+1 2 3 4
+Check Next
+View your last submission v
+Exploring further:
+• HTML <input> tag from W3Schools
+• HTML <select> tag from W3Schools
+• HTML <button> tag from W3Schools

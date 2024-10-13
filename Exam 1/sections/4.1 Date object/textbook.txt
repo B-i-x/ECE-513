@@ -1,0 +1,262 @@
+Date object
+A Date object represents a single moment in time, based on the number of milliseconds since the
+Unix Epoch (January 1, 1970 UTC). UTC (Coordinated Universal Time), also known as GMT
+(Greenwich Mean Time), is a 24-hour time standard. The object is created with the
+operator and a constructor. A constructor is a function that creates an instance of an object. I PARTICIPATION I . ACTIVITY 4.1.1: Date obJect constructor.
+l et currDateTime = new Date ();
+consol e . l og (currDateTime );
+l et oneSecPastEpoch = new Date (l000 );
+consol e . l og (oneSecPastEpoch);
+II Feb 22, 1732
+l et georgeBi rthday = new Date (l732 , 1
+consol e . l og (georgeBi rthday );
+II Oc t 21, 2 035 at 7: 28 : 00
+l et theFuture = new Date (2035 , 9 , 21 ,
+consol e . l og (theFuture );
+Cer
+Wed Dec 31 1969 18:00:01 GMT-0600 (CE
+Cen·
+Sun Oct 21 2035 07:28:00 GMT-0500 (Cer
+Animation content:
+The following code is displayed:
+let currDateTime = new Date();
+console.log(currDateTime);
+let oneSecPastEpoch = new Date(1000);
+console.log(oneSecPastEpoch);
+□
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+2 of 159 2024-10-12, 4:47 p.m.
+II Feb 22, 1732
+let georgeBirthday = new Date(1732, 1, 22);
+console.log(georgeBirthday);
+II Oct 21, 2035 at 7:28:00
+let theFuture = new Date(2035, 9, 21, 7, 28, 0);
+console.log(theFuture);
+Step 1 runs the following code:
+let currDateTime = new Date();
+Step 2 runs the following code:
+console.log(currDateTime);.
+The following line is displayed in the console:
+Thu Apr 18 2019 15:26:13 GMT-0500 (Central Daylight Time).
+Step 3 runs the following code:
+let oneSecPastEpoch = new Date(1000);
+Step 4 runs the following code:
+console.log(georgeBirthday);.
+The following line is displayed in the console:
+Wed Dec 31 1969 18:00:01 GMT-0600 (Central Standard Time).
+Step 5 runs the following code:
+let georgeBirthday = new Date(l 732, 1, 22);
+Step 6 runs the following code:
+console.log(georgeBirthday);
+The following line is displayed in the console:
+Fri Feb 22 1732 00:00:00 GMT-0600 (Central Standard Time).
+Step 7 runs the following code:
+let theFuture = new Date(2035, 9, 21, 7, 28, 0);
+console.log(theFuture);
+The following line is displayed in the console:
+Sun Oct 21 2035 07:28:00 GMT-0500 (Central Daylight Time).
+Animation captions:
+1. Initialize the variable currDateTime to the current date and time using the Date constructor.
+2. Display the currDateTime variable, which is in the local time zone. Central Daylight Time is 5
+Date Date
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+3 of 159 2024-10-12, 4:47 p.m.
+hours before Greenwich Mean Time (GMT).
+3. Initialize the variable oneSecPastEpoch to 1000 milliseconds past Jan 1, 1970 using the
+Date constructor.
+4. Central Standard Time is 6 hours before GMT. Daylight time (called Daylight Saving Time) is
+one hour different than standard time because clocks are turned forward one hour.
+5. Initialize the variable georgeBirthday to Feb 22, 1732. The month parameter ranges from
+0-11, so 1 = Feb.
+6. georgeBirthday falls on a Friday and is 6 hours before GMT.
+7. Initialize the variable theFuture to Oct 21, 2035 at 7:28:00. theFuture date falls on a Sunday.
+I PARTICIPATION I . ACTIVITY 4.1.2: Date obJect constructor.
+1) The Date constructor must be passed
+at least one argument.
+0 True
+0 False
+2) The following code initializes x to
+December 25, 2017.
+let x = new Date (2017 , 12 ,
+25 );
+0 True
+0 False
+3) The code below displays the same
+string, regardless of the local time
+zone.
+let x = new Date (2016 , 5 , 1 ,
+15 , 30 , 45 );
+consol e . l og (x );
+0 True
+0 False
+Date methods
+The object provides a number of methods to get and set
+□
+0
+0
+0
+properties.
+let day = new Date(2016, 0, 30);
+day.getDate(); // 30
+day.setDate(21); // 30 -> 21
+let day = new Date(2016, 0, 30);
+day.getDay(); // 6 = Saturday
+let day = new Date(2016, 0, 30);
+day.getFullYear(); // 2016
+day.setFullYear(2017); // 2016 -
+> 2017
+let day = new Date(2016, 0, 30,
+5, 0);
+day.getHours(); // 5
+day.setHours(2); // 5 -> 2
+let day = new Date(2016, 0, 1, 5,
+20, 10, 250);
+day.getMilliseconds(); // 250
+day.setMilliseconds(500); // 250
+-> 500
+let day = new Date(2016, 0, 30,
+5, 20);
+day.getMinutes(); // 20
+day.setMinutes(35); // 20 -> 35
+let day = new Date(2016, 0, 30,
+5, 20);
+day.getMonth(); // 0
+day.setMonth(3); // 0 (Jan) -> 3
+(Apr)
+let day = new Date(2016, 0, 1, 5,
+20, 10, 250);
+day.getSeconds(); // 10
+day.setSeconds(45); // 10 -> 45
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+4 of 159 2024-10-12, 4:47 p.m.
+Table 4.1.1: Date object getter and setter methods.
+Method Description Example
+getDate()
+Gets or sets the day
+relative to the current
+setDate()
+set month
+L l ) ; /1 .:JU - > L .L
+getDay()
+Returns the day of the
+week (0-6)
+getFul/Year() Gets or sets the 4 digit
+setFul/Year() year
+getHours() Gets or sets the hour
+setHours() (0-23)
+getMilliseconds() Gets or sets the
+setMilliseconds() milliseconds (0-999)
+getMinutes() Gets or sets the
+setMinutes() minutes (0-59)
+getMonth() Gets or sets the month
+setMonth() (0-1 1)
+ua-c.e \ <:'.U l b , u , 1 , '::! ,
+getSeconds() Gets or sets the
+setSeconds() seconds (0-59)
+let day = new Date(2016, 0, 30,
+5, 20);
+day.getTime(); //
+1454152800000
+day.setTime(1454153700000); //
+Sat Jan 30 2016 05:35:00 GMT-0600
+days before Sonia Sotomayor
+26443 days before Sonia Sotomayor
+getDifferenceInDays(person1Date.getTime() - person2Date.getTime())
+6212 after Sonia Sotomayor
+after Sonia Sotomayor
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+5 of 159 2024-10-12, 4:47 p.m.
+Method Description Example
+Gets or sets the
+getTime() number of
+setTime() milliseconds since Jan
+1, 1970, 00:00:00 UTC
+I PARTICIPATION I . . . ACTIVITY 4.1.3: Practice with the Date obJect.
+The notablePeople map contains a list of some notable individuals and birthdays. Ex:
+notablePeople ["Elvis Presley" J contains Elvis' birthday, which is Jan 8, 1935.
+1. The first for-in loop displays each person's name and birthday, but the format of the
+birthday is too wordy. Change the output format to MM/DD/YYYY. Ex: Elvis Presley:
+1/8/1935.
+2. Add a for-in loop to display each person born before Sonia Sotomayor and the
+rounded number of days difference in birth day. Ex:
+Elvis Presley was born 7108 da}
+Franklin D. Roosevelt was born
+o The getDifferencelnDays() utility function is provided in the code below. When
+passed a time difference in milliseconds, the function returns the rounded
+number of days difference. Ex:
+getDifferenceinDays(person:
+3. Add a for-in loop to display each person born after Sonia Sotomayor and the
+rounded number of days difference in birth day. Ex:
+Elon Musk was born 6212 days af
+Steve Jobs was born 244 days af
+□
+0700 0700 0728 0700 0700 0700 0728 0600 0700 0700 zyBooks https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+canst notablePeople = {
+"Elvis Presley" : new Date (1935,
+"Sonia Sotomayor" : new Date (1954,
+"Franklin D. Roosevelt" : new Date (1882,
+"Elon Musk" : new Date (1971,
+"Roger Staubach" : new Date (1942,
+"Steve Jobs" : new Date (1955,
+"Albert Einstein" : new Date (1879,
+"Isaac Asimov" : new Date (1919,
+"Jada Pinkett Smith" : new Date (1971,
+"Grace Hopper" : new Date (1906,
+};
+II Display all names and birthdays
+for (let person in notablePeople ) {
+0, 8),
+5, 25),
+0, 30),
+5, 28),
+1, 5),
+1, 24),
+2, 14),
+9, 4),
+8, 18),
+11, 9)
+16 console .log( person + ": " + notablePeople [ person ]);
+17 }
+HI
+Run JavaScript Reset code
+Your console output
+Elvis Presley: Tue Jan 08 1935 00:00:00 GMT-0700 (Mountain Standard Time)
+Sonia Sotomayor: Fri Jun 25 1954 00:00:00 GMT-0700 (Mountain Standard Time)
+Franklin D. Roosevelt: Mon Jan 30 1882 00:00:00 GMT-0728 (Mountain Standard Time)
+Elon Musk: Mon Jun 28 1971 00:00:00 GMT-0700 (Mountain Standard Time)
+Roger Staubach: Thu Feb 05 1942 00:00:00 GMT-0700 (Mountain Standard Time)
+Steve Jobs: Thu Feb 24 1955 00:00:00 GMT-0700 (Mountain Standard Time)
+Albert Einstein: Fri Mar 14 1879 00:00:00 GMT-0728 (Mountain Standard Time)
+Isaac Asimov: Sat Oct 04 1919 00:00:00 GMT-0600 (Mountain Daylight Saving Time)
+Jada Pinkett Smith: Sat Sep 18 1971 00:00:00 GMT-0700 (Mountain Standard Time)
+Grace Hopper: Sun Dec 09 1906 00:00:00 GMT-0700 (Mountain Standard Time)
+► View solution
+I CHALLENGE I . ACTIVITY 4.1. 1: Using Date methods.
+570104.2065416.qx3zqy7
+Start
+Update the variable updatedOn to the year 2015 using Date methods.
+□
+6 of 159 2024-10-12, 4:47 p.m.
+zyBooks
+7 of 159
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ...
+1 2 3
+Check Next
+View your last submission v
+Exploring further:
+• Date object (MON).
