@@ -43,7 +43,7 @@ for area in subsections:
             relative_path = os.path.relpath(subdir, d)
             section, subsection = extract_section_numbers(relative_path)
             # Build the prompt for the AI model
-            prompt = f"""Based on the following content, please create 10 questions, they can be Multiple choice, Multiple answers, Short answer, or Fill in the blank. Provide the correct answers as well. 
+            prompt = f"""Based on the following content, please create 10 questions, they can be Multiple choice, Multiple answers, Short answer, or Fill in the blank. Do not make true/false questions. Provide the correct answers as well. 
 
             For each question, assign an ID in the format [{section}.{subsection}.question_number], where question_number starts from 1 and increments for each question.
 
@@ -125,7 +125,3 @@ for area in subsections:
 
             except Exception as e:
                 print(f"Error processing {filepath}: {e}")
-
-        # After processing each subsection, wait for 1 second and wait for user to continue
-        time.sleep(1)
-        input("Press Enter to continue to the next subsection...")
