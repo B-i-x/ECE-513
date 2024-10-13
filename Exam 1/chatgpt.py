@@ -73,7 +73,7 @@ for area in subsections:
 
             {file_textbook_content}
             """
-            print(prompt)
+            # print(prompt)
             # Prepare the messages for the ChatCompletion API
             messages = [
                 {"role": "system", "content": "You are a helpful assistant that creates test questions based on provided textbook content."},
@@ -88,8 +88,8 @@ for area in subsections:
                     max_tokens=16384,  # Adjust as needed
                 )
 
-                response = completion.choices[0].message['content']
-
+                response = completion.choices[0].message
+                print(response)
                 # Try to parse the response as JSON
                 try:
                     questions = json.loads(response)
