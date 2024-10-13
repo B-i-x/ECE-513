@@ -3,13 +3,9 @@ Validating data in the web browser
 □
 □
 Since data integrity is essential to most applications, many web forms require specific formats for
-Since data integrity is essential to most applications, many web forms require specific formats for
-users to enter data. Ex: A credit card must contain 16 digits, a date cannot have a fifteenth month,
 users to enter data. Ex: A credit card must contain 16 digits, a date cannot have a fifteenth month,
 and only 50 valid names of states exist for the United States of America .
-and only 50 valid names of states exist for the United States of America .
-2024-10-12, 4:47 p.m.
-2024-10-12, 4:47 p.m.
+
 Credit #:</"address"></"acceptTerms"
 Credit #:</"address"></"acceptTerms"
 >
@@ -22,9 +18,6 @@ I accept the terms of sale:
 I accept the terms of sale:
 Submit
 Submit
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-139 of 159 2024-10-12, 4:47 p.m.
-139 of 159 2024-10-12, 4:47 p.m.
 Data validation is checking input for correctness. While a web server must perform data validation
 Data validation is checking input for correctness. While a web server must perform data validation
 on submitted data, a better user experience occurs when the web browser performs the same data
@@ -113,7 +106,6 @@ Anytown, KS 12345
 Anytown, KS 12345
 0
 0
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
 140 of 159 2024-10-12, 4:47 p.m.
 140 of 159 2024-10-12, 4:47 p.m.
 <label for="address">Address:</label>
@@ -198,9 +190,6 @@ match()
 match()
 value
 value
-zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
-141 of 159 2024-10-12, 4:47 p.m.
-141 of 159 2024-10-12, 4:47 p.m.
 - digits.
 - digits.
 0 The input field is empty.
