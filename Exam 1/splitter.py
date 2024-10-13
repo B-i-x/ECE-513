@@ -7,7 +7,7 @@ def create_file(file_path):
 def split_sections(input_filepath):
 
     # Regex pattern to identify section headers e.g., "1.1 "
-    section_pattern = re.compile(r'^3\.\d+ [^\d]+$')
+    section_pattern = re.compile(r'^4\.\d+ [^\d]+$')
     
     # Initialize variables
     current_section = None
@@ -56,4 +56,4 @@ def split_sections(input_filepath):
         print(f"Section {current_section.strip()} saved to {output_filepath}")
 
 # Example usage
-split_sections('raw/chp3text.txt')
+split_sections('raw/chp4text.txt')

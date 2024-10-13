@@ -1,0 +1,1402 @@
+ID,Question,Answer
+1.1.1,True/False: An IP address can consist of any four numbers between 1 and 1000.,False
+1.1.2,"Multiple Choice: What is the maximum number in any single part of an IPv4 address?
+   - (A) 100
+   - (B) 255
+   - (C) 500
+   - (D) 1024",(B) 255
+1.1.3,"Matching: Match the following domain types to their description:
+   - (A) .com
+   - (B) .edu
+   - (C) .gov
+   - ___ Commercial
+   - ___ Educational
+   - ___ Government","(A) Commercial, (B) Educational, (C) Government"
+1.1.4,True/False: IPv6 uses 128-bit addresses to allow for a greater number of unique IP addresses compared to IPv4.,True
+1.1.5,"True/False: The hostname in a URL must always include ""www.""",False
+1.1.6,"Multiple Choice: What protocol is used by a browser to retrieve the IP address of a domain name?
+   - (A) HTTPS
+   - (B) SMTP
+   - (C) DNS
+   - (D) TCP",(C) DNS
+1.1.7,True/False: The subnet mask of an IPv4 address determines which part of the address represents the network and which part represents the host.,True
+1.1.8,"Multiple Choice: Which version of IP is used to create a private network?
+   - (A) IPv3
+   - (B) IPv4
+   - (C) IPv6
+   - (D) IPv8",(B) IPv4
+1.1.9,True/False: Every device connected to the Internet must have a unique IP address in the IPv4 or IPv6 standard.,True
+1.1.10,"Multiple Choice: What does the '255.255.255.0' number represent in a network setting?
+   - (A) IP address
+   - (B) Network prefix
+   - (C) Subnet mask
+   - (D) Default gateway",(C) Subnet mask
+1.10.1,True/False: The `<input>` element can only be used for text fields in HTML forms.,False
+1.10.2,"Multiple Choice: What attribute of the `<input>` element specifies the kind of data expected to be entered by the user?
+   - (A) type
+   - (B) name
+   - (C) value
+   - (D) placeholder",(A) type
+1.10.3,True/False: The `value` attribute of an input element is visible to the user and can be modified.,True
+1.10.4,"Multiple Choice: Which attribute is used to disable an HTML form input field?
+   - (A) disabled
+   - (B) off
+   - (C) inactive
+   - (D) readonly",(A) disabled
+1.10.5,True/False: The `<label>` element is optional for `<input>` elements but recommended for accessibility.,True
+1.3.1,True/False: The <p> tag is used to create line breaks in HTML documents.,False
+1.3.2,"Multiple Choice: What is the purpose of the <p> tag in an HTML document?
+   - (A) To define a line break
+   - (B) To emphasize text
+   - (C) To create a paragraph
+   - (D) To insert an image",(C) To create a paragraph
+1.3.3,True/False: Nested <p> tags are valid in HTML and do not cause any errors in document rendering.,False
+1.3.4,"Multiple Choice: How do browsers typically display paragraphs?
+   - (A) With no spacing between paragraphs
+   - (B) With extra spacing above and below paragraphs
+   - (C) By indenting the first line of each paragraph
+   - (D) By making the text bold",(B) With extra spacing above and below paragraphs
+1.3.5,True/False: Adding extra spaces within the text in an HTML document will affect the spacing between words in most web browsers.,False
+1.3.6,"Multiple Choice: What does the <br> tag accomplish in an HTML document?
+   - (A) It adds a background color to text.
+   - (B) It creates a new paragraph.
+   - (C) It inserts a line break within the text.
+   - (D) It changes the font size of the text.",(C) It inserts a line break within the text.
+1.3.7,True/False: The <br> tag requires a closing tag.,False
+1.3.8,"Multiple Choice: What is the effect of multiple whitespace characters between words in HTML?
+   - (A) They add multiple spaces in the rendered document.
+   - (B) They are collapsed into a single space.
+   - (C) They create a new paragraph.
+   - (D) They are ignored by web browsers.",(B) They are collapsed into a single space.
+1.3.9,True/False: The use of the <br> tag is recommended for managing the layout and spacing of elements in a webpage.,False
+1.3.10,"Multiple Choice: How should line breaks be managed in HTML for content such as addresses or poetry?
+   - (A) Using <p> tags at the end of each line
+   - (B) Using CSS to manage spacing
+   - (C) Using <br> tags at the end of each line
+   - (D) Using <div> tags for each new line",(C) Using <br> tags at the end of each line
+1.4.1,True/False: HTML comments are rendered in the browser and visible to the user.,False
+1.4.2,"Multiple Choice: What is the correct syntax for an HTML comment?
+   - (A) <comment>This is a comment</comment>
+   - (B) <!-- This is a comment -->
+   - (C) // This is a comment
+   - (D) # This is a comment",(B) <!-- This is a comment -->
+1.4.3,True/False: Comments in HTML can be nested inside other comments.,False
+1.4.4,"Multiple Choice: Which of the following is a proper use of HTML comments?
+   - (A) To execute a JavaScript function conditionally
+   - (B) To leave notes for other developers within the code
+   - (C) To create a hidden text field in a form
+   - (D) To style elements differently based on the comment",(B) To leave notes for other developers within the code
+1.4.5,True/False: Placing a comment inside an HTML tag will prevent the tag from being rendered.,False
+1.4.6,"Multiple Choice: How should HTML comments be used in a document?
+   - (A) To improve the page's SEO by including keywords
+   - (B) To temporarily disable code without deleting it
+   - (C) To create secure sections of code that cannot be viewed by the user
+   - (D) To automatically update content on a webpage",(B) To temporarily disable code without deleting it
+1.4.7,True/False: HTML comments can be used to hide scripts from browsers that do not support JavaScript.,True
+1.4.8,"Multiple Choice: What happens if an HTML comment is incorrectly formatted?
+   - (A) The comment is still hidden from the user.
+   - (B) The content inside the comment may be displayed as text.
+   - (C) The entire webpage fails to render.
+   - (D) The comment turns into a functional HTML element.",(B) The content inside the comment may be displayed as text.
+1.4.9,True/False: It is considered good practice to use comments to explain complex parts of the code.,True
+1.4.10,"Multiple Choice: Which statement about HTML comments is true?
+   - (A) Comments can be placed anywhere in the HTML, including within tags.
+   - (B) Comments reduce the overall performance of the webpage.
+   - (C) Comments can execute HTML code when the page loads.
+   - (D) Comments are often used to include executable code on the page.","(A) Comments can be placed anywhere in the HTML, including within tags."
+1.5.1,"Multiple Choice: What is the purpose of the 'alt' attribute in an <img> tag?
+   - (A) To provide a caption for the image
+   - (B) To display an alternative text description if the image cannot be loaded
+   - (C) To increase the image size
+   - (D) To link to another webpage",(B) To display an alternative text description if the image cannot be loaded
+1.5.2,True/False: The 'src' attribute in an <img> tag is optional.,False
+1.5.3,"Multiple Choice: Which attribute specifies the image source in an <img> tag?
+   - (A) href
+   - (B) src
+   - (C) rel
+   - (D) type",(B) src
+1.5.4,True/False: The 'alt' attribute is required in <img> tags to pass HTML validation.,True
+1.5.5,"Multiple Choice: What happens if the 'src' attribute of an <img> tag is missing?
+   - (A) The image displays as a broken icon.
+   - (B) The browser automatically searches for a valid source.
+   - (C) No image space is rendered in the document.
+   - (D) The alt text is displayed in place of the image.",(A) The image displays as a broken icon.
+1.5.6,True/False: The <img> tag can be used to embed a video file into a webpage.,False
+1.5.7,"Multiple Choice: Which attribute in an <img> tag defines the space an image occupies before it loads?
+   - (A) alt
+   - (B) width and height
+   - (C) src
+   - (D) style",(B) width and height
+1.5.8,True/False: The dimensions specified in the <img> tag always override the natural size of the image.,False
+1.5.9,"Multiple Choice: How does the browser handle an <img> tag with conflicting width and height attributes that distort the image's natural aspect ratio?
+   - (A) The image is displayed with the specified dimensions, possibly distorted.
+   - (B) The browser adjusts the dimensions to maintain the aspect ratio.
+   - (C) The image fails to load.
+   - (D) The browser ignores the height attribute.","(A) The image is displayed with the specified dimensions, possibly distorted."
+1.5.10,True/False: The <img> tag supports both width and height attributes to control image sizing without CSS.,True
+1.6.1,True/False: An unordered list in HTML is used when the order of the items is important.,False
+1.6.2,"Multiple Choice: Which HTML element is used to create an unordered list?
+   - (A) <ol>
+   - (B) <ul>
+   - (C) <li>
+   - (D) <list>",(B) <ul>
+1.6.3,True/False: List items within an unordered list are automatically numbered by the browser.,False
+1.6.4,"Multiple Choice: What is the correct HTML element for creating a list item?
+   - (A) <item>
+   - (B) <li>
+   - (C) <listitem>
+   - (D) <ul>",(B) <li>
+1.6.5,"Multiple Choice: Which attribute would you use to change the bullet style in an unordered list using CSS?
+   - (A) list-style-type
+   - (B) list-bullet-style
+   - (C) bullet-style
+   - (D) type-style",(A) list-style-type
+1.6.6,True/False: It is valid HTML to nest an unordered list within an ordered list.,True
+1.6.7,"Multiple Choice: How can you start an ordered list at a number other than one?
+   - (A) Using the ""start"" attribute with the desired number
+   - (B) Using the ""begin"" attribute with the desired number
+   - (C) Using the ""first"" attribute with the desired number
+   - (D) It is not possible to start at a number other than one","(A) Using the ""start"" attribute with the desired number"
+1.6.8,"True/False: The <ol> element's numbering can be changed to alphabetical or Roman numerals using the ""type"" attribute.",True
+1.6.9,"Multiple Choice: What is the default list item marker for an unordered list?
+   - (A) Numbers
+   - (B) Dashes
+   - (C) Bullets
+   - (D) Squares",(C) Bullets
+1.6.10,True/False: The <li> element can be used outside of <ul> or <ol> elements.,False
+1.7.1,True/False: The `<a>` tag is used to define a division or a section in an HTML document.,False
+1.7.2,"Multiple Choice: What attribute of the `<a>` tag specifies the URL the link goes to?
+   - (A) src
+   - (B) href
+   - (C) rel
+   - (D) type",(B) href
+1.7.3,True/False: The `mailto:` URL scheme in an `<a>` tag's href attribute is used to link to another webpage.,False
+1.7.4,"Multiple Choice: Which URL scheme starts an email program to send an email?
+   - (A) http://
+   - (B) ftp://
+   - (C) mailto:
+   - (D) https://",(C) mailto:
+1.7.5,"Multiple Choice: What does clicking a hyperlink with an `href` attribute containing `mailto:someone@example.com` do?
+   - (A) Opens a webpage at `example.com`
+   - (B) Starts an email program to send an email to `someone@example.com`
+   - (C) Downloads a file from `example.com`
+   - (D) Connects to a live chat with `someone@example.com`",(B) Starts an email program to send an email to `someone@example.com`
+1.7.6,True/False: An `<a>` element can only contain text and cannot include images.,False
+1.7.7,"Multiple Choice: What attribute would you use to open a hyperlink in a new browser tab?
+   - (A) target=""_self""
+   - (B) target=""_parent""
+   - (C) target=""_blank""
+   - (D) target=""_top""","(C) target=""_blank"""
+1.7.8,"True/False: Using `target=""_blank""` in an `<a>` tag ensures that the linked document will open in a new tab, but not a new window.",False
+1.7.9,"Multiple Choice: How do you create a hyperlink that points to a specific section of the same webpage?
+   - (A) Use the `id` attribute in the `<a>` tag
+   - (B) Use the `name` attribute in the `<a>` tag
+   - (C) Use a hash (`#`) followed by the section's identifier in the `href` attribute
+   - (D) Use the `link` element",(C) Use a hash (`#`) followed by the section's identifier in the `href` attribute
+1.7.10,True/False: Relative URLs cannot be used within the `<a>` element to link to resources within the same site.,False
+1.8.1,True/False: Containers in HTML are always block-level elements.,False
+1.8.2,"Multiple Choice: What is the primary purpose of a container element like `<div>`?
+   - (A) To create hyperlinks
+   - (B) To structure the document and group content
+   - (C) To display content as inline
+   - (D) To underline text",(B) To structure the document and group content
+1.8.3,True/False: The `<span>` element is used for creating block containers.,False
+1.8.4,"Multiple Choice: Which HTML element is typically used as a generic container for styling purposes without any semantic meaning?
+   - (A) `<p>`
+   - (B) `<span>`
+   - (C) `<div>`
+   - (D) `<header>`",(C) `<div>`
+1.8.5,True/False: The `<div>` element can contain both block-level and inline elements.,True
+1.8.6,"Multiple Choice: What does it mean if an element is described as an ""inline"" element?
+   - (A) It occupies the full width of its parent container.
+   - (B) It does not start on a new line and only takes up as much width as necessary.
+   - (C) It cannot contain other elements.
+   - (D) It is always hidden from view.",(B) It does not start on a new line and only takes up as much width as necessary.
+1.8.7,True/False: An `<a>` tag can be used as a container for both text and images.,True
+1.8.8,"Multiple Choice: Which element is most suitable for marking up a sidebar with secondary content like links or advertisements?
+   - (A) `<main>`
+   - (B) `<footer>`
+   - (C) `<aside>`
+   - (D) `<nav>`",(C) `<aside>`
+1.8.9,True/False: A `<footer>` element can only contain text and no other HTML elements.,False
+1.8.10,"Multiple Choice: What type of HTML element is `<header>`, and what is its typical use?
+   - (A) Inline; used for short text links
+   - (B) Block; used for introductory content or navigational links
+   - (C) Inline; used to group navigation links
+   - (D) Block; used only for bottom page content",(B) Block; used for introductory content or navigational links
+1.9.1,True/False: The `<table>` tag is used for creating structured layouts for web pages.,False
+1.9.2,"Multiple Choice: Which HTML element defines a single cell in a table header?
+   - (A) `<td>`
+   - (B) `<tr>`
+   - (C) `<th>`
+   - (D) `<caption>`",(C) `<th>`
+1.9.3,True/False: The `<caption>` tag must appear after the table rows.,False
+1.9.4,"Multiple Choice: What attribute of the `<td>` element makes it span multiple columns?
+   - (A) `expand`
+   - (B) `colspan`
+   - (C) `stretch`
+   - (D) `widthspan`",(B) `colspan`
+1.9.5,True/False: The `<tbody>` element is optional in HTML tables.,True
+1.9.6,"Multiple Choice: Which tag is used to group the body content in an HTML table?
+   - (A) `<thead>`
+   - (B) `<tfoot>`
+   - (C) `<tbody>`
+   - (D) `<tgroup>`",(C) `<tbody>`
+1.9.7,True/False: You can use the `<th>` element within `<tbody>` to emphasize certain rows.,True
+1.9.8,"Multiple Choice: How do you define a table row that should appear at the bottom of a table, but is not a footer?
+   - (A) Use the `<tfoot>` tag.
+   - (B) Use the `<lastrow>` tag.
+   - (C) Use the `<bottom>` tag.
+   - (D) Simply place it at the end of the `<tbody>` section.",(D) Simply place it at the end of the `<tbody>` section.
+1.9.9,True/False: Table headers created with `<th>` are automatically bolded and centered by default in most browsers.,True
+1.9.10,"Multiple Choice: What is the purpose of the `<tfoot>` element in an HTML table?
+   - (A) To provide a summary or total row at the bottom of the table sections
+   - (B) To define the main content of the table
+   - (C) To add a header to the table
+   - (D) To decorate the table with additional styling",(A) To provide a summary or total row at the bottom of the table sections
+2.1.1,"Multiple Choice: What is the primary function of CSS?
+   - (A) To structure web page content
+   - (B) To create interactive user interfaces
+   - (C) To define the visual presentation of web pages
+   - (D) To manage the server response to web requests",(C) To define the visual presentation of web pages
+2.1.2,"Multiple Choice: Which CSS property is used to change the text color of an element?
+   - (A) color
+   - (B) background-color
+   - (C) font-style
+   - (D) text-decoration",(A) color
+2.1.3,"Multiple Choice: What does the 'Cascading' in Cascading Style Sheets (CSS) primarily describe?
+   - (A) The priority scheme that determines which style rules apply to an element
+   - (B) The method by which styles are passed from parent to child elements
+   - (C) The flow of styles as they appear from top to bottom in a stylesheet
+   - (D) Both (A) and (B)",(D) Both (A) and (B)
+2.1.4,"Multi-Select: Which of the following are valid ways to integrate CSS into a webpage? (Select all that apply)
+   - (A) Inline styles
+   - (B) Internal stylesheets
+   - (C) External stylesheets
+   - (D) Importing CSS via JavaScript","(A) Inline styles, (B) Internal stylesheets, (C) External stylesheets"
+2.1.5,"Multiple Choice: What is the default behavior when multiple styles are applied to an element?
+   - (A) The first style in the HTML file is applied.
+   - (B) All styles are combined and applied.
+   - (C) The most specific style according to CSS specificity rules is applied.
+   - (D) The last style in the CSS file is applied.",(C) The most specific style according to CSS specificity rules is applied.
+2.1.6,"Multiple Choice: Which CSS property controls the text size?
+   - (A) text-size
+   - (B) font-style
+   - (C) font-weight
+   - (D) font-size",(D) font-size
+2.1.7,"Multiple Choice: What does the 'style' attribute represent in an HTML tag?
+   - (A) A way to add a unique identifier to an element
+   - (B) A method to apply CSS rules directly to the element
+   - (C) A link to an external stylesheet
+   - (D) An indication of the element's importance in the document",(B) A method to apply CSS rules directly to the element
+2.1.8,"Multiple Choice: Which selector would target all <p> elements inside <div> elements?
+   - (A) div p
+   - (B) div + p
+   - (C) div > p
+   - (D) p div",(A) div p
+2.1.9,"Multi-Select: What are the effects of using the '!important' declaration in a CSS rule? (Select all that apply)
+   - (A) It increases the priority of the CSS rule.
+   - (B) It makes the CSS file larger.
+   - (C) It overrides other declarations even if they have higher specificity.
+   - (D) It can make debugging and maintenance of CSS more difficult.","(A) It increases the priority of the CSS rule, (C) It overrides other declarations even if they have higher specificity, (D) It can make debugging and maintenance of CSS more difficult."
+2.1.10,"Multiple Choice: Which property is used to create space around elements, inside of any defined borders?
+   - (A) margin
+   - (B) padding
+   - (C) border
+   - (D) width",(B) padding
+2.2.1,"Multiple Choice: Which selector is used to apply styles to elements with a specific class?
+   - (A) #
+   - (B) .
+   - (C) :
+   - (D) *",(B) .
+2.2.2,"Multiple Choice: What does an ID selector begin with in CSS?
+   - (A) A hash (#)
+   - (B) A dot (.)
+   - (C) An at sign (@)
+   - (D) A dollar sign ($)",(A) A hash (#)
+2.2.3,"Multi-Select: Which of the following are true about class selectors? (Select all that apply)
+   - (A) They can be used to style multiple elements simultaneously.
+   - (B) They must be unique within a page.
+   - (C) They are represented by a period (.) prefix.
+   - (D) They have higher specificity than element selectors.","(A) They can be used to style multiple elements simultaneously, (C) They are represented by a period (.) prefix, (D) They have higher specificity than element selectors."
+2.2.4,"Multiple Choice: How would you select an HTML element with the ID 'banner'?
+   - (A) .banner
+   - (B) #banner
+   - (C) banner
+   - (D) &banner",(B) #banner
+2.2.5,"Multiple Choice: Which selector would you use to style all <p> elements within a <div>?
+   - (A) div p
+   - (B) div + p
+   - (C) div > p
+   - (D) p div",(A) div p
+2.2.6,"Multiple Choice: What does a descendant selector use to combine two selectors?
+   - (A) A comma (,)
+   - (B) A plus sign (+)
+   - (C) A greater than sign (>)
+   - (D) A space",(D) A space
+2.2.7,"Multiple Choice: If an element has multiple classes, which class's styles are applied?
+   - (A) The first class listed in the class attribute
+   - (B) The last class listed in the class attribute
+   - (C) All applicable styles are combined
+   - (D) Only the class with the highest specificity",(C) All applicable styles are combined
+2.2.8,"Multi-Select: Which statements are true about ID selectors? (Select all that apply)
+   - (A) They can be used on more than one element per page.
+   - (B) They are unique to a single element on a page.
+   - (C) They have higher specificity than class selectors.
+   - (D) They are denoted by a period (.)","(B) They are unique to a single element on a page, (C) They have higher specificity than class selectors"
+2.2.9,"Multiple Choice: What is the result of applying multiple CSS rules with different selectors to the same element?
+   - (A) Only the first rule is applied.
+   - (B) Only the last rule is applied.
+   - (C) All rules are applied, but properties are combined based on specificity.
+   - (D) The browser randomly chooses which rule to apply.","(C) All rules are applied, but properties are combined based on specificity."
+2.2.10,"Multiple Choice: How do you select all elements that are the direct children of a <div> element?
+   - (A) div > *
+   - (B) div + *
+   - (C) div *
+   - (D) div ~ *",(A) div > *
+2.3.1,"Multiple Choice: What is the purpose of the CSS `color` property?
+   - (A) To set the background color of an element
+   - (B) To define the text color of an element
+   - (C) To specify the border color of an element
+   - (D) To change the color of links within an element",(B) To define the text color of an element
+2.3.2,"Multiple Choice: Which function is used to specify colors in terms of hue, saturation, and lightness in CSS?
+   - (A) rgb()
+   - (B) rgba()
+   - (C) hsl()
+   - (D) hex()",(C) hsl()
+2.3.3,"Multi-Select: Which properties can use the `rgba()` function for defining colors? (Select all that apply)
+   - (A) color
+   - (B) background-color
+   - (C) border-color
+   - (D) outline-color","(A) color, (B) background-color, (C) border-color, (D) outline-color"
+2.3.4,"Multiple Choice: How do you specify a background image for an element in CSS?
+   - (A) background-image: url('image.jpg');
+   - (B) background: image('image.jpg');
+   - (C) background-url: 'image.jpg';
+   - (D) bg-image: url('image.jpg');",(A) background-image: url('image.jpg');
+2.3.5,"Multiple Choice: What does setting `background-color` to `transparent` do?
+   - (A) Makes the element's background fully opaque
+   - (B) Makes the element's background solid without transparency
+   - (C) Allows the background of underlying elements to be visible
+   - (D) Hides the element completely from view",(C) Allows the background of underlying elements to be visible
+2.3.6,"Multiple Choice: What is the result of using the `float` property with a value of `left` on an image within a paragraph?
+   - (A) The image is removed from the flow of the document
+   - (B) The image floats to the left, and text wraps around it on the right
+   - (C) The image stays fixed at the left edge of its container
+   - (D) The image aligns to the left, but text does not wrap around it","(B) The image floats to the left, and text wraps around it on the right"
+2.3.7,"Multi-Select: What scenarios are appropriate for using the `clear` property in CSS? (Select all that apply)
+   - (A) To prevent text from wrapping around floated elements
+   - (B) To set which sides of an element floating elements cannot be next to
+   - (C) To increase the space around floating elements
+   - (D) To reset the floating behavior of elements","(A) To prevent text from wrapping around floated elements, (B) To set which sides of an element floating elements cannot be next to, (D) To reset the floating behavior of elements"
+2.3.8,"Multiple Choice: Which CSS property combines the definitions of `background-color`, `background-image`, `background-position`, and `background-repeat`?
+   - (A) background-combine
+   - (B) background
+   - (C) background-set
+   - (D) background-all",(B) background
+2.3.9,"Multiple Choice: How does CSS handle the transparency of colors specified with the `hsla()` function?
+   - (A) The 'a' in `hsla()` stands for absolute, which prevents any transparency
+   - (B) The alpha channel controls the transparency; 1 is fully opaque, 0 is fully transparent
+   - (C) Transparency is not supported in `hsla()`, only in `rgba()`
+   - (D) Transparency effects are reversed in `hsla()` compared to `rgba()`","(B) The alpha channel controls the transparency; 1 is fully opaque, 0 is fully transparent"
+2.3.10,"Multiple Choice: What is the CSS `background-clip` property used for?
+   - (A) To define the painting area of the background
+   - (B) To clip the background to fit the content area only
+   - (C) To add animation effects to the background
+   - (D) To prevent the background from scrolling with the content",(A) To define the painting area of the background
+2.4.1,"Multiple Choice: What does the `font-family` property specify in CSS?
+   - (A) The line height of text
+   - (B) The decoration of the text
+   - (C) The font type used for text rendering
+   - (D) The color of the text",(C) The font type used for text rendering
+2.4.2,"Multiple Choice: Which unit is relative to the parent element’s font size?
+   - (A) px
+   - (B) em
+   - (C) cm
+   - (D) pt",(B) em
+2.4.3,"Multi-Select: Which properties are set by the shorthand `font` property? (Select all that apply)
+   - (A) font-family
+   - (B) font-size
+   - (C) font-weight
+   - (D) line-height","(A) font-family, (B) font-size, (C) font-weight"
+2.4.4,"Multiple Choice: How would you set the font weight to bold for a paragraph element?
+   - (A) p { font-style: bold; }
+   - (B) p { font-weight: bold; }
+   - (C) p { text-decoration: bold; }
+   - (D) p { font-family: bold; }",(B) p { font-weight: bold; }
+2.4.5,"Multiple Choice: What is the default size of the font-size property if not specified?
+   - (A) 16px
+   - (B) 12px
+   - (C) 10px
+   - (D) 14px",(A) 16px
+2.4.6,"Multiple Choice: Which CSS property changes the text style to italic?
+   - (A) font-weight
+   - (B) font-style
+   - (C) text-decoration
+   - (D) text-align",(B) font-style
+2.4.7,"Multiple Choice: What does the `font-variant` property affect?
+   - (A) The transformation of text to uppercase or lowercase
+   - (B) The embellishment of text like underlining
+   - (C) The presentation of lowercase letters as small capitals
+   - (D) The alignment of text",(C) The presentation of lowercase letters as small capitals
+2.4.8,"Multiple Choice: If a specific font in a font-family list is not available, what happens?
+   - (A) The browser hides the text
+   - (B) The browser chooses the next available font in the list
+   - (C) The text is displayed using the default browser font
+   - (D) The browser downloads the font from the internet",(B) The browser chooses the next available font in the list
+2.4.9,"Multiple Choice: What unit is best used for defining font sizes that scale with device settings?
+   - (A) pixels (px)
+   - (B) points (pt)
+   - (C) viewport width (vw)
+   - (D) root em (rem)",(D) root em (rem)
+2.4.10,"Multiple Choice: Which of the following is a generic family name in CSS?
+   - (A) Arial
+   - (B) sans-serif
+   - (C) Georgia
+   - (D) Garamond",(B) sans-serif
+2.5.1,"Multiple Choice: What does the CSS 'box model' refer to?
+   - (A) A method for designing 3D animations
+   - (B) A concept that encompasses padding, border, and margin of HTML elements
+   - (C) The outline used for interactive elements on a webpage
+   - (D) A debugging tool in modern browsers","(B) A concept that encompasses padding, border, and margin of HTML elements"
+2.5.2,"Multiple Choice: Which property directly affects the spacing between the content of a box and its border?
+   - (A) margin
+   - (B) border
+   - (C) padding
+   - (D) width",(C) padding
+2.5.3,"Multi-Select: Which layers are considered when calculating the total size of an element in the CSS box model? (Select all that apply)
+   - (A) Content
+   - (B) Padding
+   - (C) Border
+   - (D) Margin","(A) Content, (B) Padding, (C) Border"
+2.5.4,"Multiple Choice: How is the 'border' property of a box typically defined in CSS?
+   - (A) Using the border-color property only
+   - (B) Through separate properties for width, style, and color
+   - (C) As a shorthand that combines padding, border, and margin settings
+   - (D) It is not a standalone property but a subset of the padding property","(B) Through separate properties for width, style, and color"
+2.5.5,"Multiple Choice: What is the effect of setting the 'margin' property to 'auto'?
+   - (A) It removes the margin.
+   - (B) It maximizes the margin based on the available space.
+   - (C) It centers the element within its containing element if width is specified.
+   - (D) It minimizes the margin to zero pixels.",(C) It centers the element within its containing element if width is specified.
+2.5.6,"Multiple Choice: Which property is used to control the transparency level of a border?
+   - (A) border-opacity
+   - (B) border-color
+   - (C) opacity
+   - (D) border-style",(B) border-color
+2.5.7,"Multiple Choice: When does margin collapsing occur?
+   - (A) When adjacent margins of floated elements combine
+   - (B) When vertical margins of block elements touch each other
+   - (C) Only when horizontal margins of inline elements combine
+   - (D) It never occurs in modern CSS",(B) When vertical margins of block elements touch each other
+2.5.8,"Multi-Select: What are the possible values for the 'box-sizing' property in CSS? (Select all that apply)
+   - (A) content-box
+   - (B) padding-box
+   - (C) border-box
+   - (D) margin-box","(A) content-box, (C) border-box"
+2.5.9,"Multiple Choice: What is the default box-sizing property value in CSS?
+   - (A) border-box
+   - (B) padding-box
+   - (C) content-box
+   - (D) margin-box",(C) content-box
+2.5.10,"Multiple Choice: Which CSS property is used to hide elements without affecting the layout?
+   - (A) visibility: hidden;
+   - (B) display: none;
+   - (C) opacity: 0;
+   - (D) margin: 0;",(A) visibility: hidden;
+2.6.1,"Multiple Choice: What does `position: relative;` do in CSS?
+   - (A) Positions an element relative to its parent element
+   - (B) Positions an element based on the top-left corner of the viewport
+   - (C) Positions an element relative to its normal position in the document flow
+   - (D) Positions an element relative to the first parent with a position other than `static`",(C) Positions an element relative to its normal position in the document flow
+2.6.2,"Multiple Choice: When using `position: absolute;`, what happens if no ancestor elements have a position other than `static`?
+   - (A) The element is positioned relative to the viewport
+   - (B) The element is positioned relative to its parent element
+   - (C) The element does not appear on the page
+   - (D) The element is positioned relative to the document's root element",(A) The element is positioned relative to the viewport
+2.6.3,"Multi-Select: Which positioning values remove an element from the normal document flow? (Select all that apply)
+   - (A) `position: absolute;`
+   - (B) `position: relative;`
+   - (C) `position: fixed;`
+   - (D) `position: sticky;`","(A) `position: absolute;`, (C) `position: fixed;`"
+2.6.4,"Multiple Choice: What is the key difference between `position: fixed;` and `position: absolute;`?
+   - (A) Fixed elements scroll with the page, while absolute elements remain in place.
+   - (B) Fixed elements are positioned relative to the viewport, while absolute elements are positioned relative to their nearest positioned ancestor.
+   - (C) Fixed elements are always at the top of the page, while absolute elements move with the page.
+   - (D) Fixed elements cannot have z-index, while absolute elements can.","(B) Fixed elements are positioned relative to the viewport, while absolute elements are positioned relative to their nearest positioned ancestor."
+2.6.5,"Multiple Choice: What happens when `position: sticky;` is applied to an element?
+   - (A) The element remains static until it reaches a specified threshold, after which it becomes fixed.
+   - (B) The element is hidden until a scroll event occurs.
+   - (C) The element remains fixed in place once it is rendered.
+   - (D) The element behaves the same as an absolutely positioned element.","(A) The element remains static until it reaches a specified threshold, after which it becomes fixed."
+2.6.6,"Multiple Choice: Which of the following CSS properties is typically used to set the stacking order of elements with positioning?
+   - (A) z-index
+   - (B) float
+   - (C) visibility
+   - (D) opacity",(A) z-index
+2.6.7,"Multi-Select: Which CSS properties can be used to control the position of an element when `position: absolute;` or `position: relative;` is set? (Select all that apply)
+   - (A) top
+   - (B) left
+   - (C) bottom
+   - (D) right","(A) top, (B) left, (C) bottom, (D) right"
+2.6.8,"Multiple Choice: Which value of the `position` property is the default for all elements in a document?
+   - (A) `relative`
+   - (B) `absolute`
+   - (C) `static`
+   - (D) `fixed`",(C) `static`
+2.6.9,"Multiple Choice: When `position: fixed;` is applied, the element is positioned relative to:
+   - (A) The nearest positioned ancestor
+   - (B) The document’s root element
+   - (C) The viewport
+   - (D) The container's padding box",(C) The viewport
+2.6.10,"Multi-Select: Which of the following are common use cases for `position: absolute;`? (Select all that apply)
+   - (A) Creating tooltips or dropdown menus
+   - (B) Centering elements within a container
+   - (C) Creating elements that remain in place when the page is scrolled
+   - (D) Layering elements on top of each other with z-index","(A) Creating tooltips or dropdown menus, (B) Centering elements within a container, (D) Layering elements on top of each other with z-index"
+2.7.1,"Multiple Choice: What CSS property turns an element into a flex container?
+   - (A) `display: block;`
+   - (B) `display: inline-block;`
+   - (C) `display: flex;`
+   - (D) `display: grid;`",(C) `display: flex;`
+2.7.2,"Multiple Choice: In a flex container, how do you align the items along the main axis?
+   - (A) `align-items`
+   - (B) `justify-content`
+   - (C) `align-content`
+   - (D) `flex-direction`",(B) `justify-content`
+2.7.3,"Multiple Choice: What is the default value of the `flex-direction` property in CSS?
+   - (A) `column`
+   - (B) `row`
+   - (C) `column-reverse`
+   - (D) `row-reverse`",(B) `row`
+2.7.4,"Multi-Select: Which of the following properties are used to control the wrapping of flex items? (Select all that apply)
+   - (A) `flex-wrap`
+   - (B) `flex-basis`
+   - (C) `flex-shrink`
+   - (D) `flex-direction`","(A) `flex-wrap`, (D) `flex-direction`"
+2.7.5,"Multiple Choice: What does `justify-content: space-between;` do in a flex container?
+   - (A) Aligns all items to the center
+   - (B) Adds equal spacing between all flex items, with no space at the edges
+   - (C) Adds equal spacing between all items and the container edges
+   - (D) Aligns all items to the start of the container","(B) Adds equal spacing between all flex items, with no space at the edges"
+2.7.6,"Multiple Choice: Which flexbox property allows items to grow to fill available space in the container?
+   - (A) `flex-grow`
+   - (B) `flex-shrink`
+   - (C) `flex-basis`
+   - (D) `align-self`",(A) `flex-grow`
+2.7.7,"Multi-Select: Which values can the `align-items` property accept? (Select all that apply)
+   - (A) `flex-start`
+   - (B) `center`
+   - (C) `space-between`
+   - (D) `flex-end`","(A) `flex-start`, (B) `center`, (D) `flex-end`"
+2.7.8,"Multiple Choice: How do you center flex items along the cross-axis in a flex container?
+   - (A) `justify-content: center;`
+   - (B) `align-items: center;`
+   - (C) `flex-grow: 1;`
+   - (D) `flex-shrink: 0;`",(B) `align-items: center;`
+2.7.9,"Multiple Choice: What is the purpose of `flex-basis` in CSS?
+   - (A) To specify the maximum size of a flex item
+   - (B) To specify the initial size of a flex item before any space distribution
+   - (C) To shrink items based on container size
+   - (D) To control the flex direction of the container",(B) To specify the initial size of a flex item before any space distribution
+2.7.10,"Multi-Select: Which of the following are valid values for the `flex-direction` property? (Select all that apply)
+   - (A) `row`
+   - (B) `row-reverse`
+   - (C) `column`
+   - (D) `column-reverse`","(A) `row`, (B) `row-reverse`, (C) `column`, (D) `column-reverse`"
+3.1.1,"Multiple Choice: Who created JavaScript and in what year?
+   - (A) Tim Berners-Lee, 1991
+   - (B) Brendan Eich, 1995
+   - (C) Mark Zuckerberg, 1997
+   - (D) James Gosling, 1995","(B) Brendan Eich, 1995"
+3.1.2,"Multiple Choice: What is ECMAScript?
+   - (A) Another name for Java
+   - (B) A standardized version of JavaScript
+   - (C) A JavaScript framework for server-side development
+   - (D) A deprecated web programming language",(B) A standardized version of JavaScript
+3.1.3,"Multiple Choice: JavaScript uses an interpreter to execute code. What is an interpreter's main role?
+   - (A) To compile code into machine language before execution
+   - (B) To execute code without compiling it into machine language first
+   - (C) To optimize JavaScript code for web browsers
+   - (D) To compile JavaScript into assembly code",(B) To execute code without compiling it into machine language first
+3.1.4,"Multi-Select: Which of the following are valid JavaScript variable declarations? (Select all that apply)
+   - (A) let score;
+   - (B) int count;
+   - (C) const PI = 3.14;
+   - (D) var name = ""Alice"";","(A) let score;, (C) const PI = 3.14;, (D) var name = ""Alice"";"
+3.1.5,"Multiple Choice: What happens when a variable is declared with `const` in JavaScript?
+   - (A) The variable's value can change
+   - (B) The variable's value cannot be reassigned
+   - (C) The variable is block-scoped and can be modified
+   - (D) The variable becomes global by default",(B) The variable's value cannot be reassigned
+3.1.6,"Multiple Choice: Which function is used to display output in a browser's console?
+   - (A) alert()
+   - (B) write()
+   - (C) console.log()
+   - (D) print()",(C) console.log()
+3.1.7,"Multi-Select: Which of the following are valid data types in JavaScript? (Select all that apply)
+   - (A) string
+   - (B) boolean
+   - (C) number
+   - (D) char","(A) string, (B) boolean, (C) number"
+3.1.8,"Multiple Choice: What is the result of the following JavaScript code?
+let x; console.log(typeof x);
+
+- (A) number
+- (B) string
+- (C) undefined
+- (D) null",(C) undefined
+3.1.9,"Multi-Select: Which of the following are common ways to obtain user input in JavaScript? (Select all that apply)
+- (A) console.log()
+- (B) prompt()
+- (C) alert()
+- (D) input()","(B) prompt(), (C) alert()"
+3.1.10,"Multiple Choice: What is dynamic typing in JavaScript?
+- (A) Variables must be declared with a specific data type
+- (B) Variables can change type depending on the assigned value
+- (C) JavaScript automatically converts variables into strings
+- (D) Variables cannot be reassigned once declared",(B) Variables can change type depending on the assigned value
+3.10.1,"Multiple Choice: What does the following code output?
+
+let stateCapitals = {
+  AR: ""Little Rock"",
+  CO: ""Denver"",
+  NM: ""Santa Fe""
+};
+console.log(stateCapitals[""CO""]);
+
+- (A) Little Rock
+- (B) Denver
+- (C) Santa Fe
+- (D) undefined",(B) Denver
+3.10.2,"Multiple Choice: How can you add a new key/value pair to an existing object in JavaScript?
+
+- (A) object.add(""key"", ""value"");
+- (B) object[""key""] = ""value"";
+- (C) object.insert(""key"", ""value"");
+- (D) object.key(""value"");","(B) object[""key""] = ""value"";"
+3.10.3,"Multi-Select: Which of the following are valid ways to loop through an object’s properties? (Select all that apply)
+
+- (A) for (let key in object)
+- (B) for (let key of object)
+- (C) Object.keys(object).forEach()
+- (D) for (let value of Object.values(object))","(A) for (let key in object), (C) Object.keys(object).forEach(), (D) for (let value of Object.values(object))"
+3.10.4,"Multiple Choice: What is the purpose of the `delete` operator in JavaScript?
+
+- (A) To remove a property from an object
+- (B) To clear all properties from an object
+- (C) To reset a property to `undefined`
+- (D) To throw an error if the property does not exist",(A) To remove a property from an object
+3.10.5,"Multiple Choice: What is the output of the following code?
+
+let contacts = {
+  Rosa: { phone: ""303-555-4321"", email: ""rosa@gmail.com"" },
+  Dave: { phone: ""501-533-9988"", email: ""dave@yahoo.com"" }
+};
+console.log(contacts[""Dave""].email);
+
+- (A) rosa@gmail.com
+- (B) 501-533-9988
+- (C) dave@yahoo.com
+- (D) undefined",(C) dave@yahoo.com
+3.10.6,"Multiple Choice: What is the result of this code?
+
+let stateCapitals = {
+  AR: ""Little Rock"",
+  CO: ""Denver""
+};
+delete stateCapitals[""CO""];
+console.log(""CO"" in stateCapitals);
+
+- (A) true
+- (B) false
+- (C) undefined
+- (D) An error is thrown",(B) false
+3.10.7,"Multi-Select: Which of the following statements are true about for-in loops in JavaScript? (Select all that apply)
+
+- (A) They loop over all enumerable properties of an object.
+- (B) They loop over both the keys and values of an object.
+- (C) They can be used to iterate over arrays.
+- (D) They loop through an object’s keys in insertion order.","(A) They loop over all enumerable properties of an object., (C) They can be used to iterate over arrays."
+3.10.8,"Multiple Choice: What will the following code output?
+
+let courses = {
+  ""101"": ""Math"",
+  ""102"": ""English"",
+  ""103"": ""History""
+};
+for (let course in courses) {
+  console.log(course + "": "" + courses[course]);
+}
+
+- (A) ""101: Math"", ""102: English"", ""103: History""
+- (B) ""Math"", ""English"", ""History""
+- (C) ""101: History"", ""102: English"", ""103: Math""
+- (D) undefined","(A) ""101: Math"", ""102: English"", ""103: History"""
+3.10.9,"Multiple Choice: How do you check if an object contains a specific key?
+
+- (A) if (object.key !== undefined)
+- (B) if (key in object)
+- (C) if (Object.hasKey(object, key))
+- (D) if (object.includes(key))",(B) if (key in object)
+3.10.10,"Multiple Choice: What will this code output?
+
+let students = {
+  123: { name: ""Tiara"", gpa: 3.3 },
+  444: { name: ""Lee"", gpa: 2.0 }
+};
+console.log(444 in students);
+
+- (A) true
+- (B) false
+- (C) undefined
+- (D) null",(A) true
+3.11.1,"Multiple Choice: What does the `charAt()` method do in JavaScript?
+
+- (A) Returns the character at the specified index in a string.
+- (B) Returns the Unicode value of a character.
+- (C) Converts the character at the specified index to uppercase.
+- (D) Removes the character at the specified index.",(A) Returns the character at the specified index in a string.
+3.11.2,"Multiple Choice: What is the output of the following code?
+
+let str = ""JavaScript"";
+console.log(str.charAt(4));
+
+- (A) ""J""
+- (B) ""S""
+- (C) ""v""
+- (D) ""a""","(D) ""a"""
+3.11.3,"Multi-Select: Which of the following methods can be used to extract a substring from a string? (Select all that apply)
+
+- (A) `substring()`
+- (B) `substr()`
+- (C) `slice()`
+- (D) `charAt()`","(A) `substring()`, (B) `substr()`, (C) `slice()`"
+3.11.4,"Multiple Choice: What will be the output of this code?
+
+let sentence = ""I love programming!"";
+console.log(sentence.indexOf(""love""));
+
+- (A) 0
+- (B) 2
+- (C) 5
+- (D) -1",(B) 2
+3.11.5,"Multiple Choice: What does the `replace()` method do in JavaScript?
+
+- (A) Removes the specified substring.
+- (B) Finds and replaces a substring in a string.
+- (C) Finds and appends a substring to a string.
+- (D) Duplicates a substring within a string.",(B) Finds and replaces a substring in a string.
+3.11.6,"Multiple Choice: What is the result of this code?
+
+let text = ""Hello World!"";
+let newText = text.replace(""World"", ""JavaScript"");
+console.log(newText);
+
+- (A) Hello World!
+- (B) Hello JavaScript!
+- (C) Hello Java!
+- (D) Error",(B) Hello JavaScript!
+3.11.7,"Multiple Choice: Which of the following methods converts a string to lowercase?
+
+- (A) `toUpperCase()`
+- (B) `toLowerCase()`
+- (C) `split()`
+- (D) `concat()`",(B) `toLowerCase()`
+3.11.8,"Multiple Choice: What will the following code output?
+
+let phrase = ""Spaces here"";
+console.log(phrase.length);
+
+- (A) 10
+- (B) 11
+- (C) 12
+- (D) undefined",(B) 11
+3.11.9,"Multiple Choice: What is the purpose of the `trim()` method in JavaScript?
+
+- (A) Trims off a substring from the start and end of the string.
+- (B) Removes whitespace from both ends of a string.
+- (C) Converts a string to lowercase.
+- (D) Replaces spaces with underscores.",(B) Removes whitespace from both ends of a string.
+3.11.10,"Multiple Choice: What is the benefit of using template literals in JavaScript?
+
+- (A) They allow embedding expressions into strings.
+- (B) They prevent the use of variables in strings.
+- (C) They convert strings to numbers automatically.
+- (D) They remove special characters from strings.",(A) They allow embedding expressions into strings.
+3.2.1,"Multiple Choice: Which arithmetic operator in JavaScript is used for exponentiation?
+   - (A) `^`
+   - (B) `**`
+   - (C) `exp()`
+   - (D) `++`",(B) `**`
+3.2.2,"Multiple Choice: What is the result of the following expression in JavaScript?
+let x = 5 % 2;
+- (A) 0
+- (B) 1
+- (C) 2
+- (D) 5",(B) 1
+3.2.3,"Multi-Select: Which of the following are valid arithmetic operations in JavaScript? (Select all that apply)
+- (A) `10 + 2`
+- (B) `5 * 3`
+- (C) `8 / ""4""`
+- (D) `""5"" - 2`","(A) `10 + 2`, (B) `5 * 3`, (C) `8 / ""4""`, (D) `""5"" - 2`"
+3.2.4,"Multiple Choice: What does the following compound assignment operation do?
+x += 2;
+- (A) Adds 2 to x and stores the result in x
+- (B) Subtracts 2 from x and stores the result in x
+- (C) Multiplies x by 2 and stores the result in x
+- (D) Divides x by 2 and stores the result in x",(A) Adds 2 to x and stores the result in x
+3.2.5,"Multiple Choice: Which of the following is the modulus (remainder) operator in JavaScript?
+- (A) `**`
+- (B) `//`
+- (C) `%`
+- (D) `++`",(C) `%`
+3.2.6,"Multiple Choice: What is the result of the following expression?
+2 ** 3
+- (A) 6
+- (B) 8
+- (C) 9
+- (D) 12",(B) 8
+3.2.7,"Multi-Select: Which of the following are valid compound assignment operators in JavaScript? (Select all that apply)
+- (A) `+=`
+- (B) `-=`
+- (C) `**=`
+- (D) `//=`","(A) `+=`, (B) `-=`, (C) `**=`"
+3.2.8,"Multiple Choice: What happens when you try to add a number and a string in JavaScript?
+- (A) The number is converted to a string, and concatenation occurs
+- (B) The string is converted to a number, and addition occurs
+- (C) An error is thrown
+- (D) The result is always NaN (Not a Number)","(A) The number is converted to a string, and concatenation occurs"
+3.2.9,"Multiple Choice: Which JavaScript function is used to convert a string to a number?
+- (A) `parseString()`
+- (B) `convertNum()`
+- (C) `parseInt()`
+- (D) `toNumber()`",(C) `parseInt()`
+3.2.10,"Multi-Select: Which arithmetic operations will automatically convert a string to a number if one operand is a string? (Select all that apply)
+- (A) `*`
+- (B) `%`
+- (C) `/`
+- (D) `+`","(A) `*`, (B) `%`, (C) `/`"
+3.3.1,"Multiple Choice: Which of the following best describes the purpose of an if statement in JavaScript?
+   - (A) It repeats a block of code as long as a condition is true
+   - (B) It executes a block of code if a specified condition is true
+   - (C) It randomly chooses whether to execute a block of code
+   - (D) It declares a variable with a default value",(B) It executes a block of code if a specified condition is true
+3.3.2,"Multiple Choice: What is the final value of `fee` in the following code?
+let fee = 30; let age = 12; if (age < 18) { fee -= 5; } if (age < 5) { fee = 0; } console.log(fee);
+- (A) 30
+- (B) 25
+- (C) 0
+- (D) 5",(B) 25
+3.3.3,"Multi-Select: Which of the following are valid comparison operators in JavaScript? (Select all that apply)
+- (A) `===`
+- (B) `!=`
+- (C) `><`
+- (D) `<=`","(A) `===`, (B) `!=`, (D) `<=`"
+3.3.4,"Multiple Choice: What is the purpose of an `if-else` statement in JavaScript?
+- (A) To execute one block of code if a condition is true and another if it is false
+- (B) To execute multiple blocks of code if multiple conditions are true
+- (C) To compare two variables and return a Boolean value
+- (D) To loop through an array of values",(A) To execute one block of code if a condition is true and another if it is false
+3.3.5,"Multiple Choice: Given the following code, what will be the output?
+let age = 6; 
+if (age % 2 == 0) { 
+    console.log(""age is even""); 
+} else { 
+    console.log(""age is odd""); } 
+    
+if (age > 10) { 
+    console.log(""age is greater than 10""); 
+} else { 
+    console.log(""age is not greater than 10""); 
+    }
+
+- (A) ""age is odd"" and ""age is greater than 10""
+- (B) ""age is even"" and ""age is not greater than 10""
+- (C) ""age is odd"" and ""age is not greater than 10""
+- (D) ""age is even"" and ""age is greater than 10""","(B) ""age is even"" and ""age is not greater than 10"""
+3.3.6,"Multi-Select: Which of the following are valid ways to compare equality in JavaScript? (Select all that apply)
+- (A) `x == y`
+- (B) `x === y`
+- (C) `x != y`
+- (D) `x <> y`","(A) `x == y`, (B) `x === y`, (C) `x != y`"
+3.3.7,"Multiple Choice: What is the result of the following code?
+let score = 2; 
+if (score === ""2"") { 
+    score = 10; } console.log(score);
+- (A) 2
+- (B) 10
+- (C) ""2""
+- (D) Error",(A) 2
+3.3.8,"Multiple Choice: What does the `else-if` structure provide that a basic `if-else` structure does not?
+- (A) It allows for more than two possible conditions to be evaluated
+- (B) It speeds up the execution of code
+- (C) It allows for a fallback condition when `else` is not enough
+- (D) It enables loops within conditionals",(A) It allows for more than two possible conditions to be evaluated
+3.3.9,"Multi-Select: Which of the following logical operators can be used to combine multiple conditions in JavaScript? (Select all that apply)
+- (A) `&&`
+- (B) `||`
+- (C) `!=`
+- (D) `!`","(A) `&&`, (B) `||`, (D) `!`"
+3.3.10,"Multiple Choice: What is the final value of `numItems` in the following code?
+let bonus = 15; 
+let numItems = 44; 
+if (bonus < 12) { 
+    numItems += 3; 
+} else { 
+    numItems += 6; 
+} numItems++;
+
+- (A) 44
+- (B) 50
+- (C) 51
+- (D) 53",(C) 51
+3.4.1,"Multiple Choice: Which of the following is considered a falsy value in JavaScript?
+   - (A) ""0""
+   - (B) 1
+   - (C) 0
+   - (D) ""false""
+
+[3.4.2] Multiple Choice: What is the output of the following code?
+let x = 10; console.log(x ? ""Truthy"" : ""Falsy"");
+- (A) ""Truthy""
+- (B) ""Falsy""
+- (C) undefined
+- (D) NaN
+
+[3.4.3] Multi-Select: Which of the following values are considered truthy in JavaScript? (Select all that apply)
+- (A) ""Hello""
+- (B) null
+- (C) 1
+- (D) 0
+
+[3.4.4] Multiple Choice: What does the ternary operator allow you to do in JavaScript?
+- (A) Declare multiple variables in one statement
+- (B) Write an if-else condition in a single line
+- (C) Loop through arrays more efficiently
+- (D) Create functions without naming them
+
+[3.4.5] Multiple Choice: What will be the value of `result` after the following code executes?
+let age = 25; let result = age >= 18 ? ""Adult"" : ""Minor"";
+- (A) ""Adult""
+- (B) ""Minor""
+- (C) undefined
+- (D) NaN
+
+[3.4.6] Multi-Select: Which of the following are valid ternary operator expressions in JavaScript? (Select all that apply)
+- (A) `let x = (a > b) ? ""a is larger"" : ""b is larger"";`
+- (B) `x ? ""Yes"" : ""No"";`
+- (C) `age > 18 ? console.log(""Adult"") : console.log(""Minor"");`
+- (D) `result ? ""Valid"" : ""Invalid"";`
+
+[3.4.7] Multiple Choice: What is the main difference between using a switch statement and an if-else chain?
+- (A) Switch uses strict equality (===) while if-else does not
+- (B) If-else can only evaluate strings while switch can evaluate numbers
+- (C) If-else is faster in execution than switch
+- (D) Switch allows for more flexible comparisons than if-else
+
+[3.4.8] Multiple Choice: In the following switch statement, what will be the value of `coin`?
+let change = 10; 
+switch (change) { 
+    case 1: coin = ""penny""; 
+        break; 
+    case 5: coin = ""nickel""; 
+        break; 
+    case 10: coin = ""dime""; 
+        break;
+    case 25: coin = ""quarter""; 
+        break; 
+    default: coin = ""unknown""; } 
+    console.log(coin);
+
+- (A) ""penny""
+- (B) ""nickel""
+- (C) ""dime""
+- (D) ""unknown""
+
+[3.4.9] Multiple Choice: In a switch statement, what happens if a case block does not include a `break` statement?
+- (A) The code execution stops and no further cases are evaluated
+- (B) The next case's block is executed, even if it does not match
+- (C) The default case is automatically executed
+- (D) The code throws an error
+
+[3.4.10] Multi-Select: Which of the following are valid switch statement structures? (Select all that apply)
+- (A) `switch (fruit) { case ""apple"": eat(); break; case ""orange"": peel(); break; }`
+- (B) `switch (num) { case 1: one(); case 2: two(); break; }`
+- (C) `switch (day) { case ""Monday"": rest(); break; default: work(); }`
+- (D) `switch (value) { case true: accept(); default: decline(); }`",Answer not found
+3.5.1,"(C) The `while` loop checks the condition before running the loop body, while the `do-while` loop checks the condition after.
+
+[3.5.2] (A) 1, 2, 3, Done!
+
+[3.5.3] (C) `do-while` loop, (D) Infinite loop
+
+[3.5.4] (C) The loop body will never execute.
+
+[3.5.5] (B) To exit the loop immediately
+
+[3.5.6] (A) 10, 9, 8, 7, 6
+
+[3.5.7] (A) `for (let i = 0; i < 10; i++) { console.log(i); }`, (B) `for (let x = 10; x > 0; x--) { console.log(x); }`, (C) `for (let i = 1; i <= 5; i++) { if (i === 3) break; }`
+
+[3.5.8] (A) It skips the rest of the loop body for the current iteration and jumps to the next iteration.
+
+[3.5.9] (B) 1, 2, 4, 5
+
+[3.5.10] (A) The program runs forever, causing the browser to crash.",Multiple Choice: What is the key difference between a `while` loop and a `do-while` loop in JavaScript?
+3.6.1,"Multiple Choice: What is the correct syntax to declare a function in JavaScript?
+
+- (A) function myFunc {}
+- (B) func myFunc() {}
+- (C) function myFunc() {}
+- (D) declare function myFunc() {}",(C) function myFunc() {}
+3.6.2,"Multiple Choice: What is the output of the following code?
+
+function displaySum(a, b, c) {
+  let sum = a + b + c;
+  console.log(sum);
+}
+displaySum(2, 4, 6);
+
+- (A) 6
+- (B) 10
+- (C) 12
+- (D) 24",(C) 12
+3.6.3,"Multi-Select: Which of the following are valid ways to call a function in JavaScript? (Select all that apply)
+
+- (A) myFunc()
+- (B) call myFunc()
+- (C) myFunc(3, 4)
+- (D) myFunc;","(A) myFunc(), (C) myFunc(3, 4)"
+3.6.4,"Multiple Choice: Which of the following is the correct way to return a value from a function?
+
+- (A) output()
+- (B) return
+- (C) return value;
+- (D) output value;",(C) return value;
+3.6.5,"Multiple Choice: What is the value of `result` in the following code?
+
+function multiply(x, y) {
+  return x * y;
+}
+let result = multiply(4, 5);
+console.log(result);
+
+- (A) 20
+- (B) 9
+- (C) NaN
+- (D) undefined",(A) 20
+3.6.6,"Multiple Choice: What is the default value returned by a function if there is no explicit return statement?
+
+- (A) 0
+- (B) null
+- (C) undefined
+- (D) An error is thrown",(C) undefined
+3.6.7,"Multi-Select: Which of the following are valid function expressions in JavaScript? (Select all that apply)
+
+- (A) let add = function(a, b) { return a + b; }
+- (B) let square = function(x) { return x * x; }
+- (C) let greet = (name) => ""Hello "" + name;
+- (D) let divide = (a, b) => { return a / b };","(A) let add = function(a, b) { return a + b; }, (B) let square = function(x) { return x * x; }, (C) let greet = (name) => ""Hello "" + name;, (D) let divide = (a, b) => { return a / b; }"
+3.6.8,"Multiple Choice: Which statement correctly defines an arrow function that calculates the sum of two numbers?
+
+- (A) let sum = (a, b) => { return a + b; }
+- (B) let sum = a, b => return a + b;
+- (C) let sum(a, b) = a + b;
+- (D) arrow sum(a, b) => a + b;","(A) let sum = (a, b) => { return a + b; }"
+3.6.9,"Multiple Choice: What will be the output of the following arrow function?
+
+let double = (x) => x * 2;
+console.log(double(5));
+
+- (A) 5
+- (B) 10
+- (C) undefined
+- (D) An error will occur",(B) 10
+3.6.10,"Multi-Select: Which of the following are advantages of using arrow functions in JavaScript? (Select all that apply)
+
+- (A) Shorter syntax compared to regular functions
+- (B) Implicit return when only one expression is present
+- (C) They automatically bind `this` to the current context
+- (D) Arrow functions are faster than regular functions","(A) Shorter syntax compared to regular functions, (B) Implicit return when only one expression is present, (C) They automatically bind `this` to the current context"
+3.7.1,"Multiple Choice: What is the primary difference between variables declared with `var` and `let`?
+
+- (A) `var` has function scope, while `let` has block scope.
+- (B) `var` has block scope, while `let` has function scope.
+- (C) `var` and `let` have the same scope.
+- (D) `let` is globally scoped, and `var` is block-scoped.","(A) `var` has function scope, while `let` has block scope."
+3.7.2,"Multiple Choice: In JavaScript, what type of scope does a variable declared with `var` inside a function have?
+
+- (A) Global scope
+- (B) Block scope
+- (C) Function scope
+- (D) Lexical scope",(C) Function scope
+3.7.3,"Multi-Select: Which of the following statements about `let` and `var` are true? (Select all that apply)
+
+- (A) Variables declared with `let` are not hoisted.
+- (B) Variables declared with `var` are hoisted.
+- (C) Variables declared with `let` have block scope.
+- (D) Variables declared with `var` have function scope.","(B) Variables declared with `var` are hoisted., (C) Variables declared with `let` have block scope., (D) Variables declared with `var` have function scope."
+3.7.4,"Multiple Choice: What happens when you try to access a `let` variable before it has been declared?
+
+- (A) The variable is undefined.
+- (B) The variable is set to `null`.
+- (C) A ReferenceError is thrown.
+- (D) It automatically assigns a default value.",(C) A ReferenceError is thrown.
+3.7.5,"Multiple Choice: What will be the output of the following code?
+
+```javascript
+function testVar() {
+  if (true) {
+    var x = 10;
+  }
+  console.log(x);
+}
+testVar();
+(A) 10
+(B) undefined
+(C) ReferenceError
+(D) null",(A) 10
+3.7.6,"Multiple Choice: What will be the output of the following code?
+
+javascript
+Copy code
+function testLet() {
+  if (true) {
+    let x = 10;
+  }
+  console.log(x);
+}
+testLet();
+(A) 10
+(B) undefined
+(C) ReferenceError
+(D) null",(C) ReferenceError
+3.7.7,"Multi-Select: Which of the following are characteristics of global variables in JavaScript? (Select all that apply)
+
+(A) Accessible throughout the entire program
+(B) Can be declared inside a function with let
+(C) Can be declared without var, let, or const
+(D) Are properties of the global object in a browser environment","(A) Accessible throughout the entire program, (C) Can be declared without `var`, `let`, or `const`, (D) Are properties of the global object in a browser environment."
+3.7.8,"Multiple Choice: What happens when you declare a variable without var, let, or const inside a function?
+
+(A) It becomes a local variable.
+(B) It becomes a block-scoped variable.
+(C) It becomes a global variable.
+(D) It throws an error.",(C) It becomes a global variable.
+3.7.9,"Multiple Choice: In the following code, which variables are in scope inside the if block?
+
+javascript
+let a = 10;
+function checkScope() {
+  var b = 20;
+  if (true) {
+    let c = 30;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+  }
+}
+checkScope();
+(A) Only a
+(B) Only c
+(C) a, b, and c
+(D) Only a and b","(C) `a`, `b`, and `c`"
+3.7.10,"Multiple Choice: What is the result of trying to log variables y and z outside of their respective functions in this code?
+
+javascript
+Copy code
+var x = 10;
+function scopeTest() {
+  var y = 20;
+  let z = 30;
+  console.log(y);
+  console.log(z);
+}
+scopeTest();
+console.log(x);
+console.log(y);
+console.log(z);
+(A) It logs 10, undefined, and undefined.
+(B) It logs 10, followed by ReferenceError for y and z.
+(C) It logs 10, 20, and 30.
+(D) It throws an error for x, y, and z.","(B) It logs `10`, followed by ReferenceError for `y` and `z`."
+3.8.1,"Multiple Choice: What is the result of the following code?
+
+```javascript
+let scores = [6, 15, 8];
+console.log(scores[1]);
+(A) 6
+(B) 15
+(C) 8
+(D) undefined",(B) 15
+3.8.2,"Multiple Choice: What is the correct way to add a new element to the end of an array?
+
+(A) array.unshift(value)
+(B) array.push(value)
+(C) array.shift(value)
+(D) array.pop(value)",(B) array.push(value)
+3.8.3,"Multi-Select: Which of the following methods can be used to remove elements from an array? (Select all that apply)
+
+(A) pop()
+(B) shift()
+(C) splice()
+(D) push()","(A) pop(), (B) shift(), (C) splice()"
+3.8.4,"Multiple Choice: What will be the output of the following code?
+
+javascript
+Copy code
+let teams = [""Tigers"", ""Bisons"", ""Eagles"", ""Cobras""];
+console.log(teams.length);
+(A) 0
+(B) 2
+(C) 4
+(D) undefined",(C) 4
+3.8.5,"Multiple Choice: What happens when you try to access an element in an array at an index that doesn’t exist?
+
+(A) It throws an error.
+(B) It returns undefined.
+(C) It returns null.
+(D) It crashes the program.",(B) It returns undefined.
+3.8.6,"Multiple Choice: What is the purpose of the forEach() method in JavaScript?
+
+(A) To return a new array with modified values.
+(B) To loop through each element of an array and apply a function to each element.
+(C) To remove elements from an array.
+(D) To concatenate two arrays.",(B) To loop through each element of an array and apply a function to each element.
+3.8.7,"Multiple Choice: What will be the output of the following code?
+
+javascript
+Copy code
+let nums = [5, 2, 9, 3];
+nums[0] = nums[1] + nums[2];
+console.log(nums[0]);
+(A) 7
+(B) 5
+(C) 11
+(D) undefined",(C) 11
+3.8.8,"Multi-Select: Which of the following methods can be used to add elements to an array? (Select all that apply)
+
+(A) push()
+(B) unshift()
+(C) splice()
+(D) pop()
+[3.8.9] Multiple Choice: What does the splice() method do in an array?
+
+(A) It adds an element to the beginning of the array.
+(B) It removes an element from the end of the array.
+(C) It removes or adds elements from/to the array at a specific index.
+(D) It sorts the array.","(A) push(), (B) unshift(), (C) splice()"
+3.8.10,"Multiple Choice: What is the result of the following code?
+
+javascript
+Copy code
+let groceries = [""bread"", ""milk"", ""peanut butter""];
+groceries.push(""eggs"");
+console.log(groceries.length);
+(A) 2
+(B) 3
+(C) 4
+(D) 5",(C) 4
+3.9.1,"Multiple Choice: What does the following code output to the console?
+
+```javascript
+let book = {
+  title: ""Outliers"",
+  published: 2011,
+  keywords: [""success"", ""high-achievers""]
+};
+console.log(book.title);
+console.log(book.keywords[0]);
+
+(A) Outliers, success
+(B) Outliers, high-achievers
+(C) undefined, success
+(D) undefined, undefined","(A) Outliers, success"
+3.9.2,"Multiple Choice: Which of the following is a valid way to add a new property to an existing object?
+
+(A) book.author = ""Malcolm Gladwell"";
+(B) book.addProperty(""author"", ""Malcolm Gladwell"");
+(C) book[""author""] = ""Malcolm Gladwell"";
+(D) Both (A) and (C)",(D) Both (A) and (C)
+3.9.3,"Multi-Select: Which of the following methods can be used to access object properties? (Select all that apply)
+
+(A) Dot notation
+(B) Bracket notation
+(C) Object.keys()
+(D) Object.getOwnPropertyNames()","(A) Dot notation, (B) Bracket notation"
+3.9.4,"Multiple Choice: What does the following code output?
+
+javascript
+Copy code
+let book = {
+  title: ""Outliers"",
+  published: 2011,
+  author: { firstName: ""Malcolm"", lastName: ""Gladwell"" }
+};
+console.log(book.author.lastName);
+(A) Malcolm
+(B) Gladwell
+(C) Outliers
+(D) undefined",(B) Gladwell
+3.9.5,"Multiple Choice: What will happen if you try to delete a property from an object?
+
+(A) The property is permanently removed.
+(B) The property value is set to null.
+(C) The object becomes undefined.
+(D) It throws an error.",(A) The property is permanently removed.
+3.9.6,"Multiple Choice: What is the output of this code?
+
+javascript
+Copy code
+let book = {
+  title: ""Quiet"",
+  author: {
+    firstName: ""Susan"",
+    lastName: ""Cain""
+  },
+  getAuthorName: function() {
+    return this.author.firstName + "" "" + this.author.lastName;
+  }
+};
+console.log(book.getAuthorName());
+(A) Susan Cain
+(B) Quiet
+(C) undefined
+(D) Error",(A) Susan Cain
+3.9.7,"Multiple Choice: What does the this keyword refer to inside a method?
+
+(A) The global object
+(B) The object that owns the method
+(C) The function scope
+(D) The nearest variable in scope",(B) The object that owns the method
+3.9.8,"Multi-Select: Which of the following statements about object methods is true? (Select all that apply)
+
+(A) Methods can access other properties using this.
+(B) Methods can be added to an object after the object is created.
+(C) Methods must be declared inside the object literal.
+(D) Methods can return values.","(A) Methods can access other properties using `this`, (B) Methods can be added to an object after the object is created, (D) Methods can return values"
+3.9.9,"Multiple Choice: What is an accessor property in JavaScript?
+
+(A) A property that has both getter and setter functions
+(B) A property that is accessible only inside the object
+(C) A property that is inherited from another object
+(D) A property that is read-only",(A) A property that has both getter and setter functions
+3.9.10,"Multiple Choice: What does the following code output?
+
+javascript
+Copy code
+let game = {
+  firstOpponent: ""Serena Williams"",
+  firstOpponentScore: 2,
+  secondOpponent: ""Garbine Muguruza"",
+  secondOpponentScore: 0,
+  get winner() {
+    return this.firstOpponentScore > this.secondOpponentScore ? this.firstOpponent : this.secondOpponent;
+  }
+};
+console.log(game.winner);
+(A) Serena Williams
+(B) Garbine Muguruza
+(C) undefined
+(D) Error",(A) Serena Williams
