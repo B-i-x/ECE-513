@@ -29,21 +29,21 @@ for area in subsections:
                 continue
             
             filepath = os.path.join(subdir, file)
-            
+            print(f"Processing {filepath}...")
             # Read the textbook content from the file
             with open(filepath, 'r') as f:
                 file_textbook_content = f.read()
+            # print(len(file_textbook_content))
 
             # Truncate content if it's too long (adjust based on the model's token limit)
-            max_content_length = 24000  # Approximately 6000 tokens
+            max_content_length = 50000  # Approximately 6000 tokens
             if len(file_textbook_content) > max_content_length:
                 file_textbook_content = file_textbook_content[:max_content_length]
-
             # Extract section and subsection numbers
             relative_path = os.path.relpath(subdir, d)
             section, subsection = extract_section_numbers(relative_path)
             # Build the prompt for the AI model
-            prompt = f"""Based on the following content, please create 10 questions, they can be Multiple choice, Multiple answers, Short answer, Fill in the blank. Provide the correct answers as well. 
+            prompt = f"""Based on the following content, please create 10 questions, they can be Multiple choice, Multiple answers, Short answer, or Fill in the blank. Provide the correct answers as well. 
 
             For each question, assign an ID in the format [{section}.{subsection}.question_number], where question_number starts from 1 and increments for each question.
 
@@ -73,44 +73,44 @@ for area in subsections:
 
             {file_textbook_content}
             """
-
+            print(prompt)
             # Prepare the messages for the ChatCompletion API
             messages = [
                 {"role": "system", "content": "You are a helpful assistant that creates test questions based on provided textbook content."},
                 {"role": "user", "content": prompt}
             ]
 
-            # # Call the OpenAI API to generate questions
-            # try:
-            #     completion = openai.ChatCompletion.create(
-            #         model="gpt-4o",
-            #         messages=messages,
-            #         max_tokens=2000,  # Adjust as needed
-            #     )
+            # Call the OpenAI API to generate questions
+            try:
+                completion = openai.chat.completions.create(
+                    model="gpt-4o",
+                    messages=messages,
+                    max_tokens=30000,  # Adjust as needed
+                )
 
-            #     response = completion.choices[0].message['content']
+                response = completion.choices[0].message['content']
 
-            #     # Try to parse the response as JSON
-            #     try:
-            #         questions = json.loads(response)
-            #     except json.JSONDecodeError:
-            #         print(f"JSON decoding failed for {filepath}. Saving raw response.")
-            #         questions = response
+                # Try to parse the response as JSON
+                try:
+                    questions = json.loads(response)
+                except json.JSONDecodeError:
+                    print(f"JSON decoding failed for {filepath}. Saving raw response.")
+                    questions = response
 
-            #     # Save the questions to a file in the same directory
-            #     output_filename = os.path.join(subdir, 'questions_from_' + file)
+                # Save the questions to a file in the same directory
+                output_filename = os.path.join(subdir, 'questions_from_' + file)
 
-            #     if isinstance(questions, dict):
-            #         with open(output_filename, 'w') as f_out:
-            #             json.dump(questions, f_out, indent=2)
-            #     else:
-            #         with open(output_filename, 'w') as f_out:
-            #             f_out.write(questions)
+                if isinstance(questions, dict):
+                    with open(output_filename, 'w') as f_out:
+                        json.dump(questions, f_out, indent=2)
+                else:
+                    with open(output_filename, 'w') as f_out:
+                        f_out.write(questions)
 
-            #     print(f"Generated questions for {filepath}")
+                print(f"Generated questions for {filepath}")
 
-            # except Exception as e:
-            #     print(f"Error processing {filepath}: {e}")
+            except Exception as e:
+                print(f"Error processing {filepath}: {e}")
 
         # After processing each subsection, wait for 1 second and wait for user to continue
         time.sleep(1)
