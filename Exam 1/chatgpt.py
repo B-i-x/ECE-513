@@ -88,26 +88,36 @@ for area in subsections:
                     max_tokens=16384,  # Adjust as needed
                 )
 
-                response = completion.choices[0].message
+                response = completion.choices[0].message.content
                 print(response)
-                # Try to parse the response as JSON
+                # Separate questions and answers
                 try:
-                    questions = json.loads(response)
-                except json.JSONDecodeError:
-                    print(f"JSON decoding failed for {filepath}. Saving raw response.")
-                    questions = response
+                    # Split the response into 'questions' and 'answers' sections
+                    questions_part = ''
+                    answers_part = ''
+                    if 'questions:' in response and 'answers:' in response:
+                        parts = response.split('answers:')
+                        questions_part = parts[0].strip()
+                        answers_part = 'answers:' + parts[1].strip()
+                    else:
+                        print(f"Unexpected format in response for {filepath}. Saving entire response as questions.")
+                        questions_part = response
 
-                # Save the questions to a file in the same directory
-                output_filename = os.path.join(subdir, 'questions_from_' + file)
+                    # Save the questions to a file in the same directory
+                    questions_filename = os.path.join(subdir, 'questions_from_' + file)
+                    with open(questions_filename, 'w', encoding='utf-8') as f_out:
+                        f_out.write(questions_part)
 
-                if isinstance(questions, dict):
-                    with open(output_filename, 'w') as f_out:
-                        json.dump(questions, f_out, indent=2)
-                else:
-                    with open(output_filename, 'w') as f_out:
-                        f_out.write(questions)
+                    # Save the answers to a separate file
+                    answers_filename = os.path.join(subdir, 'answers_from_' + file)
+                    with open(answers_filename, 'w', encoding='utf-8') as f_out:
+                        f_out.write(answers_part)
 
-                print(f"Generated questions for {filepath}")
+                    print(f"Generated questions and answers for {filepath}")
+
+                except Exception as e:
+                    print(f"Error processing response for {filepath}: {e}")
+
 
             except Exception as e:
                 print(f"Error processing {filepath}: {e}")
