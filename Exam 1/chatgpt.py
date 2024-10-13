@@ -54,8 +54,6 @@ for area in subsections:
 
             [1.2.1] True/False: The <body> tag can contain any number of <head> tags to structure the document metadata repeatedly.
 
-            Answer: False
-
             ---
 
             [1.2.2] Multiple Choice: What does the <link> tag primarily use within an HTML document?
@@ -79,7 +77,6 @@ for area in subsections:
                 {"role": "system", "content": "You are a helpful assistant that creates test questions based on provided textbook content."},
                 {"role": "user", "content": prompt}
             ]
-
             # Call the OpenAI API to generate questions
             try:
                 completion = openai.chat.completions.create(
@@ -91,13 +88,31 @@ for area in subsections:
                 response = completion.choices[0].message.content
                 print(response)
                 # Separate questions and answers
-                try:
-                    # Save the response to a file in the same directory
-                    output_filename = os.path.join(subdir, 'questions_and_answers_from_' + file)
-                    with open(output_filename, 'w', encoding='utf-8') as f_out:
-                        f_out.write(response)
 
-                    print(f"Saved questions and answers to {output_filename}")
+                # Call the OpenAI API to generate questions
+                try:
+                    # Split the response into 'questions' and 'answers' sections
+                    questions_part = ''
+                    answers_part = ''
+                    if 'questions:' in response and 'answers:' in response:
+                        parts = response.split('answers:')
+                        questions_part = parts[0].strip()
+                        answers_part = 'answers:' + parts[1].strip()
+                    else:
+                        print(f"Unexpected format in response for {filepath}. Saving entire response as questions.")
+                        questions_part = response
+
+                    # Save the questions to a file in the same directory
+                    questions_filename = os.path.join(subdir, f'questions_{section}.{subsection}')
+                    with open(questions_filename, 'w', encoding='utf-8') as f_out:
+                        f_out.write(questions_part)
+
+                    # Save the answers to a separate file
+                    answers_filename = os.path.join(subdir, f'answers_{section}.{subsection}')
+                    with open(answers_filename, 'w', encoding='utf-8') as f_out:
+                        f_out.write(answers_part)
+
+                    print(f"Generated questions and answers for {filepath}")
 
                 except Exception as e:
                     print(f"Error processing response for {filepath}: {e}")
