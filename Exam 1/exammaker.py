@@ -56,7 +56,7 @@ def main():
             p.add_run(question['Answer'])
 
         # Save the document
-        doc_filename = f'Random_Questions_Set_{doc_num}.docx'
+        doc_filename = f'practice/Random_Questions_Set_{doc_num}.docx'
         document.save(doc_filename)
         print(f"Document '{doc_filename}' has been created successfully.")
 
