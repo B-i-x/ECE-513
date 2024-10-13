@@ -92,28 +92,12 @@ for area in subsections:
                 print(response)
                 # Separate questions and answers
                 try:
-                    # Split the response into 'questions' and 'answers' sections
-                    questions_part = ''
-                    answers_part = ''
-                    if 'questions:' in response and 'answers:' in response:
-                        parts = response.split('answers:')
-                        questions_part = parts[0].strip()
-                        answers_part = 'answers:' + parts[1].strip()
-                    else:
-                        print(f"Unexpected format in response for {filepath}. Saving entire response as questions.")
-                        questions_part = response
+                    # Save the response to a file in the same directory
+                    output_filename = os.path.join(subdir, 'questions_and_answers_from_' + file)
+                    with open(output_filename, 'w', encoding='utf-8') as f_out:
+                        f_out.write(response)
 
-                    # Save the questions to a file in the same directory
-                    questions_filename = os.path.join(subdir, 'questions_from_' + file)
-                    with open(questions_filename, 'w', encoding='utf-8') as f_out:
-                        f_out.write(questions_part)
-
-                    # Save the answers to a separate file
-                    answers_filename = os.path.join(subdir, 'answers_from_' + file)
-                    with open(answers_filename, 'w', encoding='utf-8') as f_out:
-                        f_out.write(answers_part)
-
-                    print(f"Generated questions and answers for {filepath}")
+                    print(f"Saved questions and answers to {output_filename}")
 
                 except Exception as e:
                     print(f"Error processing response for {filepath}: {e}")
