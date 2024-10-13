@@ -85,7 +85,7 @@ for area in subsections:
                 completion = openai.chat.completions.create(
                     model="gpt-4o",
                     messages=messages,
-                    max_tokens=30000,  # Adjust as needed
+                    max_tokens=16384,  # Adjust as needed
                 )
 
                 response = completion.choices[0].message['content']
