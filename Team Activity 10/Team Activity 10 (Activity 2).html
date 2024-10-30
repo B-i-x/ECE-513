@@ -47,5 +47,20 @@
 					window.D2L.EmbedRenderer.renderEmbeds(document.body);
 				});
 		
-		
-</script></body></html>
+
+</script>
+<script>
+	$(document).ready(function() {
+		$("div ~ p").each(function (index) {
+			if (index % 2 == 0) {
+				$(this).css("background-color", "red");
+			}
+			if (index % 2 == 1) {
+				$(this).css("background-color", "blue");
+			}
+		})		
+	});
+
+
+</script>
+</body></html>
