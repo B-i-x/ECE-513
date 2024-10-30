@@ -52,7 +52,13 @@
 								enableMML3Support: false
 							});
 						}
-					});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.209/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					});
+
+                    $(document).ready(function() {
+        //making every other row light blue in the table
+        $('tr').css("background-color", "lightblue");
+    });    
+</script><script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.209/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
 					document.querySelectorAll('.d2l-code').forEach(code => {
 						window.D2L.Prism.formatCodeElement(code);
 					});
@@ -61,8 +67,5 @@
 				});
 
 
-    $(document).ready(function() {
-        //making every other row light blue in the table
-        $('tr:nth-child(2n+3)').css("background-color", "lightblue");
-    });            
+            
 </script></body></html>
