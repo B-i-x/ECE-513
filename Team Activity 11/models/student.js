@@ -2,7 +2,19 @@ const db = require("../db");
 
 
 /* your schema here */
-
+const studentSchema = new db.Schema({
+    name: {
+        type: String,
+    },
+    gpa: {
+        type: Number,
+        min: 0,
+        max: 4,
+    },
+    major: {
+        type: String,
+    }
+});
 
 const Student = db.model("Student", studentSchema);
 
