@@ -23,6 +23,18 @@ router.post("/create", function (req, res) {
 
 });
 
+router.post("/search", function (req, res) {
+    Student.find({ name: req.body.name }, function (err, docs) {
+        if (err) {
+            let msgStr = `Error: ${err}`;
+            res.status(201).json({ message: msgStr });
+        }
+        else {
+            res.status(200).json(docs);
+        }
+    });
+});
+
 router.post("/delete", function(req, res) {
     Student.deleteOne({ name: req.body.name }, function(err, doc) {
         if (err) {
