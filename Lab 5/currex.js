@@ -187,4 +187,49 @@ const exchangeRates = {
   }
 };
 
-/* Your solution goes here */
+// $(document).ready(function() {
+  function updateCurrencyDropdown() {
+    var $toCurrency = $('#toCurrency');
+    $toCurrency.empty();
+    $toCurrency.append('<option value="" disabled selected>Select currency</option>');
+    Object.keys(exchangeRates.rates).forEach(function(currencyCode) {
+      var currencyName = allCurrencies[currencyCode];
+      if (currencyName) {
+        var optionText = currencyName + ' (' + currencyCode + ')';
+        var optionValue = currencyCode;
+        $toCurrency.append('<option value="' + optionValue + '">' + optionText + '</option>');
+      }
+    });
+  }
+
+  updateCurrencyDropdown();
+
+  $('#toCurrency').change(function() {
+    var selectedCurrencyCode = $(this).val();
+    var usdAmount = parseFloat($('#usdInput').val());
+    // if (isNaN(usdAmount)) {
+    //   $('#resultCurrency').val('---.--');
+    //   $('#resultLabel').text('To Currency ():');
+    //   return;
+    // }
+    var rate = exchangeRates.rates[selectedCurrencyCode];
+    var convertedAmount = usdAmount * rate;
+    $('#resultCurrency').val(convertedAmount.toFixed(2));
+    var currencyName = allCurrencies[selectedCurrencyCode];
+    $('#resultLabel').text(currencyName + ' (' + selectedCurrencyCode + '):');
+  });
+
+  $('#updateRates').click(function() {
+    var exchangeRatesJSON = $('#exchangeRates').val();
+    // try {
+    exchangeRates = JSON.parse(exchangeRatesJSON);
+    // } catch (e) {
+    //   alert('Invalid JSON data');
+    //   return;
+    // }
+    updateCurrencyDropdown();
+    $('#resultCurrency').val('---.--');
+    $('#resultLabel').text('To Currency ():');
+  });
+
+// // });
