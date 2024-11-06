@@ -95,7 +95,17 @@ function getCount() {
 
 function readAll() {
     /* your code here */
-    
+    $.ajax({
+        url: '/students/readAll',
+        method: 'GET'
+    })
+
+    .done(function (data, textStatus, jqXHR) {
+        $('#rxData').html(JSON.stringify(data, null, 2));
+    })
+    .fail(function (data, textStatus, jqXHR) {
+        $('#rxData').html(JSON.stringify(data, null, 2));
+    });
 }
 
 function searchStudent() {

@@ -36,4 +36,16 @@ router.get('/readAll', function(req, res) {
     });
 });
 
+router.get("/count", function (req, res) {
+    Student.estimatedDocumentCount(function (err, count) {
+        if (err) {
+            let msgStr = `Error: ${err}`;
+            res.status(201).json({ message: msgStr });
+        }
+        else {
+            res.status(200).json({ count: count });
+        }
+    });
+});
+
 module.exports = router;
