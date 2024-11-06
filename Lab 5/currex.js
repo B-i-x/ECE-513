@@ -187,49 +187,57 @@ const exchangeRates = {
   }
 };
 
-// $(document).ready(function() {
-  function updateCurrencyDropdown() {
-    var $toCurrency = $('#toCurrency');
-    $toCurrency.empty();
-    $toCurrency.append('<option value="" disabled selected>Select currency</option>');
-    Object.keys(exchangeRates.rates).forEach(function(currencyCode) {
-      var currencyName = allCurrencies[currencyCode];
-      if (currencyName) {
-        var optionText = currencyName + ' (' + currencyCode + ')';
-        var optionValue = currencyCode;
-        $toCurrency.append('<option value="' + optionValue + '">' + optionText + '</option>');
+/* Your solution goes here */
+$(document).ready(function() {
+  // Task 1: Populate the dropdown options
+  function updateCurrencyOptions() {
+      const toCurrency = $("#toCurrency");
+      toCurrency.empty();
+      toCurrency.append('<option value="" disabled selected>Select currency</option>');
+      
+      if (exchangeRates && exchangeRates.rates) {
+          for (const [abbreviation, rate] of Object.entries(exchangeRates.rates)) {
+              const fullName = allCurrencies[abbreviation];
+              if (fullName) {
+                  toCurrency.append(
+                      `<option value="${abbreviation}">${fullName} (${abbreviation})</option>`
+                  );
+              }
+          }
       }
-    });
   }
 
-  updateCurrencyDropdown();
+  updateCurrencyOptions(); // Initial population of currency options
 
-  $('#toCurrency').change(function() {
-    var selectedCurrencyCode = $(this).val();
-    var usdAmount = parseFloat($('#usdInput').val());
-    // if (isNaN(usdAmount)) {
-    //   $('#resultCurrency').val('---.--');
-    //   $('#resultLabel').text('To Currency ():');
-    //   return;
-    // }
-    var rate = exchangeRates.rates[selectedCurrencyCode];
-    var convertedAmount = usdAmount * rate;
-    $('#resultCurrency').val(convertedAmount.toFixed(2));
-    var currencyName = allCurrencies[selectedCurrencyCode];
-    $('#resultLabel').text(currencyName + ' (' + selectedCurrencyCode + '):');
+  // Task 2: Convert USD to selected currency on change
+  $("#toCurrency").change(function() {
+      const selectedCurrency = $(this).val();
+      const usdAmount = parseFloat($("#usdInput").val());
+      
+      if (exchangeRates.rates && exchangeRates.rates[selectedCurrency]) {
+          const rate = exchangeRates.rates[selectedCurrency];
+          const convertedAmount = (usdAmount * rate).toFixed(2);
+          
+          $("#resultCurrency").val(convertedAmount);
+          const currencyName = allCurrencies[selectedCurrency];
+          $("#resultLabel").text(`${currencyName} (${selectedCurrency}):`);
+      }
   });
 
-  $('#updateRates').click(function() {
-    var exchangeRatesJSON = $('#exchangeRates').val();
-    // try {
-    exchangeRates = JSON.parse(exchangeRatesJSON);
-    // } catch (e) {
-    //   alert('Invalid JSON data');
-    //   return;
-    // }
-    updateCurrencyDropdown();
-    $('#resultCurrency').val('---.--');
-    $('#resultLabel').text('To Currency ():');
-  });
+  // Task 3: Update rates when Update Rates button is clicked
+  $("#updateRates").click(function() {
+      try {
+          const newRates = JSON.parse($("#exchangeRates").val());
+          if (newRates && newRates.rates) {
+              exchangeRates.rates = newRates.rates;
+              updateCurrencyOptions(); // Refresh dropdown with new rates
 
-// // });
+              // Reset output fields
+              $("#resultCurrency").val("---.--");
+              $("#resultLabel").text("To Currency ():");
+          }
+      } catch (error) {
+          alert("Invalid JSON format in exchange rates");
+      }
+  });
+});
