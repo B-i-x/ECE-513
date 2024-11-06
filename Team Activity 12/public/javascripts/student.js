@@ -134,6 +134,31 @@ function searchStudent() {
     });
 }
 
+function deleteStudent() {
+    // data validation
+    if ($('#name').val() === "") {
+        window.alert("invalid name!");
+        return;
+    }
+
+    let txdata = {
+        name: $('#name').val()
+    };
+
+    $.ajax({
+        url: '/students/delete',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(txdata),
+        dataType: 'json'
+    })
+    .done(function (data, textStatus, jqXHR) {
+        $('#rxData').html(JSON.stringify(data, null, 2));
+    })
+    .fail(function (data, textStatus, jqXHR) {
+        $('#rxData').html(JSON.stringify(data, null, 2));
+    });
+}
 
 $(function () {
     $('#btnCreate').click(createStudent);
