@@ -1,0 +1,2646 @@
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+1 of 66 2024-11-17, 12:17 p.m.
+7.1 Getting started with jQuery 
+JavaScript libraries 
+Developers use JavaScript libraries to simplify coding tasks. A library is a collection of functions 
+that focus on a related set of tasks.jQuery is a popular JavaScript library that focuses on a broad 
+range of tasks, many of them associated with the visual elements of a webpage. 
+Library vs. framework 
+What is the difference between a "library" and a "framework"? A framework is a suite 
+of libraries designed to offer a more comprehensive platform in which to program. 
+When using a framework, the program's flow is dictated by the framework, not the 
+programmer Examples of popular JavaScript frameworks include Angular JS, Ember, 
+and Backbone.)~. 
+Table 7.1.1: Common tasks performed by jQuery. 
+Task Description 
+DOM 
+Find, alter, add, or remove DOM elements 
+manipulation 
+User interaction Respond to mouse clicks, mouse movement, or typing 
+Animation Smoothly show, hide, or move webpage elements 
+Widgets Display and manage the interaction of complex UI 
+elements 
+-
+Ajax 
+Issue asynchronous HTTP requests and handle 
+responses 
+Browser quirks Handle inconsistencies across different browsers 
+<script src="jquery-3.7.1.min.js"></
+script>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+2 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I . ACTIVITY 7.1.1: JOuery tasks. 
+Match the tasks performed by jQuery to the corresponding example. 
+If unable to drag and drop, refresh the page. 
+DOM manipulation User interaction Ajax Widgets Browser quirks 
+Animation 
+Accessing the jQuery library 
+Respond to the user clicking a 
+button. 
+Write code that works in older 
+versions of Internet Explorer. 
+Display a date picker. 
+Fade an image into view. 
+Interact with a web API. 
+Add a new item to a list. 
+Reset 
+□ 
+The jQuery library can be obtained from ji'juery.com. Version 3 is the latest version. After 
+downloading the library, a developer can place the library in a standard location on their web server. 
+Webpages that use jQuery import the library as shown in the figure below. The filename contains a 
+version number (3.7.1), and the ".min" means the code has been minified to download quicker. 
+Figure 7.1.1: Downloading jQuery library from the local web server. 
+"https://code.jquery.com/jquery-3.7.1.min.js"
+"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/
+script>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+3 of 66 2024-11-17, 12:17 p.m.
+Another option is for a webpage to download the jQuery library from a CON. A Content Delivery 
+Network (CDN) hosts popular web files around the globe and automatically routes requests to the 
+closest server, thus speeding up the delivery of the files. The figure below shows how to import the 
+jQuery library from a CON. The <script> element's integrity and crossorigin attributes are optional 
+and are used for Subresource Integrity (SRI) checking, which allows web browsers to verify 
+resources hosted on third-party servers have not been altered. 
+Figure 7.1.2: Downloading jQuery library from the code.jquery.com CDN. 
+<script 
+src= "https://code.jquery.com/jc 
+integrity= " sha25 6-/ JqT3SQfawRc-\ 
+Cxo=" 
+crossorigin= " anonymous" ></ scri1 
+Figure 7.1.3: Single server distribution vs. CDN distribution. 
+Source: Kanoha / CC BY-SA 3.0 
+I PARTICIPATION I . . . ACTIVITY 7.1.2: Loading the JQuery library. 
+1) Older versions of Query can be 
+downloaded from the jQuery website. 
+□ 
+0 
+jQuery() jQuery
+jQuery
+"https://code.jquery.com/jquery-3.7.1.min.js"></script>
+>
+getElementById("hello");
+helloPar);
+getElementsByTagName("p");
+allParas);
+<p>
+[ <p> ]
+[<p>,<p>]
+[<p>,<p>]
+DOM node
+jQuery obj
+DOM node array
+jQuery obj
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+4 of 66 2024-11-17, 12:17 p.m.
+0 True 
+0 False 
+2) The jQuery library will almost always 
+download faster to the browser using 
+a CDN than from a webpage's server. 
+0 True 
+0 Fa lse 
+3) Other CDNs besides code.jquery.com 
+exist. 
+0 True 
+0 Fa lse 
+The jQuery() function 
+The jQuery library defines a primary function called jQuery(). The function behaves differently 
+depending on what arguments are passed to , but the function always returns a 
+object. Good practice is to use variables that start with "$" to hold objects. 
+I PARTICIPATION I . . . ACTIVITY 7.1.3: Creating JOuery obJects from DOM nodes. 
+< !DOCTYPE HTML> 
+<html l ang="en" > 
+<title>jQuery Exampl e </ title> 
+<script src="https://code.jquery.c< 
+<body> 
+<p id="hello" >He llo, jQuery! </ p : 
+<p>Th i s stuff i s great! </ p> 
+<script> 
+l et he lloPar = document . getE: 
+l et $he lloPar = jQuery (he llol 
+l et a llParas = document . getE: 
+l et $a l1 Paras = jQuery (a llPai 
+</ script> 
+</body> 
+</html> 
+helloPar <p:: 1---------t 
+$helloPar [ <p:: -----t 
+allParas [<p>,< -----t 
+$al1Paras ......_ [<p>,- _____ _. 
+0 
+0 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+5 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+The following code block is displayed. 
+<!DOCTYPE HTML> 
+<html lang="en"> 
+<title>jQuery Example</title> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<body> 
+<p id="hello">Hello, jQuery!</p> 
+<p> This stuff is great!</p> 
+<script> 
+let helloPar = document.getElementByld("hello"); 
+let $helloPar = jQuery(helloPar); 
+let allParas = document.getElementsByTagName("p"); 
+let $alIParas = jQuery(allParas); 
+</script> 
+</body> 
+</html> 
+Step 1: The line of code reading "<script src="https://code.jquery.com/jquery-3.7.1.min.js"></ 
+script>" is highlighted. 
+Step 2: The line of code reading "let helloPar = document.getElementByld("hello");" is highlighted. 
+Next, the line reading "<p id="hello">Hello, jQuery!</p>" is highlighted, and "<p>" is recorded in a 
+table below as the corresponding DOM node for helloPar. 
+Step 3: First, the line of code reading "let $helloPar = jQuery(helloPar);" is highlighted. "[<p>]" is 
+added to the table as the jQuery obj corresponding to $helloPar. 
+Step 4: A line of code reading "let allParas = document.getElementsByTagName("p");" is 
+highlighted. Next, both lines of code containing "<p>" are highlighted, and "[<p>,<p>]" is added to 
+the table as the corresponding DOM node array for allParas. 
+Step 5: The line of code reading "let $all Paras= jQuery(allParas);" is highlighted. "[<p>,<p>]" is 
+added to the table as the corresponding jQuery obj array for $alIParas. 
+Animation captions: 
+1. The <script> tag downloads the jQuery library. 
+2. getElementByld() finds the element with ID "hello" and returns the first <p> DOM node. 
+3. The jQuery() function creates a jQuery object with the <p> DOM node. 
+4. getElementsByTagName() finds all paragraphs and returns an array of DOM nodes. 
+jQuery()
+getElementById("hello"));
+getElementById("hello"));
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+6 of 66 2024-11-17, 12:17 p.m.
+5. The jQuery() function creates a jQuery object from the array of DOM nodes. 
+The $() function is the same as the 
+code. 
+function, which developers often use to type less 
+Figure 7.1.4: Using the SO function. 
+let $p = $ (document . getEl 
+II same as 
+let $p = 
+j Query (document . getEl eme n 
+I PARTICIPATION I . . ACTIVITY 7.1.4: The JOuery() and$() functions. 
+1) If the jQuery library is not downloaded 
+to the user's browser, using $ () will 
+result in a syntax error. 
+0 True 
+0 False 
+2) $ ( x) is equivalent to j Query ( x), 
+where x contains a DOM node. 
+0 True 
+0 False 
+3) The j Query object contains a 
+collection of DOM nodes. 
+0 True 
+0 False 
+4) The j Query object returned by $ () 
+must be stored in a variable that 
+begins with $. 
+0 True 
+0 False 
+□ 
+0 
+0 
+0 
+0 
+"https://code.jquery.com/jquery-3.7.1.min.js"></script>
+$allParas [<p>,<p>]
+Hello, jQuery!</p>
+</p>
+Hello, jQuery!
+This stuff is great!
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+7 of 66 2024-11-17, 12:17 p.m.
+Exploring further: 7.2 Selectors 
+• jQuerY- API 
+• Subresource lntegd!Y- from W3C 
+Basic selectors . • J.\,JuerY-O-iu nctIon 
+The $ () function is used to select DOM elements using selectors. A selector is a string that is 
+crafted to match specific DOM elements. Once an element is selected, other jQuery methods can 
+be used to add and remove CSS classes or properties from the selected element, show or hide the 
+selected element, etc. The jQuery method addC/ass() is used to add a CSS class to selected 
+elements as illustrated in the animation below. 
+I PARTICIPATION I ' 
+ACTIVITY 7.2.1: Adding classes to all paragraphs. 
+< !DOCTYPE html> 
+<html l ang="en" > 
+<title>jQuery Examp l e </ title> 
+<script src="https://code.jquery.com/jque 
+<style> 
+.important { co l or : red; } 
+</ style> 
+<p i d="hello" c l ass="important" >He llo , jQ 
+<p c l ass="important">Th i s stuff i s great! 
+<script> 
+l et $a l1 Paras = $ ( "p" ); 
+$a llParas . addCl ass ("important" ); 
+</ script> 
+</ html> 
+Animation content: 
+The following code block is displayed. 
+<IDOCTYPE html> 
+<html lang="en"> 
+<title>jQuery Example</title> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<style> 
+.important { color: red;} 
+</style> 
+<p id="hello">Hello, jQuery!</p> 
+□ 
+// Select all paragraphs, then remove the "important" class from all of 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+8 of 66 2024-11-17, 12:17 p.m.
+<p> This stuff is great!</p> 
+<script> 
+let $alIParas = $("p"); 
+$al I Pa ras.addC lass("i mporta nt"); 
+</script> 
+</html> 
+Step 1: The two lines reading "<p id="hello">Hello, jQuery!</p> 
+<p> This stuff is great!</p>" are highlighted. First, the plain text, "Hello, jQuery! This stuff is great!" 
+is displayed to the right. 
+Step 2: The line reading "let $all Paras= $("p");" is highlighted. The two lines, "<p id="hello">Hello, 
+jQuery!</p>" and "<p> This stuff is great!</p>" are highlighted again in red. "[<p>,<p>]" is shown 
+beside "$all Paras" to the side. 
+Step 3: The line reading "$allParas.addClass("important");" is highlighted. The two lines of code 
+surrounded by "<p>" tags are changed to read "<p id="hello" class="important">Hello, jQuery!</p>" 
+and "<p class="important"> This stuff is great!</p>". When this new code is executed, the text 
+reading "Hello, jQuery! This stuff is great!" changes to a red font. 
+Animation captions: 
+1. The browser renders the webpage. 
+2. $("p") selects all <p> elements. 
+3. The addClass("important") method adds the "important" class to both paragraphs. 
+4. Changes to the DOM cause the browser to update the rendered webpage, making both 
+paragraphs use a red font. 
+A web developer can select elements and call jQuery methods to perform operations on the 
+selected elements in a single line of code. The figure below selects and removes the "important" 
+class from all paragraphs using the jQuery method removeC/ass(), which removes a class from a 
+selected element. 
+Example 7.2.1: Using$() and removeClass() on a single line. 
+II Select all paragraphs, then remove 
+them 
+$ ("p" ) . removeCl ass ("important" ); 
+<p>
+id="hello"
+class="important"
+$("#game").addClass("crazy");
+$(".game").addClass("crazy");
+$(".crazy").removeClass(".crazy");
+$(".crazy").removeClass("crazy");
+$("div").removeClass("crazy");
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+9 of 66 2024-11-17, 12:17 p.m.
+Three common ways exist to select elements: by element, ID, or class. The jQuery syntax for 
+selecting by element, ID, and class is similar to CSS selector syntax. 
+Table 7.2.1: Basic jQuery selectors. 
+Selector 
+Example Explanation Type -
+Element $ ( "p" ) Selects all elements 
+ID $ ( "#hello" ) Selects the element with 
+Class $ ( ".important" ) Selects all elements with 
+clasE 
+I PARTICIPATION I . . ACTIVITY 7.2.2: Using basic selectors. 
+1) Which line of code selects all <h2> 
+elements in a document? 
+Q $ ("<h2>") 
+Q $ ("#h2") 
+Q $ ("h2") 
+2) Which line of code adds the class "crazy" to 
+the element with ID "game"? 
+0 $ ("#game") .addClass ("crazy") 
+0 $(".game") .addClass ("crazy") 
+0 $ ("game") .addClass ("crazy"); 
+3) Which line of code removes the class "crazy" from all 
+elements currently using the "crazy" class? 
+0 $ (".crazy") . removeClass (". er 
+0 
+0 
+4) Which line of code removes the "crazy" class 
+□ 
+0 
+0 
+0 
+0 
+$("div").removeClass("crazy");
+$("div").toggleClass("crazy");
+$("p").addClass("crazy").addClass("completed");
+$("p").addClass("crazy + completed")
+$("p").addClass("completed");
+<span> id
+<a> href
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+10 of 66 2024-11-17, 12:17 p.m.
+from all <div> elements currently using the 
+"crazy" class and adds the "crazy" class to all 
+<div> elements currently not using the "crazy" 
+class? 
+0 $ ("div") .removeClass ("crazy" 
+0 $ ("div") .addClass ("crazy"); 
+0 $ ("div") .toggleClass ("crazy" 
+5) Which line of code adds the classes "crazy" and "completed" in the 
+most efficient manner to all <p > elements? 
+0 $ ("p") .addClass ("crazy") .adc 
+0 $ ("p") .addClass ("crazy + corr 
+$ ("p") .addClass ("crazy"); 
+0 $ ("p") . addClass ("completed") 
+Additional selectors 
+Additional jQuery selectors provide more sophisticated selection of DOM elements: 
+• Attribute selector - Selects elements based on an element attribute. 
+• Basic filter selector - Selects elements based on a variety of properties. 
+• Child filter selector - Selects child elements based on location or other properties. 
+• Content filter selector - Selects elements based on an element's contents. 
+• Hierarchy selector - Selects elements based on an element's location within the DOM 
+hierarchy. 
+The table below shows examples of each additional jQuery selector type. 
+Table 7.2.2: Additional jQuery selectors. 
+Selector 
+Example Explanation Type ~ 
+Attribute $ ( "span[id] " ) Selects all that have an 
+attribute 
+Attribute $ ( "a[href$=' .pdf'] " ) Selects all with attributes 
+ending in .pdf 
+0 
+$("p:first") <p>
+<li>
+<li>
+<p>
+<span>
+<li>
+>Jamie</strong>!</p>
+strong>Robert Wilensky</strong>:
+ We've all heard that a million monkeys banging on a million 
+ will eventually reproduce the entire works of Shakespeare. Now, 
+strong>not true</strong>.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+11 of 66 2024-11-17, 12:17 p.m.
+Selector 
+Example Explanation Type 
+Basic filter 'T' \ t-' • .L ...L .Lu L- / Selects the first element 
+Basic filter $ ( 11 tr:even 11 ) Selects the first, third, fifth, etc. table rows 
+(zero-indexed) 
+~ 
+Basic filter $ ( 11 li:eq(l) 11 ) 
+Selects the second < 7 ; > element (index 
+n) 
+Child filter $ ( 11 li:last-child 11 ) Selects the last in each group 
+Content $ ( 11 p: contains ( 'bye') 11 ) Selects all that contain the word "bye" filter 
+$ ( 11 li span 11 ) 
+Selects all that are descendants 
+Hierarchy of 
+I PARTICIPATION I . . . ACTIVITY 7.2.3: Using add1t1onal selectors. 
+Given the HTML below, what elements are selected with each jQuery selector? 
+<h2 >About Me</h2 > 
+<p id= 11 intro 11 >Hell o , my name is <strong 
+<p class= 11 books 11 >My favorite books: </p > 
+<ol> 
+<li>Animal Farm</li> 
+<li>l984 </li> 
+<li>Oh ... I forgot the name! </li> 
+</ol> 
+<div>One of my favorite quotes from <st 
+<blockquote> 
+We ' ve all heard that a million monk 
+typewriters 
+will eventually reproduce the entir 
+thanks 
+to the Internet, we know this i s <s 
+</blockquote> 
+</div> 
+1) $ ("div strong") 
+<strong>Jamie< /strong> 
+0 and <strong>Robert 
+............. ~ ,._ '-'....., .t-'............. ...... ....... • ... • ....., •• , 
+... ..... , - ----••":fl ,,, • 
+□ 
+0 
+Wilensky</strong>
+<strong>Robert 
+Wilensky</strong>
+<strong>Robert 
+Wilensky</strong>
+<strong>not true</
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+12 of 66 2024-11-17, 12:17 p.m.
+0 
+0 and 
+<strong>not true</ 
+strong> 
+2) $("li:first") 
+0 <li>Animal Farm</li> 
+0 <li>Oh ... I forgot the 
+name! </li> 
+0 All <li> elements 
+3) $ ( "l i: eq ( 2) ") 
+Q <li>1984</li> 
+Q <li>Oh ... I forgot the 
+name!</li> 
+0 All <li> elements 
+4) $ ("div[class] ") 
+0 <p class="books" > ... </ 
+p > 
+0 <div>One o f ... </div> 
+0 Nothing 
+5) $ ("p:co ntains ('name')") 
+O Both <p > elements 
+0 <p id="intro " > ... </p> 
+0 Nothing 
+I PARTICIPATION I . ACTIVITY 7.2.4: Selector practice. 
+The following webpage is rendered using a combination of HTML, CSS, and JavaScript. 
+Try making the following JavaScript modifications so that the rendered webpage matches 
+the expected webpage. Do not modify the HTML or CSS. 
+0 
+0 
+0 
+0 
+□ 
+Highest-Grossing
+Films
+Films adjusted for inflation as of 2019:
+1. Gone with the Wind (1939)
+2. Avatar (2009)
+3. Titanic (1997)
+4. Star Wars (1977)
+5. Avengers: Endgame (2019)
+Gone with the Wind is the oldest movie to
+rank in the top 10 list of highest-grossing
+zyBooks 
+13 of 66 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ... 
+1. Modify the jQuery so that only the even <Ii> elements have the "highlight" class. 
+2. Add a jQuery method call to remove the "border" class from the first <p>. 
+3. Add a jQuery method call to add the "border" class to the second <p>. 
+[ HTML [ CSS [ JavaScript ] 
+1 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min. 
+2 
+3 <hl>Highest-Grossing Films </hl> 
+4 <p class="border" >Films adjusted for inflation as of 2019: </p> 
+5 <ol> 
+6 <li><cite>Gone with the Wind </cite> (1939) </li> 
+7 <li><cite>Avatar</cite> (2009) </li> 
+8 <li><cite>Titanic</cite> (1997) </li> 
+9 <li><cite>Star Wars </cite> (1977) </li> 
+10 <li><cite>Avengers: Endgame</cite> (2019) </li> 
+11 </ol> 
+12 <p><cite>Gone with the Wind</cite> is the oldest movie to rank in the top 1 
+13 <p>Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_ 
+14 
+Render webpage Reset code 
+Your webpage 
+Highest-Grossing 
+Films 
+!Films adjusted for inflation as of 2019: 
+1. Gone with the Wind (1939) 
+2. Avatar (2009) 
+3. Titanic ( 1997) 
+4. Star Wars (1977) 
+5. Avengers: Endgame (2019) 
+Gone with the Wind is the oldest movie to 
+rank in the top 10 list of highest-grossing 
+► View solution 
+I CHALLENGE I 7.2.1 : J·Query selectors. ACTIVITY 
+Expected webpage 
+Highest-Grossing 
+Films 
+Films adjusted for inflation as of 2019: 
+1. Gone with the Wind (1939) 
+2. Avatar (2009) 
+3. Titanic ( 1997) 
+4. Star Wars (1977) 
+5. Avengers: Endgame (2019) 
+Gone with the Wind is the oldest movie to 
+ank in the top 10 list of highest-grossing 
+□ 
+2024-11-17, 12:17 p.m. 
+jQuery
+jQuery example
+buttonClicked);
+function buttonClicked() {
+alert("Click!");
+}
+$("#some-btn").on("click", buttonClicked);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+14 of 66 2024-11-17, 12:17 p.m.
+5707 04.20654 7 6.qx3zqy7 
+Exploring further: 
+• jQuerY- selectors 
+7.3 Events 
+Event handlers 
+A developer may use jQuery to define an event handler, a function that executes when an event 
+occurs. Common events include clicking, moving the mouse, and typing. 
+The jQuery on() method takes two arguments: an event name and an event handler. The event 
+handler is registered to the selected elements of a object. 
+I PARTICIPATION I . ACTIVITY 7.3.1: Click event handler example. 
+JavaScript example 
+<button i d =" some - btn" > 
+Cli ck Me 
+</ button> 
+f unc tion buttonCli cked () 
+a l ert ( "Click !" ); 
+document . getEl ementByi d ( " some- btn" ) 
+. addEventLi stener ( " c lick" , buttonClicked); 
+Animation content: 
+Static figure: 
+Begin HTML code: 
+[ ClickMeJ 
+jQuery example 
+f unction buttonClicked () 
+a l ert ( "Cli ck! " ); 
+□ 
+alert 
+Click! 
+$ ( " #some - btn" ) . on ( " click" , buttonClicked) 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+15 of 66 2024-11-17, 12:17 p.m.
+<button id="some-btn"> 
+Click Me 
+</button> 
+End code. 
+Begin JavaScript code: 
+function buttonClicked() { 
+alert("Click!"); 
+} 
+document.getElementByld("some-btn") 
+.addEventlistener("click", buttonClicked); 
+End code. 
+Begin jQuery code: 
+function buttonClicked() { 
+alert("Click!"); 
+} 
+$("#some-btn").on("click", buttonClicked); 
+End code. 
+Animation captions: 
+1. The HTML displays a button in the webpage. 
+2. The JavaScript code calls getElementByld() to search the DOM for the button, then 
+addEventlistener() to add a click event handler. 
+3. When the user clicks the button, the buttonClicked() function executes and shows an alert 
+dialog box. 
+4. The equivalent jQuery code calls$() to search the DOM for the button and on() to add a 
+click event handler. The jQuery code is more concise and easier to read. 
+5. Clicking the button calls buttonClicked(), which shows an alert dialog box. 
+Shortcut methods are deprecated 
+Many on line examples of }Query show the use of "shortcut methods" like click() and 
+mousemove() to register event handlers. Shortcut methods were deprecated in 
+}Query version 3.3 and should no longer be used. 
+ready
+ready
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+16 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I 
+ACTIVITY 7.3.2: Event handlers. 
+1) Which code segment adds the event 
+handler do This() to the jQuery object 
+$btn? 
+2) 
+3) 
+O $btn.on(click, 
+doThis); 
+$btn.on("click", 0 doThis); 
+$btn.on("click", 0 doThis () ) ; 
+The code below specifies an 
+anonymous event handler. If the 
+webpage has three <button> 
+elements, clicking on which button 
+causes an alert to display? 
+$ ( "button" ) . on ( "click" , 
+function () { 
+alert ( "Click!" ) ; 
+} ) ; 
+0 First button only 
+0 None of the buttons 
+0 All three buttons 
+Are buttons the only elements that 
+can have click event handlers? 
+0 Yes 
+0 No 
+The ready event 
+□ 
+0 
+0 
+0 
+One of the most important jQuery events is the event. The ready event is triggered when the 
+browser has finished loading the webpage's DOM. Good practice is to use jQuery selectors inside 
+the event handler to ensure the DOM is fully loaded before searching the DOM for elements. 
+Figure 7.3.1: Waiting for the ready event. 
+// Wait until the document's DOM is 
+ready
+function() {
+// DOM is ready to go
+addClass("big");
+ready ready()
+$() ready
+// DOM is ready to go
+addClass("big");
+$(doThis);
+doThis
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+17 of 66 2024-11-17, 12:17 p.m.
+$ (document) . ready ( fur 
+I I DOM is ready tc 
+$ ("button" ) . addC l c 
+} ) ; 
+Developers use the event so frequently that the shortcut method is not needed. 
+The function can be supplied an event handler that will only execute when the event 
+triggers on the document. 
+Figure 7.3.2: Registering a ready event handler with $(). 
+$ ( function () { 
+I I DOM is rec 
+$ ( "button" ) . add( 
+} ) ; 
+I PARTICIPATION I 
+ACTIVITY 7.3.3: The ready event. 
+1) Developers typically use a ready event 
+handler when the jQuery code is 
+located at the end of the web page. 
+0 True 
+0 False 
+2) The code 
+$(document) .ready(doThis); is 
+equivalent to s I rln'T'h i .~, : where 
+is a function. 
+0 True 
+0 False 
+3) The ready event is triggered after all 
+the page's images, videos, and scripts 
+have finished downloading. 
+□ 
+0 
+0 
+0 
+<div>
+big <div>
+<div>
+<div> <div>
+toggleClass() yellow
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+18 of 66 2024-11-17, 12:17 p.m.
+0 True 
+0 False 
+Mouse events 
+jQuery supports many types of mouse events besides click. Ex: A drawing program needs to be 
+alerted when the mouse button is first pressed (mousedown), when the mouse is moved 
+(mousemove), and when the mouse button is released (mouseup). 
+Table 7.3.1: Mouse events. 
+Event Description 
+click Triggered when the user clicks an element. 
+dblclick Triggered when the user double-clicks an element. 
+mousedown / Triggered when the user first clicks down on an element or 
+mouseup releases the mouse. 
+mouseover / 
+Triggered when the mouse enters or leaves an element. 
+mouseout 
+mousemove Triggered when the mouse is moved while inside an element. 
+I PARTICIPATION I . ACTIVITY 7.3.4: Mouse event practice. 
+The following HTML uses CSS and JavaScript to render the webpage. Try modifying the 
+JavaScript so that the rendered webpage matches the expected webpage. Do not modify 
+the HTML or CSS. 
+1. Make the words "Hover over me!" become large when the mouse is over the <di r> 
+containing the words. Return the font to regular size when the mouse is not over the 
+<div>. Do this by modifying the mouseover and mouseout event handlers to add 
+and remove the,_" -· class to/from the / _,' at the right time. 
+2. Make the 
+mouse on the 
+and calling the 
+background alternate between yellow and white when moving the 
+. Do this by adding a "mousemove" event hander to the 
+method to add or remove the classes to 
+□ 
+<input type="text">
+<textarea>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+19 of 66 2024-11-17, 12:17 p.m.
+the <div>. 
+3. Although the JavaScript code will work without a ready event handler, put all of the 
+JavaScript code inside a ready event handler, just for practice. 
+Keyboard and form events 
+jQuery supports keyboard events that are helpful when a webpage needs to react to the user 
+pressing or releasing keys on a keyboard. Ex: Moving a spaceship left or right depending on what 
+key is pressed. jQuery also supports form events that are helpful when the webpage needs to 
+perform data validation. Ex: Ensuring the credit card field contains the correct number of digits 
+when the user presses the submit button. 
+Table 7.3.2: Keyboard events. 
+Event Description 
+keydown Triggered when the user first presses a key on the keyboard. ,--
+keyup Triggered when the user releases a key from the keyboard. 
+~ 
+Triggered when the browser registers keyboard input from printable 
+keypress character keys. Non-printing keys like Shift and Esc do not register keypress 
+events. 
+Table 7.3.3: Form events. 
+Event Description 
+focus/ blur Triggered when an element gains or loses focus. 
+focusin / Triggered when an element or any of the element's children gain or 
+focusout lose focus . 
+change Triggered when an element's value changes. 
+Triggered when a user selects text in an or 
+select 
+element. 
+$.isNumeric()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+20 of 66 2024-11-17, 12:17 p.m.
+Event Description 
+submit Triggered when the user is attempting to submit a form. 
+I PARTICIPATION I 
+ACTIVITY 7.3.5: Keyboard and form events. 
+1) What event is helpful for writing an 
+event handler that ensures the 
+password the user is entering is long 
+enough while the password is being 
+typed? 
+0 blur 
+0 keyup 
+0 change 
+2) What event is helpful for writing an 
+event handler that ensures the user 
+typed a valid phone number after the 
+user moves to another input field? 
+0 keypress 
+0 submit 
+0 blur 
+3) What event is helpful for writing an 
+event handler that ensures a radio 
+button was selected when the user 
+pressed the form's submit button? 
+0 submit 
+0 focusout 
+0 select 
+I PARTICIPATION I . ACTIVITY 7.3.6: Keyboard event practice. 
+The following webpage converts Celsius to Fahrenheit and vice versa. The JavaScript 
+code uses the jQuery method val () to extract the number that was typed into one of the 
+text input fields when Convert is pressed. The jQuery function 
+□ 
+0 
+0 
+0 
+□ 
+val()
+val()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+21 of 66 2024-11-17, 12:17 p.m.
+determines if what was typed is a number or not. If a number has not been typed, no 
+conversion is performed. Otherwise is used to put the converted temperature into 
+the appropriate text field. 
+Try modifying the JavaScript so the rendered webpage matches the behavior of the 
+expected webpage. Do not modify the HTML or CSS. 
+1. Make the °For °C label appear blue when focus is given to the Fahrenheit or Celsius 
+input field, respectively. Use the focus and blur events to add or remove the CSS 
+class selected to the labels. 
+2. Blank-out the °F input field when the user types anything into the °C field and vice 
+versa. Use the keyup event on each of the respective input fields to change the 
+opposing field into an empty string with the method. 
+3. Add the error class to the °For °C text fields if the user has typed anything but a 
+number. Remove the error class if the user has typed a number. Use the keyup 
+event on each of the respective input fields to test the user input while the input is 
+being typed. 
+I CHALLENGE I . ACTIVITY 7.3.1 : JOuery events. 
+570104.2065416.qx3zqy7 
+Exploring further: 
+• jQuerY- Events documentation 
+• Events - jQuery Learning Center 
+• £.isNumeric() documentation 
+• .val() documentation 
+7.4 Styles and animation 
+The css() method 
+□ 
+jQuery simplifies the process of adding and removing CSS properties to an element's inline style. 
+CSS properties can be added to selected elements with the css() method as illustrated in the 
+"peachpuff");
+"background-color: peachpuff;
+Hello!
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+22 of 66 2024-11-17, 12:17 p.m.
+following animation. 
+I PARTICIPATION I . ACTIVITY 7.4.1: Using the .css() method. 
+<body styl e = "background- co l or: pea 
+co l or : green ; 
+font- size: 20pt " > 
+<p >He llo ! </ p > 
+</body> 
+$ ( "body" ) . css ( "background- co l or " , 
+$ ( "body" ) . css ( { 
+co l or : "green " , 
+" font - size " : " 20pt " 
+} ) ; 
+Animation content: 
+Step 1: Two boxes of code are shown. The first reads: 
+<body><p>Hello!</p> 
+</body> 
+The second reads: 
+$("body").css("background-color", "peachpuff"); 
+$("body").css({ 
+color: "green", 
+"font-size": "20pt" 
+}); 
+"Hello!" is highlighted and displayed to the right. 
+Step 2: The first block of code is changed to read 
+"<body style="background-color: peachpuff "> <p>Hello!</p> </body>". 
+"Hello!" is highlighted and displayed to the right on top of a peach colored background. 
+Step 3: The first block of code is changed to read 
+<body style="background-color: peachpuff; 
+color: green; 
+font-size: 20pt"> 
+<p>Hello!</p> </body> 
+"Hello!" is displayed to the right in a large green font over a peach colored background. 
+Animation captions: 
+1 . Browser renders the webpage. 
+□ 
+backgroundColor "background-color"
+"background-color"
+h1>
+span> and
+"underline",
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+23 of 66 2024-11-17, 12:17 p.m.
+2. css() method adds the "background-color" CSS property to the <body>. 
+3. css() method adds two CSS properties to <body> using an object literal. 
+jQuery converts each camel-cased property name to a string that is equivalent to the CSS property 
+name. Ex: is converted to . However, 
+cannot be used without quotes since the dash is not a legal character in a 
+JavaScript identifier. 
+I PARTICIPATION I . ACTIVITY 7.4.2: Using the .css() method. 
+Given the following HTML, what is the effect of eachjQuery code segment? 
+<hl styl e = "border-style: solid" >To Do</ 
+<span i d="important" >Study for exam</ sp 
+<span>feed the fish</ span> 
+1) $ ("#important") .css ("display", 
+"none"); 
+O "Study for exam" is replaced with a 
+blank area. 
+"Study for exam" is no longer 
+0 visible, and the browser does not 
+leave room for the missing words. 
+O Nothing because no elements use 
+the class "important". 
+2)$("hl").css({ "textdecoration": "underline", 
+"border-style": "dotted" 
+} ) ; 
+O ''To Do" is underlined with a 
+dotted border. 
+O ''To Do" is underlined, but the 
+solid border remains . 
+O Nothing because there is a 
+syntax error in the object literal. 
+3) $ ("span") .css ({ 
+textDecoration: 
+□ 
+0 
+0 
+0 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+24 of 66 2024-11-17, 12:17 p.m.
+border-style: "dotted" 
+} ) ; 
+Both span elements are 
+0 underlined with a dotted 
+border. 
+0 Nothing because quotes are 
+needed around textDecoration. 
+0 Nothing because there is a 
+syntax error in the object literal. 
+4) let x = 0 
+$ ( "hl") . css ( "borderstyle"); 
+0 The border around ''To Do" is 
+removed . 
+0 xis assigned with an empty 
+string. 
+0 xis assigned with "solid". 
+5) $ ( "hl") . css ("border-style", 0 
+" " ) ; 
+0 ''To Do" continues to have a 
+solid border. 
+Nothing because an empty 
+0 string cannot be used as a 
+property value. 
+0 The solid border around ''To Do" 
+is removed. 
+jQuery effects 
+jQuery has three sets of animation methods for showing and hiding webpage elements. The 
+animation methods in the table below alter various CSS properties of selected elements to produce 
+animations. The methods take a speed argument that determines the duration of the animation. 
+jQuery animation methods are also called jQuery effects. 
+Table 7.4.1: Animation methods. 
+$("h1").show("slow");
+$("h1").hide("slow");
+$("h1").toggle("slow");
+);
+"normal");
+);
+"fast");
+);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+25 of 66 2024-11-17, 12:17 p.m.
+Methods Example Description 
+show() Alters width, height, and opacity hide() all at once toggle() 
+~ 
+fadeln() $ ( "hl" ) . fade I n ( "normal " ); 
+fadeout() $ ( "hl " ) . fadeout ( "normal " ) Alters opacity only 
+fade Toggle() $ ( "hl" ) . fade Toggl e ( "norma 
+f---
+slideDown() $ ( "hl" ) . s lideDown ( "fast" ) 
+slideUp() $ ( "hl" ) . s lideUp ( "fast" ); Alters height only 
+slide Toggle() $ ( "hl" ) . s lide Toggl e ( "fast 
+Table 7.4.2: The speed argument for animation methods. 
+Argument Example Explanation 
+$ ( "p" ) . s h ow ( "slow" ); 0.6 seconds to show the "slow" 
+paragraph 
+$ ( "p" ) . s h ow ( "normal" : 0.4 seconds to show the "normal" 
+paragraph 
+$ ( "p" ) . s h ow ( "fast" ); 0.2 seconds to show the "fast" 
+paragraph 
+milliseconds $ ( "p" ) . s h ow (l500 ); 1.5 seconds to show the 
+paragraph 
+I PARTICIPATION I . . ACTIVITY 7.4.3: Animation methods. 
+The following webpage is using jQuery animation methods to show and hide the cat 
+image. Click on each button to see the effect on the image. Then try modifying the 
+JavaScript so that when the image is clicked two things will happen: 
+1. A solid red border will immediately appear around the image. Use the css() method 
+to add the appropriate CSS properties. 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+26 of 66 2024-11-17, 12:17 p.m.
+2. The image will quickly hide, display, fade out, fade in, slide up, and slide down. Call 
+each of the animation methods to produce the series of animations. 
+I PARTICIPATION I . ACTIVITY 7.4.4: JOuery effects. 
+1) The hide () method does not 
+animate opacity. 
+0 True 
+0 False 
+2) If the show () method is not given 
+any arguments, the method does not 
+show an animated transition. 
+0 True 
+0 False 
+3) The call $ ( "hl") . toggle ( 2) will 
+show or hide all <hl > elements 
+during a 2 second interval. 
+0 True 
+0 False 
+4) The slideDown () method will slide 
+the element down until the element is 
+no longer visible. 
+0 True 
+0 False 
+Controlling animation order 
+□ 
+0 
+0 
+0 
+0 
+Sometimes an operation should be performed after an effect completes. Ex: Display a 'Thank you" 
+message after the user has typed information into a form that gradually disappears. However, code 
+that is written after a call to an animation method will execute before the animation is complete. To 
+execute code after the animation is complete, the jQuery animation methods can be passed a 
+callback function. 
+I PARTICIPATION I 7 4 5 W . . f . . I 
+ACTIVITY .. : aIting or an animation to compete. □ 
+<body>
+<h1>jQuery effects</h1>
+<h2>Good stuff!</h2>
+</body>
+$("h1").fadeOut("slow");
+$("h2").fadeOut("slow");
+$("h1").fadeIn("slow", function() {
+$("h2").fadeIn("slow");
+});
+jQuery effects
+Good stuff!
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+27 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+The following code blocks are displayed. 
+<body> 
+<h1 >jQuery effects</h1 > 
+<h2>Good stuff!</h2> 
+</body> 
+$("h1 ").fadeOut("slow"); 
+$("h2"). fadeOut("slow"); 
+$("h1 ").fadeln("slow", function() { 
+$("h2").fadeln("slow"); 
+}); 
+Step 1 :"jQuery effects 
+ood stuf =1 
+Good stuff!" is initially displayed to the right. "$("h1 ").fadeOut("slow"); 
+$("h2").fade0ut("slow");" is highlighted, and the two lines on the right gradually fade away at the 
+same time. 
+Step 2: 
+The lines of code reading "$("h1 ").fadeln("slow", function() { 
+$("h2").fadeln("slow"); 
+});" are highlighted, and the two lines "jQuery effects" and "Good stuff!" gradually appear one after 
+the other. 
+Animation captions: 
+1. The fadeout() methods cause <h1 > and <h2> to fade out at the same time. 
+2. The first fadeln() completes before the second fadeln() is called, so <h2> fades in after 
+<h1 > has finished fading in. 
+// Both animations occur at the same time
+);
+);
+// Animations on the same element are 
+);
+// Called immediately, not waiting for hide to 
+// Begins after hide completes
+queue()
+queue()
+next next
+queue()
+// Add the class after the <h1> hide 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+28 of 66 2024-11-17, 12:17 p.m.
+When two animations are applied to different elements, the animations occur at the same time. 
+However, when two animations are applied to the same element, the first animation completes 
+before starting the second animation. jQuery queues animations applied to the same element so 
+that each animation finishes before the next begins. 
+Figure 7.4.1: Queuing animations on the same element. 
+II Both animations occ 
+$ ( "hl" ) . fadeout ( "slow" 
+$ ( "h2" ) . fadeout ( "slow" 
+II Animations on the s 
+queued 
+$ ( "hl" ) . fade i n ( "slow" ) 
+$ ( "hl" ) . s lideUp (lOOO ); 
+Non-animation method calls are not placed in the animation queue. 
+Figure 7.4.2: Only animation methods are queued. 
+$ ( "hl" ) . h i de ( "slow" ) 
+. addCl ass ( "important" ) I I Called im 
+complete 
+. sli deDown (lOOO ); II Begins at 
+jQuery provides a queue() method to aid in queuing code that should be executed after the previous 
+animations complete. The method can take the place of the callback function used with 
+the animation methods. The method takes a function argument that is passed a function 
+parameter called . The function must be called so the next animation in the queue can 
+be processed. Good practice is to use the method instead of callback functions when 
+developing elaborate animations. Using many nested callback functions can lead to overly 
+complicated code. 
+Figure 7.4.3: Using the .queue() method. 
+$ ( "hl" ) . h i de ( "slow" ) 
+. queue (fun c ti o n (next ) 
+II Add the class aft 
+<h1>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+29 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I . . ACTIVITY 7.4.6: Animation order. 
+Refer to the jQuery code below: 
+$ ( " hl " ) . s h ow (lOOO ) 
+. qu e u e (fun c tio n (next ) { 
+} ) 
+$ (this ) . removeCl ass ( " important " ) ; 
+next (); 
+. css ( " color " , " red" ) 
+. de 1 a y ( 10 0 0 ) 
+. hide ( " fast " , fun cti o n () 
+$ (this ) . css ( " color " , " green " ); 
+} ) ; 
+1) The show animation completes 
+before the hide animation begins. 
+0 True 
+0 False 
+2) $ (this) in the code above is 
+equivalent to $ ( "hl") . 
+0 True 
+0 False 
+3) The show animation completes 
+before the "important" class is 
+removed from 
+0 True 
+0 False 
+4) The show animation completes 
+before the CSS color property is set to 
+red. 
+0 True 
+□ 
+0 
+0 
+0 
+0 
+"position: absolute; 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+30 of 66 2024-11-17, 12:17 p.m.
+0 False 
+5) The delay () method delays 
+executing the hide animation for one 
+second. 
+0 True 
+0 False 
+6) The hide animation completes before 
+the CSS color property is set to green. 
+0 True 
+0 False 
+The animate() method 
+0 
+0 
+The animate() method creates an animation by specifying a set of CSS properties to change over 
+the animation's duration. animate() has four parameters, but only the first is required: 
+1. properties - Object map of CSS properties specifying ending values. 
+2. duration - Animation duration in milliseconds (default is 400). 
+3. easing - Easing function applied to the transition (default is "swing"). 
+4. complete - Function called once when the animation completes. 
+I PARTICIPATION 
+ACTIVITY I 7.4.7: The animate() method. 
+<body> 
+<img src=" cat.jpg" a l t =" cat " 
+styl e =" posi t i on: abso l ute; 
+l e f t: 200px ; 
+top: 50px; 
+he i ght: 40px; 
+width: 140px ; 
+opacity : 0 . 1 ; 
+border: 2px solid red" > 
+</body> 
+$ ( "img " ) . animate ( { 
+l eft : " 200px" , 
+height : "-= 60 " 
+}, " s l ow" , "linear " ); 
+$ ( "img " ) . ani mate ( { 
+opacity : 0 . 1 , 
+top : "+=50 " 
+} , 2000 ); 
+□ 
+$("img").animate({
+opacity: 1,
+width: "200px"
+}, function() {
+$(this).css("border", "2px solid red");
+});
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+31 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+The following code blocks are displayed. 
+<body> 
+<img src="cat.jpg" alt="cat" 
+style="position: absolute; 
+left: 200px; 
+top: 50px; 
+height 40px; 
+width: 140px; 
+opacity: 0.1; 
+border: 2px solid red"> 
+</body> 
+$("img").animate({ 
+left: "200px", 
+height "-=60" 
+} "slow" "linear")· I I I 
+$("img").animate({ 
+opacity: 0.1, 
+top: "+=50" 
+}, 2000); 
+$("img").animate({ 
+opacity: 1, 
+width: "200px" 
+}, function() { 
+S(this).css("border", "2px solid red"); 
+}); 
+Step 1: The "left: 200px" and "height 40px" lines are highlighted, and the cat image displays in the 
+top-left corner of the browser. 
+Step 2: The lines of code reading 
+"$("img").animate({ 
+left: "200px", 
+height: "-=60" 
+}, "slow", "linear");" are highlighted. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+32 of 66 2024-11-17, 12:17 p.m.
+Step 3: The cat image moves to the right and is shortened. 
+Step 4: The lines of code reading 
+"$("img").animate( { 
+opacity: 0.1, 
+top: "+=50" 
+}, 2000);" are highlighted. The cat image shifts down on the screen and becomes slightly opaque. 
+Step 5: The lines of code reading 
+"$("img").animate({ 
+opacity: 1, 
+width: "200px" 
+}, function(){" are highlighted. The cat image is stretched wide and becomes less opaque. 
+Step 6: The line of code reading "$(this).css("border", "2px solid red");" is highlighted. A solid red 
+border is added around the cat image. 
+Animation captions: 
+1. The cat image initially displays 1 0px from the browser's left edge with a 1 00px height. 
+2. The first call to animate() specifies the two CSS properties to animate (left and height), a 
+"slow" duration, and "linear" easing function. 
+3. animate() makes image's left become 200px and height become 1 00px - 60 = 40px with 
+linear easing over 0.6 secs (length of "slow"). 
+4. The second animate() call makes image's opacity change to 0.1, top to 0 + 50 = 50px over 2 
+seconds. 
+5. The third animate() call makes image's opacity change to 1 and width to 200px over 0.4 
+seconds (default length of time). 
+6. The complete function executes after the animation completes and calls css() to set the 
+image's border to solid red. 
+I PARTICIPATION I . ACTIVITY 7.4.8: The animate() method. 
+1) In the animate () CSS object map, 
+what does left: "+=2 o" do? 
+O Sets the left property to the 
+number 20. 
+O Adds 20px to the left 
+property's value. 
+□ 
+0 
+left
+$("img").animate({
+opacity: 1,
+queue()
+queue()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+33 of 66 2024-11-17, 12:17 p.m.
+O Subtracts 20px from the 
+property's value. 
+2) What easing function does the code 
+segment below use? 
+wi d th : " 200px " 
+} , function () { 
+$ (this) . css ( "border " , " 2px 
+solid red" ); 
+} ) ; 
+0 linear 
+0 swing 
+No easing function was 
+0 specified, so no easing was 
+used. 
+3) Can animate () animate the 
+transition from one font color to 
+another? 
+0 Yes 
+0 No 
+I PARTICIPATION I 
+ACTIVITY 7.4.9: Practice with animate() and queue(). 
+The following webpage displays some help information when the"?" is clicked. The help 
+information is hidden when"?" is clicked a second time. 
+Make the following modifications so the rendered webpage acts like the expected 
+webpage: 
+1. Modify the animate () call to make the width of"?" increase by 15px and font-size 
+increase by 1 Opx when the "?" is first clicked. Make the width decrease by 15px and 
+font-size decrease by 1 Opx when "?" is clicked again. 
+2. Use the method to change the background of the "?" to orange after the "?" 
+has finished moving to the right. Change the background back to light blue after the 
+"?" has finished moving back to the left. 
+3. Use the method to fade in the help text after the"?" has finished moving to 
+the right. Fade out the help text when the "?" has been clicked a second time but 
+before the "?" moves back to the left. 
+0 
+0 
+□ 
+// Change all images to <img src="star.png">
+);
+// Change all images to <img src="star.png" alt="Bright 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+34 of 66 2024-11-17, 12:17 p.m.
+Exploring further: 
+• jQuerY- Effects documentation 
+• Queue and Degueue Explained 
+7.5 DOM manipulation 
+Accessing element attributes 
+jQuery provides many methods for DOM manipulations that allow developers to dynamically add, 
+remove, or modify content on a webpage. 
+The attr() method gets and sets attribute values of a DOM element. 
+Figure 7.5.1: Changing image attributes with attr(). 
+II Change all images to <img sr 
+$ ( "img" ) . attr ("src " , "star.png" 
+II Change all images to <img sr 
+star "> 
+$ ( "img" ) . attr ( { 
+src : "star.png" , 
+a l t : "Bright star " , 
+} ) ; 
+I PARTICIPATION I . ACTIVITY 7.5.1: JOuery attr() method. 
+1) $ ("li") .attr ("style", 
+"color: red") is equivalent to 
+$("li") .css("color", "red") . 
+0 True 
+0 False 
+2) If an image has a src attribute of 
+□ 
+0 
+0 
+$()
+$("<span>I'm a new node!</span>");
+"<li>New 
+<ol>
+<li>A</
+li>
+<li>B</
+li>
+</ol>
+<ol>
+<li>New 
+first</li>
+<li>A</
+li>
+<li>B</
+li>
+</ol>
+<ol>
+<li>A</
+li>
+<li>B</
+li>
+</ol>
+<ol>
+<li>A</
+li>
+<li>B</
+li>
+<li>New 
+last</li>
+</ol>
+"<p>Before</
+<h2>Test</
+h2>
+<p>Before</
+p>
+<h2>Test</
+h2>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+35 of 66 2024-11-17, 12:17 p.m.
+"moon.png", calling 
+$ ("img") .attr ("src") returns 
+"moon.png". 
+0 True 
+0 False 
+Adding DOM nodes 
+The function creates new DOM nodes when given an HTML string. Ex: 
+creates a span node. However, the new node is not 
+visible until the node is added to the DOM. 
+Table 7.5.1: Methods for adding DOM nodes. 
+Methods Example Before After 
+$ ( "<li>New first</ 
+li>" ) . prependTo ( "ol" ); 
+prependTo() 
+prepend() II same as 
+$ ( "ol" ) . prepend ( "<li>New 
+first</li>" ); 
+$ ( "<li>New last</ 
+li>" ) . appendTo ( "ol" ); 
+appendTo() 
+append() II same as 
+$ ( "ol" ) . append ( "<li>New 
+last</li>" ); 
+$ ( "<p>Before</ 
+p> " ) . insertBefore ( "h2" ); <p >Betore<' 
+insertBefore() p > 
+before() II same as <h2 >Test< / 
+$ ( "h2" ) . before ( "<p>Befor 
+p> " ); 
+"<p>After</
+<h2>Test</
+h2>
+<h2>Test</
+h2>
+<p>After</p>
+"<div></div>"); <p>A</p>
+<p>B</p>
+<div>
+<p>A</p>
+</div>
+<div>
+<p>B</p>
+</div>
+<p>A</p>
+<p>B</p>
+<div>
+<p>A</p>
+<p>B</p>
+</div>
+"<div></ <p>A</p>
+<p>B</p>
+<p>
+<div>A</
+div>
+</p>
+<p>
+<div>B</
+div>
+</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+36 of 66 2024-11-17, 12:17 p.m.
+Methods Example Before After 
+$ ( " <p>After</ 
+p> " ) . insertAfter ( "h2" ); 
+insertAfter() 
+after() II same as 
+$ ( "h2" ) . after ( " <p>After< 
+p> " ); 
+~ 
+< rliu'> 
+wrap() $ ( "p" ) . wrap ( " <div></div> 
+wrapA/1() 
+$ ( "p" ) . wrapAll ( " <div></ 
+div>" ); 
+wraplnner() 
+$ ( "p" ) . wrapinner ( " <div>< 
+div>" ); 
+I PARTICIPATION I . ACTIVITY 7.5.2: Adding to the DOM. 
+Given the HTML below, match the jQuery code to the resulting DOM transformation. 
+<p > 
+Test <i >thi s </i > 
+</p > 
+If unable to drag and drop, refresh the page. 
+□ 
+<p><span>x</span>Test <i>this</i></p>
+<p>Test <i>this</i><span>x</span></p> 
+<p>Test <span>x</span><i>this</i></p>
+<p>Test <i>this</i></p><span>x</span>
+<p>Test <span><i>this</i></span></p>
+detach() jQuery
+<ol>
+<li>A</
+li>
+<li>B</
+li>
+</ol>
+<ol>
+</
+ol>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+37 of 66 2024-11-17, 12:17 p.m.
+$("<span>x</span>") 
+. insertBefore("i"); 
+$( 11<span>x</span>11 ) 
+. prependT0( 11p11 ); 
+$("p").append( 
+"<span>x</span>"); 
+$(11 i11 ).wrap( 11<span></span>11 ); 
+<p >< 
+<p>T 
+<p>T 
+<p>T 
+<p>T 
+$("p").after( 
+"<span>x</span>"); 
+Reset 
+Removing DOM nodes and manipulating HTML text 
+The jQuery methods remove() and detach() remove DOM nodes. Both methods are identical except 
+returns the removed nodes to the caller as a object in case the developer 
+wants to use the nodes for other purposes. 
+Table 7.5.2: Methods for removing DOM nodes. 
+Methods Example Before After 
+remove () $ ( "li" ) . remove () ; 
+<li>B<' , I 
+O.L ,> 
+", '> 
+<ol>
+<li>A</
+li>
+<li>B</
+li>
+</ol>
+<ol>
+</
+ol>
+text() html() text()
+<p>
+ A<b>B</
+b>C
+</p>
+<div>
+</div>
+<p>
+ A<b>B</
+b>C
+</p>
+<div>
+ A<b>B</
+b>C
+</div>
+<p>
+ A<b>B</
+b>C
+</p>
+<div>
+</div>
+<p>
+ A<b>B</
+b>C
+</p>
+<div>
+ ABC
+</div>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+38 of 66 2024-11-17, 12:17 p.m.
+Methods Example Before After 
+let $ listEl ems = 
+detach () $ ( "li" ) . detach () ; 
+jQuery has two methods for getting and setting the HTML or textual content in a webpage: html() 
+and text(). The method works like except strips out any HTML tags. 
+Table 7.5.3: Methods for modifying DOM text. 
+Methods Example Before After 
+-
+let s = 
+html() $ ( "p" ) . h tml ( ) ; 
+$ ( "div" ) . h tml ( s ) ; 
+- let s = 
+text () $ ( "p" ) . text (); 
+$ ( "div" ) . text (s ); 
+I PARTICIPATION I . ACTIVITY 7.5.3: Altering the DOM . 
+Given the HTML below, match the jQuery code to the resulting DOM transformation. 
+<p > 
+Ch eck <i >t his </ i > out ! 
+</p > 
+If unable to drag and drop, refresh the page. 
+□ 
+<p>Check out!</p>
+<p><i>this</i></p>
+<p>Check this out!</p>
+<p>&lt;b&gt;Check!&lt;/b&gt;</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+39 of 66 2024-11-17, 12:17 p.m.
+$("p").text( 
+11<b>Check!</b>11); 
+${11p11).html(${11 i11) 
+.detach()); 
+$("i").remove(); 
+<p>C 
+<p >< 
+<p >C 
+<p>& 
+I PARTICIPATION I . . . ACTIVITY 7.5.4: DOM manipulation practice. 
+${11p11).html( 
+$("p").text()); 
+Reset 
+The following webpage displays a poem. Use the jQuery DOM modification methods to 
+alter the poem in the following ways when the Scramble button is pressed: 
+1. Swap the words between the <strong> tags from the first and third lines. 
+2. Detach the last line, and place the line immediately after the first line. 
+3. Place a single <div> around the entire poem that changes the font color to blue 
+using CSS. 
+Finally, use jQuery to change the link's href attribute to point to https://www.quora.com/ 
+Wh at-i s-the-o rig in-of-the-roses-a re-red-violets-a re-blue-poem 
+Note that the Scramble button is disabled when pressed. Render the webpage again to reenable the button. 
+I CHALLENGE I 7 s 1 ·o DOM • I • ACTIVITY . . : J uery manipu atIon. 
+5707 04.20654 7 6.qx3zqy7 
+Exploring further: 
+• jQuery DOM manigulation documentation 
+□ 
+□ 
+XMLHttpRequest
+: Rated PG, released in 1977 Movie Information
+Star Wars : Rated PG, 
+released in 1977
+Star Wars</cite>: 
+Rated PG, released in 1977
+starwars.html
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+40 of 66 2024-11-17, 12:17 p.m.
+• Manipulating Elements 
+7.6 Ajax 
+Loading HTML snippets 
+Writing Ajax code with plain JavaScript can be a daunting task, so jQuery provides several functions 
+to make writing Ajax code easier. All the methods examined in this section are wrappers around the 
+object. The load() method is used for asynchronously loading a short snippet 
+of HTML that is inserted into a webpage. 
+I PARTICIPATION I . ACTIVITY 7.6.1: Using load() to load content asynchronously. 
+<body> 
+<hl>Mov i e I nformati on</hl> 
+<p id="movieinfo " > 
+<cite>Star Wars</cite> : Rated PG , re 
+</p > 
+</body> 
+$ ( " #movieinfo " ) . l oad ( " starwars . html " ); 
+HTTP 
+request T 
+Web server 
+HTTP 
+response 
+sta1 
+<cite>Star 
+Rated PG , 
+Animation content: 
+Step 1: The following code blocks are displayed. 
+<body> 
+<h3>Movie lnformation</h3> 
+<p id="movieinfo"> 
+</p> 
+</body> 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+41 of 66 2024-11-17, 12:17 p.m.
+$("#movieinfo").load("starwars.html"); 
+The text "Movie Information" is displayed on the screen to the right. 
+Step 2: A HTTP request is sent to the web server. Text reading "starwars.html" is displayed below 
+the code with contents reading "<cite>Star Wars</cite>: 
+Rated PG, released in 1977." 
+Step 3: The text and contents of "starwars.html" are brought to the line of code reading 
+"$("#movieinfo").load("starwars.html");". 
+Step 4: The first block of code is changed to read: 
+<body> 
+<h3>Movie lnformation</h3> 
+<p id="movieinfo"> 
+<cite>Star Wars</cite>: Rated PG, released in 1977 
+</p> 
+</body> 
+Step 5: The text displayed on the right is updated to read "Movie Information 
+<i>Star Wars</i>: Rated PG, released in 1977." 
+Animation captions: 
+1. Browser renders the webpage with no movie information. 
+2. The load() method sends an HTTP request for starwars.html from the web server. 
+3. The web server responds with starwars.html in the HTTP response. 
+4. The content of starwars.html is placed in the paragraph with ID movieinfo. 
+5. The browser updates when the DOM is altered, displaying the movie information. 
+I PARTICIPATION I 
+ACTIVITY 7.6.2: The load() method. 
+1) The load () method can only 
+download HTML. 
+0 True 
+0 False 
+2) The load () method can execute 
+code when the load completes. 
+0 True 
+□ 
+0 
+0 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+42 of 66 2024-11-17, 12:17 p.m.
+0 False 
+3) The l o ad () method uses the 
+XMLHttpReque s t object internally 
+to make an HTTP request. 
+0 True 
+0 Fal se 
+GET and POST requests 
+0 
+Most web applications use Ajax to interact with programs that run on a web server. The programs 
+may be created using a number of server-side technologies including PHP, Node.js, ASP NET, 
+Python, and Java. Regardless of what technology is being used on the web server, the server-side 
+program generally accepts data from an Ajax request, uses the data to query a database, and 
+sends a response back to the web browser. 
+Figure 7.6.1: Server-side program interacting with web browser and 
+database. 
+HTTP 
+request query 
+@ 
+HTTP data 
+response 
+Web Browser Web Server Database 
+The web server's response may contain HTML or plain text, but frequently the response contains 
+data in XML or JSON format. The jQuery library has functions for parsing XML data, but JSON data 
+is parsed automatically and is generally easier for web developers to work with. JSON is more 
+popular than XML and will therefore be the focus of this section. 
+XML vs. JSON 
+The two most common ways to transport Ajax data is with XML and JSON. XML was 
+once quite popular, hence the "x" in Ajax and "XML" in the XMLHttpRequest object 
+name. However, JSON has become the de facto standard over the last several years 
+{
+"title": "Star Wars",
+"rating": "PG",
+"year": "1977"
+}
+$.get() $.post()
+jQuery load() jQuery
+$.get() $.post()
+data
+Title: 
+val() };
+function(data) {
+data.title +
++
+: Rated PG, 
+released in 1977
+></p>
+Search
+Star Wars 
+Star Wars
+{"title":"Star Wars","rating":"PG","year":"1977"}
+: Rated PG, released in 1977
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+43 of 66 2024-11-17, 12:17 p.m.
+primarily because JSON has a more compact structure than XML, making more 
+efficient use of network bandwidth. 
+XML JSON 
+<movie> 
+<title>Star Wars</title> 
+<rating>PG</rating> - - ' 
+<year>l977</year> " 10'7 '7" 
+</movie> 
+The jQuery methods $.get() and $.post() are general-purpose functions for sending asynchronous 
+HTTP GET and POST requests to the web server. Both and are methods of 
+the global object, unlike methods like that work on instances of objects. 
+The and methods send HTTP requests and supply a callback function that 
+executes when the full response is received from the web server. The callback function has a 
+parameter, which contains the server's response. 
+I PARTICIPATION I . ACTIVITY 7.6.3: Using $.get() to load JSON asynchronously. 
+<body> 
+<p >Title: <input type=" text " id=" title " > 
+<button i d=" search" >Search</button> 
+<p id="movieinfo " > 
+<cite>Star Wars<cite> : Rated PG, re l e , 
+</p > 
+</body> 
+$ ( " #search " ) . on ( " click" , funct i on () { 
+} ) ; 
+l et requestData = { t i t l e : $ ( " #title" ). 
+$ . get (" lookup . php " , requestData , funct i 
+$ ( " #movieinfo " ) . html ("<cite> " + data 
+"</cite> : Rated " + data . rating i 
+", released in " + data . year); 
+} , " j son" ); 
+GET 
+lookup.php?title=Star+Wars T 
+{"title":"Star \ 
+Web Server 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+44 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+The following code blocks are displayed. 
+<body> 
+Title: <input type="text" id="title"><br> 
+<button id="search">Search</button> 
+<div id="movieinfo"> 
+<cite>Star Wars<cite>: Rated PG, released in 1977 
+</div> 
+</body> 
+$("#search").on("click", function() { 
+let requestData = { title: $("#title").val() }; 
+$.get("lookup.php", requestData, function(data) { 
+$("#movieinfo").html("<cite>" +data.title+ 
+"</cite>: Rated"+ data.rating+ 
+", released in " + data.year); 
+}, "json"); 
+}); 
+Step 1: "Star Wars" is typed in the search bar to the right. 
+Step 2: The line of code reading "let requestData = { title: S("#title").val() };" is highlighted. 
+Step 3: The line of code reading "$.get("lookup.php", requestData, function(data) {" is highlighted. 
+The GET request sent to the web server is represented by "lookup.php?title=Star+Wars" 
+Step 4: The server's response is represented by "{"title":"Star Wars","rating":"PG","year":"1977"}" 
+Step 5: The lines of code reading "$("#movieinfo").html("<cite>" +data.title+ 
+"</cite>: Rated"+ data.rating+ 
+", released in"+ data.year);" are highlighted. The first block of code is edited to read as 
+follows. 
+<body> 
+Title: <input type="text" id="title"><br> 
+<button id="search">Search</button> 
+<div id="movieinfo"> 
+<cite>Star Wars<cite>: Rated PG, released in 1977 
+</div> 
+</body> 
+The text reading "<i>Star Wars:</i> Rated PG, releasing in 1977" is outputted to the user. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+45 of 66 2024-11-17, 12:17 p.m.
+Animation captions: 
+1. The user types the movie title "Star Wars" and presses the Search button. 
+2. The request Data object literal is assigned the "Star Wars" value from the text box. 
+3. $.get() makes an HTTP GET request for lookup.php. The data in requestData is sent in the 
+URL'.s query string. 
+4. The web server looks up "Star Wars" in a database and sends back a JSON response. 
+5. jQuery converts JSON into a JavaScript object, which is assigned to the data parameter. 
+The html() method displays the movie data in the paragraph. 
+I PARTICIPATION I . ACTIVITY 7.6.4: Sending GET and POST requests. □ 
+1) Which method sends data to a web 0 
+server in an HTTP POST request and 
+may receive back a JSON response? 
+0 load () 
+0 $.get() 
+0 $.post() 
+2) When is the callback function passed 0 
+to $. get () executed? 
+0 As soon as the GET request is 
+sent. 
+0 As soon as the response from 
+the server is received. 
+3) The code from the animation above 0 
+was modified to use a named 
+callback function instead of an 
+anonymous function. What is missing 
+from the code? 
+$("#search").on("click",
+function() {
+let requestData = { title:
+$ "#title"
+$.ajax()
+$.get() $.post()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+46 of 66 2024-11-17, 12:17 p.m.
+$ ( "#title" ) . val () } ; 
+$ . get ("lookup.php" , 
+requestData , 
+} ) ; 
+, "json" ); 
+fun c ti o n responseHandler (data ) 
+$ ( "#movieinfo" ) . html ( " <cite>" 
++ data . title + 
+"</cite>: Rated " + 
+data . rating + 
+", released in " + 
+data . year); 
+} 
+0 responseHandler(data) 
+0 responseHandler() 
+0 responseHandler 
+4) What does the URL-encoded string that 
+is sent to the web server look like for the 
+following method call? 
+$ . post ("create.php" , { title : 
+"War Games " , year : 1983 }) ; 
+{"title": "War 0 Games", "year": "19 83"} 
+0 title=War+Games&year=l9 83 
+5) What other data type arguments 
+could be used instead of "json" in a 
+call to$. get() or$ .post()? 
+0 "xml" 
+0 "image" 
+0 "xml", "script", "html" 
+The $.ajax() method 
+0 
+0 
+The $.ajax() method is a general purpose method for making Ajax requests. The 
+method can send GET and POST requests like and but can also send PUT 
+$.ajax()
+url
+method
+data
+dataType
+$.ajax() $.get() $.post()
+jqXHR
+XMLHttpRequest jqXHR
+// Data to send in request
+: "Star Wars" };
+// Make GET request for Star Wars
+requestData, function(data)
+); }, "json");
+);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+47 of 66 2024-11-17, 12:17 p.m.
+and DELETE requests. The 
+optional properties, including: 
+method's settings parameter is an object with a number of 
+• - URL to request 
+• - HTTP request method "GET', "POST', etc. 
+• - Object that is converted into key/value pairs for a query string and sent in the request 
+• - Type of data expected back, like "html", "json", "text", "xml", etc. 
+The , and methods all return ajqXHR object, which is an 
+abbreviation for jQuery XMLHttpRequest object. The object adds additional capabilities to 
+the object the browser uses to make Ajax requests. The object has a 
+callback method done() that is called when a successful HTTP response is received. 
+Figure 7.6.2: Example call to $.ajax(). 
+Promises 
+II Data to send in reques 
+let requestData = { t i t l e 
+II Make GET request for S 
+$ . get ("lookup.php" , reque 
+{ 
+consol e . l og ( "success" ) 
+II Same thing as $ . get() 
+$ . a j ax ( { 
+} ) 
+url : "lookup .php" , 
+method : "GET" , 
+data : requestData , 
+dataType : "json" 
+. done (function (data ) 
+consol e . l og ( "success" ) 
+} ) ; 
+The j qXHR implements the Promise interface, so the object has all the properties 
+and methods of a Promise. Promises are covered in detail elsewhere in this material. 
+I PARTICIPATION I 7.6.5: The $.aJ·ax() method. ACTIVITY □ 
+$.ajax({
+url: "search.php",
+method: __A__,
+data: __B__,
+dataType: __C__
+})
+.done(function(data) {
+$("#bookPrice").html("$" + data.price);
+});
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+48 of 66 2024-11-17, 12:17 p.m.
+Refer to the code segment below that uses search.php to find book information. 
+1) What replaces A to create a POST 
+request? 
+0 "POST" 
+0 POST 
+0 "GET' 
+2) What replaces B to search for a used 
+"Harry Potter" book? 
+0 [ "Harry Potter", "used"] 
+0 { "Harry Potter", "used"} 
+0 { title: "Harry Potter", type: 
+"used"} 
+3) What replaces C to specify the server 
+is returning JSON? 
+0 json 
+0 "json" 
+0 JSON 
+Cross-origin HTTP request 
+For security reasons, browsers limit Ajax requests to the web server from which the 
+JavaScript was downloaded. Ex: JavaScript downloaded from http://instagram.com 
+may only make Ajax requests to instagram.com. A cross-origin HTTP request is a 
+request made to another domain. Ex: An Ajax request from JavaScript downloaded 
+from instagram.com to yahoo.com is a cross-origin HTTP request. Browsers can 
+make cross-origin HTTP requests using a number of techniques including proxy 
+servers, Cross-Origin Resource Sharing (CORS), and JSON with Padding (JSONP). 
+0 
+0 
+0 
+jqXHR
+function(data) {
+data.title + "</cite>: Rated " +
++ data.year);
+"The movie title could not be found.");
+function(data) {
+.title + "</cite>: Rated " +
+data.year);
+$("#movieinfo").html("There was a problem contacting the server: " +
+jqXHR.status + " " + jqXHR.responseText);
+});
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+49 of 66 2024-11-17, 12:17 p.m.
+Handling errors 
+Developers should write Ajax code that is robust and properly handles error conditions. Two of the 
+most common error conditions are: 
+1. The web server returns an empty response or a response with an error message because the 
+requested data was not found. 
+2. The web server returns a 40x or 500 response code. 
+The object has a callback method fail() that is called when a 40x or 500 response code is 
+received from the Ajax request. 
+I PARTICIPATION I . ACTIVITY 7.6.6: Robust AJax code. 
+Match the code segments below with the type of error that each is designed to catch. 
+I I (a) 
+$ . get ( "lookup.php" , requestData , funct i 
+if (data . title ) { 
+$ ( "#movieinfo" ) . html ( "<cite>" + d 
+data . rating + ", re leased in" 
+else 
+$ ( "#movieinfo" ) . html ( "The movie t 
+} , "json" ); 
+I I (b) 
+$ . get ( "lookup.php" , requestData , funct i 
+$ ( "#movieinfo" ) . html ( "<cite>" + data 
+data . rating + ", released in " + 
+} , "json" ) . fail (function (jqXHR) { 
+$ ( "#movieinfo" ) . html ("There was a Dr 
+If unable to drag and drop, refresh the page. 
+(b) (a) 
+Empty response was returned from 
+the web server. 
+□ 
+$.get()
+{
+"success": false,
+"error": "ZIP code not 
+found"
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+50 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I . . ACTIVITY 7.6.7: AJaX practice. 
+40x or 500 status code was 
+returned from the web server. 
+Reset 
+The web page below prompts the user for a ZIP code. When the Search button is pressed, 
+the JavaScript displays the "high" values from the test response, regardless of what ZIP 
+code is typed. 
+Modify the JavaScript code to make an Ajax request to the web server and display the 
+weather forecast returned by the web server in an ordered list. Use or 
+$. aj ax () to send the ZIP code in a request to the weather.php script located at https:// 
+wp.zybooks.com/weather.php. 
+The weather.php script looks for the ZIP code in the query string. Ex: zip=80110. The 
+server responds with a 200 status code and a JSON object containing a Boolean 
+success indicating if the request was successful. If the request is successful, the JSON 
+object also contains forecast with an array of forecast details. If the request is not 
+successful, the JSON object contains error with a string describing the error. 
+Display the error message in the webpage if the request is unsuccessful. 
+Successful request Unsuccessful request 
+{ 
+"success" : true , 
+"forecast" : [ 
+{ "high" : 90 , "low" : 72 , "desc" : 
+"sunny" } ' 
+{ "high" : 92 , "low" : 73 , "desc" : 
+"partly sunny " } ' 
+{ "high" : 87 , "low" : 64 , "desc" : 
+"rain" } ' 
+{ "high" : 88 , "low" : 65 , "desc" : 
+"cloudy" } ' 
+{ "high" : 90 , "low" : 68 , "desc" : 
+"partly cloudy" } 
+l 
+} 
+The user interface and Ajax 
+□ 
+1, 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+51 of 66 2024-11-17, 12:17 p.m.
+Developers sometimes overlook the importance of keeping the user knowledgeable 
+about what the software is doing. Ex: In the weather webpage above, an Ajax request 
+is made in response to a button click, and the webpage is updated with the weather 
+when the response arrives. Usually the weather update appears immediately after the 
+button click, but if the web server is busy or the network is slow, the update could 
+take a few seconds to appear If the user interface (Uf) does not immediately update 
+after the button click, the user may not be aware that the software is busy processing 
+the button click, and the user may press the button again. 
+Good practice is to display a "waiting" message or progress bar immediately when 
+the button is pressed and hide the message or progress bar when the Ajax response 
+is received. When the UI acknowledges the button click immediately, users will 
+normally be patient before trying to click the button again. 
+I CHALLENGE I . . ACTIVITY 7.6.1: JOuery AJax. 
+5707 04.2065416 qx3zqy7 
+Exploring further: 
+• jQuerY- Ajax documentation 
+• 6jax - j.Query Learning Center 
+• HTTP access control (CORS). 
+• Working with JSONP 
+7.7 Using third-party web APls GQuery) 
+Introduction 
+□ 
+Many organizations have created public web APls that provide access to the organization's data or 
+the user's data that is stored by the organization. Ex: The Google Maps API provides applications 
+information about geographic locations, and the lnstagram API allows applications access to 
+photos shared on lnstagram. Public APls on GitHub.com lists thousands of free, public web APls. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+52 of 66 2024-11-17, 12:17 p.m.
+A third-party web AP/ is a public web API used by a web application to access data provided by a 
+third party. ''Third-party" refers to a person or organization that is neither the web application using 
+the API nor the user using the web application, which are the "first" and "second" parties. Websites 
+rely on third-party web APls to integrate with social media, obtain maps and weather data, or 
+access collections of data. 
+To use a third-party web API, a developer usually registers with the third party to obtain an AP/ key. 
+Third parties require API keys for several reasons: 
+• The API key identifies who or what application is using the web API. 
+• The API key helps the third party limit the number of requests made to the API in a fixed time 
+period or may be used to charge a developer a fee for additional requests. 
+• To obtain an API key, developers must agree to restrictions the third party places on data 
+obtained from the web API. 
+Most third-party web APls are RESTful. A RESTfu/ web AP/ is a web API that is called with a URL 
+that specifies API parameters and returns JSON or XML containing the API data. Ex: The URL 
+http://linkedin.com/api/article?id=123 specifies the article ID 123, so the article would be returned 
+formatted in JSON. 
+Third-party web APls may be called from the web server or the web browser. This material shows 
+how to call web APls from the web browser using JavaScript. 
+SOAP 
+A SOAP-based web AP/ is another type of web AP/ that relies heavily on XML and is 
+in general more complex to use than RESTful web AP/s. See the "Exploring further" 
+section for more information on SOAP 
+Figure 7.7.1: Calling third-party web API from the web server or web 
+browser. 
+API 
+request request 
+® G 
+response API 
+response 
+Web browser Web server Third party 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+53 of 66 2024-11-17, 12:17 p.m.
+Web browser 
+API 
+request 
+___ e 
+API 
+response 
+Third party 
+I PARTICIPATION I . ACTIVITY 7.7.1: Third-party web APls. 
+1) Information from a third-party web 
+API reaches the browser faster if the 
+browser calls the web API directly 
+instead of the web server calling the 
+web API. 
+0 True 
+0 False 
+2) For a third-party web API requiring an 
+API key, the API key must be 
+transmitted with every API request. 
+0 True 
+0 False 
+3) When the browser makes an API 
+request to a third-party web API, the 
+web API key can be kept secret from 
+prying eyes. 
+0 True 
+0 False 
+4) Many web AP ls charge a fee to the 
+developer after a limited number of 
+requests have been made in a 24-
+hour period. 
+0 True 
+0 False 
+5) RESTful web APls only return XML. 
+□ 
+0 
+0 
+0 
+0 
+0 
+http://api.openweathermap.org/data/2.5/weather
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+54 of 66 2024-11-17, 12:17 p.m.
+0 True 
+0 False 
+Weather API 
+OpenWeatherMap provides a free Weather API providing current weather data, forecasts, and 
+historical data. Developers must register at QQenweathermag.org for an API key that must be 
+transmitted in all API requests. 
+The OpenWeatherMap website provides documentation explaining how to use the Weather API 
+using GET requests with various query string parameters. The API endpoint 
+returns the current weather based 
+on the following query string parameters: 
+• zip - Five digit US ZIP code 
+• units - Standard, metric, or imperial units to use for measurements like temperature and wind 
+speed 
+• appid - Developer's API key 
+Other parameters are documented in the OpenWeatherMap website. The Weather API returns 
+weather data in JSON format by default. 
+Figure 7.7.2: GET request to obtain the current weather for ZIP 90210. 
+http:// a pi .openweatherma p.org/ data/ 2. 5/ weather? 
+zip=9021 O&units=imperial&appid=APIKEY 
+{ 
+"coord ":{ 
+"lon ":-118.4, -- City's geo location "lat ":34.07 .---
+}, 
+"weather ": [ 
+{ 
+} 
+], 
+"id":800 , 
+"main " : "Clear" , / Overall description 
+"description":"clear sky", 
+"icon ": "01d" 
+"base" : "cmc stations " , 
+"main " : { Degrees Fahrenheit 
+"temp " : 75. 61 , / 
+" orE!ssurE! " : 1017 . 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+55 of 66 2024-11-17, 12:17 p.m.
+} 
+r· ----- - - - - - - , t'ercem num,any 
+"humidity " : 14, ----
+"temp min " :60.8, Minimum and maximum 
+"temp=max " :82.4 ;::> temps at the moment 
+}, 
+"wind " : { .,-- Miles per hour 
+"speed" :3.36 
+}, 
+"clouds ":{ .. all " : 1 ---- Percent cloudy 
+}, 
+"id" : 5328041 , ---- City 
+"name":"Beverly Hills", 
+"cod" :200 
+Try 7.7.1: Try OpenWeatherMap's API in your web browser. 
+1. Go to QQenweathermaQ.org..,_ 
+2. Sign up for an account to obtain an API key. 
+3. When your API key is ready, try the link: http://api.openweathermap.org/data/2.5/ 
+weather?ziQ=9021 0&un its=imQerial&appid=APIKEY to make an API request for the 
+weather with ZIP 90210. The page should indicate an invalid API key was used. 
+4. Replace API KEY in the URL'.s query string with your API key, and reload the webpage. 
+The JSON-encoded weather information for 90210 should be displayed. 
+5. Change the ZIP code in the URL'.s query string to your ZIP code, and reload the URL 
+to see the weather in your ZIP code. 
+I PARTICIPATION I 
+ACTIVITY 7.7.2: The Weather API. 
+1) What does the Weather API return 
+when an invalid API key is used in a 
+request? 
+0 A blank webpage 
+0 Weather for the 90210 ZIP 
+O An error message formatted in 
+JSON 
+□ 
+0 
+<script>
+Origin
+Access-Control-Allow-Origin Origin
+*
+Access-Control-*
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+56 of 66 2024-11-17, 12:17 p.m.
+2) In the figure above, what does the 
+Weather API return as the current 
+humidity in the 90210 ZIP code? 
+0 75.61 
+0 14 
+0 3.36 
+3) What "units" parameter value would 
+make the Weather API return the 
+temperature in Celsius? 
+0 imperial 
+0 metric 
+0 standard 
+4) Does the Weather API support finding 
+the current weather by city name? 
+0 Yes 
+0 No 
+Cross-origin requests 
+0 
+0 
+0 
+Calling a third-party web API from the web browser requires a cross-origin HTTP request, since the 
+web API is not hosted on the local website's web server. Two main techniques are used to make 
+cross-origin requests: 
+• Cross-Origin Resource Sharing (CORS) is a W3C specification for how web browsers and 
+web servers should communicate when making cross-origin requests. 
+• JSON with Padding (JSONP) is a technique to circumvent cross-origin restrictions by 
+injecting elements dynamically into a webpage. Script elements have no crossorigin restrictions. 
+CORS is the more common of the two techniques and, for the web API user, the easiest to use. 
+CORS requires the web browser to send an header in a web API request to indicate the 
+scheme and domain making the API request. If the API accepts the request, the API responds with 
+an header indicating the same value in the request 
+header or" ", which indicates that requests are allowed from any origin. CORS uses other headers 
+that begin with to support other interactions with the API. 
+CORS allows the browser to send GET, POST, PUT, and DELETE requests. JSONP limits the browser 
+to sending only GET requests. 
+GET /data/2.5/weather?
+zip=90210&units=imperial&appid=APIKEY 
+HTTP/1.1
+Host: api.openweathermap.org
+Origin: http://mywebsite.com
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: application/json; 
+charset=utf-8
+Content-Length: 431
+Date: Mon, 28 Mar 2016 16:09:48 GMT
+Server: openresty
+{"coord":
+{"lon":-118.4,"lat":34.07},"weather":
+[{"id":500,
+"main":"Rain","description":"light 
+rain","icon":"10d"}], etc...}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+57 of 66 2024-11-17, 12:17 p.m.
+Figure 7.7.3: Making a request to the Weather API with CORS. 
+HTTP request 
+V l. .L '::J .Lll. l lL L!,-J . / / lll ;f W 'C.U::> .l. L'C • l...,.Ull l 
+User- Agent : Moz illa/ 5. 0 
+Chrome/ 4 8 . 0 . 256 4 
+I PARTICIPATION I ' ' 
+ACTIVITY 7.7.3: Cross-origin requests . 
+1) What HTTP header must the web 
+browser send in every CORS request? 
+0 Access-Control-Allow-Origin 
+0 Origin 
+0 User-Agent 
+2) The web browser knows to send the 
+Origin header in the HTTP request 
+when the requested URL'.s domain 
+name and the requesting script's 
+domain name are __ . 
+0 the same 
+0 different 
+3) When a third-party web API does not 
+support CORS, what is AccessControl-Allow-Origin set to in the web 
+APl's response? 
+O Access-Control-Allow-Origin is 
+set to*. 
+HTTP response 
+J.,._, J... ,,_, ..L. .L .1. ..L. - '-' -~ ~~ '=' ~ .. . , ' --- - - ----- ~,t-J.J.. .J.. \...- U. L- .J.. V J.J. / j ..:>V J.J. 
+u 
+□ 
+0 
+0 
+0 
+$.ajax()
+done()
+fail()
+"APIKEY"
+done()
+$.ajax()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+58 of 66 2024-11-17, 12:17 p.m.
+O Access-Control-Allow-Origin is 
+set to the Origin value. 
+O Access-Control-Allow-Origin is 
+not present. 
+4) Does JSONP support POST or PUT 
+request methods? 
+0 Yes 
+0 No 
+Weather API request with jQuery 
+0 
+ThejQuery method is commonly used to make Ajax requests to third-party web APls 
+from a webpage. The OpenWeatherMap implements CORS, and API requests can come from any 
+origin. 
+I =~~~i~;~•110" I 7.7.4: Calling the Weather API from the web browser using CORS. 0 
+The webpage below allows the user to enter a ZIP code. When the Find button is clicked, 
+the jQuery code uses $. aj ax () to send a CORS request to the Weather API. 
+• If the API returns a 200 status code, the de callback function executes with the 
+API response in the data parameter. The callback function displays the current 
+temperature in the webpage. 
+• If the API returns a 401 or 404 status code, the function callback executes. 
+A 401 indicates an invalid API key was used. A 404 indicates the ZIP code could not 
+be found. The callback function displays a general error message. 
+To make the web page operational, replace "API with your API key. Then render the 
+web page, type in a five digit ZIP code, and press Find. The current temperature for the ZIP 
+code should display. 
+Modify the webpage to display the description and humidity by adding HTML code under 
+the "Current temperature" paragraph and by adding JavaScript code in the ::J. ::::- :-: ::::: '.; 
+callback function. 
+Using JSONP 
+If a third-party web API does not support CORS, the API may support JSON with Padding (JSONP). 
+The method uses the JSONP technique to call a third-party web API when the following 
+dataType
+jsonp
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+59 of 66 2024-11-17, 12:17 p.m.
+parameters are set: 
+• - Set to "jsonp" . 
+• - Set to "callback" or whatever value the third-party web API is expecting . 
+I PARTICIPATION 
+ACTIVITY I 7.7.5: Calling the Weather API using JSONP 
+II weather . js 
+$ (funct i on () { 
+} ) ; 
+let zip = 90210 ; 
+$ . aj ax ( { 
+url : "http://api.openweathermap . org/data/2.5/weather" , 
+jsonp : " callback" , 
+dat a Type : " jsonp" , 
+data : { z i p : z i p , uni ts : " imperial " , appi d : "APIKEY " } 
+}) . done (funct i on (da t a ) { 
+$ (" #zip " ) . html ( z i p ); 
+$ (" #currentTemp " ) . html (da t a . ma i n . temp ); 
+$ (" #description" ) . html (data . weather [0 ] . descri pti on ); 
+$ (" #humidity" ) . h t ml (data . ma i n . humi d ity ); 
+}) . fa il (funct i on (jqXHR) { 
+$ (" #error " ) . html ( "Error retrieving the weather ." ); 
+} ) ; 
+< !DOCTYPE h t ml > 
+<html> 
+<title>Wea t her</title> 
+□ 
+Web browser 
+localhost:3000/weather.htr 
+Weather for 9021 
+Current temp: 53.2 °F 
+Description: clear sky 
+Humidity: 71 % 
+jQuery214 ( { json 
+callback=jQuery214 
+zip=90210 
+units=imperial 
+appid=APIKEY T 
+Ji 
+st 
+OpenWeatherM, 
+<script src="https : //code . jquery.com/jquery- 3.7 . 1 . min.js " ></script> 
+<script src=" scripts/weather . js " ></script> 
+<script src="http : //api . openweathermap.org/data/2 . 5/weather? 
+callback= jQuery214&zip= 90210&units=imperial&appid=APIKEY" > 
+</script> 
+<body> 
+<hl>Weather for <span i d= "zip"></span></hl> 
+<p id=" error " style=" color:red" ></p > 
+<p >Current t emp : <span i d=" currentTemp" ></span> &deg; F</p > 
+<p >Description : <span id="description" ></span></p > 
+<p >Humi d i ty : <span i d=" humidity" ></span>%</p > 
+</body> 
+</html> 
+Animation content: 
+The following code blocks are displayed. 
+// weather.js 
+$(function() { 
+let zip = 9021 O; 
+$.ajax({ 
+u rl: "http:// a pi .openweatherma p.org/ data/ 2.5/ weather", 
+jsonp: "callback", 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+60 of 66 2024-11-17, 12:17 p.m.
+dataType: "jsonp", 
+data: { zip: zip, units: "imperial", appid: "APIKEY"} 
+}).done(function(data) { 
+$("#zip").html(zip ); 
+$("#currentTemp").html(data.main.temp); 
+$("#description").html(data.weather[0].description); 
+$("#humidity").html(data.main.humidity); 
+}).fail(functionQqXHR) { 
+$("#error").html("Error retrieving the weather."); 
+}); 
+}); 
+<!DOCTYPE html> 
+<html> 
+<title>Weather</title> 
+<script src="https://code.jquery.com/jquery-3.7.7 .min.js"></script> 
+<script src="scripts/weather.js"></script> 
+<script src="http://api.openweathermap.org/data/2.5/weather? 
+callback=jQuery27 4&zip=9021 0&units=imperial&appid=APIKEY"> 
+</script> 
+<body> 
+<h1 >Weather for <span id="zip"></span></hl > 
+<p id="error" style="color:red"></p> 
+<p>Current temp: <span id="currentTemp"></span> °F</p> 
+<p>Description: <span id="description"></span></p> 
+<p>Humidity: <span id="humidity"></span>%</p> 
+</body> 
+</html> 
+Step 1: The browser request is shown as "localhost:3000/weather.html". The html is rendered to 
+read 
+"Weather for 
+Current temp: °F 
+Description: 
+Humidity: %". 
+Step 2: The lines of code reading "$.ajax({ 
+url: "http://api.openweathermap.org/data/2.5/weather", 
+jsonp: "callback", 
+dataType: "jsonp", 
+data: { zip: zip, units: "imperial", appid: "APIKEY"} 
+}).done(function(data) {" are highlighted in the first block. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+61 of 66 2024-11-17, 12:17 p.m.
+The lines of code in the second block reading "<script src="http://api.openweathermap.org/ 
+data/2. 5/weather? 
+callback=jQuery214&zip=9021 0&units=imperial&appid=APIKEY"> 
+</script>" are also highlighted. 
+Step 3: The weather data requested from OpenWeatherApp from the browser is represented to 
+the side as "callback=jQuery214 
+zip=90210 
+units=imperial 
+appid=API KEY" 
+Step 4: The JSONP string returned by the browser is represented by "jQuery214({json })". 
+Step 5: "jQuery214({ json })" is highlighted to indicate that the weather data is turned into 
+JavaScript objects. 
+Step 6: The lines of code reading "}).done(function(data) { 
+$("#zip").html(zip ); 
+$("#currentTemp").html( data.main.temp); 
+$("#description"). htm I (data. weather[0]. description); 
+$("#humidity").html(data.main.humidity);" are highlighted. 
+The output is updated to read 
+"Weather for 90210 
+Current temp: 53.2 °F 
+Description: clear sky 
+Humidity: 71 %" 
+Animation captions: 
+1. Web browser requests weather.html from the Express web server and renders the HTML. 
+2. $.ajax() method with data Type parameter "jsonp" creates a script element in the DOM, 
+which makes a request to the Weather API using a "callback" parameter. 
+3. Browser requests weather data from OpenWeatherMap. 
+4. OpenWeatherMap recognizes the JSONP request because of "callback" in the query string 
+and returns a string containing the JSON weather data wrapped in a function call. 
+5. Web browser executes the jQuery function, which converts JSON weather data into 
+JavaScript objects. 
+6. done() function callback is executed with the "data" parameter containing the weather data, 
+and jQuery html() method updates the webpage with the weather data. 
+I PARTICIPATION 
+ACTIVITY I 7.7.6: Calling the Weather API from the web browser. □ 
+$.ajax()
+XMLHttpRequest
+dataType
+<script>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+62 of 66 2024-11-17, 12:17 p.m.
+• 
+7) Does the method use the 
+object to make an 
+HTTP request when the 
+parameter is set to "jsonp"? 
+0 Yes 
+0 No 
+2) Does the web browser allow the 
+element to make crossorigin HTTP requests? 
+0 Yes 
+0 No 
+3) What query string parameter tells 
+OpenWeatherMap that the request is 
+a JSONP request? 
+0 appid 
+0 zip 
+0 callback 
+4) In the animation above, what is the 
+name of the function the jQuery 
+library wants the browser to execute 
+when the browser receives the API 
+response containing JSON weather 
+data? 
+0 jQuery214 
+0 callback 
+0 imperial 
+Exploring further: 
+• Public APls on GitHub.com 
+• Understanding SOAP and REST Basics And Differences 
+• jQueryr: Working with JSONP 
+0 
+0 
+0 
+0 
+ready <select>
+toCurrency
+<option> <option value="" disabled
+selected>Select currency</option>
+rates exchangeRates
+<option>
+Canadian Dollar (CAD)
+<option>
+allCurrencies
+change
+exchangeRates
+<input>
+resultCurrency
+Canadian Dollar (CAN):
+click
+exchangeRates
+<textarea> exchangeRates
+rates
+exchangeRates
+<input> resultCurrency
+resultCurrency
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+63 of 66 2024-11-17, 12:17 p.m.
+7.8 LAB: Currency Conversion OQuery) 
+In this lab, you will use jQuery to implement a currency conversion calculator that parses a JSON 
+string format containing exchanges rates from US dollars (USO) to several other currencies. The 
+exchange data and format is provided by OpenExchangeRates.org. 
+To complete the webpage, you must complete the following tasks: 
+1. Create a jQuery 
+ID 
+1. The first 
+listener that updates the options within the 
+such that 
+element is: 
+2. Only the currencies listed in the property of the 
+appear in the dropdown 
+element with 
+object should 
+3. The element for each currency should show the full currency name followed 
+by the currency's abbreviation in parentheses 
+■ Ex: 
+4. The value for each 
+5.The 
+element should be the currency abbreviation 
+object in the provided JavaScript template provides a mapping 
+from all possible abbreviations to full currency name 
+2. Create a jQuery listener for the select dropdown that: 
+1. Converts the user-entered US dollars to the selected currency using the rates listed in 
+the object. Display the converted currency with two decimal digits. 
+■ Ex: If the user-entered US dollars is 100.00, Canadian Dollar (CAN) is elected, and 
+the exchange rate is "CAD": 1.316853, the resulting converted currency is 131 .69 
+2. Displays the resulting converted currency by updating the readonly element 
+with ID 
+3. Updates the associated label for resultCurrency to the selected currency's full currency 
+name, currency abbreviation in parentheses, and colon 
+■ Ex: 
+3. Create a jQuery listener for the Update Rates button that 
+1. Updates the object using the JSON string provided in the 
+element with ID 
+2. Updates the select dropdown such that only the currencies listed in the r;:i t ps property 
+of the updated object appear in the dropdown 
+3. Resets the readonly element with ID t d. I II II o Isp ay ---.--
+4. Resets the associated label for to display "To Currency():" 
+570104.2065416.qx3zqy7 
+I 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+64 of 66 2024-11-17, 12:17 p.m.
+I LAB I 
+ACT1v1TY 7.8.1: LAB: Currency Conversion QQuery) 10/10 
+--- Submission Instructions 
+Downloadable files 
+c urrex .htrnl , c urrex.js , s t y l e . css ,and 
+Download 
+jquery- 3 . 2 .1.rnin.js 
+Upload your files below by dragging and dropping into the area or choosing a file on your hard 
+drive. 
+currex.js 
+Drag file here 
+or 
+Choose on hard drive. 
+Submit for grading 
+Coding trail of your work What is this? 
+11 /5 T2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 W2 , 2 , 2 , 2 , 2 , 2 , 2 ,1 0 min:1 1 
+Latest submission - 12:04 PM MST 
+on 11/06/24 
+Submission passed 
+all tests ✓ 
+Total score: 10 
+/10 
+D Only show failing tests Download this submission 
+1 :Unit test A 2 / 2 
+Testing dropdown initialization 
+✓ Number of <option> tags added 
+✓ Select dropdown content in <option> tag #0 
+✓ Select dropdown content in <option> tag #1 
+✓ Select dropdown content in <option> tag #2 
+✓ Select dropdown content in <option> tag #3 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+65 of 66 2024-11-17, 12:17 p.m.
+✓ Select dropdown content in <option> tag #4 
+✓ Select dropdown content in <option> tag #5 
+✓ Select dropdown value in <option> tag #0 
+✓ Select dropdown value in <option> tag #1 
+✓ Select dropdown value in <option> tag #2 
+✓ Select dropdown value in <option> tag #3 
+✓ Select dropdown value in <option> tag #4 
+✓ Select dropdown value in <option> tag #5 
+2:Unit test A 2 / 2 
+Testing basic currency conversions 
+✓ Converting 50.0 USD to CAD 
+✓ Converting 100.0 USD to EUR 
+✓ Converting 75.25 USD to BTC 
+3:Unit test A 2 / 2 
+Testing Update Rates: Dropdown menu update 
+✓ Number of <option> elements after clicking Update Rates button 
+✓ Select dropdown content in <option> element #0 
+✓ Select dropdown content in <option> element #1 
+✓ Select dropdown content in <option> element #2 
+✓ Select dropdown content in <option> element #3 
+✓ Select dropdown content in <option> element #4 
+✓ Select dropdown value in <option> element #0 
+✓ Select dropdown value in <option> element #1 
+✓ Select dropdown value in <option> element #2 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+66 of 66 2024-11-17, 12:17 p.m.
+✓ Select dropdown value in <option> element #3 
+✓ Select dropdown value in <option> element #4 
+4:Unit test A 2/2 
+Testing Update Rates: To Currency reset 
+✓ Reset resultCurrency <input> element 
+✓ Reset label for resultCurrency <input> element 
+5:Unit test A 2/2 
+Testing Update Rates: Concurrency conversions 
+✓ Converting 50.0 USD to CNY 
+✓ Converting 100.0 USD to EUR 
+✓ Converting 75.25 USD to CAD 
+5 previous submissions 
+12:04 PM on 11 /6/24 2 I 1 O View V 
+12:00 PM on 11 /6/24 2 I 1 O View V 
+11 :54 AM on 11 /6/24 2 I 1 O View V 
+11 :53 AM on 11 /6/24 2 I 1 O View V 
+11 :53 AM on 11 /6/24 2 I 1 O View V 
