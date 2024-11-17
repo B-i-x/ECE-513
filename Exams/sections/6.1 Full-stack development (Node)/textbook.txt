@@ -1,0 +1,950 @@
+Overview of front-end and back-end development
+Overview of front-end and back-end development
+Most websites and web applications require the development of client-side technologies that interact
+Most websites and web applications require the development of client-side technologies that interact
+with server-side technologies. Client-side (or front-end) refers to those technologies that run in the
+with server-side technologies. Client-side (or front-end) refers to those technologies that run in the
+web browser like HTML, CSS, and JavaScript. Server-side (or back-end) refers to those technologies
+web browser like HTML, CSS, and JavaScript. Server-side (or back-end) refers to those technologies
+that run on the web server like PHP, Python, Node.js, etc. and databases. Ex: Amazon uses server-side
+that run on the web server like PHP, Python, Node.js, etc. and databases. Ex: Amazon uses server-side
+technologies to store information on millions of products and a client-side search interface that
+technologies to store information on millions of products and a client-side search interface that
+interacts with the web server so customers can find and purchase products.
+interacts with the web server so customers can find and purchase products.
+Figure 6.1.1: Front-end and back-end technologies.
+Figure 6.1.1: Front-end and back-end technologies.
+Web browser
+Web browser
+◄
+◄
+PHP,
+PHP,
+Python,
+Python,
+ASP.NET,
+ASP.NET,
+Nade.js
+Nade.js
+Web server
+Web server
+Back-end
+Back-end
+Database
+Database
+►
+►
+A front-end developer is a developer that is proficient in client-side technologies. A back-end
+A front-end developer is a developer that is proficient in client-side technologies. A back-end
+developer is a developer that is proficient in server-side technologies. Many developers strive to be
+developer is a developer that is proficient in server-side technologies. Many developers strive to be
+proficient in both front-end and back-end technologies and how the two sides work together. A fullstack
+proficient in both front-end and back-end technologies and how the two sides work together. A fullstack
+developer is a developer who has expertise in all aspects of a website or web application's
+developer is a developer who has expertise in all aspects of a website or web application's
+development, including client technologies, server technologies, data modeling, and user interfaces.
+development, including client technologies, server technologies, data modeling, and user interfaces.
+The "stack" in "full-stack" refers to the various layers that compose websites and web applications.
+The "stack" in "full-stack" refers to the various layers that compose websites and web applications.
+Technology stacks have increased in complexity over the years, so even "full-stack" developers
+Technology stacks have increased in complexity over the years, so even "full-stack" developers
+typically specialize in a few areas of the technology stack. I PARTICIPATION
+typically specialize in a few areas of the technology stack. I PARTICIPATION
+ACTIVITY 6.1.1 : Primary layers of the full stack. D
+ACTIVITY 6.1.1 : Primary layers of the full stack. D
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 1/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+Business logic Testing framework Application Programming Interface (API)
+Business logic Testing framework Application Programming Interface (API)
+Server and hosting environment Data modeling User interface (UI)
+Server and hosting environment Data modeling User interface (UI)
+Web hosting
+Web hosting
+Issues regarding network throughput,
+Issues regarding network throughput,
+cloud storage, virtualization, hardware
+cloud storage, virtualization, hardware
+constraints, multithreading, and data
+constraints, multithreading, and data
+redundancy.
+redundancy.
+Representing, storing, and retrieving
+Representing, storing, and retrieving
+application data in relational and nonrelational
+application data in relational and nonrelational
+databases.
+databases.
+Programming logic on the front or
+Programming logic on the front or
+back-end that determines how data
+back-end that determines how data
+can be created, displayed, stored, and
+can be created, displayed, stored, and
+changed.
+changed.
+Programmable actions that may be
+Programmable actions that may be
+performed on the underlying data.
+performed on the underlying data.
+Often used by the front-end to interact
+Often used by the front-end to interact
+with the back-end.
+with the back-end.
+Visual part of the application that
+Visual part of the application that
+users interact with.
+users interact with.
+Automated tests that verify the web
+Automated tests that verify the web
+application components are working
+application components are working
+properly, independently and together.
+properly, independently and together.
+When creating a web application, developers must decide where the application and application data
+When creating a web application, developers must decide where the application and application data
+are going to be hosted. Large companies like Google, Amazon, and Facebook have the resources to
+are going to be hosted. Large companies like Google, Amazon, and Facebook have the resources to
+host their web applications on their own servers. Smaller companies and individuals often outsource
+host their web applications on their own servers. Smaller companies and individuals often outsource
+their server hosting to web hosting companies. A web hosting company is a company that hosts
+their server hosting to web hosting companies. A web hosting company is a company that hosts
+others' websites on the company's servers, usually for a fee. Factors to consider when choosing a
+others' websites on the company's servers, usually for a fee. Factors to consider when choosing a
+web hosting company include:
+web hosting company include:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 2/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+• Reliability: Many web hosting companies guarantee a certain level of uptime, and the level can
+• Reliability: Many web hosting companies guarantee a certain level of uptime, and the level can
+be increased by paying more. Some companies backup data daily, and others provide little to no
+be increased by paying more. Some companies backup data daily, and others provide little to no
+backups.
+backups.
+• Flexibility: Websites that become popular may need to quickly scale-up to handle more users.
+• Flexibility: Websites that become popular may need to quickly scale-up to handle more users.
+Web hosting companies may offer a virtual private server that can quickly be duplicated on other
+Web hosting companies may offer a virtual private server that can quickly be duplicated on other
+servers to meet high demand. A virtual private server (VPS) is an autonomous server that is
+servers to meet high demand. A virtual private server (VPS) is an autonomous server that is
+hosted on a physical server with other virtual servers. Amazon Web Services (AWS) allows
+hosted on a physical server with other virtual servers. Amazon Web Services (AWS) allows
+organizations to host virtual servers in the Amazon cloud that can quickly scale-up hosted
+organizations to host virtual servers in the Amazon cloud that can quickly scale-up hosted
+websites when necessary.
+websites when necessary.
+• Security: Hackers may attempt to access a website's data or upload malware to a hosted
+• Security: Hackers may attempt to access a website's data or upload malware to a hosted
+website that attacks the website, other hosted websites, or the website's users. Ma/ware is
+website that attacks the website, other hosted websites, or the website's users. Ma/ware is
+malicious software designed to cripple a computer system or perform unwanted actions. Some
+malicious software designed to cripple a computer system or perform unwanted actions. Some
+hosting companies offer extra security measures like encrypting web traffic or providing
+hosting companies offer extra security measures like encrypting web traffic or providing
+dedicated servers in heavily-guarded data centers.
+dedicated servers in heavily-guarded data centers.
+• Price: Some web hosting companies offer limited services for free and subsidize lost income
+• Price: Some web hosting companies offer limited services for free and subsidize lost income
+with advertising. Prices go up depending on reliability, services provided, security, amount of
+with advertising. Prices go up depending on reliability, services provided, security, amount of
+traffic, etc. The most expensive plans usually involve dedicated hosting where the customer is
+traffic, etc. The most expensive plans usually involve dedicated hosting where the customer is
+given full control over the web server.
+given full control over the web server.
+The choice of platform dictates many of the web application's implementation decisions, since certain
+The choice of platform dictates many of the web application's implementation decisions, since certain
+server-side technologies are only offered on certain platforms. Most web hosting companies provide a
+server-side technologies are only offered on certain platforms. Most web hosting companies provide a
+Linux or Windows server to host the website. Linux servers typically use open-source software:
+Linux or Windows server to host the website. Linux servers typically use open-source software:
+Apache web server with support for PHP, Python, Ruby, or Perl, and the MySQL database system.
+Apache web server with support for PHP, Python, Ruby, or Perl, and the MySQL database system.
+Windows servers generally run Microsoft's IIS web server, which supports ASPNET and the SQL
+Windows servers generally run Microsoft's IIS web server, which supports ASPNET and the SQL
+Server database system. Linux servers usually cost less than Windows servers because of the use of
+Server database system. Linux servers usually cost less than Windows servers because of the use of
+open-source software. I PARTICIPATION
+open-source software. I PARTICIPATION
+ACTIVITY 6.1.2: Web hosting.
+ACTIVITY 6.1.2: Web hosting.
+1) A small company may host the
+1) A small company may host the
+company's own website on the
+company's own website on the
+company's own web server.
+company's own web server.
+0 True
+0 True
+O False
+O False
+2) A web hosting company that hosts
+2) A web hosting company that hosts
+websites for free is likely to provide
+websites for free is likely to provide
+services like backup, unlimited email
+services like backup, unlimited email
+addresses, and 24-hour customer
+addresses, and 24-hour customer
+support.
+support.
+0 True
+0 True
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+0
+0
+3/43
+3/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+0 False
+0 False
+3) A VPS generally runs slower than a
+3) A VPS generally runs slower than a
+dedicated host.
+dedicated host.
+0 True
+0 True
+O False
+O False
+4) Web hosting companies provide
+4) Web hosting companies provide
+various levels of security.
+various levels of security.
+0 True
+0 True
+O False
+O False
+5) Web hosting companies generally
+5) Web hosting companies generally
+charge more for hosting on Linux
+charge more for hosting on Linux
+servers than for hosting on Windows
+servers than for hosting on Windows
+servers.
+servers.
+0 True
+0 True
+O False
+O False
+Server-side programming
+Server-side programming
+zyBooks
+zyBooks
+0
+0
+0
+0
+0
+0
+Web developers have a wide range of options when choosing a server-side programming platform or
+Web developers have a wide range of options when choosing a server-side programming platform or
+language. When choosing a server-side programming platform, developers must consider:
+language. When choosing a server-side programming platform, developers must consider:
+• Server platform: Some web servers support certain languages and not others. Ex: IIS supports
+• Server platform: Some web servers support certain languages and not others. Ex: IIS supports
+ASPNET, and Apache supports PHP
+ASPNET, and Apache supports PHP
+• Tool support: Some tools are ideal for working with certain programming languages. Ex:
+• Tool support: Some tools are ideal for working with certain programming languages. Ex:
+PhpStorm is ideal for PHP development, and Visual Studio is ideal for ASPNET.
+PhpStorm is ideal for PHP development, and Visual Studio is ideal for ASPNET.
+• Developer experience: JavaScript developers may choose Node.js instead of learning a new
+• Developer experience: JavaScript developers may choose Node.js instead of learning a new
+language like C#. Developers who are new to web development might already know Java or
+language like C#. Developers who are new to web development might already know Java or
+Python and prefer those languages.
+Python and prefer those languages.
+• Library support: Some languages may have pre-built libraries that support some web
+• Library support: Some languages may have pre-built libraries that support some web
+applications better than others.
+applications better than others.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.1.3: Server-side programming platforms and languages.
+ACTIVITY 6.1.3: Server-side programming platforms and languages.
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+i½iitiii Ill it@■ Ruby on Rails
+i½iitiii Ill it@■ Ruby on Rails
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+4/43
+4/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+Scripting language created in 1994 by
+Scripting language created in 1994 by
+Rasmus Lerdorf. Currently the most
+Rasmus Lerdorf. Currently the most
+popular server-side language in use.
+popular server-side language in use.
+Collection of web development
+Collection of web development
+technologies first released in 2002 by
+technologies first released in 2002 by
+Microsoft that uses the C# or VB.NET
+Microsoft that uses the C# or VB.NET
+programming languages.
+programming languages.
+General-purpose scripting language
+General-purpose scripting language
+created by Guido van Rossum in the
+created by Guido van Rossum in the
+1990s that uses frameworks like
+1990s that uses frameworks like
+Django, web2py, and Flask to create
+Django, web2py, and Flask to create
+web applications.
+web applications.
+Web application framework written in
+Web application framework written in
+Ruby and created by David Heinemeier
+Ruby and created by David Heinemeier
+Hansson in 2004.
+Hansson in 2004.
+Used to create applets on the frontend
+Used to create applets on the frontend
+and servlets, JavaServer Pages,
+and servlets, JavaServer Pages,
+and web APls on the back-end.
+and web APls on the back-end.
+Runtime environment that uses
+Runtime environment that uses
+modules written in JavaScript.
+modules written in JavaScript.
+Originally created in 2009 by Ryan
+Originally created in 2009 by Ryan
+Dahl.
+Dahl.
+Developers have traditionally used server-side technologies to generate dynamic webpages. A
+Developers have traditionally used server-side technologies to generate dynamic webpages. A
+dynamic webpage is a webpage that is generated on the web server when requested, typically
+dynamic webpage is a webpage that is generated on the web server when requested, typically
+personalized to the user who requested the page. With advances in web browsers, developers have
+personalized to the user who requested the page. With advances in web browsers, developers have
+begun creating static webpages that are dynamically altered by JavaScript. In this new paradigm,
+begun creating static webpages that are dynamically altered by JavaScript. In this new paradigm,
+server-side technologies are used primarily to respond to Ajax requests and send data to the front-end
+server-side technologies are used primarily to respond to Ajax requests and send data to the front-end
+for rendering.
+for rendering.
+Single Page Applications are an example of modern web development. A Single Page Application
+Single Page Applications are an example of modern web development. A Single Page Application
+(SPA) is a web application that provides a similar user experience as a desktop application, all in a
+(SPA) is a web application that provides a similar user experience as a desktop application, all in a
+single webpage. Ex: Gmail, Google Docs, and Google Calendar are all SPAs. An SPA initially loads all of
+single webpage. Ex: Gmail, Google Docs, and Google Calendar are all SPAs. An SPA initially loads all of
+the application's resources so subsequent user interaction results in loading small pieces of content
+the application's resources so subsequent user interaction results in loading small pieces of content
+dynamically. Much of an SPA's programming logic is written in JavaScript, which loads data via Ajax
+dynamically. Much of an SPA's programming logic is written in JavaScript, which loads data via Ajax
+calls to a web API. A web AP/ is a collection of functions that are invoked using HTTP. Ex: An HTTP
+calls to a web API. A web AP/ is a collection of functions that are invoked using HTTP. Ex: An HTTP
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 5/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+GET request to the URL https://linkedin.com/api/contacts may retrieve a list of all contacts from the
+GET request to the URL https://linkedin.com/api/contacts may retrieve a list of all contacts from the
+web server.
+web server.
+I PARTICIPATION 6.1.4: Cool Contacts SPA.
+I PARTICIPATION 6.1.4: Cool Contacts SPA.
+ACTIVITY
+ACTIVITY
+Web browser
+Web browser
+http://coolcontacts.neU
+http://coolcontacts.neU
+■ Sue
+■ Sue
+■ Joe
+■ Joe
+I■ Becky
+I■ Becky
+Gary
+Gary
+Becky
+Becky
+b@email.com
+b@email.com
+123-4567
+123-4567
+Animation content:
+Animation content:
+Initial request
+Initial request
+html, js, css
+html, js, css
+API: Get all contacts
+API: Get all contacts
+All contacts
+All contacts
+API: Get Becky details
+API: Get Becky details
+Becky's details
+Becky's details
+D
+D
+Web server
+Web server
+Database
+Database
+query
+query
+contacts
+contacts
+query
+query
+details
+details
+A web browser called http://coolcontacts.net/, a web server, and a database are shown. The web
+A web browser called http://coolcontacts.net/, a web server, and a database are shown. The web
+browser sends an initial request to the web server for the Cool Contacts web app. The web server
+browser sends an initial request to the web server for the Cool Contacts web app. The web server
+sends back all resources needed for the app in multiple request-response messages in HTML,
+sends back all resources needed for the app in multiple request-response messages in HTML,
+JavaScript, and CSS. The web browser uses web API to request all contacts from the web server.
+JavaScript, and CSS. The web browser uses web API to request all contacts from the web server.
+The web server sends a query for the contacts to the database, which sends back all contacts to the
+The web server sends a query for the contacts to the database, which sends back all contacts to the
+web server, who passes it to the web app and the contacts are displayed on the web browser. When
+web server, who passes it to the web app and the contacts are displayed on the web browser. When
+the user selects a contact, the web browser uses web API to request details for the selected contact
+the user selects a contact, the web browser uses web API to request details for the selected contact
+from the web server. The web server sends a query for the details to the database, which gets sent
+from the web server. The web server sends a query for the details to the database, which gets sent
+back to the web server, who passes it to the web app and the contact details are displayed on the
+back to the web server, who passes it to the web app and the contact details are displayed on the
+web browser.
+web browser.
+Animation captions:
+Animation captions:
+1. Initial request for CoolContacts web app sent to the web server.
+1. Initial request for CoolContacts web app sent to the web server.
+2. All resources needed for app are downloaded in multiple request-response messages.
+2. All resources needed for app are downloaded in multiple request-response messages.
+3. JavaScript uses web API to request all contacts.
+3. JavaScript uses web API to request all contacts.
+4. All contacts are retrieved from the database and sent back to the web app for displaying.
+4. All contacts are retrieved from the database and sent back to the web app for displaying.
+5. User selects a contact from the web app.
+5. User selects a contact from the web app.
+6. JavaScript uses web API to request details for selected contact.
+6. JavaScript uses web API to request details for selected contact.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 6/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+7. Web server requests Becky's details from the database and sends the details back to the web
+7. Web server requests Becky's details from the database and sends the details back to the web
+app for displaying.
+app for displaying.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.1.5: Server-side programming platforms.
+ACTIVITY 6.1.5: Server-side programming platforms.
+1) A dynamic webpage might look
+1) A dynamic webpage might look
+different for two different users who
+different for two different users who
+are accessing the same page.
+are accessing the same page.
+0 True
+0 True
+O False
+O False
+2) The business logic of an SPA should
+2) The business logic of an SPA should
+generally be encoded in the front-end.
+generally be encoded in the front-end.
+0 True
+0 True
+0 False
+0 False
+3) SPAs generally result in less data being
+3) SPAs generally result in less data being
+sent over the network than web
+sent over the network than web
+applications developed with
+applications developed with
+dynamically generated webpages.
+dynamically generated webpages.
+0 True
+0 True
+0 False
+0 False
+4) Developers use ASPNET, Java, PHP,
+4) Developers use ASPNET, Java, PHP,
+Python, Node.js, and Ruby on Rails to
+Python, Node.js, and Ruby on Rails to
+create web APls.
+create web APls.
+0 True
+0 True
+0 False
+0 False
+Databases
+Databases
+D
+D
+0
+0
+0
+0
+0
+0
+0
+0
+Websites and web applications normally store and retrieve information from a database and have
+Websites and web applications normally store and retrieve information from a database and have
+traditionally used relational databases. A relational database stores data in relations (usually called
+traditionally used relational databases. A relational database stores data in relations (usually called
+tables). The Structured Query Language (SQL) is a language for creating, editing, selecting, and
+tables). The Structured Query Language (SQL) is a language for creating, editing, selecting, and
+deleting data in a relational database. Popular relational database management systems (RDBMS)
+deleting data in a relational database. Popular relational database management systems (RDBMS)
+include MySQL, PostgreSQL, Oracle, and SOL Server.
+include MySQL, PostgreSQL, Oracle, and SOL Server.
+Non-relational databases, sometimes called non-SQL or NoSQL databases, have become increasingly
+Non-relational databases, sometimes called non-SQL or NoSQL databases, have become increasingly
+popular over the last few years. Non-relational databases use different methods to store and retrieve
+popular over the last few years. Non-relational databases use different methods to store and retrieve
+data using a variety of data access languages. Non-relational databases come in several flavors:
+data using a variety of data access languages. Non-relational databases come in several flavors:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 7/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+• Document database: For storing documents in JSON format with many levels of nesting. Ex:
+• Document database: For storing documents in JSON format with many levels of nesting. Ex:
+MongoDB.
+MongoDB.
+• Key-value database: For storing values that are associated with unique keys. Ex: Redis.
+• Key-value database: For storing values that are associated with unique keys. Ex: Redis.
+• Object database: For storing objects created in object-oriented programming languages. Ex:
+• Object database: For storing objects created in object-oriented programming languages. Ex:
+Cache.
+Cache.
+• Column database: For storing and processing large amounts of data using pointers that link to
+• Column database: For storing and processing large amounts of data using pointers that link to
+columns distributed over a cluster. Ex: HBase.
+columns distributed over a cluster. Ex: HBase.
+• Graph database: For storing graph structures with nodes and edges. Ex: Neo4j.
+• Graph database: For storing graph structures with nodes and edges. Ex: Neo4j.
+The figure below illustrates how information about students might be stored in a relational database
+The figure below illustrates how information about students might be stored in a relational database
+with a table versus a document database using JSON-like documents. The "SELECT" statement is an
+with a table versus a document database using JSON-like documents. The "SELECT" statement is an
+SQL statement used to extract students with a 3.0 GPA or above from the table. The "db.students.find"
+SQL statement used to extract students with a 3.0 GPA or above from the table. The "db.students.find"
+statement is a MongoDB function used to extract the same information from the document database.
+statement is a MongoDB function used to extract the same information from the document database.
+Figure 6.1.2: Relational database vs. document database for student data.
+Figure 6.1.2: Relational database vs. document database for student data.
+Relational database
+Relational database
+stu ld name gpa
+stu ld name gpa
+123 Sus.;m 3.1
+123 Sus.;m 3.1
+456 Billy 2.5
+456 Billy 2.5
+987 Al ice 4,0
+987 Al ice 4,0
+SELECT* FROM st udents
+SELECT* FROM st udents
+HERE gpa >= 3.0;
+HERE gpa >= 3.0;
+ll3 Sus-an 3,1
+ll3 Sus-an 3,1
+987 Alice 4,0
+987 Alice 4,0
+◄
+◄
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.1 .6: Databases.
+ACTIVITY 6.1 .6: Databases.
+1) Relational databases will likely not be
+1) Relational databases will likely not be
+used for many web applications in the
+used for many web applications in the
+future.
+future.
+O True
+O True
+O False
+O False
+l
+l
+Document database
+Document database
+{ stuld; 123, name: ' Susan' , gpa: 3.l },
+{ stuld; 123, name: ' Susan' , gpa: 3.l },
+{ stuld: 456, name: "Billy", gpa : 2,5 },
+{ stuld: 456, name: "Billy", gpa : 2,5 },
+{ stuld: 987, name: ' Alice", gpa: 4.0 }
+{ stuld: 987, name: ' Alice", gpa: 4.0 }
+db. stuclen s. find( {gpa: {$g e; 3 . 0}}) ;
+db. stuclen s. find( {gpa: {$g e; 3 . 0}}) ;
+I
+I
+{ stuld: 123, name: "Susan,", gpa: 3.1 },
+{ stuld: 123, name: "Susan,", gpa: 3.1 },
+{ st uld: 987, name: "Alice", gpa: 4.0 }
+{ st uld: 987, name: "Alice", gpa: 4.0 }
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+►
+►
+D
+D
+0
+0
+8/43
+8/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+2) A relational database can be used to
+2) A relational database can be used to
+store documents, objects, graphs, and
+store documents, objects, graphs, and
+key-value pairs.
+key-value pairs.
+0 True
+0 True
+O False
+O False
+3) Column databases are generally faster
+3) Column databases are generally faster
+than relational databases for accessing
+than relational databases for accessing
+vast amounts of data.
+vast amounts of data.
+0 True
+0 True
+O False
+O False
+4) Both relational and non-relational
+4) Both relational and non-relational
+databases have been implemented
+databases have been implemented
+with open source software.
+with open source software.
+0 True
+0 True
+O False
+O False
+Client-side technologies
+Client-side technologies
+zyBooks
+zyBooks
+0
+0
+0
+0
+0
+0
+The user interface (UI) governs the interaction between users and web applications. Developers use
+The user interface (UI) governs the interaction between users and web applications. Developers use
+HTML, CSS, and JavaScript to create the UI. Various tools exist to aid UI development:
+HTML, CSS, and JavaScript to create the UI. Various tools exist to aid UI development:
+• An HTML preprocessor is a program that converts a markup language into HTML. The markup
+• An HTML preprocessor is a program that converts a markup language into HTML. The markup
+languages supported by HTML preprocessors are generally easier to use and read than HTML.
+languages supported by HTML preprocessors are generally easier to use and read than HTML.
+Ex: Haml, Markdown, Slim, Pug.
+Ex: Haml, Markdown, Slim, Pug.
+• A CSS preprocessor is a program that converts a CSS-like language into CSS. CSS-like
+• A CSS preprocessor is a program that converts a CSS-like language into CSS. CSS-like
+languages simplify the development of CSS stylesheets used in large projects. Ex: Sass, Less,
+languages simplify the development of CSS stylesheets used in large projects. Ex: Sass, Less,
+Stylus.
+Stylus.
+• A UI library is a library that creates UI widgets like sliders, dialog boxes, and drop-downs or
+• A UI library is a library that creates UI widgets like sliders, dialog boxes, and drop-downs or
+simplify DOM manipulation. Ex: jQuery UI, Bootstrap, YUi, Ext JS. Libraries like React and Vue.js
+simplify DOM manipulation. Ex: jQuery UI, Bootstrap, YUi, Ext JS. Libraries like React and Vue.js
+support more extensive UI management.
+support more extensive UI management.
+• A CSS front-end framework is a framework that uses CSS or CSS pre-processors to aid in
+• A CSS front-end framework is a framework that uses CSS or CSS pre-processors to aid in
+developing responsive websites that work well on every screen size. Ex: Bootstrap, YAML 4,
+developing responsive websites that work well on every screen size. Ex: Bootstrap, YAML 4,
+Skeleton, Foundation.
+Skeleton, Foundation.
+Most modern web applications use an extensive amount of JavaScript, so developers use various
+Most modern web applications use an extensive amount of JavaScript, so developers use various
+tools to aid in JavaScript development:
+tools to aid in JavaScript development:
+• A compile-to-JavaScript language is a programming language that is compiled into JavaScript.
+• A compile-to-JavaScript language is a programming language that is compiled into JavaScript.
+Compile-to-JavaScript languages provide benefits lacking in JavaScript like type safety,
+Compile-to-JavaScript languages provide benefits lacking in JavaScript like type safety,
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 9/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+I
+I
+simplified class creation, and module creation. Ex: Typescript, CoffeeScript, and Haxe.
+simplified class creation, and module creation. Ex: Typescript, CoffeeScript, and Haxe.
+• A JavaScript framework is a JavaScript environment that dictates the organization of the
+• A JavaScript framework is a JavaScript environment that dictates the organization of the
+application's JavaScript to simplify many programming tasks. JavaScript frameworks often
+application's JavaScript to simplify many programming tasks. JavaScript frameworks often
+dictate how UI widgets receive data or send data to the web server. Ex: Angular JS, Backbone,
+dictate how UI widgets receive data or send data to the web server. Ex: Angular JS, Backbone,
+Ember.
+Ember.
+Figure 6.1.3: Example use of HTML and CSS preprocessors and compile-toJavaScript.
+Figure 6.1.3: Example use of HTML and CSS preprocessors and compile-toJavaScript.
+nav
+nav
+ul
+ul
+About
+About
+Sales
+Sales
+◄
+◄
+Haml
+Haml
+li
+li
+a href=' / home' Home
+a href=' / home' Home
+li
+li
+a href=' / about'
+a href=' / about'
+li
+li
+a href=' / sales'
+a href=' / sales'
+I
+I
+Less
+Less
+<nav>
+<nav>
+<ul>
+<ul>
+Resulting HTML
+Resulting HTML
+<li><a href="/home" >Home</a ></li>
+<li><a href="/home" >Home</a ></li>
+<li><a href="/about" >About</ a>
+<li><a href="/about" >About</ a>
+</ li>
+</ li>
+<li><a href="/sales">Sales</a>
+<li><a href="/sales">Sales</a>
+</li>
+</li>
+</ul>
+</ul>
+</nav>
+</nav>
+Resulting CSS
+Resulting CSS
+-
+-
+@nice-green : #097911;
+@nice-green : #097911;
+@light-green : @nice-green + #111; header {
+@light-green : @nice-green + #111; header {
+header {
+header {
+color : @light-green;
+color : @light-green;
+.logo {
+.logo {
+width : 250px ;
+width : 250px ;
+CoffeeScript
+CoffeeScript
+math =
+math =
+root : Math . sqrt
+root : Math . sqrt
+square : (x ) -> x * x
+square : (x ) -> x * x
+I
+I
+color : #la8a22 ;
+color : #la8a22 ;
+header .logo {
+header .logo {
+width : 250px ;
+width : 250px ;
+Resulting JavaScript
+Resulting JavaScript
+-
+-
+math = {
+math = {
+} ;
+} ;
+root : Math . sqrt ,
+root : Math . sqrt ,
+square : funct ion (x )
+square : funct ion (x )
+return x * x ;
+return x * x ;
+►
+►
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 10/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+ACTIVITY 6.1 .7: Client-side technologies. I PARTICIPATION I
+ACTIVITY 6.1 .7: Client-side technologies. I PARTICIPATION I
+1) Ham I code can be rendered directly in a
+1) Ham I code can be rendered directly in a
+web browser.
+web browser.
+0 True
+0 True
+0 False
+0 False
+2) CSS preprocessors allow developers to
+2) CSS preprocessors allow developers to
+write much less code compared to
+write much less code compared to
+writing straight CSS.
+writing straight CSS.
+0 True
+0 True
+0 False
+0 False
+3) UI libraries always use JavaScript to
+3) UI libraries always use JavaScript to
+govern the behavior of the UI widgets.
+govern the behavior of the UI widgets.
+0 True
+0 True
+O False
+O False
+4) CSS front-end frameworks are required
+4) CSS front-end frameworks are required
+to build responsive websites that work
+to build responsive websites that work
+well on mobile devices.
+well on mobile devices.
+0 True
+0 True
+O False
+O False
+5) Typescript code is executed by the web
+5) Typescript code is executed by the web
+browser.
+browser.
+0 True
+0 True
+0 False
+0 False
+6) JavaScript frameworks often simplify
+6) JavaScript frameworks often simplify
+the use of web APls in the browser.
+the use of web APls in the browser.
+0 True
+0 True
+0 False
+0 False
+Testing
+Testing
+zyBooks u
+zyBooks u
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+Developers must test the full technology stack used by web applications. A variety of testing
+Developers must test the full technology stack used by web applications. A variety of testing
+frameworks exist to automate the testing of web applications. Ex: Selenium is used to automate a test
+frameworks exist to automate the testing of web applications. Ex: Selenium is used to automate a test
+user's interaction with a web application and verify that the UI behaves correctly.
+user's interaction with a web application and verify that the UI behaves correctly.
+I r7
+I r7
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 11/43
+11/17/24, 12:02 PM zyBooks I PARTICIPATION I
+11/17/24, 12:02 PM zyBooks I PARTICIPATION I
+ACTIVITY 6.1 .8: Testing a web application.
+ACTIVITY 6.1 .8: Testing a web application.
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+Compatibility testing Interface testing Performance testing Usability testing
+Compatibility testing Interface testing Performance testing Usability testing
+Security testing Functionality testing
+Security testing Functionality testing
+Exploring further:
+Exploring further:
+• Ranking of database SY.Stems
+• Ranking of database SY.Stems
+Verifying that each individual
+Verifying that each individual
+application function is working as
+application function is working as
+expected.
+expected.
+Testing the interaction between the
+Testing the interaction between the
+front-end and back-end and the
+front-end and back-end and the
+interactions between the server-side
+interactions between the server-side
+programs and the database.
+programs and the database.
+Testing the user's ability to properly
+Testing the user's ability to properly
+use the web application for specific
+use the web application for specific
+purposes.
+purposes.
+Testing the web application's ability to
+Testing the web application's ability to
+work on various browsers, operating
+work on various browsers, operating
+systems, and platforms.
+systems, and platforms.
+Verifying the web server is able to
+Verifying the web server is able to
+respond reasonably under various load
+respond reasonably under various load
+conditions.
+conditions.
+Ensuring the integrity and privacy of
+Ensuring the integrity and privacy of
+the user's data and interactions with
+the user's data and interactions with
+the web application.
+the web application.
+• 6 Current Options for CSS Preprocessors
+• 6 Current Options for CSS Preprocessors
+• Best languages that compile to JavaScript
+• Best languages that compile to JavaScript
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+l_J
+l_J
+12/43
+12/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+• TOR JavaScriQt Frameworks, Libraries and Tools and When to Use Them
+• TOR JavaScriQt Frameworks, Libraries and Tools and When to Use Them
+• Summary of web application testing methodologies and tools
+• Summary of web application testing methodologies and tools

@@ -1,0 +1,914 @@
+Introduction to Node.js
+Introduction to Node.js
+Node.js is a JavaScript runtime environment that is primarily used to run server-side web applications.
+Node.js is a JavaScript runtime environment that is primarily used to run server-side web applications.
+Node.js has many benefits:
+Node.js has many benefits:
+• The event-driven, non-blocking 1/0 architecture of Node.js allows Node.js to handle high loads.
+• The event-driven, non-blocking 1/0 architecture of Node.js allows Node.js to handle high loads.
+• Node.js allows developers to write JavaScript on the server and client, simplifying some
+• Node.js allows developers to write JavaScript on the server and client, simplifying some
+development tasks.
+development tasks.
+• Node.js provides a simple mechanism to create and distribute modules. A Node.js module is a
+• Node.js provides a simple mechanism to create and distribute modules. A Node.js module is a
+JavaScript file that provides some useful functionality.
+JavaScript file that provides some useful functionality.
+• Node.js works seamlessly with MongoDB, a document database that stores JSON and uses
+• Node.js works seamlessly with MongoDB, a document database that stores JSON and uses
+JavaScript as a query language. Web development is greatly simplified when JSON is used
+JavaScript as a query language. Web development is greatly simplified when JSON is used
+between the client and server, and between the server and database.
+between the client and server, and between the server and database.
+Companies using Node.js include Netflix, Walmart, Ebay, and Linked In. Adoption by these companies
+Companies using Node.js include Netflix, Walmart, Ebay, and Linked In. Adoption by these companies
+helped validate the Node.js approach and spur development of more Node.js modules.
+helped validate the Node.js approach and spur development of more Node.js modules.
+Figure 6.2.1: Number of publicly accessible modules for Node.js (npm) in
+Figure 6.2.1: Number of publicly accessible modules for Node.js (npm) in
+2022 far exceeds other languages.
+2022 far exceeds other languages.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 13/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+Module C·ounts
+Module C·ounts
+2500000
+2500000
+CPAN
+CPAN
+Lil Maven Coolral (Java)
+Lil Maven Coolral (Java)
+[Ill npm {node.js)
+[Ill npm {node.js)
+2000000 ii nuge (. NET)
+2000000 ii nuge (. NET)
+• PackaJJist (PHP)
+• PackaJJist (PHP)
+i!l' 'illf PyPI -
+i!l' 'illf PyPI -
+1500000
+1500000
+Iii Rubygems.org
+Iii Rubygems.org
+1000000
+1000000
+500000 ~
+500000 ~
+I I
+I I
+I I - - - 0
+I I - - - 0
+Sep Nov
+Sep Nov
+Source: ModuleCounts.com
+Source: ModuleCounts.com
+◄
+◄
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.2.1: Introduction to Node.js.
+ACTIVITY 6.2.1: Introduction to Node.js.
+1) Node.js programs are written in
+1) Node.js programs are written in
+JavaScript.
+JavaScript.
+0 True
+0 True
+0 False
+0 False
+2) Node.js programs run in the web
+2) Node.js programs run in the web
+browser.
+browser.
+0 True
+0 True
+O False
+O False
+3) Node.js has over one million modules.
+3) Node.js has over one million modules.
+O True
+O True
+0 False
+0 False
+Installing and running
+Installing and running
+t-
+t-
+Jan
+Jan
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+zyBooks
+zyBooks
+I
+I
+r
+r
+i
+i
+.~ -
+.~ -
+I ii
+I ii
+- -
+- -
+Mar May Jul
+Mar May Jul
+►
+►
+D
+D
+0
+0
+0
+0
+0
+0
+14/43
+14/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+Developers may install Node.js using installers from the Node.js website for Windows, macOS, and
+Developers may install Node.js using installers from the Node.js website for Windows, macOS, and
+other operating systems.
+other operating systems.
+After installing Node.js, a developer can start the Node.js interactive shell and execute JavaScript
+After installing Node.js, a developer can start the Node.js interactive shell and execute JavaScript
+statements. The figure below shows a command line prompt from which the user started the Node.js
+statements. The figure below shows a command line prompt from which the user started the Node.js
+interactive shell by entering "node". The ".exit" command exits the interactive shell.
+interactive shell by entering "node". The ".exit" command exits the interactive shell.
+Figure 6.2.2: Node.js interactive shell.
+Figure 6.2.2: Node.js interactive shell.
+$ node
+$ node
+Welcome to Node.js
+Welcome to Node.js
+> cons ole . log("Hello,
+> cons ole . log("Hello,
+Node. js ! ")
+Node. js ! ")
+Hello, Node.js!
+Hello, Node.js!
+undefined
+undefined
+> X = 2
+> X = 2
+2
+2
+> .exit
+> .exit
+◄ ►
+◄ ►
+A developer may write a Node.js program in a text editor and execute the program using the "node
+A developer may write a Node.js program in a text editor and execute the program using the "node
+myprogram.js" command.
+myprogram.js" command.
+Figure 6.2.3: Simple Node.js program.
+Figure 6.2.3: Simple Node.js program.
+Online services
+Online services
+II hello.js
+II hello.js
+for (let i = 0 ; i < 5 ; i ++) {
+for (let i = 0 ; i < 5 ; i ++) {
+console . log ("Hello,
+console . log ("Hello,
+Node. j s ! " ) ;
+Node. j s ! " ) ;
+}
+}
+$ node hello. j s
+$ node hello. j s
+Hello, Node.js!
+Hello, Node.js!
+Hello, Node . js!
+Hello, Node . js!
+Hello, Node . js!
+Hello, Node . js!
+Hello, Node.js!
+Hello, Node.js!
+Hello, Node.js!
+Hello, Node.js!
+◄
+◄
+Online IDEs like Reg_lit and StackBlitz allow developers to run Node.js programs in the
+Online IDEs like Reg_lit and StackBlitz allow developers to run Node.js programs in the
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 15/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+cloud instead of installing Node.js on the developer's machine.
+cloud instead of installing Node.js on the developer's machine.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.2.2: Running Node.js.
+ACTIVITY 6.2.2: Running Node.js.
+1) The Node.js command-line program
+1) The Node.js command-line program
+only runs on Windows.
+only runs on Windows.
+0 True
+0 True
+0 False
+0 False
+2) The command node test. j s starts
+2) The command node test. j s starts
+the Node.js interactive shell.
+the Node.js interactive shell.
+0 True
+0 True
+O False
+O False
+3) A Node.js program can display output
+3) A Node.js program can display output
+to the console using the
+to the console using the
+console. log () method call.
+console. log () method call.
+0 True
+0 True
+0 False
+0 False
+Creating a simple web server
+Creating a simple web server
+D
+D
+0
+0
+0
+0
+0
+0
+The http module allows a Node.js application to create a simple web server. The http module's
+The http module allows a Node.js application to create a simple web server. The http module's
+createServer() method creates a web server that can receive HTTP requests and send HTTP
+createServer() method creates a web server that can receive HTTP requests and send HTTP
+responses. The listen() method starts the server listening for HTTP requests on a particular port. The
+responses. The listen() method starts the server listening for HTTP requests on a particular port. The
+server continues to run until the developer enters Ctrl+C to kill the Node.js application.
+server continues to run until the developer enters Ctrl+C to kill the Node.js application.
+The program below shows the http module being imported with require () . The require() function
+The program below shows the http module being imported with require () . The require() function
+imports a module for use in a Node.js program. I PARTICIPATION
+imports a module for use in a Node.js program. I PARTICIPATION
+ACTIVITY 6.2.3: A simple Node.js web server. D
+ACTIVITY 6.2.3: A simple Node.js web server. D
+$ node server.js
+$ node server.js
+I I server.js
+I I server.js
+canst http = require ("http" );
+canst http = require ("http" );
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 16/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+http . createServer (function (request , response ) {
+http . createServer (function (request , response ) {
+response . writeHead (200, {"Content-Type" : "text/html" });
+response . writeHead (200, {"Content-Type" : "text/html" });
+response . write ("<hl>Hello, Node.js!</hl>" );
+response . write ("<hl>Hello, Node.js!</hl>" );
+response . end ();
+response . end ();
+}) . listen (3000);
+}) . listen (3000);
+... HTTP request
+... HTTP request
+Listening on """
+Listening on """
+port 3000 HTTP response .._
+port 3000 HTTP response .._
+Web server
+Web server
+Animation content:
+Animation content:
+A block of code is shown:
+A block of code is shown:
+// server.js
+// server.js
+..
+..
+http://localhost:3000/
+http://localhost:3000/
+Hello, Node.jsl
+Hello, Node.jsl
+Web browser
+Web browser
+canst http = require("http");
+canst http = require("http");
+http.createServer(function(request, response) {
+http.createServer(function(request, response) {
+response.writeHead(200, {"Content-Type": "text/html"});
+response.writeHead(200, {"Content-Type": "text/html"});
+response.write("<h1 >Hello, Node.js!</h1 >");
+response.write("<h1 >Hello, Node.js!</h1 >");
+response.end();
+response.end();
+}).listen(3000);
+}).listen(3000);
+The following command line prompt is used to run server.js:
+The following command line prompt is used to run server.js:
+S node server.js
+S node server.js
+A web server listening on port 3000 is shown along with a web browser with the URL
+A web server listening on port 3000 is shown along with a web browser with the URL
+http://localhost:3000/. The web browser sends an HTTP request to the web server, which sends
+http://localhost:3000/. The web browser sends an HTTP request to the web server, which sends
+back an HTTP response that displays "Hello, Node.js!" on the web browser.
+back an HTTP response that displays "Hello, Node.js!" on the web browser.
+Animation captions:
+Animation captions:
+1. server.js is executed from the command line.
+1. server.js is executed from the command line.
+2. The require("http") command imports the "http" module.
+2. The require("http") command imports the "http" module.
+3. createServer() creates a web server object that calls the provided callback function when an
+3. createServer() creates a web server object that calls the provided callback function when an
+HTTP request is received.
+HTTP request is received.
+4. listen() starts the web server listening on port 3000 for HTTP requests.
+4. listen() starts the web server listening on port 3000 for HTTP requests.
+5. The user enters a URL to access the web server running on the same machine on port 3000.
+5. The user enters a URL to access the web server running on the same machine on port 3000.
+6. The HTTP request is routed to the web server, causing the request callback function to
+6. The HTTP request is routed to the web server, causing the request callback function to
+execute.
+execute.
+7. writeHead() creates an HTTP response with a 200 status code and text/html content type.
+7. writeHead() creates an HTTP response with a 200 status code and text/html content type.
+8. write() sends the HTML to the HTTP response object.
+8. write() sends the HTML to the HTTP response object.
+9. end() sends the HTTP response to the web browser, which renders the HTML.
+9. end() sends the HTTP response to the web browser, which renders the HTML.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 17/43
+11/17/24, 12:02 PM I PARTICIPATION
+11/17/24, 12:02 PM I PARTICIPATION
+ACTIVITY 6.2.4: Node.js web server.
+ACTIVITY 6.2.4: Node.js web server.
+1) What method causes the web server to
+1) What method causes the web server to
+begin listening for HTTP requests?
+begin listening for HTTP requests?
+O require()
+O require()
+0 createServer()
+0 createServer()
+O listen()
+O listen()
+2) What URL accesses a web server
+2) What URL accesses a web server
+running locally and listening on port
+running locally and listening on port
+8080?
+8080?
+0 http://localhost/
+0 http://localhost/
+0 http://localhost:8080/
+0 http://localhost:8080/
+0 http://8080/
+0 http://8080/
+3) What method sets the status code for
+3) What method sets the status code for
+the HTTP response?
+the HTTP response?
+0 response.writeHead()
+0 response.writeHead()
+0 response.write()
+0 response.write()
+0 response.end()
+0 response.end()
+4) What keyboard command kills the web
+4) What keyboard command kills the web
+server program?
+server program?
+0 Ctrl+C
+0 Ctrl+C
+0 Ctrl+Z
+0 Ctrl+Z
+0 Ctrl+X
+0 Ctrl+X
+Projects and npm
+Projects and npm
+zyBooks
+zyBooks
+D
+D
+0
+0
+0
+0
+0
+0
+0
+0
+Node.js programs are typically organized into projects. A Node.js project is a collection of JavaScript
+Node.js programs are typically organized into projects. A Node.js project is a collection of JavaScript
+files, packages, configuration files, and other miscellaneous files that are stored in a directory.
+files, packages, configuration files, and other miscellaneous files that are stored in a directory.
+Figure 6.2.4: Example Node.js project with a single JavaScript file.
+Figure 6.2.4: Example Node.js project with a single JavaScript file.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 18/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+myproject
+myproject
+L_
+L_
+server.js
+server.js
+◄
+◄
+zyBooks
+zyBooks
+►
+►
+A package is a directory containing one or more modules and a package.json file. A package.json file
+A package is a directory containing one or more modules and a package.json file. A package.json file
+contains JSON that lists the package's name, version, license, dependencies, and other package
+contains JSON that lists the package's name, version, license, dependencies, and other package
+meta data.
+meta data.
+The Node Package Manager (npm) is the package manager for Node.js that allows developers to
+The Node Package Manager (npm) is the package manager for Node.js that allows developers to
+download, install, and update packaged modules. npm is installed with Node.js and is executed from
+download, install, and update packaged modules. npm is installed with Node.js and is executed from
+the command line.
+the command line.
+Figure 6.2.5: Display npm's version.
+Figure 6.2.5: Display npm's version.
+~
+~
+~
+~
+◄ ►
+◄ ►
+npm can install packages in one of two modes:
+npm can install packages in one of two modes:
+• Local mode: Packages are installed in a node_ modules directory in the parent working
+• Local mode: Packages are installed in a node_ modules directory in the parent working
+directory. Ex: npm install mypackage
+directory. Ex: npm install mypackage
+• Global mode: Packages are installed in a {prefix} /node_modules directory, where
+• Global mode: Packages are installed in a {prefix} /node_modules directory, where
+{prefix} is a location set in npm's configuration. The --global flag (or -g) directs npm to
+{prefix} is a location set in npm's configuration. The --global flag (or -g) directs npm to
+install in global mode. Ex: npm install mypackage --global
+install in global mode. Ex: npm install mypackage --global
+Local mode is ideal for installing project dependencies. A dependency is a package that a Node.js
+Local mode is ideal for installing project dependencies. A dependency is a package that a Node.js
+project must be able to access to run. Global mode is typically for installing command-line tools.
+project must be able to access to run. Global mode is typically for installing command-line tools.
+Figure 6.2.6: Get npm's prefix directory where global packages are installed.
+Figure 6.2.6: Get npm's prefix directory where global packages are installed.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 19/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+$ npm config get prefix
+$ npm config get prefix
+/usr/local
+/usr/local
+zyBooks
+zyBooks
+The prefix directory will be different for Windows
+The prefix directory will be different for Windows
+users.
+users.
+◄ ►
+◄ ►
+The figure below shows a developer installing the nodemon package globally. Nodemon is a utility that
+The figure below shows a developer installing the nodemon package globally. Nodemon is a utility that
+saves developers time by restarting a Node.js application whenever the files in a project are modified.
+saves developers time by restarting a Node.js application whenever the files in a project are modified.
+Figure 6.2.7: Installing and running nodemon.
+Figure 6.2.7: Installing and running nodemon.
+$ npm install nodemon --global
+$ npm install nodemon --global
++ nodemon@l.19.1
++ nodemon@l.19.1
+added 147 packages from 90 contributors in
+added 147 packages from 90 contributors in
+41. 265s
+41. 265s
+$ nodemon myproject/server.js
+$ nodemon myproject/server.js
+[nodemon] 1.9.1
+[nodemon] 1.9.1
+[nodemon] to restart at any time, enter 'rs·
+[nodemon] to restart at any time, enter 'rs·
+[nodemon] watching: *.*
+[nodemon] watching: *.*
+[nodemon] starting 'node myproject\server.js'
+[nodemon] starting 'node myproject\server.js'
+◄ ►
+◄ ►
+Underscore is a library of helpful functions that extends some built-in JavaScript objects. The figure
+Underscore is a library of helpful functions that extends some built-in JavaScript objects. The figure
+below shows a developer changing to the myproj ect directory that stores a Node.js project,
+below shows a developer changing to the myproj ect directory that stores a Node.js project,
+installing underscore as a local package, and producing a list of the project's local packages. The
+installing underscore as a local package, and producing a list of the project's local packages. The
+underscore module is stored in myproject/node_modules/underscore.
+underscore module is stored in myproject/node_modules/underscore.
+Figure 6.2.8: Installing "underscore" as a local package.
+Figure 6.2.8: Installing "underscore" as a local package.
+$ cd myproject
+$ cd myproject
+$ npm install underscore
+$ npm install underscore
++ underscore@l.9 . 1
++ underscore@l.9 . 1
+added 1 package from 1 contributor and audited 1 package in
+added 1 package from 1 contributor and audited 1 package in
+1.983s
+1.983s
+$ npm list
+$ npm list
+/myproject
+/myproject
+I._ underscore@l.9.1
+I._ underscore@l.9.1
+◄
+◄
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+►
+►
+20/43
+20/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+A module is imported and assigned to a variable with require () . Good practice is to assign imported
+A module is imported and assigned to a variable with require () . Good practice is to assign imported
+modules to variables that are named similar to the module name. Ex: Variable http for the "http"
+modules to variables that are named similar to the module name. Ex: Variable http for the "http"
+module. However, the underscore module is usually assigned to the variable_, as shown in the figure
+module. However, the underscore module is usually assigned to the variable_, as shown in the figure
+below.
+below.
+Figure 6.2.9: Using the underscore package to get random dice rolls.
+Figure 6.2.9: Using the underscore package to get random dice rolls.
+canst http = require ("http" );
+canst http = require ("http" );
+canst = require ("underscore" );
+canst = require ("underscore" );
+http . createServer (function (request , response ) {
+http . createServer (function (request , response ) {
+response . writeHead (200, {"Content-Type" : "text/html" });
+response . writeHead (200, {"Content-Type" : "text/html" });
+response . write ("<!DOCTYPE html>\n<html>\n" );
+response . write ("<!DOCTYPE html>\n<html>\n" );
+response . write ("<title>Dice Roll</title>\n" );
+response . write ("<title>Dice Roll</title>\n" );
+response . write ("<body>\n" );
+response . write ("<body>\n" );
+for (let i = 0 ; i < 5 ; i ++)
+for (let i = 0 ; i < 5 ; i ++)
+II Use underscore to get a random number between 1 and 6
+II Use underscore to get a random number between 1 and 6
+let randNum = . random (l, 6);
+let randNum = . random (l, 6);
+response . write ("<p>" + randNum + "</p>\n" );
+response . write ("<p>" + randNum + "</p>\n" );
+response . write ("</body>\n</html>" );
+response . write ("</body>\n</html>" );
+response . end ();
+response . end ();
+}) . listen (3000);
+}) . listen (3000);
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<html>
+<title>Dice Roll</title>
+<title>Dice Roll</title>
+<body>
+<body>
+<p>3</p>
+<p>3</p>
+<p>S</p>
+<p>S</p>
+<p>S</p>
+<p>S</p>
+<p>6</p>
+<p>6</p>
+<p>l</p>
+<p>l</p>
+</body>
+</body>
+</html>
+</html>
+◄
+◄
+Table 6.2.1: Summary of npm commands.
+Table 6.2.1: Summary of npm commands.
+Command Description
+Command Description
+conf ig Manage npm configuration files
+conf ig Manage npm configuration files
+I
+I
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+Example
+Example
+npm config list
+npm config list
+npm config get
+npm config get
+prefix
+prefix
+►
+►
+21/43
+21/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+Command Description
+Command Description
+install Install package locally or globally (-g)
+install Install package locally or globally (-g)
+list
+list
+List all installed local or global (-g)
+List all installed local or global (-g)
+packages
+packages
+update Update a local or global (-g) package
+update Update a local or global (-g) package
+uninstall Uninstall a local or global (-g) package
+uninstall Uninstall a local or global (-g) package
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.2.5: Using npm.
+ACTIVITY 6.2.5: Using npm.
+1) Where does the npm command below
+1) Where does the npm command below
+install the grunt package?
+install the grunt package?
+$ npm install grunt -g
+$ npm install grunt -g
+O The project's node_ modules
+O The project's node_ modules
+directory
+directory
+O {prefix}/node_modules
+O {prefix}/node_modules
+directory
+directory
+0 {prefix} directory
+0 {prefix} directory
+2) Which command displays all the
+2) Which command displays all the
+installed global npm packages?
+installed global npm packages?
+0 npm install --global
+0 npm install --global
+O npm list
+O npm list
+0 npm list --global
+0 npm list --global
+3) Which command updates the local
+3) Which command updates the local
+mkdirp package?
+mkdirp package?
+0 npm install mkdirp
+0 npm install mkdirp
+0 npm update mkdirp
+0 npm update mkdirp
+O npm update mkdirp -g
+O npm update mkdirp -g
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+l
+l
+I
+I
+Example
+Example
+npm install nodemon
+npm install nodemon
+-g
+-g
+npm list
+npm list
+npm update lodash
+npm update lodash
+npm uninstall lodash
+npm uninstall lodash
+-
+-
+D
+D
+0
+0
+►
+►
+0
+0
+0
+0
+22/43
+22/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+4) Which command uninstalls the local
+4) Which command uninstalls the local
+mkdirp package?
+mkdirp package?
+0 npm update mkdirp
+0 npm update mkdirp
+O npm uninstall mkdirp -g
+O npm uninstall mkdirp -g
+O npm uninstall mkdirp
+O npm uninstall mkdirp
+The package.json and package-lock.json flies
+The package.json and package-lock.json flies
+zyBooks
+zyBooks
+0
+0
+Node.js projects use package.json to list information about the project, including the project's name,
+Node.js projects use package.json to list information about the project, including the project's name,
+version, license, and package dependencies. Developers can manually create package.json or use the
+version, license, and package dependencies. Developers can manually create package.json or use the
+npm ini t command, which prompts the user to enter various fields and generates package.json
+npm ini t command, which prompts the user to enter various fields and generates package.json
+automatically.
+automatically.
+Figure 6.2.10: Example package.json file.
+Figure 6.2.10: Example package.json file.
+"name" : "my-web-server" ,
+"name" : "my-web-server" ,
+"version" : "1.0.0" ,
+"version" : "1.0.0" ,
+"description" : "A simple web server" ,
+"description" : "A simple web server" ,
+"main" : "server.js" ,
+"main" : "server.js" ,
+"dependencies" : {
+"dependencies" : {
+"underscore" : "Al.9.1"
+"underscore" : "Al.9.1"
+} ,
+} ,
+"devDependencies" : {},
+"devDependencies" : {},
+"scripts" : {
+"scripts" : {
+"test" : "echo \"Error: no test specified\" && exit
+"test" : "echo \"Error: no test specified\" && exit
+l" ,
+l" ,
+◄
+◄
+"start" : "node server.js"
+"start" : "node server.js"
+} ,
+} ,
+"author" : "" ,
+"author" : "" ,
+"license" : "ISC"
+"license" : "ISC"
+►
+►
+When a project's package.json file is present, all the project's dependencies can be installed with a
+When a project's package.json file is present, all the project's dependencies can be installed with a
+single command: npm install.
+single command: npm install.
+A package-/ock.json file is created or modified when project dependencies are added or removed. The
+A package-/ock.json file is created or modified when project dependencies are added or removed. The
+file ensures that the same dependency versions are always used when the project is installed on
+file ensures that the same dependency versions are always used when the project is installed on
+different machines. Ex: A project's package.json file may indicate a dependency version "1 .9.1. The
+different machines. Ex: A project's package.json file may indicate a dependency version "1 .9.1. The
+caret character(") means that npm should install the highest version of the library that exists, as long
+caret character(") means that npm should install the highest version of the library that exists, as long
+as the major version number, the number following the caret, is the same. So if version 1.9.2 is
+as the major version number, the number following the caret, is the same. So if version 1.9.2 is
+available, 1.9.2 is installed. But version 2.0.0 is not installed since "1 requires the major version
+available, 1.9.2 is installed. But version 2.0.0 is not installed since "1 requires the major version
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 23/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+number to be 1. If the package-lock.json indicates that version 1.9.1 should be used, npm will install
+number to be 1. If the package-lock.json indicates that version 1.9.1 should be used, npm will install
+version 1.9.1 instead of any newer versions.
+version 1.9.1 instead of any newer versions.
+Semantic versioning
+Semantic versioning
+npm uses semantic versioning to ensure the correct package version is installed.
+npm uses semantic versioning to ensure the correct package version is installed.
+Semantic versioning is a popular software versioning scheme that uses a sequence of
+Semantic versioning is a popular software versioning scheme that uses a sequence of
+three digits: major.minor.patch. Ex: 1 .2.3.
+three digits: major.minor.patch. Ex: 1 .2.3.
+• The major number indicates a major version of the package, which adds new
+• The major number indicates a major version of the package, which adds new
+functionality and possibly alters how previous functions now work.
+functionality and possibly alters how previous functions now work.
+• The minor number indicates a minor change to the package, which usually entails
+• The minor number indicates a minor change to the package, which usually entails
+bug fixes and minor changes to how the package's functions work.
+bug fixes and minor changes to how the package's functions work.
+• The patch number indicates a bug fix to a minor version.
+• The patch number indicates a bug fix to a minor version.
+◄
+◄
+Figure 6.2.11 : Files composing Node.js project.
+Figure 6.2.11 : Files composing Node.js project.
+myproject
+myproject
+~ node_modules
+~ node_modules
+I L_ underscore
+I L_ underscore
+~ package. j son
+~ package. j son
+~ packagelock.
+~ packagelock.
+json
+json
+L_ server.js
+L_ server.js
+◄
+◄
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.2.6: Node.js project's package.json file.
+ACTIVITY 6.2.6: Node.js project's package.json file.
+1) A package.json file may list the project
+1) A package.json file may list the project
+developers, homepage, and bugs.
+developers, homepage, and bugs.
+0 True
+0 True
+0 False
+0 False
+2) Packages installed from npm
+2) Packages installed from npm
+occasionally have package.json files.
+occasionally have package.json files.
+0 True
+0 True
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+►
+►
+►
+►
+D
+D
+D
+D
+0
+0
+24/43
+24/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+0 False
+0 False
+3) The "scripts" value in the example
+3) The "scripts" value in the example
+package.json above allows the web
+package.json above allows the web
+server to be started with the command:
+server to be started with the command:
+npm start
+npm start
+0 True
+0 True
+O False
+O False
+4) The following command installs the
+4) The following command installs the
+mkdirp module and adds mkdirp to the
+mkdirp module and adds mkdirp to the
+"dependencies" block of package.json:
+"dependencies" block of package.json:
+npm install mkdirp
+npm install mkdirp
+0 True
+0 True
+0 False
+0 False
+5) A project's package.json and packagelock.
+5) A project's package.json and packagelock.
+json files may list different
+json files may list different
+dependency versions.
+dependency versions.
+0 True
+0 True
+0 False
+0 False
+Exploring further:
+Exploring further:
+• Node.js website
+• Node.js website
+• npm documentation
+• npm documentation
+• packag~son documentation
+• packag~son documentation
+• package-lock.json documentation
+• package-lock.json documentation
+zyBooks
+zyBooks
+• Understanding module.exports and exports in Node.js
+• Understanding module.exports and exports in Node.js

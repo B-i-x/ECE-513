@@ -1,0 +1,683 @@
+Express server
+Express server
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+0
+0
+0
+0
+0
+0
+25/43
+25/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+Express is a popular web application framework for Node.js because Express allows developers to
+Express is a popular web application framework for Node.js because Express allows developers to
+create web servers with less code. Express is installed with npm: npm install express.
+create web servers with less code. Express is installed with npm: npm install express.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.3.1: Simple Express web server.
+ACTIVITY 6.3.1: Simple Express web server.
+mypro ject
+mypro ject
+[
+[
+n ode_module s
+n ode_module s
+~ express
+~ express
+L_ etc . ..
+L_ etc . ..
+public
+public
+I L_ hello . html
+I L_ hello . html
+~ pac kage.json
+~ pac kage.json
+L_ server . js
+L_ server . js
+Express
+Express
+server
+server
+http://localhost:3000/hello.html
+http://localhost:3000/hello.html
+Hello. Express!
+Hello. Express!
+Animation content:
+Animation content:
+hello.html
+hello.html
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<html>
+<title>Hello Express</title>
+<title>Hello Express</title>
+<body>
+<body>
+<hl>Hello, Express! </hl>
+<hl>Hello, Express! </hl>
+</body>
+</body>
+</html>
+</html>
+server.js
+server.js
+const express = require ("express" );
+const express = require ("express" );
+const app = express ();
+const app = express ();
+II Serve static files from the public dir
+II Serve static files from the public dir
+app . use (express . static ("public" ));
+app . use (express . static ("public" ));
+II Start the web server
+II Start the web server
+app . listen (3000, function () {
+app . listen (3000, function () {
+console . log ("Listening on port 3000 ... " );
+console . log ("Listening on port 3000 ... " );
+} ) ;
+} ) ;
+$ node s erver . js
+$ node s erver . js
+Listening on port 3000 .. .
+Listening on port 3000 .. .
+D
+D
+The project's directory is shown. In the myproject directory is: package.json file and server.js file, the
+The project's directory is shown. In the myproject directory is: package.json file and server.js file, the
+directory node_modules, containing the express package, etc, and the public directory, containing
+directory node_modules, containing the express package, etc, and the public directory, containing
+hello.html. hello.html contains the following code:
+hello.html. hello.html contains the following code:
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<html>
+<title>Hello Express</title>
+<title>Hello Express</title>
+<body>
+<body>
+<h1 >Hello, Express!</h1 >
+<h1 >Hello, Express!</h1 >
+</body>
+</body>
+</html>
+</html>
+server.js contains:
+server.js contains:
+const express = require("express");
+const express = require("express");
+const app = express();
+const app = express();
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 26/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+// Serve static files from the public dir
+// Serve static files from the public dir
+app.use( express.static("publ ic") );
+app.use( express.static("publ ic") );
+// Start the web server
+// Start the web server
+app.listen(3000, function() {
+app.listen(3000, function() {
+console.log("Listening on port 3000 ... ");
+console.log("Listening on port 3000 ... ");
+});
+});
+zyBooks
+zyBooks
+To execute server.js, node server.js is typed at the command line. In server.js the express module is
+To execute server.js, node server.js is typed at the command line. In server.js the express module is
+imported, the path with the static files is applied to the express application object, and the web
+imported, the path with the static files is applied to the express application object, and the web
+server starts listening on port 3000. A user enters the URL http://localhost:3000/hello.html in the
+server starts listening on port 3000. A user enters the URL http://localhost:3000/hello.html in the
+browser. The browser sends a request for hello.html and displays hello.html.
+browser. The browser sends a request for hello.html and displays hello.html.
+Animation captions:
+Animation captions:
+1. After installing, the express package is located in the project's node_modules directory.
+1. After installing, the express package is located in the project's node_modules directory.
+2. The public directory is for storing static files (HTML, images, etc.) that can be served by the
+2. The public directory is for storing static files (HTML, images, etc.) that can be served by the
+Express server.
+Express server.
+3. server.js contains the Node.js application code and is executed from the command line.
+3. server.js contains the Node.js application code and is executed from the command line.
+4. The require() function imports the express module, and express() creates the express
+4. The require() function imports the express module, and express() creates the express
+application object.
+application object.
+5. express.static() names the path that contains static files to be served by the server. app.use()
+5. express.static() names the path that contains static files to be served by the server. app.use()
+applies the path to the express object.
+applies the path to the express object.
+6. app.listen() starts the web server listening for HTTP requests on port 3000 and outputs to the
+6. app.listen() starts the web server listening for HTTP requests on port 3000 and outputs to the
+console after the web server starts.
+console after the web server starts.
+7. When the browser requests hello.html from the Express server, the server responds with
+7. When the browser requests hello.html from the Express server, the server responds with
+hello.html.
+hello.html.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.3.2: Express server.
+ACTIVITY 6.3.2: Express server.
+Refer to the animation above.
+Refer to the animation above.
+7) The express () function starts the
+7) The express () function starts the
+Express server.
+Express server.
+O True
+O True
+O False
+O False
+2) To serve images / dog. jpg to the
+2) To serve images / dog. jpg to the
+browser, the images directory must
+browser, the images directory must
+reside in the __ directory.
+reside in the __ directory.
+O public
+O public
+0 node_modules
+0 node_modules
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+0
+0
+27/43
+27/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+3) If the browser requested
+3) If the browser requested
+http://localhost:3000/bye.html in the
+http://localhost:3000/bye.html in the
+animation above, the Express server
+animation above, the Express server
+would return a 404 status code.
+would return a 404 status code.
+0 True
+0 True
+0 False
+0 False
+Routes
+Routes
+zyBooks
+zyBooks
+Express uses routing to handle browser requests. An Express route is a specific URL path and an
+Express uses routing to handle browser requests. An Express route is a specific URL path and an
+HTTP request method to which a callback function is assigned. A route's callback function has
+HTTP request method to which a callback function is assigned. A route's callback function has
+request and response parameters, which represent the HTTP request and response.
+request and response parameters, which represent the HTTP request and response.
+A route is defined with the structure: app. method (path, callback)
+A route is defined with the structure: app. method (path, callback)
+• app - Express instance
+• app - Express instance
+• method - HTTP request method (get, post, etc.)
+• method - HTTP request method (get, post, etc.)
+• path - URL path
+• path - URL path
+• callback - Callback function executed when the route matches
+• callback - Callback function executed when the route matches
+0
+0
+The figure below shows an example of a GET route and a POST route with different paths. The route
+The figure below shows an example of a GET route and a POST route with different paths. The route
+callback functions use res.send() to send an HTTP response containing HTML.
+callback functions use res.send() to send an HTTP response containing HTML.
+Figure 6.3.1: Example routes.
+Figure 6.3.1: Example routes.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
+ACTIVITY
+II Called for GET request to
+II Called for GET request to
+http:lllocalhost:3000lhello
+http:lllocalhost:3000lhello
+app . get ("/hello" , function (req, res ) {
+app . get ("/hello" , function (req, res ) {
+res . send ("<hl>Hello, Express!</hl>" );
+res . send ("<hl>Hello, Express!</hl>" );
+} ) ;
+} ) ;
+II Called for POST request to
+II Called for POST request to
+http:lllocalhost:3000lgoodbye
+http:lllocalhost:3000lgoodbye
+app . post ("/goodbye" , function (req, res ) {
+app . post ("/goodbye" , function (req, res ) {
+res . send ("<hl>Goodbye, Express!</hl>" );
+res . send ("<hl>Goodbye, Express!</hl>" );
+} ) ;
+} ) ;
+◄
+◄
+6.3.3: Express routes.
+6.3.3: Express routes.
+1) Referring to the figure above, which
+1) Referring to the figure above, which
+route matches a POST request to
+route matches a POST request to
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+28/43
+28/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+"/hello"?
+"/hello"?
+Q "/hello"
+Q "/hello"
+O "/goodbye"
+O "/goodbye"
+0 Neither route
+0 Neither route
+2) Assuming an Express app running on
+2) Assuming an Express app running on
+port 3000, what URL matches the route
+port 3000, what URL matches the route
+below?
+below?
+app . get ("/droids" ,
+app . get ("/droids" ,
+function (req, res )
+function (req, res )
+res . send ("These aren't the
+res . send ("These aren't the
+droids you're looking for." );
+droids you're looking for." );
+} ) ;
+} ) ;
+O http://localhost/droids
+O http://localhost/droids
+O http://localhost:3000/droidssss
+O http://localhost:3000/droidssss
+0 http://localhost:3000/Droids
+0 http://localhost:3000/Droids
+3) What route matches a POST request to the
+3) What route matches a POST request to the
+following URL?
+following URL?
+http://localhost:3000/student
+http://localhost:3000/student
+0 app.get("/student", callback);
+0 app.get("/student", callback);
+0 app.post("/student", callback);
+0 app.post("/student", callback);
+O app.post("http://localhost:3000/student",
+O app.post("http://localhost:3000/student",
+callback);
+callback);
+Middleware
+Middleware
+zyBooks
+zyBooks
+A middleware function (or just middleware) is a function that examines or modifies the request
+A middleware function (or just middleware) is a function that examines or modifies the request
+and/or response objects. A middleware function has three parameters:
+and/or response objects. A middleware function has three parameters:
+• req - HTTP request object
+• req - HTTP request object
+• res - HTTP response object
+• res - HTTP response object
+• next - Callback to the middleware function
+• next - Callback to the middleware function
+The Express method use() enables a middleware function to execute.
+The Express method use() enables a middleware function to execute.
+0
+0
+0
+0
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.3.4: Middleware function that logs requests. D
+ACTIVITY 6.3.4: Middleware function that logs requests. D
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 29/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+canst express = reguire ("express" );
+canst express = reguire ("express" );
+canst app = express ();
+canst app = express ();
+zyBooks
+zyBooks
+canst logReguest = function (reg, res , next ) {
+canst logReguest = function (reg, res , next ) {
+console . log ( 'Reguest: ${ reg . method} for ${ reg . path }' );
+console . log ( 'Reguest: ${ reg . method} for ${ reg . path }' );
+next ();
+next ();
+} ;
+} ;
+app . use (logReguest );
+app . use (logReguest );
+app . get ("/hello" , function (reg, res ) {
+app . get ("/hello" , function (reg, res ) {
+res . send ("<hl>Hello, Express!</hl>" );
+res . send ("<hl>Hello, Express!</hl>" );
+} ) ;
+} ) ;
+app . listen (3000, function () {
+app . listen (3000, function () {
+console . log ("Listening on port 3000 ... " );
+console . log ("Listening on port 3000 ... " );
+} ) ;
+} ) ;
+Animation content:
+Animation content:
+A code block reads:
+A code block reads:
+canst express = require("express");
+canst express = require("express");
+canst app = express();
+canst app = express();
+canst logRequest = function(req, res, next) {
+canst logRequest = function(req, res, next) {
+console.log('Request: S{req.method} for S{req .path}');
+console.log('Request: S{req.method} for S{req .path}');
+next();
+next();
+};
+};
+app.use(logRequest);
+app.use(logRequest);
+app.get("/hello", function(req, res) {
+app.get("/hello", function(req, res) {
+res.send("<h1 >Hello, Express!</h1 >");
+res.send("<h1 >Hello, Express!</h1 >");
+});
+});
+app.listen(3000, function() {
+app.listen(3000, function() {
+console.log("Listening on port 3000 ... ");
+console.log("Listening on port 3000 ... ");
+});
+});
+The console is shown:
+The console is shown:
+S node server.js
+S node server.js
+Listening on port 3000 ...
+Listening on port 3000 ...
+Request: GET for /hello
+Request: GET for /hello
+http:/ /local host:3000/hello
+http:/ /local host:3000/hello
+Hello, Express!
+Hello, Express!
+$ node server . j s
+$ node server . j s
+Listening on port 3000 .
+Listening on port 3000 .
+Reque st : GET f or / he llo
+Reque st : GET f or / he llo
+The node server.js command starts the server. A browser shows the URL
+The node server.js command starts the server. A browser shows the URL
+http://localhost:3000/hello, which logs the request on the console and displays 'Hello, Express!' in
+http://localhost:3000/hello, which logs the request on the console and displays 'Hello, Express!' in
+the browser.
+the browser.
+Animation captions:
+Animation captions:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 30/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+1. The middleware function logRequestO logs the request method and path to the console.
+1. The middleware function logRequestO logs the request method and path to the console.
+2. logRequest() is enabled by calling app.use().
+2. logRequest() is enabled by calling app.use().
+3. After starting the server, the browser's request to /hello causes log Request() to be called.
+3. After starting the server, the browser's request to /hello causes log Request() to be called.
+4. The request method GET and path /hello are logged in the server's console.
+4. The request method GET and path /hello are logged in the server's console.
+5. logRequest() calls next() to allow other middleware and the /hello route to execute.
+5. logRequest() calls next() to allow other middleware and the /hello route to execute.
+6. After logRequest() finishes, the /hello route responds with a "Hello, Express!" message, which
+6. After logRequest() finishes, the /hello route responds with a "Hello, Express!" message, which
+is displayed in the browser.
+is displayed in the browser.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.3.5: Middleware.
+ACTIVITY 6.3.5: Middleware.
+Refer to the animation above.
+Refer to the animation above.
+1) What does a GET request to the path
+1) What does a GET request to the path
+"/" log to the console?
+"/" log to the console?
+0 Request: GET for/
+0 Request: GET for/
+O Request: GET for /hello
+O Request: GET for /hello
+O Nothing is logged
+O Nothing is logged
+2) If the app. use () call is removed from
+2) If the app. use () call is removed from
+the server, what does a GET request to
+the server, what does a GET request to
+the path "/hello" log to the console?
+the path "/hello" log to the console?
+0 Request: GET for/
+0 Request: GET for/
+O Request: GET for /hello
+O Request: GET for /hello
+0 Nothing is logged
+0 Nothing is logged
+3) If the next () call is moved from
+3) If the next () call is moved from
+logRequest (), what does a GET
+logRequest (), what does a GET
+request to the path "/hello" log to the
+request to the path "/hello" log to the
+console?
+console?
+0 Request: GET for/
+0 Request: GET for/
+O Request: GET for /hello
+O Request: GET for /hello
+0 Nothing is logged
+0 Nothing is logged
+4) If the app. use () call is moved after
+4) If the app. use () call is moved after
+the call to app. get (), what does a
+the call to app. get (), what does a
+GET request to the path "/hello" log to
+GET request to the path "/hello" log to
+the console?
+the console?
+0 Request: GET for/
+0 Request: GET for/
+0 Request: GET for /hello
+0 Request: GET for /hello
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+0
+0
+0
+0
+0
+0
+31/43
+31/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+0 Nothing is logged
+0 Nothing is logged
+Third-party middleware
+Third-party middleware
+Third parties have created many useful middleware functions that can be installed with npm. Ex:
+Third parties have created many useful middleware functions that can be installed with npm. Ex:
+npm install morgan installs middleware that logs information about HTTP requests.
+npm install morgan installs middleware that logs information about HTTP requests.
+Figure 6.3.2: Using morgan middleware.
+Figure 6.3.2: Using morgan middleware.
+const express =
+const express =
+require ("express" );
+require ("express" );
+const morgan = require ("morgan" );
+const morgan = require ("morgan" );
+const app = express ();
+const app = express ();
+II Show HTTP requests in the
+II Show HTTP requests in the
+console
+console
+app . use (morgan ("dev" ));
+app . use (morgan ("dev" ));
+app . listen (3000);
+app . listen (3000);
+Example console logging of requests:
+Example console logging of requests:
+GET / hello.html 200 8 . 645 ms - 132
+GET / hello.html 200 8 . 645 ms - 132
+POST / hello 200 4.280 ms - 25
+POST / hello 200 4.280 ms - 25
+GET / blah 404 1.297 ms - -
+GET / blah 404 1.297 ms - -
+◄
+◄
+Table 6.3.1: Popular third-party middleware for Express.
+Table 6.3.1: Popular third-party middleware for Express.
+Middleware Description
+Middleware Description
+Logs HTTP request information
+Logs HTTP request information
+►
+►
+morgan
+morgan
+cookie-parser
+cookie-parser
+errorhandler
+errorhandler
+Parses the cookie header in an HTTP request
+Parses the cookie header in an HTTP request
+Aids debugging during development
+Aids debugging during development
+csurf
+csurf
+compression
+compression
+Protects against cross-site request forgery
+Protects against cross-site request forgery
+(CSRF)
+(CSRF)
+Compresses response bodies
+Compresses response bodies
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+-
+-
+32/43
+32/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+Middleware Description
+Middleware Description
+expresssession
+expresssession
+Manages session data on the server
+Manages session data on the server
+I
+I
+I PARTICIPATION 6.3.6: Popular middleware.
+I PARTICIPATION 6.3.6: Popular middleware.
+ACTIVITY
+ACTIVITY
+Refer to the table above.
+Refer to the table above.
+1) What middleware indicates that an
+1) What middleware indicates that an
+HTTP request returned a 404 status
+HTTP request returned a 404 status
+code?
+code?
+0 cookie-parser
+0 cookie-parser
+0 morgan
+0 morgan
+O csurf
+O csurf
+◄
+◄
+2) What middleware could protect an
+2) What middleware could protect an
+Express server from a malicious CSRF
+Express server from a malicious CSRF
+attack?
+attack?
+0 csurf
+0 csurf
+O compression
+O compression
+0 express-session
+0 express-session
+3) What middleware should a developer
+3) What middleware should a developer
+use to track the user's temporary
+use to track the user's temporary
+session data?
+session data?
+O cookie-parser
+O cookie-parser
+0 compression
+0 compression
+0 express-session
+0 express-session
+Express application generator.
+Express application generator.
+►
+►
+A developer can use the application generator tool express-generator to
+A developer can use the application generator tool express-generator to
+automatically create an Express application skeleton. The tool saves developers time
+automatically create an Express application skeleton. The tool saves developers time
+from writing application code that is common to many Express applications. Projects
+from writing application code that is common to many Express applications. Projects
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+0
+0
+0
+0
+33/43
+33/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+produced by express-genera tor use the Pug template engine to create views or
+produced by express-genera tor use the Pug template engine to create views or
+webpages that interact with the MongoDB database.
+webpages that interact with the MongoDB database.
+Exploring further:
+Exploring further:
+_ r .. ,--............ "n1 - .... .C .... - ..................
+_ r .. ,--............ "n1 - .... .C .... - ..................
+◄
+◄
+• Middleware: morgan, cookie-Qarser, errorhandler, csurf, comQression, exQress-session
+• Middleware: morgan, cookie-Qarser, errorhandler, csurf, comQression, exQress-session
+• ExQress apQlication generator
+• ExQress apQlication generator

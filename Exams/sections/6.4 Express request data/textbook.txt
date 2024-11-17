@@ -1,0 +1,714 @@
+Query string parameters
+Query string parameters
+►
+►
+Express automatically parses query string parameters (the values appearing after the "?" in a URL) and
+Express automatically parses query string parameters (the values appearing after the "?" in a URL) and
+stores the parameters' names and values in the req.query object.
+stores the parameters' names and values in the req.query object.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.4.1: Extracting query string values.
+ACTIVITY 6.4.1: Extracting query string values.
+http://localhost:3000/hello?name=Bob&age=21 app . get ("/hello" , function (req, res ) {
+http://localhost:3000/hello?name=Bob&age=21 app . get ("/hello" , function (req, res ) {
+const html =
+const html =
+'<hl>Hello, ${ req . query . name }!</hl>
+'<hl>Hello, ${ req . query . name }!</hl>
+D
+D
+Hello, Bob! <p>You are ${ reg . query . age } years old.</p:
+Hello, Bob! <p>You are ${ reg . query . age } years old.</p:
+You are 21 years old. res . send (html );
+You are 21 years old. res . send (html );
+} ) ;
+} ) ;
+Animation content:
+Animation content:
+A web browser is shown with the URL http://localhost:3000/hello?name=Bob&age=21 and the
+A web browser is shown with the URL http://localhost:3000/hello?name=Bob&age=21 and the
+Node.js code block:
+Node.js code block:
+app.get("/hello", function(req, res) {
+app.get("/hello", function(req, res) {
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 34/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+canst html=
+canst html=
+'<h1 >Hello, S{req.query.name}!</h1 >
+'<h1 >Hello, S{req.query.name}!</h1 >
+<p>You are S{req.query.age} years old.</p> ';
+<p>You are S{req.query.age} years old.</p> ';
+res.send(html);
+res.send(html);
+});
+});
+zyBooks
+zyBooks
+The browser requests the /hello route with name= Bob and age= 21 in the query string. The route's
+The browser requests the /hello route with name= Bob and age= 21 in the query string. The route's
+callback function, function(req, res), replaces req .query.name with Bob in the h1 tag and replaces
+callback function, function(req, res), replaces req .query.name with Bob in the h1 tag and replaces
+req.query.age with 21 in the p tag. res.send(html) sends back a response with the name and age,
+req.query.age with 21 in the p tag. res.send(html) sends back a response with the name and age,
+which then displays in the browser.
+which then displays in the browser.
+Animation captions:
+Animation captions:
+1. The browser requests the /hello route with data in the query string.
+1. The browser requests the /hello route with data in the query string.
+2. The route's callback function extracts name and age from the req.query object.
+2. The route's callback function extracts name and age from the req.query object.
+3. res.send() sends back a response with the name and age.
+3. res.send() sends back a response with the name and age.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.4.2: Query string parameters.
+ACTIVITY 6.4.2: Query string parameters.
+Refer to the animation above.
+Refer to the animation above.
+1) If name is not found in the query string,
+1) If name is not found in the query string,
+the webpage says "Hello, undefined!"
+the webpage says "Hello, undefined!"
+0 True
+0 True
+O False
+O False
+2) If the query string contains
+2) If the query string contains
+"name=Doctor+Who", the webpage
+"name=Doctor+Who", the webpage
+says "Hello, Doctor+Who!"
+says "Hello, Doctor+Who!"
+O True
+O True
+0 False
+0 False
+3) If the query string contains
+3) If the query string contains
+"city=Dallas", the city is available in the
+"city=Dallas", the city is available in the
+route callback function as
+route callback function as
+res. query.city.
+res. query.city.
+0 True
+0 True
+0 False
+0 False
+Posting form data
+Posting form data
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+0
+0
+0
+0
+35/43
+35/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+When a form posts data to an Express route, the form's data is URL-encoded and sent in the body of
+When a form posts data to an Express route, the form's data is URL-encoded and sent in the body of
+the HTTP request. The express.urlencoded() method is middleware that parses URL-encoded data in
+the HTTP request. The express.urlencoded() method is middleware that parses URL-encoded data in
+a request body and adds the parsed values to the req. body object.
+a request body and adds the parsed values to the req. body object.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.4.3: Extracting posted form data.
+ACTIVITY 6.4.3: Extracting posted form data.
+public/hello.html
+public/hello.html
+<form method="post" action="/hello">
+<form method="post" action="/hello">
+<p>
+<p>
+<label>Name? <input type="text" name="name" ></label>
+<label>Name? <input type="text" name="name" ></label>
+</p>
+</p>
+<p>
+<p>
+<label>Age? <input type="number" name="age" ></label>
+<label>Age? <input type="number" name="age" ></label>
+</p>
+</p>
+<input type="submit" value="Submit">
+<input type="submit" value="Submit">
+</form>
+</form>
+server.js
+server.js
+const express = require ("express" );
+const express = require ("express" );
+const app = express ();
+const app = express ();
+http:/ !local host:3000/hello
+http:/ !local host:3000/hello
+Hello, Tamika!
+Hello, Tamika!
+You are 24 years old.
+You are 24 years old.
+POST /hello HTTP/1 .1
+POST /hello HTTP/1 .1
+D
+D
+app . use (express . static ("public" )); Content-Type: application/x-www-form-urlencode
+app . use (express . static ("public" )); Content-Type: application/x-www-form-urlencode
+app . use (express . urlencoded ({ extended : false }));
+app . use (express . urlencoded ({ extended : false }));
+app . post ("/hello" , function (req, res )
+app . post ("/hello" , function (req, res )
+} ) ;
+} ) ;
+const html = '<hl>Hello, ${ req . body . name }!</hl>
+const html = '<hl>Hello, ${ req . body . name }!</hl>
+<p>You are ${ reg . body . age } years old.</p>' ;
+<p>You are ${ reg . body . age } years old.</p>' ;
+res . send (html );
+res . send (html );
+app . listen (3000);
+app . listen (3000);
+Animation content:
+Animation content:
+Two blocks of code are shown. public/hello.html:
+Two blocks of code are shown. public/hello.html:
+<form method="post" action="/hello">
+<form method="post" action="/hello">
+<p>
+<p>
+<label>Name? <input type="text" name="name"></label>
+<label>Name? <input type="text" name="name"></label>
+</p>
+</p>
+<p>
+<p>
+<label>Age? <input type="number" name="age"></label>
+<label>Age? <input type="number" name="age"></label>
+</p>
+</p>
+<input type="submit" value="Submit">
+<input type="submit" value="Submit">
+</form>
+</form>
+And server.js:
+And server.js:
+const express = require("express");
+const express = require("express");
+const app = express();
+const app = express();
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+name=Tamika&age=24
+name=Tamika&age=24
+Parsed URL-encoded data
+Parsed URL-encoded data
+req .body.name = Tamika
+req .body.name = Tamika
+req.body.age = 24
+req.body.age = 24
+36/43
+36/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+app.use(express.static("public"));
+app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
+app.post("/hello", function(req, res) {
+app.post("/hello", function(req, res) {
+const html= '<h1 >Hello, ${req.body.name}!</h1 >
+const html= '<h1 >Hello, ${req.body.name}!</h1 >
+<p>You are S{req.body.age} years old.</p> ';
+<p>You are S{req.body.age} years old.</p> ';
+res.send(html);
+res.send(html);
+});
+});
+app. listen(3000);
+app. listen(3000);
+zyBooks
+zyBooks
+A web browser with the URL http://localhost:3000/hello.html is shown. On the screen a name and
+A web browser with the URL http://localhost:3000/hello.html is shown. On the screen a name and
+age field is displayed. The user types Tamika for name and 24 for age. Pressing submit sends the
+age field is displayed. The user types Tamika for name and 24 for age. Pressing submit sends the
+following request to the Express server:
+following request to the Express server:
+POST /hello HTTP/1 .1
+POST /hello HTTP/1 .1
+Content-Type: a ppl ication/x-www-form-u rlencoded
+Content-Type: a ppl ication/x-www-form-u rlencoded
+name= Tamika&age=24
+name= Tamika&age=24
+Next the Parsed URL-encoded data is shown as the following:
+Next the Parsed URL-encoded data is shown as the following:
+req .body.name = Tamika
+req .body.name = Tamika
+req.body.age = 24
+req.body.age = 24
+The Express server sends the following to the web browser screen:
+The Express server sends the following to the web browser screen:
+Hello, Tamika!
+Hello, Tamika!
+You are 24 years old.
+You are 24 years old.
+Animation captions:
+Animation captions:
+1. Express is configured to serve files in the "public" directory.
+1. Express is configured to serve files in the "public" directory.
+2. express.urlencoded() returns middleware that only parses HTTP request bodies when
+2. express.urlencoded() returns middleware that only parses HTTP request bodies when
+Content-Type: application/x-www-form-urlencoded is present in the header.
+Content-Type: application/x-www-form-urlencoded is present in the header.
+3. The web browser requests hello.html from the Express server and renders the webpage.
+3. The web browser requests hello.html from the Express server and renders the webpage.
+4. The user enters her name and age and presses Submit. A POST request with the user's name
+4. The user enters her name and age and presses Submit. A POST request with the user's name
+and age is sent to the Express server.
+and age is sent to the Express server.
+5. The middleware decodes posted data from the HTTP request body and attaches the data to
+5. The middleware decodes posted data from the HTTP request body and attaches the data to
+req .body.
+req .body.
+6. The request is posted to the /hello route callback function, which returns a response saying
+6. The request is posted to the /hello route callback function, which returns a response saying
+hello to the user.
+hello to the user.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.4.4: Posting form data.
+ACTIVITY 6.4.4: Posting form data.
+Refer to the animation above.
+Refer to the animation above.
+1) When the form is submitted to the
+1) When the form is submitted to the
+Express server, what is the ContentType?
+Express server, what is the ContentType?
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+37/43
+37/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+2)
+2)
+3)
+3)
+0 text/html
+0 text/html
+O application/x-www-formurlencoded
+O application/x-www-formurlencoded
+0 application/json
+0 application/json
+If the user clicks Submit without
+If the user clicks Submit without
+entering a name, what does the
+entering a name, what does the
+resulting webpage display?
+resulting webpage display?
+0 Hello,!
+0 Hello,!
+0 Hello, Bob!
+0 Hello, Bob!
+0 Hello, Express!
+0 Hello, Express!
+Is the express. static ()
+Is the express. static ()
+middleware?
+middleware?
+0 Yes
+0 Yes
+0 No
+0 No
+method
+method
+Route parameters
+Route parameters
+zyBooks
+zyBooks
+0
+0
+0
+0
+Express applications often use routes with data in the URL path to generate dynamic webpages. A
+Express applications often use routes with data in the URL path to generate dynamic webpages. A
+route parameter is a string near or at the end of the URL path that specifies a data value. A route
+route parameter is a string near or at the end of the URL path that specifies a data value. A route
+parameter's name is defined in the route path with a colon(:) before the parameter name. Ex: In the
+parameter's name is defined in the route path with a colon(:) before the parameter name. Ex: In the
+route path "/users/:username", "username" is a route parameter's name. Route parameters are
+route path "/users/:username", "username" is a route parameter's name. Route parameters are
+attached to the req.params object. I PARTICIPATION
+attached to the req.params object. I PARTICIPATION
+ACTIVITY 6.4.5: Extracting route parameters. D
+ACTIVITY 6.4.5: Extracting route parameters. D
+http:/ /local host:3000/users/jblack
+http:/ /local host:3000/users/jblack
+Profile for jblack
+Profile for jblack
+app . get ("/users/:username" , function (req, res ) {
+app . get ("/users/:username" , function (req, res ) {
+const username = req . params . username ;
+const username = req . params . username ;
+res . send ("<hl>Profile for" + username + "</hl>"
+res . send ("<hl>Profile for" + username + "</hl>"
+} ) ;
+} ) ;
+Animation content:
+Animation content:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 38/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+A web browser is shown with the URL http://localhost:3000/user/jblack and the code block:
+A web browser is shown with the URL http://localhost:3000/user/jblack and the code block:
+app.get("/users/:username", function(req, res) {
+app.get("/users/:username", function(req, res) {
+const username = req .params.username;
+const username = req .params.username;
+res.send("<h1 >Profile for"+ username + "</h1 >");
+res.send("<h1 >Profile for"+ username + "</h1 >");
+});
+});
+The browser requests /user/jblack, which matches the /users/:username route format. The routes
+The browser requests /user/jblack, which matches the /users/:username route format. The routes
+callback function extracts jblack from req.params.username to store in username. res.send() sends
+callback function extracts jblack from req.params.username to store in username. res.send() sends
+back a response to the web browser and displays "Profile for jblack" on the screen.
+back a response to the web browser and displays "Profile for jblack" on the screen.
+Animation captions:
+Animation captions:
+1. The browser requests /user/jblack, which matches the /users route with the :username
+1. The browser requests /user/jblack, which matches the /users route with the :username
+parameter name.
+parameter name.
+2. The route's callback function extracts the username "jblack" from the req.params object.
+2. The route's callback function extracts the username "jblack" from the req.params object.
+3. res.send() sends back a response with the username.
+3. res.send() sends back a response with the username.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.4.6: Route parameters.
+ACTIVITY 6.4.6: Route parameters.
+Refer to the animation above.
+Refer to the animation above.
+1) If the URL path is /users/abc, the
+1) If the URL path is /users/abc, the
+webpage says "Profile for abc"
+webpage says "Profile for abc"
+0 True
+0 True
+0 False
+0 False
+2) If the URL path is /users/, the
+2) If the URL path is /users/, the
+webpage says "Profile for "
+webpage says "Profile for "
+0 True
+0 True
+O False
+O False
+3) If the URL path is /city /Denver, the
+3) If the URL path is /city /Denver, the
+city is available in the route callback
+city is available in the route callback
+function below as
+function below as
+req. par ams.city.
+req. par ams.city.
+app . get ("/city/:cityName" ,
+app . get ("/city/:cityName" ,
+function (req, res ) {
+function (req, res ) {
+} ) ;
+} ) ;
+O True
+O True
+0 False
+0 False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+0
+0
+0
+0
+39/43
+39/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+Route parameter middleware
+Route parameter middleware
+The Express object's param() method defines parameter middleware that executes before a route's
+The Express object's param() method defines parameter middleware that executes before a route's
+callback function. The middleware function has a fourth parameter that contains the value assigned
+callback function. The middleware function has a fourth parameter that contains the value assigned
+to the route parameter.
+to the route parameter.
+The figure below shows the username parameter being examined in the parameter middleware. If the
+The figure below shows the username parameter being examined in the parameter middleware. If the
+username is "jblack", the user's name is "Jack Black". Otherwise, the user's name is unknown. The req
+username is "jblack", the user's name is "Jack Black". Otherwise, the user's name is unknown. The req
+object is modified to contain a user object with properties name and username. A real-world
+object is modified to contain a user object with properties name and username. A real-world
+application would replace the if-else statement with a database query that looks up names and
+application would replace the if-else statement with a database query that looks up names and
+usernames from a database.
+usernames from a database.
+Figure 6.4.1: Route parameter middleware example.
+Figure 6.4.1: Route parameter middleware example.
+II Parameter middleware executes before the route
+II Parameter middleware executes before the route
+app . param ("username" , function (reg, res , next , username )
+app . param ("username" , function (reg, res , next , username )
+} ) ;
+} ) ;
+II Check if username is recognized
+II Check if username is recognized
+if (username === "jblack" ) {
+if (username === "jblack" ) {
+reg . user = { name : "Jack Black" , username : username };
+reg . user = { name : "Jack Black" , username : username };
+else {
+else {
+reg . user { name : "Unknown" , username : username };
+reg . user { name : "Unknown" , username : username };
+II Continue processing the request
+II Continue processing the request
+next ();
+next ();
+app . get ("/users/:username" , function (reg, res ) {
+app . get ("/users/:username" , function (reg, res ) {
+II req.user contains the user info set in the parameter
+II req.user contains the user info set in the parameter
+middleware
+middleware
+res . send ("<hl>Profile for" + reg . user . name + "</hl>" );
+res . send ("<hl>Profile for" + reg . user . name + "</hl>" );
+} ) ;
+} ) ;
+/ ['.'.] I ocalhost3000/users/j b lac X
+/ ['.'.] I ocalhost3000/users/j b lac X
++- ➔ C D localhost:3000/users/jblack
++- ➔ C D localhost:3000/users/jblack
+Prortle for Jack Black
+Prortle for Jack Black
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 40/43
+11/17/24, 12:02 PM __________ zyBooks
+11/17/24, 12:02 PM __________ zyBooks
+1 ['.'.] localhost:3000/ users/as X
+1 ['.'.] localhost:3000/ users/as X
++- C D localhost3O00/users/asmith
++- C D localhost3O00/users/asmith
+Prortle for U nknol\rn
+Prortle for U nknol\rn
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 6.4.7: Route parameter middleware.
+ACTIVITY 6.4.7: Route parameter middleware.
+Refer to the code segment below.
+Refer to the code segment below.
+app . param ("zip" , function (req, res , next , zip ) {
+app . param ("zip" , function (req, res , next , zip ) {
+if (zip === "80015" ) {
+if (zip === "80015" ) {
+reg . forecast = {high : 95 , low : 72 };
+reg . forecast = {high : 95 , low : 72 };
+next ();
+next ();
+} ) ;
+} ) ;
+app . get ("/weather/:zip" , function (req, res ) {
+app . get ("/weather/:zip" , function (req, res ) {
+if (req . forecast ) {
+if (req . forecast ) {
+} ) ;
+} ) ;
+res . json (req . forecast );
+res . json (req . forecast );
+else {
+else {
+res . status (404) . json ({ error : "Unknown ZIP code" }) ;
+res . status (404) . json ({ error : "Unknown ZIP code" }) ;
+}
+}
+1) What response is returned for the following
+1) What response is returned for the following
+URL?
+URL?
+http://localhost:3000/weather/80015
+http://localhost:3000/weather/80015
+O A webpage that displays the high and low
+O A webpage that displays the high and low
+values
+values
+Q { "high": 95, "low": 72}
+Q { "high": 95, "low": 72}
+O { "error": "Unknown ZIP code"}
+O { "error": "Unknown ZIP code"}
+2) What response is returned for the following
+2) What response is returned for the following
+URL?
+URL?
+◄
+◄
+http://localhost : 3000/weather/12345
+http://localhost : 3000/weather/12345
+O A webpage that displays the high and low
+O A webpage that displays the high and low
+values
+values
+Q { "high": 95, "low": 72}
+Q { "high": 95, "low": 72}
+0 { "error": "Unknown ZIP code"}
+0 { "error": "Unknown ZIP code"}
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+D
+0
+0
+0
+0
+►
+►
+41/43
+41/43
+11/17/24, 12:02 PM
+11/17/24, 12:02 PM
+3) Suppose the next () function call in the
+3) Suppose the next () function call in the
+parameter middleware is removed. What
+parameter middleware is removed. What
+response is returned for the following URL?
+response is returned for the following URL?
+http://localhost : 3000/weather/80015
+http://localhost : 3000/weather/80015
+O The server returns a 404 status.
+O The server returns a 404 status.
+0 The server returns the JSON: { "high": 95,
+0 The server returns the JSON: { "high": 95,
+"low": 72}
+"low": 72}
+O The server does not return a response.
+O The server does not return a response.
+4) The res. j son () method encodes a
+4) The res. j son () method encodes a
+JavaScript object as JSON. What
+JavaScript object as JSON. What
+Content-Type is sent in the HTTP
+Content-Type is sent in the HTTP
+response when using res. j son ()?
+response when using res. j son ()?
+0 text/plain
+0 text/plain
+0 text/javascript
+0 text/javascript
+O application/json
+O application/json
+Exploring further:
+Exploring further:
+• Express API reference
+• Express API reference
+zyBooks
+zyBooks
+6.5 Lab: Amazon EC2 Server Tutorial
+6.5 Lab: Amazon EC2 Server Tutorial
+0
+0
+0
+0
+In this lab, you will follow a tutorial to set up a Node.js/Express server on an Amazon EC2 instance.
+In this lab, you will follow a tutorial to set up a Node.js/Express server on an Amazon EC2 instance.
+1. Complete the tutorial at: (a) AWS EC2 Tutorial Document (Amazon Embedded Linux, Node.js,
+1. Complete the tutorial at: (a) AWS EC2 Tutorial Document (Amazon Embedded Linux, Node.js,
+Express)., and (b) AWS EC2 Tutorial Slide Deck
+Express)., and (b) AWS EC2 Tutorial Slide Deck
+2. Create new info.html and info.css files using the templates provided in the link below. Update the
+2. Create new info.html and info.css files using the templates provided in the link below. Update the
+template with your information and include a photo of yourself. info.html and info.css Templates
+template with your information and include a photo of yourself. info.html and info.css Templates
+3. Make sure to replace the information with yours, and save the files as info.html, info.css, and
+3. Make sure to replace the information with yours, and save the files as info.html, info.css, and
+your photo as photo.jpg.
+your photo as photo.jpg.
+4. Add the files to the appropriate locations on your server:
+4. Add the files to the appropriate locations on your server:
+o info.html should be located in the directory myapp/public.
+o info.html should be located in the directory myapp/public.
+o info.css should be located in the directory myapp/public/stylesheets
+o info.css should be located in the directory myapp/public/stylesheets
+o photo.jpg should be located in the directory myapp/public/images.
+o photo.jpg should be located in the directory myapp/public/images.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 42/43
+11/17/24, 12:02 PM zyBooks
+11/17/24, 12:02 PM zyBooks
+o Be sure to upload a photo of yourself.
+o Be sure to upload a photo of yourself.
+5. Then, in this lab, submit a lab.html file with complete links (i.e., with port number) to your
+5. Then, in this lab, submit a lab.html file with complete links (i.e., with port number) to your
+info.html webpage on your server.
+info.html webpage on your server.
+6. The unit test in this lab will only check that the submitted lab.html file contains a link to your
+6. The unit test in this lab will only check that the submitted lab.html file contains a link to your
+server. The complete grading of the lab will occur by visiting your server. Again, be sure to keep
+server. The complete grading of the lab will occur by visiting your server. Again, be sure to keep
+your server running.
+your server running.
+I ~~MTV 6.5.1 : Lab: Amazon EC2 Server Tutorial 1/1 .
+I ~~MTV 6.5.1 : Lab: Amazon EC2 Server Tutorial 1/1 .
+Submission Instructions
+Submission Instructions
+Downloadable files
+Downloadable files
+lab.html Download
+lab.html Download
+Upload your files below by dragging and dropping into the area or choosing a file on your hard
+Upload your files below by dragging and dropping into the area or choosing a file on your hard
+drive.
+drive.
+lab.html
+lab.html
+Drag file here
+Drag file here
+or
+or
+Choose on hard drive.
+Choose on hard drive.
+Submit for grading
+Submit for grading
+Coding trail of your work What is this?
+Coding trail of your work What is this?
+11/3 Ul min:1
+11/3 Ul min:1
+Latest submission - 9:14 PM MST on
+Latest submission - 9:14 PM MST on
+11/03/24
+11/03/24
+D Only show failing tests
+D Only show failing tests
+1 :QUnit test A
+1 :QUnit test A
+HTML has at least 1 <a> tag
+HTML has at least 1 <a> tag
+✓ HTML has at least 1 <a> tag
+✓ HTML has at least 1 <a> tag
+Submission passed all ✓ Total score: 1
+Submission passed all ✓ Total score: 1
+tests I 1
+tests I 1
+Download this submission
+Download this submission
+1 / 1
+1 / 1
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 43/43

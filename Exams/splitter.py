@@ -60,4 +60,4 @@ def split_sections(input_filepath):
         print(f"Section {current_section.strip()} saved to {output_filepath}")
 
 # Example usage
-split_sections('raw/chp5text.txt')
+split_sections('raw/chp6text.txt')

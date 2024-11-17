@@ -1,0 +1,1657 @@
+11/17/24, 12:02 PM zyBooks
+6.1 Full-stack development (Node)
+Overview of front-end and back-end development
+Most websites and web applications require the development of client-side technologies that interact
+with server-side technologies. Client-side (or front-end) refers to those technologies that run in the
+web browser like HTML, CSS, and JavaScript. Server-side (or back-end) refers to those technologies
+that run on the web server like PHP, Python, Node.js, etc. and databases. Ex: Amazon uses server-side
+technologies to store information on millions of products and a client-side search interface that
+interacts with the web server so customers can find and purchase products.
+Figure 6.1.1: Front-end and back-end technologies.
+Web browser
+◄
+PHP,
+Python,
+ASP.NET,
+Nade.js
+Web server
+Back-end
+Database
+►
+A front-end developer is a developer that is proficient in client-side technologies. A back-end
+developer is a developer that is proficient in server-side technologies. Many developers strive to be
+proficient in both front-end and back-end technologies and how the two sides work together. A fullstack
+developer is a developer who has expertise in all aspects of a website or web application's
+development, including client technologies, server technologies, data modeling, and user interfaces.
+The "stack" in "full-stack" refers to the various layers that compose websites and web applications.
+Technology stacks have increased in complexity over the years, so even "full-stack" developers
+typically specialize in a few areas of the technology stack. I PARTICIPATION
+ACTIVITY 6.1.1 : Primary layers of the full stack. D
+If unable to drag and drop, refresh the page.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 1/43
+11/17/24, 12:02 PM zyBooks
+Business logic Testing framework Application Programming Interface (API)
+Server and hosting environment Data modeling User interface (UI)
+Web hosting
+Issues regarding network throughput,
+cloud storage, virtualization, hardware
+constraints, multithreading, and data
+redundancy.
+Representing, storing, and retrieving
+application data in relational and nonrelational
+databases.
+Programming logic on the front or
+back-end that determines how data
+can be created, displayed, stored, and
+changed.
+Programmable actions that may be
+performed on the underlying data.
+Often used by the front-end to interact
+with the back-end.
+Visual part of the application that
+users interact with.
+Automated tests that verify the web
+application components are working
+properly, independently and together.
+When creating a web application, developers must decide where the application and application data
+are going to be hosted. Large companies like Google, Amazon, and Facebook have the resources to
+host their web applications on their own servers. Smaller companies and individuals often outsource
+their server hosting to web hosting companies. A web hosting company is a company that hosts
+others' websites on the company's servers, usually for a fee. Factors to consider when choosing a
+web hosting company include:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 2/43
+11/17/24, 12:02 PM zyBooks
+• Reliability: Many web hosting companies guarantee a certain level of uptime, and the level can
+be increased by paying more. Some companies backup data daily, and others provide little to no
+backups.
+• Flexibility: Websites that become popular may need to quickly scale-up to handle more users.
+Web hosting companies may offer a virtual private server that can quickly be duplicated on other
+servers to meet high demand. A virtual private server (VPS) is an autonomous server that is
+hosted on a physical server with other virtual servers. Amazon Web Services (AWS) allows
+organizations to host virtual servers in the Amazon cloud that can quickly scale-up hosted
+websites when necessary.
+• Security: Hackers may attempt to access a website's data or upload malware to a hosted
+website that attacks the website, other hosted websites, or the website's users. Ma/ware is
+malicious software designed to cripple a computer system or perform unwanted actions. Some
+hosting companies offer extra security measures like encrypting web traffic or providing
+dedicated servers in heavily-guarded data centers.
+• Price: Some web hosting companies offer limited services for free and subsidize lost income
+with advertising. Prices go up depending on reliability, services provided, security, amount of
+traffic, etc. The most expensive plans usually involve dedicated hosting where the customer is
+given full control over the web server.
+The choice of platform dictates many of the web application's implementation decisions, since certain
+server-side technologies are only offered on certain platforms. Most web hosting companies provide a
+Linux or Windows server to host the website. Linux servers typically use open-source software:
+Apache web server with support for PHP, Python, Ruby, or Perl, and the MySQL database system.
+Windows servers generally run Microsoft's IIS web server, which supports ASPNET and the SQL
+Server database system. Linux servers usually cost less than Windows servers because of the use of
+open-source software. I PARTICIPATION
+ACTIVITY 6.1.2: Web hosting.
+1) A small company may host the
+company's own website on the
+company's own web server.
+0 True
+O False
+2) A web hosting company that hosts
+websites for free is likely to provide
+services like backup, unlimited email
+addresses, and 24-hour customer
+support.
+0 True
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+0
+3/43
+11/17/24, 12:02 PM
+0 False
+3) A VPS generally runs slower than a
+dedicated host.
+0 True
+O False
+4) Web hosting companies provide
+various levels of security.
+0 True
+O False
+5) Web hosting companies generally
+charge more for hosting on Linux
+servers than for hosting on Windows
+servers.
+0 True
+O False
+Server-side programming
+zyBooks
+0
+0
+0
+Web developers have a wide range of options when choosing a server-side programming platform or
+language. When choosing a server-side programming platform, developers must consider:
+• Server platform: Some web servers support certain languages and not others. Ex: IIS supports
+ASPNET, and Apache supports PHP
+• Tool support: Some tools are ideal for working with certain programming languages. Ex:
+PhpStorm is ideal for PHP development, and Visual Studio is ideal for ASPNET.
+• Developer experience: JavaScript developers may choose Node.js instead of learning a new
+language like C#. Developers who are new to web development might already know Java or
+Python and prefer those languages.
+• Library support: Some languages may have pre-built libraries that support some web
+applications better than others.
+I PARTICIPATION
+ACTIVITY 6.1.3: Server-side programming platforms and languages.
+If unable to drag and drop, refresh the page.
+i½iitiii Ill it@■ Ruby on Rails
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+4/43
+11/17/24, 12:02 PM zyBooks
+Scripting language created in 1994 by
+Rasmus Lerdorf. Currently the most
+popular server-side language in use.
+Collection of web development
+technologies first released in 2002 by
+Microsoft that uses the C# or VB.NET
+programming languages.
+General-purpose scripting language
+created by Guido van Rossum in the
+1990s that uses frameworks like
+Django, web2py, and Flask to create
+web applications.
+Web application framework written in
+Ruby and created by David Heinemeier
+Hansson in 2004.
+Used to create applets on the frontend
+and servlets, JavaServer Pages,
+and web APls on the back-end.
+Runtime environment that uses
+modules written in JavaScript.
+Originally created in 2009 by Ryan
+Dahl.
+Developers have traditionally used server-side technologies to generate dynamic webpages. A
+dynamic webpage is a webpage that is generated on the web server when requested, typically
+personalized to the user who requested the page. With advances in web browsers, developers have
+begun creating static webpages that are dynamically altered by JavaScript. In this new paradigm,
+server-side technologies are used primarily to respond to Ajax requests and send data to the front-end
+for rendering.
+Single Page Applications are an example of modern web development. A Single Page Application
+(SPA) is a web application that provides a similar user experience as a desktop application, all in a
+single webpage. Ex: Gmail, Google Docs, and Google Calendar are all SPAs. An SPA initially loads all of
+the application's resources so subsequent user interaction results in loading small pieces of content
+dynamically. Much of an SPA's programming logic is written in JavaScript, which loads data via Ajax
+calls to a web API. A web AP/ is a collection of functions that are invoked using HTTP. Ex: An HTTP
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 5/43
+11/17/24, 12:02 PM zyBooks
+GET request to the URL https://linkedin.com/api/contacts may retrieve a list of all contacts from the
+web server.
+I PARTICIPATION 6.1.4: Cool Contacts SPA.
+ACTIVITY
+Web browser
+http://coolcontacts.neU
+■ Sue
+■ Joe
+I■ Becky
+Gary
+Becky
+b@email.com
+123-4567
+Animation content:
+Initial request
+html, js, css
+API: Get all contacts
+All contacts
+API: Get Becky details
+Becky's details
+D
+Web server
+Database
+query
+contacts
+query
+details
+A web browser called http://coolcontacts.net/, a web server, and a database are shown. The web
+browser sends an initial request to the web server for the Cool Contacts web app. The web server
+sends back all resources needed for the app in multiple request-response messages in HTML,
+JavaScript, and CSS. The web browser uses web API to request all contacts from the web server.
+The web server sends a query for the contacts to the database, which sends back all contacts to the
+web server, who passes it to the web app and the contacts are displayed on the web browser. When
+the user selects a contact, the web browser uses web API to request details for the selected contact
+from the web server. The web server sends a query for the details to the database, which gets sent
+back to the web server, who passes it to the web app and the contact details are displayed on the
+web browser.
+Animation captions:
+1. Initial request for CoolContacts web app sent to the web server.
+2. All resources needed for app are downloaded in multiple request-response messages.
+3. JavaScript uses web API to request all contacts.
+4. All contacts are retrieved from the database and sent back to the web app for displaying.
+5. User selects a contact from the web app.
+6. JavaScript uses web API to request details for selected contact.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 6/43
+11/17/24, 12:02 PM zyBooks
+7. Web server requests Becky's details from the database and sends the details back to the web
+app for displaying.
+I PARTICIPATION
+ACTIVITY 6.1.5: Server-side programming platforms.
+1) A dynamic webpage might look
+different for two different users who
+are accessing the same page.
+0 True
+O False
+2) The business logic of an SPA should
+generally be encoded in the front-end.
+0 True
+0 False
+3) SPAs generally result in less data being
+sent over the network than web
+applications developed with
+dynamically generated webpages.
+0 True
+0 False
+4) Developers use ASPNET, Java, PHP,
+Python, Node.js, and Ruby on Rails to
+create web APls.
+0 True
+0 False
+Databases
+D
+0
+0
+0
+0
+Websites and web applications normally store and retrieve information from a database and have
+traditionally used relational databases. A relational database stores data in relations (usually called
+tables). The Structured Query Language (SQL) is a language for creating, editing, selecting, and
+deleting data in a relational database. Popular relational database management systems (RDBMS)
+include MySQL, PostgreSQL, Oracle, and SOL Server.
+Non-relational databases, sometimes called non-SQL or NoSQL databases, have become increasingly
+popular over the last few years. Non-relational databases use different methods to store and retrieve
+data using a variety of data access languages. Non-relational databases come in several flavors:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 7/43
+11/17/24, 12:02 PM zyBooks
+• Document database: For storing documents in JSON format with many levels of nesting. Ex:
+MongoDB.
+• Key-value database: For storing values that are associated with unique keys. Ex: Redis.
+• Object database: For storing objects created in object-oriented programming languages. Ex:
+Cache.
+• Column database: For storing and processing large amounts of data using pointers that link to
+columns distributed over a cluster. Ex: HBase.
+• Graph database: For storing graph structures with nodes and edges. Ex: Neo4j.
+The figure below illustrates how information about students might be stored in a relational database
+with a table versus a document database using JSON-like documents. The "SELECT" statement is an
+SQL statement used to extract students with a 3.0 GPA or above from the table. The "db.students.find"
+statement is a MongoDB function used to extract the same information from the document database.
+Figure 6.1.2: Relational database vs. document database for student data.
+Relational database
+stu ld name gpa
+123 Sus.;m 3.1
+456 Billy 2.5
+987 Al ice 4,0
+SELECT* FROM st udents
+HERE gpa >= 3.0;
+ll3 Sus-an 3,1
+987 Alice 4,0
+◄
+I PARTICIPATION
+ACTIVITY 6.1 .6: Databases.
+1) Relational databases will likely not be
+used for many web applications in the
+future.
+O True
+O False
+l
+Document database
+{ stuld; 123, name: ' Susan' , gpa: 3.l },
+{ stuld: 456, name: "Billy", gpa : 2,5 },
+{ stuld: 987, name: ' Alice", gpa: 4.0 }
+db. stuclen s. find( {gpa: {$g e; 3 . 0}}) ;
+I
+{ stuld: 123, name: "Susan,", gpa: 3.1 },
+{ st uld: 987, name: "Alice", gpa: 4.0 }
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+►
+D
+0
+8/43
+11/17/24, 12:02 PM
+2) A relational database can be used to
+store documents, objects, graphs, and
+key-value pairs.
+0 True
+O False
+3) Column databases are generally faster
+than relational databases for accessing
+vast amounts of data.
+0 True
+O False
+4) Both relational and non-relational
+databases have been implemented
+with open source software.
+0 True
+O False
+Client-side technologies
+zyBooks
+0
+0
+0
+The user interface (UI) governs the interaction between users and web applications. Developers use
+HTML, CSS, and JavaScript to create the UI. Various tools exist to aid UI development:
+• An HTML preprocessor is a program that converts a markup language into HTML. The markup
+languages supported by HTML preprocessors are generally easier to use and read than HTML.
+Ex: Haml, Markdown, Slim, Pug.
+• A CSS preprocessor is a program that converts a CSS-like language into CSS. CSS-like
+languages simplify the development of CSS stylesheets used in large projects. Ex: Sass, Less,
+Stylus.
+• A UI library is a library that creates UI widgets like sliders, dialog boxes, and drop-downs or
+simplify DOM manipulation. Ex: jQuery UI, Bootstrap, YUi, Ext JS. Libraries like React and Vue.js
+support more extensive UI management.
+• A CSS front-end framework is a framework that uses CSS or CSS pre-processors to aid in
+developing responsive websites that work well on every screen size. Ex: Bootstrap, YAML 4,
+Skeleton, Foundation.
+Most modern web applications use an extensive amount of JavaScript, so developers use various
+tools to aid in JavaScript development:
+• A compile-to-JavaScript language is a programming language that is compiled into JavaScript.
+Compile-to-JavaScript languages provide benefits lacking in JavaScript like type safety,
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 9/43
+11/17/24, 12:02 PM zyBooks
+I
+simplified class creation, and module creation. Ex: Typescript, CoffeeScript, and Haxe.
+• A JavaScript framework is a JavaScript environment that dictates the organization of the
+application's JavaScript to simplify many programming tasks. JavaScript frameworks often
+dictate how UI widgets receive data or send data to the web server. Ex: Angular JS, Backbone,
+Ember.
+Figure 6.1.3: Example use of HTML and CSS preprocessors and compile-toJavaScript.
+nav
+ul
+About
+Sales
+◄
+Haml
+li
+a href=' / home' Home
+li
+a href=' / about'
+li
+a href=' / sales'
+I
+Less
+<nav>
+<ul>
+Resulting HTML
+<li><a href="/home" >Home</a ></li>
+<li><a href="/about" >About</ a>
+</ li>
+<li><a href="/sales">Sales</a>
+</li>
+</ul>
+</nav>
+Resulting CSS
+-
+@nice-green : #097911;
+@light-green : @nice-green + #111; header {
+header {
+color : @light-green;
+.logo {
+width : 250px ;
+CoffeeScript
+math =
+root : Math . sqrt
+square : (x ) -> x * x
+I
+color : #la8a22 ;
+header .logo {
+width : 250px ;
+Resulting JavaScript
+-
+math = {
+} ;
+root : Math . sqrt ,
+square : funct ion (x )
+return x * x ;
+►
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 10/43
+11/17/24, 12:02 PM
+ACTIVITY 6.1 .7: Client-side technologies. I PARTICIPATION I
+1) Ham I code can be rendered directly in a
+web browser.
+0 True
+0 False
+2) CSS preprocessors allow developers to
+write much less code compared to
+writing straight CSS.
+0 True
+0 False
+3) UI libraries always use JavaScript to
+govern the behavior of the UI widgets.
+0 True
+O False
+4) CSS front-end frameworks are required
+to build responsive websites that work
+well on mobile devices.
+0 True
+O False
+5) Typescript code is executed by the web
+browser.
+0 True
+0 False
+6) JavaScript frameworks often simplify
+the use of web APls in the browser.
+0 True
+0 False
+Testing
+zyBooks u
+0
+0
+0
+0
+0
+0
+Developers must test the full technology stack used by web applications. A variety of testing
+frameworks exist to automate the testing of web applications. Ex: Selenium is used to automate a test
+user's interaction with a web application and verify that the UI behaves correctly.
+I r7
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 11/43
+11/17/24, 12:02 PM zyBooks I PARTICIPATION I
+ACTIVITY 6.1 .8: Testing a web application.
+If unable to drag and drop, refresh the page.
+Compatibility testing Interface testing Performance testing Usability testing
+Security testing Functionality testing
+Exploring further:
+• Ranking of database SY.Stems
+Verifying that each individual
+application function is working as
+expected.
+Testing the interaction between the
+front-end and back-end and the
+interactions between the server-side
+programs and the database.
+Testing the user's ability to properly
+use the web application for specific
+purposes.
+Testing the web application's ability to
+work on various browsers, operating
+systems, and platforms.
+Verifying the web server is able to
+respond reasonably under various load
+conditions.
+Ensuring the integrity and privacy of
+the user's data and interactions with
+the web application.
+• 6 Current Options for CSS Preprocessors
+• Best languages that compile to JavaScript
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+l_J
+12/43
+11/17/24, 12:02 PM zyBooks
+• TOR JavaScriQt Frameworks, Libraries and Tools and When to Use Them
+• Summary of web application testing methodologies and tools
+6.2 Getting started with Node.js
+Introduction to Node.js
+Node.js is a JavaScript runtime environment that is primarily used to run server-side web applications.
+Node.js has many benefits:
+• The event-driven, non-blocking 1/0 architecture of Node.js allows Node.js to handle high loads.
+• Node.js allows developers to write JavaScript on the server and client, simplifying some
+development tasks.
+• Node.js provides a simple mechanism to create and distribute modules. A Node.js module is a
+JavaScript file that provides some useful functionality.
+• Node.js works seamlessly with MongoDB, a document database that stores JSON and uses
+JavaScript as a query language. Web development is greatly simplified when JSON is used
+between the client and server, and between the server and database.
+Companies using Node.js include Netflix, Walmart, Ebay, and Linked In. Adoption by these companies
+helped validate the Node.js approach and spur development of more Node.js modules.
+Figure 6.2.1: Number of publicly accessible modules for Node.js (npm) in
+2022 far exceeds other languages.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 13/43
+11/17/24, 12:02 PM
+Module C·ounts
+2500000
+CPAN
+Lil Maven Coolral (Java)
+[Ill npm {node.js)
+2000000 ii nuge (. NET)
+• PackaJJist (PHP)
+i!l' 'illf PyPI -
+1500000
+Iii Rubygems.org
+1000000
+500000 ~
+I I
+I I - - - 0
+Sep Nov
+Source: ModuleCounts.com
+◄
+I PARTICIPATION
+ACTIVITY 6.2.1: Introduction to Node.js.
+1) Node.js programs are written in
+JavaScript.
+0 True
+0 False
+2) Node.js programs run in the web
+browser.
+0 True
+O False
+3) Node.js has over one million modules.
+O True
+0 False
+Installing and running
+t-
+Jan
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+zyBooks
+I
+r
+i
+.~ -
+I ii
+- -
+Mar May Jul
+►
+D
+0
+0
+0
+14/43
+11/17/24, 12:02 PM zyBooks
+Developers may install Node.js using installers from the Node.js website for Windows, macOS, and
+other operating systems.
+After installing Node.js, a developer can start the Node.js interactive shell and execute JavaScript
+statements. The figure below shows a command line prompt from which the user started the Node.js
+interactive shell by entering "node". The ".exit" command exits the interactive shell.
+Figure 6.2.2: Node.js interactive shell.
+$ node
+Welcome to Node.js
+> cons ole . log("Hello,
+Node. js ! ")
+Hello, Node.js!
+undefined
+> X = 2
+2
+> .exit
+◄ ►
+A developer may write a Node.js program in a text editor and execute the program using the "node
+myprogram.js" command.
+Figure 6.2.3: Simple Node.js program.
+Online services
+II hello.js
+for (let i = 0 ; i < 5 ; i ++) {
+console . log ("Hello,
+Node. j s ! " ) ;
+}
+$ node hello. j s
+Hello, Node.js!
+Hello, Node . js!
+Hello, Node . js!
+Hello, Node.js!
+Hello, Node.js!
+◄
+Online IDEs like Reg_lit and StackBlitz allow developers to run Node.js programs in the
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 15/43
+11/17/24, 12:02 PM zyBooks
+cloud instead of installing Node.js on the developer's machine.
+I PARTICIPATION
+ACTIVITY 6.2.2: Running Node.js.
+1) The Node.js command-line program
+only runs on Windows.
+0 True
+0 False
+2) The command node test. j s starts
+the Node.js interactive shell.
+0 True
+O False
+3) A Node.js program can display output
+to the console using the
+console. log () method call.
+0 True
+0 False
+Creating a simple web server
+D
+0
+0
+0
+The http module allows a Node.js application to create a simple web server. The http module's
+createServer() method creates a web server that can receive HTTP requests and send HTTP
+responses. The listen() method starts the server listening for HTTP requests on a particular port. The
+server continues to run until the developer enters Ctrl+C to kill the Node.js application.
+The program below shows the http module being imported with require () . The require() function
+imports a module for use in a Node.js program. I PARTICIPATION
+ACTIVITY 6.2.3: A simple Node.js web server. D
+$ node server.js
+I I server.js
+canst http = require ("http" );
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 16/43
+11/17/24, 12:02 PM zyBooks
+http . createServer (function (request , response ) {
+response . writeHead (200, {"Content-Type" : "text/html" });
+response . write ("<hl>Hello, Node.js!</hl>" );
+response . end ();
+}) . listen (3000);
+... HTTP request
+Listening on """
+port 3000 HTTP response .._
+Web server
+Animation content:
+A block of code is shown:
+// server.js
+..
+http://localhost:3000/
+Hello, Node.jsl
+Web browser
+canst http = require("http");
+http.createServer(function(request, response) {
+response.writeHead(200, {"Content-Type": "text/html"});
+response.write("<h1 >Hello, Node.js!</h1 >");
+response.end();
+}).listen(3000);
+The following command line prompt is used to run server.js:
+S node server.js
+A web server listening on port 3000 is shown along with a web browser with the URL
+http://localhost:3000/. The web browser sends an HTTP request to the web server, which sends
+back an HTTP response that displays "Hello, Node.js!" on the web browser.
+Animation captions:
+1. server.js is executed from the command line.
+2. The require("http") command imports the "http" module.
+3. createServer() creates a web server object that calls the provided callback function when an
+HTTP request is received.
+4. listen() starts the web server listening on port 3000 for HTTP requests.
+5. The user enters a URL to access the web server running on the same machine on port 3000.
+6. The HTTP request is routed to the web server, causing the request callback function to
+execute.
+7. writeHead() creates an HTTP response with a 200 status code and text/html content type.
+8. write() sends the HTML to the HTTP response object.
+9. end() sends the HTTP response to the web browser, which renders the HTML.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 17/43
+11/17/24, 12:02 PM I PARTICIPATION
+ACTIVITY 6.2.4: Node.js web server.
+1) What method causes the web server to
+begin listening for HTTP requests?
+O require()
+0 createServer()
+O listen()
+2) What URL accesses a web server
+running locally and listening on port
+8080?
+0 http://localhost/
+0 http://localhost:8080/
+0 http://8080/
+3) What method sets the status code for
+the HTTP response?
+0 response.writeHead()
+0 response.write()
+0 response.end()
+4) What keyboard command kills the web
+server program?
+0 Ctrl+C
+0 Ctrl+Z
+0 Ctrl+X
+Projects and npm
+zyBooks
+D
+0
+0
+0
+0
+Node.js programs are typically organized into projects. A Node.js project is a collection of JavaScript
+files, packages, configuration files, and other miscellaneous files that are stored in a directory.
+Figure 6.2.4: Example Node.js project with a single JavaScript file.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 18/43
+11/17/24, 12:02 PM
+myproject
+L_
+server.js
+◄
+zyBooks
+►
+A package is a directory containing one or more modules and a package.json file. A package.json file
+contains JSON that lists the package's name, version, license, dependencies, and other package
+meta data.
+The Node Package Manager (npm) is the package manager for Node.js that allows developers to
+download, install, and update packaged modules. npm is installed with Node.js and is executed from
+the command line.
+Figure 6.2.5: Display npm's version.
+~
+~
+◄ ►
+npm can install packages in one of two modes:
+• Local mode: Packages are installed in a node_ modules directory in the parent working
+directory. Ex: npm install mypackage
+• Global mode: Packages are installed in a {prefix} /node_modules directory, where
+{prefix} is a location set in npm's configuration. The --global flag (or -g) directs npm to
+install in global mode. Ex: npm install mypackage --global
+Local mode is ideal for installing project dependencies. A dependency is a package that a Node.js
+project must be able to access to run. Global mode is typically for installing command-line tools.
+Figure 6.2.6: Get npm's prefix directory where global packages are installed.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 19/43
+11/17/24, 12:02 PM
+$ npm config get prefix
+/usr/local
+zyBooks
+The prefix directory will be different for Windows
+users.
+◄ ►
+The figure below shows a developer installing the nodemon package globally. Nodemon is a utility that
+saves developers time by restarting a Node.js application whenever the files in a project are modified.
+Figure 6.2.7: Installing and running nodemon.
+$ npm install nodemon --global
++ nodemon@l.19.1
+added 147 packages from 90 contributors in
+41. 265s
+$ nodemon myproject/server.js
+[nodemon] 1.9.1
+[nodemon] to restart at any time, enter 'rs·
+[nodemon] watching: *.*
+[nodemon] starting 'node myproject\server.js'
+◄ ►
+Underscore is a library of helpful functions that extends some built-in JavaScript objects. The figure
+below shows a developer changing to the myproj ect directory that stores a Node.js project,
+installing underscore as a local package, and producing a list of the project's local packages. The
+underscore module is stored in myproject/node_modules/underscore.
+Figure 6.2.8: Installing "underscore" as a local package.
+$ cd myproject
+$ npm install underscore
++ underscore@l.9 . 1
+added 1 package from 1 contributor and audited 1 package in
+1.983s
+$ npm list
+/myproject
+I._ underscore@l.9.1
+◄
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+►
+20/43
+11/17/24, 12:02 PM zyBooks
+A module is imported and assigned to a variable with require () . Good practice is to assign imported
+modules to variables that are named similar to the module name. Ex: Variable http for the "http"
+module. However, the underscore module is usually assigned to the variable_, as shown in the figure
+below.
+Figure 6.2.9: Using the underscore package to get random dice rolls.
+canst http = require ("http" );
+canst = require ("underscore" );
+http . createServer (function (request , response ) {
+response . writeHead (200, {"Content-Type" : "text/html" });
+response . write ("<!DOCTYPE html>\n<html>\n" );
+response . write ("<title>Dice Roll</title>\n" );
+response . write ("<body>\n" );
+for (let i = 0 ; i < 5 ; i ++)
+II Use underscore to get a random number between 1 and 6
+let randNum = . random (l, 6);
+response . write ("<p>" + randNum + "</p>\n" );
+response . write ("</body>\n</html>" );
+response . end ();
+}) . listen (3000);
+<!DOCTYPE html>
+<html>
+<title>Dice Roll</title>
+<body>
+<p>3</p>
+<p>S</p>
+<p>S</p>
+<p>6</p>
+<p>l</p>
+</body>
+</html>
+◄
+Table 6.2.1: Summary of npm commands.
+Command Description
+conf ig Manage npm configuration files
+I
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+Example
+npm config list
+npm config get
+prefix
+►
+21/43
+11/17/24, 12:02 PM zyBooks
+Command Description
+install Install package locally or globally (-g)
+list
+List all installed local or global (-g)
+packages
+update Update a local or global (-g) package
+uninstall Uninstall a local or global (-g) package
+I PARTICIPATION
+ACTIVITY 6.2.5: Using npm.
+1) Where does the npm command below
+install the grunt package?
+$ npm install grunt -g
+O The project's node_ modules
+directory
+O {prefix}/node_modules
+directory
+0 {prefix} directory
+2) Which command displays all the
+installed global npm packages?
+0 npm install --global
+O npm list
+0 npm list --global
+3) Which command updates the local
+mkdirp package?
+0 npm install mkdirp
+0 npm update mkdirp
+O npm update mkdirp -g
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+l
+I
+Example
+npm install nodemon
+-g
+npm list
+npm update lodash
+npm uninstall lodash
+-
+D
+0
+►
+0
+0
+22/43
+11/17/24, 12:02 PM
+4) Which command uninstalls the local
+mkdirp package?
+0 npm update mkdirp
+O npm uninstall mkdirp -g
+O npm uninstall mkdirp
+The package.json and package-lock.json flies
+zyBooks
+0
+Node.js projects use package.json to list information about the project, including the project's name,
+version, license, and package dependencies. Developers can manually create package.json or use the
+npm ini t command, which prompts the user to enter various fields and generates package.json
+automatically.
+Figure 6.2.10: Example package.json file.
+"name" : "my-web-server" ,
+"version" : "1.0.0" ,
+"description" : "A simple web server" ,
+"main" : "server.js" ,
+"dependencies" : {
+"underscore" : "Al.9.1"
+} ,
+"devDependencies" : {},
+"scripts" : {
+"test" : "echo \"Error: no test specified\" && exit
+l" ,
+◄
+"start" : "node server.js"
+} ,
+"author" : "" ,
+"license" : "ISC"
+►
+When a project's package.json file is present, all the project's dependencies can be installed with a
+single command: npm install.
+A package-/ock.json file is created or modified when project dependencies are added or removed. The
+file ensures that the same dependency versions are always used when the project is installed on
+different machines. Ex: A project's package.json file may indicate a dependency version "1 .9.1. The
+caret character(") means that npm should install the highest version of the library that exists, as long
+as the major version number, the number following the caret, is the same. So if version 1.9.2 is
+available, 1.9.2 is installed. But version 2.0.0 is not installed since "1 requires the major version
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 23/43
+11/17/24, 12:02 PM zyBooks
+number to be 1. If the package-lock.json indicates that version 1.9.1 should be used, npm will install
+version 1.9.1 instead of any newer versions.
+Semantic versioning
+npm uses semantic versioning to ensure the correct package version is installed.
+Semantic versioning is a popular software versioning scheme that uses a sequence of
+three digits: major.minor.patch. Ex: 1 .2.3.
+• The major number indicates a major version of the package, which adds new
+functionality and possibly alters how previous functions now work.
+• The minor number indicates a minor change to the package, which usually entails
+bug fixes and minor changes to how the package's functions work.
+• The patch number indicates a bug fix to a minor version.
+◄
+Figure 6.2.11 : Files composing Node.js project.
+myproject
+~ node_modules
+I L_ underscore
+~ package. j son
+~ packagelock.
+json
+L_ server.js
+◄
+I PARTICIPATION
+ACTIVITY 6.2.6: Node.js project's package.json file.
+1) A package.json file may list the project
+developers, homepage, and bugs.
+0 True
+0 False
+2) Packages installed from npm
+occasionally have package.json files.
+0 True
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+►
+►
+D
+D
+0
+24/43
+11/17/24, 12:02 PM
+0 False
+3) The "scripts" value in the example
+package.json above allows the web
+server to be started with the command:
+npm start
+0 True
+O False
+4) The following command installs the
+mkdirp module and adds mkdirp to the
+"dependencies" block of package.json:
+npm install mkdirp
+0 True
+0 False
+5) A project's package.json and packagelock.
+json files may list different
+dependency versions.
+0 True
+0 False
+Exploring further:
+• Node.js website
+• npm documentation
+• packag~son documentation
+• package-lock.json documentation
+zyBooks
+• Understanding module.exports and exports in Node.js
+6.3 Express
+Express server
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+0
+0
+0
+25/43
+11/17/24, 12:02 PM zyBooks
+Express is a popular web application framework for Node.js because Express allows developers to
+create web servers with less code. Express is installed with npm: npm install express.
+I PARTICIPATION
+ACTIVITY 6.3.1: Simple Express web server.
+mypro ject
+[
+n ode_module s
+~ express
+L_ etc . ..
+public
+I L_ hello . html
+~ pac kage.json
+L_ server . js
+Express
+server
+http://localhost:3000/hello.html
+Hello. Express!
+Animation content:
+hello.html
+<!DOCTYPE html>
+<html>
+<title>Hello Express</title>
+<body>
+<hl>Hello, Express! </hl>
+</body>
+</html>
+server.js
+const express = require ("express" );
+const app = express ();
+II Serve static files from the public dir
+app . use (express . static ("public" ));
+II Start the web server
+app . listen (3000, function () {
+console . log ("Listening on port 3000 ... " );
+} ) ;
+$ node s erver . js
+Listening on port 3000 .. .
+D
+The project's directory is shown. In the myproject directory is: package.json file and server.js file, the
+directory node_modules, containing the express package, etc, and the public directory, containing
+hello.html. hello.html contains the following code:
+<!DOCTYPE html>
+<html>
+<title>Hello Express</title>
+<body>
+<h1 >Hello, Express!</h1 >
+</body>
+</html>
+server.js contains:
+const express = require("express");
+const app = express();
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 26/43
+11/17/24, 12:02 PM
+// Serve static files from the public dir
+app.use( express.static("publ ic") );
+// Start the web server
+app.listen(3000, function() {
+console.log("Listening on port 3000 ... ");
+});
+zyBooks
+To execute server.js, node server.js is typed at the command line. In server.js the express module is
+imported, the path with the static files is applied to the express application object, and the web
+server starts listening on port 3000. A user enters the URL http://localhost:3000/hello.html in the
+browser. The browser sends a request for hello.html and displays hello.html.
+Animation captions:
+1. After installing, the express package is located in the project's node_modules directory.
+2. The public directory is for storing static files (HTML, images, etc.) that can be served by the
+Express server.
+3. server.js contains the Node.js application code and is executed from the command line.
+4. The require() function imports the express module, and express() creates the express
+application object.
+5. express.static() names the path that contains static files to be served by the server. app.use()
+applies the path to the express object.
+6. app.listen() starts the web server listening for HTTP requests on port 3000 and outputs to the
+console after the web server starts.
+7. When the browser requests hello.html from the Express server, the server responds with
+hello.html.
+I PARTICIPATION
+ACTIVITY 6.3.2: Express server.
+Refer to the animation above.
+7) The express () function starts the
+Express server.
+O True
+O False
+2) To serve images / dog. jpg to the
+browser, the images directory must
+reside in the __ directory.
+O public
+0 node_modules
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+0
+27/43
+11/17/24, 12:02 PM
+3) If the browser requested
+http://localhost:3000/bye.html in the
+animation above, the Express server
+would return a 404 status code.
+0 True
+0 False
+Routes
+zyBooks
+Express uses routing to handle browser requests. An Express route is a specific URL path and an
+HTTP request method to which a callback function is assigned. A route's callback function has
+request and response parameters, which represent the HTTP request and response.
+A route is defined with the structure: app. method (path, callback)
+• app - Express instance
+• method - HTTP request method (get, post, etc.)
+• path - URL path
+• callback - Callback function executed when the route matches
+0
+The figure below shows an example of a GET route and a POST route with different paths. The route
+callback functions use res.send() to send an HTTP response containing HTML.
+Figure 6.3.1: Example routes.
+I PARTICIPATION
+ACTIVITY
+II Called for GET request to
+http:lllocalhost:3000lhello
+app . get ("/hello" , function (req, res ) {
+res . send ("<hl>Hello, Express!</hl>" );
+} ) ;
+II Called for POST request to
+http:lllocalhost:3000lgoodbye
+app . post ("/goodbye" , function (req, res ) {
+res . send ("<hl>Goodbye, Express!</hl>" );
+} ) ;
+◄
+6.3.3: Express routes.
+1) Referring to the figure above, which
+route matches a POST request to
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+28/43
+11/17/24, 12:02 PM
+"/hello"?
+Q "/hello"
+O "/goodbye"
+0 Neither route
+2) Assuming an Express app running on
+port 3000, what URL matches the route
+below?
+app . get ("/droids" ,
+function (req, res )
+res . send ("These aren't the
+droids you're looking for." );
+} ) ;
+O http://localhost/droids
+O http://localhost:3000/droidssss
+0 http://localhost:3000/Droids
+3) What route matches a POST request to the
+following URL?
+http://localhost:3000/student
+0 app.get("/student", callback);
+0 app.post("/student", callback);
+O app.post("http://localhost:3000/student",
+callback);
+Middleware
+zyBooks
+A middleware function (or just middleware) is a function that examines or modifies the request
+and/or response objects. A middleware function has three parameters:
+• req - HTTP request object
+• res - HTTP response object
+• next - Callback to the middleware function
+The Express method use() enables a middleware function to execute.
+0
+0
+I PARTICIPATION
+ACTIVITY 6.3.4: Middleware function that logs requests. D
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 29/43
+11/17/24, 12:02 PM
+canst express = reguire ("express" );
+canst app = express ();
+zyBooks
+canst logReguest = function (reg, res , next ) {
+console . log ( 'Reguest: ${ reg . method} for ${ reg . path }' );
+next ();
+} ;
+app . use (logReguest );
+app . get ("/hello" , function (reg, res ) {
+res . send ("<hl>Hello, Express!</hl>" );
+} ) ;
+app . listen (3000, function () {
+console . log ("Listening on port 3000 ... " );
+} ) ;
+Animation content:
+A code block reads:
+canst express = require("express");
+canst app = express();
+canst logRequest = function(req, res, next) {
+console.log('Request: S{req.method} for S{req .path}');
+next();
+};
+app.use(logRequest);
+app.get("/hello", function(req, res) {
+res.send("<h1 >Hello, Express!</h1 >");
+});
+app.listen(3000, function() {
+console.log("Listening on port 3000 ... ");
+});
+The console is shown:
+S node server.js
+Listening on port 3000 ...
+Request: GET for /hello
+http:/ /local host:3000/hello
+Hello, Express!
+$ node server . j s
+Listening on port 3000 .
+Reque st : GET f or / he llo
+The node server.js command starts the server. A browser shows the URL
+http://localhost:3000/hello, which logs the request on the console and displays 'Hello, Express!' in
+the browser.
+Animation captions:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 30/43
+11/17/24, 12:02 PM zyBooks
+1. The middleware function logRequestO logs the request method and path to the console.
+2. logRequest() is enabled by calling app.use().
+3. After starting the server, the browser's request to /hello causes log Request() to be called.
+4. The request method GET and path /hello are logged in the server's console.
+5. logRequest() calls next() to allow other middleware and the /hello route to execute.
+6. After logRequest() finishes, the /hello route responds with a "Hello, Express!" message, which
+is displayed in the browser.
+I PARTICIPATION
+ACTIVITY 6.3.5: Middleware.
+Refer to the animation above.
+1) What does a GET request to the path
+"/" log to the console?
+0 Request: GET for/
+O Request: GET for /hello
+O Nothing is logged
+2) If the app. use () call is removed from
+the server, what does a GET request to
+the path "/hello" log to the console?
+0 Request: GET for/
+O Request: GET for /hello
+0 Nothing is logged
+3) If the next () call is moved from
+logRequest (), what does a GET
+request to the path "/hello" log to the
+console?
+0 Request: GET for/
+O Request: GET for /hello
+0 Nothing is logged
+4) If the app. use () call is moved after
+the call to app. get (), what does a
+GET request to the path "/hello" log to
+the console?
+0 Request: GET for/
+0 Request: GET for /hello
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+0
+0
+0
+31/43
+11/17/24, 12:02 PM zyBooks
+0 Nothing is logged
+Third-party middleware
+Third parties have created many useful middleware functions that can be installed with npm. Ex:
+npm install morgan installs middleware that logs information about HTTP requests.
+Figure 6.3.2: Using morgan middleware.
+const express =
+require ("express" );
+const morgan = require ("morgan" );
+const app = express ();
+II Show HTTP requests in the
+console
+app . use (morgan ("dev" ));
+app . listen (3000);
+Example console logging of requests:
+GET / hello.html 200 8 . 645 ms - 132
+POST / hello 200 4.280 ms - 25
+GET / blah 404 1.297 ms - -
+◄
+Table 6.3.1: Popular third-party middleware for Express.
+Middleware Description
+Logs HTTP request information
+►
+morgan
+cookie-parser
+errorhandler
+Parses the cookie header in an HTTP request
+Aids debugging during development
+csurf
+compression
+Protects against cross-site request forgery
+(CSRF)
+Compresses response bodies
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+-
+32/43
+11/17/24, 12:02 PM zyBooks
+Middleware Description
+expresssession
+Manages session data on the server
+I
+I PARTICIPATION 6.3.6: Popular middleware.
+ACTIVITY
+Refer to the table above.
+1) What middleware indicates that an
+HTTP request returned a 404 status
+code?
+0 cookie-parser
+0 morgan
+O csurf
+◄
+2) What middleware could protect an
+Express server from a malicious CSRF
+attack?
+0 csurf
+O compression
+0 express-session
+3) What middleware should a developer
+use to track the user's temporary
+session data?
+O cookie-parser
+0 compression
+0 express-session
+Express application generator.
+►
+A developer can use the application generator tool express-generator to
+automatically create an Express application skeleton. The tool saves developers time
+from writing application code that is common to many Express applications. Projects
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+0
+0
+33/43
+11/17/24, 12:02 PM zyBooks
+produced by express-genera tor use the Pug template engine to create views or
+webpages that interact with the MongoDB database.
+Exploring further:
+_ r .. ,--............ "n1 - .... .C .... - ..................
+◄
+• Middleware: morgan, cookie-Qarser, errorhandler, csurf, comQression, exQress-session
+• ExQress apQlication generator
+6.4 Express request data
+Query string parameters
+►
+Express automatically parses query string parameters (the values appearing after the "?" in a URL) and
+stores the parameters' names and values in the req.query object.
+I PARTICIPATION
+ACTIVITY 6.4.1: Extracting query string values.
+http://localhost:3000/hello?name=Bob&age=21 app . get ("/hello" , function (req, res ) {
+const html =
+'<hl>Hello, ${ req . query . name }!</hl>
+D
+Hello, Bob! <p>You are ${ reg . query . age } years old.</p:
+You are 21 years old. res . send (html );
+} ) ;
+Animation content:
+A web browser is shown with the URL http://localhost:3000/hello?name=Bob&age=21 and the
+Node.js code block:
+app.get("/hello", function(req, res) {
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 34/43
+11/17/24, 12:02 PM
+canst html=
+'<h1 >Hello, S{req.query.name}!</h1 >
+<p>You are S{req.query.age} years old.</p> ';
+res.send(html);
+});
+zyBooks
+The browser requests the /hello route with name= Bob and age= 21 in the query string. The route's
+callback function, function(req, res), replaces req .query.name with Bob in the h1 tag and replaces
+req.query.age with 21 in the p tag. res.send(html) sends back a response with the name and age,
+which then displays in the browser.
+Animation captions:
+1. The browser requests the /hello route with data in the query string.
+2. The route's callback function extracts name and age from the req.query object.
+3. res.send() sends back a response with the name and age.
+I PARTICIPATION
+ACTIVITY 6.4.2: Query string parameters.
+Refer to the animation above.
+1) If name is not found in the query string,
+the webpage says "Hello, undefined!"
+0 True
+O False
+2) If the query string contains
+"name=Doctor+Who", the webpage
+says "Hello, Doctor+Who!"
+O True
+0 False
+3) If the query string contains
+"city=Dallas", the city is available in the
+route callback function as
+res. query.city.
+0 True
+0 False
+Posting form data
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+0
+0
+35/43
+11/17/24, 12:02 PM zyBooks
+When a form posts data to an Express route, the form's data is URL-encoded and sent in the body of
+the HTTP request. The express.urlencoded() method is middleware that parses URL-encoded data in
+a request body and adds the parsed values to the req. body object.
+I PARTICIPATION
+ACTIVITY 6.4.3: Extracting posted form data.
+public/hello.html
+<form method="post" action="/hello">
+<p>
+<label>Name? <input type="text" name="name" ></label>
+</p>
+<p>
+<label>Age? <input type="number" name="age" ></label>
+</p>
+<input type="submit" value="Submit">
+</form>
+server.js
+const express = require ("express" );
+const app = express ();
+http:/ !local host:3000/hello
+Hello, Tamika!
+You are 24 years old.
+POST /hello HTTP/1 .1
+D
+app . use (express . static ("public" )); Content-Type: application/x-www-form-urlencode
+app . use (express . urlencoded ({ extended : false }));
+app . post ("/hello" , function (req, res )
+} ) ;
+const html = '<hl>Hello, ${ req . body . name }!</hl>
+<p>You are ${ reg . body . age } years old.</p>' ;
+res . send (html );
+app . listen (3000);
+Animation content:
+Two blocks of code are shown. public/hello.html:
+<form method="post" action="/hello">
+<p>
+<label>Name? <input type="text" name="name"></label>
+</p>
+<p>
+<label>Age? <input type="number" name="age"></label>
+</p>
+<input type="submit" value="Submit">
+</form>
+And server.js:
+const express = require("express");
+const app = express();
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+name=Tamika&age=24
+Parsed URL-encoded data
+req .body.name = Tamika
+req.body.age = 24
+36/43
+11/17/24, 12:02 PM
+app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}));
+app.post("/hello", function(req, res) {
+const html= '<h1 >Hello, ${req.body.name}!</h1 >
+<p>You are S{req.body.age} years old.</p> ';
+res.send(html);
+});
+app. listen(3000);
+zyBooks
+A web browser with the URL http://localhost:3000/hello.html is shown. On the screen a name and
+age field is displayed. The user types Tamika for name and 24 for age. Pressing submit sends the
+following request to the Express server:
+POST /hello HTTP/1 .1
+Content-Type: a ppl ication/x-www-form-u rlencoded
+name= Tamika&age=24
+Next the Parsed URL-encoded data is shown as the following:
+req .body.name = Tamika
+req.body.age = 24
+The Express server sends the following to the web browser screen:
+Hello, Tamika!
+You are 24 years old.
+Animation captions:
+1. Express is configured to serve files in the "public" directory.
+2. express.urlencoded() returns middleware that only parses HTTP request bodies when
+Content-Type: application/x-www-form-urlencoded is present in the header.
+3. The web browser requests hello.html from the Express server and renders the webpage.
+4. The user enters her name and age and presses Submit. A POST request with the user's name
+and age is sent to the Express server.
+5. The middleware decodes posted data from the HTTP request body and attaches the data to
+req .body.
+6. The request is posted to the /hello route callback function, which returns a response saying
+hello to the user.
+I PARTICIPATION
+ACTIVITY 6.4.4: Posting form data.
+Refer to the animation above.
+1) When the form is submitted to the
+Express server, what is the ContentType?
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+37/43
+11/17/24, 12:02 PM
+2)
+3)
+0 text/html
+O application/x-www-formurlencoded
+0 application/json
+If the user clicks Submit without
+entering a name, what does the
+resulting webpage display?
+0 Hello,!
+0 Hello, Bob!
+0 Hello, Express!
+Is the express. static ()
+middleware?
+0 Yes
+0 No
+method
+Route parameters
+zyBooks
+0
+0
+Express applications often use routes with data in the URL path to generate dynamic webpages. A
+route parameter is a string near or at the end of the URL path that specifies a data value. A route
+parameter's name is defined in the route path with a colon(:) before the parameter name. Ex: In the
+route path "/users/:username", "username" is a route parameter's name. Route parameters are
+attached to the req.params object. I PARTICIPATION
+ACTIVITY 6.4.5: Extracting route parameters. D
+http:/ /local host:3000/users/jblack
+Profile for jblack
+app . get ("/users/:username" , function (req, res ) {
+const username = req . params . username ;
+res . send ("<hl>Profile for" + username + "</hl>"
+} ) ;
+Animation content:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 38/43
+11/17/24, 12:02 PM zyBooks
+A web browser is shown with the URL http://localhost:3000/user/jblack and the code block:
+app.get("/users/:username", function(req, res) {
+const username = req .params.username;
+res.send("<h1 >Profile for"+ username + "</h1 >");
+});
+The browser requests /user/jblack, which matches the /users/:username route format. The routes
+callback function extracts jblack from req.params.username to store in username. res.send() sends
+back a response to the web browser and displays "Profile for jblack" on the screen.
+Animation captions:
+1. The browser requests /user/jblack, which matches the /users route with the :username
+parameter name.
+2. The route's callback function extracts the username "jblack" from the req.params object.
+3. res.send() sends back a response with the username.
+I PARTICIPATION
+ACTIVITY 6.4.6: Route parameters.
+Refer to the animation above.
+1) If the URL path is /users/abc, the
+webpage says "Profile for abc"
+0 True
+0 False
+2) If the URL path is /users/, the
+webpage says "Profile for "
+0 True
+O False
+3) If the URL path is /city /Denver, the
+city is available in the route callback
+function below as
+req. par ams.city.
+app . get ("/city/:cityName" ,
+function (req, res ) {
+} ) ;
+O True
+0 False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+0
+0
+39/43
+11/17/24, 12:02 PM zyBooks
+Route parameter middleware
+The Express object's param() method defines parameter middleware that executes before a route's
+callback function. The middleware function has a fourth parameter that contains the value assigned
+to the route parameter.
+The figure below shows the username parameter being examined in the parameter middleware. If the
+username is "jblack", the user's name is "Jack Black". Otherwise, the user's name is unknown. The req
+object is modified to contain a user object with properties name and username. A real-world
+application would replace the if-else statement with a database query that looks up names and
+usernames from a database.
+Figure 6.4.1: Route parameter middleware example.
+II Parameter middleware executes before the route
+app . param ("username" , function (reg, res , next , username )
+} ) ;
+II Check if username is recognized
+if (username === "jblack" ) {
+reg . user = { name : "Jack Black" , username : username };
+else {
+reg . user { name : "Unknown" , username : username };
+II Continue processing the request
+next ();
+app . get ("/users/:username" , function (reg, res ) {
+II req.user contains the user info set in the parameter
+middleware
+res . send ("<hl>Profile for" + reg . user . name + "</hl>" );
+} ) ;
+/ ['.'.] I ocalhost3000/users/j b lac X
++- ➔ C D localhost:3000/users/jblack
+Prortle for Jack Black
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 40/43
+11/17/24, 12:02 PM __________ zyBooks
+1 ['.'.] localhost:3000/ users/as X
++- C D localhost3O00/users/asmith
+Prortle for U nknol\rn
+I PARTICIPATION
+ACTIVITY 6.4.7: Route parameter middleware.
+Refer to the code segment below.
+app . param ("zip" , function (req, res , next , zip ) {
+if (zip === "80015" ) {
+reg . forecast = {high : 95 , low : 72 };
+next ();
+} ) ;
+app . get ("/weather/:zip" , function (req, res ) {
+if (req . forecast ) {
+} ) ;
+res . json (req . forecast );
+else {
+res . status (404) . json ({ error : "Unknown ZIP code" }) ;
+}
+1) What response is returned for the following
+URL?
+http://localhost:3000/weather/80015
+O A webpage that displays the high and low
+values
+Q { "high": 95, "low": 72}
+O { "error": "Unknown ZIP code"}
+2) What response is returned for the following
+URL?
+◄
+http://localhost : 3000/weather/12345
+O A webpage that displays the high and low
+values
+Q { "high": 95, "low": 72}
+0 { "error": "Unknown ZIP code"}
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print
+D
+0
+0
+►
+41/43
+11/17/24, 12:02 PM
+3) Suppose the next () function call in the
+parameter middleware is removed. What
+response is returned for the following URL?
+http://localhost : 3000/weather/80015
+O The server returns a 404 status.
+0 The server returns the JSON: { "high": 95,
+"low": 72}
+O The server does not return a response.
+4) The res. j son () method encodes a
+JavaScript object as JSON. What
+Content-Type is sent in the HTTP
+response when using res. j son ()?
+0 text/plain
+0 text/javascript
+O application/json
+Exploring further:
+• Express API reference
+zyBooks
+6.5 Lab: Amazon EC2 Server Tutorial
+0
+0
+In this lab, you will follow a tutorial to set up a Node.js/Express server on an Amazon EC2 instance.
+1. Complete the tutorial at: (a) AWS EC2 Tutorial Document (Amazon Embedded Linux, Node.js,
+Express)., and (b) AWS EC2 Tutorial Slide Deck
+2. Create new info.html and info.css files using the templates provided in the link below. Update the
+template with your information and include a photo of yourself. info.html and info.css Templates
+3. Make sure to replace the information with yours, and save the files as info.html, info.css, and
+your photo as photo.jpg.
+4. Add the files to the appropriate locations on your server:
+o info.html should be located in the directory myapp/public.
+o info.css should be located in the directory myapp/public/stylesheets
+o photo.jpg should be located in the directory myapp/public/images.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 42/43
+11/17/24, 12:02 PM zyBooks
+o Be sure to upload a photo of yourself.
+5. Then, in this lab, submit a lab.html file with complete links (i.e., with port number) to your
+info.html webpage on your server.
+6. The unit test in this lab will only check that the submitted lab.html file contains a link to your
+server. The complete grading of the lab will occur by visiting your server. Again, be sure to keep
+your server running.
+I ~~MTV 6.5.1 : Lab: Amazon EC2 Server Tutorial 1/1 .
+Submission Instructions
+Downloadable files
+lab.html Download
+Upload your files below by dragging and dropping into the area or choosing a file on your hard
+drive.
+lab.html
+Drag file here
+or
+Choose on hard drive.
+Submit for grading
+Coding trail of your work What is this?
+11/3 Ul min:1
+Latest submission - 9:14 PM MST on
+11/03/24
+D Only show failing tests
+1 :QUnit test A
+HTML has at least 1 <a> tag
+✓ HTML has at least 1 <a> tag
+Submission passed all ✓ Total score: 1
+tests I 1
+Download this submission
+1 / 1
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/6/print 43/43
