@@ -4,11 +4,17 @@ from docx import Document
 from docx.shared import Pt
 import math
 
+def is_within_sections(question_id, min_section, max_section):
+    # Extract the section number from the question ID and check if it is within the given range
+    section = int(question_id.split('.')[0])
+    return min_section <= section <= max_section
+
 def main():
     # Read the questions from the CSV file
-    with open('questions_answers_harder.csv', 'r', encoding='utf-8') as csvfile:
+    with open('questions_answers_all.csv', 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
-        questions_list = list(reader)
+        questions_list = [question for question in reader if is_within_sections(question['ID'], 5, 9)]
+
 
     total_questions = len(questions_list)
     if total_questions == 0:
@@ -56,7 +62,7 @@ def main():
             p.add_run(question['Answer'])
 
         # Save the document
-        doc_filename = f'practice/harder/Random_Questions_Set_{doc_num}.docx'
+        doc_filename = f'practice/exam2/Random_Questions_Set_{doc_num}.docx'
         document.save(doc_filename)
         print(f"Document '{doc_filename}' has been created successfully.")
 

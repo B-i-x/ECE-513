@@ -95,7 +95,7 @@ for qid in all_questions:
 csv_columns = ['ID', 'Question', 'Answer']
 
 # Write the combined data into a CSV file
-with open('questions_answers_harder.csv', 'w', newline='', encoding='utf-8') as csvfile:
+with open('questions_answers_all.csv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
     writer.writeheader()
     for data in combined_data:
