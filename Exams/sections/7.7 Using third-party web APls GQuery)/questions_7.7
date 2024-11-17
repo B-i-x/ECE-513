@@ -1,0 +1,84 @@
+
+---
+
+[7.7.1] Multiple Choice: Which type of API requires registration to obtain an API key for use?
+- (A) Public API
+- (B) Third-party web API
+- (C) Internal API
+- (D) Local API
+
+---
+
+[7.7.2] Multiple Choice: What is the primary format used by RESTful web APIs to return data?
+- (A) XML
+- (B) CSV
+- (C) JSON
+- (D) HTML
+
+---
+
+[7.7.3] Fill in the blank: A RESTful web API is called with a ______ that specifies API parameters.
+- URL
+
+---
+
+[7.7.4] Short Answer: What does the "appid" query parameter in the OpenWeatherMap API request represent?
+- The developer's API key.
+
+---
+
+[7.7.5] Multiple Choice: When making CORS requests, what HTTP header must be included by the browser?
+- (A) Content-Type
+- (B) Authorization
+- (C) Access-Control-Allow-Origin
+- (D) Origin
+
+---
+
+[7.7.6] Multiple Choice: Which HTTP status code indicates an invalid API key when using the OpenWeatherMap API?
+- (A) 200
+- (B) 401
+- (C) 404
+- (D) 500
+
+---
+
+[7.7.7] Multiple Choice: In a JSONP request, which query string parameter indicates that the request is using JSONP?
+- (A) appid
+- (B) zip
+- (C) callback
+- (D) responseType
+
+---
+
+[7.7.8] Short Answer: What technique is used to bypass the same-origin policy when a third-party API does not support CORS?
+- JSON with Padding (JSONP).
+
+---
+
+[7.7.9] Multiple Answers: Which of the following methods can be used to make cross-origin HTTP requests? (Select all that apply.)
+- [ ] Cross-Origin Resource Sharing (CORS)
+- [ ] JSON with Padding (JSONP)
+- [ ] LocalStorage
+- [ ] Service Workers
+
+---
+
+[7.7.10] Code Snippet: In the following jQuery code snippet, what values should replace "???" for a JSONP request to OpenWeatherMap to fetch weather data for ZIP code 10001?
+```javascript
+$.ajax({
+  url: "http://api.openweathermap.org/data/2.5/weather",
+  dataType: "??",
+  jsonp: "??",
+  data: {
+    zip: "10001",
+    units: "imperial",
+    appid: "APIKEY"
+  }
+}).done(function(data) {
+  console.log(data.main.temp);
+});
+```
+- "jsonp", "callback"
+
+---

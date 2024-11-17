@@ -1,0 +1,82 @@
+
+---
+
+[7.6.1] Multiple Choice: Which jQuery method is used for asynchronously loading a short snippet of HTML into a webpage?
+- (A) $.get()
+- (B) $(element).load()
+- (C) $.ajax()
+- (D) $.post()
+
+---
+
+[7.6.2] Multiple Answer: Which of the following data types can be specified in a jQuery request such as $.get() or $.post()?
+- (A) "json"
+- (B) "xml"
+- (C) "html"
+- (D) "image"
+
+---
+
+[7.6.3] Fill in the blank: The jQuery method __A__ is a general purpose method for making Ajax requests and can send HTTP GET, POST, PUT, and DELETE requests.
+
+---
+
+[7.6.4] Short Answer: What callback method of the jQuery jqXHR object is used to handle failed Ajax requests, often due to 40x or 500 status codes?
+
+---
+
+[7.6.5] Multiple Choice: In the code snippet below, which HTTP request method will be sent if the method property is set to "POST"?
+
+```javascript
+$.ajax({
+  url: "search.php",
+  method: "POST",
+  data: { title: "Harry Potter", type: "used" },
+  dataType: "json"
+});
+```
+
+- (A) GET
+- (B) POST
+- (C) PUT
+- (D) DELETE
+
+---
+
+[7.6.6] Fill in the blank: When sending a GET request in jQuery, the method __A__ is typically used to send key/value pairs in the URL's query string.
+
+---
+
+[7.6.7] Short Answer: What is the main difference between XML and JSON in terms of data transport for Ajax requests, and why is JSON more popular?
+
+---
+
+[7.6.8] Multiple Choice: After clicking a search button, if the response is delayed, what UI update is good practice to inform the user that the system is processing?
+- (A) Hide the button
+- (B) Display a "waiting" message or progress bar
+- (C) Show an error message
+- (D) Refresh the page
+
+---
+
+[7.6.9] Code Analysis: Identify the missing function call in the example code below which is designed to execute once the GET request is successfully completed:
+
+```javascript
+$("#search").on("click", function() {
+  let requestData = { title: $("#title").val() };
+  $.get("lookup.php", requestData, responseHandler, "json");
+});
+
+function responseHandler(data) {
+  $("#movieinfo").html("<cite>" + data.title + "</cite>: Rated " + data.rating + ", released in " + data.year);
+}
+```
+---
+
+[7.6.10] Multiple Choice: Which technique is not used for making cross-origin HTTP requests?
+- (A) Proxy server
+- (B) JSONP
+- (C) CORS
+- (D) Static HTML 
+
+---

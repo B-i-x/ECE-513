@@ -1,0 +1,76 @@
+ 
+---
+
+[8.3.1] Multiple Choice: What is the primary purpose of RESTful web APIs in modern web applications?
+- (A) To create user interfaces
+- (B) To manipulate and transport data between clients and servers
+- (C) To host video content
+- (D) To design mobile apps
+
+---
+
+[8.3.2] Multiple Choice: Which HTTP request verb is used to retrieve a resource in a RESTful API?
+- (A) POST
+- (B) PUT
+- (C) GET
+- (D) DELETE
+
+---
+
+[8.3.3] Fill in the blank: A RESTful web API implements CRUD operations on resources using the mechanics of _____.
+
+---
+
+[8.3.4] Short Answer: What is the function of the express.Router class in creating a web API using Express?
+
+---
+
+[8.3.5] Multiple Choice: What does the following cURL command do? `$ curl http://localhost:3000/api/songs`
+- (A) Sends a POST request to retrieve all songs
+- (B) Sends a DELETE request to remove all songs
+- (C) Sends a PUT request to update all songs
+- (D) Sends a GET request to retrieve all songs
+
+---
+
+[8.3.6] Multiple Choice: In the provided Node.js code, what does the `res.json(song);` line do?
+- (A) Saves the song to the database
+- (B) Sends a plain text response
+- (C) Sends a JSON-encoded song data in the response
+- (D) Updates the song data
+
+---
+
+[8.3.7] Multiple Answers: Which of the following HTTP status codes might be returned if a PUT or DELETE request's item is not found in the database? Choose two.
+- (A) 200
+- (B) 400
+- (C) 204
+- (D) 404
+
+---
+
+[8.3.8] Code Snippet: Given the following code, which HTTP verb will trigger this route and return a status of 201?
+```javascript
+router.post("/songs", function(req, res) {
+    console.log(req.body);
+    res.sendStatus(201);
+});
+```
+- (A) GET
+- (B) POST
+- (C) PUT
+- (D) DELETE
+
+---
+
+[8.3.9] Multiple Choice: Which of the following tools is NOT typically used for sending HTTP requests and interacting with web APIs?
+- (A) Postman
+- (B) cURL
+- (C) Adobe Photoshop
+- (D) Browsers with developer tools
+
+---
+
+[8.3.10] Fill in the blank: To enable Cross-Origin Resource Sharing (CORS) in an Express application, you need to use the _____ middleware.
+
+---

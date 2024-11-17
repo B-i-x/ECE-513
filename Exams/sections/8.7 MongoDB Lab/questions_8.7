@@ -1,0 +1,70 @@
+
+---
+
+[8.7.1] Multiple Choice: What method is used to truncate a number to use two decimal points in JavaScript?
+- (A) .toPrecision()
+- (B) .toDecimalPlace()
+- (C) .toFixed()
+- (D) .truncate()
+
+---
+
+[8.7.2] Fill in the Blank: The server endpoint '/lab/status' uses a ___ request to fetch the average air quality for a specific zip code.
+- Answer: GET
+
+---
+
+[8.7.3] Multiple Choice: Which header allows cross-origin requests to be made from any website?
+- (A) 'Content-Type'
+- (B) 'Access-Control-Allow-Origin'
+- (C) 'Authorization'
+- (D) 'X-Requested-With'
+
+---
+
+[8.7.4] Multiple Choice: What response code and message should be returned if the zip is valid but no data exists for it in the database?
+- (A) 200; {"response": "No data found."}
+- (B) 404; {"error": "Not Found."}
+- (C) 400; {"error": "a zip code is required."}
+- (D) 400; {"error": "Zip does not exist in the database."}
+
+---
+
+[8.7.5] Multiple Choice: In the POST endpoint '/lab/register', what will be the response if both zip and airQuality are provided?
+- (A) 200; {"response": "Success."}
+- (B) 201; {"response": "Data recorded."}
+- (C) 400; {"error": "Incomplete data."}
+- (D) 500; {"error": "Server error."}
+
+---
+
+[8.7.6] Fill in the Blank: The MongoDB command to delete a database is ___.
+- Answer: db.dropDatabase()
+
+---
+
+[8.7.7] Short Answer: What are the two values that the POST endpoint '/lab/register' expects in its request body?
+- Answer: zip and airQuality
+
+---
+
+[8.7.8] Multiple Choice: Which HTTP methods are allowed in the provided server implementation based on the CORS settings?
+- (A) GET, POST, OPTIONS
+- (B) GET, POST, PUT, DELETE
+- (C) GET, POST, OPTIONS, PUT, PATCH, DELETE
+- (D) GET and POST only
+
+---
+
+[8.7.9] Short Answer: When a POST request with incorrect data format is made to '/lab/register', what is the expected response message?
+- Answer: {"error": "zip and airQuality are required."}
+
+---
+
+[8.7.10] Multiple Choice: Which Node.js event listener is used to handle the completion of an XMLHttpRequest?
+- (A) "finish"
+- (B) "complete"
+- (C) "load"
+- (D) "end"
+
+---

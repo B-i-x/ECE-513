@@ -1,0 +1,76 @@
+
+---
+
+[9.3.1] Multiple Choice: What is a cryptographic hash function primarily used for when storing passwords?
+- (A) Encrypting passwords for safe storage
+- (B) Converting passwords into a fixed-length hash digest
+- (C) Storing passwords securely in plain text
+- (D) Generating salt values for passwords
+
+---
+
+[9.3.2] Multiple Choice: Which of the following is NOT a cryptographic hash function?
+- (A) MD5
+- (B) bcrypt
+- (C) AES
+- (D) SHA-1
+
+---
+
+[9.3.3] Fill in the Blank: A cryptographic hash function converts text of any length into a fixed-length sequence of characters called the __________.
+
+---
+
+[9.3.4] Short Answer: Why should plain text passwords never be stored in a database?
+
+---
+
+[9.3.5] Multiple Choice: When pgreen tries to log in with the password "OpenSesame", the hash value does not match the stored hash. What is the result?
+- (A) pgreen is granted access
+- (B) The password is updated in the database
+- (C) pgreen is denied access
+- (D) The username is marked as inactive
+
+---
+
+[9.3.6] Multiple Answers: Which techniques can help protect password hashes from being cracked?
+- (A) Using a salt
+- (B) Storing passwords in plain text
+- (C) Applying a strong hash function like bcrypt
+- (D) Creating precomputed dictionary tables
+
+---
+
+[9.3.7] Short Answer: What is the purpose of using a salt in password hashing?
+
+---
+
+[9.3.8] Code Output: Given the code snippet below, what is the output to the console?
+
+```javascript
+const bcrypt = require("bcryptjs");
+const hash = bcrypt.hashSync("qwerty", 10);
+if (bcrypt.compareSync("Qwerty", hash)) {
+  console.log("Same!");
+} else {
+  console.log("Not the same");
+}
+```
+
+---
+
+[9.3.9] Multiple Choice: Which part of the bcrypt hash string represents the salt value?
+- (A) The first part often represented by "2a"
+- (B) The cost factor, typically a number like "10"
+- (C) The encrypted password hash
+- (D) The string of 16-byte salt value encoded to 22 characters
+
+---
+
+[9.3.10] Multiple Choice: Why is bcrypt preferred over older hash functions like MD5 or SHA-1 for password hashing?
+- (A) It executes quickly, allowing fast password verification
+- (B) It's slower, making it more resistant to brute force attacks
+- (C) It uses more memory, which is computationally efficient
+- (D) It generates shorter hash values that save storage space
+
+---

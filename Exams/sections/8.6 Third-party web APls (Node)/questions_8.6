@@ -1,0 +1,93 @@
+
+---
+
+[8.6.1] Multiple Choice: What is a third-party web API?
+- (A) An API that is privately used by an organization
+- (B) An API that is hosted entirely on a local server
+- (C) A public web API used by a web application to perform an operation
+- (D) An API that only provides HTML data
+
+---
+
+[8.6.2] Fill in the blank: A developer usually registers with the third party to obtain a(n) _______ to use a third-party web API.
+- (A) API token
+- (B) API key
+- (C) API certificate
+
+---
+
+[8.6.3] Short Answer: List one use case for third-party web APIs mentioned in the content.
+- Answer: Integrate with social media, obtain maps and weather data, or access collections of data.
+
+---
+
+[8.6.4] Multiple Answers: Why do third parties require an API key? Select all that apply.
+- (A) To identify who is using the web API
+- (B) To limit the number of requests made in a fixed time period
+- (C) To control user access to the website's HTML
+- (D) To charge a developer a fee for additional requests
+
+---
+
+[8.6.5] Multiple Choice: Which of the following is a feature of a RESTful web API?
+- (A) Uses SOAP protocol
+- (B) Returns data in JSON or XML format
+- (C) Requires a specific JavaScript library
+- (D) Operates only over FTP
+
+---
+
+[8.6.6] Fill in the blank: The method used to install the node-fetch module to call the Weather API from an Express server is _______.
+- (A) npm install express
+- (B) npm install node-fetch
+- (C) npm fetch install
+
+---
+
+[8.6.7] Short Answer: What format does the Weather API return data by default?
+- Answer: JSON format.
+
+---
+
+[8.6.8] Multiple Choice: What "units" parameter value would make the Weather API return temperature measurements in Fahrenheit?
+- (A) standard
+- (B) metric
+- (C) imperial
+
+---
+
+[8.6.9] Code Snippet: Given the following Express server code snippet, what value would replace "APIKEY" to properly fetch weather data?
+
+```javascript
+const fetch = require("node-fetch");
+app.get("/weather", function(req, res) {
+  const zip = 90210;
+  const params = new URLSearchParams({
+    zip: zip,
+    units: "imperial",
+    appid: "APIKEY"
+});
+
+fetch("http://api.openweathermap.org/data/2.5/weather?" + params)
+  .then(response => response.json())
+  .then(data => {
+    const locals = {
+      data: data,
+      zip: zip
+    };
+    res.render("weather", locals);
+  })
+  .catch(error => console.log(error));
+});
+```
+- Answer: An actual API key obtained from OpenWeatherMap.org.
+
+---
+
+[8.6.10] Multiple Choice: In the context of "Calling the Weather API from the web server," what is the role of the node-fetch module?
+- (A) To create a new local server
+- (B) To encrypt data transmissions
+- (C) To implement the Fetch API for making HTTP requests
+- (D) To convert HTML to JSON format
+
+---

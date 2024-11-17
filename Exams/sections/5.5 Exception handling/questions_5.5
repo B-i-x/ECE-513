@@ -1,0 +1,90 @@
+  
+---
+
+[5.5.1] Multiple Choice: What is an exception in a program execution?  
+- (A) A syntax error that stops the code from being compiled  
+- (B) A special case that improves program performance  
+- (C) An error that disrupts the normal flow of program execution  
+- (D) A comment left by the developer in the code  
+
+---
+
+[5.5.2] Fill in the blank: The syntax to throw a user-defined exception in JavaScript is `throw ___________.`  
+- "expression"  
+
+---
+
+[5.5.3] Multiple Choice: What is the primary purpose of a try-catch statement?  
+- (A) To optimize loop execution  
+- (B) To execute code only if no errors are present  
+- (C) To catch and handle exceptions in the code  
+- (D) To declare variables globally  
+
+---
+
+[5.5.4] Short Answer: In the given code snippet, what will be displayed in the console if the `findSum(nums, 3, 4)` call throws an exception and is handled by a try-catch block? Provide the output precisely.  
+```javascript
+catch(exception) {
+  console.log(exception);
+  console.log("Done!");
+}
+```  
+
+- "endlndex is too large."  
+  "Done!"  
+
+---
+
+[5.5.5] Multiple Choice: In JavaScript, which type of error is thrown when a variable or parameter is not the expected data type?  
+- (A) RangeError  
+- (B) SyntaxError  
+- (C) TypeError  
+- (D) ReferenceError  
+
+---
+
+[5.5.6] Multiple Answer: In the function `findAverage()`, which conditions should throw exceptions?  
+- [ ] Non-integer values in the scores array  
+- [ ] An empty scores array  
+- [ ] An array with more than 100 scores  
+- [ ] Negative scores in the array   
+
+---
+
+[5.5.7] Fill in the blank: In a `try-catch-finally` construct, the code in the __________ block will execute regardless of whether an exception was thrown or not.  
+- finally  
+
+---
+
+[5.5.8] Short Answer: What does the following code output when executed?  
+```javascript
+function test() {
+  try {
+    console.log("try");
+    throw "crash!!!";
+  } catch (exception) {
+    console.log("catch");
+  } finally {
+    console.log("finally");
+  }
+  console.log("after");
+}
+test();
+```  
+- "try"  
+  "catch"  
+  "finally"  
+  "after"  
+
+---
+
+[5.5.9] Multiple Choice: Which Error constructor is used when a numeric variable or parameter is outside the valid range?  
+- (A) TypeError  
+- (B) SyntaxError  
+- (C) RangeError  
+- (D) ReferenceError  
+
+---
+
+[5.5.10] Fill in the blank: In the function `caesarCipher(message, key)`, if the `key` is not an integer, a __________ error should be thrown.  
+- TypeError

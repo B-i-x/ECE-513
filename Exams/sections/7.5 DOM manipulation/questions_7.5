@@ -1,0 +1,77 @@
+
+---
+
+[7.5.1] Multiple Choice: Which jQuery method is used to get or set the attribute value for a DOM element?
+- (A) css()
+- (B) html()
+- (C) text()
+- (D) attr()
+
+---
+
+[7.5.2] Multiple Choice: How do you change the `src` attribute of all `img` elements using jQuery?
+- (A) `$("img").attr("src", "star.png");`
+- (B) `$("img").src("star.png");`
+- (C) `$("img").css("src", "star.png");`
+- (D) `$("img").html("src", "star.png");`
+
+---
+
+[7.5.3] Multiple Choice: What jQuery method can be used to prepend a new element to an ordered list (`<ol>`)?
+- (A) appendTo()
+- (B) before()
+- (C) prependTo()
+- (D) after()
+
+---
+
+[7.5.4] Multiple Answers: Which of the following jQuery methods are used for inserting content into the DOM? (Select all that apply)
+- (A) prepend()
+- (B) detach()
+- (C) wrap()
+- (D) append()
+
+---
+
+[7.5.5] Fill in the blank: The jQuery method ______________ returns the removed nodes to the caller allowing them to be reused.
+- detach()
+
+---
+
+[7.5.6] Short Answer: How can you change a paragraph (`<p>`) to have its inner HTML become `<b>Bold Text</b>` using jQuery?
+- `$("p").html("<b>Bold Text</b>");`
+
+---
+
+[7.5.7] Multiple Choice: Suppose you have an `<h2>` element and you want to insert a `<p>` element immediately after it. What jQuery method would you use?
+- (A) prependTo()
+- (B) append()
+- (C) insertAfter()
+- (D) before()
+
+---
+
+[7.5.8] Fill in the blank: The jQuery method ______________ is similar to remove(), but keeps copies of the removed elements for further use.
+- detach()
+
+---
+
+[7.5.9] Code Snippet: Given the code snippet below, what is the final order of `<li>` elements in `<ol>` after the code runs?
+```html
+<ol>
+  <li>First</li>
+  <li>Second</li>
+</ol>
+<script>
+  $("<li>New</li>").appendTo("ol");
+  $("<li>Newest</li>").prependTo("ol");
+</script>
+```
+- `<ol><li>Newest</li><li>First</li><li>Second</li><li>New</li></ol>`
+
+---
+
+[7.5.10] Short Answer: What is the jQuery method for wrapping an existing DOM element with a new element?
+- `wrap()`
+
+---

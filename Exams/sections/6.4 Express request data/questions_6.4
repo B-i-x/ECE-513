@@ -1,0 +1,97 @@
+
+---
+
+[6.4.1] Multiple Choice: What object stores query string parameters in an Express application?
+- (A) req.params
+- (B) req.query
+- (C) req.body
+- (D) req.header
+
+---
+
+[6.4.2] Multiple Choice: In the Express route `app.get("/users/:username", function(req, res) {...})`, how can you access the username parameter?
+- (A) req.params.username
+- (B) req.query.username
+- (C) req.body.username
+- (D) req.header.username
+
+---
+
+[6.4.3] Fill in the blank: The middleware function `express.urlencoded({ extended: false })` is used to parse __________ data in the HTTP request body.
+
+---
+
+[6.4.4] Multiple Answer: Which of the following are correct uses of route parameters in Express? (Select all that apply)
+- (A) `/product/:id` can be accessed through `req.params.id`.
+- (B) `/category/:name` can be accessed through `req.query.name`.
+- (C) `/order/:orderId/details` can be accessed through `req.params.orderId`.
+- (D) `/user/:name/profile` can be accessed through `req.body.name`.
+
+---
+
+[6.4.5] Short Answer: Given the URL `http://localhost:3000/weather/80015`, what JSON response does the server provide based on the following Express route middleware code?
+
+```javascript
+app.param("zip", function(req, res, next, zip) {
+    if (zip === "80015") {
+        req.forecast = { high: 95, low: 72 };
+    }
+    next();
+});
+
+app.get("/weather/:zip", function(req, res) {
+    if (req.forecast) {
+        res.json(req.forecast);
+    } else {
+        res.status(404).json({ error: "Unknown ZIP code" });
+    }
+});
+```
+
+---
+
+[6.4.6] Fill in the blank: In a route definition like `app.get("/city/:name", function(req, res) {...})`, the parameterized part of the URL is defined using a _________.
+
+---
+
+[6.4.7] Multiple Choice: What is the Content-Type used when form data is URL-encoded in an Express application?
+- (A) text/html
+- (B) application/json
+- (C) application/x-www-form-urlencoded
+- (D) multipart/form-data
+
+---
+
+[6.4.8] Multiple Choice: When an Express route uses parameter middleware, what function argument receives the parameter's value?
+- (A) req
+- (B) res
+- (C) next
+- (D) The fourth argument
+
+---
+
+[6.4.9] Multiple Answer: Which of the following statements are true regarding the `res.send()` method? (Select all that apply)
+- (A) It can send HTML content as a response.
+- (B) It automatically sets the Content-Type to text/plain.
+- (C) It can send JSON if the response is a JavaScript object or array.
+- (D) It finishes off the response.
+
+---
+
+[6.4.10] Short Answer: Consider the Express app route middleware below. What would be the console output for a URL path `/users/jblack`?
+
+```javascript
+app.param("username", function(req, res, next, username) {
+    console.log("URL param:", username);
+    if (username === "jblack") {
+        req.user = { name: "Jack Black", username: username };
+    } else {
+        req.user = { name: "Unknown", username: username };
+    }
+    next();
+});
+
+app.get("/users/:username", function(req, res) {
+    res.send(`<h1>Profile for ${req.user.name}</h1>`);
+});
+```
