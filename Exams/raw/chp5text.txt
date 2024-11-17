@@ -1,0 +1,2552 @@
+11/17/24, 11 :23AM zyBooks
+5.1 HTTP
+Introduction to HTTP
+The HyperText Transfer Protocol (HTTP) is a networking protocol that runs over TCP/IP and
+governs communication between web browsers and web servers. Transmission Control
+Protocol/Internet Protocol (TCP/IP) is a protocol suite that governs how data packets are
+transferred over the internet from one machine to another. Understanding the details of TCP/IP is
+not usually required of web developers, but a thorough understanding of HTTP is necessary to
+create effective web applications.
+HTTP versions
+◄
+HTTP/1.1 is the HTTP standard used for most of the web's lifetime, but many
+websites are adopting HTTP/2, a relatively new HTTP standard that speeds-up the
+transfer of information between web browsers and web servers. HTTP/2 maintains
+most of HTTP/7. 7 's semantics. HTTP/3, currently in development, improves the
+speed of HTTP/2 by using UDP to transport data packets instead of TCP. This
+material focuses on the basic HTTP workings that all standards share.
+►
+Before HTTP communication begins, the web browser extracts the domain name from the URL
+being accessed and performs a DNS lookup. The web browser performs a DNS lookup by sending
+the domain name to the local DNS and getting back the IP address of the web server hosting the
+domain name. Ex: https://www.w3c.org/ has a domain name of w3c.org, and DNS translates
+w3c.org to the IP address 193.51.208.66. The web browser uses the IP address to establish a TCP
+connection with the web server and begins communicating with HTTP
+HTTP functions as a request-response protocol between web browsers and web servers:
+• An HTTP request is a message sent from the web browser to the web server. Often the
+request asks the web server to send back a web resource like an HTML file, image, CSS
+stylesheet, JavaScript file, or video.
+• An HTTP response is a message sent from the web server back to the web browser in
+response to an HTTP request. Often the response contains the requested web resource.
+I PARTICIPATION
+ACTIVITY 5.1.1: HTTP requests and responses.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+1/68
+11/17/24, 11 :23AM zyBooks
+I
+web browser
+http://w3c.org/test.html
+<html>
+<img src="field.jpg">
+</html>
+Animation content:
+◄
+DNS
+TCP connection
+HTTP request
+test.html
+HTTP response
+<html>
+HTTP request
+field.jpg
+HTTP response
+[image]
+TCP connection closed
+web server
+EJ
+EJ
+The web browser with the URL http://w3c.org/test.htm1 is displayed. A web server is also
+displayed. A TCP connection connects the web browser and the web server. The web browser
+sends the HTTP request asking for test.html is to the web server. The web server then sends the
+HTTP response with the contents <html> <img> src ="fleld.jpg"> </html> back to the web
+browser. The web browser then sends a HTTP request for fleld .jpg and the web response then
+sends back the HTTP response with the contents of the image back to the web browser. Since
+there are no more requests, the TCP connection is then closed.
+Animation captions:
+1. The web browser does a DNS lookup of the domain name w3c.org and uses the IP address
+to create a TCP connection to the web server.
+2. The web browser sends an HTTP request asking for the resource test.html.
+3. The web server returns the contents of test.html to the browser in an HTTP response.
+4. The browser parses the HTML and sends a second HTTP request for fleld .jpg.
+5. The web server returns the image to the browser in an HTTP response. The browser
+displays the image in the webpage.
+6. When no more resources are needed, the browser closes the TCP connection.
+" https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 2/68
+11/17/24, 11 :23AM zyBooks I PARTICIPATION I
+ACTIVITY 5.1 .2: HTTP requests and responses.
+1) Before a TCP connection is created,
+the web browser usually performs
+a/an __
+0 HTTP request
+0 HTTP response
+0 DNS lookup
+2) How many total HTTP requests does
+a browser send for a webpage that
+does not use any other web
+resources?
+0 1
+0 2
+0 3
+3) How many total HTTP requests does
+a browser send for a webpage that
+contains four web resources: an
+image, a video, a CSS stylesheet, and
+a JavaScript file?
+0 1
+0 4
+0 5
+4) If a web browser sends 20 HTTP
+requests to a web server, how many
+HTTP responses will the web server
+likely send to the web browser?
+0 0
+0 10
+0 20
+Request and response headers
+An HTTP request and an HTTP response are both composed of four parts:
+u
+0
+0
+0
+0
+1. Start line - The start line specifies the HTTP version being used. A request's start line includes
+a request type and path; a response's start line includes a status code and phrase.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 3/68
+11/17/24, 11 :23AM zyBooks
+2. Zero or more header fields -A header field is a keyword followed by a colon and a value.
+Header fields supply additional information about the request or response.
+3. A blank line
+4. Optional message body-A message body contains data being transferred between a web
+browser and web server. In a request, the message body may be empty or contain submitted
+form data. In a response, the message body may contain the requested resource.
+The figures below show an example HTTP request for a Wikipedia URL and the corresponding
+HTTP response containing HTML.
+Figure 5.1.1: HTTP request with no message body.
+Request for URL: https://en.wikipedia.org/wiki/World_Wide_Web
+GET /wiki/World Wide Web HTTP/1.1 - -
+Host: en.wikipedia.org
+User-Agent: Mozilla/5.0 Chrome/48.0.2564
+Request type Path HTTP version
+Start line { l(G1~1 wi ki/World_Wide_W,eb HTTP/1. 1
+Host: en. wikipedi a . org --- --- - Hostname
+Header fields { User -Agent: Mozi lla/5. 0 Chrome/ 48. 0. 2564 I
+Browser identifier
+◄
+Figure 5.1 .2: HTTP response with HTML in message body.
+Response for URL: https://en.wikipedia.org/wiki/World_Wide_Web
+HTTP/1.1 200 OK
+Content-Length: 56579
+Content-Type: text/html
+Date: Fri, 12 Feb 2016 21:09:32 GMT
+Last-Modified: Thu, 11 Feb 2016 18:49:40 GMT
+Server: nginx/1.9.4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>World Wide Web - Wikipedia, the free encyclopedia</title>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+4/68
+11/17/24, 11 :23AM
+Start line
+Header
+fields
+Message
+body
+I PARTICIPATION
+ACTIVITY
+zyBooks
+HTTP version Status code & phrase
+{ HTiP/1.1 00 OK I # of bytes in message body
+Content -Type: t ext / html
+Date: Fri• { 12 Feb 2016 21 : 09: 32 GMT I__..- Oatetime of response
+Content-Length: '.56579 Media type of message body
+Last-Modified!: Thu , 11 Feb 2016 1.8:49:40 GMT Date~ime resource was last modified
+S@r v1:1r : nginx/ 1. 9. 4 .....__
+<IDOCTY!>E html>
+<html l ang• "en ">
+<head>
+Web server software identifier
+HTML to be displayed
+<met() ch(l,r set; "UTF- 8" / >
+<title>Worlcl Wi de Web - Wikipedia, the f ree enc yclopediar</title>
+5.1.3: HTTP request and response headers.
+If unable to drag and drop, refresh the page.
+Content-Type Last-Modified
+User-Agent
+Content-Length
+Number of bytes in the response's
+message body.
+Media type of the response's
+message body.
+Datetime the response was
+generated by the web server.
+Datetime the requested resource
+was last modified on the web server.
+Identifies the web server software
+that generated the response.
+The domain name for the requested
+path.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+►
+5/68
+11/17/24, 11 :23AM zyBooks
+Identifies the browser making the
+request.
+List of HTTP headers
+◄
+The Internet Assigned Numbers Authority (/ANA) is a standards organization that
+manages various internet numbers and symbols, like global IP address allocation,
+root zone management in DNS, and media types. JANA maintains a list of HTTP
+headers that are currently active, obsolete, or experimental.
+Chrome DevTools for watching HTTP traffic.
+All popular web browsers contain built-in developer tools. Developers can access
+Chrome's developer tools (DevTools) by pressing Ctrl+Shift+I (Windows) or
+Command-Option-I (Mac). In the figure below, the Network tab shows the HTTP
+network traffic when accessing Wikipedia's article on World Wide Web. The first
+HTTP request is highlighted. All subsequent requests are for other resources used
+in the webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+6/68
+11/17/24, 11 :23AM zyBooks
+W World Wide Web - Wilapedia X + V □ X
+C i en.wikipedia.org/wiki/World_Wide_Web Le * ~ □
+.& Nol logged m Talk Conlnbutions Create account l og in
+Article Talk Read View sou.rce View history I Search Wlkipedia
+WIKIPEDIA World Wide Web
+1l1e..Free E.ncvclooedia r ____ ,..,_, :, .: .. _ ...i i _ ._,_ _ .&. _ _ __ - ~- - • -- _ ... : _
+~ 6] Elements Console Sources Network Performance Memory Application » ,A 6 la! 1 0
+e (S) 'i' Q. D Pres erve log r.l Disable cache No throttl ing "' ~ ! .!:
+Filter D Invert D Hide data URls
+All Fetch/XH R JS CSS 1mg Media Fon Doc WS Wasm Manifest Other D Has blocked cookies D Blocked Requests
+D 3rd-party requests
+100 ms 200 ms 300 m; ~OO ms 300ms EOO m, 700 ms -- -- I I Name status Type Initiator Size Time Waterfall
+~ World_Wide_Web 200 document other 73.4 kB 46ms ■
+load.php?lang =en&modules=ext.. .. 200 styleshee World Wide Web 10.9 kB 34 ms
+load.php?lang=en&modules=star .. . 200 script World Wide Web 21.0 kB 38 ms 11
+0 load.php?lang=en&modules=site .. .. 200 styleshee World Wide Web 4.6 kB 4·1 ms 1■
+20px-Semi-protection-shackle.svg .. . 200 webp World Wide Web 1.6 kB 38 ms 1■
+• -2.}01111:WWW-l PIShar;,.wn.rmn J OO onn_ Wmld Wide Web _]SA kB._ 4, _ms 1■
+44 requests 781 kB transferred 1.4 MB resources Finish: 684 ms DOMContentLoaded: 390 ms Load: 473 ms
+Clicking on a specific request shows the request and response details.
+Name
+~ Wortd_Wide_Web
+0 load.php?lang=en&modules=
+load.php?lang=en&modules=
+0 load.php?lang=en&modules=
+Ill 20px-Semi-protection-sha cklE
+22opx -VM1lW -LetSha re.svg.pn
+230px-Chromium_on_Ubuntu.
+230px-World_Map_of_Web_ln
+X Headers Preview Response Initiator Timing Cookies
+..-General
+Request URL: https: / / en .wiki pedia.org/wiki/1,orld_Wi de_l,eb
+Request Method: GET
+Status Code: tt 200
+RemoteAddre.ss: 208 .80.15 3 . 224:443
+Referrer Policy: strict-origin-,1hen-cross-origin
+"' Respo nse Headers
+X
+0
+SOOms
+...
+I
+"' 220px -First_Web_Server Jpg
+220px-lnternet_K2y_Layers.pn
+220px-WorldWideWebArounc T
+accept-ch: Sec-CH - UA-Arc h, Sec-CH-UA-B i tnes s, Sec-CH-UA-Full-Version -List , Sec -CH-U.0.Mode
+l, Sec-CH-UA-Plat form -Version
+accept-ranges: bytes
+Request methods and response status codes
+The most common HTTP request-response scenario is when the web browser issues a request
+with the GET request method, and the web server returns the requested resource with a 200 status
+code. An HTTP request method indicates the desired action to perform on a resource. Other
+request methods besides GET may also be sent in an HTTP request. Ex: POST is often used when
+the web browser is sending information from a web form to the web server. The POST, PATCH, PUT,
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 7/68
+11/17/24, 11 :23AM zyBooks
+and DELETE request methods are used by web services that allow resources to be created,
+modified, and deleted on the web server.
+Table 5.1.1: Common HTTP request methods.
+Request
+Meaning
+method
+GET Request a representation of the specified resource.
+-
+HEAD
+Request a response identical to GET but without the response
+body.
+-
+POST Create a new resource with the contents of the message body.
+-
+PATCH
+Modify an existing resource with the contents of the message
+body.
+PUT
+Replace an existing resource with the contents of the message
+body.
+--
+DELETE Delete an existing resource.
+◄ ►
+An HTTP response status code is a three digit number that indicates the status of the requested
+resource. A successfully requested resource results in a 200 status code, and other status codes
+are returned for various reasons. Ex: A 307 or 302 status code redirects the browser to a different
+URL. A browser redirect is when the web server returns a 301 or 302 status code with a Location
+header indicating the URL the browser should load next.
+Table 5.1.2: Common HTTP response status codes.
+Status
+code
+200
+307
+Status phrase
+OK
+Moved
+Permanently
+Meaning
+Standard response for a successful request.
+The resource should always be requested at a different
+URL.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 8/68
+11/17/24, 11 :23AM zyBooks
+I
+Status
+Status phrase Meaning
+code
+-
+302 Found
+The resource should temporarily be requested at a
+different URL.
+I
+304 Not Modified
+The resource has not been modified since the last time
+the resource was requested.
+I
+403 Forbidden
+The web browser does not have permission to access
+the resource.
+- -
+404 Not Found The resource could not be located.
+- +
+500 Internal Server
+Something unexpected happened on the web server.
+Error
+I
+URL shortening
+URL shortening is a technique to create shorter URLs that redirect to longer URLs. Ex:
+http://en.wiki!].edia.org/wiki/URL shortening has a short URL of
+http://tinY-url.com/urlwiki. Short URLs are convenient for sharing on social media,
+especially on Twitter where the number of characters in a post is limited. Common
+◄ URL shortening services include bit./y, rebrandlycom, and tinyurl.com.
+◄
+When a user types or clicks on a short URL, the URL shortening service responds with
+a 301 status code and a Location header with the webpage's full URL. The example
+HTTP request and response below shows htt!].:/ltinx.url.com/urlwiki redirects to
+http://en. wikipedia. orQlwiki/URL shortening.
+HTTP request
+GET / urlwiki
+HTTP / 1 . 1
+Host : tinyurl.com
+User-Agent :
+Mozilla / 5.0
+Chrome / 48.0 . 2564
+I
+HTTP response
+HTTP/1.1 301 Moved Permanently
+Date : Tue, 16 Feb 2016 16:38:59 GMT
+Location :
+http: //en.wikipedia.org/ wiki / URL_shortening
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+" 9/68
+11/17/24, 11 :23AM zyBooks I PARTICIPATION
+ACTIVITY 5.1 .4: HTTP request methods and response status codes.
+1) Which request method is used by the
+browser to get the same response
+headers that a GET would generate
+but without the message body?
+Q GET
+Q HEAD
+Q PUT
+2) Which request method is used by the
+browser to submit web form data to
+the web server?
+Q GET
+Q PUT
+Q POST
+3) Which status code is sent when the
+web server wants to redirect the
+browser to a different URL?
+0 200
+0 301 or 302
+0 403
+4) Which status code is sent when the
+requested URL does not point to an
+existing resource on the web server?
+0 200
+0 301
+0 404
+5) Which status code is sent when the
+web browser is denied permission to
+the requested URL?
+0 301
+0 304
+0 403
+Browser caching
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+u
+0
+0
+0
+0
+0
+10/68
+11/17/24, 11 :23AM zyBooks
+Most web browsers use a browser cache to store requested content. A browser cache is an area on
+the computer's file system where web content can be stored by the web browser for quick retrieval
+later. By caching web content, browsers can reduce the amount of network traffic required to
+display previously visited webpages. Ex: If a webpage is accessed now and again ten minutes from
+now, the browser can display the cached webpage instead of re-downloading the webpage. If the
+webpage has changed in the 10 minute span, the browser should download the updated page.
+Web browsers often use ETags to aid in caching web resources. An entity tag (ETag) is an identifier
+for a specific version of a web resource. Ex: 34905a3e285dd11. When the resource changes, so
+should the ETag associated with the resource. When a web browser requests a cached web
+resource, the browser sends the ETag in the request with an If-None-Match header. The web
+server will reply with a 304 Not Modified response status if the resource has not changed or a 200
+OK with the changed resource and a new ETag. I PARTICIPATION
+ACTIVITY 5.1.5: Requesting cached resources with ETags.
+web browser web server
+http://w3c.org/test.html
+GET test.html ...
+browser cache
+<html> 200 OK, ETag: 123abc test.html 123abc
+Hello, Pam!
+</html>
+... B ETag:
+.~. ---<-htm-l>- ----
+test.html
+ETag: 678efg
+Display
+cached page
+<html>
+I ...
+Goodbye, Pam! 1 ◄
+</html>
+Animation content:
+GET test.html
+If-None-Match: 123abc
+304 Not Modified
+[no message body]
+GET test.html
+If-None-Match: 123abc
+200 OK, Etag: 678efg
+<html>
+.....
+~ ETag:
+~ 678efg
+D
+The web browser with the url http://w3c.org/test.htm1 is displayed. A web server is also displayed
+with the resource test.html and an Etag:123abc. A get request is sent from the web browser to
+the web server requesting test.html. The web server returns the contents of test.html which
+includes 200 OK, ETag:123abc back to the browser. These contents are stored inside the browser
+cache. The web browser sends another request for test.html which includes the ETag:123abc. A
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 11/68
+11/17/24, 11 :23AM zyBooks
+304 Not Modified [no message body] is sent back to the web browser. The browser then displays
+the cached page. The web browser then makes another request for test.html with the ETag
+123abc. The web server compares the ETags and then returns a 200 OK, ETag: 678efg back to
+the web browser. The web browser now stores the returned content inside the browser cache and
+displays it.
+Animation captions:
+1. The browser requests uncached resource test.html. The web server returns the contents of
+test.html back to the browser where test.html is cached.
+2. The second request for cached test.html includes the ETag 123abc.
+3. The web server compares ETags and notes the file has not changed, so 304 is returned with
+no HTML. The browser displays the cached content.
+4. test.html is modified on the web server and assigned a new ETag.
+5. The browser sends a third request for test.html with ETag 123abc.
+6. The web server compares ETags and notes the file has changed, so 200 is returned with
+new HTML and ETag.
+7. The browser displays the new content and updates the browser cache.
+I PARTICIPATION
+ACTIVITY 5.1.6: Requesting cached content.
+1) Which status code is sent when the
+web server compares the cached
+ETag with the server's ETag for a
+requested web resource, and the two
+ETags are identical?
+0 200
+0 304
+0 403
+2) Does a 304 response generally
+contain a message body?
+O Yes
+0 No
+3) Do web servers always generate
+ETags for all web resources?
+0 Yes
+Q No
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+0
+0
+0
+12/68
+11/17/24, 11 :23AM zyBooks
+4) Where can the HTTP header field IfNone-
+Ma tch be found?
+0 HTTP request
+O HTTP response
+Other caching mechanisms
+◄
+HTTP defines additional HTTP headers to aid in caching:
+• If-Modified-Since is used with the Last-Modified date/time to request the
+web server only send the requested resource if the resource has changed since
+the specified date/time. Ex: "ff-Modified-Since: Wed, 07 Sep 2019 13:24:52 GMT'
+asks the web server to send the resource if the resource was modified after Sep
+7, 2079 at 13:24:52 GMT
+• Expires contains a date/time indicating when the requested resource is
+considered "stale". Ex: "Expires: Wed, 01 Sep 2019 13:24:52 GMT' tells the web
+browser to show the cached resource until Sep 1, 2019 at 13:24:52 GMT
+• Cache-Control is used to specify a number of caching directives. Ex: "CacheControl:
+no-store" tells the web browser to never cache the requested resource,
+and "Cache-Control: max-age= 180" tells the browser to cache the resource for
+7 80 seconds.
+Viewing 304 responses in Chrome DevTools
+Web developers can view 304 Not Modified responses in Chrome's DevTools by
+opening the Network tab and ensuring the checkbox labeled "Disable cache" is not
+checked. If "Disable cache" is checked then nothing will be cached, and
+If-None-Match and If-Modified-Since headers will not be sent.
+The Wikipedia page about web cache is a good page to test in Dev Tools to see 304
+responses. When the developer loads the page once, the web server returns a 200
+status code for the Web_cache request. When the developer presses the browser's
+Reload button, the server returns a 304 status code.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+0
+►
+13/68
+11/17/24, 11 :23AM zyBooks
+W Web cache -Wikipedia X + V □ X
+C i en.wikipedia.org/wiki/Web_cache
+.:. Not logged m Talk Contnbutions Create account Log in
+Article Talk Read Edit View history I Search Wikipedia
+WIKIPEDIA Web cache
+TI,e Free 1'.nc yclopedia From Wikipedia, the free encydopedia
+Maln page A Web cache (or HTTP cache} is a system for optimizing the World Wide Web. It is implemented both
+Contents client-side and server-side. The cachinq of imaqes and other files can resu lt in less overall delay when
+~ [I Elements Console Recorder .l Performance insights .l Network » A 6 r:;i 1 0 X
+e ($) 'i' 0.. D Preserve log o throttling • ~ t f: 0
+Filter
+All Fetch/XH R JS CSS 1mg Media Font Doc WS Wasm Manifest Other D Has blocked cookies D Blocked Requests
+D 3rd-party requests
+101>'.X)ms 20000 ms 30000 ms 40000ms S!XJOO ms 60000 rr, 70000 m, 80000 ms 90000ms 10000,'.)ms 110000m
+Name
+~ Web_cache
+0 load.php?lang=en&modules=
+load.php?lang=en&modules=
+121 load.php?lang=en&modules=
+;,- enwiki.png
+wikipedia-wordmark-en,svg
+• sort_both,svg?0e440
+•~ bullet- icon.svg?d4515
+II/ extemal-l ink-ltr-icon.svg?48e'.
+~ lcon_pdf_file.png
+HTTPS
+x Headers Preview Response Initiator Timing Cookies
+•General
+Request URL: https : / / en .wiki pedia. orgh dki/1,eb_cache
+Request Met~
+Status Code~
+Remote Address: 208 . 80. 15 3 . 224 :443
+Referrer Policy: stri ct-origi n->1hen-cr oss-ori gin
+• Response Headers
+accept-ch: Sec-CH- UA-Arc h, Sec-CH-UA-B i t nes s, Sec-CH-LIA-Full-Vers i on-Li st, Sec -CH- Ul'.Model,
+Sec-CH-UA- Platform -Version
+I
+All HTTP traffic can be viewed by third parties using a network sniffer. A network sniffer is software
+that monitors network traffic and allows users to inspect HTTP requests and responses. HTTPS
+encrypts HTTP traffic between a browser and web server so a network sniffer cannot intercept
+sensitive information in the HTTP traffic like passwords, credit card numbers, financial transactions,
+etc.
+HTTPS uses a protocol called Transport Layer Security (TLS), which uses asymmetric public keys
+to encrypt data between the browser and web server. A website wanting to use HTTPS must
+acquire a digital certificate, issued by a trusted certificate authority, that contains a public key used
+by t Ls to encrypt data. ►
+Figure 5.1.3: Chrome, Firefox, and Edge browsers showing HTTPS URLs.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 14/68
+11/17/24, 11 :23AM zyBooks
+v W Wikipe ia, li:he free encycloped X +
++- ➔ C !; en.wikipedia.org/wi ki/ Main_Page
+0 I W Wikipedia, the free en cycl op ed X +
+f- ➔ C 0 8 https://en.wikipedia.o rg/wiki/Main_Page
+I PARTICIPATION
+ACTIVITY
+W Wikipeclia, he free encyclopedia x +
+a LI https:/ / en.wikipedia.org/wiki/Main_Page
+◄
+5.1.7: Steps in an HTTPS transaction.
+Put the steps used in an HTTPS transaction in order.
+If unable to drag and drop, refresh the page.
+Browser and web server generate session keys.
+Browser and web server transmit encrypted data.
+Browser requests an HTTPS connection to a webpage.
+Web server sends digital certificate to the browser.
+Step 1
+Step 2
+Step 3
+Step4
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+D
+15/68
+11/17/24, 11 :23AM zyBooks
+Exploring further:
+• HTTP response status codes (MON)
+• ETag - HTTP (MON)
+• Moving to HTTPS Guide
+• Inspect Network Activity with Chrome OevTools
+• HTTP/2
+• HTTP/3
+I CHALLENGE
+ACTIVITY 5.1.1: HTTP
+570104.2065416.qx3zqy7 -
+For each webpage described, indicate the total HTTP requests the web browser sends anc
+the total HTTP responses the web server sends, assuming that no requests are ignored.
+I Webpage contents HTTP requests HTTP response:
+1 A JavaScript file Ex:9
+2 2 JavaScript files and 2 videos
+3 2 CSS stylesheets, 2 JavaScript flies, and 3 images I I
+~-~
+1 2 3 4
+Check - ◄ ►
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+16/68
+11/17/24, 11 :23AM zyBooks
+5.2 JavaScript Object Notation (JSON)
+Introduction to JSON
+Communicating data between the server and browser is a significant task for modern web
+applications. Initial attempts to do so included unstructured text documents and heavily structured
+XML documents, both of which required significant effort to convert to a usable format. JavaScript
+Object Notation, or JSON, is an efficient, structured format for data based on a subset of the
+JavaScript language. JSON (pronounced "Jason") is intended to be easily readable by humans and
+computers. Debugging communication that uses JSON is easy because humans can read JSON.
+Communication is efficient because computers can transmit and parse JSON quickly. As a result,
+JSON has rapidly become the dominant format of data transfer between web browsers and servers. I PARTICIPATION
+ACTIVITY 5.2.1 : JSON basics.
+1) JSON is only useful for JavaScript
+programs.
+0 True
+0 False
+2) JSON is the only format for
+communicating between browser and
+server.
+0 True
+0 False
+3) JSON is easy for humans to read and
+write.
+0 True
+0 False
+JSON structure and values
+JSON has six basic data types:
+D
+0
+0
+0
+1. String - Unicode characters enclosed within double quotes("). A few special characters must be
+escaped with a backslash(\). Ex: backslashes(\\), double quotes(\"), newlines (\n), and tabs
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 17/68
+11/17/24, 11 :23AM zyBooks
+(\ t).
+2. Number- Either an integer or decimal number. Ex: 42, 3 .141, -1. le-5.
+3. Object - Unordered list of zero or more name/value pairs separated by commas and enclosed
+within braces ( {}).A name in a JSON object must be a string in double quotes. A value can be
+any legal JSON value. Each name and value is separated by a colon. Ex:
+{ "Name": "Joe", "Age": 35 }
+4. Array- Ordered list of zero or more JSON values separated by commas and enclosed within
+brackets([J). Ex: [J and [13,"blue"J .
+5. Boolean - Either true or false.
+6. null - Represents "nothing".
+A JSON value can be any of the above data types.
+The JSON structure is defined recursively so that objects can contain arrays and arrays can contain
+objects to any arbitrary depth.
+A common error when generating JSON programmatical/y is to include a trailing comma after the list of
+name/value pairs in a JSON object or after the list of JSON values in a JSON array Ex: [ o, 1 , 2, J.
+Figure 5.2.1: An example JSON data structure.
+"name" : "John Doe" ,
+"vehicles" : [
+] ,
+{
+} '
+{
+"make" : "Ford" ,
+"model" : "F-150" ,
+"color" : "white"
+"make" : "Toyota" ,
+"model" : "Camry" ,
+"color" : "red"
+"married" : false ,
+"previous_customer" :
+true ,
+◄
+"known_associates" : [],
+"notes" : null
+The JSON structure above is an object with six name/value pairs:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+18/68
+11/17/24, 11 :23AM zyBooks
+1. name has the string value John Doe.
+2. vehicles has an array value of two objects. Each object in the vehicles array has three
+name/value pairs: make, model, and color.
+1. The array's first object's make is the string Ford, model is the string F-150, and color is
+the string white.
+2. The array's second object's make is Toyota, model is Camry, and color is red.
+3. married is false .
+4. previous_ customer is true.
+5. known_associates is an empty array.
+6. notes is null. I PARTICIPATION
+ACTIVITY 5.2.2: JSON data types.
+Refer to the following JSON structure:
+1)
+2)
+} '
+"name" : "oreo" ,
+"type" : "cookie" ,
+"flavors" : ["chocolate" , "vanilla" ],
+"favorite" : false ,
+"created" : 1912
+{ "name" : "snickers" ,
+} '
+"type" : "candy bar" ,
+"flavors" : ["chocolate" , "peanuts" , "caramel" , "nougat" ],
+"favorite" : true ,
+"created" : 1930
+{ "name" : "malt" ,
+"type" : "frozen dairy" ,
+"flavors" : ["vanilla" , "chocolate" , "strawberry" ],
+"favorite" : false ,
+"created" : 1922
+What value type does the JSON
+structure create?
+0 array
+0 object
+0 string
+How many objects does the JSON
+structure create?
+0 1
+0 3
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+0
+0
+19/68
+11/17/24, 11 :23AM
+0 4
+3) What is the data type off avori te?
+0 array
+0 boolean
+0 string
+4) What is the data type of ere a ted?
+O number
+O object
+0 string
+Working with JSON
+zyBooks
+JavaScript provides a built-in JSON object that provides two methods for working with JSON:
+1. The JSON.parse() method creates a JavaScript object from a string containing JSON. Ex:
+0
+0
+JSON.parse(' [1,"two",null] ') convertsthestring '[1,"two",null] 'intothe
+JavaScript array [ 1, "two", null J. Typically, JSON. parse () is used with data received from
+a server.
+2. The JSON.stringify() method creates a string from a JavaScript object. Typically,
+JSON . stringify () is used with data sent to a server. JSON. stringify () creates a string
+representation of any passed object by either calling the object's toJSON () method if defined or
+recursively serializing all enumerable, non-function properties. Ex:
+JSON. stringify (new Date ( '2020-08-06')) converts the JavaScript Date object to the
+string 2020-08-06T00 : oo: oo. oooz by calling the Date object's toJSON () method.
+Good practice is to use single quotes around JavaScript strings containing JSON notation so that the
+double quotes for strings and JSON object names do not need to be escaped. Ex: Use
+' {"name": "Bob"} ' instead of" {\"name\": \"Bob\"}" .
+I PARTICIPATION
+ACTIVITY 5.2.3: JSON.parse and JSON.stringify example.
+let bondStr = '{"name":"James","age":35)' ;
+console . log (bondStr);
+let bondObj = JSON . parse (bondStr);
+console . log ("Happy birthday, " + bondObj . name );
+bondObj . age += 1 ;
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+r "
+{"name":" James", "age":35}
+Happy birthday, James
+{"name":" James", "age":36}
+~ ~
+20/68
+11/17/24, 11 :23AM zyBooks
+I
+bondStr = JSON . stringify (bondObj );
+console . log (bondStr); ----~
+Animation content:
+Step 7: The following code is displayed.
+let bondStr = 1{"name":"James","age":35}';
+console.log(bondStr);
+The following text is shown in the console.
+{"name":"James","age":35}
+Step 2: The following code is added.
+let bondObj = JSON.parse(bondStr);
+console.log("Happy birthday,"+ bondObj.name);
+The following text is shown in the console.
+Happy birthday, James
+Step 3: The following code is added.
+bondObj.age += 1;
+bondStr = JSON.stringify(bondObj);
+console.log(bondStr);
+The following text is shown in the console.
+{"name":"James","age":36}
+Animation captions:
+1. bondStr is a string representing a JSON object.
+2. The JSON.parseO method parses the JSON string to create a JavaScript object. The
+JavaScript object's name property is then printed to the console.
+3. bondObj's age property is incremented. The JSON.stringify() method then converts bondObj
+back to a JSON string.
+r7
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 21/68
+11/17/24, 11 :23AM zyBooks I PARTICIPATION
+ACTIVITY 5.2.4: Using JSON.parse() and JSON.stringify().
+1) JSON. parse( _ } produces an
+array of three values: 1, 7, and 19.
+Show answer
+2) JSON. stringify ( __ ) returns
+the string ' { 11 a 11 : true, 11b 11 : [
+] , 11 c 11 :null}'.
+Show answer
+3) What does the following code display in the
+console?
+console . log (JSON. stringify ({ date :
+new Date ("2001-01-01" ) }));
+Show answer
+Extending and customizing JSON output
+u
+0
+0
+0
+The JSON. parse () method's second parameter is an optional parameter for a reviver function. A
+reviver function is used to modify parsed values before being returned, and is helpful when a JSON
+string represents a data type not available in JSON. Ex: A reviver function can convert a string
+representing a date, 11 2 o 10-12-3 o 11 , to a JavaScript Date object.
+The JSON. stringify () method has two optional parameters: a replacer and a spacer. The replacer
+enables customization of the generated string. If replacer is a function, JSON. stringify () will use
+the value returned by the function as the string representation. Ex: A replacer can convert a JavaScript
+type not directly supported in JSON to a string representation of that data type. If replacer is an array,
+JSON. stringify () will filter the returned value by converting only the properties listed in the
+replacer array. Ex: JSON. s tr ingi f y ( {a: 1, b: 2, c: 3} , [ 11 a 11 , 11b II J ) returns the string
+, { 11 a 11 : l, 11b 11 : 2 } , .
+The spacer controls the indentation spacing of output JSON string, which indicates the depth of
+values in the object. When the spacer parameter is specified and not an empty string, the output will
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 22/68
+11/17/24, 11 :23AM zyBooks
+also include newlines. Ex: JSON. stringify ( {a: 1, b: 2}, null, 11 11 ) returns the string below
+because the spacer parameter is a string with two spaces.
+' {
+"a": 1,
+"b": 2
+} '
+I PARTICIPATION
+ACTIVITY 5.2.5: Reviver function for JSON.parse(). D
+let data = { date : new Date ("2010-10-10" ) };
+console . log (data );
+let json = JSON . stringify (data );
+console . log (json);
+console . log (JSON. parse (json));
+console . log (JSON. parse (json, function (k , v )
+if (k == "date" ) return new Date (v );
+return v ;
+} ) ) ;
+Animation content:
+Step 7: The following lines of code are added.
+let data = { date:new Date("207 0-1 0-1 0") };
+console.log( data);
+The following text is displayed in the console.
+Object {date: Sat Oct 09 207 0 20:00:00
+GMT-0400 (EDT)}
+Step 2: The following lines of code are added.
+letjson = JSON.stringify(data);
+console.logQson);
+The following text is displayed in the console.
+{"date":"207 0-10-1 0T00:00:00.000Z"}
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+r
+Object {date : Sat Oct 09 2010 20 :00:00
+GMT-0400 (EDT )}
+{"date" : "2010-10-l0T00:00:00.000Z" }
+Object {date : "2010-10-l0T00:00:00.000Z" }
+Object {date : Sat Oct 09 2010 20 :00:00
+GMT-0400 (EDT )}
+23/68
+11/17/24, 11 :23AM
+Step 3: The following code is added.
+console.log(JSON.parseQson));
+The following text is displayed in the console.
+Object {date: "2010-10-1 0T00:00:00.000Z"}
+Step 4: The following code is added.
+console.log(JSON.parseQson, function(k,v) {
+if (k == "date") return new Date(v);
+return v;
+}));
+The following text is displayed in the console.
+Object {date: Sat Oct 09 201 0 20:00:00
+GMT-0400 (EDT)}
+Animation captions:
+zyBooks
+1. The console displays the date property of the data JavaScript object to be a Date object.
+2. JSON.stringify() converts the Date object to a string.
+3. JSON.parse() converts the string in json to a JavaScript string.
+4. By providing a reviver function, JSON.parse() converts the date string to a Date object.
+I PARTICIPATION
+ACTIVITY 5.2.6: Customizing JSON.parse and JSON.stringify.
+1) Which optional parameter can convert
+the string representation of a date into
+a JavaScript Date object?
+O replacer
+0 reviver
+0 spacer
+2) What is the result of the following JSON.stringify()
+call?
+JSON . stringify ({ a : "one" , b : "two" , c : "three" },
+[ "a" , "c" J)
+Q ' {"a": "one", "c": "three"}'
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+0
+0
+24/68
+11/17/24, 11 :23AM zyBooks
+Q ' {"a": "one", "b": "two", "c": "three"}'
+Q '{"b":"two"}'
+3) What is the result of the following
+JSON.stringify() call that uses two
+spaces for the space parameter?
+JSON . stringify ({ a :{ b :l, c :3}},
+null , ' ' )
+Q '{"a":{"b":1,"c":3}}'
+0
+0
+0
+I { "a": { "b": 1,
+"c" :3 } } I
+I {
+} I
+I {
+} I
+"a": {
+"b": 1,
+"c": 3
+"a": {
+"b": 1,
+"c": 3,
+I CHALLENGE
+ACTIVITY 5.2.1: JavaScript and JSON.
+570104.2065416.qx3zqy7 -Assign jsonData with a JSON object with properties: studentName (a string), studentAge (a
+number) and userSiblings (an array of strings). Note: The content of the properties doesn't
+matter.
+1 let j sonData ;
+2 /* Your solution goes here*/
+3
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+0
+D
+25/68
+11/17/24, 11 :23AM zyBooks
+1 I 2
+3 4 5
+Check - View your last submission v
+Exploring further:
+• JSON from MDN
+5.3 XMLHttpRequest (Ajax)
+Ajax introduction
+An HTTP request is triggered by clicking on a hyperlink or submitting a form, after which the browser
+may appear unresponsive while the browser waits for the server response. When the browser receives
+the response, the entire webpage is replaced with the HTML in the response. This delay may be
+undesirable for some web applications and may annoy users if the delay is long.
+Ajax (Asynchronous JavaScript and XML) is a technique to asynchronously communicate with a
+server and update a webpage once the response is received, without reloading the whole webpage. An
+asynchronous request occurs when the web application sends a request to the server and continues
+running without waiting for the server response. Although the "x" in Ajax stands for "XML', Ajax is used
+to transmit plain text, HTML, XML, and JSON.
+XMLHttpRequest is an object for communicating with web servers using Ajax. Using the
+XMLHttpRequest object allows web browsers to hide the communication latency and continue to
+provide a responsive user interface while waiting for a server response. The XMLHttpRequest object
+defines handlers for events that occur during the request/response cycle. Ex: A response arrives at the
+browser, an error occurs during a request, etc. Using event-driven programming, the web application
+can continue providing a responsive interface and does not need to wait for a response from the
+server. The web application later updates the page once the response is received.
+I n https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 26/68
+11/17/24, 11 :23AM I PARTICIPATION I
+ACTIVITY 5.3.1: Asynchronous HTTP request.
+<hl>Movie Information</hl>
+<p id="movieinfo">
+zyBooks
+<cite>Star Wars</cite> : Rated PG, released 1977
+</p>
+let movieinfo = document . getElementByld ("movieinfo" );
+let xhr = new XMLHttpRequest ();
+xhr . addEventListener ("load" , function ()
+movieinfo . innerHTML = xhr . response ;
+} ) ;
+xhr . open ("GET" , "starwars.html" );
+xhr . send () ;
+Animation content:
+Step 1: The following HTML is displayed:
+< h3>Movie I nformation</h3>
+<div id="movieinfo">
+<!-- to be loaded -->
+</div>
+The following JavaScript is displayed:
+let movieinfo = document.getElementByld("movieinfo");
+let xhr = new XMLHttpRequest();
+xhr.addEventlistener("load", function() {
+movieinfo.innerHTML = xhr.response;
+});
+xhr.open("GET", "starwars.html");
+xhr.send();
+The browser displays "Movie Information" in a bold font.
+r
+Movie Information
+Star Wars: Rated PG,
+released 1977
+HTTP
+Request
+◄
+►
+HTTP
+Response
+Web server
+Step 2: The JavaScript code is highlighted, and an HTTP request labeled "GET starwars.html" is sent
+to the webs server.
+Step 3: The web server sends back an "HTTP response" containing starwars.html.
+Step 4: The following lines of code are highlighted.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 27/68
+11/17/24, 11 :23AM
+xhr.addEventlistener("load", function() {
+movieinfo.innerHTML = xhr.response;
+});
+zyBooks
+The line of code reading "<!-- to be loaded -->" is replaced with "<cite>Star Wars</cite>: Rated PG,
+released 1977".
+Step 5: The web browser displays: Star Wars: Rated PG, released 1977
+Animation captions:
+1. The browser initially renders the webpage with no movie information.
+2. The XMLHttpRequest object sends a GET request for starwars.html to the web server. The
+request is sent asynchronously.
+3. The web server asynchronously responds to the browser with the contents of starwars.html.
+4. The load event handler is called when starwars.html is loaded. The paragraph's inner HTML is
+replaced with the HTML contents of starwars.html.
+5. The browser displays the Star Wars information.
+Note
+◄
+For security reasons, browsers limit Ajax requests to the web server from which the
+JavaScript was downloaded. Ex: JavaScript downloaded from http://instagram.com
+may only make Ajax requests to instagram.com. A cross-origin HTTP request is a
+request made to another domain. Ex: An Ajax request from JavaScript downloaded
+from instagram.com to yahoo.com is a cross-origin HTTP request. Browsers can make
+cross-origin HTTP requests using a number of techniques including proxy servers,
+Cross-Origin Resource Sharing (CORS), and JSON with Padding (JSONP).
+Using XMLHttpRequest
+The steps for using the XMLHttpRequest API are:
+1. Create a new XMLHttpRequest object.
+►
+2. Assign handlers to the desired events via the addEventListener () method. The
+addEventListener () method takes two arguments: the event name and the event handler,
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 28/68
+11/17/24, 11 :23AM zyBooks
+code that should execute when the event occurs. If the handlers are not set up prior to calling
+the open () method, the progress events will not execute.
+3. Initialize a connection to a remote resource using the open () method. The open() method
+takes two arguments: the HTTP request type and the URL for the resource. Most browsers only
+support "GET" and "POST" request types.
+4. Modify the default HTTP request headers if needed with the setRequestHeader() method. Ex:
+xhr.setRequestHeader(''Content-Type", "application/x-www-form-urlencode
+sets the Content-Type header so a URL-encoded string may be sent in a POST request.
+5. Send the HTTP request via the send() method. For POST requests, the data to be sent with the
+request is passed as the argument to the send () method.
+I PARTICIPATION
+ACTIVITY 5.3.2: Identify steps in making an Ajax request.
+Match the JavaScript code with the description.
+(a ) function responseReceivedHandler ()
+console . log ("handling response: " + this . responseText );
+(b ) let xhr = new XMLHttpRequest ();
+(c ) xhr . addEventListener ("load" , responseReceivedHandler);
+(d ) xhr . open ("GET" , "http://www.example.org/example.html" );
+(e ) xhr . send ();
+If unable to drag and drop, refresh the page.
+Create new XMLHttpRequest object Initialize server connection
+Register load event handler Create load event handler
+(a)
+(b)
+(c)
+(d)
+(e)
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+Send HTTP request
+D
+29/68
+11/17/24, 11 :23AM zyBooks
+XMLHttpRequest result handlers
+Good practice is to use a result handler for each specific result to separate functionality for each Ajax
+event. Ex: Error handling, progress bars, updating the user interface on success, etc. The
+XMLHttpRequest result handlers are:
+• The load handler is called when the exchange between the browser and server has completed.
+From the browser's perspective, the server received the request and responded. However, the
+request might not have been successful because of a problem such as a non-existent webpage.
+The HTTP status code must be examined to check which type of response was received. Ex:
+200 vs. 404. The load, error, and abort handlers are mutually exclusive and are called after any
+progress handlers.
+• The error handler is called when the browser does not receive an appropriate response to a
+request. Ex: The browser is unable to connect to the server, the connection between browser and
+server is cut in the middle of a response, etc.
+• The abort handler is called when the browser is told to stop a request/response that is still in
+progress. Ex: The user closes the webpage that made the request.
+• The timeout handler is called if the browser takes too much time to fully receive a response to a
+request. The timeout is an optional value that can be provided before the request is made. By
+default, the browser does not provide a timeout for a request.
+Note
+◄
+The readystatechange handler relates to any change in the XMLHttpRequest. When
+XMLHttpRequest was originally defined, readystatechange was the only handler
+defined. As a result, many Ajax examples on the Internet only use readystatechange and
+do not include other handlers. Load, error, abort, and timeout are replacements for
+readystatechange.
+I PARTICIPATION
+ACTIVITY 5.3.3: Match the event handlers to their descriptions.
+If unable to drag and drop, refresh the page.
+Eii,M·i'\i Ill m Ill
+Response received successfully.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+D
+30/68
+11/17/24, 11 :23AM
+XMLHttpRequest progress handlers
+XMLHttpRequest progress handlers are:
+zyBooks
+Sending request failed.
+Browser request was stopped.
+Request took too long to complete.
+• The loadstart handler is called when the browser begins to send a request. The loadstart
+handler is called before any other XMLHttpRequest handler.
+• The loadend handler is called after the browser receives the response. The loadend handler is
+called upon both response success and failure, and is called after all other XMLHttpRequest
+handlers.
+• The progress handler is called one or more times while a response is being received by the
+client. Progress handlers are called before result handlers. The progress handler can be used to
+provide a data download progress indicator to the user. A similar handler is available to provide
+an indicator for uploaded data.
+I PARTICIPATION
+ACTIVITY 5.3.4: XMLHttpRequest event handler order.
+Arrange the handlers in the order the handlers are called.
+If unable to drag and drop, refresh the page.
+result handler progress loadstart
+First
+Second
+Third
+Fourth
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+31/68
+11/17/24, 11 :23AM zyBooks
+Attributes for determining XMLHttpRequest success
+The XMLHttpRequest object has attributes for checking the status of a response, which are usually
+used in the load handler and used to update the DOM.
+• The status attribute is the numeric status code returned in the response.
+• The statusText attribute is the descriptive text describing the status attribute.
+Checking the status attribute of a response is important because the status code identifies the
+specific reason for a failure response. Ex: 403 means the requestor does not have permission to
+access the requested resource, and 404 means the requested resource was not found.
+A common error is to assume that a failure response causes the error handler to be called. If the server
+properly sends the failure response to the browser, the browser will treat the response as successful
+and call the load handler. The error handler is only called if the response is not fully received by the
+browser.
+Table 5.3.1: Common HTTP response status codes.
+Status
+Meaning
+code
+200 HTTP request successful
+-
+3XX General form for request redirection errors
+-
+307 Resource permanently moved, the new URL is provided
+-
+4XX General form for client errors
+-
+400 Bad request. Ex: Incorrect request syntax
+401 Unauthorized request. Ex: Not properly authenticated.
+-
+403 Request forbidden. Ex: User does not have necessary permissions.
+404 Not found. Ex: Requested resource does not exist.
+-
+5XX General form for server error codes
+-
+500 Internal server error. Ex: Server-side code crashed.
+~
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 32/68
+11/17/24, 11 :23AM
+503
+zyBooks
+Service unavailable. Ex: Webpage is temporarily unavailable due to site
+maintenance.
+Accessing Ajax response data
+The XMLHttpRequest object provides multiple ways to access the response data.
+• The response attribute is the response body, which is parsed by the browser according to the
+responseType attribute.
+• The response Text attribute is the plain text version of the response.
+• The responseXML attribute is the XML DOM version of the response. The responseXML
+attribute is only available as a DOM object if the response is a valid and correctly formatted XML
+document.
+The response Type attribute is set by the programmer to let the browser know the expected response
+data format.
+• If the responseType attribute is set to "j son", then the browser parses the entire response
+as a JSON object and sets the response attribute to the JSON object.
+• If the responseType attribute is either "" or "text 11 , the browser leaves the response
+unprocessed, and the response attribute contains the same value as responseText.
+• If the responseType attribute is II document 11 , the browser assumes the response is an XML
+◄ document, and the response attribute contains the same value as responseXML.
+I PARTICIPATION
+ACTIVITY
+<body>
+5.3.5: Creating a query string and loading JSON.
+<label for="title">Title: </label>
+<input type="text" id="title"><br>
+<button id=" search" >Search</button>
+<p id="movieinfo">
+<cite>Star Wars</cite> : Rated PG,
+released in 1977
+</p>
+</body>
+let searchBtn = document . getElementByid ("search" );
+searchBtn . addEventListener ("click" , function () {
+let xhr = new XMLHttpRequest ();
+xhr . addEventListener ("load" , responseReceivedHandler);
+xhr . responseType = "json" ;
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+Title: !star Wars
+(search)
+Star Wars : Rated PG,
+released in 1977
+GET
+lookup.php?
+►
+D
+33/68
+11/17/24, 11 :23AM zyBooks
+let title = document. getElementByid ("title" ) ;
+let queryString = "title=" +
+encodeURIComponent (title . value );
+xhr . open ("GET" , "lookup.php?" + queryString);
+xhr . send () ;
+} ) ;
+function responseReceivedHandler ()
+let movieinfo = document . getElementByid ("movieinfo" );
+if (this . status === 200 ) {
+let movie = this . response ;
+movieinfo . innerHTML = "<cite>" + movie . title +
+"</cite>: Rated" + movie . rating +
+", released in" + movie . year ;
+else {
+movieinfo . innerHTML = "Movie data unavailable." ;
+Animation content:
+Step 1: The following HTML is displayed:
+<body>
+<label for="title"> Title:</label>
+<input type="text" id="title"><br>
+<button id="search">Search</button>
+<p id="movieinfo">
+</p>
+</body>
+The following JavaScript is displayed:
+let searchBtn = document.getElementByld("search");
+searchBtn.addEventlistener("click", function0 {
+let xhr = new XMLHttpRequest();
+xhr.addEventlistener("load", responseReceivedHandler);
+xhr.responseType = "json";
+let title = document.getElementByld("title");
+let queryString = "title="+
+encodeU RI Component(title. value);
+xhr.open("GET", "lookup.php?" + queryString);
+xhr.send();
+});
+function responseReceivedHandler() {
+let movielnfo = document.getElementByld("movieinfo");
+if (this.status === 200) {
+let movie = this.response;
+movielnfo.innerHTML ="<cite>"+ movie.title+
+"</cite>: Rated"+ movie.rating+
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+title= Star%20Wars
+~
+{"title":"Star Wars",
+"rating":"PG",
+"year":"1977"}
+.. ...
+Web Server
+34/68
+11/17/24, 11 :23AM
+", released in " + movie.year;
+} else {
+}
+}
+movielnfo.innerHTML = "Movie data unavailable.";
+zyBooks
+The user enters "Star Wars" into a textbox and presses the "Search" button.
+Step 2: The line of code reading "xhr.responseType = "json";" is highlighted,
+Step 3: The code encodeURIComponent(title.value) returns "Star%20Wars".
+Step 4: The xhr.openO and xhr.send() code sends "GET lookup.php? title=Star%20Wars" to the web
+server.
+Step 5: The web server responds with "{"title":"Star Wars", "rating":"PG", "year":"1977"}".
+Step 6: The following lines of code are highlighted.
+if (this.status === 200) {
+let movie = this.response;
+Step 7: The following lines of code are highlighted.
+movielnfo.innerHTML ="<cite>"+ movie.title+
+"</cite>: Rated"+ movie.rating+
+The paragraph is changed to: <cite>Star Wars</cite>: Rated PG, released in 1977
+The browser displays "Star Wars: Rated PG, released in 1977".
+Animation captions:
+1. The user types the title "Star Wars" and presses the Search button, causing the Search button's
+click handler to execute.
+2. xhr.responseType is set to "json" so that the JSON sent to the browser in the Ajax response will
+be automatically converted into a JavaScript object.
+3. A query string is constructed using the text from the text box. encodeURIComponent()
+converts "Star Wars" into a string with no spaces.
+4. An asynchronous HTTP request to lookup.php with a query string is sent to the web server.
+5. Web server looks up "Star Wars" in a database and sends back a JSON response with
+information about the movie.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 35/68
+11/17/24, 11 :23AM zyBooks
+6. The load handler verifies the response's status code is 200 and accesses the movie object
+from this.response, which was created from the JSON response.
+7. The movie information is placed in the paragraph, and the browser renders the HTML.
+I PARTICIPATION
+ACTIVITY 5.3.6: Ajax and JSON.
+Refer to the animation above.
+1) If the responseType attribute is set
+to ''json", what attribute contains the
+parsed JSON object when the
+response is received?
+0 response
+0 responseText
+0 responseXML
+2) What query string is created for the Ajax
+request when the user enters Pride &
+Prejudice?
+0 title=Pride & Prejudice
+0 title=Pride%20&%20Prejudice
+0 title=Pride%20%26%20Prejudice
+3) What does the webpage display if
+lookup.php was accidentally
+misspelled lookup.html, and no
+lookup.html file exists?
+0 Nothing.
+O The movie information for the
+given movie title.
+O "Movie data unavailable."
+4) If lookup.php expects the movie title to be
+POSTed, the calls to open () and send () must
+be modified, and one more line of code must be
+added. What is the missing line of code?
+xhr . open ("POST" , "lookup.php" );
+II Missing line
+xhr . send (queryString);
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+0
+0
+0
+0
+36/68
+11/17/24, 11 :23AM
+0 xhr.responseType = "text";
+0
+xhr.setRequestHeader("ContentType",
+"application/x-www-formurlencoded");
+O xhr.addEventListener("error",
+errorHandler);
+I PARTICIPATION
+ACTIVITY 5.3. 7: Ajax practice.
+zyBooks
+The URL https: / /wp. zybooks. com/weather .php?zip=XXXXX, where XXXXX is a five
+digit ZIP code, returns JSON containing a randomly produced forecast for the given ZIP
+code. If the ZIP code is not given or is not five digits, the JSON response indicates the ZIP
+code is not found.
+Successful request
+"success" : true ,
+"forecast" : [
+"high" : 90 , "low" : 72 , "desc" :
+"sunny" } ,
+"high" : 92 , "low" : 73 , "desc" :
+"mostly sunny" } ,
+{ "high" : 87 , "low" : 64 , "desc" :
+"rain" } ,
+{ "high" : 88 , "low" : 65 , "desc" :
+"cloudy" } ,
+{ "high" : 90 , "low" : 68 , "desc" :
+"partly cloudy" }
+l
+Unsuccessful request
+-
+"success" : false ,
+"error" : "ZIP code not
+found"
+Enter any ZIP code in the webpage below, and press the Search button. When Search is
+pressed, an Ajax request is made to the URL above using the ZIP code entered in the form.
+The raw JSON response is displayed in the webpage, which is not ideal.
+Make the following changes:
+1. Modify getForecast () to specify that a JSON response is expected before calling
+xhr. send() :
+xhr . responseType = "json" ;
+2. Replace the code that appends the raw JSON to the html string with code that loops
+through the forecast array and produces a numbered list with each day's forecast:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+37/68
+11/17/24, 11 :23AM
+//html+= this.response;
+html += "<ol>" ;
+for (let day of this . response . forecast )
+zyBooks
+html += '<li>${ day . desc }: high is ${ day . high }, low is ${ day . low }
+</li>' ;
+}
+html += "</ol>" ;
+3. Render the web page, and verify the changes you have made work correctly to show the
+weather for the ZIP code you enter.
+4. Modify the code to display an appropriate error message if the Ajax response indicates
+the ZIP code is not found.
+let html = "" ;
+if (this . response . success )
+html += "<hl>Forecast</hl>" ;
+html += "<ol>" ;
+for (let day of this . response . forecast )
+html += '<li>${ day . desc }: high is ${ day . high }, low is ${ day . low}
+</li>' ;
+}
+html += "</ol>" ;
+else {
+html '<hl>Error: ${ this . response . error }</hl>' ;
+5. Render the webpage, and verify that entering a bad ZIP code like "abc" produces an
+error message.
+1 ~!DOCTYPE html>
+2 <html lang="en">
+3 <head>
+4 <title>Weather Forecast</title>
+5 </head>
+6 <body>
+7 <p>
+JavaScript I
+8 <label for="zip" >ZIP code : </ label>
+9 <input type="text" id="zip" maxlength="5">
+10 <button id="search" >Search</button>
+11 </p>
+12 <div id="forecast" ></div>
+13 </body>
+14 </html>
+15
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 38/68
+11/17/24, 11 :23AM
+Your webpage
+ZIP code:
+zyBooks
+Expected webpage
+I Search I ZIP code:
+► View solution
+I PARTICIPATION
+ACTIVITY 5.3.8: Updating the DOM via an Ajax request.
+Match the JavaScript code with the description.
+II Called when Ajax response is received
+function responseReceivedHandler () {
+(a ) if (this . status === 200 ) {
+I Search I
+II code assumes response returns an ordered list that can be
+inserted
+II into the list named myList, overwriting any previous contents
+let list = document . getElementByid ("myList" );
+(b ) list . innerHTML = this . response ;
+else {
+(c ) console . log ("The request failed, status: " + this . status + " " +
+this . statusText );
+}
+let xhr = new XMLHttpRequest ();
+xhr . addEventListener ("load" , responseReceivedHandler );
+(d ) xhr . responseType = "text" ;
+xhr . open ("GET" , "http://www.example.org/example.html" );
+xhr . send () ;
+If unable to drag and drop, refresh the page.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+39/68
+11/17/24, 11 :23AM zyBooks
+Check request success Indicate how to interpret response data
+Print debugging information Access response's data
+(a)
+(b)
+(c)
+(d)
+I CHALLENGE
+ACTIVITY 5.3. 7: XMLHttpRequest (Ajax).
+5707 04.20654 7 6.qx3zqy7 -Store a new XMLHttpRequest object in the xhr variable, then assign requestHandler function
+as the "error" event listener.
+1 function requestHandler () {
+2 console . log ( 11 handling response: 11 + this . responseText);
+3 }
+4
+5 /* Your solution goes here*/
+6
+1 2
+Check - https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+3 4
+D
+40/68
+11/17/24, 11 :23AM zyBooks
+View your last submission v
+Monitoring uploads
+The XMLHttpRequest object's upload attribute is an object for monitoring the status of the request
+being sent to the server. The upload attribute has the same handlers as the XMLHttpRequest object,
+but the progress handler is the only handler typically used for the upload attribute. The progress
+handler can be used to monitor the status of uploading large flies, such as attaching a document to a
+Gmail message.
+Example 5.3.1: Monitoring the progress of an uploaded file.
+function uploadProgressHandler (event ) {
+if (event . lengthComputable ) {
+console . log (event . loaded + "bytes uploaded out of" + event . total + "
+bytes total." );
+}
+let file = document . getElementByid ("file_widget" ) . files [0];
+let xhr = new XMLHttpRequest ();
+xhr . upload . addEventListener ("progress" , uploadProgressHandler);
+xhr . open ("POST" , "http://www. example. org /example. html" ) ;
+xhr . setRequestHeader ("Content-Type" , file . type );
+xhr . send (file );
+◄
+I PARTICIPATION
+ACTIVITY 5.3.9: Uploading flies using XMLHttpRequest.
+1) xhr.addEventListener ("progress",
+handler) tracks the status of a request to
+the server.
+0 True
+0 False
+2) The XMLHttpRequest object can use a
+GET or POST request to upload flies to
+a server.
+O True
+O False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+D
+0
+0
+41/68
+11/17/24, 11 :23AM
+3) When uploading files to a server, the
+Content-Type header indicates the type
+of file being uploaded.
+0 True
+O False
+4) The XMLHttpRequest object's load
+handler takes an event object as an
+argument.
+0 True
+O False
+5) The XMLHttpRequest object's progress
+handler takes an event object as an
+argument.
+0 True
+O False
+Exploring further:
+• XMLHttpRequest from MON
+• HTTP access control (CORS). from MON
+zyBooks
+5.4 Using third-party web APls (JavaScript)
+Introduction
+0
+0
+0
+Many organizations have created public web APls that provide access to the organization's data or the
+user's data that is stored by the organization. Ex: The Google Maps API provides applications
+information about geographic locations, and the lnstagram API allows applications access to photos
+shared on lnstagram. Public APls on GitHub.com lists thousands of free, public web APls.
+A third-party web AP/ is a public web API used by a web application to access data provided by a third
+party. 'Third-party" refers to a person or organization that is neither the web application using the API
+(the "first" party) nor the user using the web application (the "second" party). Websites rely on thirdparty
+web APls to integrate with social media, obtain maps and weather data, or access collections of
+data.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 42/68
+11/17/24, 11 :23AM zyBooks
+To use a third-party web API, a developer usually registers with the third party to obtain an AP/ key.
+Third parties require API keys for several reasons:
+• The API key identifies who or what application is using the web API.
+• The API key helps the third party limit the number of requests made to the API in a fixed time
+period or may be used to charge a developer a fee for additional requests.
+• To obtain an API key, developers must agree to restrictions the third party places on data
+obtained from the web API.
+Most third-party web APls are RESTful. A RESTfu/ web AP/ is a web API that is called with a URL that
+specifies API parameters and returns JSON or XML containing the API data. Ex: The URL
+http://linkedin.com/api/artic1e?id=123 specifies the article ID 123, so the article would be returned
+formatted in JSON.
+Third-party web APls may be called from the web server or the web browser. This material shows how
+to call web APls from the web browser using JavaScript.
+SOAP
+◄
+A SOAP-based web AP/ is another type of web AP/ that relies heavily on XML and is in
+general more complex to use than RESTful web AP/s. See the "Exploring further" section
+for more information on SOAP
+Figure 5.4.1: Calling third-party web API from the web server or web browser.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+43/68
+11 /17/24, 11 :23 AM
+request
+response
+Web browser
+Node.js.
+Python,
+elC.
+Web server
+API
+request
+zyBooks
+API
+request ____ ,G
+API
+response
+Third party
+1-------18
+I PARTICIPATION
+ACTIVITY
+◄
+Web browser
+5.4.1: Third-party web APls.
+1) Information from a third-party web API
+reaches the browser faster if the
+browser calls the web API directly
+instead of the web server calling the
+web API.
+O True
+0 False
+2) For a third-party web API requiring an
+API key, the API key must be
+transmitted with every API request.
+0 True
+O False
+3) When the browser makes an API
+request to a third-party web API, the
+web API key can be kept secret from
+prying eyes.
+0 True
+O False
+AP I
+response
+https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/chapter/5/print
+Third party
+►
+D
+0
+0
+0
+44/68
+11/17/24, 11 :23AM
+4) Many web APls charge a fee to the
+developer after a limited number of
+requests have been made in a 24-hour
+period.
+0 True
+0 False
+5) RESTful web APls only return XML.
+0 True
+O False
+Weather API
+zyBooks
+OpenWeatherMap provides a free Weather API providing current weather data, forecasts, and
+historical data. Developers must register at QQenweatherma12.org for an API key that must be
+transmitted in all API requests.
+0
+0
+The OpenWeatherMap website provides documentation explaining how to use the Weather API using
+GET requests with various query string parameters. The API endpoint
+http:/ /api. openweathermap. org/data/2. 5/weather returns the current weather based on
+the following query string parameters:
+• zip - Five digit US ZIP code
+• units - Standard, metric, or imperial units to use for measurements like temperature and wind
+speed
+• appid - Developer's API key
+Other parameters are documented in the OpenWeatherMap website. The Weather API returns weather
+data in JSON format by default.
+Figure 5.4.2: GET request to obtain the current weather for ZIP 90210.
+http://api.openweathermap.org/ data/2. 5/weather?
+zip=9021 O&units=imperial&appid=APIKEY
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 45/68
+11/17/24, 11 :23AM
+{
+}
+zyBooks
+"coord ":{
+"' on ": -1 8 4
+• ' ....._ City"s geo location
+" ·at " : 34,107 ~
+},
+"w ather" : [
+{
+"ma in 11 : "Clear"~ ~ Overall description
+"description" : "'clear sky" ,
+"icon " : "01d "
+}
+],
+"baseu: ~crnc stat ions",
+''main'': { ~ Degrees Fahrenheit
+'' temp '' : 75 .61,
+"' pressure " : 1•0 17 j Percer,t humidity
+"humidity " :14, __--
+"' temp_rniri " :60 . 8j ~ Minimum and maximum
+"'te ,np _max " : 82 . 4 temps a,t the rnom ent
+}.
+"wind ... : { ~ Miles per hourr
+"' spe d" :3.36
+},
+"clouds ":{ _... Percent cloudy
+'"e l ":1 ~
+L
+"id" :5328041 , ~ City
+"name ":"Beve rly Hills ",
+"cod":200
+Try 5.4.1: Try OpenWeatherMap's API in your web browser.
+1. Go to QQenweathermaQ.org~
+2. Sign up for an account to obtain an API key.
+3. When your API key is ready, try the link:
+http://aQi.oQenweathermaQ.org/data/2.5/weather?
+◄ ziQ=9021 0&units=imQerial&aQQid=APIKEY to make an API request for the weather with ►
+ZIP 90210. The page should indicate an invalid API key was used.
+4. Replace APIKEY in the URL'.s query string with your API key, and reload the webpage.
+The JSON-encoded weather information for 90210 should be displayed.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 46/68
+11/17/24, 11 :23AM zyBooks
+5. Change the ZIP code in the URL'.s query string to your ZIP code, and reload the URL to
+see the weather in your ZIP code.
+I PARTICIPATION 5.4.2: The Weather APL ACTIVITY
+1) What does the Weather API return
+when an invalid API key is used in a
+request?
+0 A blank webpage
+◄ O Weather for the 9021 0 ZIP
+O An error message formatted in
+JSON
+2) In the figure above, what does the
+Weather API return as the current
+humidity in the 9021 0 ZIP code?
+0 75.61
+0 14
+0 3.36
+3) What "units" parameter value would
+make the Weather API return the
+temperature in Celsius?
+0 imperial
+0 metric
+0 standard
+4) Does the Weather API support finding
+the current weather by city name?
+0 Yes
+0 No
+Cross-origin requests
+D
+0
+►
+0
+0
+0
+Calling a third-party web API from the web browser requires a cross-origin HTTP request, since the
+web API is not hosted on the local website's web server. Two main techniques are used to make
+cross-origin requests:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 47/68
+11/17/24, 11 :23AM zyBooks
+• Cross-Origin Resource Sharing (CORS) is a W3C specification for how web browsers and web
+servers should communicate when making cross-origin requests.
+• JSON with Padding (JSONP) is a technique to circumvent cross-origin restrictions by injecting
+<script> elements dynamically into a webpage. Script elements have no cross-origin
+restrictions.
+CORS is the more common of the two techniques and, for the web API user, the easiest to use. CORS
+requires the web browser to send an Origin header in a web API request to indicate the scheme and
+domain making the API request. If the API accepts the request, the API responds with an
+Access-Control-Allow-Origin header indicating the same value in the Origin request header
+or"*", which indicates that requests are allowed from any origin. CORS uses other headers that begin
+with Access-Control-* to support other interactions with the API.
+CORS allows the browser to send GET, POST, PUT, and DELETE requests. JSONP limits the browser to
+sending only GET requests.
+Figure 5.4.3: Making a request to the Weather API with CORS.
+◄
+HTTP request
+GET /data / 2 . 5 / weather?
+zip=90210&units=imperial&appid=APIKEY
+HTTP/1.1
+Host : api.openweathermap.org
+Origin: http: / /mywebsite.com
+User-Agent: Mozilla/ 5.0
+Chrome/48.0 . 2564
+I PARTICIPATION
+ACTIVITY 5.4.3: Cross-origin requests.
+1) What HTTP header must the web
+browser send in every CORS request?
+0 Access-Control-Allow-Origin
+O Origin
+0 User-Agent
+HTTP response
+HTTP / 1. l 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: application/json;
+charset=utf-8
+Content-Length : 431
+Date: Mon, 28 Mar 2016 16 : 09 : 48 GMT
+Server: openresty
+{"coord":
+{ "lon" :-118. 4, "lat": 34. 07}, "weather":
+[{"id":500,
+"main":"Rain","description":"light
+rain","icon":"10d"}l, etc . .. }
+►
+D
+0
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 48/68
+11/17/24, 11 :23AM
+2) The web browser knows to send the
+Origin header in the HTTP request
+when the requested URL'.s domain
+name and the requesting script's
+domain name are __ .
+0 the same
+O different
+3) When a third-party web API does not
+support CORS, what is Access-ControlAllow-
+Origin set to in the web APl's
+response?
+O Access-Control-Allow-Origin is
+set to*.
+O Access-Control-Allow-Origin is
+set to the Origin value.
+O Access-Control-Allow-Origin is
+not present.
+4) Does JSONP support POST or PUT
+request methods?
+O Yes
+0 No
+Calling the Weather API from JavaScript
+zyBooks
+0
+0
+0
+The Weather API may be called from JavaScript using the XMLHttpRequest object, which makes
+asynchronous HTTP requests. The OpenWeatherMap implements CORS, and API requests can come
+from any origin.
+The animation below shows how to retrieve weather information for a given ZIP code. For the
+JavaScript code to work in a web browser, the "APIKEY" string needs to be replaced with an actual API
+key.
+I PARTICIPATION 5.4.4: Calling the Weather API with JavaScript.
+ACTIVITY D
+getWeather (90210);
+function getWeather (zip ) {
+let endpoint = "https://api.openweathermap.org/data/2.5/weather" ;
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 49/68
+11/17/24, 11 :23AM zyBooks
+let apiKey = "APIKEY" ;
+let queryString = "zip=" + zip + "&units=imperial&appid=" + apiKey;
+let url = endpoint + "?" + queryString ;
+let xhr = new XMLHttpRequest ();
+xhr . addEventListener ("load" , responseReceivedHandler);
+xhr . responseType = "json" ;
+xhr . open ("GET" , url );
+xhr . send () ;
+function responseReceivedHandler ()
+let weatherinfo = document . getElementByid ("weather" );
+if (this . status === 200 ) {
+weatherinfo . innerHTML =
+"<p>Current temp: " + this . response .main . temp + " &deg;F</p>" +
+"<p>Desc: " + this . response . weather [0] . description + "</p>" +
+"<p>Humidity: " + this . response .main . humidity + "%</p>" ;
+else {
+weatherinfo . innerHTML = "Weather data unavailable." ;
+Animation content:
+The following code is displayed.
+getWeather(9021 0);
+function getWeather(zip) {
+}
+let endpoint= "https://api.openweathermap.org/data/2.5/weather";
+let apiKey = "APIKEY";
+let queryString = "zip=" + zip + "&units=imperial&appid=" + apiKey;
+let url = endpoint+ "?" + queryString;
+let xhr = new XMLHttpRequest();
+xhr.addEventlistener("load", responseReceivedHandler);
+xhr.responseType = "json";
+xhr.open("GET", url);
+xhr.send();
+function responseReceivedHandler() {
+let weatherlnfo = document.getElementByld("weather");
+if (this.status === 200) {
+weatherlnfo.innerHTML =
+"<p>Current temp: " + this.response.main.temp + " &deg;F</p>" +
+"<p>Desc: "+ this.response.weather[0].description + "</p>" +
+"<p>Humidity: " +this.response.main.humidity+ "%</p>";
+} else {
+weatherlnfo.innerHTML = "Weather data unavailable.";
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+Weather for 90210
+Current temp: 61 °F
+Desc: clear sky
+Humidity: 71 %
+GET
+zip=90210
+units=imperial
+appid=APIKEY
+{jsor
+OpenWeatherMap
+50/68
+11/17/24, 11 :23AM
+}
+}
+"Weather for 9021 0" is displayed on the web browser.
+Step 1: The following lines of code are highlighted.
+zyBooks
+let endpoint = "https://api.openweathermap.org/data/2.5/weather";
+let apiKey = "APIKEY";
+let queryString = "zip=" + zip + "&units=imperial&appid=" + apiKey;
+let url = endpoint+ "?" + queryString;
+The website url is previewed as "https://api. . .weather?zip=9027 0 ... ".
+Step 2: The following lines of code are highlighted.
+let xhr = new XMLHttpRequest();
+xhr.addEventlistener("load", responseReceivedHandler);
+xhr.responseType = "json";
+xhr.open("GET", url);
+xhr.send();
+"GET zip=90210 units=imperial appid=APIKEY" is sent to the Weather API.
+Step 3: The Weather API responds with "Dson}". The following code is highlighted.
+function responseReceivedHandler() {
+let weatherlnfo = document.getElementByld("weather");
+if (this.status === 200) {
+weatherlnfo.innerHTML =
+"<p>Current temp: " + this.response.main.temp + " &deg;F</p>" +
+"<p>Desc: "+ this.response.weather[0].description + "</p>" +
+"<p>Humidity: " +this.response.main.humidity+ "%</p>";
+} else {
+}
+}
+weatherlnfo.innerHTML = "Weather data unavailable.";
+Step 4: The line of code reading "if (this.status === 200)" is highlighted.
+Step 5: The following lines of code are highlighted.
+weatherlnfo.innerHTML =
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 51/68
+11/17/24, 11 :23AM zyBooks
+11<p>Current temp: 11 + this.response.main.temp + 11 &deg;F</p>11 +
+11<p>Desc: 11 + this.response.weather[0].description + 11</p>11 +
+11<p>Humidity: 11 +this.response.main.humidity+ 11%</p>11
+;
+The web browser reads the following.
+Weather for 90210
+Current temp: 61 °F
+Desc: clear sky
+Humidity: 71 %
+Animation captions:
+1. getWeather() creates a URL to request the current weather for the 9021 0 ZIP.
+2. The XMLHttpRequest object sends a GET request to the Weather API.
+3. OpenWeatherMap responds with JSON containing the current weather for ZIP code 90210.
+responseReceivedHandler() executes when the browser receives the JSON response.
+4. this.status is 200 unless the ZIP code is not found.
+I PARTICIPATION
+ACTIVITY 5.4.5: Calling the Weather API from JavaScript.
+Refer to the animation above.
+1) What JavaScript variable must be
+modified for the webpage to correctly
+access the Weather API?
+0 endpoint
+0 apiKey
+0 queryString
+2) What JavaScript variable must be
+modified if the webpage is to display
+the temperature in Celsius instead of
+Fahrenheit?
+0 endpoint
+0 apiKey
+0 queryString
+3) What is the expected output for the call
+below?
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+0
+0
+0
+52/68
+11/17/24, 11 :23AM
+getWeather ("test" );
+0 "Weather data unavailable."
+O Temperature for "test" ZIP code.
+0 Exception is thrown.
+4) According to the figure above that
+shows the Weather APl's JSON
+response, what variable in
+responseReceivedHandler()
+contains the wind speed?
+Q this.status.speed
+Q this.response.speed
+Q this.response.wind.speed
+Exploring further:
+• Public APls on GitHub.com
+zyBooks
+• Understanding SOAP and REST Basics And Differences
+5.5 Exception handling
+Exception and try-catch
+0
+An exception is an error that disrupts the normal flow of program execution. When an exception
+occurs, a program may need to execute code to handle the error. Ex: Display an error message, call a
+function, or shutdown. Exception handling is the process of catching and responding to an exception.
+Figure 5.5.1: An exception is generated when calling a non-existing method.
+II Oops! Should be console.log()
+console . Log ("Will this work?" );
+Uncaught TypeError : console.Log is not a function (line
+2)
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 53/68
+11/17/24, 11 :23AM zyBooks
+The throw statement throws a user-defined exception. Syntax: throw expression. Ex:
+throw "number is negative" throws an exception with a string value.
+A program halts when an exception is thrown unless a try-catch statement is used to catch/handle
+the exception. A try-catch statement has a try block to execute code that may t~row an exception
+and a catch block that executes when an exception is thrown.
+Construct 5.5.1: try-catch.
+I PARTICIPATION
+ACTIVITY
+try {
+II Statements that might throw an
+exception
+}
+catch (exception )
+II Handle the exception
+◄
+5.5.1: Throwing and catching an exception.
+function findSum (nurnbers , startlndex, endlndex )
+if (startlndex < 0) {
+throw "startlndex is less than 0." ;
+else if (endlndex >= numbers . length )
+throw "endlndex is too large." ;
+let sum = 0 ;
+for (let i = startlndex ; i <= endlndex ; i ++) {
+sum += nurnbers [ i ];
+return sum;
+►
+let nums = [l, 2 , 3 , 4 ]; let nums = [1, 2 , 3 , 4 ] ;
+try {
+console . log (findSum (nums , 0 , 2 ));
+console . log (findSum (nums , 3 , 4));
+console . log ("Done!" );
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+console . log (findSum (nums , 3 , 4));
+catch (exception ) {
+console . log (exception);
+console . log ("Done!" );
+D
+54/68
+11/17/24, 11 :23AM
+6
+Uncaught end Index is too
+large.
+Animation content:
+The following code is displayed:
+function findSum(numbers, startlndex, endlndex) {
+if (startlndex < 0) {
+}
+throw "startlndex is less than 0.";
+}
+else if (endlndex >= numbers.length) {
+throw "endlndex is too large.";
+}
+let sum= 0;
+for (let i = startlndex; i <= endlndex; i++) {
+sum += numbers[i];
+}
+return sum;
+let nums = [1 , 2, 3, 4];
+console.log(findSum(nums, 0, 2));
+console.log(findSum(nums, 3, 4));
+console.log("Done!");
+Step 7 runs the following lines:
+let nums = [1, 2, 3, 4];
+console.log(findSum(nums, 0, 2));.
+6 is displayed in the console.
+Step 2 runs the following line:
+console.log(findSum(nums, 3, 4));
+zyBooks
+endlndex is too large.
+Done!
+Step 3 runs lines of code in the function, findSum, called in step 2. The following lines were the lines
+run in step 3:
+if (startlndex < 0) {
+throw "startlndex is less than 0.";
+}
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 55/68
+11/17/24, 11 :23AM
+else if (endlndex >= numbers.length) {
+throw "endlndex is too large.";
+}
+zyBooks
+Step 3 throws the exception inside the else if statement and exits the function. The exception
+thrown was not handled so Uncaught endlndex is too large. is displayed in the console.
+Step 4 and 5 runs new code:
+let nums = [1 , 2, 3, 4];
+try {
+console.log(flndSum(nums, 3, 4));
+}
+catch (exception) {
+console.log( exception);
+}
+console.log("Done!");
+The function flndSumO is called like and the end Index exception is thrown. The catch block handles
+the exception and end Index is too large. is displayed in the console. The line of code after the catch
+block runs displays Done! in the console.
+Animation captions:
+1. The flndSum() function adds the numbers in the nums array from index Oto index 2.
+2. flndSum() is called with endlndex of 4. Since endlndex is equal to numbers.length, the throw
+statement throws an exception, indicating a problem with the endlndex value.
+3. The code does not handle the exception, so the exception message is displayed in the
+console, and the program halts prematurely.
+4. Using a try-catch statement, the catch block handles the exception and outputs the exception
+message.
+5. After the catch block executes, the program execution continues.
+I PARTICIPATION 5.5.2: Exception handling.
+ACTIVITY
+Refer to the animation above.
+7) What happens when findSum ()
+throws an exception, and f indSum ()
+is not inside a try-catch statement?
+The uncaught exception is
+0 output to the console, and the
+program continues to run.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+0
+56/68
+11/17/24, 11 :23AM
+The uncaught exception is
+O output to the console, and the
+program terminates.
+O The exception is ignored, and
+the program continues to run.
+2) Complete the code to throw an
+exception when endindex is smaller
+than startindex?
+if (endindex < startindex )
+"endindex is
+smaller than startindex." ;
+Q try
+0 catch
+Q throw
+3) Will the catch block execute if
+findSum () does not throw an
+exception?
+0 Yes
+Q No
+4) Suppose the call to f indSum () below
+throws an exception. What is output to
+the console?
+try {
+console . log (findSum (nums ,
+-1, 2 ));
+console . log ("got here" );
+catch (exception ) {
+console . log ("error" );
+console . log ("done" );
+0
+error
+done
+got here
+0 error
+done
+0 error
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+zyBooks
+D
+0
+D
+57/68
+11/17/24, 11 :23AM I PARTICIPATION
+ACTIVITY
+zyBooks
+5.5.3: Practice throwing and handling an exception.
+Professor X has written a JavaScript function f indAverage () to help his students
+compute homework score averages. The f indAverage () function returns the average of
+an array of homework scores. Professor X's students complain that sometimes
+f indAverage () returns NaN or unexpected answers. Professor X suspects the problems
+are due to students passing f indAverage () an empty scores array or an array with
+improperly formatted scores.
+Modify f indAverage () to throw exceptions for the following reasons:
+1. No scores are in the scores array.
+2. A negative score was found in the scores array.
+3. A non-integer was found in the scores array.
+Wrap the existing function calls to findAverage () in a try-catch statement, and output
+any thrown exceptions to the console. The program should continue to try the next call to
+findAverage () regardless of any exceptions thrown.
+To determine if a non-integer exists in the scores array, use Number.islnteger(n), which
+returns true if n is an integer, and false otherwise.
+1 /I Returns the average of the numbers in the scores array.
+2 function findAverage ( scores ) {
+3 let sum = 0;
+4 scores .forEach(function( score ) {
+5 sum += score;
+6 } ) ;
+7 return sum / scores .length;
+8 }
+9
+10 console .log( "Average = " + findAverage ([90, 85, 71, 93]));
+11 console . log ( "Average = " + f indAverage ( [76]));
+12 console . log ( "Average =" + findAverage ([90, -85, 71, 93]));
+13 console .log( "Average =" + findAverage ([]));
+14 console .log( "Average =" + findAverage ([60, "cat" , 70]));
+15
+Run JavaScript Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+II Should not ac
+II Should not a<
+II Should not a
+D
+58/68
+11/17/24, 11 :23AM
+Your console output
+Average= 84.75
+Average= 76
+Average= 42 . 25
+Average= NaN
+Average= NaN
+► View solution
+Finally block
+zyBooks
+A finally block may follow a try or catch block. The finally block executes regardless of whether
+an exception was thrown or not.
+Developers use the finally block for any operations that must be executed, whether or not an
+exception was thrown. Ex: Releasing resources, closing files, and rolling back failed database
+transactions.
+Construct 5.5.2: try-catch-finally.
+I PARTICIPATION
+ACTIVITY
+try {
+II Statements to try
+catch (exception ) {
+II Optionally handle exceptions
+finally {
+II Code that executes no matter
+what
+◄
+5.5.4: try-catch-finally execution.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+D
+59/68
+11/17/24, 11 :23AM
+function test () {
+try {
+console . log ("try" );
+throw "crash!!!" ;
+zyBooks
+II Skips because exception is thrown
+console . log ("after throw" );
+catch (exception ) {
+console . log ("catch" );
+finally {
+console . log ("finally" );
+console . log ("after" );
+test ();
+console . log ("done" );
+Animation content:
+The following code is displayed:
+function test() {
+try {
+}
+console.log("try");
+throw "crash!!!";
+// Skips because exception is thrown
+console.log("after throw");
+catch (exception) {
+console.log("catch");
+}
+finally {
+console.log("flnally");
+}
+console.log("after");
+}
+test();
+console.log("done");
+try
+catch
+finally
+after
+done
+Step 1 calls the function test and runs the try block. try is displayed in the console and an exception
+is thrown.
+Step 2 runs the catch block. The exception thrown in the try block is handled and catch is displayed
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 60/68
+11/17/24, 11 :23AM zyBooks
+in the console.
+Step 3 runs the finally block. finally is displayed in the console.
+Step 4 runs the remaining lines of code. after and done are displayed in console on new lines.
+Animation captions:
+1. The test function throws an exception with the throw statement.
+2. The catch block catches the exception.
+3. The finally block always executes at the end of a try-catch.
+4. Because the exception was handled by the catch block, the program continues to execute.
+Figure 5.5.2: finally without a catch.
+function test () {
+try {
+console . log ("try" );
+throw "crash!!!" ;
+II Skips because an exception was thrown
+console . log ("after throw" );
+finally {
+console . log ("finally" );
+II Skips because an exception was thrown
+console . log ("after" );
+II Exception is not caught, so program halts!
+test ();
+console . log ("done" );
+try
+finally
+Uncaught crash!!!
+◄ ►
+Developers find finally blocks especially helpful when the code in the c at ch block might throw an
+exception, because the finally block will execute even if an exception is thrown in the catch block.
+Figure 5.5.3: finally block executes when the catch block throws an exception.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 61/68
+11/17/24, 11 :23AM
+function test () {
+try {
+console . log ("try" );
+throw "crash!!!" ;
+II Skips because exception is thrown
+console . log ("after throw" );
+catch (exception ) {
+console . log ("catch" );
+throw "oops! ! ! " ;
+finally {
+console . log ("finally" );
+zyBooks
+II Doesn't execute because exception thrown in catch block
+console . log ("after" );
+test ();
+console . log ("done" );
+try
+catch
+finally
+Uncaught oops! ! !
+◄
+I PARTICIPATION
+ACTIVITY 5.5.5: try-catch-finally.
+Refer to the displayValues () function below. The Number. toFixed (n) method
+returns a number with n decimal places.
+function displayValues (tax , total )
+try {
+console . log (tax . toFixed (l) + "%" );
+console . log ("$" + total . toFixed (2));
+catch (ex ) {
+console . log ("error" );
+finally {
+console . log ("********" );
+1) What is output by the call
+displayValues(5.44, 123)?
+5.4%
+0 $123.00
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+D
+0
+62/68
+11/17/24, 11 :23AM zyBooks
+********
+0
+5.4%
+$123.00
+5.4%
+0 $123.00
+error
+********
+2) What is output by the call 0
+displayValues("S.44", 123)?
+5.4%
+0 $123.00
+********
+$123.00
+0 error
+********
+0 error
+********
+3) What is output by the call 0
+displayValues(2.89, "hot
+dog")?
+2.9%
+0 hot dog
+********
+2.9%
+0 error
+********
+0 error
+********
+Error object
+The throw statement can throw any expression, but developers commonly throw an Error object. The
+Error object represents a runtime error, which is an error that occurs when the program is executing.
+An Error object has two properties:
+• name - The error's name.
+• message - The error's message.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 63/68
+11/17/24, 11 :23AM
+The Error constructor takes a message parameter. Ex:
+err= new Error("My error message.");
+zyBooks
+JavaScript defines several other Error constructors, including:
+• RangeError - Thrown when a numeric variable or parameter is outside the valid range.
+• lnterna/Error - Thrown when an internal error occurs in the JavaScript interpreter.
+• TypeError - Thrown when a variable or parameter is not the expected data type.
+Figure 5.5.4: findAverage() throws an Error, TypeError, and RangeError.
+II Returns the average of the scores array
+function find.Average (scores ) {
+try
+if (!Array. isArray (scores )) {
+throw new TypeError ("Must supply an array." );
+if (scores . length === 0 )
+throw new Error ("Must supply at least one score." );
+let sum = 0 ;
+scores . forEach (function (score )
+if (!Number. isinteger (score ))
+throw new TypeError ("Score '" + score + '" is not an integer." );
+if (score < 0 ) {
+throw new RangeError ("Negative score encountered." );
+sum += score ;
+} ) ;
+return sum / scores . length ;
+let ave find.Average ( [50, "cow" ]);
+catch (ex )
+console . log (ex . name + "· " + ex . message );
+TypeError: Score 'cow' is not an integer.
+◄
+I PARTICIPATION
+ACTIVITY 5.5.6: Error object.
+Refer to the figure above.
+1) The code below throws a Range Error.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+D
+0
+64/68
+11/17/24, 11 :23AM
+ave = findAverage ();
+0 True
+O False
+2) The code below outputs "TypeError".
+try {
+ave = findAverage ([));
+catch (ex ) {
+console . log (ex . name );
+0 True
+O False
+3) The code below outputs "Negative
+score encountered."
+try {
+ave findAverage ([5, 2 ,
+-4 l);
+}
+catch (ex ) {
+console . log (ex . message );
+0 True
+O False
+I PARTICIPATION
+ACTIVITY 5.5.7: Practice throwing an Error object.
+zyBooks
+The caesarCipher () function below uses a Caesar cipher to encrypt or decrypt a
+message. The message parameter is the message being encrypted or decrypted. The key
+parameter is the number of characters to shift each letter in the message up or down the
+alphabet. Ex: A key of 1 shifts each letter up by 1, so "A" becomes "B'', "B'' becomes "C", etc. A
+key of -2 shifts each letter down by 2, so "C" becomes "A", "D" becomes "B'', etc. Letters at the
+end of the alphabet wrap back to the beginning, and vice versa.
+The caesarCipher () function is called to encrypt a saying of Caesar's. The same
+message is decrypted using the negative of the key.
+Improve the caesarCipher () function by adding exceptions:
+1. Throw a TypeError if the mes sage parameter is not a string. Use JavaScript's
+typeof operator to check if message is a string:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+0
+0
+D
+65/68
+11/17/24, 11 :23AM zyBooks
+if (typeof message=== "string") // true if message is a string
+2. Throw a TypeError if the key is not an integer. Use the Number. is Integer ()
+method to check the key.
+3. Throw a RangeError if the key is not between -25 and 25.
+Use a try-catch statement to call caesarCipher () and verify the proper exception is
+thrown when using incorrect arguments. Ex: caesarCipher ( 12 3, 5) should throw a
+TypeError because 123 is not a string. In the catch block, output one of the following
+Caesar quotes:
+1. "Men willingly believe what they wish." if the exception thrown is a TypeError.
+2. ''The die is cast." if the exception thrown is a RangeError.
+1 / / Returns an encrypted or decrypted message using a Caesar cipher.
+2 function caesarCipher (message , key) {
+3
+4 // Make negative keys positive
+5 if ( key < 0) {
+6 key += 26;
+7 }
+8
+9 message = message .toUpperCase ();
+10 let newMessage = "" ;
+11 for (let i = 0; i < message .length; i ++) {
+12 let code = message .charCodeAt( i );
+13
+14 // Only convert Letters
+15 if ( code >= 65 && code <= 90) {
+16 code = (( code - 65 + key)% 26) + 65;
+17 }
+10
+Run JavaScript Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+...
+66/68
+11/17/24, 11 :23AM
+Your console output
+HASHULHQFH LV WKH WHDFKHU RI D00 WKLQJV.
+EXPERIENCE IS THE TEACHER OF ALL THINGS.
+► View solution
+I CHALLENGE
+ACTIVITY 5.5.1: Throwing and catching exceptions.
+570104.20654 l 6.qx3zqy7 -
+zyBooks
+Add a throw statement to the processNumbers function that throws the message "All
+elements in the list should be numbers." if one of the elements in numlist is not a number.
+Hint: The function isNaN() returns true if the parameter is not a number.
+1 function processNumbers (numList ) { II Code will be tested with different value
+2 let result = 0;
+3
+4 for (let index = 0; index < numList .length; index++) {
+5
+6 I* Your solution goes here *I
+7
+8 result += numList [index ] * 1.3 * index;
+9 }
+10
+11 return result ;
+12 }
+1 2 3 4
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+67/68
+11/17/24, 11 :23AM zyBooks
+Check - View your last submission v
+Exploring further:
+• trY. ... catch (MDN).
+• Error object (MDN).
+• 1Y.12eof operator (MDN).
+5.6 Lab: Currency Conversion (JS)
+This section's content is not available for print.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 68/68
