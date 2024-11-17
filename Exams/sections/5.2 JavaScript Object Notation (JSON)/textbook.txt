@@ -1,0 +1,671 @@
+Introduction to JSON
+Introduction to JSON
+Communicating data between the server and browser is a significant task for modern web
+Communicating data between the server and browser is a significant task for modern web
+applications. Initial attempts to do so included unstructured text documents and heavily structured
+applications. Initial attempts to do so included unstructured text documents and heavily structured
+XML documents, both of which required significant effort to convert to a usable format. JavaScript
+XML documents, both of which required significant effort to convert to a usable format. JavaScript
+Object Notation, or JSON, is an efficient, structured format for data based on a subset of the
+Object Notation, or JSON, is an efficient, structured format for data based on a subset of the
+JavaScript language. JSON (pronounced "Jason") is intended to be easily readable by humans and
+JavaScript language. JSON (pronounced "Jason") is intended to be easily readable by humans and
+computers. Debugging communication that uses JSON is easy because humans can read JSON.
+computers. Debugging communication that uses JSON is easy because humans can read JSON.
+Communication is efficient because computers can transmit and parse JSON quickly. As a result,
+Communication is efficient because computers can transmit and parse JSON quickly. As a result,
+JSON has rapidly become the dominant format of data transfer between web browsers and servers. I PARTICIPATION
+JSON has rapidly become the dominant format of data transfer between web browsers and servers. I PARTICIPATION
+ACTIVITY 5.2.1 : JSON basics.
+ACTIVITY 5.2.1 : JSON basics.
+1) JSON is only useful for JavaScript
+1) JSON is only useful for JavaScript
+programs.
+programs.
+0 True
+0 True
+0 False
+0 False
+2) JSON is the only format for
+2) JSON is the only format for
+communicating between browser and
+communicating between browser and
+server.
+server.
+0 True
+0 True
+0 False
+0 False
+3) JSON is easy for humans to read and
+3) JSON is easy for humans to read and
+write.
+write.
+0 True
+0 True
+0 False
+0 False
+JSON structure and values
+JSON structure and values
+JSON has six basic data types:
+JSON has six basic data types:
+D
+D
+0
+0
+0
+0
+0
+0
+1. String - Unicode characters enclosed within double quotes("). A few special characters must be
+1. String - Unicode characters enclosed within double quotes("). A few special characters must be
+escaped with a backslash(\). Ex: backslashes(\\), double quotes(\"), newlines (\n), and tabs
+escaped with a backslash(\). Ex: backslashes(\\), double quotes(\"), newlines (\n), and tabs
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 17/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+(\ t).
+(\ t).
+2. Number- Either an integer or decimal number. Ex: 42, 3 .141, -1. le-5.
+2. Number- Either an integer or decimal number. Ex: 42, 3 .141, -1. le-5.
+3. Object - Unordered list of zero or more name/value pairs separated by commas and enclosed
+3. Object - Unordered list of zero or more name/value pairs separated by commas and enclosed
+within braces ( {}).A name in a JSON object must be a string in double quotes. A value can be
+within braces ( {}).A name in a JSON object must be a string in double quotes. A value can be
+any legal JSON value. Each name and value is separated by a colon. Ex:
+any legal JSON value. Each name and value is separated by a colon. Ex:
+{ "Name": "Joe", "Age": 35 }
+{ "Name": "Joe", "Age": 35 }
+4. Array- Ordered list of zero or more JSON values separated by commas and enclosed within
+4. Array- Ordered list of zero or more JSON values separated by commas and enclosed within
+brackets([J). Ex: [J and [13,"blue"J .
+brackets([J). Ex: [J and [13,"blue"J .
+5. Boolean - Either true or false.
+5. Boolean - Either true or false.
+6. null - Represents "nothing".
+6. null - Represents "nothing".
+A JSON value can be any of the above data types.
+A JSON value can be any of the above data types.
+The JSON structure is defined recursively so that objects can contain arrays and arrays can contain
+The JSON structure is defined recursively so that objects can contain arrays and arrays can contain
+objects to any arbitrary depth.
+objects to any arbitrary depth.
+A common error when generating JSON programmatical/y is to include a trailing comma after the list of
+A common error when generating JSON programmatical/y is to include a trailing comma after the list of
+name/value pairs in a JSON object or after the list of JSON values in a JSON array Ex: [ o, 1 , 2, J.
+name/value pairs in a JSON object or after the list of JSON values in a JSON array Ex: [ o, 1 , 2, J.
+Figure 5.2.1: An example JSON data structure.
+Figure 5.2.1: An example JSON data structure.
+"name" : "John Doe" ,
+"name" : "John Doe" ,
+"vehicles" : [
+"vehicles" : [
+] ,
+] ,
+{
+{
+} '
+} '
+{
+{
+"make" : "Ford" ,
+"make" : "Ford" ,
+"model" : "F-150" ,
+"model" : "F-150" ,
+"color" : "white"
+"color" : "white"
+"make" : "Toyota" ,
+"make" : "Toyota" ,
+"model" : "Camry" ,
+"model" : "Camry" ,
+"color" : "red"
+"color" : "red"
+"married" : false ,
+"married" : false ,
+"previous_customer" :
+"previous_customer" :
+true ,
+true ,
+◄
+◄
+"known_associates" : [],
+"known_associates" : [],
+"notes" : null
+"notes" : null
+The JSON structure above is an object with six name/value pairs:
+The JSON structure above is an object with six name/value pairs:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+18/68
+18/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+1. name has the string value John Doe.
+1. name has the string value John Doe.
+2. vehicles has an array value of two objects. Each object in the vehicles array has three
+2. vehicles has an array value of two objects. Each object in the vehicles array has three
+name/value pairs: make, model, and color.
+name/value pairs: make, model, and color.
+1. The array's first object's make is the string Ford, model is the string F-150, and color is
+1. The array's first object's make is the string Ford, model is the string F-150, and color is
+the string white.
+the string white.
+2. The array's second object's make is Toyota, model is Camry, and color is red.
+2. The array's second object's make is Toyota, model is Camry, and color is red.
+3. married is false .
+3. married is false .
+4. previous_ customer is true.
+4. previous_ customer is true.
+5. known_associates is an empty array.
+5. known_associates is an empty array.
+6. notes is null. I PARTICIPATION
+6. notes is null. I PARTICIPATION
+ACTIVITY 5.2.2: JSON data types.
+ACTIVITY 5.2.2: JSON data types.
+Refer to the following JSON structure:
+Refer to the following JSON structure:
+1)
+1)
+2)
+2)
+} '
+} '
+"name" : "oreo" ,
+"name" : "oreo" ,
+"type" : "cookie" ,
+"type" : "cookie" ,
+"flavors" : ["chocolate" , "vanilla" ],
+"flavors" : ["chocolate" , "vanilla" ],
+"favorite" : false ,
+"favorite" : false ,
+"created" : 1912
+"created" : 1912
+{ "name" : "snickers" ,
+{ "name" : "snickers" ,
+} '
+} '
+"type" : "candy bar" ,
+"type" : "candy bar" ,
+"flavors" : ["chocolate" , "peanuts" , "caramel" , "nougat" ],
+"flavors" : ["chocolate" , "peanuts" , "caramel" , "nougat" ],
+"favorite" : true ,
+"favorite" : true ,
+"created" : 1930
+"created" : 1930
+{ "name" : "malt" ,
+{ "name" : "malt" ,
+"type" : "frozen dairy" ,
+"type" : "frozen dairy" ,
+"flavors" : ["vanilla" , "chocolate" , "strawberry" ],
+"flavors" : ["vanilla" , "chocolate" , "strawberry" ],
+"favorite" : false ,
+"favorite" : false ,
+"created" : 1922
+"created" : 1922
+What value type does the JSON
+What value type does the JSON
+structure create?
+structure create?
+0 array
+0 array
+0 object
+0 object
+0 string
+0 string
+How many objects does the JSON
+How many objects does the JSON
+structure create?
+structure create?
+0 1
+0 1
+0 3
+0 3
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+0
+0
+0
+0
+19/68
+19/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+0 4
+0 4
+3) What is the data type off avori te?
+3) What is the data type off avori te?
+0 array
+0 array
+0 boolean
+0 boolean
+0 string
+0 string
+4) What is the data type of ere a ted?
+4) What is the data type of ere a ted?
+O number
+O number
+O object
+O object
+0 string
+0 string
+Working with JSON
+Working with JSON
+zyBooks
+zyBooks
+JavaScript provides a built-in JSON object that provides two methods for working with JSON:
+JavaScript provides a built-in JSON object that provides two methods for working with JSON:
+1. The JSON.parse() method creates a JavaScript object from a string containing JSON. Ex:
+1. The JSON.parse() method creates a JavaScript object from a string containing JSON. Ex:
+0
+0
+0
+0
+JSON.parse(' [1,"two",null] ') convertsthestring '[1,"two",null] 'intothe
+JSON.parse(' [1,"two",null] ') convertsthestring '[1,"two",null] 'intothe
+JavaScript array [ 1, "two", null J. Typically, JSON. parse () is used with data received from
+JavaScript array [ 1, "two", null J. Typically, JSON. parse () is used with data received from
+a server.
+a server.
+2. The JSON.stringify() method creates a string from a JavaScript object. Typically,
+2. The JSON.stringify() method creates a string from a JavaScript object. Typically,
+JSON . stringify () is used with data sent to a server. JSON. stringify () creates a string
+JSON . stringify () is used with data sent to a server. JSON. stringify () creates a string
+representation of any passed object by either calling the object's toJSON () method if defined or
+representation of any passed object by either calling the object's toJSON () method if defined or
+recursively serializing all enumerable, non-function properties. Ex:
+recursively serializing all enumerable, non-function properties. Ex:
+JSON. stringify (new Date ( '2020-08-06')) converts the JavaScript Date object to the
+JSON. stringify (new Date ( '2020-08-06')) converts the JavaScript Date object to the
+string 2020-08-06T00 : oo: oo. oooz by calling the Date object's toJSON () method.
+string 2020-08-06T00 : oo: oo. oooz by calling the Date object's toJSON () method.
+Good practice is to use single quotes around JavaScript strings containing JSON notation so that the
+Good practice is to use single quotes around JavaScript strings containing JSON notation so that the
+double quotes for strings and JSON object names do not need to be escaped. Ex: Use
+double quotes for strings and JSON object names do not need to be escaped. Ex: Use
+' {"name": "Bob"} ' instead of" {\"name\": \"Bob\"}" .
+' {"name": "Bob"} ' instead of" {\"name\": \"Bob\"}" .
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.2.3: JSON.parse and JSON.stringify example.
+ACTIVITY 5.2.3: JSON.parse and JSON.stringify example.
+let bondStr = '{"name":"James","age":35)' ;
+let bondStr = '{"name":"James","age":35)' ;
+console . log (bondStr);
+console . log (bondStr);
+let bondObj = JSON . parse (bondStr);
+let bondObj = JSON . parse (bondStr);
+console . log ("Happy birthday, " + bondObj . name );
+console . log ("Happy birthday, " + bondObj . name );
+bondObj . age += 1 ;
+bondObj . age += 1 ;
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+r "
+r "
+{"name":" James", "age":35}
+{"name":" James", "age":35}
+Happy birthday, James
+Happy birthday, James
+{"name":" James", "age":36}
+{"name":" James", "age":36}
+~ ~
+~ ~
+20/68
+20/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+I
+I
+bondStr = JSON . stringify (bondObj );
+bondStr = JSON . stringify (bondObj );
+console . log (bondStr); ----~
+console . log (bondStr); ----~
+Animation content:
+Animation content:
+Step 7: The following code is displayed.
+Step 7: The following code is displayed.
+let bondStr = 1{"name":"James","age":35}';
+let bondStr = 1{"name":"James","age":35}';
+console.log(bondStr);
+console.log(bondStr);
+The following text is shown in the console.
+The following text is shown in the console.
+{"name":"James","age":35}
+{"name":"James","age":35}
+Step 2: The following code is added.
+Step 2: The following code is added.
+let bondObj = JSON.parse(bondStr);
+let bondObj = JSON.parse(bondStr);
+console.log("Happy birthday,"+ bondObj.name);
+console.log("Happy birthday,"+ bondObj.name);
+The following text is shown in the console.
+The following text is shown in the console.
+Happy birthday, James
+Happy birthday, James
+Step 3: The following code is added.
+Step 3: The following code is added.
+bondObj.age += 1;
+bondObj.age += 1;
+bondStr = JSON.stringify(bondObj);
+bondStr = JSON.stringify(bondObj);
+console.log(bondStr);
+console.log(bondStr);
+The following text is shown in the console.
+The following text is shown in the console.
+{"name":"James","age":36}
+{"name":"James","age":36}
+Animation captions:
+Animation captions:
+1. bondStr is a string representing a JSON object.
+1. bondStr is a string representing a JSON object.
+2. The JSON.parseO method parses the JSON string to create a JavaScript object. The
+2. The JSON.parseO method parses the JSON string to create a JavaScript object. The
+JavaScript object's name property is then printed to the console.
+JavaScript object's name property is then printed to the console.
+3. bondObj's age property is incremented. The JSON.stringify() method then converts bondObj
+3. bondObj's age property is incremented. The JSON.stringify() method then converts bondObj
+back to a JSON string.
+back to a JSON string.
+r7
+r7
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 21/68
+11/17/24, 11 :23AM zyBooks I PARTICIPATION
+11/17/24, 11 :23AM zyBooks I PARTICIPATION
+ACTIVITY 5.2.4: Using JSON.parse() and JSON.stringify().
+ACTIVITY 5.2.4: Using JSON.parse() and JSON.stringify().
+1) JSON. parse( _ } produces an
+1) JSON. parse( _ } produces an
+array of three values: 1, 7, and 19.
+array of three values: 1, 7, and 19.
+Show answer
+Show answer
+2) JSON. stringify ( __ ) returns
+2) JSON. stringify ( __ ) returns
+the string ' { 11 a 11 : true, 11b 11 : [
+the string ' { 11 a 11 : true, 11b 11 : [
+] , 11 c 11 :null}'.
+] , 11 c 11 :null}'.
+Show answer
+Show answer
+3) What does the following code display in the
+3) What does the following code display in the
+console?
+console?
+console . log (JSON. stringify ({ date :
+console . log (JSON. stringify ({ date :
+new Date ("2001-01-01" ) }));
+new Date ("2001-01-01" ) }));
+Show answer
+Show answer
+Extending and customizing JSON output
+Extending and customizing JSON output
+u
+u
+0
+0
+0
+0
+0
+0
+The JSON. parse () method's second parameter is an optional parameter for a reviver function. A
+The JSON. parse () method's second parameter is an optional parameter for a reviver function. A
+reviver function is used to modify parsed values before being returned, and is helpful when a JSON
+reviver function is used to modify parsed values before being returned, and is helpful when a JSON
+string represents a data type not available in JSON. Ex: A reviver function can convert a string
+string represents a data type not available in JSON. Ex: A reviver function can convert a string
+representing a date, 11 2 o 10-12-3 o 11 , to a JavaScript Date object.
+representing a date, 11 2 o 10-12-3 o 11 , to a JavaScript Date object.
+The JSON. stringify () method has two optional parameters: a replacer and a spacer. The replacer
+The JSON. stringify () method has two optional parameters: a replacer and a spacer. The replacer
+enables customization of the generated string. If replacer is a function, JSON. stringify () will use
+enables customization of the generated string. If replacer is a function, JSON. stringify () will use
+the value returned by the function as the string representation. Ex: A replacer can convert a JavaScript
+the value returned by the function as the string representation. Ex: A replacer can convert a JavaScript
+type not directly supported in JSON to a string representation of that data type. If replacer is an array,
+type not directly supported in JSON to a string representation of that data type. If replacer is an array,
+JSON. stringify () will filter the returned value by converting only the properties listed in the
+JSON. stringify () will filter the returned value by converting only the properties listed in the
+replacer array. Ex: JSON. s tr ingi f y ( {a: 1, b: 2, c: 3} , [ 11 a 11 , 11b II J ) returns the string
+replacer array. Ex: JSON. s tr ingi f y ( {a: 1, b: 2, c: 3} , [ 11 a 11 , 11b II J ) returns the string
+, { 11 a 11 : l, 11b 11 : 2 } , .
+, { 11 a 11 : l, 11b 11 : 2 } , .
+The spacer controls the indentation spacing of output JSON string, which indicates the depth of
+The spacer controls the indentation spacing of output JSON string, which indicates the depth of
+values in the object. When the spacer parameter is specified and not an empty string, the output will
+values in the object. When the spacer parameter is specified and not an empty string, the output will
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 22/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+also include newlines. Ex: JSON. stringify ( {a: 1, b: 2}, null, 11 11 ) returns the string below
+also include newlines. Ex: JSON. stringify ( {a: 1, b: 2}, null, 11 11 ) returns the string below
+because the spacer parameter is a string with two spaces.
+because the spacer parameter is a string with two spaces.
+' {
+' {
+"a": 1,
+"a": 1,
+"b": 2
+"b": 2
+} '
+} '
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.2.5: Reviver function for JSON.parse(). D
+ACTIVITY 5.2.5: Reviver function for JSON.parse(). D
+let data = { date : new Date ("2010-10-10" ) };
+let data = { date : new Date ("2010-10-10" ) };
+console . log (data );
+console . log (data );
+let json = JSON . stringify (data );
+let json = JSON . stringify (data );
+console . log (json);
+console . log (json);
+console . log (JSON. parse (json));
+console . log (JSON. parse (json));
+console . log (JSON. parse (json, function (k , v )
+console . log (JSON. parse (json, function (k , v )
+if (k == "date" ) return new Date (v );
+if (k == "date" ) return new Date (v );
+return v ;
+return v ;
+} ) ) ;
+} ) ) ;
+Animation content:
+Animation content:
+Step 7: The following lines of code are added.
+Step 7: The following lines of code are added.
+let data = { date:new Date("207 0-1 0-1 0") };
+let data = { date:new Date("207 0-1 0-1 0") };
+console.log( data);
+console.log( data);
+The following text is displayed in the console.
+The following text is displayed in the console.
+Object {date: Sat Oct 09 207 0 20:00:00
+Object {date: Sat Oct 09 207 0 20:00:00
+GMT-0400 (EDT)}
+GMT-0400 (EDT)}
+Step 2: The following lines of code are added.
+Step 2: The following lines of code are added.
+letjson = JSON.stringify(data);
+letjson = JSON.stringify(data);
+console.logQson);
+console.logQson);
+The following text is displayed in the console.
+The following text is displayed in the console.
+{"date":"207 0-10-1 0T00:00:00.000Z"}
+{"date":"207 0-10-1 0T00:00:00.000Z"}
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+r
+r
+Object {date : Sat Oct 09 2010 20 :00:00
+Object {date : Sat Oct 09 2010 20 :00:00
+GMT-0400 (EDT )}
+GMT-0400 (EDT )}
+{"date" : "2010-10-l0T00:00:00.000Z" }
+{"date" : "2010-10-l0T00:00:00.000Z" }
+Object {date : "2010-10-l0T00:00:00.000Z" }
+Object {date : "2010-10-l0T00:00:00.000Z" }
+Object {date : Sat Oct 09 2010 20 :00:00
+Object {date : Sat Oct 09 2010 20 :00:00
+GMT-0400 (EDT )}
+GMT-0400 (EDT )}
+23/68
+23/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+Step 3: The following code is added.
+Step 3: The following code is added.
+console.log(JSON.parseQson));
+console.log(JSON.parseQson));
+The following text is displayed in the console.
+The following text is displayed in the console.
+Object {date: "2010-10-1 0T00:00:00.000Z"}
+Object {date: "2010-10-1 0T00:00:00.000Z"}
+Step 4: The following code is added.
+Step 4: The following code is added.
+console.log(JSON.parseQson, function(k,v) {
+console.log(JSON.parseQson, function(k,v) {
+if (k == "date") return new Date(v);
+if (k == "date") return new Date(v);
+return v;
+return v;
+}));
+}));
+The following text is displayed in the console.
+The following text is displayed in the console.
+Object {date: Sat Oct 09 201 0 20:00:00
+Object {date: Sat Oct 09 201 0 20:00:00
+GMT-0400 (EDT)}
+GMT-0400 (EDT)}
+Animation captions:
+Animation captions:
+zyBooks
+zyBooks
+1. The console displays the date property of the data JavaScript object to be a Date object.
+1. The console displays the date property of the data JavaScript object to be a Date object.
+2. JSON.stringify() converts the Date object to a string.
+2. JSON.stringify() converts the Date object to a string.
+3. JSON.parse() converts the string in json to a JavaScript string.
+3. JSON.parse() converts the string in json to a JavaScript string.
+4. By providing a reviver function, JSON.parse() converts the date string to a Date object.
+4. By providing a reviver function, JSON.parse() converts the date string to a Date object.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.2.6: Customizing JSON.parse and JSON.stringify.
+ACTIVITY 5.2.6: Customizing JSON.parse and JSON.stringify.
+1) Which optional parameter can convert
+1) Which optional parameter can convert
+the string representation of a date into
+the string representation of a date into
+a JavaScript Date object?
+a JavaScript Date object?
+O replacer
+O replacer
+0 reviver
+0 reviver
+0 spacer
+0 spacer
+2) What is the result of the following JSON.stringify()
+2) What is the result of the following JSON.stringify()
+call?
+call?
+JSON . stringify ({ a : "one" , b : "two" , c : "three" },
+JSON . stringify ({ a : "one" , b : "two" , c : "three" },
+[ "a" , "c" J)
+[ "a" , "c" J)
+Q ' {"a": "one", "c": "three"}'
+Q ' {"a": "one", "c": "three"}'
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+0
+0
+0
+0
+24/68
+24/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+Q ' {"a": "one", "b": "two", "c": "three"}'
+Q ' {"a": "one", "b": "two", "c": "three"}'
+Q '{"b":"two"}'
+Q '{"b":"two"}'
+3) What is the result of the following
+3) What is the result of the following
+JSON.stringify() call that uses two
+JSON.stringify() call that uses two
+spaces for the space parameter?
+spaces for the space parameter?
+JSON . stringify ({ a :{ b :l, c :3}},
+JSON . stringify ({ a :{ b :l, c :3}},
+null , ' ' )
+null , ' ' )
+Q '{"a":{"b":1,"c":3}}'
+Q '{"a":{"b":1,"c":3}}'
+0
+0
+0
+0
+0
+0
+I { "a": { "b": 1,
+I { "a": { "b": 1,
+"c" :3 } } I
+"c" :3 } } I
+I {
+I {
+} I
+} I
+I {
+I {
+} I
+} I
+"a": {
+"a": {
+"b": 1,
+"b": 1,
+"c": 3
+"c": 3
+"a": {
+"a": {
+"b": 1,
+"b": 1,
+"c": 3,
+"c": 3,
+I CHALLENGE
+I CHALLENGE
+ACTIVITY 5.2.1: JavaScript and JSON.
+ACTIVITY 5.2.1: JavaScript and JSON.
+570104.2065416.qx3zqy7 -Assign jsonData with a JSON object with properties: studentName (a string), studentAge (a
+570104.2065416.qx3zqy7 -Assign jsonData with a JSON object with properties: studentName (a string), studentAge (a
+number) and userSiblings (an array of strings). Note: The content of the properties doesn't
+number) and userSiblings (an array of strings). Note: The content of the properties doesn't
+matter.
+matter.
+1 let j sonData ;
+1 let j sonData ;
+2 /* Your solution goes here*/
+2 /* Your solution goes here*/
+3
+3
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+0
+0
+D
+D
+25/68
+25/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+1 I 2
+1 I 2
+3 4 5
+3 4 5
+Check - View your last submission v
+Check - View your last submission v
+Exploring further:
+Exploring further:
+• JSON from MDN
+• JSON from MDN

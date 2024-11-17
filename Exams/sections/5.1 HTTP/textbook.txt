@@ -1,0 +1,1238 @@
+Introduction to HTTP
+Introduction to HTTP
+The HyperText Transfer Protocol (HTTP) is a networking protocol that runs over TCP/IP and
+The HyperText Transfer Protocol (HTTP) is a networking protocol that runs over TCP/IP and
+governs communication between web browsers and web servers. Transmission Control
+governs communication between web browsers and web servers. Transmission Control
+Protocol/Internet Protocol (TCP/IP) is a protocol suite that governs how data packets are
+Protocol/Internet Protocol (TCP/IP) is a protocol suite that governs how data packets are
+transferred over the internet from one machine to another. Understanding the details of TCP/IP is
+transferred over the internet from one machine to another. Understanding the details of TCP/IP is
+not usually required of web developers, but a thorough understanding of HTTP is necessary to
+not usually required of web developers, but a thorough understanding of HTTP is necessary to
+create effective web applications.
+create effective web applications.
+HTTP versions
+HTTP versions
+◄
+◄
+HTTP/1.1 is the HTTP standard used for most of the web's lifetime, but many
+HTTP/1.1 is the HTTP standard used for most of the web's lifetime, but many
+websites are adopting HTTP/2, a relatively new HTTP standard that speeds-up the
+websites are adopting HTTP/2, a relatively new HTTP standard that speeds-up the
+transfer of information between web browsers and web servers. HTTP/2 maintains
+transfer of information between web browsers and web servers. HTTP/2 maintains
+most of HTTP/7. 7 's semantics. HTTP/3, currently in development, improves the
+most of HTTP/7. 7 's semantics. HTTP/3, currently in development, improves the
+speed of HTTP/2 by using UDP to transport data packets instead of TCP. This
+speed of HTTP/2 by using UDP to transport data packets instead of TCP. This
+material focuses on the basic HTTP workings that all standards share.
+material focuses on the basic HTTP workings that all standards share.
+►
+►
+Before HTTP communication begins, the web browser extracts the domain name from the URL
+Before HTTP communication begins, the web browser extracts the domain name from the URL
+being accessed and performs a DNS lookup. The web browser performs a DNS lookup by sending
+being accessed and performs a DNS lookup. The web browser performs a DNS lookup by sending
+the domain name to the local DNS and getting back the IP address of the web server hosting the
+the domain name to the local DNS and getting back the IP address of the web server hosting the
+domain name. Ex: https://www.w3c.org/ has a domain name of w3c.org, and DNS translates
+domain name. Ex: https://www.w3c.org/ has a domain name of w3c.org, and DNS translates
+w3c.org to the IP address 193.51.208.66. The web browser uses the IP address to establish a TCP
+w3c.org to the IP address 193.51.208.66. The web browser uses the IP address to establish a TCP
+connection with the web server and begins communicating with HTTP
+connection with the web server and begins communicating with HTTP
+HTTP functions as a request-response protocol between web browsers and web servers:
+HTTP functions as a request-response protocol between web browsers and web servers:
+• An HTTP request is a message sent from the web browser to the web server. Often the
+• An HTTP request is a message sent from the web browser to the web server. Often the
+request asks the web server to send back a web resource like an HTML file, image, CSS
+request asks the web server to send back a web resource like an HTML file, image, CSS
+stylesheet, JavaScript file, or video.
+stylesheet, JavaScript file, or video.
+• An HTTP response is a message sent from the web server back to the web browser in
+• An HTTP response is a message sent from the web server back to the web browser in
+response to an HTTP request. Often the response contains the requested web resource.
+response to an HTTP request. Often the response contains the requested web resource.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.1.1: HTTP requests and responses.
+ACTIVITY 5.1.1: HTTP requests and responses.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+1/68
+1/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+I
+I
+web browser
+web browser
+http://w3c.org/test.html
+http://w3c.org/test.html
+<html>
+<html>
+<img src="field.jpg">
+<img src="field.jpg">
+</html>
+</html>
+Animation content:
+Animation content:
+◄
+◄
+DNS
+DNS
+TCP connection
+TCP connection
+HTTP request
+HTTP request
+test.html
+test.html
+HTTP response
+HTTP response
+<html>
+<html>
+HTTP request
+HTTP request
+field.jpg
+field.jpg
+HTTP response
+HTTP response
+[image]
+[image]
+TCP connection closed
+TCP connection closed
+web server
+web server
+EJ
+EJ
+EJ
+EJ
+The web browser with the URL http://w3c.org/test.htm1 is displayed. A web server is also
+The web browser with the URL http://w3c.org/test.htm1 is displayed. A web server is also
+displayed. A TCP connection connects the web browser and the web server. The web browser
+displayed. A TCP connection connects the web browser and the web server. The web browser
+sends the HTTP request asking for test.html is to the web server. The web server then sends the
+sends the HTTP request asking for test.html is to the web server. The web server then sends the
+HTTP response with the contents <html> <img> src ="fleld.jpg"> </html> back to the web
+HTTP response with the contents <html> <img> src ="fleld.jpg"> </html> back to the web
+browser. The web browser then sends a HTTP request for fleld .jpg and the web response then
+browser. The web browser then sends a HTTP request for fleld .jpg and the web response then
+sends back the HTTP response with the contents of the image back to the web browser. Since
+sends back the HTTP response with the contents of the image back to the web browser. Since
+there are no more requests, the TCP connection is then closed.
+there are no more requests, the TCP connection is then closed.
+Animation captions:
+Animation captions:
+1. The web browser does a DNS lookup of the domain name w3c.org and uses the IP address
+1. The web browser does a DNS lookup of the domain name w3c.org and uses the IP address
+to create a TCP connection to the web server.
+to create a TCP connection to the web server.
+2. The web browser sends an HTTP request asking for the resource test.html.
+2. The web browser sends an HTTP request asking for the resource test.html.
+3. The web server returns the contents of test.html to the browser in an HTTP response.
+3. The web server returns the contents of test.html to the browser in an HTTP response.
+4. The browser parses the HTML and sends a second HTTP request for fleld .jpg.
+4. The browser parses the HTML and sends a second HTTP request for fleld .jpg.
+5. The web server returns the image to the browser in an HTTP response. The browser
+5. The web server returns the image to the browser in an HTTP response. The browser
+displays the image in the webpage.
+displays the image in the webpage.
+6. When no more resources are needed, the browser closes the TCP connection.
+6. When no more resources are needed, the browser closes the TCP connection.
+" https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 2/68
+11/17/24, 11 :23AM zyBooks I PARTICIPATION I
+11/17/24, 11 :23AM zyBooks I PARTICIPATION I
+ACTIVITY 5.1 .2: HTTP requests and responses.
+ACTIVITY 5.1 .2: HTTP requests and responses.
+1) Before a TCP connection is created,
+1) Before a TCP connection is created,
+the web browser usually performs
+the web browser usually performs
+a/an __
+a/an __
+0 HTTP request
+0 HTTP request
+0 HTTP response
+0 HTTP response
+0 DNS lookup
+0 DNS lookup
+2) How many total HTTP requests does
+2) How many total HTTP requests does
+a browser send for a webpage that
+a browser send for a webpage that
+does not use any other web
+does not use any other web
+resources?
+resources?
+0 1
+0 1
+0 2
+0 2
+0 3
+0 3
+3) How many total HTTP requests does
+3) How many total HTTP requests does
+a browser send for a webpage that
+a browser send for a webpage that
+contains four web resources: an
+contains four web resources: an
+image, a video, a CSS stylesheet, and
+image, a video, a CSS stylesheet, and
+a JavaScript file?
+a JavaScript file?
+0 1
+0 1
+0 4
+0 4
+0 5
+0 5
+4) If a web browser sends 20 HTTP
+4) If a web browser sends 20 HTTP
+requests to a web server, how many
+requests to a web server, how many
+HTTP responses will the web server
+HTTP responses will the web server
+likely send to the web browser?
+likely send to the web browser?
+0 0
+0 0
+0 10
+0 10
+0 20
+0 20
+Request and response headers
+Request and response headers
+An HTTP request and an HTTP response are both composed of four parts:
+An HTTP request and an HTTP response are both composed of four parts:
+u
+u
+0
+0
+0
+0
+0
+0
+0
+0
+1. Start line - The start line specifies the HTTP version being used. A request's start line includes
+1. Start line - The start line specifies the HTTP version being used. A request's start line includes
+a request type and path; a response's start line includes a status code and phrase.
+a request type and path; a response's start line includes a status code and phrase.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 3/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+2. Zero or more header fields -A header field is a keyword followed by a colon and a value.
+2. Zero or more header fields -A header field is a keyword followed by a colon and a value.
+Header fields supply additional information about the request or response.
+Header fields supply additional information about the request or response.
+3. A blank line
+3. A blank line
+4. Optional message body-A message body contains data being transferred between a web
+4. Optional message body-A message body contains data being transferred between a web
+browser and web server. In a request, the message body may be empty or contain submitted
+browser and web server. In a request, the message body may be empty or contain submitted
+form data. In a response, the message body may contain the requested resource.
+form data. In a response, the message body may contain the requested resource.
+The figures below show an example HTTP request for a Wikipedia URL and the corresponding
+The figures below show an example HTTP request for a Wikipedia URL and the corresponding
+HTTP response containing HTML.
+HTTP response containing HTML.
+Figure 5.1.1: HTTP request with no message body.
+Figure 5.1.1: HTTP request with no message body.
+Request for URL: https://en.wikipedia.org/wiki/World_Wide_Web
+Request for URL: https://en.wikipedia.org/wiki/World_Wide_Web
+GET /wiki/World Wide Web HTTP/1.1 - -
+GET /wiki/World Wide Web HTTP/1.1 - -
+Host: en.wikipedia.org
+Host: en.wikipedia.org
+User-Agent: Mozilla/5.0 Chrome/48.0.2564
+User-Agent: Mozilla/5.0 Chrome/48.0.2564
+Request type Path HTTP version
+Request type Path HTTP version
+Start line { l(G1~1 wi ki/World_Wide_W,eb HTTP/1. 1
+Start line { l(G1~1 wi ki/World_Wide_W,eb HTTP/1. 1
+Host: en. wikipedi a . org --- --- - Hostname
+Host: en. wikipedi a . org --- --- - Hostname
+Header fields { User -Agent: Mozi lla/5. 0 Chrome/ 48. 0. 2564 I
+Header fields { User -Agent: Mozi lla/5. 0 Chrome/ 48. 0. 2564 I
+Browser identifier
+Browser identifier
+◄
+◄
+Figure 5.1 .2: HTTP response with HTML in message body.
+Figure 5.1 .2: HTTP response with HTML in message body.
+Response for URL: https://en.wikipedia.org/wiki/World_Wide_Web
+Response for URL: https://en.wikipedia.org/wiki/World_Wide_Web
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+Content-Length: 56579
+Content-Length: 56579
+Content-Type: text/html
+Content-Type: text/html
+Date: Fri, 12 Feb 2016 21:09:32 GMT
+Date: Fri, 12 Feb 2016 21:09:32 GMT
+Last-Modified: Thu, 11 Feb 2016 18:49:40 GMT
+Last-Modified: Thu, 11 Feb 2016 18:49:40 GMT
+Server: nginx/1.9.4
+Server: nginx/1.9.4
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+<head>
+<head>
+<meta charset="UTF-8" />
+<meta charset="UTF-8" />
+<title>World Wide Web - Wikipedia, the free encyclopedia</title>
+<title>World Wide Web - Wikipedia, the free encyclopedia</title>
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+4/68
+4/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+Start line
+Start line
+Header
+Header
+fields
+fields
+Message
+Message
+body
+body
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
+ACTIVITY
+zyBooks
+zyBooks
+HTTP version Status code & phrase
+HTTP version Status code & phrase
+{ HTiP/1.1 00 OK I # of bytes in message body
+{ HTiP/1.1 00 OK I # of bytes in message body
+Content -Type: t ext / html
+Content -Type: t ext / html
+Date: Fri• { 12 Feb 2016 21 : 09: 32 GMT I__..- Oatetime of response
+Date: Fri• { 12 Feb 2016 21 : 09: 32 GMT I__..- Oatetime of response
+Content-Length: '.56579 Media type of message body
+Content-Length: '.56579 Media type of message body
+Last-Modified!: Thu , 11 Feb 2016 1.8:49:40 GMT Date~ime resource was last modified
+Last-Modified!: Thu , 11 Feb 2016 1.8:49:40 GMT Date~ime resource was last modified
+S@r v1:1r : nginx/ 1. 9. 4 .....__
+S@r v1:1r : nginx/ 1. 9. 4 .....__
+<IDOCTY!>E html>
+<IDOCTY!>E html>
+<html l ang• "en ">
+<html l ang• "en ">
+<head>
+<head>
+Web server software identifier
+Web server software identifier
+HTML to be displayed
+HTML to be displayed
+<met() ch(l,r set; "UTF- 8" / >
+<met() ch(l,r set; "UTF- 8" / >
+<title>Worlcl Wi de Web - Wikipedia, the f ree enc yclopediar</title>
+<title>Worlcl Wi de Web - Wikipedia, the f ree enc yclopediar</title>
+5.1.3: HTTP request and response headers.
+5.1.3: HTTP request and response headers.
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+Content-Type Last-Modified
+Content-Type Last-Modified
+User-Agent
+User-Agent
+Content-Length
+Content-Length
+Number of bytes in the response's
+Number of bytes in the response's
+message body.
+message body.
+Media type of the response's
+Media type of the response's
+message body.
+message body.
+Datetime the response was
+Datetime the response was
+generated by the web server.
+generated by the web server.
+Datetime the requested resource
+Datetime the requested resource
+was last modified on the web server.
+was last modified on the web server.
+Identifies the web server software
+Identifies the web server software
+that generated the response.
+that generated the response.
+The domain name for the requested
+The domain name for the requested
+path.
+path.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+►
+►
+5/68
+5/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+Identifies the browser making the
+Identifies the browser making the
+request.
+request.
+List of HTTP headers
+List of HTTP headers
+◄
+◄
+The Internet Assigned Numbers Authority (/ANA) is a standards organization that
+The Internet Assigned Numbers Authority (/ANA) is a standards organization that
+manages various internet numbers and symbols, like global IP address allocation,
+manages various internet numbers and symbols, like global IP address allocation,
+root zone management in DNS, and media types. JANA maintains a list of HTTP
+root zone management in DNS, and media types. JANA maintains a list of HTTP
+headers that are currently active, obsolete, or experimental.
+headers that are currently active, obsolete, or experimental.
+Chrome DevTools for watching HTTP traffic.
+Chrome DevTools for watching HTTP traffic.
+All popular web browsers contain built-in developer tools. Developers can access
+All popular web browsers contain built-in developer tools. Developers can access
+Chrome's developer tools (DevTools) by pressing Ctrl+Shift+I (Windows) or
+Chrome's developer tools (DevTools) by pressing Ctrl+Shift+I (Windows) or
+Command-Option-I (Mac). In the figure below, the Network tab shows the HTTP
+Command-Option-I (Mac). In the figure below, the Network tab shows the HTTP
+network traffic when accessing Wikipedia's article on World Wide Web. The first
+network traffic when accessing Wikipedia's article on World Wide Web. The first
+HTTP request is highlighted. All subsequent requests are for other resources used
+HTTP request is highlighted. All subsequent requests are for other resources used
+in the webpage.
+in the webpage.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+6/68
+6/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+W World Wide Web - Wilapedia X + V □ X
+W World Wide Web - Wilapedia X + V □ X
+C i en.wikipedia.org/wiki/World_Wide_Web Le * ~ □
+C i en.wikipedia.org/wiki/World_Wide_Web Le * ~ □
+.& Nol logged m Talk Conlnbutions Create account l og in
+.& Nol logged m Talk Conlnbutions Create account l og in
+Article Talk Read View sou.rce View history I Search Wlkipedia
+Article Talk Read View sou.rce View history I Search Wlkipedia
+WIKIPEDIA World Wide Web
+WIKIPEDIA World Wide Web
+1l1e..Free E.ncvclooedia r ____ ,..,_, :, .: .. _ ...i i _ ._,_ _ .&. _ _ __ - ~- - • -- _ ... : _
+1l1e..Free E.ncvclooedia r ____ ,..,_, :, .: .. _ ...i i _ ._,_ _ .&. _ _ __ - ~- - • -- _ ... : _
+~ 6] Elements Console Sources Network Performance Memory Application » ,A 6 la! 1 0
+~ 6] Elements Console Sources Network Performance Memory Application » ,A 6 la! 1 0
+e (S) 'i' Q. D Pres erve log r.l Disable cache No throttl ing "' ~ ! .!:
+e (S) 'i' Q. D Pres erve log r.l Disable cache No throttl ing "' ~ ! .!:
+Filter D Invert D Hide data URls
+Filter D Invert D Hide data URls
+All Fetch/XH R JS CSS 1mg Media Fon Doc WS Wasm Manifest Other D Has blocked cookies D Blocked Requests
+All Fetch/XH R JS CSS 1mg Media Fon Doc WS Wasm Manifest Other D Has blocked cookies D Blocked Requests
+D 3rd-party requests
+D 3rd-party requests
+100 ms 200 ms 300 m; ~OO ms 300ms EOO m, 700 ms -- -- I I Name status Type Initiator Size Time Waterfall
+100 ms 200 ms 300 m; ~OO ms 300ms EOO m, 700 ms -- -- I I Name status Type Initiator Size Time Waterfall
+~ World_Wide_Web 200 document other 73.4 kB 46ms ■
+~ World_Wide_Web 200 document other 73.4 kB 46ms ■
+load.php?lang =en&modules=ext.. .. 200 styleshee World Wide Web 10.9 kB 34 ms
+load.php?lang =en&modules=ext.. .. 200 styleshee World Wide Web 10.9 kB 34 ms
+load.php?lang=en&modules=star .. . 200 script World Wide Web 21.0 kB 38 ms 11
+load.php?lang=en&modules=star .. . 200 script World Wide Web 21.0 kB 38 ms 11
+0 load.php?lang=en&modules=site .. .. 200 styleshee World Wide Web 4.6 kB 4·1 ms 1■
+0 load.php?lang=en&modules=site .. .. 200 styleshee World Wide Web 4.6 kB 4·1 ms 1■
+20px-Semi-protection-shackle.svg .. . 200 webp World Wide Web 1.6 kB 38 ms 1■
+20px-Semi-protection-shackle.svg .. . 200 webp World Wide Web 1.6 kB 38 ms 1■
+• -2.}01111:WWW-l PIShar;,.wn.rmn J OO onn_ Wmld Wide Web _]SA kB._ 4, _ms 1■
+• -2.}01111:WWW-l PIShar;,.wn.rmn J OO onn_ Wmld Wide Web _]SA kB._ 4, _ms 1■
+44 requests 781 kB transferred 1.4 MB resources Finish: 684 ms DOMContentLoaded: 390 ms Load: 473 ms
+44 requests 781 kB transferred 1.4 MB resources Finish: 684 ms DOMContentLoaded: 390 ms Load: 473 ms
+Clicking on a specific request shows the request and response details.
+Clicking on a specific request shows the request and response details.
+Name
+Name
+~ Wortd_Wide_Web
+~ Wortd_Wide_Web
+0 load.php?lang=en&modules=
+0 load.php?lang=en&modules=
+load.php?lang=en&modules=
+load.php?lang=en&modules=
+0 load.php?lang=en&modules=
+0 load.php?lang=en&modules=
+Ill 20px-Semi-protection-sha cklE
+Ill 20px-Semi-protection-sha cklE
+22opx -VM1lW -LetSha re.svg.pn
+22opx -VM1lW -LetSha re.svg.pn
+230px-Chromium_on_Ubuntu.
+230px-Chromium_on_Ubuntu.
+230px-World_Map_of_Web_ln
+230px-World_Map_of_Web_ln
+X Headers Preview Response Initiator Timing Cookies
+X Headers Preview Response Initiator Timing Cookies
+..-General
+..-General
+Request URL: https: / / en .wiki pedia.org/wiki/1,orld_Wi de_l,eb
+Request URL: https: / / en .wiki pedia.org/wiki/1,orld_Wi de_l,eb
+Request Method: GET
+Request Method: GET
+Status Code: tt 200
+Status Code: tt 200
+RemoteAddre.ss: 208 .80.15 3 . 224:443
+RemoteAddre.ss: 208 .80.15 3 . 224:443
+Referrer Policy: strict-origin-,1hen-cross-origin
+Referrer Policy: strict-origin-,1hen-cross-origin
+"' Respo nse Headers
+"' Respo nse Headers
+X
+X
+0
+0
+SOOms
+SOOms
+...
+...
+I
+I
+"' 220px -First_Web_Server Jpg
+"' 220px -First_Web_Server Jpg
+220px-lnternet_K2y_Layers.pn
+220px-lnternet_K2y_Layers.pn
+220px-WorldWideWebArounc T
+220px-WorldWideWebArounc T
+accept-ch: Sec-CH - UA-Arc h, Sec-CH-UA-B i tnes s, Sec-CH-UA-Full-Version -List , Sec -CH-U.0.Mode
+accept-ch: Sec-CH - UA-Arc h, Sec-CH-UA-B i tnes s, Sec-CH-UA-Full-Version -List , Sec -CH-U.0.Mode
+l, Sec-CH-UA-Plat form -Version
+l, Sec-CH-UA-Plat form -Version
+accept-ranges: bytes
+accept-ranges: bytes
+Request methods and response status codes
+Request methods and response status codes
+The most common HTTP request-response scenario is when the web browser issues a request
+The most common HTTP request-response scenario is when the web browser issues a request
+with the GET request method, and the web server returns the requested resource with a 200 status
+with the GET request method, and the web server returns the requested resource with a 200 status
+code. An HTTP request method indicates the desired action to perform on a resource. Other
+code. An HTTP request method indicates the desired action to perform on a resource. Other
+request methods besides GET may also be sent in an HTTP request. Ex: POST is often used when
+request methods besides GET may also be sent in an HTTP request. Ex: POST is often used when
+the web browser is sending information from a web form to the web server. The POST, PATCH, PUT,
+the web browser is sending information from a web form to the web server. The POST, PATCH, PUT,
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 7/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+and DELETE request methods are used by web services that allow resources to be created,
+and DELETE request methods are used by web services that allow resources to be created,
+modified, and deleted on the web server.
+modified, and deleted on the web server.
+Table 5.1.1: Common HTTP request methods.
+Table 5.1.1: Common HTTP request methods.
+Request
+Request
+Meaning
+Meaning
+method
+method
+GET Request a representation of the specified resource.
+GET Request a representation of the specified resource.
+-
+-
+HEAD
+HEAD
+Request a response identical to GET but without the response
+Request a response identical to GET but without the response
+body.
+body.
+-
+-
+POST Create a new resource with the contents of the message body.
+POST Create a new resource with the contents of the message body.
+-
+-
+PATCH
+PATCH
+Modify an existing resource with the contents of the message
+Modify an existing resource with the contents of the message
+body.
+body.
+PUT
+PUT
+Replace an existing resource with the contents of the message
+Replace an existing resource with the contents of the message
+body.
+body.
+--
+--
+DELETE Delete an existing resource.
+DELETE Delete an existing resource.
+◄ ►
+◄ ►
+An HTTP response status code is a three digit number that indicates the status of the requested
+An HTTP response status code is a three digit number that indicates the status of the requested
+resource. A successfully requested resource results in a 200 status code, and other status codes
+resource. A successfully requested resource results in a 200 status code, and other status codes
+are returned for various reasons. Ex: A 307 or 302 status code redirects the browser to a different
+are returned for various reasons. Ex: A 307 or 302 status code redirects the browser to a different
+URL. A browser redirect is when the web server returns a 301 or 302 status code with a Location
+URL. A browser redirect is when the web server returns a 301 or 302 status code with a Location
+header indicating the URL the browser should load next.
+header indicating the URL the browser should load next.
+Table 5.1.2: Common HTTP response status codes.
+Table 5.1.2: Common HTTP response status codes.
+Status
+Status
+code
+code
+200
+200
+307
+307
+Status phrase
+Status phrase
+OK
+OK
+Moved
+Moved
+Permanently
+Permanently
+Meaning
+Meaning
+Standard response for a successful request.
+Standard response for a successful request.
+The resource should always be requested at a different
+The resource should always be requested at a different
+URL.
+URL.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 8/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+I
+I
+Status
+Status
+Status phrase Meaning
+Status phrase Meaning
+code
+code
+-
+-
+302 Found
+302 Found
+The resource should temporarily be requested at a
+The resource should temporarily be requested at a
+different URL.
+different URL.
+I
+I
+304 Not Modified
+304 Not Modified
+The resource has not been modified since the last time
+The resource has not been modified since the last time
+the resource was requested.
+the resource was requested.
+I
+I
+403 Forbidden
+403 Forbidden
+The web browser does not have permission to access
+The web browser does not have permission to access
+the resource.
+the resource.
+- -
+- -
+404 Not Found The resource could not be located.
+404 Not Found The resource could not be located.
+- +
+- +
+500 Internal Server
+500 Internal Server
+Something unexpected happened on the web server.
+Something unexpected happened on the web server.
+Error
+Error
+I
+I
+URL shortening
+URL shortening
+URL shortening is a technique to create shorter URLs that redirect to longer URLs. Ex:
+URL shortening is a technique to create shorter URLs that redirect to longer URLs. Ex:
+http://en.wiki!].edia.org/wiki/URL shortening has a short URL of
+http://en.wiki!].edia.org/wiki/URL shortening has a short URL of
+http://tinY-url.com/urlwiki. Short URLs are convenient for sharing on social media,
+http://tinY-url.com/urlwiki. Short URLs are convenient for sharing on social media,
+especially on Twitter where the number of characters in a post is limited. Common
+especially on Twitter where the number of characters in a post is limited. Common
+◄ URL shortening services include bit./y, rebrandlycom, and tinyurl.com.
+◄ URL shortening services include bit./y, rebrandlycom, and tinyurl.com.
+◄
+◄
+When a user types or clicks on a short URL, the URL shortening service responds with
+When a user types or clicks on a short URL, the URL shortening service responds with
+a 301 status code and a Location header with the webpage's full URL. The example
+a 301 status code and a Location header with the webpage's full URL. The example
+HTTP request and response below shows htt!].:/ltinx.url.com/urlwiki redirects to
+HTTP request and response below shows htt!].:/ltinx.url.com/urlwiki redirects to
+http://en. wikipedia. orQlwiki/URL shortening.
+http://en. wikipedia. orQlwiki/URL shortening.
+HTTP request
+HTTP request
+GET / urlwiki
+GET / urlwiki
+HTTP / 1 . 1
+HTTP / 1 . 1
+Host : tinyurl.com
+Host : tinyurl.com
+User-Agent :
+User-Agent :
+Mozilla / 5.0
+Mozilla / 5.0
+Chrome / 48.0 . 2564
+Chrome / 48.0 . 2564
+I
+I
+HTTP response
+HTTP response
+HTTP/1.1 301 Moved Permanently
+HTTP/1.1 301 Moved Permanently
+Date : Tue, 16 Feb 2016 16:38:59 GMT
+Date : Tue, 16 Feb 2016 16:38:59 GMT
+Location :
+Location :
+http: //en.wikipedia.org/ wiki / URL_shortening
+http: //en.wikipedia.org/ wiki / URL_shortening
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+►
+►
+" 9/68
+" 9/68
+11/17/24, 11 :23AM zyBooks I PARTICIPATION
+11/17/24, 11 :23AM zyBooks I PARTICIPATION
+ACTIVITY 5.1 .4: HTTP request methods and response status codes.
+ACTIVITY 5.1 .4: HTTP request methods and response status codes.
+1) Which request method is used by the
+1) Which request method is used by the
+browser to get the same response
+browser to get the same response
+headers that a GET would generate
+headers that a GET would generate
+but without the message body?
+but without the message body?
+Q GET
+Q GET
+Q HEAD
+Q HEAD
+Q PUT
+Q PUT
+2) Which request method is used by the
+2) Which request method is used by the
+browser to submit web form data to
+browser to submit web form data to
+the web server?
+the web server?
+Q GET
+Q GET
+Q PUT
+Q PUT
+Q POST
+Q POST
+3) Which status code is sent when the
+3) Which status code is sent when the
+web server wants to redirect the
+web server wants to redirect the
+browser to a different URL?
+browser to a different URL?
+0 200
+0 200
+0 301 or 302
+0 301 or 302
+0 403
+0 403
+4) Which status code is sent when the
+4) Which status code is sent when the
+requested URL does not point to an
+requested URL does not point to an
+existing resource on the web server?
+existing resource on the web server?
+0 200
+0 200
+0 301
+0 301
+0 404
+0 404
+5) Which status code is sent when the
+5) Which status code is sent when the
+web browser is denied permission to
+web browser is denied permission to
+the requested URL?
+the requested URL?
+0 301
+0 301
+0 304
+0 304
+0 403
+0 403
+Browser caching
+Browser caching
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+u
+u
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+10/68
+10/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+Most web browsers use a browser cache to store requested content. A browser cache is an area on
+Most web browsers use a browser cache to store requested content. A browser cache is an area on
+the computer's file system where web content can be stored by the web browser for quick retrieval
+the computer's file system where web content can be stored by the web browser for quick retrieval
+later. By caching web content, browsers can reduce the amount of network traffic required to
+later. By caching web content, browsers can reduce the amount of network traffic required to
+display previously visited webpages. Ex: If a webpage is accessed now and again ten minutes from
+display previously visited webpages. Ex: If a webpage is accessed now and again ten minutes from
+now, the browser can display the cached webpage instead of re-downloading the webpage. If the
+now, the browser can display the cached webpage instead of re-downloading the webpage. If the
+webpage has changed in the 10 minute span, the browser should download the updated page.
+webpage has changed in the 10 minute span, the browser should download the updated page.
+Web browsers often use ETags to aid in caching web resources. An entity tag (ETag) is an identifier
+Web browsers often use ETags to aid in caching web resources. An entity tag (ETag) is an identifier
+for a specific version of a web resource. Ex: 34905a3e285dd11. When the resource changes, so
+for a specific version of a web resource. Ex: 34905a3e285dd11. When the resource changes, so
+should the ETag associated with the resource. When a web browser requests a cached web
+should the ETag associated with the resource. When a web browser requests a cached web
+resource, the browser sends the ETag in the request with an If-None-Match header. The web
+resource, the browser sends the ETag in the request with an If-None-Match header. The web
+server will reply with a 304 Not Modified response status if the resource has not changed or a 200
+server will reply with a 304 Not Modified response status if the resource has not changed or a 200
+OK with the changed resource and a new ETag. I PARTICIPATION
+OK with the changed resource and a new ETag. I PARTICIPATION
+ACTIVITY 5.1.5: Requesting cached resources with ETags.
+ACTIVITY 5.1.5: Requesting cached resources with ETags.
+web browser web server
+web browser web server
+http://w3c.org/test.html
+http://w3c.org/test.html
+GET test.html ...
+GET test.html ...
+browser cache
+browser cache
+<html> 200 OK, ETag: 123abc test.html 123abc
+<html> 200 OK, ETag: 123abc test.html 123abc
+Hello, Pam!
+Hello, Pam!
+</html>
+</html>
+... B ETag:
+... B ETag:
+.~. ---<-htm-l>- ----
+.~. ---<-htm-l>- ----
+test.html
+test.html
+ETag: 678efg
+ETag: 678efg
+Display
+Display
+cached page
+cached page
+<html>
+<html>
+I ...
+I ...
+Goodbye, Pam! 1 ◄
+Goodbye, Pam! 1 ◄
+</html>
+</html>
+Animation content:
+Animation content:
+GET test.html
+GET test.html
+If-None-Match: 123abc
+If-None-Match: 123abc
+304 Not Modified
+304 Not Modified
+[no message body]
+[no message body]
+GET test.html
+GET test.html
+If-None-Match: 123abc
+If-None-Match: 123abc
+200 OK, Etag: 678efg
+200 OK, Etag: 678efg
+<html>
+<html>
+.....
+.....
+~ ETag:
+~ ETag:
+~ 678efg
+~ 678efg
+D
+D
+The web browser with the url http://w3c.org/test.htm1 is displayed. A web server is also displayed
+The web browser with the url http://w3c.org/test.htm1 is displayed. A web server is also displayed
+with the resource test.html and an Etag:123abc. A get request is sent from the web browser to
+with the resource test.html and an Etag:123abc. A get request is sent from the web browser to
+the web server requesting test.html. The web server returns the contents of test.html which
+the web server requesting test.html. The web server returns the contents of test.html which
+includes 200 OK, ETag:123abc back to the browser. These contents are stored inside the browser
+includes 200 OK, ETag:123abc back to the browser. These contents are stored inside the browser
+cache. The web browser sends another request for test.html which includes the ETag:123abc. A
+cache. The web browser sends another request for test.html which includes the ETag:123abc. A
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 11/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+304 Not Modified [no message body] is sent back to the web browser. The browser then displays
+304 Not Modified [no message body] is sent back to the web browser. The browser then displays
+the cached page. The web browser then makes another request for test.html with the ETag
+the cached page. The web browser then makes another request for test.html with the ETag
+123abc. The web server compares the ETags and then returns a 200 OK, ETag: 678efg back to
+123abc. The web server compares the ETags and then returns a 200 OK, ETag: 678efg back to
+the web browser. The web browser now stores the returned content inside the browser cache and
+the web browser. The web browser now stores the returned content inside the browser cache and
+displays it.
+displays it.
+Animation captions:
+Animation captions:
+1. The browser requests uncached resource test.html. The web server returns the contents of
+1. The browser requests uncached resource test.html. The web server returns the contents of
+test.html back to the browser where test.html is cached.
+test.html back to the browser where test.html is cached.
+2. The second request for cached test.html includes the ETag 123abc.
+2. The second request for cached test.html includes the ETag 123abc.
+3. The web server compares ETags and notes the file has not changed, so 304 is returned with
+3. The web server compares ETags and notes the file has not changed, so 304 is returned with
+no HTML. The browser displays the cached content.
+no HTML. The browser displays the cached content.
+4. test.html is modified on the web server and assigned a new ETag.
+4. test.html is modified on the web server and assigned a new ETag.
+5. The browser sends a third request for test.html with ETag 123abc.
+5. The browser sends a third request for test.html with ETag 123abc.
+6. The web server compares ETags and notes the file has changed, so 200 is returned with
+6. The web server compares ETags and notes the file has changed, so 200 is returned with
+new HTML and ETag.
+new HTML and ETag.
+7. The browser displays the new content and updates the browser cache.
+7. The browser displays the new content and updates the browser cache.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.1.6: Requesting cached content.
+ACTIVITY 5.1.6: Requesting cached content.
+1) Which status code is sent when the
+1) Which status code is sent when the
+web server compares the cached
+web server compares the cached
+ETag with the server's ETag for a
+ETag with the server's ETag for a
+requested web resource, and the two
+requested web resource, and the two
+ETags are identical?
+ETags are identical?
+0 200
+0 200
+0 304
+0 304
+0 403
+0 403
+2) Does a 304 response generally
+2) Does a 304 response generally
+contain a message body?
+contain a message body?
+O Yes
+O Yes
+0 No
+0 No
+3) Do web servers always generate
+3) Do web servers always generate
+ETags for all web resources?
+ETags for all web resources?
+0 Yes
+0 Yes
+Q No
+Q No
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+0
+0
+0
+0
+0
+0
+12/68
+12/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+4) Where can the HTTP header field IfNone-
+4) Where can the HTTP header field IfNone-
+Ma tch be found?
+Ma tch be found?
+0 HTTP request
+0 HTTP request
+O HTTP response
+O HTTP response
+Other caching mechanisms
+Other caching mechanisms
+◄
+◄
+HTTP defines additional HTTP headers to aid in caching:
+HTTP defines additional HTTP headers to aid in caching:
+• If-Modified-Since is used with the Last-Modified date/time to request the
+• If-Modified-Since is used with the Last-Modified date/time to request the
+web server only send the requested resource if the resource has changed since
+web server only send the requested resource if the resource has changed since
+the specified date/time. Ex: "ff-Modified-Since: Wed, 07 Sep 2019 13:24:52 GMT'
+the specified date/time. Ex: "ff-Modified-Since: Wed, 07 Sep 2019 13:24:52 GMT'
+asks the web server to send the resource if the resource was modified after Sep
+asks the web server to send the resource if the resource was modified after Sep
+7, 2079 at 13:24:52 GMT
+7, 2079 at 13:24:52 GMT
+• Expires contains a date/time indicating when the requested resource is
+• Expires contains a date/time indicating when the requested resource is
+considered "stale". Ex: "Expires: Wed, 01 Sep 2019 13:24:52 GMT' tells the web
+considered "stale". Ex: "Expires: Wed, 01 Sep 2019 13:24:52 GMT' tells the web
+browser to show the cached resource until Sep 1, 2019 at 13:24:52 GMT
+browser to show the cached resource until Sep 1, 2019 at 13:24:52 GMT
+• Cache-Control is used to specify a number of caching directives. Ex: "CacheControl:
+• Cache-Control is used to specify a number of caching directives. Ex: "CacheControl:
+no-store" tells the web browser to never cache the requested resource,
+no-store" tells the web browser to never cache the requested resource,
+and "Cache-Control: max-age= 180" tells the browser to cache the resource for
+and "Cache-Control: max-age= 180" tells the browser to cache the resource for
+7 80 seconds.
+7 80 seconds.
+Viewing 304 responses in Chrome DevTools
+Viewing 304 responses in Chrome DevTools
+Web developers can view 304 Not Modified responses in Chrome's DevTools by
+Web developers can view 304 Not Modified responses in Chrome's DevTools by
+opening the Network tab and ensuring the checkbox labeled "Disable cache" is not
+opening the Network tab and ensuring the checkbox labeled "Disable cache" is not
+checked. If "Disable cache" is checked then nothing will be cached, and
+checked. If "Disable cache" is checked then nothing will be cached, and
+If-None-Match and If-Modified-Since headers will not be sent.
+If-None-Match and If-Modified-Since headers will not be sent.
+The Wikipedia page about web cache is a good page to test in Dev Tools to see 304
+The Wikipedia page about web cache is a good page to test in Dev Tools to see 304
+responses. When the developer loads the page once, the web server returns a 200
+responses. When the developer loads the page once, the web server returns a 200
+status code for the Web_cache request. When the developer presses the browser's
+status code for the Web_cache request. When the developer presses the browser's
+Reload button, the server returns a 304 status code.
+Reload button, the server returns a 304 status code.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+0
+0
+►
+►
+13/68
+13/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+W Web cache -Wikipedia X + V □ X
+W Web cache -Wikipedia X + V □ X
+C i en.wikipedia.org/wiki/Web_cache
+C i en.wikipedia.org/wiki/Web_cache
+.:. Not logged m Talk Contnbutions Create account Log in
+.:. Not logged m Talk Contnbutions Create account Log in
+Article Talk Read Edit View history I Search Wikipedia
+Article Talk Read Edit View history I Search Wikipedia
+WIKIPEDIA Web cache
+WIKIPEDIA Web cache
+TI,e Free 1'.nc yclopedia From Wikipedia, the free encydopedia
+TI,e Free 1'.nc yclopedia From Wikipedia, the free encydopedia
+Maln page A Web cache (or HTTP cache} is a system for optimizing the World Wide Web. It is implemented both
+Maln page A Web cache (or HTTP cache} is a system for optimizing the World Wide Web. It is implemented both
+Contents client-side and server-side. The cachinq of imaqes and other files can resu lt in less overall delay when
+Contents client-side and server-side. The cachinq of imaqes and other files can resu lt in less overall delay when
+~ [I Elements Console Recorder .l Performance insights .l Network » A 6 r:;i 1 0 X
+~ [I Elements Console Recorder .l Performance insights .l Network » A 6 r:;i 1 0 X
+e ($) 'i' 0.. D Preserve log o throttling • ~ t f: 0
+e ($) 'i' 0.. D Preserve log o throttling • ~ t f: 0
+Filter
+Filter
+All Fetch/XH R JS CSS 1mg Media Font Doc WS Wasm Manifest Other D Has blocked cookies D Blocked Requests
+All Fetch/XH R JS CSS 1mg Media Font Doc WS Wasm Manifest Other D Has blocked cookies D Blocked Requests
+D 3rd-party requests
+D 3rd-party requests
+101>'.X)ms 20000 ms 30000 ms 40000ms S!XJOO ms 60000 rr, 70000 m, 80000 ms 90000ms 10000,'.)ms 110000m
+101>'.X)ms 20000 ms 30000 ms 40000ms S!XJOO ms 60000 rr, 70000 m, 80000 ms 90000ms 10000,'.)ms 110000m
+Name
+Name
+~ Web_cache
+~ Web_cache
+0 load.php?lang=en&modules=
+0 load.php?lang=en&modules=
+load.php?lang=en&modules=
+load.php?lang=en&modules=
+121 load.php?lang=en&modules=
+121 load.php?lang=en&modules=
+;,- enwiki.png
+;,- enwiki.png
+wikipedia-wordmark-en,svg
+wikipedia-wordmark-en,svg
+• sort_both,svg?0e440
+• sort_both,svg?0e440
+•~ bullet- icon.svg?d4515
+•~ bullet- icon.svg?d4515
+II/ extemal-l ink-ltr-icon.svg?48e'.
+II/ extemal-l ink-ltr-icon.svg?48e'.
+~ lcon_pdf_file.png
+~ lcon_pdf_file.png
+HTTPS
+HTTPS
+x Headers Preview Response Initiator Timing Cookies
+x Headers Preview Response Initiator Timing Cookies
+•General
+•General
+Request URL: https : / / en .wiki pedia. orgh dki/1,eb_cache
+Request URL: https : / / en .wiki pedia. orgh dki/1,eb_cache
+Request Met~
+Request Met~
+Status Code~
+Status Code~
+Remote Address: 208 . 80. 15 3 . 224 :443
+Remote Address: 208 . 80. 15 3 . 224 :443
+Referrer Policy: stri ct-origi n->1hen-cr oss-ori gin
+Referrer Policy: stri ct-origi n->1hen-cr oss-ori gin
+• Response Headers
+• Response Headers
+accept-ch: Sec-CH- UA-Arc h, Sec-CH-UA-B i t nes s, Sec-CH-LIA-Full-Vers i on-Li st, Sec -CH- Ul'.Model,
+accept-ch: Sec-CH- UA-Arc h, Sec-CH-UA-B i t nes s, Sec-CH-LIA-Full-Vers i on-Li st, Sec -CH- Ul'.Model,
+Sec-CH-UA- Platform -Version
+Sec-CH-UA- Platform -Version
+I
+I
+All HTTP traffic can be viewed by third parties using a network sniffer. A network sniffer is software
+All HTTP traffic can be viewed by third parties using a network sniffer. A network sniffer is software
+that monitors network traffic and allows users to inspect HTTP requests and responses. HTTPS
+that monitors network traffic and allows users to inspect HTTP requests and responses. HTTPS
+encrypts HTTP traffic between a browser and web server so a network sniffer cannot intercept
+encrypts HTTP traffic between a browser and web server so a network sniffer cannot intercept
+sensitive information in the HTTP traffic like passwords, credit card numbers, financial transactions,
+sensitive information in the HTTP traffic like passwords, credit card numbers, financial transactions,
+etc.
+etc.
+HTTPS uses a protocol called Transport Layer Security (TLS), which uses asymmetric public keys
+HTTPS uses a protocol called Transport Layer Security (TLS), which uses asymmetric public keys
+to encrypt data between the browser and web server. A website wanting to use HTTPS must
+to encrypt data between the browser and web server. A website wanting to use HTTPS must
+acquire a digital certificate, issued by a trusted certificate authority, that contains a public key used
+acquire a digital certificate, issued by a trusted certificate authority, that contains a public key used
+by t Ls to encrypt data. ►
+by t Ls to encrypt data. ►
+Figure 5.1.3: Chrome, Firefox, and Edge browsers showing HTTPS URLs.
+Figure 5.1.3: Chrome, Firefox, and Edge browsers showing HTTPS URLs.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 14/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+v W Wikipe ia, li:he free encycloped X +
+v W Wikipe ia, li:he free encycloped X +
++- ➔ C !; en.wikipedia.org/wi ki/ Main_Page
++- ➔ C !; en.wikipedia.org/wi ki/ Main_Page
+0 I W Wikipedia, the free en cycl op ed X +
+0 I W Wikipedia, the free en cycl op ed X +
+f- ➔ C 0 8 https://en.wikipedia.o rg/wiki/Main_Page
+f- ➔ C 0 8 https://en.wikipedia.o rg/wiki/Main_Page
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
+ACTIVITY
+W Wikipeclia, he free encyclopedia x +
+W Wikipeclia, he free encyclopedia x +
+a LI https:/ / en.wikipedia.org/wiki/Main_Page
+a LI https:/ / en.wikipedia.org/wiki/Main_Page
+◄
+◄
+5.1.7: Steps in an HTTPS transaction.
+5.1.7: Steps in an HTTPS transaction.
+Put the steps used in an HTTPS transaction in order.
+Put the steps used in an HTTPS transaction in order.
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+Browser and web server generate session keys.
+Browser and web server generate session keys.
+Browser and web server transmit encrypted data.
+Browser and web server transmit encrypted data.
+Browser requests an HTTPS connection to a webpage.
+Browser requests an HTTPS connection to a webpage.
+Web server sends digital certificate to the browser.
+Web server sends digital certificate to the browser.
+Step 1
+Step 1
+Step 2
+Step 2
+Step 3
+Step 3
+Step4
+Step4
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+D
+D
+15/68
+15/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+Exploring further:
+Exploring further:
+• HTTP response status codes (MON)
+• HTTP response status codes (MON)
+• ETag - HTTP (MON)
+• ETag - HTTP (MON)
+• Moving to HTTPS Guide
+• Moving to HTTPS Guide
+• Inspect Network Activity with Chrome OevTools
+• Inspect Network Activity with Chrome OevTools
+• HTTP/2
+• HTTP/2
+• HTTP/3
+• HTTP/3
+I CHALLENGE
+I CHALLENGE
+ACTIVITY 5.1.1: HTTP
+ACTIVITY 5.1.1: HTTP
+570104.2065416.qx3zqy7 -
+570104.2065416.qx3zqy7 -
+For each webpage described, indicate the total HTTP requests the web browser sends anc
+For each webpage described, indicate the total HTTP requests the web browser sends anc
+the total HTTP responses the web server sends, assuming that no requests are ignored.
+the total HTTP responses the web server sends, assuming that no requests are ignored.
+I Webpage contents HTTP requests HTTP response:
+I Webpage contents HTTP requests HTTP response:
+1 A JavaScript file Ex:9
+1 A JavaScript file Ex:9
+2 2 JavaScript files and 2 videos
+2 2 JavaScript files and 2 videos
+3 2 CSS stylesheets, 2 JavaScript flies, and 3 images I I
+3 2 CSS stylesheets, 2 JavaScript flies, and 3 images I I
+~-~
+~-~
+1 2 3 4
+1 2 3 4
+Check - ◄ ►
+Check - ◄ ►
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+16/68
+16/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks

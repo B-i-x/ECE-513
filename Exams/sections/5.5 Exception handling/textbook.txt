@@ -1,0 +1,1073 @@
+Exception and try-catch
+Exception and try-catch
+0
+0
+An exception is an error that disrupts the normal flow of program execution. When an exception
+An exception is an error that disrupts the normal flow of program execution. When an exception
+occurs, a program may need to execute code to handle the error. Ex: Display an error message, call a
+occurs, a program may need to execute code to handle the error. Ex: Display an error message, call a
+function, or shutdown. Exception handling is the process of catching and responding to an exception.
+function, or shutdown. Exception handling is the process of catching and responding to an exception.
+Figure 5.5.1: An exception is generated when calling a non-existing method.
+Figure 5.5.1: An exception is generated when calling a non-existing method.
+II Oops! Should be console.log()
+II Oops! Should be console.log()
+console . Log ("Will this work?" );
+console . Log ("Will this work?" );
+Uncaught TypeError : console.Log is not a function (line
+Uncaught TypeError : console.Log is not a function (line
+2)
+2)
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 53/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+The throw statement throws a user-defined exception. Syntax: throw expression. Ex:
+The throw statement throws a user-defined exception. Syntax: throw expression. Ex:
+throw "number is negative" throws an exception with a string value.
+throw "number is negative" throws an exception with a string value.
+A program halts when an exception is thrown unless a try-catch statement is used to catch/handle
+A program halts when an exception is thrown unless a try-catch statement is used to catch/handle
+the exception. A try-catch statement has a try block to execute code that may t~row an exception
+the exception. A try-catch statement has a try block to execute code that may t~row an exception
+and a catch block that executes when an exception is thrown.
+and a catch block that executes when an exception is thrown.
+Construct 5.5.1: try-catch.
+Construct 5.5.1: try-catch.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
+ACTIVITY
+try {
+try {
+II Statements that might throw an
+II Statements that might throw an
+exception
+exception
+}
+}
+catch (exception )
+catch (exception )
+II Handle the exception
+II Handle the exception
+◄
+◄
+5.5.1: Throwing and catching an exception.
+5.5.1: Throwing and catching an exception.
+function findSum (nurnbers , startlndex, endlndex )
+function findSum (nurnbers , startlndex, endlndex )
+if (startlndex < 0) {
+if (startlndex < 0) {
+throw "startlndex is less than 0." ;
+throw "startlndex is less than 0." ;
+else if (endlndex >= numbers . length )
+else if (endlndex >= numbers . length )
+throw "endlndex is too large." ;
+throw "endlndex is too large." ;
+let sum = 0 ;
+let sum = 0 ;
+for (let i = startlndex ; i <= endlndex ; i ++) {
+for (let i = startlndex ; i <= endlndex ; i ++) {
+sum += nurnbers [ i ];
+sum += nurnbers [ i ];
+return sum;
+return sum;
+►
+►
+let nums = [l, 2 , 3 , 4 ]; let nums = [1, 2 , 3 , 4 ] ;
+let nums = [l, 2 , 3 , 4 ]; let nums = [1, 2 , 3 , 4 ] ;
+try {
+try {
+console . log (findSum (nums , 0 , 2 ));
+console . log (findSum (nums , 0 , 2 ));
+console . log (findSum (nums , 3 , 4));
+console . log (findSum (nums , 3 , 4));
+console . log ("Done!" );
+console . log ("Done!" );
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+console . log (findSum (nums , 3 , 4));
+console . log (findSum (nums , 3 , 4));
+catch (exception ) {
+catch (exception ) {
+console . log (exception);
+console . log (exception);
+console . log ("Done!" );
+console . log ("Done!" );
+D
+D
+54/68
+54/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+6
+6
+Uncaught end Index is too
+Uncaught end Index is too
+large.
+large.
+Animation content:
+Animation content:
+The following code is displayed:
+The following code is displayed:
+function findSum(numbers, startlndex, endlndex) {
+function findSum(numbers, startlndex, endlndex) {
+if (startlndex < 0) {
+if (startlndex < 0) {
+}
+}
+throw "startlndex is less than 0.";
+throw "startlndex is less than 0.";
+}
+}
+else if (endlndex >= numbers.length) {
+else if (endlndex >= numbers.length) {
+throw "endlndex is too large.";
+throw "endlndex is too large.";
+}
+}
+let sum= 0;
+let sum= 0;
+for (let i = startlndex; i <= endlndex; i++) {
+for (let i = startlndex; i <= endlndex; i++) {
+sum += numbers[i];
+sum += numbers[i];
+}
+}
+return sum;
+return sum;
+let nums = [1 , 2, 3, 4];
+let nums = [1 , 2, 3, 4];
+console.log(findSum(nums, 0, 2));
+console.log(findSum(nums, 0, 2));
+console.log(findSum(nums, 3, 4));
+console.log(findSum(nums, 3, 4));
+console.log("Done!");
+console.log("Done!");
+Step 7 runs the following lines:
+Step 7 runs the following lines:
+let nums = [1, 2, 3, 4];
+let nums = [1, 2, 3, 4];
+console.log(findSum(nums, 0, 2));.
+console.log(findSum(nums, 0, 2));.
+6 is displayed in the console.
+6 is displayed in the console.
+Step 2 runs the following line:
+Step 2 runs the following line:
+console.log(findSum(nums, 3, 4));
+console.log(findSum(nums, 3, 4));
+zyBooks
+zyBooks
+endlndex is too large.
+endlndex is too large.
+Done!
+Done!
+Step 3 runs lines of code in the function, findSum, called in step 2. The following lines were the lines
+Step 3 runs lines of code in the function, findSum, called in step 2. The following lines were the lines
+run in step 3:
+run in step 3:
+if (startlndex < 0) {
+if (startlndex < 0) {
+throw "startlndex is less than 0.";
+throw "startlndex is less than 0.";
+}
+}
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 55/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+else if (endlndex >= numbers.length) {
+else if (endlndex >= numbers.length) {
+throw "endlndex is too large.";
+throw "endlndex is too large.";
+}
+}
+zyBooks
+zyBooks
+Step 3 throws the exception inside the else if statement and exits the function. The exception
+Step 3 throws the exception inside the else if statement and exits the function. The exception
+thrown was not handled so Uncaught endlndex is too large. is displayed in the console.
+thrown was not handled so Uncaught endlndex is too large. is displayed in the console.
+Step 4 and 5 runs new code:
+Step 4 and 5 runs new code:
+let nums = [1 , 2, 3, 4];
+let nums = [1 , 2, 3, 4];
+try {
+try {
+console.log(flndSum(nums, 3, 4));
+console.log(flndSum(nums, 3, 4));
+}
+}
+catch (exception) {
+catch (exception) {
+console.log( exception);
+console.log( exception);
+}
+}
+console.log("Done!");
+console.log("Done!");
+The function flndSumO is called like and the end Index exception is thrown. The catch block handles
+The function flndSumO is called like and the end Index exception is thrown. The catch block handles
+the exception and end Index is too large. is displayed in the console. The line of code after the catch
+the exception and end Index is too large. is displayed in the console. The line of code after the catch
+block runs displays Done! in the console.
+block runs displays Done! in the console.
+Animation captions:
+Animation captions:
+1. The flndSum() function adds the numbers in the nums array from index Oto index 2.
+1. The flndSum() function adds the numbers in the nums array from index Oto index 2.
+2. flndSum() is called with endlndex of 4. Since endlndex is equal to numbers.length, the throw
+2. flndSum() is called with endlndex of 4. Since endlndex is equal to numbers.length, the throw
+statement throws an exception, indicating a problem with the endlndex value.
+statement throws an exception, indicating a problem with the endlndex value.
+3. The code does not handle the exception, so the exception message is displayed in the
+3. The code does not handle the exception, so the exception message is displayed in the
+console, and the program halts prematurely.
+console, and the program halts prematurely.
+4. Using a try-catch statement, the catch block handles the exception and outputs the exception
+4. Using a try-catch statement, the catch block handles the exception and outputs the exception
+message.
+message.
+5. After the catch block executes, the program execution continues.
+5. After the catch block executes, the program execution continues.
+I PARTICIPATION 5.5.2: Exception handling.
+I PARTICIPATION 5.5.2: Exception handling.
+ACTIVITY
+ACTIVITY
+Refer to the animation above.
+Refer to the animation above.
+7) What happens when findSum ()
+7) What happens when findSum ()
+throws an exception, and f indSum ()
+throws an exception, and f indSum ()
+is not inside a try-catch statement?
+is not inside a try-catch statement?
+The uncaught exception is
+The uncaught exception is
+0 output to the console, and the
+0 output to the console, and the
+program continues to run.
+program continues to run.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+0
+0
+56/68
+56/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+The uncaught exception is
+The uncaught exception is
+O output to the console, and the
+O output to the console, and the
+program terminates.
+program terminates.
+O The exception is ignored, and
+O The exception is ignored, and
+the program continues to run.
+the program continues to run.
+2) Complete the code to throw an
+2) Complete the code to throw an
+exception when endindex is smaller
+exception when endindex is smaller
+than startindex?
+than startindex?
+if (endindex < startindex )
+if (endindex < startindex )
+"endindex is
+"endindex is
+smaller than startindex." ;
+smaller than startindex." ;
+Q try
+Q try
+0 catch
+0 catch
+Q throw
+Q throw
+3) Will the catch block execute if
+3) Will the catch block execute if
+findSum () does not throw an
+findSum () does not throw an
+exception?
+exception?
+0 Yes
+0 Yes
+Q No
+Q No
+4) Suppose the call to f indSum () below
+4) Suppose the call to f indSum () below
+throws an exception. What is output to
+throws an exception. What is output to
+the console?
+the console?
+try {
+try {
+console . log (findSum (nums ,
+console . log (findSum (nums ,
+-1, 2 ));
+-1, 2 ));
+console . log ("got here" );
+console . log ("got here" );
+catch (exception ) {
+catch (exception ) {
+console . log ("error" );
+console . log ("error" );
+console . log ("done" );
+console . log ("done" );
+0
+0
+error
+error
+done
+done
+got here
+got here
+0 error
+0 error
+done
+done
+0 error
+0 error
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+zyBooks
+zyBooks
+D
+D
+0
+0
+D
+D
+57/68
+57/68
+11/17/24, 11 :23AM I PARTICIPATION
+11/17/24, 11 :23AM I PARTICIPATION
+ACTIVITY
+ACTIVITY
+zyBooks
+zyBooks
+5.5.3: Practice throwing and handling an exception.
+5.5.3: Practice throwing and handling an exception.
+Professor X has written a JavaScript function f indAverage () to help his students
+Professor X has written a JavaScript function f indAverage () to help his students
+compute homework score averages. The f indAverage () function returns the average of
+compute homework score averages. The f indAverage () function returns the average of
+an array of homework scores. Professor X's students complain that sometimes
+an array of homework scores. Professor X's students complain that sometimes
+f indAverage () returns NaN or unexpected answers. Professor X suspects the problems
+f indAverage () returns NaN or unexpected answers. Professor X suspects the problems
+are due to students passing f indAverage () an empty scores array or an array with
+are due to students passing f indAverage () an empty scores array or an array with
+improperly formatted scores.
+improperly formatted scores.
+Modify f indAverage () to throw exceptions for the following reasons:
+Modify f indAverage () to throw exceptions for the following reasons:
+1. No scores are in the scores array.
+1. No scores are in the scores array.
+2. A negative score was found in the scores array.
+2. A negative score was found in the scores array.
+3. A non-integer was found in the scores array.
+3. A non-integer was found in the scores array.
+Wrap the existing function calls to findAverage () in a try-catch statement, and output
+Wrap the existing function calls to findAverage () in a try-catch statement, and output
+any thrown exceptions to the console. The program should continue to try the next call to
+any thrown exceptions to the console. The program should continue to try the next call to
+findAverage () regardless of any exceptions thrown.
+findAverage () regardless of any exceptions thrown.
+To determine if a non-integer exists in the scores array, use Number.islnteger(n), which
+To determine if a non-integer exists in the scores array, use Number.islnteger(n), which
+returns true if n is an integer, and false otherwise.
+returns true if n is an integer, and false otherwise.
+1 /I Returns the average of the numbers in the scores array.
+1 /I Returns the average of the numbers in the scores array.
+2 function findAverage ( scores ) {
+2 function findAverage ( scores ) {
+3 let sum = 0;
+3 let sum = 0;
+4 scores .forEach(function( score ) {
+4 scores .forEach(function( score ) {
+5 sum += score;
+5 sum += score;
+6 } ) ;
+6 } ) ;
+7 return sum / scores .length;
+7 return sum / scores .length;
+8 }
+8 }
+9
+9
+10 console .log( "Average = " + findAverage ([90, 85, 71, 93]));
+10 console .log( "Average = " + findAverage ([90, 85, 71, 93]));
+11 console . log ( "Average = " + f indAverage ( [76]));
+11 console . log ( "Average = " + f indAverage ( [76]));
+12 console . log ( "Average =" + findAverage ([90, -85, 71, 93]));
+12 console . log ( "Average =" + findAverage ([90, -85, 71, 93]));
+13 console .log( "Average =" + findAverage ([]));
+13 console .log( "Average =" + findAverage ([]));
+14 console .log( "Average =" + findAverage ([60, "cat" , 70]));
+14 console .log( "Average =" + findAverage ([60, "cat" , 70]));
+15
+15
+Run JavaScript Reset code
+Run JavaScript Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+II Should not ac
+II Should not ac
+II Should not a<
+II Should not a<
+II Should not a
+II Should not a
+D
+D
+58/68
+58/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+Your console output
+Your console output
+Average= 84.75
+Average= 84.75
+Average= 76
+Average= 76
+Average= 42 . 25
+Average= 42 . 25
+Average= NaN
+Average= NaN
+Average= NaN
+Average= NaN
+► View solution
+► View solution
+Finally block
+Finally block
+zyBooks
+zyBooks
+A finally block may follow a try or catch block. The finally block executes regardless of whether
+A finally block may follow a try or catch block. The finally block executes regardless of whether
+an exception was thrown or not.
+an exception was thrown or not.
+Developers use the finally block for any operations that must be executed, whether or not an
+Developers use the finally block for any operations that must be executed, whether or not an
+exception was thrown. Ex: Releasing resources, closing files, and rolling back failed database
+exception was thrown. Ex: Releasing resources, closing files, and rolling back failed database
+transactions.
+transactions.
+Construct 5.5.2: try-catch-finally.
+Construct 5.5.2: try-catch-finally.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
+ACTIVITY
+try {
+try {
+II Statements to try
+II Statements to try
+catch (exception ) {
+catch (exception ) {
+II Optionally handle exceptions
+II Optionally handle exceptions
+finally {
+finally {
+II Code that executes no matter
+II Code that executes no matter
+what
+what
+◄
+◄
+5.5.4: try-catch-finally execution.
+5.5.4: try-catch-finally execution.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+D
+D
+59/68
+59/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+function test () {
+function test () {
+try {
+try {
+console . log ("try" );
+console . log ("try" );
+throw "crash!!!" ;
+throw "crash!!!" ;
+zyBooks
+zyBooks
+II Skips because exception is thrown
+II Skips because exception is thrown
+console . log ("after throw" );
+console . log ("after throw" );
+catch (exception ) {
+catch (exception ) {
+console . log ("catch" );
+console . log ("catch" );
+finally {
+finally {
+console . log ("finally" );
+console . log ("finally" );
+console . log ("after" );
+console . log ("after" );
+test ();
+test ();
+console . log ("done" );
+console . log ("done" );
+Animation content:
+Animation content:
+The following code is displayed:
+The following code is displayed:
+function test() {
+function test() {
+try {
+try {
+}
+}
+console.log("try");
+console.log("try");
+throw "crash!!!";
+throw "crash!!!";
+// Skips because exception is thrown
+// Skips because exception is thrown
+console.log("after throw");
+console.log("after throw");
+catch (exception) {
+catch (exception) {
+console.log("catch");
+console.log("catch");
+}
+}
+finally {
+finally {
+console.log("flnally");
+console.log("flnally");
+}
+}
+console.log("after");
+console.log("after");
+}
+}
+test();
+test();
+console.log("done");
+console.log("done");
+try
+try
+catch
+catch
+finally
+finally
+after
+after
+done
+done
+Step 1 calls the function test and runs the try block. try is displayed in the console and an exception
+Step 1 calls the function test and runs the try block. try is displayed in the console and an exception
+is thrown.
+is thrown.
+Step 2 runs the catch block. The exception thrown in the try block is handled and catch is displayed
+Step 2 runs the catch block. The exception thrown in the try block is handled and catch is displayed
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 60/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+in the console.
+in the console.
+Step 3 runs the finally block. finally is displayed in the console.
+Step 3 runs the finally block. finally is displayed in the console.
+Step 4 runs the remaining lines of code. after and done are displayed in console on new lines.
+Step 4 runs the remaining lines of code. after and done are displayed in console on new lines.
+Animation captions:
+Animation captions:
+1. The test function throws an exception with the throw statement.
+1. The test function throws an exception with the throw statement.
+2. The catch block catches the exception.
+2. The catch block catches the exception.
+3. The finally block always executes at the end of a try-catch.
+3. The finally block always executes at the end of a try-catch.
+4. Because the exception was handled by the catch block, the program continues to execute.
+4. Because the exception was handled by the catch block, the program continues to execute.
+Figure 5.5.2: finally without a catch.
+Figure 5.5.2: finally without a catch.
+function test () {
+function test () {
+try {
+try {
+console . log ("try" );
+console . log ("try" );
+throw "crash!!!" ;
+throw "crash!!!" ;
+II Skips because an exception was thrown
+II Skips because an exception was thrown
+console . log ("after throw" );
+console . log ("after throw" );
+finally {
+finally {
+console . log ("finally" );
+console . log ("finally" );
+II Skips because an exception was thrown
+II Skips because an exception was thrown
+console . log ("after" );
+console . log ("after" );
+II Exception is not caught, so program halts!
+II Exception is not caught, so program halts!
+test ();
+test ();
+console . log ("done" );
+console . log ("done" );
+try
+try
+finally
+finally
+Uncaught crash!!!
+Uncaught crash!!!
+◄ ►
+◄ ►
+Developers find finally blocks especially helpful when the code in the c at ch block might throw an
+Developers find finally blocks especially helpful when the code in the c at ch block might throw an
+exception, because the finally block will execute even if an exception is thrown in the catch block.
+exception, because the finally block will execute even if an exception is thrown in the catch block.
+Figure 5.5.3: finally block executes when the catch block throws an exception.
+Figure 5.5.3: finally block executes when the catch block throws an exception.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 61/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+function test () {
+function test () {
+try {
+try {
+console . log ("try" );
+console . log ("try" );
+throw "crash!!!" ;
+throw "crash!!!" ;
+II Skips because exception is thrown
+II Skips because exception is thrown
+console . log ("after throw" );
+console . log ("after throw" );
+catch (exception ) {
+catch (exception ) {
+console . log ("catch" );
+console . log ("catch" );
+throw "oops! ! ! " ;
+throw "oops! ! ! " ;
+finally {
+finally {
+console . log ("finally" );
+console . log ("finally" );
+zyBooks
+zyBooks
+II Doesn't execute because exception thrown in catch block
+II Doesn't execute because exception thrown in catch block
+console . log ("after" );
+console . log ("after" );
+test ();
+test ();
+console . log ("done" );
+console . log ("done" );
+try
+try
+catch
+catch
+finally
+finally
+Uncaught oops! ! !
+Uncaught oops! ! !
+◄
+◄
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.5.5: try-catch-finally.
+ACTIVITY 5.5.5: try-catch-finally.
+Refer to the displayValues () function below. The Number. toFixed (n) method
+Refer to the displayValues () function below. The Number. toFixed (n) method
+returns a number with n decimal places.
+returns a number with n decimal places.
+function displayValues (tax , total )
+function displayValues (tax , total )
+try {
+try {
+console . log (tax . toFixed (l) + "%" );
+console . log (tax . toFixed (l) + "%" );
+console . log ("$" + total . toFixed (2));
+console . log ("$" + total . toFixed (2));
+catch (ex ) {
+catch (ex ) {
+console . log ("error" );
+console . log ("error" );
+finally {
+finally {
+console . log ("********" );
+console . log ("********" );
+1) What is output by the call
+1) What is output by the call
+displayValues(5.44, 123)?
+displayValues(5.44, 123)?
+5.4%
+5.4%
+0 $123.00
+0 $123.00
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+D
+D
+0
+0
+62/68
+62/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+********
+********
+0
+0
+5.4%
+5.4%
+$123.00
+$123.00
+5.4%
+5.4%
+0 $123.00
+0 $123.00
+error
+error
+********
+********
+2) What is output by the call 0
+2) What is output by the call 0
+displayValues("S.44", 123)?
+displayValues("S.44", 123)?
+5.4%
+5.4%
+0 $123.00
+0 $123.00
+********
+********
+$123.00
+$123.00
+0 error
+0 error
+********
+********
+0 error
+0 error
+********
+********
+3) What is output by the call 0
+3) What is output by the call 0
+displayValues(2.89, "hot
+displayValues(2.89, "hot
+dog")?
+dog")?
+2.9%
+2.9%
+0 hot dog
+0 hot dog
+********
+********
+2.9%
+2.9%
+0 error
+0 error
+********
+********
+0 error
+0 error
+********
+********
+Error object
+Error object
+The throw statement can throw any expression, but developers commonly throw an Error object. The
+The throw statement can throw any expression, but developers commonly throw an Error object. The
+Error object represents a runtime error, which is an error that occurs when the program is executing.
+Error object represents a runtime error, which is an error that occurs when the program is executing.
+An Error object has two properties:
+An Error object has two properties:
+• name - The error's name.
+• name - The error's name.
+• message - The error's message.
+• message - The error's message.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 63/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+The Error constructor takes a message parameter. Ex:
+The Error constructor takes a message parameter. Ex:
+err= new Error("My error message.");
+err= new Error("My error message.");
+zyBooks
+zyBooks
+JavaScript defines several other Error constructors, including:
+JavaScript defines several other Error constructors, including:
+• RangeError - Thrown when a numeric variable or parameter is outside the valid range.
+• RangeError - Thrown when a numeric variable or parameter is outside the valid range.
+• lnterna/Error - Thrown when an internal error occurs in the JavaScript interpreter.
+• lnterna/Error - Thrown when an internal error occurs in the JavaScript interpreter.
+• TypeError - Thrown when a variable or parameter is not the expected data type.
+• TypeError - Thrown when a variable or parameter is not the expected data type.
+Figure 5.5.4: findAverage() throws an Error, TypeError, and RangeError.
+Figure 5.5.4: findAverage() throws an Error, TypeError, and RangeError.
+II Returns the average of the scores array
+II Returns the average of the scores array
+function find.Average (scores ) {
+function find.Average (scores ) {
+try
+try
+if (!Array. isArray (scores )) {
+if (!Array. isArray (scores )) {
+throw new TypeError ("Must supply an array." );
+throw new TypeError ("Must supply an array." );
+if (scores . length === 0 )
+if (scores . length === 0 )
+throw new Error ("Must supply at least one score." );
+throw new Error ("Must supply at least one score." );
+let sum = 0 ;
+let sum = 0 ;
+scores . forEach (function (score )
+scores . forEach (function (score )
+if (!Number. isinteger (score ))
+if (!Number. isinteger (score ))
+throw new TypeError ("Score '" + score + '" is not an integer." );
+throw new TypeError ("Score '" + score + '" is not an integer." );
+if (score < 0 ) {
+if (score < 0 ) {
+throw new RangeError ("Negative score encountered." );
+throw new RangeError ("Negative score encountered." );
+sum += score ;
+sum += score ;
+} ) ;
+} ) ;
+return sum / scores . length ;
+return sum / scores . length ;
+let ave find.Average ( [50, "cow" ]);
+let ave find.Average ( [50, "cow" ]);
+catch (ex )
+catch (ex )
+console . log (ex . name + "· " + ex . message );
+console . log (ex . name + "· " + ex . message );
+TypeError: Score 'cow' is not an integer.
+TypeError: Score 'cow' is not an integer.
+◄
+◄
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.5.6: Error object.
+ACTIVITY 5.5.6: Error object.
+Refer to the figure above.
+Refer to the figure above.
+1) The code below throws a Range Error.
+1) The code below throws a Range Error.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+D
+D
+0
+0
+64/68
+64/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+ave = findAverage ();
+ave = findAverage ();
+0 True
+0 True
+O False
+O False
+2) The code below outputs "TypeError".
+2) The code below outputs "TypeError".
+try {
+try {
+ave = findAverage ([));
+ave = findAverage ([));
+catch (ex ) {
+catch (ex ) {
+console . log (ex . name );
+console . log (ex . name );
+0 True
+0 True
+O False
+O False
+3) The code below outputs "Negative
+3) The code below outputs "Negative
+score encountered."
+score encountered."
+try {
+try {
+ave findAverage ([5, 2 ,
+ave findAverage ([5, 2 ,
+-4 l);
+-4 l);
+}
+}
+catch (ex ) {
+catch (ex ) {
+console . log (ex . message );
+console . log (ex . message );
+0 True
+0 True
+O False
+O False
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.5.7: Practice throwing an Error object.
+ACTIVITY 5.5.7: Practice throwing an Error object.
+zyBooks
+zyBooks
+The caesarCipher () function below uses a Caesar cipher to encrypt or decrypt a
+The caesarCipher () function below uses a Caesar cipher to encrypt or decrypt a
+message. The message parameter is the message being encrypted or decrypted. The key
+message. The message parameter is the message being encrypted or decrypted. The key
+parameter is the number of characters to shift each letter in the message up or down the
+parameter is the number of characters to shift each letter in the message up or down the
+alphabet. Ex: A key of 1 shifts each letter up by 1, so "A" becomes "B'', "B'' becomes "C", etc. A
+alphabet. Ex: A key of 1 shifts each letter up by 1, so "A" becomes "B'', "B'' becomes "C", etc. A
+key of -2 shifts each letter down by 2, so "C" becomes "A", "D" becomes "B'', etc. Letters at the
+key of -2 shifts each letter down by 2, so "C" becomes "A", "D" becomes "B'', etc. Letters at the
+end of the alphabet wrap back to the beginning, and vice versa.
+end of the alphabet wrap back to the beginning, and vice versa.
+The caesarCipher () function is called to encrypt a saying of Caesar's. The same
+The caesarCipher () function is called to encrypt a saying of Caesar's. The same
+message is decrypted using the negative of the key.
+message is decrypted using the negative of the key.
+Improve the caesarCipher () function by adding exceptions:
+Improve the caesarCipher () function by adding exceptions:
+1. Throw a TypeError if the mes sage parameter is not a string. Use JavaScript's
+1. Throw a TypeError if the mes sage parameter is not a string. Use JavaScript's
+typeof operator to check if message is a string:
+typeof operator to check if message is a string:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+0
+0
+0
+0
+D
+D
+65/68
+65/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+if (typeof message=== "string") // true if message is a string
+if (typeof message=== "string") // true if message is a string
+2. Throw a TypeError if the key is not an integer. Use the Number. is Integer ()
+2. Throw a TypeError if the key is not an integer. Use the Number. is Integer ()
+method to check the key.
+method to check the key.
+3. Throw a RangeError if the key is not between -25 and 25.
+3. Throw a RangeError if the key is not between -25 and 25.
+Use a try-catch statement to call caesarCipher () and verify the proper exception is
+Use a try-catch statement to call caesarCipher () and verify the proper exception is
+thrown when using incorrect arguments. Ex: caesarCipher ( 12 3, 5) should throw a
+thrown when using incorrect arguments. Ex: caesarCipher ( 12 3, 5) should throw a
+TypeError because 123 is not a string. In the catch block, output one of the following
+TypeError because 123 is not a string. In the catch block, output one of the following
+Caesar quotes:
+Caesar quotes:
+1. "Men willingly believe what they wish." if the exception thrown is a TypeError.
+1. "Men willingly believe what they wish." if the exception thrown is a TypeError.
+2. ''The die is cast." if the exception thrown is a RangeError.
+2. ''The die is cast." if the exception thrown is a RangeError.
+1 / / Returns an encrypted or decrypted message using a Caesar cipher.
+1 / / Returns an encrypted or decrypted message using a Caesar cipher.
+2 function caesarCipher (message , key) {
+2 function caesarCipher (message , key) {
+3
+3
+4 // Make negative keys positive
+4 // Make negative keys positive
+5 if ( key < 0) {
+5 if ( key < 0) {
+6 key += 26;
+6 key += 26;
+7 }
+7 }
+8
+8
+9 message = message .toUpperCase ();
+9 message = message .toUpperCase ();
+10 let newMessage = "" ;
+10 let newMessage = "" ;
+11 for (let i = 0; i < message .length; i ++) {
+11 for (let i = 0; i < message .length; i ++) {
+12 let code = message .charCodeAt( i );
+12 let code = message .charCodeAt( i );
+13
+13
+14 // Only convert Letters
+14 // Only convert Letters
+15 if ( code >= 65 && code <= 90) {
+15 if ( code >= 65 && code <= 90) {
+16 code = (( code - 65 + key)% 26) + 65;
+16 code = (( code - 65 + key)% 26) + 65;
+17 }
+17 }
+10
+10
+Run JavaScript Reset code
+Run JavaScript Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+...
+...
+66/68
+66/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+Your console output
+Your console output
+HASHULHQFH LV WKH WHDFKHU RI D00 WKLQJV.
+HASHULHQFH LV WKH WHDFKHU RI D00 WKLQJV.
+EXPERIENCE IS THE TEACHER OF ALL THINGS.
+EXPERIENCE IS THE TEACHER OF ALL THINGS.
+► View solution
+► View solution
+I CHALLENGE
+I CHALLENGE
+ACTIVITY 5.5.1: Throwing and catching exceptions.
+ACTIVITY 5.5.1: Throwing and catching exceptions.
+570104.20654 l 6.qx3zqy7 -
+570104.20654 l 6.qx3zqy7 -
+zyBooks
+zyBooks
+Add a throw statement to the processNumbers function that throws the message "All
+Add a throw statement to the processNumbers function that throws the message "All
+elements in the list should be numbers." if one of the elements in numlist is not a number.
+elements in the list should be numbers." if one of the elements in numlist is not a number.
+Hint: The function isNaN() returns true if the parameter is not a number.
+Hint: The function isNaN() returns true if the parameter is not a number.
+1 function processNumbers (numList ) { II Code will be tested with different value
+1 function processNumbers (numList ) { II Code will be tested with different value
+2 let result = 0;
+2 let result = 0;
+3
+3
+4 for (let index = 0; index < numList .length; index++) {
+4 for (let index = 0; index < numList .length; index++) {
+5
+5
+6 I* Your solution goes here *I
+6 I* Your solution goes here *I
+7
+7
+8 result += numList [index ] * 1.3 * index;
+8 result += numList [index ] * 1.3 * index;
+9 }
+9 }
+10
+10
+11 return result ;
+11 return result ;
+12 }
+12 }
+1 2 3 4
+1 2 3 4
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+67/68
+67/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+Check - View your last submission v
+Check - View your last submission v
+Exploring further:
+Exploring further:
+• trY. ... catch (MDN).
+• trY. ... catch (MDN).
+• Error object (MDN).
+• Error object (MDN).
+• 1Y.12eof operator (MDN).
+• 1Y.12eof operator (MDN).

@@ -4,10 +4,11 @@ def create_file(file_path):
     # Create an empty file
     with open(file_path, 'w') as file:
         pass
+
 def split_sections(input_filepath):
 
     # Regex pattern to identify section headers e.g., "1.1 "
-    section_pattern = re.compile(r'^[1-4]\.\s*\d+ [^\d]+$')
+    section_pattern = re.compile(r'^[5-9]\.\s*\d+ [^\d]+$')
     
     # Initialize variables
     current_section = None
@@ -28,8 +29,8 @@ def split_sections(input_filepath):
                 output_filepath = os.path.join(output_folder, 'textbook.txt')
                 q_filepath = os.path.join(output_folder, 'questions.txt')
                 a_filepath = os.path.join(output_folder, 'answers.txt')
-                # create_file(q_filepath)
-                # create_file(a_filepath)
+                create_file(q_filepath)
+                create_file(a_filepath)
 
                 with open(output_filepath, 'w') as output_file:
                     output_file.write(''.join(section_content))
@@ -51,8 +52,8 @@ def split_sections(input_filepath):
         os.makedirs(output_folder, exist_ok=True)
         q_filepath = os.path.join(output_folder, 'questions.txt')
         a_filepath = os.path.join(output_folder, 'answers.txt')
-        # create_file(q_filepath)
-        # create_file(a_filepath)
+        create_file(q_filepath)
+        create_file(a_filepath)
         output_filepath = os.path.join(output_folder, 'textbook.txt')
         with open(output_filepath, 'w') as output_file:
             output_file.write(''.join(section_content))

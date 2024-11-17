@@ -1,0 +1,1188 @@
+Ajax introduction
+Ajax introduction
+An HTTP request is triggered by clicking on a hyperlink or submitting a form, after which the browser
+An HTTP request is triggered by clicking on a hyperlink or submitting a form, after which the browser
+may appear unresponsive while the browser waits for the server response. When the browser receives
+may appear unresponsive while the browser waits for the server response. When the browser receives
+the response, the entire webpage is replaced with the HTML in the response. This delay may be
+the response, the entire webpage is replaced with the HTML in the response. This delay may be
+undesirable for some web applications and may annoy users if the delay is long.
+undesirable for some web applications and may annoy users if the delay is long.
+Ajax (Asynchronous JavaScript and XML) is a technique to asynchronously communicate with a
+Ajax (Asynchronous JavaScript and XML) is a technique to asynchronously communicate with a
+server and update a webpage once the response is received, without reloading the whole webpage. An
+server and update a webpage once the response is received, without reloading the whole webpage. An
+asynchronous request occurs when the web application sends a request to the server and continues
+asynchronous request occurs when the web application sends a request to the server and continues
+running without waiting for the server response. Although the "x" in Ajax stands for "XML', Ajax is used
+running without waiting for the server response. Although the "x" in Ajax stands for "XML', Ajax is used
+to transmit plain text, HTML, XML, and JSON.
+to transmit plain text, HTML, XML, and JSON.
+XMLHttpRequest is an object for communicating with web servers using Ajax. Using the
+XMLHttpRequest is an object for communicating with web servers using Ajax. Using the
+XMLHttpRequest object allows web browsers to hide the communication latency and continue to
+XMLHttpRequest object allows web browsers to hide the communication latency and continue to
+provide a responsive user interface while waiting for a server response. The XMLHttpRequest object
+provide a responsive user interface while waiting for a server response. The XMLHttpRequest object
+defines handlers for events that occur during the request/response cycle. Ex: A response arrives at the
+defines handlers for events that occur during the request/response cycle. Ex: A response arrives at the
+browser, an error occurs during a request, etc. Using event-driven programming, the web application
+browser, an error occurs during a request, etc. Using event-driven programming, the web application
+can continue providing a responsive interface and does not need to wait for a response from the
+can continue providing a responsive interface and does not need to wait for a response from the
+server. The web application later updates the page once the response is received.
+server. The web application later updates the page once the response is received.
+I n https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 26/68
+11/17/24, 11 :23AM I PARTICIPATION I
+11/17/24, 11 :23AM I PARTICIPATION I
+ACTIVITY 5.3.1: Asynchronous HTTP request.
+ACTIVITY 5.3.1: Asynchronous HTTP request.
+<hl>Movie Information</hl>
+<hl>Movie Information</hl>
+<p id="movieinfo">
+<p id="movieinfo">
+zyBooks
+zyBooks
+<cite>Star Wars</cite> : Rated PG, released 1977
+<cite>Star Wars</cite> : Rated PG, released 1977
+</p>
+</p>
+let movieinfo = document . getElementByld ("movieinfo" );
+let movieinfo = document . getElementByld ("movieinfo" );
+let xhr = new XMLHttpRequest ();
+let xhr = new XMLHttpRequest ();
+xhr . addEventListener ("load" , function ()
+xhr . addEventListener ("load" , function ()
+movieinfo . innerHTML = xhr . response ;
+movieinfo . innerHTML = xhr . response ;
+} ) ;
+} ) ;
+xhr . open ("GET" , "starwars.html" );
+xhr . open ("GET" , "starwars.html" );
+xhr . send () ;
+xhr . send () ;
+Animation content:
+Animation content:
+Step 1: The following HTML is displayed:
+Step 1: The following HTML is displayed:
+< h3>Movie I nformation</h3>
+< h3>Movie I nformation</h3>
+<div id="movieinfo">
+<div id="movieinfo">
+<!-- to be loaded -->
+<!-- to be loaded -->
+</div>
+</div>
+The following JavaScript is displayed:
+The following JavaScript is displayed:
+let movieinfo = document.getElementByld("movieinfo");
+let movieinfo = document.getElementByld("movieinfo");
+let xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
+xhr.addEventlistener("load", function() {
+xhr.addEventlistener("load", function() {
+movieinfo.innerHTML = xhr.response;
+movieinfo.innerHTML = xhr.response;
+});
+});
+xhr.open("GET", "starwars.html");
+xhr.open("GET", "starwars.html");
+xhr.send();
+xhr.send();
+The browser displays "Movie Information" in a bold font.
+The browser displays "Movie Information" in a bold font.
+r
+r
+Movie Information
+Movie Information
+Star Wars: Rated PG,
+Star Wars: Rated PG,
+released 1977
+released 1977
+HTTP
+HTTP
+Request
+Request
+◄
+◄
+►
+►
+HTTP
+HTTP
+Response
+Response
+Web server
+Web server
+Step 2: The JavaScript code is highlighted, and an HTTP request labeled "GET starwars.html" is sent
+Step 2: The JavaScript code is highlighted, and an HTTP request labeled "GET starwars.html" is sent
+to the webs server.
+to the webs server.
+Step 3: The web server sends back an "HTTP response" containing starwars.html.
+Step 3: The web server sends back an "HTTP response" containing starwars.html.
+Step 4: The following lines of code are highlighted.
+Step 4: The following lines of code are highlighted.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 27/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+xhr.addEventlistener("load", function() {
+xhr.addEventlistener("load", function() {
+movieinfo.innerHTML = xhr.response;
+movieinfo.innerHTML = xhr.response;
+});
+});
+zyBooks
+zyBooks
+The line of code reading "<!-- to be loaded -->" is replaced with "<cite>Star Wars</cite>: Rated PG,
+The line of code reading "<!-- to be loaded -->" is replaced with "<cite>Star Wars</cite>: Rated PG,
+released 1977".
+released 1977".
+Step 5: The web browser displays: Star Wars: Rated PG, released 1977
+Step 5: The web browser displays: Star Wars: Rated PG, released 1977
+Animation captions:
+Animation captions:
+1. The browser initially renders the webpage with no movie information.
+1. The browser initially renders the webpage with no movie information.
+2. The XMLHttpRequest object sends a GET request for starwars.html to the web server. The
+2. The XMLHttpRequest object sends a GET request for starwars.html to the web server. The
+request is sent asynchronously.
+request is sent asynchronously.
+3. The web server asynchronously responds to the browser with the contents of starwars.html.
+3. The web server asynchronously responds to the browser with the contents of starwars.html.
+4. The load event handler is called when starwars.html is loaded. The paragraph's inner HTML is
+4. The load event handler is called when starwars.html is loaded. The paragraph's inner HTML is
+replaced with the HTML contents of starwars.html.
+replaced with the HTML contents of starwars.html.
+5. The browser displays the Star Wars information.
+5. The browser displays the Star Wars information.
+Note
+Note
+◄
+◄
+For security reasons, browsers limit Ajax requests to the web server from which the
+For security reasons, browsers limit Ajax requests to the web server from which the
+JavaScript was downloaded. Ex: JavaScript downloaded from http://instagram.com
+JavaScript was downloaded. Ex: JavaScript downloaded from http://instagram.com
+may only make Ajax requests to instagram.com. A cross-origin HTTP request is a
+may only make Ajax requests to instagram.com. A cross-origin HTTP request is a
+request made to another domain. Ex: An Ajax request from JavaScript downloaded
+request made to another domain. Ex: An Ajax request from JavaScript downloaded
+from instagram.com to yahoo.com is a cross-origin HTTP request. Browsers can make
+from instagram.com to yahoo.com is a cross-origin HTTP request. Browsers can make
+cross-origin HTTP requests using a number of techniques including proxy servers,
+cross-origin HTTP requests using a number of techniques including proxy servers,
+Cross-Origin Resource Sharing (CORS), and JSON with Padding (JSONP).
+Cross-Origin Resource Sharing (CORS), and JSON with Padding (JSONP).
+Using XMLHttpRequest
+Using XMLHttpRequest
+The steps for using the XMLHttpRequest API are:
+The steps for using the XMLHttpRequest API are:
+1. Create a new XMLHttpRequest object.
+1. Create a new XMLHttpRequest object.
+►
+►
+2. Assign handlers to the desired events via the addEventListener () method. The
+2. Assign handlers to the desired events via the addEventListener () method. The
+addEventListener () method takes two arguments: the event name and the event handler,
+addEventListener () method takes two arguments: the event name and the event handler,
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 28/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+code that should execute when the event occurs. If the handlers are not set up prior to calling
+code that should execute when the event occurs. If the handlers are not set up prior to calling
+the open () method, the progress events will not execute.
+the open () method, the progress events will not execute.
+3. Initialize a connection to a remote resource using the open () method. The open() method
+3. Initialize a connection to a remote resource using the open () method. The open() method
+takes two arguments: the HTTP request type and the URL for the resource. Most browsers only
+takes two arguments: the HTTP request type and the URL for the resource. Most browsers only
+support "GET" and "POST" request types.
+support "GET" and "POST" request types.
+4. Modify the default HTTP request headers if needed with the setRequestHeader() method. Ex:
+4. Modify the default HTTP request headers if needed with the setRequestHeader() method. Ex:
+xhr.setRequestHeader(''Content-Type", "application/x-www-form-urlencode
+xhr.setRequestHeader(''Content-Type", "application/x-www-form-urlencode
+sets the Content-Type header so a URL-encoded string may be sent in a POST request.
+sets the Content-Type header so a URL-encoded string may be sent in a POST request.
+5. Send the HTTP request via the send() method. For POST requests, the data to be sent with the
+5. Send the HTTP request via the send() method. For POST requests, the data to be sent with the
+request is passed as the argument to the send () method.
+request is passed as the argument to the send () method.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.3.2: Identify steps in making an Ajax request.
+ACTIVITY 5.3.2: Identify steps in making an Ajax request.
+Match the JavaScript code with the description.
+Match the JavaScript code with the description.
+(a ) function responseReceivedHandler ()
+(a ) function responseReceivedHandler ()
+console . log ("handling response: " + this . responseText );
+console . log ("handling response: " + this . responseText );
+(b ) let xhr = new XMLHttpRequest ();
+(b ) let xhr = new XMLHttpRequest ();
+(c ) xhr . addEventListener ("load" , responseReceivedHandler);
+(c ) xhr . addEventListener ("load" , responseReceivedHandler);
+(d ) xhr . open ("GET" , "http://www.example.org/example.html" );
+(d ) xhr . open ("GET" , "http://www.example.org/example.html" );
+(e ) xhr . send ();
+(e ) xhr . send ();
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+Create new XMLHttpRequest object Initialize server connection
+Create new XMLHttpRequest object Initialize server connection
+Register load event handler Create load event handler
+Register load event handler Create load event handler
+(a)
+(a)
+(b)
+(b)
+(c)
+(c)
+(d)
+(d)
+(e)
+(e)
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+Send HTTP request
+Send HTTP request
+D
+D
+29/68
+29/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+XMLHttpRequest result handlers
+XMLHttpRequest result handlers
+Good practice is to use a result handler for each specific result to separate functionality for each Ajax
+Good practice is to use a result handler for each specific result to separate functionality for each Ajax
+event. Ex: Error handling, progress bars, updating the user interface on success, etc. The
+event. Ex: Error handling, progress bars, updating the user interface on success, etc. The
+XMLHttpRequest result handlers are:
+XMLHttpRequest result handlers are:
+• The load handler is called when the exchange between the browser and server has completed.
+• The load handler is called when the exchange between the browser and server has completed.
+From the browser's perspective, the server received the request and responded. However, the
+From the browser's perspective, the server received the request and responded. However, the
+request might not have been successful because of a problem such as a non-existent webpage.
+request might not have been successful because of a problem such as a non-existent webpage.
+The HTTP status code must be examined to check which type of response was received. Ex:
+The HTTP status code must be examined to check which type of response was received. Ex:
+200 vs. 404. The load, error, and abort handlers are mutually exclusive and are called after any
+200 vs. 404. The load, error, and abort handlers are mutually exclusive and are called after any
+progress handlers.
+progress handlers.
+• The error handler is called when the browser does not receive an appropriate response to a
+• The error handler is called when the browser does not receive an appropriate response to a
+request. Ex: The browser is unable to connect to the server, the connection between browser and
+request. Ex: The browser is unable to connect to the server, the connection between browser and
+server is cut in the middle of a response, etc.
+server is cut in the middle of a response, etc.
+• The abort handler is called when the browser is told to stop a request/response that is still in
+• The abort handler is called when the browser is told to stop a request/response that is still in
+progress. Ex: The user closes the webpage that made the request.
+progress. Ex: The user closes the webpage that made the request.
+• The timeout handler is called if the browser takes too much time to fully receive a response to a
+• The timeout handler is called if the browser takes too much time to fully receive a response to a
+request. The timeout is an optional value that can be provided before the request is made. By
+request. The timeout is an optional value that can be provided before the request is made. By
+default, the browser does not provide a timeout for a request.
+default, the browser does not provide a timeout for a request.
+Note
+Note
+◄
+◄
+The readystatechange handler relates to any change in the XMLHttpRequest. When
+The readystatechange handler relates to any change in the XMLHttpRequest. When
+XMLHttpRequest was originally defined, readystatechange was the only handler
+XMLHttpRequest was originally defined, readystatechange was the only handler
+defined. As a result, many Ajax examples on the Internet only use readystatechange and
+defined. As a result, many Ajax examples on the Internet only use readystatechange and
+do not include other handlers. Load, error, abort, and timeout are replacements for
+do not include other handlers. Load, error, abort, and timeout are replacements for
+readystatechange.
+readystatechange.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.3.3: Match the event handlers to their descriptions.
+ACTIVITY 5.3.3: Match the event handlers to their descriptions.
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+Eii,M·i'\i Ill m Ill
+Eii,M·i'\i Ill m Ill
+Response received successfully.
+Response received successfully.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+D
+D
+30/68
+30/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+XMLHttpRequest progress handlers
+XMLHttpRequest progress handlers
+XMLHttpRequest progress handlers are:
+XMLHttpRequest progress handlers are:
+zyBooks
+zyBooks
+Sending request failed.
+Sending request failed.
+Browser request was stopped.
+Browser request was stopped.
+Request took too long to complete.
+Request took too long to complete.
+• The loadstart handler is called when the browser begins to send a request. The loadstart
+• The loadstart handler is called when the browser begins to send a request. The loadstart
+handler is called before any other XMLHttpRequest handler.
+handler is called before any other XMLHttpRequest handler.
+• The loadend handler is called after the browser receives the response. The loadend handler is
+• The loadend handler is called after the browser receives the response. The loadend handler is
+called upon both response success and failure, and is called after all other XMLHttpRequest
+called upon both response success and failure, and is called after all other XMLHttpRequest
+handlers.
+handlers.
+• The progress handler is called one or more times while a response is being received by the
+• The progress handler is called one or more times while a response is being received by the
+client. Progress handlers are called before result handlers. The progress handler can be used to
+client. Progress handlers are called before result handlers. The progress handler can be used to
+provide a data download progress indicator to the user. A similar handler is available to provide
+provide a data download progress indicator to the user. A similar handler is available to provide
+an indicator for uploaded data.
+an indicator for uploaded data.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.3.4: XMLHttpRequest event handler order.
+ACTIVITY 5.3.4: XMLHttpRequest event handler order.
+Arrange the handlers in the order the handlers are called.
+Arrange the handlers in the order the handlers are called.
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+result handler progress loadstart
+result handler progress loadstart
+First
+First
+Second
+Second
+Third
+Third
+Fourth
+Fourth
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+31/68
+31/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+Attributes for determining XMLHttpRequest success
+Attributes for determining XMLHttpRequest success
+The XMLHttpRequest object has attributes for checking the status of a response, which are usually
+The XMLHttpRequest object has attributes for checking the status of a response, which are usually
+used in the load handler and used to update the DOM.
+used in the load handler and used to update the DOM.
+• The status attribute is the numeric status code returned in the response.
+• The status attribute is the numeric status code returned in the response.
+• The statusText attribute is the descriptive text describing the status attribute.
+• The statusText attribute is the descriptive text describing the status attribute.
+Checking the status attribute of a response is important because the status code identifies the
+Checking the status attribute of a response is important because the status code identifies the
+specific reason for a failure response. Ex: 403 means the requestor does not have permission to
+specific reason for a failure response. Ex: 403 means the requestor does not have permission to
+access the requested resource, and 404 means the requested resource was not found.
+access the requested resource, and 404 means the requested resource was not found.
+A common error is to assume that a failure response causes the error handler to be called. If the server
+A common error is to assume that a failure response causes the error handler to be called. If the server
+properly sends the failure response to the browser, the browser will treat the response as successful
+properly sends the failure response to the browser, the browser will treat the response as successful
+and call the load handler. The error handler is only called if the response is not fully received by the
+and call the load handler. The error handler is only called if the response is not fully received by the
+browser.
+browser.
+Table 5.3.1: Common HTTP response status codes.
+Table 5.3.1: Common HTTP response status codes.
+Status
+Status
+Meaning
+Meaning
+code
+code
+200 HTTP request successful
+200 HTTP request successful
+-
+-
+3XX General form for request redirection errors
+3XX General form for request redirection errors
+-
+-
+307 Resource permanently moved, the new URL is provided
+307 Resource permanently moved, the new URL is provided
+-
+-
+4XX General form for client errors
+4XX General form for client errors
+-
+-
+400 Bad request. Ex: Incorrect request syntax
+400 Bad request. Ex: Incorrect request syntax
+401 Unauthorized request. Ex: Not properly authenticated.
+401 Unauthorized request. Ex: Not properly authenticated.
+-
+-
+403 Request forbidden. Ex: User does not have necessary permissions.
+403 Request forbidden. Ex: User does not have necessary permissions.
+404 Not found. Ex: Requested resource does not exist.
+404 Not found. Ex: Requested resource does not exist.
+-
+-
+5XX General form for server error codes
+5XX General form for server error codes
+-
+-
+500 Internal server error. Ex: Server-side code crashed.
+500 Internal server error. Ex: Server-side code crashed.
+~
+~
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 32/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+503
+503
+zyBooks
+zyBooks
+Service unavailable. Ex: Webpage is temporarily unavailable due to site
+Service unavailable. Ex: Webpage is temporarily unavailable due to site
+maintenance.
+maintenance.
+Accessing Ajax response data
+Accessing Ajax response data
+The XMLHttpRequest object provides multiple ways to access the response data.
+The XMLHttpRequest object provides multiple ways to access the response data.
+• The response attribute is the response body, which is parsed by the browser according to the
+• The response attribute is the response body, which is parsed by the browser according to the
+responseType attribute.
+responseType attribute.
+• The response Text attribute is the plain text version of the response.
+• The response Text attribute is the plain text version of the response.
+• The responseXML attribute is the XML DOM version of the response. The responseXML
+• The responseXML attribute is the XML DOM version of the response. The responseXML
+attribute is only available as a DOM object if the response is a valid and correctly formatted XML
+attribute is only available as a DOM object if the response is a valid and correctly formatted XML
+document.
+document.
+The response Type attribute is set by the programmer to let the browser know the expected response
+The response Type attribute is set by the programmer to let the browser know the expected response
+data format.
+data format.
+• If the responseType attribute is set to "j son", then the browser parses the entire response
+• If the responseType attribute is set to "j son", then the browser parses the entire response
+as a JSON object and sets the response attribute to the JSON object.
+as a JSON object and sets the response attribute to the JSON object.
+• If the responseType attribute is either "" or "text 11 , the browser leaves the response
+• If the responseType attribute is either "" or "text 11 , the browser leaves the response
+unprocessed, and the response attribute contains the same value as responseText.
+unprocessed, and the response attribute contains the same value as responseText.
+• If the responseType attribute is II document 11 , the browser assumes the response is an XML
+• If the responseType attribute is II document 11 , the browser assumes the response is an XML
+◄ document, and the response attribute contains the same value as responseXML.
+◄ document, and the response attribute contains the same value as responseXML.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY
+ACTIVITY
+<body>
+<body>
+5.3.5: Creating a query string and loading JSON.
+5.3.5: Creating a query string and loading JSON.
+<label for="title">Title: </label>
+<label for="title">Title: </label>
+<input type="text" id="title"><br>
+<input type="text" id="title"><br>
+<button id=" search" >Search</button>
+<button id=" search" >Search</button>
+<p id="movieinfo">
+<p id="movieinfo">
+<cite>Star Wars</cite> : Rated PG,
+<cite>Star Wars</cite> : Rated PG,
+released in 1977
+released in 1977
+</p>
+</p>
+</body>
+</body>
+let searchBtn = document . getElementByid ("search" );
+let searchBtn = document . getElementByid ("search" );
+searchBtn . addEventListener ("click" , function () {
+searchBtn . addEventListener ("click" , function () {
+let xhr = new XMLHttpRequest ();
+let xhr = new XMLHttpRequest ();
+xhr . addEventListener ("load" , responseReceivedHandler);
+xhr . addEventListener ("load" , responseReceivedHandler);
+xhr . responseType = "json" ;
+xhr . responseType = "json" ;
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+Title: !star Wars
+Title: !star Wars
+(search)
+(search)
+Star Wars : Rated PG,
+Star Wars : Rated PG,
+released in 1977
+released in 1977
+GET
+GET
+lookup.php?
+lookup.php?
+►
+►
+D
+D
+33/68
+33/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+let title = document. getElementByid ("title" ) ;
+let title = document. getElementByid ("title" ) ;
+let queryString = "title=" +
+let queryString = "title=" +
+encodeURIComponent (title . value );
+encodeURIComponent (title . value );
+xhr . open ("GET" , "lookup.php?" + queryString);
+xhr . open ("GET" , "lookup.php?" + queryString);
+xhr . send () ;
+xhr . send () ;
+} ) ;
+} ) ;
+function responseReceivedHandler ()
+function responseReceivedHandler ()
+let movieinfo = document . getElementByid ("movieinfo" );
+let movieinfo = document . getElementByid ("movieinfo" );
+if (this . status === 200 ) {
+if (this . status === 200 ) {
+let movie = this . response ;
+let movie = this . response ;
+movieinfo . innerHTML = "<cite>" + movie . title +
+movieinfo . innerHTML = "<cite>" + movie . title +
+"</cite>: Rated" + movie . rating +
+"</cite>: Rated" + movie . rating +
+", released in" + movie . year ;
+", released in" + movie . year ;
+else {
+else {
+movieinfo . innerHTML = "Movie data unavailable." ;
+movieinfo . innerHTML = "Movie data unavailable." ;
+Animation content:
+Animation content:
+Step 1: The following HTML is displayed:
+Step 1: The following HTML is displayed:
+<body>
+<body>
+<label for="title"> Title:</label>
+<label for="title"> Title:</label>
+<input type="text" id="title"><br>
+<input type="text" id="title"><br>
+<button id="search">Search</button>
+<button id="search">Search</button>
+<p id="movieinfo">
+<p id="movieinfo">
+</p>
+</p>
+</body>
+</body>
+The following JavaScript is displayed:
+The following JavaScript is displayed:
+let searchBtn = document.getElementByld("search");
+let searchBtn = document.getElementByld("search");
+searchBtn.addEventlistener("click", function0 {
+searchBtn.addEventlistener("click", function0 {
+let xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
+xhr.addEventlistener("load", responseReceivedHandler);
+xhr.addEventlistener("load", responseReceivedHandler);
+xhr.responseType = "json";
+xhr.responseType = "json";
+let title = document.getElementByld("title");
+let title = document.getElementByld("title");
+let queryString = "title="+
+let queryString = "title="+
+encodeU RI Component(title. value);
+encodeU RI Component(title. value);
+xhr.open("GET", "lookup.php?" + queryString);
+xhr.open("GET", "lookup.php?" + queryString);
+xhr.send();
+xhr.send();
+});
+});
+function responseReceivedHandler() {
+function responseReceivedHandler() {
+let movielnfo = document.getElementByld("movieinfo");
+let movielnfo = document.getElementByld("movieinfo");
+if (this.status === 200) {
+if (this.status === 200) {
+let movie = this.response;
+let movie = this.response;
+movielnfo.innerHTML ="<cite>"+ movie.title+
+movielnfo.innerHTML ="<cite>"+ movie.title+
+"</cite>: Rated"+ movie.rating+
+"</cite>: Rated"+ movie.rating+
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+title= Star%20Wars
+title= Star%20Wars
+~
+~
+{"title":"Star Wars",
+{"title":"Star Wars",
+"rating":"PG",
+"rating":"PG",
+"year":"1977"}
+"year":"1977"}
+.. ...
+.. ...
+Web Server
+Web Server
+34/68
+34/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+", released in " + movie.year;
+", released in " + movie.year;
+} else {
+} else {
+}
+}
+}
+}
+movielnfo.innerHTML = "Movie data unavailable.";
+movielnfo.innerHTML = "Movie data unavailable.";
+zyBooks
+zyBooks
+The user enters "Star Wars" into a textbox and presses the "Search" button.
+The user enters "Star Wars" into a textbox and presses the "Search" button.
+Step 2: The line of code reading "xhr.responseType = "json";" is highlighted,
+Step 2: The line of code reading "xhr.responseType = "json";" is highlighted,
+Step 3: The code encodeURIComponent(title.value) returns "Star%20Wars".
+Step 3: The code encodeURIComponent(title.value) returns "Star%20Wars".
+Step 4: The xhr.openO and xhr.send() code sends "GET lookup.php? title=Star%20Wars" to the web
+Step 4: The xhr.openO and xhr.send() code sends "GET lookup.php? title=Star%20Wars" to the web
+server.
+server.
+Step 5: The web server responds with "{"title":"Star Wars", "rating":"PG", "year":"1977"}".
+Step 5: The web server responds with "{"title":"Star Wars", "rating":"PG", "year":"1977"}".
+Step 6: The following lines of code are highlighted.
+Step 6: The following lines of code are highlighted.
+if (this.status === 200) {
+if (this.status === 200) {
+let movie = this.response;
+let movie = this.response;
+Step 7: The following lines of code are highlighted.
+Step 7: The following lines of code are highlighted.
+movielnfo.innerHTML ="<cite>"+ movie.title+
+movielnfo.innerHTML ="<cite>"+ movie.title+
+"</cite>: Rated"+ movie.rating+
+"</cite>: Rated"+ movie.rating+
+The paragraph is changed to: <cite>Star Wars</cite>: Rated PG, released in 1977
+The paragraph is changed to: <cite>Star Wars</cite>: Rated PG, released in 1977
+The browser displays "Star Wars: Rated PG, released in 1977".
+The browser displays "Star Wars: Rated PG, released in 1977".
+Animation captions:
+Animation captions:
+1. The user types the title "Star Wars" and presses the Search button, causing the Search button's
+1. The user types the title "Star Wars" and presses the Search button, causing the Search button's
+click handler to execute.
+click handler to execute.
+2. xhr.responseType is set to "json" so that the JSON sent to the browser in the Ajax response will
+2. xhr.responseType is set to "json" so that the JSON sent to the browser in the Ajax response will
+be automatically converted into a JavaScript object.
+be automatically converted into a JavaScript object.
+3. A query string is constructed using the text from the text box. encodeURIComponent()
+3. A query string is constructed using the text from the text box. encodeURIComponent()
+converts "Star Wars" into a string with no spaces.
+converts "Star Wars" into a string with no spaces.
+4. An asynchronous HTTP request to lookup.php with a query string is sent to the web server.
+4. An asynchronous HTTP request to lookup.php with a query string is sent to the web server.
+5. Web server looks up "Star Wars" in a database and sends back a JSON response with
+5. Web server looks up "Star Wars" in a database and sends back a JSON response with
+information about the movie.
+information about the movie.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 35/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+6. The load handler verifies the response's status code is 200 and accesses the movie object
+6. The load handler verifies the response's status code is 200 and accesses the movie object
+from this.response, which was created from the JSON response.
+from this.response, which was created from the JSON response.
+7. The movie information is placed in the paragraph, and the browser renders the HTML.
+7. The movie information is placed in the paragraph, and the browser renders the HTML.
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.3.6: Ajax and JSON.
+ACTIVITY 5.3.6: Ajax and JSON.
+Refer to the animation above.
+Refer to the animation above.
+1) If the responseType attribute is set
+1) If the responseType attribute is set
+to ''json", what attribute contains the
+to ''json", what attribute contains the
+parsed JSON object when the
+parsed JSON object when the
+response is received?
+response is received?
+0 response
+0 response
+0 responseText
+0 responseText
+0 responseXML
+0 responseXML
+2) What query string is created for the Ajax
+2) What query string is created for the Ajax
+request when the user enters Pride &
+request when the user enters Pride &
+Prejudice?
+Prejudice?
+0 title=Pride & Prejudice
+0 title=Pride & Prejudice
+0 title=Pride%20&%20Prejudice
+0 title=Pride%20&%20Prejudice
+0 title=Pride%20%26%20Prejudice
+0 title=Pride%20%26%20Prejudice
+3) What does the webpage display if
+3) What does the webpage display if
+lookup.php was accidentally
+lookup.php was accidentally
+misspelled lookup.html, and no
+misspelled lookup.html, and no
+lookup.html file exists?
+lookup.html file exists?
+0 Nothing.
+0 Nothing.
+O The movie information for the
+O The movie information for the
+given movie title.
+given movie title.
+O "Movie data unavailable."
+O "Movie data unavailable."
+4) If lookup.php expects the movie title to be
+4) If lookup.php expects the movie title to be
+POSTed, the calls to open () and send () must
+POSTed, the calls to open () and send () must
+be modified, and one more line of code must be
+be modified, and one more line of code must be
+added. What is the missing line of code?
+added. What is the missing line of code?
+xhr . open ("POST" , "lookup.php" );
+xhr . open ("POST" , "lookup.php" );
+II Missing line
+II Missing line
+xhr . send (queryString);
+xhr . send (queryString);
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+0
+0
+0
+0
+0
+0
+0
+0
+36/68
+36/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+0 xhr.responseType = "text";
+0 xhr.responseType = "text";
+0
+0
+xhr.setRequestHeader("ContentType",
+xhr.setRequestHeader("ContentType",
+"application/x-www-formurlencoded");
+"application/x-www-formurlencoded");
+O xhr.addEventListener("error",
+O xhr.addEventListener("error",
+errorHandler);
+errorHandler);
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.3. 7: Ajax practice.
+ACTIVITY 5.3. 7: Ajax practice.
+zyBooks
+zyBooks
+The URL https: / /wp. zybooks. com/weather .php?zip=XXXXX, where XXXXX is a five
+The URL https: / /wp. zybooks. com/weather .php?zip=XXXXX, where XXXXX is a five
+digit ZIP code, returns JSON containing a randomly produced forecast for the given ZIP
+digit ZIP code, returns JSON containing a randomly produced forecast for the given ZIP
+code. If the ZIP code is not given or is not five digits, the JSON response indicates the ZIP
+code. If the ZIP code is not given or is not five digits, the JSON response indicates the ZIP
+code is not found.
+code is not found.
+Successful request
+Successful request
+"success" : true ,
+"success" : true ,
+"forecast" : [
+"forecast" : [
+"high" : 90 , "low" : 72 , "desc" :
+"high" : 90 , "low" : 72 , "desc" :
+"sunny" } ,
+"sunny" } ,
+"high" : 92 , "low" : 73 , "desc" :
+"high" : 92 , "low" : 73 , "desc" :
+"mostly sunny" } ,
+"mostly sunny" } ,
+{ "high" : 87 , "low" : 64 , "desc" :
+{ "high" : 87 , "low" : 64 , "desc" :
+"rain" } ,
+"rain" } ,
+{ "high" : 88 , "low" : 65 , "desc" :
+{ "high" : 88 , "low" : 65 , "desc" :
+"cloudy" } ,
+"cloudy" } ,
+{ "high" : 90 , "low" : 68 , "desc" :
+{ "high" : 90 , "low" : 68 , "desc" :
+"partly cloudy" }
+"partly cloudy" }
+l
+l
+Unsuccessful request
+Unsuccessful request
+-
+-
+"success" : false ,
+"success" : false ,
+"error" : "ZIP code not
+"error" : "ZIP code not
+found"
+found"
+Enter any ZIP code in the webpage below, and press the Search button. When Search is
+Enter any ZIP code in the webpage below, and press the Search button. When Search is
+pressed, an Ajax request is made to the URL above using the ZIP code entered in the form.
+pressed, an Ajax request is made to the URL above using the ZIP code entered in the form.
+The raw JSON response is displayed in the webpage, which is not ideal.
+The raw JSON response is displayed in the webpage, which is not ideal.
+Make the following changes:
+Make the following changes:
+1. Modify getForecast () to specify that a JSON response is expected before calling
+1. Modify getForecast () to specify that a JSON response is expected before calling
+xhr. send() :
+xhr. send() :
+xhr . responseType = "json" ;
+xhr . responseType = "json" ;
+2. Replace the code that appends the raw JSON to the html string with code that loops
+2. Replace the code that appends the raw JSON to the html string with code that loops
+through the forecast array and produces a numbered list with each day's forecast:
+through the forecast array and produces a numbered list with each day's forecast:
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+37/68
+37/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+//html+= this.response;
+//html+= this.response;
+html += "<ol>" ;
+html += "<ol>" ;
+for (let day of this . response . forecast )
+for (let day of this . response . forecast )
+zyBooks
+zyBooks
+html += '<li>${ day . desc }: high is ${ day . high }, low is ${ day . low }
+html += '<li>${ day . desc }: high is ${ day . high }, low is ${ day . low }
+</li>' ;
+</li>' ;
+}
+}
+html += "</ol>" ;
+html += "</ol>" ;
+3. Render the web page, and verify the changes you have made work correctly to show the
+3. Render the web page, and verify the changes you have made work correctly to show the
+weather for the ZIP code you enter.
+weather for the ZIP code you enter.
+4. Modify the code to display an appropriate error message if the Ajax response indicates
+4. Modify the code to display an appropriate error message if the Ajax response indicates
+the ZIP code is not found.
+the ZIP code is not found.
+let html = "" ;
+let html = "" ;
+if (this . response . success )
+if (this . response . success )
+html += "<hl>Forecast</hl>" ;
+html += "<hl>Forecast</hl>" ;
+html += "<ol>" ;
+html += "<ol>" ;
+for (let day of this . response . forecast )
+for (let day of this . response . forecast )
+html += '<li>${ day . desc }: high is ${ day . high }, low is ${ day . low}
+html += '<li>${ day . desc }: high is ${ day . high }, low is ${ day . low}
+</li>' ;
+</li>' ;
+}
+}
+html += "</ol>" ;
+html += "</ol>" ;
+else {
+else {
+html '<hl>Error: ${ this . response . error }</hl>' ;
+html '<hl>Error: ${ this . response . error }</hl>' ;
+5. Render the webpage, and verify that entering a bad ZIP code like "abc" produces an
+5. Render the webpage, and verify that entering a bad ZIP code like "abc" produces an
+error message.
+error message.
+1 ~!DOCTYPE html>
+1 ~!DOCTYPE html>
+2 <html lang="en">
+2 <html lang="en">
+3 <head>
+3 <head>
+4 <title>Weather Forecast</title>
+4 <title>Weather Forecast</title>
+5 </head>
+5 </head>
+6 <body>
+6 <body>
+7 <p>
+7 <p>
+JavaScript I
+JavaScript I
+8 <label for="zip" >ZIP code : </ label>
+8 <label for="zip" >ZIP code : </ label>
+9 <input type="text" id="zip" maxlength="5">
+9 <input type="text" id="zip" maxlength="5">
+10 <button id="search" >Search</button>
+10 <button id="search" >Search</button>
+11 </p>
+11 </p>
+12 <div id="forecast" ></div>
+12 <div id="forecast" ></div>
+13 </body>
+13 </body>
+14 </html>
+14 </html>
+15
+15
+Render webpage Reset code
+Render webpage Reset code
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print 38/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+Your webpage
+Your webpage
+ZIP code:
+ZIP code:
+zyBooks
+zyBooks
+Expected webpage
+Expected webpage
+I Search I ZIP code:
+I Search I ZIP code:
+► View solution
+► View solution
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.3.8: Updating the DOM via an Ajax request.
+ACTIVITY 5.3.8: Updating the DOM via an Ajax request.
+Match the JavaScript code with the description.
+Match the JavaScript code with the description.
+II Called when Ajax response is received
+II Called when Ajax response is received
+function responseReceivedHandler () {
+function responseReceivedHandler () {
+(a ) if (this . status === 200 ) {
+(a ) if (this . status === 200 ) {
+I Search I
+I Search I
+II code assumes response returns an ordered list that can be
+II code assumes response returns an ordered list that can be
+inserted
+inserted
+II into the list named myList, overwriting any previous contents
+II into the list named myList, overwriting any previous contents
+let list = document . getElementByid ("myList" );
+let list = document . getElementByid ("myList" );
+(b ) list . innerHTML = this . response ;
+(b ) list . innerHTML = this . response ;
+else {
+else {
+(c ) console . log ("The request failed, status: " + this . status + " " +
+(c ) console . log ("The request failed, status: " + this . status + " " +
+this . statusText );
+this . statusText );
+}
+}
+let xhr = new XMLHttpRequest ();
+let xhr = new XMLHttpRequest ();
+xhr . addEventListener ("load" , responseReceivedHandler );
+xhr . addEventListener ("load" , responseReceivedHandler );
+(d ) xhr . responseType = "text" ;
+(d ) xhr . responseType = "text" ;
+xhr . open ("GET" , "http://www.example.org/example.html" );
+xhr . open ("GET" , "http://www.example.org/example.html" );
+xhr . send () ;
+xhr . send () ;
+If unable to drag and drop, refresh the page.
+If unable to drag and drop, refresh the page.
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+D
+D
+39/68
+39/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+Check request success Indicate how to interpret response data
+Check request success Indicate how to interpret response data
+Print debugging information Access response's data
+Print debugging information Access response's data
+(a)
+(a)
+(b)
+(b)
+(c)
+(c)
+(d)
+(d)
+I CHALLENGE
+I CHALLENGE
+ACTIVITY 5.3. 7: XMLHttpRequest (Ajax).
+ACTIVITY 5.3. 7: XMLHttpRequest (Ajax).
+5707 04.20654 7 6.qx3zqy7 -Store a new XMLHttpRequest object in the xhr variable, then assign requestHandler function
+5707 04.20654 7 6.qx3zqy7 -Store a new XMLHttpRequest object in the xhr variable, then assign requestHandler function
+as the "error" event listener.
+as the "error" event listener.
+1 function requestHandler () {
+1 function requestHandler () {
+2 console . log ( 11 handling response: 11 + this . responseText);
+2 console . log ( 11 handling response: 11 + this . responseText);
+3 }
+3 }
+4
+4
+5 /* Your solution goes here*/
+5 /* Your solution goes here*/
+6
+6
+1 2
+1 2
+Check - https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+3 4
+3 4
+D
+D
+40/68
+40/68
+11/17/24, 11 :23AM zyBooks
+11/17/24, 11 :23AM zyBooks
+View your last submission v
+View your last submission v
+Monitoring uploads
+Monitoring uploads
+The XMLHttpRequest object's upload attribute is an object for monitoring the status of the request
+The XMLHttpRequest object's upload attribute is an object for monitoring the status of the request
+being sent to the server. The upload attribute has the same handlers as the XMLHttpRequest object,
+being sent to the server. The upload attribute has the same handlers as the XMLHttpRequest object,
+but the progress handler is the only handler typically used for the upload attribute. The progress
+but the progress handler is the only handler typically used for the upload attribute. The progress
+handler can be used to monitor the status of uploading large flies, such as attaching a document to a
+handler can be used to monitor the status of uploading large flies, such as attaching a document to a
+Gmail message.
+Gmail message.
+Example 5.3.1: Monitoring the progress of an uploaded file.
+Example 5.3.1: Monitoring the progress of an uploaded file.
+function uploadProgressHandler (event ) {
+function uploadProgressHandler (event ) {
+if (event . lengthComputable ) {
+if (event . lengthComputable ) {
+console . log (event . loaded + "bytes uploaded out of" + event . total + "
+console . log (event . loaded + "bytes uploaded out of" + event . total + "
+bytes total." );
+bytes total." );
+}
+}
+let file = document . getElementByid ("file_widget" ) . files [0];
+let file = document . getElementByid ("file_widget" ) . files [0];
+let xhr = new XMLHttpRequest ();
+let xhr = new XMLHttpRequest ();
+xhr . upload . addEventListener ("progress" , uploadProgressHandler);
+xhr . upload . addEventListener ("progress" , uploadProgressHandler);
+xhr . open ("POST" , "http://www. example. org /example. html" ) ;
+xhr . open ("POST" , "http://www. example. org /example. html" ) ;
+xhr . setRequestHeader ("Content-Type" , file . type );
+xhr . setRequestHeader ("Content-Type" , file . type );
+xhr . send (file );
+xhr . send (file );
+◄
+◄
+I PARTICIPATION
+I PARTICIPATION
+ACTIVITY 5.3.9: Uploading flies using XMLHttpRequest.
+ACTIVITY 5.3.9: Uploading flies using XMLHttpRequest.
+1) xhr.addEventListener ("progress",
+1) xhr.addEventListener ("progress",
+handler) tracks the status of a request to
+handler) tracks the status of a request to
+the server.
+the server.
+0 True
+0 True
+0 False
+0 False
+2) The XMLHttpRequest object can use a
+2) The XMLHttpRequest object can use a
+GET or POST request to upload flies to
+GET or POST request to upload flies to
+a server.
+a server.
+O True
+O True
+O False
+O False
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/5/print
+►
+►
+D
+D
+0
+0
+0
+0
+41/68
+41/68
+11/17/24, 11 :23AM
+11/17/24, 11 :23AM
+3) When uploading files to a server, the
+3) When uploading files to a server, the
+Content-Type header indicates the type
+Content-Type header indicates the type
+of file being uploaded.
+of file being uploaded.
+0 True
+0 True
+O False
+O False
+4) The XMLHttpRequest object's load
+4) The XMLHttpRequest object's load
+handler takes an event object as an
+handler takes an event object as an
+argument.
+argument.
+0 True
+0 True
+O False
+O False
+5) The XMLHttpRequest object's progress
+5) The XMLHttpRequest object's progress
+handler takes an event object as an
+handler takes an event object as an
+argument.
+argument.
+0 True
+0 True
+O False
+O False
+Exploring further:
+Exploring further:
+• XMLHttpRequest from MON
+• XMLHttpRequest from MON
+• HTTP access control (CORS). from MON
+• HTTP access control (CORS). from MON
+zyBooks
+zyBooks
