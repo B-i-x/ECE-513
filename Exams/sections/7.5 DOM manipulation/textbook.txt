@@ -1,0 +1,580 @@
+Accessing element attributes 
+Accessing element attributes 
+jQuery provides many methods for DOM manipulations that allow developers to dynamically add, 
+jQuery provides many methods for DOM manipulations that allow developers to dynamically add, 
+remove, or modify content on a webpage. 
+remove, or modify content on a webpage. 
+The attr() method gets and sets attribute values of a DOM element. 
+The attr() method gets and sets attribute values of a DOM element. 
+Figure 7.5.1: Changing image attributes with attr(). 
+Figure 7.5.1: Changing image attributes with attr(). 
+II Change all images to <img sr 
+II Change all images to <img sr 
+$ ( "img" ) . attr ("src " , "star.png" 
+$ ( "img" ) . attr ("src " , "star.png" 
+II Change all images to <img sr 
+II Change all images to <img sr 
+star "> 
+star "> 
+$ ( "img" ) . attr ( { 
+$ ( "img" ) . attr ( { 
+src : "star.png" , 
+src : "star.png" , 
+a l t : "Bright star " , 
+a l t : "Bright star " , 
+} ) ; 
+} ) ; 
+I PARTICIPATION I . ACTIVITY 7.5.1: JOuery attr() method. 
+I PARTICIPATION I . ACTIVITY 7.5.1: JOuery attr() method. 
+1) $ ("li") .attr ("style", 
+1) $ ("li") .attr ("style", 
+"color: red") is equivalent to 
+"color: red") is equivalent to 
+$("li") .css("color", "red") . 
+$("li") .css("color", "red") . 
+0 True 
+0 True 
+0 False 
+0 False 
+2) If an image has a src attribute of 
+2) If an image has a src attribute of 
+□ 
+□ 
+0 
+0 
+0 
+0 
+$()
+$()
+$("<span>I'm a new node!</span>");
+$("<span>I'm a new node!</span>");
+"<li>New 
+"<li>New 
+<ol>
+<ol>
+<li>A</
+<li>A</
+li>
+li>
+<li>B</
+<li>B</
+li>
+li>
+</ol>
+</ol>
+<ol>
+<ol>
+<li>New 
+<li>New 
+first</li>
+first</li>
+<li>A</
+<li>A</
+li>
+li>
+<li>B</
+<li>B</
+li>
+li>
+</ol>
+</ol>
+<ol>
+<ol>
+<li>A</
+<li>A</
+li>
+li>
+<li>B</
+<li>B</
+li>
+li>
+</ol>
+</ol>
+<ol>
+<ol>
+<li>A</
+<li>A</
+li>
+li>
+<li>B</
+<li>B</
+li>
+li>
+<li>New 
+<li>New 
+last</li>
+last</li>
+</ol>
+</ol>
+"<p>Before</
+"<p>Before</
+<h2>Test</
+<h2>Test</
+h2>
+h2>
+<p>Before</
+<p>Before</
+p>
+p>
+<h2>Test</
+<h2>Test</
+h2>
+h2>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+35 of 66 2024-11-17, 12:17 p.m.
+35 of 66 2024-11-17, 12:17 p.m.
+"moon.png", calling 
+"moon.png", calling 
+$ ("img") .attr ("src") returns 
+$ ("img") .attr ("src") returns 
+"moon.png". 
+"moon.png". 
+0 True 
+0 True 
+0 False 
+0 False 
+Adding DOM nodes 
+Adding DOM nodes 
+The function creates new DOM nodes when given an HTML string. Ex: 
+The function creates new DOM nodes when given an HTML string. Ex: 
+creates a span node. However, the new node is not 
+creates a span node. However, the new node is not 
+visible until the node is added to the DOM. 
+visible until the node is added to the DOM. 
+Table 7.5.1: Methods for adding DOM nodes. 
+Table 7.5.1: Methods for adding DOM nodes. 
+Methods Example Before After 
+Methods Example Before After 
+$ ( "<li>New first</ 
+$ ( "<li>New first</ 
+li>" ) . prependTo ( "ol" ); 
+li>" ) . prependTo ( "ol" ); 
+prependTo() 
+prependTo() 
+prepend() II same as 
+prepend() II same as 
+$ ( "ol" ) . prepend ( "<li>New 
+$ ( "ol" ) . prepend ( "<li>New 
+first</li>" ); 
+first</li>" ); 
+$ ( "<li>New last</ 
+$ ( "<li>New last</ 
+li>" ) . appendTo ( "ol" ); 
+li>" ) . appendTo ( "ol" ); 
+appendTo() 
+appendTo() 
+append() II same as 
+append() II same as 
+$ ( "ol" ) . append ( "<li>New 
+$ ( "ol" ) . append ( "<li>New 
+last</li>" ); 
+last</li>" ); 
+$ ( "<p>Before</ 
+$ ( "<p>Before</ 
+p> " ) . insertBefore ( "h2" ); <p >Betore<' 
+p> " ) . insertBefore ( "h2" ); <p >Betore<' 
+insertBefore() p > 
+insertBefore() p > 
+before() II same as <h2 >Test< / 
+before() II same as <h2 >Test< / 
+$ ( "h2" ) . before ( "<p>Befor 
+$ ( "h2" ) . before ( "<p>Befor 
+p> " ); 
+p> " ); 
+"<p>After</
+"<p>After</
+<h2>Test</
+<h2>Test</
+h2>
+h2>
+<h2>Test</
+<h2>Test</
+h2>
+h2>
+<p>After</p>
+<p>After</p>
+"<div></div>"); <p>A</p>
+"<div></div>"); <p>A</p>
+<p>B</p>
+<p>B</p>
+<div>
+<div>
+<p>A</p>
+<p>A</p>
+</div>
+</div>
+<div>
+<div>
+<p>B</p>
+<p>B</p>
+</div>
+</div>
+<p>A</p>
+<p>A</p>
+<p>B</p>
+<p>B</p>
+<div>
+<div>
+<p>A</p>
+<p>A</p>
+<p>B</p>
+<p>B</p>
+</div>
+</div>
+"<div></ <p>A</p>
+"<div></ <p>A</p>
+<p>B</p>
+<p>B</p>
+<p>
+<p>
+<div>A</
+<div>A</
+div>
+div>
+</p>
+</p>
+<p>
+<p>
+<div>B</
+<div>B</
+div>
+div>
+</p>
+</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+36 of 66 2024-11-17, 12:17 p.m.
+36 of 66 2024-11-17, 12:17 p.m.
+Methods Example Before After 
+Methods Example Before After 
+$ ( " <p>After</ 
+$ ( " <p>After</ 
+p> " ) . insertAfter ( "h2" ); 
+p> " ) . insertAfter ( "h2" ); 
+insertAfter() 
+insertAfter() 
+after() II same as 
+after() II same as 
+$ ( "h2" ) . after ( " <p>After< 
+$ ( "h2" ) . after ( " <p>After< 
+p> " ); 
+p> " ); 
+~ 
+~ 
+< rliu'> 
+< rliu'> 
+wrap() $ ( "p" ) . wrap ( " <div></div> 
+wrap() $ ( "p" ) . wrap ( " <div></div> 
+wrapA/1() 
+wrapA/1() 
+$ ( "p" ) . wrapAll ( " <div></ 
+$ ( "p" ) . wrapAll ( " <div></ 
+div>" ); 
+div>" ); 
+wraplnner() 
+wraplnner() 
+$ ( "p" ) . wrapinner ( " <div>< 
+$ ( "p" ) . wrapinner ( " <div>< 
+div>" ); 
+div>" ); 
+I PARTICIPATION I . ACTIVITY 7.5.2: Adding to the DOM. 
+I PARTICIPATION I . ACTIVITY 7.5.2: Adding to the DOM. 
+Given the HTML below, match the jQuery code to the resulting DOM transformation. 
+Given the HTML below, match the jQuery code to the resulting DOM transformation. 
+<p > 
+<p > 
+Test <i >thi s </i > 
+Test <i >thi s </i > 
+</p > 
+</p > 
+If unable to drag and drop, refresh the page. 
+If unable to drag and drop, refresh the page. 
+□ 
+□ 
+<p><span>x</span>Test <i>this</i></p>
+<p><span>x</span>Test <i>this</i></p>
+<p>Test <i>this</i><span>x</span></p> 
+<p>Test <i>this</i><span>x</span></p> 
+<p>Test <span>x</span><i>this</i></p>
+<p>Test <span>x</span><i>this</i></p>
+<p>Test <i>this</i></p><span>x</span>
+<p>Test <i>this</i></p><span>x</span>
+<p>Test <span><i>this</i></span></p>
+<p>Test <span><i>this</i></span></p>
+detach() jQuery
+detach() jQuery
+<ol>
+<ol>
+<li>A</
+<li>A</
+li>
+li>
+<li>B</
+<li>B</
+li>
+li>
+</ol>
+</ol>
+<ol>
+<ol>
+</
+</
+ol>
+ol>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+37 of 66 2024-11-17, 12:17 p.m.
+37 of 66 2024-11-17, 12:17 p.m.
+$("<span>x</span>") 
+$("<span>x</span>") 
+. insertBefore("i"); 
+. insertBefore("i"); 
+$( 11<span>x</span>11 ) 
+$( 11<span>x</span>11 ) 
+. prependT0( 11p11 ); 
+. prependT0( 11p11 ); 
+$("p").append( 
+$("p").append( 
+"<span>x</span>"); 
+"<span>x</span>"); 
+$(11 i11 ).wrap( 11<span></span>11 ); 
+$(11 i11 ).wrap( 11<span></span>11 ); 
+<p >< 
+<p >< 
+<p>T 
+<p>T 
+<p>T 
+<p>T 
+<p>T 
+<p>T 
+<p>T 
+<p>T 
+$("p").after( 
+$("p").after( 
+"<span>x</span>"); 
+"<span>x</span>"); 
+Reset 
+Reset 
+Removing DOM nodes and manipulating HTML text 
+Removing DOM nodes and manipulating HTML text 
+The jQuery methods remove() and detach() remove DOM nodes. Both methods are identical except 
+The jQuery methods remove() and detach() remove DOM nodes. Both methods are identical except 
+returns the removed nodes to the caller as a object in case the developer 
+returns the removed nodes to the caller as a object in case the developer 
+wants to use the nodes for other purposes. 
+wants to use the nodes for other purposes. 
+Table 7.5.2: Methods for removing DOM nodes. 
+Table 7.5.2: Methods for removing DOM nodes. 
+Methods Example Before After 
+Methods Example Before After 
+remove () $ ( "li" ) . remove () ; 
+remove () $ ( "li" ) . remove () ; 
+<li>B<' , I 
+<li>B<' , I 
+O.L ,> 
+O.L ,> 
+", '> 
+", '> 
+<ol>
+<ol>
+<li>A</
+<li>A</
+li>
+li>
+<li>B</
+<li>B</
+li>
+li>
+</ol>
+</ol>
+<ol>
+<ol>
+</
+</
+ol>
+ol>
+text() html() text()
+text() html() text()
+<p>
+<p>
+ A<b>B</
+ A<b>B</
+b>C
+b>C
+</p>
+</p>
+<div>
+<div>
+</div>
+</div>
+<p>
+<p>
+ A<b>B</
+ A<b>B</
+b>C
+b>C
+</p>
+</p>
+<div>
+<div>
+ A<b>B</
+ A<b>B</
+b>C
+b>C
+</div>
+</div>
+<p>
+<p>
+ A<b>B</
+ A<b>B</
+b>C
+b>C
+</p>
+</p>
+<div>
+<div>
+</div>
+</div>
+<p>
+<p>
+ A<b>B</
+ A<b>B</
+b>C
+b>C
+</p>
+</p>
+<div>
+<div>
+ ABC
+ ABC
+</div>
+</div>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+38 of 66 2024-11-17, 12:17 p.m.
+38 of 66 2024-11-17, 12:17 p.m.
+Methods Example Before After 
+Methods Example Before After 
+let $ listEl ems = 
+let $ listEl ems = 
+detach () $ ( "li" ) . detach () ; 
+detach () $ ( "li" ) . detach () ; 
+jQuery has two methods for getting and setting the HTML or textual content in a webpage: html() 
+jQuery has two methods for getting and setting the HTML or textual content in a webpage: html() 
+and text(). The method works like except strips out any HTML tags. 
+and text(). The method works like except strips out any HTML tags. 
+Table 7.5.3: Methods for modifying DOM text. 
+Table 7.5.3: Methods for modifying DOM text. 
+Methods Example Before After 
+Methods Example Before After 
+-
+-
+let s = 
+let s = 
+html() $ ( "p" ) . h tml ( ) ; 
+html() $ ( "p" ) . h tml ( ) ; 
+$ ( "div" ) . h tml ( s ) ; 
+$ ( "div" ) . h tml ( s ) ; 
+- let s = 
+- let s = 
+text () $ ( "p" ) . text (); 
+text () $ ( "p" ) . text (); 
+$ ( "div" ) . text (s ); 
+$ ( "div" ) . text (s ); 
+I PARTICIPATION I . ACTIVITY 7.5.3: Altering the DOM . 
+I PARTICIPATION I . ACTIVITY 7.5.3: Altering the DOM . 
+Given the HTML below, match the jQuery code to the resulting DOM transformation. 
+Given the HTML below, match the jQuery code to the resulting DOM transformation. 
+<p > 
+<p > 
+Ch eck <i >t his </ i > out ! 
+Ch eck <i >t his </ i > out ! 
+</p > 
+</p > 
+If unable to drag and drop, refresh the page. 
+If unable to drag and drop, refresh the page. 
+□ 
+□ 
+<p>Check out!</p>
+<p>Check out!</p>
+<p><i>this</i></p>
+<p><i>this</i></p>
+<p>Check this out!</p>
+<p>Check this out!</p>
+<p>&lt;b&gt;Check!&lt;/b&gt;</p>
+<p>&lt;b&gt;Check!&lt;/b&gt;</p>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+39 of 66 2024-11-17, 12:17 p.m.
+39 of 66 2024-11-17, 12:17 p.m.
+$("p").text( 
+$("p").text( 
+11<b>Check!</b>11); 
+11<b>Check!</b>11); 
+${11p11).html(${11 i11) 
+${11p11).html(${11 i11) 
+.detach()); 
+.detach()); 
+$("i").remove(); 
+$("i").remove(); 
+<p>C 
+<p>C 
+<p >< 
+<p >< 
+<p >C 
+<p >C 
+<p>& 
+<p>& 
+I PARTICIPATION I . . . ACTIVITY 7.5.4: DOM manipulation practice. 
+I PARTICIPATION I . . . ACTIVITY 7.5.4: DOM manipulation practice. 
+${11p11).html( 
+${11p11).html( 
+$("p").text()); 
+$("p").text()); 
+Reset 
+Reset 
+The following webpage displays a poem. Use the jQuery DOM modification methods to 
+The following webpage displays a poem. Use the jQuery DOM modification methods to 
+alter the poem in the following ways when the Scramble button is pressed: 
+alter the poem in the following ways when the Scramble button is pressed: 
+1. Swap the words between the <strong> tags from the first and third lines. 
+1. Swap the words between the <strong> tags from the first and third lines. 
+2. Detach the last line, and place the line immediately after the first line. 
+2. Detach the last line, and place the line immediately after the first line. 
+3. Place a single <div> around the entire poem that changes the font color to blue 
+3. Place a single <div> around the entire poem that changes the font color to blue 
+using CSS. 
+using CSS. 
+Finally, use jQuery to change the link's href attribute to point to https://www.quora.com/ 
+Finally, use jQuery to change the link's href attribute to point to https://www.quora.com/ 
+Wh at-i s-the-o rig in-of-the-roses-a re-red-violets-a re-blue-poem 
+Wh at-i s-the-o rig in-of-the-roses-a re-red-violets-a re-blue-poem 
+Note that the Scramble button is disabled when pressed. Render the webpage again to reenable the button. 
+Note that the Scramble button is disabled when pressed. Render the webpage again to reenable the button. 
+I CHALLENGE I 7 s 1 ·o DOM • I • ACTIVITY . . : J uery manipu atIon. 
+I CHALLENGE I 7 s 1 ·o DOM • I • ACTIVITY . . : J uery manipu atIon. 
+5707 04.20654 7 6.qx3zqy7 
+5707 04.20654 7 6.qx3zqy7 
+Exploring further: 
+Exploring further: 
+• jQuery DOM manigulation documentation 
+• jQuery DOM manigulation documentation 
+□ 
+□ 
+□ 
+□ 
+XMLHttpRequest
+XMLHttpRequest
+: Rated PG, released in 1977 Movie Information
+: Rated PG, released in 1977 Movie Information
+Star Wars : Rated PG, 
+Star Wars : Rated PG, 
+released in 1977
+released in 1977
+Star Wars</cite>: 
+Star Wars</cite>: 
+Rated PG, released in 1977
+Rated PG, released in 1977
+starwars.html
+starwars.html
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+40 of 66 2024-11-17, 12:17 p.m.
+40 of 66 2024-11-17, 12:17 p.m.
+• Manipulating Elements 
+• Manipulating Elements 

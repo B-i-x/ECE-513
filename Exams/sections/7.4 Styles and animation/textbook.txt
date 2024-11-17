@@ -1,0 +1,953 @@
+The css() method 
+The css() method 
+□ 
+□ 
+jQuery simplifies the process of adding and removing CSS properties to an element's inline style. 
+jQuery simplifies the process of adding and removing CSS properties to an element's inline style. 
+CSS properties can be added to selected elements with the css() method as illustrated in the 
+CSS properties can be added to selected elements with the css() method as illustrated in the 
+"peachpuff");
+"peachpuff");
+"background-color: peachpuff;
+"background-color: peachpuff;
+Hello!
+Hello!
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+22 of 66 2024-11-17, 12:17 p.m.
+22 of 66 2024-11-17, 12:17 p.m.
+following animation. 
+following animation. 
+I PARTICIPATION I . ACTIVITY 7.4.1: Using the .css() method. 
+I PARTICIPATION I . ACTIVITY 7.4.1: Using the .css() method. 
+<body styl e = "background- co l or: pea 
+<body styl e = "background- co l or: pea 
+co l or : green ; 
+co l or : green ; 
+font- size: 20pt " > 
+font- size: 20pt " > 
+<p >He llo ! </ p > 
+<p >He llo ! </ p > 
+</body> 
+</body> 
+$ ( "body" ) . css ( "background- co l or " , 
+$ ( "body" ) . css ( "background- co l or " , 
+$ ( "body" ) . css ( { 
+$ ( "body" ) . css ( { 
+co l or : "green " , 
+co l or : "green " , 
+" font - size " : " 20pt " 
+" font - size " : " 20pt " 
+} ) ; 
+} ) ; 
+Animation content: 
+Animation content: 
+Step 1: Two boxes of code are shown. The first reads: 
+Step 1: Two boxes of code are shown. The first reads: 
+<body><p>Hello!</p> 
+<body><p>Hello!</p> 
+</body> 
+</body> 
+The second reads: 
+The second reads: 
+$("body").css("background-color", "peachpuff"); 
+$("body").css("background-color", "peachpuff"); 
+$("body").css({ 
+$("body").css({ 
+color: "green", 
+color: "green", 
+"font-size": "20pt" 
+"font-size": "20pt" 
+}); 
+}); 
+"Hello!" is highlighted and displayed to the right. 
+"Hello!" is highlighted and displayed to the right. 
+Step 2: The first block of code is changed to read 
+Step 2: The first block of code is changed to read 
+"<body style="background-color: peachpuff "> <p>Hello!</p> </body>". 
+"<body style="background-color: peachpuff "> <p>Hello!</p> </body>". 
+"Hello!" is highlighted and displayed to the right on top of a peach colored background. 
+"Hello!" is highlighted and displayed to the right on top of a peach colored background. 
+Step 3: The first block of code is changed to read 
+Step 3: The first block of code is changed to read 
+<body style="background-color: peachpuff; 
+<body style="background-color: peachpuff; 
+color: green; 
+color: green; 
+font-size: 20pt"> 
+font-size: 20pt"> 
+<p>Hello!</p> </body> 
+<p>Hello!</p> </body> 
+"Hello!" is displayed to the right in a large green font over a peach colored background. 
+"Hello!" is displayed to the right in a large green font over a peach colored background. 
+Animation captions: 
+Animation captions: 
+1 . Browser renders the webpage. 
+1 . Browser renders the webpage. 
+□ 
+□ 
+backgroundColor "background-color"
+backgroundColor "background-color"
+"background-color"
+"background-color"
+h1>
+h1>
+span> and
+span> and
+"underline",
+"underline",
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+23 of 66 2024-11-17, 12:17 p.m.
+23 of 66 2024-11-17, 12:17 p.m.
+2. css() method adds the "background-color" CSS property to the <body>. 
+2. css() method adds the "background-color" CSS property to the <body>. 
+3. css() method adds two CSS properties to <body> using an object literal. 
+3. css() method adds two CSS properties to <body> using an object literal. 
+jQuery converts each camel-cased property name to a string that is equivalent to the CSS property 
+jQuery converts each camel-cased property name to a string that is equivalent to the CSS property 
+name. Ex: is converted to . However, 
+name. Ex: is converted to . However, 
+cannot be used without quotes since the dash is not a legal character in a 
+cannot be used without quotes since the dash is not a legal character in a 
+JavaScript identifier. 
+JavaScript identifier. 
+I PARTICIPATION I . ACTIVITY 7.4.2: Using the .css() method. 
+I PARTICIPATION I . ACTIVITY 7.4.2: Using the .css() method. 
+Given the following HTML, what is the effect of eachjQuery code segment? 
+Given the following HTML, what is the effect of eachjQuery code segment? 
+<hl styl e = "border-style: solid" >To Do</ 
+<hl styl e = "border-style: solid" >To Do</ 
+<span i d="important" >Study for exam</ sp 
+<span i d="important" >Study for exam</ sp 
+<span>feed the fish</ span> 
+<span>feed the fish</ span> 
+1) $ ("#important") .css ("display", 
+1) $ ("#important") .css ("display", 
+"none"); 
+"none"); 
+O "Study for exam" is replaced with a 
+O "Study for exam" is replaced with a 
+blank area. 
+blank area. 
+"Study for exam" is no longer 
+"Study for exam" is no longer 
+0 visible, and the browser does not 
+0 visible, and the browser does not 
+leave room for the missing words. 
+leave room for the missing words. 
+O Nothing because no elements use 
+O Nothing because no elements use 
+the class "important". 
+the class "important". 
+2)$("hl").css({ "textdecoration": "underline", 
+2)$("hl").css({ "textdecoration": "underline", 
+"border-style": "dotted" 
+"border-style": "dotted" 
+} ) ; 
+} ) ; 
+O ''To Do" is underlined with a 
+O ''To Do" is underlined with a 
+dotted border. 
+dotted border. 
+O ''To Do" is underlined, but the 
+O ''To Do" is underlined, but the 
+solid border remains . 
+solid border remains . 
+O Nothing because there is a 
+O Nothing because there is a 
+syntax error in the object literal. 
+syntax error in the object literal. 
+3) $ ("span") .css ({ 
+3) $ ("span") .css ({ 
+textDecoration: 
+textDecoration: 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+24 of 66 2024-11-17, 12:17 p.m.
+24 of 66 2024-11-17, 12:17 p.m.
+border-style: "dotted" 
+border-style: "dotted" 
+} ) ; 
+} ) ; 
+Both span elements are 
+Both span elements are 
+0 underlined with a dotted 
+0 underlined with a dotted 
+border. 
+border. 
+0 Nothing because quotes are 
+0 Nothing because quotes are 
+needed around textDecoration. 
+needed around textDecoration. 
+0 Nothing because there is a 
+0 Nothing because there is a 
+syntax error in the object literal. 
+syntax error in the object literal. 
+4) let x = 0 
+4) let x = 0 
+$ ( "hl") . css ( "borderstyle"); 
+$ ( "hl") . css ( "borderstyle"); 
+0 The border around ''To Do" is 
+0 The border around ''To Do" is 
+removed . 
+removed . 
+0 xis assigned with an empty 
+0 xis assigned with an empty 
+string. 
+string. 
+0 xis assigned with "solid". 
+0 xis assigned with "solid". 
+5) $ ( "hl") . css ("border-style", 0 
+5) $ ( "hl") . css ("border-style", 0 
+" " ) ; 
+" " ) ; 
+0 ''To Do" continues to have a 
+0 ''To Do" continues to have a 
+solid border. 
+solid border. 
+Nothing because an empty 
+Nothing because an empty 
+0 string cannot be used as a 
+0 string cannot be used as a 
+property value. 
+property value. 
+0 The solid border around ''To Do" 
+0 The solid border around ''To Do" 
+is removed. 
+is removed. 
+jQuery effects 
+jQuery effects 
+jQuery has three sets of animation methods for showing and hiding webpage elements. The 
+jQuery has three sets of animation methods for showing and hiding webpage elements. The 
+animation methods in the table below alter various CSS properties of selected elements to produce 
+animation methods in the table below alter various CSS properties of selected elements to produce 
+animations. The methods take a speed argument that determines the duration of the animation. 
+animations. The methods take a speed argument that determines the duration of the animation. 
+jQuery animation methods are also called jQuery effects. 
+jQuery animation methods are also called jQuery effects. 
+Table 7.4.1: Animation methods. 
+Table 7.4.1: Animation methods. 
+$("h1").show("slow");
+$("h1").show("slow");
+$("h1").hide("slow");
+$("h1").hide("slow");
+$("h1").toggle("slow");
+$("h1").toggle("slow");
+);
+);
+"normal");
+"normal");
+);
+);
+"fast");
+"fast");
+);
+);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+25 of 66 2024-11-17, 12:17 p.m.
+25 of 66 2024-11-17, 12:17 p.m.
+Methods Example Description 
+Methods Example Description 
+show() Alters width, height, and opacity hide() all at once toggle() 
+show() Alters width, height, and opacity hide() all at once toggle() 
+~ 
+~ 
+fadeln() $ ( "hl" ) . fade I n ( "normal " ); 
+fadeln() $ ( "hl" ) . fade I n ( "normal " ); 
+fadeout() $ ( "hl " ) . fadeout ( "normal " ) Alters opacity only 
+fadeout() $ ( "hl " ) . fadeout ( "normal " ) Alters opacity only 
+fade Toggle() $ ( "hl" ) . fade Toggl e ( "norma 
+fade Toggle() $ ( "hl" ) . fade Toggl e ( "norma 
+f---
+f---
+slideDown() $ ( "hl" ) . s lideDown ( "fast" ) 
+slideDown() $ ( "hl" ) . s lideDown ( "fast" ) 
+slideUp() $ ( "hl" ) . s lideUp ( "fast" ); Alters height only 
+slideUp() $ ( "hl" ) . s lideUp ( "fast" ); Alters height only 
+slide Toggle() $ ( "hl" ) . s lide Toggl e ( "fast 
+slide Toggle() $ ( "hl" ) . s lide Toggl e ( "fast 
+Table 7.4.2: The speed argument for animation methods. 
+Table 7.4.2: The speed argument for animation methods. 
+Argument Example Explanation 
+Argument Example Explanation 
+$ ( "p" ) . s h ow ( "slow" ); 0.6 seconds to show the "slow" 
+$ ( "p" ) . s h ow ( "slow" ); 0.6 seconds to show the "slow" 
+paragraph 
+paragraph 
+$ ( "p" ) . s h ow ( "normal" : 0.4 seconds to show the "normal" 
+$ ( "p" ) . s h ow ( "normal" : 0.4 seconds to show the "normal" 
+paragraph 
+paragraph 
+$ ( "p" ) . s h ow ( "fast" ); 0.2 seconds to show the "fast" 
+$ ( "p" ) . s h ow ( "fast" ); 0.2 seconds to show the "fast" 
+paragraph 
+paragraph 
+milliseconds $ ( "p" ) . s h ow (l500 ); 1.5 seconds to show the 
+milliseconds $ ( "p" ) . s h ow (l500 ); 1.5 seconds to show the 
+paragraph 
+paragraph 
+I PARTICIPATION I . . ACTIVITY 7.4.3: Animation methods. 
+I PARTICIPATION I . . ACTIVITY 7.4.3: Animation methods. 
+The following webpage is using jQuery animation methods to show and hide the cat 
+The following webpage is using jQuery animation methods to show and hide the cat 
+image. Click on each button to see the effect on the image. Then try modifying the 
+image. Click on each button to see the effect on the image. Then try modifying the 
+JavaScript so that when the image is clicked two things will happen: 
+JavaScript so that when the image is clicked two things will happen: 
+1. A solid red border will immediately appear around the image. Use the css() method 
+1. A solid red border will immediately appear around the image. Use the css() method 
+to add the appropriate CSS properties. 
+to add the appropriate CSS properties. 
+□ 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+26 of 66 2024-11-17, 12:17 p.m.
+26 of 66 2024-11-17, 12:17 p.m.
+2. The image will quickly hide, display, fade out, fade in, slide up, and slide down. Call 
+2. The image will quickly hide, display, fade out, fade in, slide up, and slide down. Call 
+each of the animation methods to produce the series of animations. 
+each of the animation methods to produce the series of animations. 
+I PARTICIPATION I . ACTIVITY 7.4.4: JOuery effects. 
+I PARTICIPATION I . ACTIVITY 7.4.4: JOuery effects. 
+1) The hide () method does not 
+1) The hide () method does not 
+animate opacity. 
+animate opacity. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) If the show () method is not given 
+2) If the show () method is not given 
+any arguments, the method does not 
+any arguments, the method does not 
+show an animated transition. 
+show an animated transition. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) The call $ ( "hl") . toggle ( 2) will 
+3) The call $ ( "hl") . toggle ( 2) will 
+show or hide all <hl > elements 
+show or hide all <hl > elements 
+during a 2 second interval. 
+during a 2 second interval. 
+0 True 
+0 True 
+0 False 
+0 False 
+4) The slideDown () method will slide 
+4) The slideDown () method will slide 
+the element down until the element is 
+the element down until the element is 
+no longer visible. 
+no longer visible. 
+0 True 
+0 True 
+0 False 
+0 False 
+Controlling animation order 
+Controlling animation order 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+Sometimes an operation should be performed after an effect completes. Ex: Display a 'Thank you" 
+Sometimes an operation should be performed after an effect completes. Ex: Display a 'Thank you" 
+message after the user has typed information into a form that gradually disappears. However, code 
+message after the user has typed information into a form that gradually disappears. However, code 
+that is written after a call to an animation method will execute before the animation is complete. To 
+that is written after a call to an animation method will execute before the animation is complete. To 
+execute code after the animation is complete, the jQuery animation methods can be passed a 
+execute code after the animation is complete, the jQuery animation methods can be passed a 
+callback function. 
+callback function. 
+I PARTICIPATION I 7 4 5 W . . f . . I 
+I PARTICIPATION I 7 4 5 W . . f . . I 
+ACTIVITY .. : aIting or an animation to compete. □ 
+ACTIVITY .. : aIting or an animation to compete. □ 
+<body>
+<body>
+<h1>jQuery effects</h1>
+<h1>jQuery effects</h1>
+<h2>Good stuff!</h2>
+<h2>Good stuff!</h2>
+</body>
+</body>
+$("h1").fadeOut("slow");
+$("h1").fadeOut("slow");
+$("h2").fadeOut("slow");
+$("h2").fadeOut("slow");
+$("h1").fadeIn("slow", function() {
+$("h1").fadeIn("slow", function() {
+$("h2").fadeIn("slow");
+$("h2").fadeIn("slow");
+});
+});
+jQuery effects
+jQuery effects
+Good stuff!
+Good stuff!
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+27 of 66 2024-11-17, 12:17 p.m.
+27 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+Animation content: 
+The following code blocks are displayed. 
+The following code blocks are displayed. 
+<body> 
+<body> 
+<h1 >jQuery effects</h1 > 
+<h1 >jQuery effects</h1 > 
+<h2>Good stuff!</h2> 
+<h2>Good stuff!</h2> 
+</body> 
+</body> 
+$("h1 ").fadeOut("slow"); 
+$("h1 ").fadeOut("slow"); 
+$("h2"). fadeOut("slow"); 
+$("h2"). fadeOut("slow"); 
+$("h1 ").fadeln("slow", function() { 
+$("h1 ").fadeln("slow", function() { 
+$("h2").fadeln("slow"); 
+$("h2").fadeln("slow"); 
+}); 
+}); 
+Step 1 :"jQuery effects 
+Step 1 :"jQuery effects 
+ood stuf =1 
+ood stuf =1 
+Good stuff!" is initially displayed to the right. "$("h1 ").fadeOut("slow"); 
+Good stuff!" is initially displayed to the right. "$("h1 ").fadeOut("slow"); 
+$("h2").fade0ut("slow");" is highlighted, and the two lines on the right gradually fade away at the 
+$("h2").fade0ut("slow");" is highlighted, and the two lines on the right gradually fade away at the 
+same time. 
+same time. 
+Step 2: 
+Step 2: 
+The lines of code reading "$("h1 ").fadeln("slow", function() { 
+The lines of code reading "$("h1 ").fadeln("slow", function() { 
+$("h2").fadeln("slow"); 
+$("h2").fadeln("slow"); 
+});" are highlighted, and the two lines "jQuery effects" and "Good stuff!" gradually appear one after 
+});" are highlighted, and the two lines "jQuery effects" and "Good stuff!" gradually appear one after 
+the other. 
+the other. 
+Animation captions: 
+Animation captions: 
+1. The fadeout() methods cause <h1 > and <h2> to fade out at the same time. 
+1. The fadeout() methods cause <h1 > and <h2> to fade out at the same time. 
+2. The first fadeln() completes before the second fadeln() is called, so <h2> fades in after 
+2. The first fadeln() completes before the second fadeln() is called, so <h2> fades in after 
+<h1 > has finished fading in. 
+<h1 > has finished fading in. 
+// Both animations occur at the same time
+// Both animations occur at the same time
+);
+);
+);
+);
+// Animations on the same element are 
+// Animations on the same element are 
+);
+);
+// Called immediately, not waiting for hide to 
+// Called immediately, not waiting for hide to 
+// Begins after hide completes
+// Begins after hide completes
+queue()
+queue()
+queue()
+queue()
+next next
+next next
+queue()
+queue()
+// Add the class after the <h1> hide 
+// Add the class after the <h1> hide 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+28 of 66 2024-11-17, 12:17 p.m.
+28 of 66 2024-11-17, 12:17 p.m.
+When two animations are applied to different elements, the animations occur at the same time. 
+When two animations are applied to different elements, the animations occur at the same time. 
+However, when two animations are applied to the same element, the first animation completes 
+However, when two animations are applied to the same element, the first animation completes 
+before starting the second animation. jQuery queues animations applied to the same element so 
+before starting the second animation. jQuery queues animations applied to the same element so 
+that each animation finishes before the next begins. 
+that each animation finishes before the next begins. 
+Figure 7.4.1: Queuing animations on the same element. 
+Figure 7.4.1: Queuing animations on the same element. 
+II Both animations occ 
+II Both animations occ 
+$ ( "hl" ) . fadeout ( "slow" 
+$ ( "hl" ) . fadeout ( "slow" 
+$ ( "h2" ) . fadeout ( "slow" 
+$ ( "h2" ) . fadeout ( "slow" 
+II Animations on the s 
+II Animations on the s 
+queued 
+queued 
+$ ( "hl" ) . fade i n ( "slow" ) 
+$ ( "hl" ) . fade i n ( "slow" ) 
+$ ( "hl" ) . s lideUp (lOOO ); 
+$ ( "hl" ) . s lideUp (lOOO ); 
+Non-animation method calls are not placed in the animation queue. 
+Non-animation method calls are not placed in the animation queue. 
+Figure 7.4.2: Only animation methods are queued. 
+Figure 7.4.2: Only animation methods are queued. 
+$ ( "hl" ) . h i de ( "slow" ) 
+$ ( "hl" ) . h i de ( "slow" ) 
+. addCl ass ( "important" ) I I Called im 
+. addCl ass ( "important" ) I I Called im 
+complete 
+complete 
+. sli deDown (lOOO ); II Begins at 
+. sli deDown (lOOO ); II Begins at 
+jQuery provides a queue() method to aid in queuing code that should be executed after the previous 
+jQuery provides a queue() method to aid in queuing code that should be executed after the previous 
+animations complete. The method can take the place of the callback function used with 
+animations complete. The method can take the place of the callback function used with 
+the animation methods. The method takes a function argument that is passed a function 
+the animation methods. The method takes a function argument that is passed a function 
+parameter called . The function must be called so the next animation in the queue can 
+parameter called . The function must be called so the next animation in the queue can 
+be processed. Good practice is to use the method instead of callback functions when 
+be processed. Good practice is to use the method instead of callback functions when 
+developing elaborate animations. Using many nested callback functions can lead to overly 
+developing elaborate animations. Using many nested callback functions can lead to overly 
+complicated code. 
+complicated code. 
+Figure 7.4.3: Using the .queue() method. 
+Figure 7.4.3: Using the .queue() method. 
+$ ( "hl" ) . h i de ( "slow" ) 
+$ ( "hl" ) . h i de ( "slow" ) 
+. queue (fun c ti o n (next ) 
+. queue (fun c ti o n (next ) 
+II Add the class aft 
+II Add the class aft 
+<h1>
+<h1>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+29 of 66 2024-11-17, 12:17 p.m.
+29 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I . . ACTIVITY 7.4.6: Animation order. 
+I PARTICIPATION I . . ACTIVITY 7.4.6: Animation order. 
+Refer to the jQuery code below: 
+Refer to the jQuery code below: 
+$ ( " hl " ) . s h ow (lOOO ) 
+$ ( " hl " ) . s h ow (lOOO ) 
+. qu e u e (fun c tio n (next ) { 
+. qu e u e (fun c tio n (next ) { 
+} ) 
+} ) 
+$ (this ) . removeCl ass ( " important " ) ; 
+$ (this ) . removeCl ass ( " important " ) ; 
+next (); 
+next (); 
+. css ( " color " , " red" ) 
+. css ( " color " , " red" ) 
+. de 1 a y ( 10 0 0 ) 
+. de 1 a y ( 10 0 0 ) 
+. hide ( " fast " , fun cti o n () 
+. hide ( " fast " , fun cti o n () 
+$ (this ) . css ( " color " , " green " ); 
+$ (this ) . css ( " color " , " green " ); 
+} ) ; 
+} ) ; 
+1) The show animation completes 
+1) The show animation completes 
+before the hide animation begins. 
+before the hide animation begins. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) $ (this) in the code above is 
+2) $ (this) in the code above is 
+equivalent to $ ( "hl") . 
+equivalent to $ ( "hl") . 
+0 True 
+0 True 
+0 False 
+0 False 
+3) The show animation completes 
+3) The show animation completes 
+before the "important" class is 
+before the "important" class is 
+removed from 
+removed from 
+0 True 
+0 True 
+0 False 
+0 False 
+4) The show animation completes 
+4) The show animation completes 
+before the CSS color property is set to 
+before the CSS color property is set to 
+red. 
+red. 
+0 True 
+0 True 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"position: absolute; 
+"position: absolute; 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+30 of 66 2024-11-17, 12:17 p.m.
+30 of 66 2024-11-17, 12:17 p.m.
+0 False 
+0 False 
+5) The delay () method delays 
+5) The delay () method delays 
+executing the hide animation for one 
+executing the hide animation for one 
+second. 
+second. 
+0 True 
+0 True 
+0 False 
+0 False 
+6) The hide animation completes before 
+6) The hide animation completes before 
+the CSS color property is set to green. 
+the CSS color property is set to green. 
+0 True 
+0 True 
+0 False 
+0 False 
+The animate() method 
+The animate() method 
+0 
+0 
+0 
+0 
+The animate() method creates an animation by specifying a set of CSS properties to change over 
+The animate() method creates an animation by specifying a set of CSS properties to change over 
+the animation's duration. animate() has four parameters, but only the first is required: 
+the animation's duration. animate() has four parameters, but only the first is required: 
+1. properties - Object map of CSS properties specifying ending values. 
+1. properties - Object map of CSS properties specifying ending values. 
+2. duration - Animation duration in milliseconds (default is 400). 
+2. duration - Animation duration in milliseconds (default is 400). 
+3. easing - Easing function applied to the transition (default is "swing"). 
+3. easing - Easing function applied to the transition (default is "swing"). 
+4. complete - Function called once when the animation completes. 
+4. complete - Function called once when the animation completes. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY I 7.4.7: The animate() method. 
+ACTIVITY I 7.4.7: The animate() method. 
+<body> 
+<body> 
+<img src=" cat.jpg" a l t =" cat " 
+<img src=" cat.jpg" a l t =" cat " 
+styl e =" posi t i on: abso l ute; 
+styl e =" posi t i on: abso l ute; 
+l e f t: 200px ; 
+l e f t: 200px ; 
+top: 50px; 
+top: 50px; 
+he i ght: 40px; 
+he i ght: 40px; 
+width: 140px ; 
+width: 140px ; 
+opacity : 0 . 1 ; 
+opacity : 0 . 1 ; 
+border: 2px solid red" > 
+border: 2px solid red" > 
+</body> 
+</body> 
+$ ( "img " ) . animate ( { 
+$ ( "img " ) . animate ( { 
+l eft : " 200px" , 
+l eft : " 200px" , 
+height : "-= 60 " 
+height : "-= 60 " 
+}, " s l ow" , "linear " ); 
+}, " s l ow" , "linear " ); 
+$ ( "img " ) . ani mate ( { 
+$ ( "img " ) . ani mate ( { 
+opacity : 0 . 1 , 
+opacity : 0 . 1 , 
+top : "+=50 " 
+top : "+=50 " 
+} , 2000 ); 
+} , 2000 ); 
+□ 
+□ 
+$("img").animate({
+$("img").animate({
+opacity: 1,
+opacity: 1,
+width: "200px"
+width: "200px"
+}, function() {
+}, function() {
+$(this).css("border", "2px solid red");
+$(this).css("border", "2px solid red");
+});
+});
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+31 of 66 2024-11-17, 12:17 p.m.
+31 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+Animation content: 
+The following code blocks are displayed. 
+The following code blocks are displayed. 
+<body> 
+<body> 
+<img src="cat.jpg" alt="cat" 
+<img src="cat.jpg" alt="cat" 
+style="position: absolute; 
+style="position: absolute; 
+left: 200px; 
+left: 200px; 
+top: 50px; 
+top: 50px; 
+height 40px; 
+height 40px; 
+width: 140px; 
+width: 140px; 
+opacity: 0.1; 
+opacity: 0.1; 
+border: 2px solid red"> 
+border: 2px solid red"> 
+</body> 
+</body> 
+$("img").animate({ 
+$("img").animate({ 
+left: "200px", 
+left: "200px", 
+height "-=60" 
+height "-=60" 
+} "slow" "linear")· I I I 
+} "slow" "linear")· I I I 
+$("img").animate({ 
+$("img").animate({ 
+opacity: 0.1, 
+opacity: 0.1, 
+top: "+=50" 
+top: "+=50" 
+}, 2000); 
+}, 2000); 
+$("img").animate({ 
+$("img").animate({ 
+opacity: 1, 
+opacity: 1, 
+width: "200px" 
+width: "200px" 
+}, function() { 
+}, function() { 
+S(this).css("border", "2px solid red"); 
+S(this).css("border", "2px solid red"); 
+}); 
+}); 
+Step 1: The "left: 200px" and "height 40px" lines are highlighted, and the cat image displays in the 
+Step 1: The "left: 200px" and "height 40px" lines are highlighted, and the cat image displays in the 
+top-left corner of the browser. 
+top-left corner of the browser. 
+Step 2: The lines of code reading 
+Step 2: The lines of code reading 
+"$("img").animate({ 
+"$("img").animate({ 
+left: "200px", 
+left: "200px", 
+height: "-=60" 
+height: "-=60" 
+}, "slow", "linear");" are highlighted. 
+}, "slow", "linear");" are highlighted. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+32 of 66 2024-11-17, 12:17 p.m.
+32 of 66 2024-11-17, 12:17 p.m.
+Step 3: The cat image moves to the right and is shortened. 
+Step 3: The cat image moves to the right and is shortened. 
+Step 4: The lines of code reading 
+Step 4: The lines of code reading 
+"$("img").animate( { 
+"$("img").animate( { 
+opacity: 0.1, 
+opacity: 0.1, 
+top: "+=50" 
+top: "+=50" 
+}, 2000);" are highlighted. The cat image shifts down on the screen and becomes slightly opaque. 
+}, 2000);" are highlighted. The cat image shifts down on the screen and becomes slightly opaque. 
+Step 5: The lines of code reading 
+Step 5: The lines of code reading 
+"$("img").animate({ 
+"$("img").animate({ 
+opacity: 1, 
+opacity: 1, 
+width: "200px" 
+width: "200px" 
+}, function(){" are highlighted. The cat image is stretched wide and becomes less opaque. 
+}, function(){" are highlighted. The cat image is stretched wide and becomes less opaque. 
+Step 6: The line of code reading "$(this).css("border", "2px solid red");" is highlighted. A solid red 
+Step 6: The line of code reading "$(this).css("border", "2px solid red");" is highlighted. A solid red 
+border is added around the cat image. 
+border is added around the cat image. 
+Animation captions: 
+Animation captions: 
+1. The cat image initially displays 1 0px from the browser's left edge with a 1 00px height. 
+1. The cat image initially displays 1 0px from the browser's left edge with a 1 00px height. 
+2. The first call to animate() specifies the two CSS properties to animate (left and height), a 
+2. The first call to animate() specifies the two CSS properties to animate (left and height), a 
+"slow" duration, and "linear" easing function. 
+"slow" duration, and "linear" easing function. 
+3. animate() makes image's left become 200px and height become 1 00px - 60 = 40px with 
+3. animate() makes image's left become 200px and height become 1 00px - 60 = 40px with 
+linear easing over 0.6 secs (length of "slow"). 
+linear easing over 0.6 secs (length of "slow"). 
+4. The second animate() call makes image's opacity change to 0.1, top to 0 + 50 = 50px over 2 
+4. The second animate() call makes image's opacity change to 0.1, top to 0 + 50 = 50px over 2 
+seconds. 
+seconds. 
+5. The third animate() call makes image's opacity change to 1 and width to 200px over 0.4 
+5. The third animate() call makes image's opacity change to 1 and width to 200px over 0.4 
+seconds (default length of time). 
+seconds (default length of time). 
+6. The complete function executes after the animation completes and calls css() to set the 
+6. The complete function executes after the animation completes and calls css() to set the 
+image's border to solid red. 
+image's border to solid red. 
+I PARTICIPATION I . ACTIVITY 7.4.8: The animate() method. 
+I PARTICIPATION I . ACTIVITY 7.4.8: The animate() method. 
+1) In the animate () CSS object map, 
+1) In the animate () CSS object map, 
+what does left: "+=2 o" do? 
+what does left: "+=2 o" do? 
+O Sets the left property to the 
+O Sets the left property to the 
+number 20. 
+number 20. 
+O Adds 20px to the left 
+O Adds 20px to the left 
+property's value. 
+property's value. 
+□ 
+□ 
+0 
+0 
+left
+left
+$("img").animate({
+$("img").animate({
+opacity: 1,
+opacity: 1,
+queue()
+queue()
+queue()
+queue()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+33 of 66 2024-11-17, 12:17 p.m.
+33 of 66 2024-11-17, 12:17 p.m.
+O Subtracts 20px from the 
+O Subtracts 20px from the 
+property's value. 
+property's value. 
+2) What easing function does the code 
+2) What easing function does the code 
+segment below use? 
+segment below use? 
+wi d th : " 200px " 
+wi d th : " 200px " 
+} , function () { 
+} , function () { 
+$ (this) . css ( "border " , " 2px 
+$ (this) . css ( "border " , " 2px 
+solid red" ); 
+solid red" ); 
+} ) ; 
+} ) ; 
+0 linear 
+0 linear 
+0 swing 
+0 swing 
+No easing function was 
+No easing function was 
+0 specified, so no easing was 
+0 specified, so no easing was 
+used. 
+used. 
+3) Can animate () animate the 
+3) Can animate () animate the 
+transition from one font color to 
+transition from one font color to 
+another? 
+another? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+I PARTICIPATION I 
+I PARTICIPATION I 
+ACTIVITY 7.4.9: Practice with animate() and queue(). 
+ACTIVITY 7.4.9: Practice with animate() and queue(). 
+The following webpage displays some help information when the"?" is clicked. The help 
+The following webpage displays some help information when the"?" is clicked. The help 
+information is hidden when"?" is clicked a second time. 
+information is hidden when"?" is clicked a second time. 
+Make the following modifications so the rendered webpage acts like the expected 
+Make the following modifications so the rendered webpage acts like the expected 
+webpage: 
+webpage: 
+1. Modify the animate () call to make the width of"?" increase by 15px and font-size 
+1. Modify the animate () call to make the width of"?" increase by 15px and font-size 
+increase by 1 Opx when the "?" is first clicked. Make the width decrease by 15px and 
+increase by 1 Opx when the "?" is first clicked. Make the width decrease by 15px and 
+font-size decrease by 1 Opx when "?" is clicked again. 
+font-size decrease by 1 Opx when "?" is clicked again. 
+2. Use the method to change the background of the "?" to orange after the "?" 
+2. Use the method to change the background of the "?" to orange after the "?" 
+has finished moving to the right. Change the background back to light blue after the 
+has finished moving to the right. Change the background back to light blue after the 
+"?" has finished moving back to the left. 
+"?" has finished moving back to the left. 
+3. Use the method to fade in the help text after the"?" has finished moving to 
+3. Use the method to fade in the help text after the"?" has finished moving to 
+the right. Fade out the help text when the "?" has been clicked a second time but 
+the right. Fade out the help text when the "?" has been clicked a second time but 
+before the "?" moves back to the left. 
+before the "?" moves back to the left. 
+0 
+0 
+0 
+0 
+□ 
+□ 
+// Change all images to <img src="star.png">
+// Change all images to <img src="star.png">
+);
+);
+// Change all images to <img src="star.png" alt="Bright 
+// Change all images to <img src="star.png" alt="Bright 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+34 of 66 2024-11-17, 12:17 p.m.
+34 of 66 2024-11-17, 12:17 p.m.
+Exploring further: 
+Exploring further: 
+• jQuerY- Effects documentation 
+• jQuerY- Effects documentation 
+• Queue and Degueue Explained 
+• Queue and Degueue Explained 

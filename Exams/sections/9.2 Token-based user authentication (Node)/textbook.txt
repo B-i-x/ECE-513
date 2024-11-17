@@ -1,0 +1,1412 @@
+Overview 
+Overview 
+User authentication is the process of verifying that a user is who the user claims to be. Many websites 
+User authentication is the process of verifying that a user is who the user claims to be. Many websites 
+authenticate users based on a user provided username and password. Some websites supplement 
+authenticate users based on a user provided username and password. Some websites supplement 
+passwords with security questions, security images, and other techniques. Using usernames and 
+passwords with security questions, security images, and other techniques. Using usernames and 
+passwords to authenticate users is certainly not foolproof, but the technique is currently the most 
+passwords to authenticate users is certainly not foolproof, but the technique is currently the most 
+common form of user authentication. 
+common form of user authentication. 
+To implement user authentication, most websites use token-based authentication. Token-based 
+To implement user authentication, most websites use token-based authentication. Token-based 
+authentication is a technique where the client uses a signed token to "prove" to a server that the client 
+authentication is a technique where the client uses a signed token to "prove" to a server that the client 
+has successfully authenticated. A signed token is a string of characters produced with a secret key 
+has successfully authenticated. A signed token is a string of characters produced with a secret key 
+that uniquely identifies the entity that created the token. 
+that uniquely identifies the entity that created the token. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.2.1 : Token-based authentication process. D 
+ACTIVITY 9.2.1 : Token-based authentication process. D 
+Web browser Web server 
+Web browser Web server 
+l
+l
+s1Cr I http://google.com/ POST bsmith/password .. .,, User is valid 
+s1Cr I http://google.com/ POST bsmith/password .. .,, User is valid 
+1 .... token 
+1 .... token 
+ml ~ 
+ml ~ 
+GET api/calendar .. 
+GET api/calendar .. 
+.,, Q token is valid 
+.,, Q token is valid 
+I ~ 
+I ~ 
+calendar data 
+calendar data 
+Animation content: 
+Animation content: 
+A web browser is shown with a username and password field. When the user types in the username 
+A web browser is shown with a username and password field. When the user types in the username 
+bsmith and password, a POST request with bsmith/password is sent to the web server for 
+bsmith and password, a POST request with bsmith/password is sent to the web server for 
+authentication. Once validated, the web server sends back a token. The web app request bsmith's 
+authentication. Once validated, the web server sends back a token. The web app request bsmith's 
+calendar with GET api/calendar and the token is sent back the the web server for validation. Once 
+calendar with GET api/calendar and the token is sent back the the web server for validation. Once 
+the token is found valid, bsmith's calendar information is sent back to the web browser and 
+the token is found valid, bsmith's calendar information is sent back to the web browser and 
+displayed on the screen. 
+displayed on the screen. 
+Animation captions: 
+Animation captions: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 7/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+1. User authenticates by entering a username and password, which are sent to the web server. 
+1. User authenticates by entering a username and password, which are sent to the web server. 
+2. Web server verifies the username and password are valid and generates a token. 
+2. Web server verifies the username and password are valid and generates a token. 
+3. The token is returned to the web browser and stored for future requests. 
+3. The token is returned to the web browser and stored for future requests. 
+4. Web app requests bsmith's calendar, so the token is sent in the web API request. 
+4. Web app requests bsmith's calendar, so the token is sent in the web API request. 
+5. Web server validates bsmith's token and returns back bsmith's calendar data. 
+5. Web server validates bsmith's token and returns back bsmith's calendar data. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.2.2: Steps in token-based authentication. 
+ACTIVITY 9.2.2: Steps in token-based authentication. 
+Match each request or response with the action the request or response generates. 
+Match each request or response with the action the request or response generates. 
+If unable to drag and drop, refresh the page. 
+If unable to drag and drop, refresh the page. 
+Client sends username and password for authentication. 
+Client sends username and password for authentication. 
+Server responds with data when given a valid token. Server generates a token. 
+Server responds with data when given a valid token. Server generates a token. 
+Client sends the token with an API request. 
+Client sends the token with an API request. 
+JSON Web Tokens (JWT) 
+JSON Web Tokens (JWT) 
+Server verifies the username and 
+Server verifies the username and 
+password. 
+password. 
+Client stores the token for future 
+Client stores the token for future 
+requests. 
+requests. 
+Server validates the token. 
+Server validates the token. 
+Client receives API response. 
+Client receives API response. 
+D 
+D 
+JSON Web Tokens are a popular way of implementing tokens in token-based authentication. A JSON 
+JSON Web Tokens are a popular way of implementing tokens in token-based authentication. A JSON 
+Web Token (JWT), pronounced "jot", is a string produced by the server that encodes JSON data. The 
+Web Token (JWT), pronounced "jot", is a string produced by the server that encodes JSON data. The 
+string is signed with a secret key known only by the server to ensure the data in a JWT is unaltered by 
+string is signed with a secret key known only by the server to ensure the data in a JWT is unaltered by 
+the client. JWTs are composed of three parts separated by periods: Header. Payload. Signature. 
+the client. JWTs are composed of three parts separated by periods: Header. Payload. Signature. 
+JSON data is base64 encoded in a JWT. Base64 encoding is a technique that converts data into 64 
+JSON data is base64 encoded in a JWT. Base64 encoding is a technique that converts data into 64 
+printable characters. 
+printable characters. 
+I 
+I 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 8/37 
+11/17/24, 12:11 PM I PARTICIPATION I 
+11/17/24, 12:11 PM I PARTICIPATION I 
+ACTIVITY 9.2.3: Creating a JWT. 
+ACTIVITY 9.2.3: Creating a JWT. 
+Header: { " typ" : "JWT" , "alg" : "HS256" } 
+Header: { " typ" : "JWT" , "alg" : "HS256" } 
+Payload: { "username" : "bob" } 
+Payload: { "username" : "bob" } 
+Secret Key: supersecret 
+Secret Key: supersecret 
+I Encode) 
+I Encode) 
+B 
+B 
+zyBooks 
+zyBooks 
+8 Header: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9 . 
+8 Header: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9 . 
+JWT Payload: eyJlc2VybmFtZSI6ImJvYiJ9 . 
+JWT Payload: eyJlc2VybmFtZSI6ImJvYiJ9 . 
+Signature: Mrn0fNOZMBFOrFu99NlnHdz3jkp5IE_BQCNOz4shlepQ 
+Signature: Mrn0fNOZMBFOrFu99NlnHdz3jkp5IE_BQCNOz4shlepQ 
+Animation content: 
+Animation content: 
+A header, payload, and secret key contain the following before being encoded: 
+A header, payload, and secret key contain the following before being encoded: 
+Header: {"typ":"JWT","alg":"HS256"} 
+Header: {"typ":"JWT","alg":"HS256"} 
+Payload: {"username":"bob"} 
+Payload: {"username":"bob"} 
+Secret Key: supersecret 
+Secret Key: supersecret 
+The header and payload are encoded with Base64 and stored in the token as the following: 
+The header and payload are encoded with Base64 and stored in the token as the following: 
+Header: eyJ0eXAiOiJKVl QiLCJhbGciOiJIUzll NiJ9. 
+Header: eyJ0eXAiOiJKVl QiLCJhbGciOiJIUzll NiJ9. 
+Payload: eyJl c2VybmFtZSl6ImJvYiJ9 
+Payload: eyJl c2VybmFtZSl6ImJvYiJ9 
+A signature is stored in the token and reads: 
+A signature is stored in the token and reads: 
+Signature: Mm0fNOZMBFOrFu99NlnHdz3jkp5IE_BQCNOz4sh1 epQ 
+Signature: Mm0fNOZMBFOrFu99NlnHdz3jkp5IE_BQCNOz4sh1 epQ 
+Animation captions: 
+Animation captions: 
+u 
+u 
+1. The Header contains the type of token (JWT) and the algorithm used to sign the token (HMAC 
+1. The Header contains the type of token (JWT) and the algorithm used to sign the token (HMAC 
+SHA256). 
+SHA256). 
+2. The Header is Base64 encoded. 
+2. The Header is Base64 encoded. 
+3. The Payload containing the information to transmit is Base64 encoded. 
+3. The Payload containing the information to transmit is Base64 encoded. 
+4. The Signature is created using the HMAC SHA256 algorithm on the base64-encoded Header+ 
+4. The Signature is created using the HMAC SHA256 algorithm on the base64-encoded Header+ 
+base64-encoded Payload + Secret Key. 
+base64-encoded Payload + Secret Key. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 9/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+When the client sends a JWT back to the server, the server validates the JWT by generating a new 
+When the client sends a JWT back to the server, the server validates the JWT by generating a new 
+signature based on the JWT's base64 encoded header and payload and the server's secret key. If the 
+signature based on the JWT's base64 encoded header and payload and the server's secret key. If the 
+payload was not modified, the new signature should be identical to the JWT's signature. 
+payload was not modified, the new signature should be identical to the JWT's signature. 
+I PARTICIPATION 9.2.4: JSON Web Tokens. ACTIVITY 
+I PARTICIPATION 9.2.4: JSON Web Tokens. ACTIVITY 
+1) JWTs almost always have the same 
+1) JWTs almost always have the same 
+header. 
+header. 
+0 True 
+0 True 
+O False 
+O False 
+2) JWTs almost always have the same 
+2) JWTs almost always have the same 
+payload. 
+payload. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) A JWT's payload can only include the 
+3) A JWT's payload can only include the 
+user's username. 
+user's username. 
+0 True 
+0 True 
+O False 
+O False 
+4) If the client changes one character of 
+4) If the client changes one character of 
+the JWT, the JWT will fail validation on 
+the JWT, the JWT will fail validation on 
+the server. 
+the server. 
+0 True 
+0 True 
+O False 
+O False 
+5) If a client knows the server's secret key, 
+5) If a client knows the server's secret key, 
+the client can create JWTs with any 
+the client can create JWTs with any 
+payload that the server will accept as 
+payload that the server will accept as 
+valid JWTs. 
+valid JWTs. 
+O True 
+O True 
+O False 
+O False 
+jwt-simple module 
+jwt-simple module 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+The jwt-simple module is used to encode and decode JWTs in Node.js web applications. The jwtsimple module is installed using: npm install j wt-simple. jwt-simple provides an jwt.encode() 
+The jwt-simple module is used to encode and decode JWTs in Node.js web applications. The jwtsimple module is installed using: npm install j wt-simple. jwt-simple provides an jwt.encode() 
+method to create a JWT and ajwt.decode() method to decode a JWT. 
+method to create a JWT and ajwt.decode() method to decode a JWT. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 10/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Figure 9.2.1: Encoding and decoding a JWT with the jwt-simple module. 
+Figure 9.2.1: Encoding and decoding a JWT with the jwt-simple module. 
+canst jwt = require ("jwt-simple" ); 
+canst jwt = require ("jwt-simple" ); 
+canst secret = "supersecret" ; 
+canst secret = "supersecret" ; 
+canst payload = { username : "bsmith" }; 
+canst payload = { username : "bsmith" }; 
+II Create a JWT 
+II Create a JWT 
+canst token = jwt . encode (payload, secret); 
+canst token = jwt . encode (payload, secret); 
+console . log ("Token: " + token ); 
+console . log ("Token: " + token ); 
+II Decode a JWT 
+II Decode a JWT 
+canst decoded = jwt . decode (token , secret); 
+canst decoded = jwt . decode (token , secret); 
+console . log ("Decoded payload: " + decoded . username ); 
+console . log ("Decoded payload: " + decoded . username ); 
+Token: 
+Token: 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlc2VybmFtZSI6ImJvYiJ9.Mm0fNOZMBFOrFu99NlnHdz3jkp5IE_BQ 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlc2VybmFtZSI6ImJvYiJ9.Mm0fNOZMBFOrFu99NlnHdz3jkp5IE_BQ 
+Decoded payload: bsmith 
+Decoded payload: bsmith 
+◄ --------------------------------
+◄ --------------------------------
+The figure below uses jwt-simple in the context of an Express server with two routes: 
+The figure below uses jwt-simple in the context of an Express server with two routes: 
+1. / api/ auth-Accepts a username and password in a POST request. After verifying the 
+1. / api/ auth-Accepts a username and password in a POST request. After verifying the 
+username is "bsmith" and password is "pass", the route sends back a JWT carrying a payload 
+username is "bsmith" and password is "pass", the route sends back a JWT carrying a payload 
+containing bsmith's username. 
+containing bsmith's username. 
+2. I api/ status -Accepts a GET request and expects the X-Auth header to contain the JWT 
+2. I api/ status -Accepts a GET request and expects the X-Auth header to contain the JWT 
+obtained from the/ api/ auth route. After validating the JWT, the route sends back bsmith's 
+obtained from the/ api/ auth route. After validating the JWT, the route sends back bsmith's 
+status. 
+status. 
+Developers can use a tool like Postman to test the Express server with the example HTTP requests 
+Developers can use a tool like Postman to test the Express server with the example HTTP requests 
+shown at the bottom of the figure below. 
+shown at the bottom of the figure below. 
+Figure 9.2.2: Using jwt-simple in an Express server. 
+Figure 9.2.2: Using jwt-simple in an Express server. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+► 
+► 
+11/37 
+11/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+canst express = require ( "express" ); 
+canst express = require ( "express" ); 
+canst bodyParser = require ("body-parser" ); 
+canst bodyParser = require ("body-parser" ); 
+canst jwt require ( "jwt-simple" ); 
+canst jwt require ( "jwt-simple" ); 
+canst app = express (); 
+canst app = express (); 
+canst router = express . Router (); 
+canst router = express . Router (); 
+II Parse application/x-www-form-urlencoded 
+II Parse application/x-www-form-urlencoded 
+router . use (bodyParser . urlencoded ( 
+router . use (bodyParser . urlencoded ( 
+{ extended : false })); 
+{ extended : false })); 
+II Secret used to encode/decode JWTs 
+II Secret used to encode/decode JWTs 
+canst secret = "supersecret" ; 
+canst secret = "supersecret" ; 
+router . post ("/auth" , function (req, res) 
+router . post ("/auth" , function (req, res) 
+} ) ; 
+} ) ; 
+II Verify bsmith/pass was POSTed 
+II Verify bsmith/pass was POSTed 
+if (req . body . username === "bsmith" && reg . body . password === "pass" ) 
+if (req . body . username === "bsmith" && reg . body . password === "pass" ) 
+II Send back a token that contains the user's username 
+II Send back a token that contains the user's username 
+canst token = jwt . encode ({ username : "bsmith" }, secret); 
+canst token = jwt . encode ({ username : "bsmith" }, secret); 
+res . json ({ token : token }); 
+res . json ({ token : token }); 
+else { 
+else { 
+II Unauthorized access 
+II Unauthorized access 
+res . status (401) . json ({ error: "Bad username/password" }); 
+res . status (401) . json ({ error: "Bad username/password" }); 
+router . get ("/status" , function (req, res) 
+router . get ("/status" , function (req, res) 
+} ) ; 
+} ) ; 
+II Check if the X-Auth header is set 
+II Check if the X-Auth header is set 
+if (! req . headers [ "x-auth" ]) 
+if (! req . headers [ "x-auth" ]) 
+return res . status (401) . json ({ error: "Missing X-Auth header" }); 
+return res . status (401) . json ({ error: "Missing X-Auth header" }); 
+II X-Auth should contain the token value 
+II X-Auth should contain the token value 
+canst token = req . headers [ "x-auth" ]; 
+canst token = req . headers [ "x-auth" ]; 
+try { 
+try { 
+canst decoded = jwt . decode (token , secret); 
+canst decoded = jwt . decode (token , secret); 
+II Send back a status 
+II Send back a status 
+if (decoded . username === "bsmith" ) 
+if (decoded . username === "bsmith" ) 
+res . json ({ status: "Enjoying a beautiful day!" }); 
+res . json ({ status: "Enjoying a beautiful day!" }); 
+else { 
+else { 
+res . json ({ status: "Working hard!" }); 
+res . json ({ status: "Working hard!" }); 
+catch (ex ) 
+catch (ex ) 
+res . status (401) . json ({ error: "Invalid JWT" }) ; 
+res . status (401) . json ({ error: "Invalid JWT" }) ; 
+app . use ("/api" , router); 
+app . use ("/api" , router); 
+app . listen (3000); 
+app . listen (3000); 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 12/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+HTTP request HTTP response 
+HTTP request HTTP response 
+POST /api/auth HTTP/1.1 HTTP/1.1 200 OK 
+POST /api/auth HTTP/1.1 HTTP/1.1 200 OK 
+Host : localhost:3000 
+Host : localhost:3000 
+User-Agent: Mozilla/5.0 
+User-Agent: Mozilla/5.0 
+Chrome/48.0.2564 
+Chrome/48.0.2564 
+Content-Type: application/xwww-form-urlencoded 
+Content-Type: application/xwww-form-urlencoded 
+Content-Type: application/json; charset=utf-8 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 121 
+Content-Length: 121 
+Date: Tue, 03 May 2016 15:22:17 GMT 
+Date: Tue, 03 May 2016 15:22:17 GMT 
+ETag: W/"79-d6Dq2n+D6aIQoSfkTMks8w" 
+ETag: W/"79-d6Dq2n+D6aIQoSfkTMks8w" 
+X-Powered-By: Express 
+X-Powered-By: Express 
+username=bsmith&password=pass {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9. E 
+username=bsmith&password=pass {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9. E 
+yuHqmPCsMMWPZvVflRwxkJV3o1Gk0xsUfaCI7wmleC0"} 
+yuHqmPCsMMWPZvVflRwxkJV3o1Gk0xsUfaCI7wmleC0"} 
+GET /api/status HTTP/1.1 
+GET /api/status HTTP/1.1 
+Host: localhost:3000 
+Host: localhost:3000 
+HTTP request 
+HTTP request 
+User-Agent: Mozilla/5.0 Chrome/48.0.2564 
+User-Agent: Mozilla/5.0 Chrome/48.0.2564 
+Content-Type: application/x-www-form-urlencoded 
+Content-Type: application/x-www-form-urlencoded 
+X-Auth: 
+X-Auth: 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlc2VybmFtZSI6ImJzbW10aCJ9. 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlc2VybmFtZSI6ImJzbW10aCJ9. 
+yuHqmPCsMMWPZvVflRwxkJV3o1Gk0xsUfaCI7wmleC0 
+yuHqmPCsMMWPZvVflRwxkJV3o1Gk0xsUfaCI7wmleC0 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.2.5: JWTs in an Express server. 
+ACTIVITY 9.2.5: JWTs in an Express server. 
+Refer to the code in the figure above. 
+Refer to the code in the figure above. 
+1) What status code is returned when a 
+1) What status code is returned when a 
+POST to/ api/ auth contains the 
+POST to/ api/ auth contains the 
+username "bmsith" and the password 
+username "bmsith" and the password 
+"opensesame"? 
+"opensesame"? 
+0 200 
+0 200 
+0 401 
+0 401 
+0 404 
+0 404 
+2) What status code is returned when a 
+2) What status code is returned when a 
+GET to /api/status does not 
+GET to /api/status does not 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+HT 
+HT 
+HTTP/1.1 21 
+HTTP/1.1 21 
+Content-Ty] 
+Content-Ty] 
+applicatio1 
+applicatio1 
+charset=ut: 
+charset=ut: 
+Content-Lei 
+Content-Lei 
+Date: Tue, 
+Date: Tue, 
+15: 24: 33 GI 
+15: 24: 33 GI 
+ETag: 
+ETag: 
+W/"26-/MFB• 
+W/"26-/MFB• 
+X-Powered-1 
+X-Powered-1 
+{"status":' 
+{"status":' 
+beautiful < 
+beautiful < 
+D 
+D 
+0 
+0 
+0 
+0 
+13/37 
+13/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+contain an X-Auth header? 
+contain an X-Auth header? 
+0 200 
+0 200 
+0 401 
+0 401 
+0 404 
+0 404 
+3) Can the Express server above return a 
+3) Can the Express server above return a 
+token that would later cause the 
+token that would later cause the 
+"Working hard!" status to be returned by 
+"Working hard!" status to be returned by 
+/api/status? 
+/api/status? 
+0 Yes 
+0 Yes 
+Q No 
+Q No 
+Storing the secret key. 
+Storing the secret key. 
+zyBooks 
+zyBooks 
+The examples in this section show the secret key used to sign the JWT in the source 
+The examples in this section show the secret key used to sign the JWT in the source 
+code. Good practice is to store the secret key in a configuration file and use a long 
+code. Good practice is to store the secret key in a configuration file and use a long 
+randomized string for the secret key Ex: qs3h6z0JUN9wgTy1j2Cl54g86yzG is a good 
+randomized string for the secret key Ex: qs3h6z0JUN9wgTy1j2Cl54g86yzG is a good 
+secret key 
+secret key 
+◄ 
+◄ 
+Using a database 
+Using a database 
+0 
+0 
+► 
+► 
+Authentication services generally store and retrieve data from a database. The figure below shows a 
+Authentication services generally store and retrieve data from a database. The figure below shows a 
+Node.js project that stores data in a MongoDB database using a Mongoose model called User. The 
+Node.js project that stores data in a MongoDB database using a Mongoose model called User. The 
+user model stores a username, password, and status for a user. The Express server has three routes: 
+user model stores a username, password, and status for a user. The Express server has three routes: 
+1. / api/user -Accepts a username, password, and status in a POST request. The route adds a 
+1. / api/user -Accepts a username, password, and status in a POST request. The route adds a 
+new user to the database. 
+new user to the database. 
+2. I api/ auth-Accepts a username and password in a POST request. The route verifies the 
+2. I api/ auth-Accepts a username and password in a POST request. The route verifies the 
+POSTed username/password matches a username/password from the database and returns a 
+POSTed username/password matches a username/password from the database and returns a 
+JWT with the username in the payload. 
+JWT with the username in the payload. 
+3. I api/ status -Accepts a GET request and expects the X-Auth header to contain a valid JWT. 
+3. I api/ status -Accepts a GET request and expects the X-Auth header to contain a valid JWT. 
+The route validates the JWT and sends back the username and status of all users in the 
+The route validates the JWT and sends back the username and status of all users in the 
+database. 
+database. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 14/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Figure 9.2.3: Node.js project uses token-based authentication with user data 
+Figure 9.2.3: Node.js project uses token-based authentication with user data 
+in a MongoDB database. 
+in a MongoDB database. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 15/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+myproject 
+myproject 
+----
+----
+t= 
+t= 
+api 
+api 
+L_ users. j s 
+L_ users. j s 
+models 
+models 
+L_ user.js 
+L_ user.js 
+node modules 
+node modules 
+~ express 
+~ express 
+~ mongoose 
+~ mongoose 
+~ jwt-simple 
+~ jwt-simple 
+L_ etc . .. 
+L_ etc . .. 
+db.js 
+db.js 
+package.json 
+package.json 
+server.js 
+server.js 
+II modelsluser.js 
+II modelsluser.js 
+const db = require ( " .. /db" ); 
+const db = require ( " .. /db" ); 
+II Create a model from the schema 
+II Create a model from the schema 
+const User = db . model ( "User" , { 
+const User = db . model ( "User" , { 
+username : { type : String, required : true 
+username : { type : String, required : true 
+} , password : type : String, required : true 
+} , password : type : String, required : true 
+} , status: String 
+} , status: String 
+} ) ; 
+} ) ; 
+module . exports User; 
+module . exports User; 
+II db.js 
+II db.js 
+const mongoose = require ("mongoose" ); 
+const mongoose = require ("mongoose" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+module . exports = mongoose ; 
+module . exports = mongoose ; 
+II server.js 
+II server.js 
+const express = require ("express" ); 
+const express = require ("express" ); 
+const bodyParser = require ("body-parser" ); 
+const bodyParser = require ("body-parser" ); 
+const User = require ("./models/user" ); 
+const User = require ("./models/user" ); 
+const app = express (); 
+const app = express (); 
+const router = express .Router (); 
+const router = express .Router (); 
+router . use (bodyParser . urlencoded ( 
+router . use (bodyParser . urlencoded ( 
+{ extended : false })); 
+{ extended : false })); 
+router . use ("/api" , require ("./api/users" )); 
+router . use ("/api" , require ("./api/users" )); 
+app . use (router); 
+app . use (router); 
+app . listen (3000); 
+app . listen (3000); 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+I 
+I 
+16/37 
+16/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+zyBooks 
+II api/users.js 
+II api/users.js 
+canst jwt = reguire ("jwtsimple" ); 
+canst jwt = reguire ("jwtsimple" ); 
+canst User = 
+canst User = 
+reguire ( " .. /models/user" ); 
+reguire ( " .. /models/user" ); 
+canst router = 
+canst router = 
+reguire ("express" ) . Router (); 
+reguire ("express" ) . Router (); 
+II For encoding/decoding JWT 
+II For encoding/decoding JWT 
+canst secre t = 
+canst secre t = 
+"supersecret" ; 
+"supersecret" ; 
+II Add a new user to the 
+II Add a new user to the 
+database 
+database 
+router . post ( "/user" , 
+router . post ( "/user" , 
+function (reg, res) { 
+function (reg, res) { 
+if (! reg . body . username I I 
+if (! reg . body . username I I 
+!reg . body . password) { 
+!reg . body . password) { 
+res . status (400) . json ({ 
+res . status (400) . json ({ 
+error : "Missing username 
+error : "Missing username 
+and/or password" }); 
+and/or password" }); 
+return ; 
+return ; 
+canst newUser new 
+canst newUser new 
+User ( { 
+User ( { 
+username : 
+username : 
+reg . body . username , 
+reg . body . username , 
+password : 
+password : 
+reg . body . password, 
+reg . body . password, 
+status: 
+status: 
+reg . body . status 
+reg . body . status 
+} ) ; 
+} ) ; 
+newUser . save (function (err) 
+newUser . save (function (err) 
+if (err) { 
+if (err) { 
+res .status (400) . send (err); 
+res .status (400) . send (err); 
+} 
+} 
+else { 
+else { 
+res . sendStatus (201); // 
+res . sendStatus (201); // 
+Created 
+Created 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+} 
+} 
+II Sends a token when given 
+II Sends a token when given 
+valid username/password 
+valid username/password 
+router . post ("/auth" , 
+router . post ("/auth" , 
+function (reg, res) { 
+function (reg, res) { 
+if (! reg . body . username I I 
+if (! reg . body . username I I 
+! reg . body . password) { 
+! reg . body . password) { 
+res . status (401) . json ({ 
+res . status (401) . json ({ 
+error: "Missing username 
+error: "Missing username 
+and/or password" }); 
+and/or password" }); 
+17/37 
+17/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+zyBooks 
+return ; 
+return ; 
+II Get user from the 
+II Get user from the 
+database 
+database 
+User . findOne ({ username : 
+User . findOne ({ username : 
+req . body . username }, 
+req . body . username }, 
+function (err, user) { 
+function (err, user) { 
+if (err) { 
+if (err) { 
+res . status (400) . send (err); 
+res . status (400) . send (err); 
+} 
+} 
+else if (! user) 
+else if (! user) 
+II Username not in 
+II Username not in 
+the database 
+the database 
+res . status (401) . json ({ 
+res . status (401) . json ({ 
+error : "Bad username" }); 
+error : "Bad username" }); 
+else { 
+else { 
+II Check if 
+II Check if 
+password from database 
+password from database 
+matches given password 
+matches given password 
+if (user . password 
+if (user . password 
+!= req . body . password) { 
+!= req . body . password) { 
+res . status (401) . json ({ 
+res . status (401) . json ({ 
+error : "Bad password" }); 
+error : "Bad password" }); 
+} 
+} 
+else { 
+else { 
+II Send back a 
+II Send back a 
+token that contains the 
+token that contains the 
+user's username 
+user's username 
+const token 
+const token 
+jwt . encode ({ username : 
+jwt . encode ({ username : 
+user . username }, secret); 
+user . username }, secret); 
+res . j son ( { 
+res . j son ( { 
+token : token }) ; 
+token : token }) ; 
+} 
+} 
+} 
+} 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+II Gets the status of all 
+II Gets the status of all 
+users when given a valid 
+users when given a valid 
+token 
+token 
+router . get ("/status" , 
+router . get ("/status" , 
+function ( req , res) { 
+function ( req , res) { 
+II See if the X-Auth 
+II See if the X-Auth 
+header is set 
+header is set 
+if (! req . headers [ "xauth" ]) { 
+if (! req . headers [ "xauth" ]) { 
+return 
+return 
+res .status (401) . json ({ error : 
+res .status (401) . json ({ error : 
+"Missing X-Auth header" }); 
+"Missing X-Auth header" }); 
+} 
+} 
+II X-Auth should contain 4- i.,._ 4- ...... 1.,. ,__ ..... 
+II X-Auth should contain 4- i.,._ 4- ...... 1.,. ,__ ..... 
+18/37 
+18/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+I 
+I 
+zyBooks 
+zyBooks 
+I 1.-llt:: l-Vl'Ct::11 
+I 1.-llt:: l-Vl'Ct::11 
+canst token 
+canst token 
+req . headers [ "x-auth" ); 
+req . headers [ "x-auth" ); 
+try { 
+try { 
+canst decoded I PARTICIPATION 
+canst decoded I PARTICIPATION 
+ACTIVITY 9.2.6: Token-based authentication with a MongoDB database. 
+ACTIVITY 9.2.6: Token-based authentication with a MongoDB database. 
+efer to the code in the figure above. 
+efer to the code in the figure above. 
+) What does the HTTP request below do? 
+) What does the HTTP request below do? 
+POST /api/user HTTP/1.1 
+POST /api/user HTTP/1.1 
+Host: localhost : 3000 
+Host: localhost : 3000 
+Content-Type: application/x-www-form-urlencoded 
+Content-Type: application/x-www-form-urlencoded 
+username and status fields 
+username and status fields 
+Us e r . find ({}, 
+Us e r . find ({}, 
+"username status " , 
+"username status " , 
+function (e r r , use r s ) 
+function (e r r , use r s ) 
+res . json (users); 
+res . json (users); 
+} ) ; 
+} ) ; 
+:ch (ex ) 
+:ch (ex ) 
+res . status (401) . json ({ 
+res . status (401) . json ({ 
+"Invalid JWT" }); 
+"Invalid JWT" }); 
+username=jwhite&password=qwerty&status=Working+hard! 
+username=jwhite&password=qwerty&status=Working+hard! 
+O Authenticates user jwhite 
+O Authenticates user jwhite 
+0 Gets all user statuses 
+0 Gets all user statuses 
+0 Creates a new user 
+0 Creates a new user 
+2) If user "jwhite" with password "qwerty" is in 
+2) If user "jwhite" with password "qwerty" is in 
+the database, what response does the 
+the database, what response does the 
+Express server return to the request below? 
+Express server return to the request below? 
+POST /api/auth HTTP/1.1 
+POST /api/auth HTTP/1.1 
+Host: localhost:3000 
+Host: localhost:3000 
+Content-Type: application/x-wwwform-urlencoded 
+Content-Type: application/x-wwwform-urlencoded 
+username=jwhite&password=opensesame 
+username=jwhite&password=opensesame 
+0 200 status code with a JWT 
+0 200 status code with a JWT 
+401 status code with an error 0 message 
+401 status code with an error 0 message 
+0 201 status code 
+0 201 status code 
+3) What response does the Express 
+3) What response does the Express 
+server return to the request below? 
+server return to the request below? 
+GET / api / status HTTP / 1.1 
+GET / api / status HTTP / 1.1 
+Host: localhost:3000 
+Host: localhost:3000 
+X-Auth: jwhi te 
+X-Auth: jwhi te 
+O 200 status code with all user 
+O 200 status code with all user 
+statuses 
+statuses 
+401 status code with an error 0 message 
+401 status code with an error 0 message 
+0 201 status code 
+0 201 status code 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+} ) ; 
+} ) ; 
+module . exports router; 
+module . exports router; 
+I 
+I 
+~ D 
+~ D 
+0 
+0 
+0 
+0 
+19/37 
+19/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Saving passwords in the database 
+Saving passwords in the database 
+◄ 
+◄ 
+The examples above show passwords stored as plain text in a database. Passwords 
+The examples above show passwords stored as plain text in a database. Passwords 
+should NEVER be stored as plain text in a database. Instead, password hashes 
+should NEVER be stored as plain text in a database. Instead, password hashes 
+(discussed elsewhere) should be stored in the database. 
+(discussed elsewhere) should be stored in the database. 
+Storing JWT in localStorage 
+Storing JWT in localStorage 
+► 
+► 
+The web application running in the web browser must interact with the server's API to authenticate the 
+The web application running in the web browser must interact with the server's API to authenticate the 
+user, save the JWT, and transmit the JWT in subsequent API requests. The window. local Storage 
+user, save the JWT, and transmit the JWT in subsequent API requests. The window. local Storage 
+object allows web applications to store data in the web browser and is ideal for storing a JWT. The 
+object allows web applications to store data in the web browser and is ideal for storing a JWT. The 
+example below uses the Fetch API to obtain and transmit a JWT. 
+example below uses the Fetch API to obtain and transmit a JWT. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.2.7: Authenticating with Fetch and storing the JWT in localStorage. D 
+ACTIVITY 9.2.7: Authenticating with Fetch and storing the JWT in localStorage. D 
+async function login (username , password) { 
+async function login (username , password) { 
+const response = await fetch ("/api/auth" , 
+const response = await fetch ("/api/auth" , 
+method : "POST" , 
+method : "POST" , 
+} ) ; 
+} ) ; 
+body : new URLSearchParams ({ 
+body : new URLSearchParams ({ 
+username : username , 
+username : username , 
+password : password }) 
+password : password }) 
+if (response . ok ) 
+if (response . ok ) 
+const tokenResponse = await response . json (); 
+const tokenResponse = await response . json (); 
+localStorage .setitem ("token" , 
+localStorage .setitem ("token" , 
+tokenResponse . token ); 
+tokenResponse . token ); 
+async function displayStatus () { 
+async function displayStatus () { 
+const token = localStorage . getitem ( "token" ); 
+const token = localStorage . getitem ( "token" ); 
+const response = await fetch ("/api/status" , 
+const response = await fetch ("/api/status" , 
+headers : { "X-Auth" : token } 
+headers : { "X-Auth" : token } 
+} ) ; 
+} ) ; 
+if (response . ok ) 
+if (response . ok ) 
+const users = await response . json (); 
+const users = await response . json (); 
+let html = "" ; 
+let html = "" ; 
+for (let user of users) { 
+for (let user of users) { 
+html += "<li>" + user . username + fl - fl + 
+html += "<li>" + user . username + fl - fl + 
+user .status + "</li>" ; 
+user .status + "</li>" ; 
+const status = document . querySelector (flul" ); 
+const status = document . querySelector (flul" ); 
+status . innerHTML = html ; 
+status . innerHTML = html ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+web browser 
+web browser 
+local 
+local 
+Storage 
+Storage 
+http:l/localhost:3000/app 
+http:l/localhost:3000/app 
+Status: token:3a.s8.: 
+Status: token:3a.s8.: 
+I 
+I 
+• bsmith - Enjoying a 
+• bsmith - Enjoying a 
+beautiful day! 
+beautiful day! 
+• jwhite - Working hard! 
+• jwhite - Working hard! 
+• ablack - Doing homework 
+• ablack - Doing homework 
+I 
+I 
+GET /api/status 
+GET /api/status 
+X-Auth: 3a.s8.2p 
+X-Auth: 3a.s8.2p 
+{ usernames & 
+{ usernames & 
+statuses} 
+statuses} 
+Token 
+Token 
+validated! Express server 
+validated! Express server 
+Get statuses ! t { json } 
+Get statuses ! t { json } 
+{ "username":"bsmith", 
+{ "username":"bsmith", 
+"password":"pass", 
+"password":"pass", 
+... }, 
+... }, 
+{ "username":"jwhite", 
+{ "username":"jwhite", 
+"password":"qwerty", 
+"password":"qwerty", 
+... }, 
+... }, 
+{ "username: "ablack", 
+{ "username: "ablack", 
+"password":"abc123", 
+"password":"abc123", 
+... } 
+... } 
+20/37 
+20/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+} 
+} 
+Animation content: 
+Animation content: 
+A block of JavaScript is shown: 
+A block of JavaScript is shown: 
+async function login(username, password) { 
+async function login(username, password) { 
+canst response = await fetch("/api/auth", { 
+canst response = await fetch("/api/auth", { 
+method: "POST", 
+method: "POST", 
+body: new URLSearchParams({ 
+body: new URLSearchParams({ 
+username: username, 
+username: username, 
+password: password}) 
+password: password}) 
+}); 
+}); 
+if (response.ok) { 
+if (response.ok) { 
+} 
+} 
+} 
+} 
+canst tokenResponse = await response.jsonO; 
+canst tokenResponse = await response.jsonO; 
+localStorage.setltem("token", 
+localStorage.setltem("token", 
+token Response.token); 
+token Response.token); 
+async function displayStatus() { 
+async function displayStatus() { 
+canst token = localStorage.getltem("token"); 
+canst token = localStorage.getltem("token"); 
+canst response = await fetch("/api/status", { 
+canst response = await fetch("/api/status", { 
+headers: { "X-Auth": token } 
+headers: { "X-Auth": token } 
+}); 
+}); 
+if (response.ok) { 
+if (response.ok) { 
+} 
+} 
+} 
+} 
+canst users = await response.json(); 
+canst users = await response.json(); 
+let html = ""; 
+let html = ""; 
+for (let user of users) { 
+for (let user of users) { 
+html += "<Ii>" + user.username + " - " + 
+html += "<Ii>" + user.username + " - " + 
+user.status + "</Ii>"; 
+user.status + "</Ii>"; 
+} 
+} 
+canst status = document.querySelector("ul"); 
+canst status = document.querySelector("ul"); 
+status.innerHTML = html; 
+status.innerHTML = html; 
+zyBooks 
+zyBooks 
+MongoDB 
+MongoDB 
+A web browser is shown with a username and password field. The user types in the bsmith 
+A web browser is shown with a username and password field. The user types in the bsmith 
+username and password. The following POST request is sent the the Express server: 
+username and password. The following POST request is sent the the Express server: 
+POST /api/auth 
+POST /api/auth 
+username=bsmith 
+username=bsmith 
+password= pass 
+password= pass 
+The web server verifies the login information with a MongoDB database. The Express server sends a 
+The web server verifies the login information with a MongoDB database. The Express server sends a 
+JWT token back to the web browser with the following information: 
+JWT token back to the web browser with the following information: 
+{ "token": 
+{ "token": 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 21/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+"3a.s8.2p"} 
+"3a.s8.2p"} 
+The web browser stores the token in local storage. To request status the web browser sends the 
+The web browser stores the token in local storage. To request status the web browser sends the 
+following GET request to the web server: 
+following GET request to the web server: 
+GET /api/status 
+GET /api/status 
+X-Auth: 3a.s8.2p 
+X-Auth: 3a.s8.2p 
+The web server validates the token and retrieves the data to be displayed on the web browser, which 
+The web server validates the token and retrieves the data to be displayed on the web browser, which 
+is the following information: 
+is the following information: 
+Status: 
+Status: 
+• bsmith - Enjoying a beautiful day! 
+• bsmith - Enjoying a beautiful day! 
+• jwhite - Working hard! 
+• jwhite - Working hard! 
+• ablack - Doing homework 
+• ablack - Doing homework 
+Animation captions: 
+Animation captions: 
+1. The user enters a username and password and clicks Login button. 
+1. The user enters a username and password and clicks Login button. 
+2. To authenticate the user, the browser calls login() with the username and password. The 
+2. To authenticate the user, the browser calls login() with the username and password. The 
+fetch() method sends a POST request with username and password to /api/auth. 
+fetch() method sends a POST request with username and password to /api/auth. 
+3. The server verifies bsmith/pass and returns a JWT to the web browser. 
+3. The server verifies bsmith/pass and returns a JWT to the web browser. 
+4. response.json() extracts the token from the JSON response. The setltem() method saves the 
+4. response.json() extracts the token from the JSON response. The setltem() method saves the 
+token to localStorage. 
+token to localStorage. 
+5. To display user statuses, displayStatus() retrieves the token from localStorage with getltem(). 
+5. To display user statuses, displayStatus() retrieves the token from localStorage with getltem(). 
+Then fetch() sends a GET request to /a pi/status with the token in the X-Auth header. 
+Then fetch() sends a GET request to /a pi/status with the token in the X-Auth header. 
+6. Token is validated by the server, so server sends JSON with all user statuses to the browser. 
+6. Token is validated by the server, so server sends JSON with all user statuses to the browser. 
+7. response.json() parses the user data. The usernames and statuses display in an unordered 
+7. response.json() parses the user data. The usernames and statuses display in an unordered 
+list. 
+list. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.2.8: Storing JWT in localStorage. 
+ACTIVITY 9.2.8: Storing JWT in localStorage. 
+Refer to the code in the animation above. 
+Refer to the code in the animation above. 
+1) local Storage does not store a JWT until 
+1) local Storage does not store a JWT until 
+after the user authenticates. 
+after the user authenticates. 
+O True 
+O True 
+O False 
+O False 
+2) The JWT is not stored in localStorage if 
+2) The JWT is not stored in localStorage if 
+the user provides the wrong username 
+the user provides the wrong username 
+or password when authenticating. 
+or password when authenticating. 
+O True 
+O True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+D 
+D 
+0 
+0 
+0 
+0 
+22/37 
+22/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+3) If the user provides the wrong 
+3) If the user provides the wrong 
+username or password when 
+username or password when 
+authenticating, displayStatus () 
+authenticating, displayStatus () 
+can still display the user statuses. 
+can still display the user statuses. 
+0 True 
+0 True 
+0 False 
+0 False 
+4) If the code below executes, 
+4) If the code below executes, 
+displayStatus () can no longer 
+displayStatus () can no longer 
+obtain the user statuses. 
+obtain the user statuses. 
+localStorage . removeitem ("token" ); 
+localStorage . removeitem ("token" ); 
+0 True 
+0 True 
+O False 
+O False 
+zyBooks 
+zyBooks 
+I PARTICIPATION 9.2.9: User authentication with Fetch. ACTIVITY 
+I PARTICIPATION 9.2.9: User authentication with Fetch. ACTIVITY 
+Press the Display Status button before typing a username/password to see an "X-Auth 
+Press the Display Status button before typing a username/password to see an "X-Auth 
+header missing" error message. The Display Status button calls the JavaScript function 
+header missing" error message. The Display Status button calls the JavaScript function 
+displayStatus () . If the user is not logged in, displayStatus () sends a GET request 
+displayStatus () . If the user is not logged in, displayStatus () sends a GET request 
+to https://wp.zybooks.com/status.php?op=auth with an empty token, which returns back an 
+to https://wp.zybooks.com/status.php?op=auth with an empty token, which returns back an 
+error message. 
+error message. 
+Enter the username "bsmith" and password "pass" and press the Login button. Then press 
+Enter the username "bsmith" and password "pass" and press the Login button. Then press 
+the Display Status button again. The status of three users will display. Only bsmith/pass is an 
+the Display Status button again. The status of three users will display. Only bsmith/pass is an 
+acceptable username/password. 
+acceptable username/password. 
+If the user enters a bad username or password, the webpage does not indicate so. Add the 
+If the user enters a bad username or password, the webpage does not indicate so. Add the 
+necessary code in login () to display an appropriate error message when the server 
+necessary code in login () to display an appropriate error message when the server 
+returns a 401 response. 
+returns a 401 response. 
+Note that JavaScript does not use localStorage due to browser restrictions. Also, the 
+Note that JavaScript does not use localStorage due to browser restrictions. Also, the 
+URLs in the Fetch calls differ from previous examples. 
+URLs in the Fetch calls differ from previous examples. 
+CSS I JavaScript I 
+CSS I JavaScript I 
+0 
+0 
+0 
+0 
+D 
+D 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/chapter/9/print 23/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+1 id="login" autocomplete="off" > 
+1 id="login" autocomplete="off" > 
+2 <p> 
+2 <p> 
+3 <label for="username" >Username: </label> 
+3 <label for="username" >Username: </label> 
+4 <input type="text" id="username" > 
+4 <input type="text" id="username" > 
+5 </p> 
+5 </p> 
+6 <p> 
+6 <p> 
+7 <label for="password" >Password: </label> 
+7 <label for="password" >Password: </label> 
+8 <input type="text" id="password" > 
+8 <input type="text" id="password" > 
+9 </p> 
+9 </p> 
+10 <button id="loginBtn" type="button" >Login</ button > 
+10 <button id="loginBtn" type="button" >Login</ button > 
+11 < id="errorMsg" ></p> 
+11 < id="errorMsg" ></p> 
+12 < for > 
+12 < for > 
+13 
+13 
+14 <button id="statusBtn" >Display Status</button> 
+14 <button id="statusBtn" >Display Status</button> 
+15 
+15 
+16 <ul> 
+16 <ul> 
+17 </ul> 1 
+17 </ul> 1 
+Render webpage 
+Render webpage 
+Your webpage 
+Your webpage 
+Usemame: 
+Usemame: 
+Password: 
+Password: 
+I Login I 
+I Login I 
+I Display Status I 
+I Display Status I 
+► View solution 
+► View solution 
+Reset code 
+Reset code 
+Third-party authentication 
+Third-party authentication 
+Many web applications and mobile apps allow users to login to the web/mobile app 
+Many web applications and mobile apps allow users to login to the web/mobile app 
+using the user's account on Google, Facebook, Microsoft, etc., using an authentication 
+using the user's account on Google, Facebook, Microsoft, etc., using an authentication 
+protocol called Open/D. Open ID allows a user to login to the application without creating 
+protocol called Open/D. Open ID allows a user to login to the application without creating 
+another username/password. The application does not have to manage the user's 
+another username/password. The application does not have to manage the user's 
+password or provide methods for the user to reset their password. 
+password or provide methods for the user to reset their password. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+.... 
+.... 
+24/37 
+24/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+OAuth is an authorization protocol that allows a web/mobile app to access services 
+OAuth is an authorization protocol that allows a web/mobile app to access services 
+from a service provider like Google, Facebook, Microsoft, etc., on behalf of the 
+from a service provider like Google, Facebook, Microsoft, etc., on behalf of the 
+authenticated user. Ex: Words with Friends is a popular mobile game that uses a user's 
+authenticated user. Ex: Words with Friends is a popular mobile game that uses a user's 
+Facebook friends to help the user find friends to play with. 
+Facebook friends to help the user find friends to play with. 
+Exploring further: 
+Exploring further: 
+• Authentication (TechTarget) 
+• Authentication (TechTarget) 
+◄ 
+◄ 
+• node-jwt-simP-le 
+• node-jwt-simP-le 
+• 0P-enID and OAuth 
+• 0P-enID and OAuth 

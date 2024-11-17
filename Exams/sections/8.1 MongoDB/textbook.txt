@@ -1,0 +1,1348 @@
+MongoDB document database 
+MongoDB document database 
+Node.js web applications may use relational or non-relational (NoSQL) databases to store web 
+Node.js web applications may use relational or non-relational (NoSQL) databases to store web 
+application data. MongoDB is the most popular NoSQL database used by Node.js developers. 
+application data. MongoDB is the most popular NoSQL database used by Node.js developers. 
+MongoDB stores data objects as documents inside a collection. 
+MongoDB stores data objects as documents inside a collection. 
+• A document is a single data object in a MongoDB database that is composed of field/value 
+• A document is a single data object in a MongoDB database that is composed of field/value 
+pairs, similar to JSON property/value pairs. 
+pairs, similar to JSON property/value pairs. 
+• A collection is a group of related documents in a MongoDB database. 
+• A collection is a group of related documents in a MongoDB database. 
+MongoDB stores documents internally as BSON documents. ABSON document (Binary JSON) is a 
+MongoDB stores documents internally as BSON documents. ABSON document (Binary JSON) is a 
+binary representation of JSON with additional type information. BSON types include string, integer, 
+binary representation of JSON with additional type information. BSON types include string, integer, 
+double, date, boolean, null, and others. ABSON document may not exceed 16 MB in size. 
+double, date, boolean, null, and others. ABSON document may not exceed 16 MB in size. 
+I PARTICIPATION 8.1 .1: Documents and collections. ACTIVITY 
+I PARTICIPATION 8.1 .1: Documents and collections. ACTIVITY 
+document 
+document 
+name: "Sue", 
+name: "Sue", 
+gpa: 3 .1, 
+gpa: 3 .1, 
+interests: ["biking", "reading") 
+interests: ["biking", "reading") 
+t t 
+t t 
+field 
+field 
+name: "Sue", 
+name: "Sue", 
+gpa: 3 .1, 
+gpa: 3 .1, 
+value 
+value 
+interests: ["biking", "reading"] , 
+interests: ["biking", "reading"] , 
+address: { 
+address: { 
+city: "Dallas", } nested 
+city: "Dallas", } nested 
+state: "TX" document 
+state: "TX" document 
+Animation content: 
+Animation content: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+collection 
+collection 
+name: "Sue", 
+name: "Sue", 
+gpa: 3 .1, 
+gpa: 3 .1, 
+D 
+D 
+interests: ["biking", "reading") 
+interests: ["biking", "reading") 
+name: "Larry", 
+name: "Larry", 
+gpa: 2. 5, 
+gpa: 2. 5, 
+interests: ["RPGs", "chess") 
+interests: ["RPGs", "chess") 
+name: "Anne", 
+name: "Anne", 
+gpa: 4. 0, 
+gpa: 4. 0, 
+interests: ["coding", "Pilates"] 
+interests: ["coding", "Pilates"] 
+1/100 
+1/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+A document shows a single student: 
+A document shows a single student: 
+{ 
+{ 
+name: "Sue", 
+name: "Sue", 
+gpa: 3.1, 
+gpa: 3.1, 
+interests: ["biking", "reading"] 
+interests: ["biking", "reading"] 
+} 
+} 
+zyBooks 
+zyBooks 
+On the last line, interests is the field and ["biking", "reading"] is the value. 
+On the last line, interests is the field and ["biking", "reading"] is the value. 
+Another document with a nested document is shown: 
+Another document with a nested document is shown: 
+{ 
+{ 
+name: "Sue", 
+name: "Sue", 
+gpa: 3.1, 
+gpa: 3.1, 
+interests: ["biking", "reading"], 
+interests: ["biking", "reading"], 
+address: { 
+address: { 
+city: "Dallas", 
+city: "Dallas", 
+state: 'TX" 
+state: 'TX" 
+} 
+} 
+} 
+} 
+The address block is the nested document. Next a collection of a group of student doucments is 
+The address block is the nested document. Next a collection of a group of student doucments is 
+shown: 
+shown: 
+{ 
+{ 
+name: "Sue", 
+name: "Sue", 
+gpa: 3.1 , 
+gpa: 3.1 , 
+interests: ["biking", "reading"] 
+interests: ["biking", "reading"] 
+} 
+} 
+{ 
+{ 
+} 
+} 
+{ 
+{ 
+} 
+} 
+name: "Larry", 
+name: "Larry", 
+gpa: 2.5, 
+gpa: 2.5, 
+interests: ["RPGs", "chess"] 
+interests: ["RPGs", "chess"] 
+name: "Anne", 
+name: "Anne", 
+gpa: 4.0, 
+gpa: 4.0, 
+interests: ["coding", "Pilates"] 
+interests: ["coding", "Pilates"] 
+Animation captions: 
+Animation captions: 
+1. A single student is represented as a document with field:value pairs. The name field is 
+1. A single student is represented as a document with field:value pairs. The name field is 
+assigned a BSON string, gpa is a double, and interests is an array. 
+assigned a BSON string, gpa is a double, and interests is an array. 
+2. Documents may be nested. The student document contains a nested address document. 
+2. Documents may be nested. The student document contains a nested address document. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 2/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+3. MongoDB organizes documents into collections. A group of students is stored in a single 
+3. MongoDB organizes documents into collections. A group of students is stored in a single 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.1.2: MongoDB concepts. D 
+ACTIVITY 8.1.2: MongoDB concepts. D 
+1) Node.js only works with non-relational 0 
+1) Node.js only works with non-relational 0 
+databases. 
+databases. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) All MongoDB documents must be 0 
+2) All MongoDB documents must be 0 
+stored in a collection. 
+stored in a collection. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) MongoDB documents may store 0 
+3) MongoDB documents may store 0 
+nested documents. 
+nested documents. 
+0 True 
+0 True 
+0 False 
+0 False 
+4) Document fields do not require quotes, 0 
+4) Document fields do not require quotes, 0 
+but all values do. 
+but all values do. 
+0 True 
+0 True 
+0 False 
+0 False 
+5) MongoDB stores documents in a 0 
+5) MongoDB stores documents in a 0 
+binary-encoded format. 
+binary-encoded format. 
+0 True 
+0 True 
+0 False 
+0 False 
+6) No size limit exists for a BSON 0 
+6) No size limit exists for a BSON 0 
+document. 
+document. 
+0 True 
+0 True 
+0 False 
+0 False 
+Installing MongoDB 
+Installing MongoDB 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 3/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+◄ 
+◄ 
+MongoDB runs on a wide range of operating systems. Instructions for installing 
+MongoDB runs on a wide range of operating systems. Instructions for installing 
+MongoDB Community Edition are provided on the MongoDB website. 
+MongoDB Community Edition are provided on the MongoDB website. 
+MongoDB Shell is a program for interacting with MongoDB. Instructions for installing 
+MongoDB Shell is a program for interacting with MongoDB. Instructions for installing 
+MongoDB Shell are also available on the MongoDB website. 
+MongoDB Shell are also available on the MongoDB website. 
+MongoDB Shell 
+MongoDB Shell 
+► 
+► 
+MongoDB Shell is a command-line interface for creating and deleting documents, querying, creating 
+MongoDB Shell is a command-line interface for creating and deleting documents, querying, creating 
+user accounts, and performing many other operations in MongoDB. The mongosh command starts 
+user accounts, and performing many other operations in MongoDB. The mongosh command starts 
+MongoDB Shell. 
+MongoDB Shell. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.1.3: Running MongoDB Shell. 
+ACTIVITY 8.1.3: Running MongoDB Shell. 
+$ mongosh 
+$ mongosh 
+Current Mongosh Log ID: XYZ 
+Current Mongosh Log ID: XYZ 
+Connecting to: mongodb://127.0.0.1:27017/ ... 
+Connecting to: mongodb://127.0.0.1:27017/ ... 
+test> use mydb 
+test> use mydb 
+switched to db mydb 
+switched to db mydb 
+mydb> stu = { _id: 123, name: "Sue", gpa: 3.1 } 
+mydb> stu = { _id: 123, name: "Sue", gpa: 3.1 } 
+{"_id": 123, "name": "Sue", "gpa": 3.1} 
+{"_id": 123, "name": "Sue", "gpa": 3.1} 
+mydb> db.students.insertOne(stu) 
+mydb> db.students.insertOne(stu) 
+{ acknowledged: true, insertedid: 123 } 
+{ acknowledged: true, insertedid: 123 } 
+mydb> db.students.find() 
+mydb> db.students.find() 
+[ { " id" : 123, "name" : "Sue", "gpa" : 3 .1 } ] 
+[ { " id" : 123, "name" : "Sue", "gpa" : 3 .1 } ] 
+Animation content: 
+Animation content: 
+The following console is shown: 
+The following console is shown: 
+$ mongosh 
+$ mongosh 
+Current Mon gosh Log ID: XYZ 
+Current Mon gosh Log ID: XYZ 
+Connecting to: mongodb://127.0.0.1 :27017 / ... 
+Connecting to: mongodb://127.0.0.1 :27017 / ... 
+test> use mydb 
+test> use mydb 
+switched to db mydb 
+switched to db mydb 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+MongoDB 
+MongoDB 
+mydb 
+mydb 
+D 
+D 
+,------- ~ 
+,------- ~ 
+students 
+students 
+{_id: 123, 
+{_id: 123, 
+name: "Sue", 
+name: "Sue", 
+gpa: 3.1 } 
+gpa: 3.1 } 
+4/100 
+4/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+mydb> stu = { _id: 123, name: "Sue", gpa: 3.1 } 
+mydb> stu = { _id: 123, name: "Sue", gpa: 3.1 } 
+{ "_id" : 123, "name" : "Sue", "gpa" : 3.1 } 
+{ "_id" : 123, "name" : "Sue", "gpa" : 3.1 } 
+mydb>db.students.insertOne(stu) 
+mydb>db.students.insertOne(stu) 
+{ acknowledged: true, insertedld: 123} 
+{ acknowledged: true, insertedld: 123} 
+mydb>db.students.flndO 
+mydb>db.students.flndO 
+[ { "_id" : 123, "name" : "Sue", "gpa" : 3.1 } ] 
+[ { "_id" : 123, "name" : "Sue", "gpa" : 3.1 } ] 
+zyBooks 
+zyBooks 
+The MongoDB shell is displayed next which holds the mydb database. mydb database contains the 
+The MongoDB shell is displayed next which holds the mydb database. mydb database contains the 
+student collection with the following student information: 
+student collection with the following student information: 
+{_id: 123, 
+{_id: 123, 
+name: "Sue", 
+name: "Sue", 
+gpa: 3.1} 
+gpa: 3.1} 
+Animation captions: 
+Animation captions: 
+1. Entering "mongosh" at the command line starts the MongoDB Shell and connects to the 
+1. Entering "mongosh" at the command line starts the MongoDB Shell and connects to the 
+MongoDB instance running on the local computer. 
+MongoDB instance running on the local computer. 
+2. The use command creates a new database called "mydb" since mydb does not exist. 
+2. The use command creates a new database called "mydb" since mydb does not exist. 
+3. stu is assigned a document and inserted into the students collection with insertOne(). 
+3. stu is assigned a document and inserted into the students collection with insertOne(). 
+4. The find() method retrieves the one student in the students collection. 
+4. The find() method retrieves the one student in the students collection. 
+I PARTICIPATION 8.1 .4: MongoDB Shell commands. ACTIVITY 
+I PARTICIPATION 8.1 .4: MongoDB Shell commands. ACTIVITY 
+Refer to the commands entered into the MongoDB Shell below. 
+Refer to the commands entered into the MongoDB Shell below. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+5/100 
+5/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+test> use dealer 
+test> use dealer 
+switched to db dealer 
+switched to db dealer 
+zyBooks 
+zyBooks 
+dealer> car= { id: 200, make: "Ford", model : "Mustang" 
+dealer> car= { id: 200, make: "Ford", model : "Mustang" 
+{ " id" : 200, "make" : "Ford", "model" : "Mustang" } 
+{ " id" : 200, "make" : "Ford", "model" : "Mustang" } 
+dealer> db.autos.insertOne(car) 
+dealer> db.autos.insertOne(car) 
+{ acknowledged: true, insertedid: 200 } 
+{ acknowledged: true, insertedid: 200 } 
+dealer> db.autos.find() 
+dealer> db.autos.find() 
+[ { " id" : 200, "make" 
+[ { " id" : 200, "make" 
+dealer> show dbs 
+dealer> show dbs 
+admin 41 kB 
+admin 41 kB 
+config 111 kB 
+config 111 kB 
+dealer 73.7 kB 
+dealer 73.7 kB 
+local 
+local 
+mydb 
+mydb 
+41 kB 
+41 kB 
+73.7 kB 
+73.7 kB 
+dealer> help 
+dealer> help 
+Shell Help: 
+Shell Help: 
+"Ford", "model" 
+"Ford", "model" 
+Set current database 
+Set current database 
+"Mustang" } ] 
+"Mustang" } ] 
+use 
+use 
+show 
+show 
+databases. 
+databases. 
+'show databases'/'show dbs' : Print a list of all available 
+'show databases'/'show dbs' : Print a list of all available 
+'show collections' / 'show tables': Print a list of all collections 
+'show collections' / 'show tables': Print a list of all collections 
+for . . . 
+for . . . 
+dealer> show collections 
+dealer> show collections 
+autos 
+autos 
+dealer> db.autos . help() 
+dealer> db.autos . help() 
+Collection Class : 
+Collection Class : 
+aggregate 
+aggregate 
+bulkWrite 
+bulkWrite 
+execution . 
+execution . 
+count 
+count 
+Calculates aggregate values for the data in a collection or a view. 
+Calculates aggregate values for the data in a collection or a view. 
+Performs multiple write operations with controls for order of 
+Performs multiple write operations with controls for order of 
+Returns the count of documents that would match a find() query 
+Returns the count of documents that would match a find() query 
+for . .. 
+for . .. 
+dealer> exit 
+dealer> exit 
+If unable to drag and drop, refresh the page. 
+If unable to drag and drop, refresh the page. 
+Ill show collections 
+Ill show collections 
+use dealer 
+use dealer 
+db.autos.insertOne( car) showdbs 
+db.autos.insertOne( car) showdbs 
+Displays a summary of all available 
+Displays a summary of all available 
+shell commands. 
+shell commands. 
+db.autos.help() 
+db.autos.help() 
+Displays a summary of all collection 
+Displays a summary of all collection 
+methods. 
+methods. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 6/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Inserting documents 
+Inserting documents 
+zyBooks 
+zyBooks 
+Creates or selects a database called 
+Creates or selects a database called 
+"dealer". 
+"dealer". 
+Quits the MongoDB Shell. 
+Quits the MongoDB Shell. 
+Displays a list of all databases. 
+Displays a list of all databases. 
+Displays all collections in the current 
+Displays all collections in the current 
+database. 
+database. 
+Inserts a single document into the 
+Inserts a single document into the 
+"autos" collection. 
+"autos" collection. 
+The insertOne() collection method inserts a single document into a collection. The insertMany() 
+The insertOne() collection method inserts a single document into a collection. The insertMany() 
+collection method inserts multiple documents into a collection. 
+collection method inserts multiple documents into a collection. 
+In the figure below, Sue is inserted into the students collection, then three students in the students 
+In the figure below, Sue is inserted into the students collection, then three students in the students 
+array are inserted. 
+array are inserted. 
+Figure 8.1.1: Inserting multiple students in bulk. 
+Figure 8.1.1: Inserting multiple students in bulk. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 7/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+mydb> db.students.insertOne({ name: "Sue", gpa: 3.1 }) 
+mydb> db.students.insertOne({ name: "Sue", gpa: 3.1 }) 
+{ 
+{ 
+acknowledged: true, 
+acknowledged: true, 
+insertedld: Objectld("62794229fc4ebd4933877a9d") 
+insertedld: Objectld("62794229fc4ebd4933877a9d") 
+mydb> students= [ 
+mydb> students= [ 
+{ name: "Maria", gpa: 4.0 }, 
+{ name: "Maria", gpa: 4.0 }, 
+{ name: "Xiu", gpa: 3.8 }, 
+{ name: "Xiu", gpa: 3.8 }, 
+. . . { name: "Braden", gpa: 2. 5 } 
+. . . { name: "Braden", gpa: 2. 5 } 
+mydb> db.students.insertMany(students) 
+mydb> db.students.insertMany(students) 
+{ 
+{ 
+acknowledged: true, 
+acknowledged: true, 
+insertedlds: { 
+insertedlds: { 
+'0': Objectid("627942f6fc4ebd4933877a9e"), 
+'0': Objectid("627942f6fc4ebd4933877a9e"), 
+'l': Objectld("627942f6fc4ebd4933877a9f"), 
+'l': Objectld("627942f6fc4ebd4933877a9f"), 
+'2': Objectld("627942f6fc4ebd4933877aa0") 
+'2': Objectld("627942f6fc4ebd4933877aa0") 
+mydb> db.students.find() 
+mydb> db.students.find() 
+[ 
+[ 
+id: Objectld("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 3.1 
+id: Objectld("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 3.1 
+} , 
+} , 
+{ id: Objectid("627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 4 
+{ id: Objectid("627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 4 
+} , 
+} , 
+{ id: Objectld("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 3.8 
+{ id: Objectld("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 3.8 
+} , 
+} , 
+{ id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
+{ id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
+2. 5 } 
+2. 5 } 
+l 
+l 
+◄ ► 
+◄ ► 
+The _id field is automatically assigned to every document and is always the first field in the document. 
+The _id field is automatically assigned to every document and is always the first field in the document. 
+The _id acts as a primary key. A primary key is a field that uniquely identifies each document in a 
+The _id acts as a primary key. A primary key is a field that uniquely identifies each document in a 
+collection. 
+collection. 
+The _id may be assigned a unique value like a student ID number or use an auto-incrementing value. In 
+The _id may be assigned a unique value like a student ID number or use an auto-incrementing value. In 
+the figure above, no _id field was assigned, so MongoDB automatically assigned an Objectld to _id. An 
+the figure above, no _id field was assigned, so MongoDB automatically assigned an Objectld to _id. An 
+Objectld is a 12-byte BSON type that contains a unique value. An Objectld is displayed as a 
+Objectld is a 12-byte BSON type that contains a unique value. An Objectld is displayed as a 
+hexadecimal number. Ex: 62794229fc4ebd4933877a9d. 
+hexadecimal number. Ex: 62794229fc4ebd4933877a9d. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.1.5: MongoDB _id field. 
+ACTIVITY 8.1.5: MongoDB _id field. 
+1) The command below assigns _id an 
+1) The command below assigns _id an 
+Objectld. 
+Objectld. 
+db .students . insertOne ({ id : 
+db .students . insertOne ({ id : 
+123 , "Ebony" , gpa : 3.2 }) 
+123 , "Ebony" , gpa : 3.2 }) 
+0 True 
+0 True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+0 
+0 
+8/100 
+8/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+2) In the figure above, the inserted 0 
+2) In the figure above, the inserted 0 
+documents received similar Objectlds. 
+documents received similar Objectlds. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) The Objectld is 12 characters long. 0 
+3) The Objectld is 12 characters long. 0 
+0 True 
+0 True 
+0 False 
+0 False 
+4) The _id field may use duplicate values. 0 
+4) The _id field may use duplicate values. 0 
+0 True 
+0 True 
+0 False 
+0 False 
+Finding documents 
+Finding documents 
+The find() collection method returns all documents by default or documents that match an optional 
+The find() collection method returns all documents by default or documents that match an optional 
+query parameter. The findOne() collection method returns only the first document matching the query. 
+query parameter. The findOne() collection method returns only the first document matching the query. 
+Both methods return null if the query matches no documents. 
+Both methods return null if the query matches no documents. 
+Figure 8.1.2: Find 'Sue' and students with GPA~ 3.0. 
+Figure 8.1.2: Find 'Sue' and students with GPA~ 3.0. 
+mydb> db.students . find({ name: 'Sue ' }) 
+mydb> db.students . find({ name: 'Sue ' }) 
+[ 
+[ 
+{ _id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 
+{ _id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 
+3.1 } 
+3.1 } 
+l 
+l 
+mydb> db.students.find({ gpa: { $gte: 3.0 } }) 
+mydb> db.students.find({ gpa: { $gte: 3.0 } }) 
+[ 
+[ 
+{ _id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 
+{ _id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 
+3 .1 } , 
+3 .1 } , 
+{ _id: Objectid("627942f6fc4ebd4933877a9e"), name : 'Maria', gpa: 
+{ _id: Objectid("627942f6fc4ebd4933877a9e"), name : 'Maria', gpa: 
+4 } , 
+4 } , 
+{ _id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 
+{ _id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 
+3.8 } 
+3.8 } 
+l 
+l 
+◄ 
+◄ 
+The operators used in queries are summarized in the table below, but many more exist and are 
+The operators used in queries are summarized in the table below, but many more exist and are 
+documented in the MongoDB manual. 
+documented in the MongoDB manual. 
+Table 8.1.1: Common MongoDB query operators. 
+Table 8.1.1: Common MongoDB query operators. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 9/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Operator Description 
+Operator Description 
+Matches documents 
+Matches documents 
+field: value with fields that are equal 
+field: value with fields that are equal 
+to the given value. 
+to the given value. 
+$eq $ne 
+$eq $ne 
+$gt $gte 
+$gt $gte 
+$lt $lte 
+$lt $lte 
+Matches values= or f:. to 
+Matches values= or f:. to 
+the given value. 
+the given value. 
+Matches values> or~ to 
+Matches values> or~ to 
+the given value. 
+the given value. 
+Matches values< ors to 
+Matches values< ors to 
+the given value. 
+the given value. 
+I 
+I 
+I 
+I 
+zyBooks 
+zyBooks 
+Example 
+Example 
+II Matches student with this id 
+II Matches student with this id 
+{ " id" : 
+{ " id" : 
+Objectid ("62794229fc4ebd4933877a9d" ) 
+Objectid ("62794229fc4ebd4933877a9d" ) 
+} 
+} 
+II Matches all docs except Sue 
+II Matches all docs except Sue 
+{ name : { $ne : "Sue" } } 
+{ name : { $ne : "Sue" } } 
+II Matches students with gpa > 3.5 
+II Matches students with gpa > 3.5 
+{ gpa : { $gt : 3.5 } } 
+{ gpa : { $gt : 3.5 } } 
+II Matches students with gpa <= 3. 0 
+II Matches students with gpa <= 3. 0 
+{ gpa : { $lte : 3.0 } } 
+{ gpa : { $lte : 3.0 } } 
+-
+-
+-
+-
+$in $nin Matches values in or not II Matches Sue, Susan, or Susie 
+$in $nin Matches values in or not II Matches Sue, Susan, or Susie 
+{ name : { $in : [ "Sue" , "Susan" , 
+{ name : { $in : [ "Sue" , "Susan" , 
+in a given array. "Susie" ] } } 
+in a given array. "Susie" ] } } 
+I I 
+I I 
+Joins query clauses with II Matches student with gpa >= 3.0 
+Joins query clauses with II Matches student with gpa >= 3.0 
+$and a logical AND, returns and gpa <= 3.5 
+$and a logical AND, returns and gpa <= 3.5 
+documents that match { $and : [ { gpa : { $gte : 3.0 } } ' 
+documents that match { $and : [ { gpa : { $gte : 3.0 } } ' 
+{ gpa : { $lte : 3.5 } } l } 
+{ gpa : { $lte : 3.5 } } l } 
+both clauses. I 
+both clauses. I 
+Joins query clauses with II Matches students with gpa >= 3.9 
+Joins query clauses with II Matches students with gpa >= 3.9 
+$or 
+$or 
+◄ 
+◄ 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 
+ACTIVITY 
+a logical OR, returns or gpa 
+a logical OR, returns or gpa 
+documents that match { $or : 
+documents that match { $or : 
+either clauses. I 
+either clauses. I 
+8.1.6: Querying the 'autos' collection. 
+8.1.6: Querying the 'autos' collection. 
+<= 3.0 
+<= 3.0 
+[ { gpa : { $gte : 3.9 } } ' 
+[ { gpa : { $gte : 3.9 } } ' 
+{ gpa : { $lte : 3.0 } } l } 
+{ gpa : { $lte : 3.0 } } l } 
+Refer to the "autos" collection below, and choose the documents returned by each query. 
+Refer to the "autos" collection below, and choose the documents returned by each query. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+► 
+► 
+D 
+D 
+10/100 
+10/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+7) 
+7) 
+2) 
+2) 
+3) 
+3) 
+} , 
+} , 
+{ 
+{ 
+} , 
+} , 
+{ 
+{ 
+} , 
+} , 
+{ 
+{ 
+" id" : 100 , 
+" id" : 100 , 
+"make" : "Ford" , 
+"make" : "Ford" , 
+"model" : "Fusion" , 
+"model" : "Fusion" , 
+"year" : 2014 , 
+"year" : 2014 , 
+"options" : [ "engine start" , "moon roof" ], 
+"options" : [ "engine start" , "moon roof" ], 
+"price" : 13500 
+"price" : 13500 
+" id" : 200 , 
+" id" : 200 , 
+"make" : "Honda" , 
+"make" : "Honda" , 
+"model" : "Accord" , 
+"model" : "Accord" , 
+"year" : 2013 , 
+"year" : 2013 , 
+"options" : [ "spoiler" , "alloy wheels" , "sunroof" ] , 
+"options" : [ "spoiler" , "alloy wheels" , "sunroof" ] , 
+"price" : 16900 
+"price" : 16900 
+" id" : 300 , 
+" id" : 300 , 
+"make" : "Dodge" , 
+"make" : "Dodge" , 
+"model" : "Avenger" , 
+"model" : "Avenger" , 
+"year" : 2012 , 
+"year" : 2012 , 
+"options" : [ "leather seats" ], 
+"options" : [ "leather seats" ], 
+"price" : 10800 
+"price" : 10800 
+" id" : 400 , 
+" id" : 400 , 
+"make" : "Toyota" , 
+"make" : "Toyota" , 
+"model" : "Corolla" , 
+"model" : "Corolla" , 
+"year" : 2013 , 
+"year" : 2013 , 
+"options" : [ "antitheft" ], 
+"options" : [ "antitheft" ], 
+"price" : 13400 
+"price" : 13400 
+db . autos . find ({}) 
+db . autos . find ({}) 
+0 _id 100 
+0 _id 100 
+0 All documents 
+0 All documents 
+0 null 
+0 null 
+db . autos . find ( { year : { $gte : 
+db . autos . find ( { year : { $gte : 
+2013 } } ) 
+2013 } } ) 
+0 _id 100 
+0 _id 100 
+0 _id 1 00, 200, 400 
+0 _id 1 00, 200, 400 
+0 _id 300 
+0 _id 300 
+db . autos . findOne ({ year : { 
+db . autos . findOne ({ year : { 
+$gte : 2013 } } ) 
+$gte : 2013 } } ) 
+0 _id 100 
+0 _id 100 
+0 _id 1 00, 200, 400 
+0 _id 1 00, 200, 400 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+0 
+0 
+11/100 
+11/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+0 _id 300 
+0 _id 300 
+4) db . autos . findOne ({ year : { 
+4) db . autos . findOne ({ year : { 
+$gte : 2016 } }) 
+$gte : 2016 } }) 
+0 _id 100 
+0 _id 100 
+0 Run-time error 
+0 Run-time error 
+0 null 
+0 null 
+5) db . autos . find ({ $and : [ {price : 
+5) db . autos . find ({ $and : [ {price : 
+{ $lte : 15000 } }, 
+{ $lte : 15000 } }, 
+6) 
+6) 
+{ options : { $in : 
+{ options : { $in : 
+[ "sunroof" , "antitheft" , "moon 
+[ "sunroof" , "antitheft" , "moon 
+roof" ] 
+roof" ] 
+} } l } ) 
+} } l } ) 
+0 _id 100 
+0 _id 100 
+0 _id 100, 400 
+0 _id 100, 400 
+0 _id 100, 200, 400 
+0 _id 100, 200, 400 
+db . autos . find ({ $or : 
+db . autos . find ({ $or : 
+{"make" : "Honda" }, 
+{"make" : "Honda" }, 
+year : {$ne : 2013 } } l } ) 
+year : {$ne : 2013 } } l } ) 
+0 All documents 
+0 All documents 
+0 _id 100, 300 
+0 _id 100, 300 
+0 _id 100, 200, 300 
+0 _id 100, 200, 300 
+Updating documents 
+Updating documents 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+0 
+0 
+The updateOne() collection method modifies a single document in a collection. The updateMany() 
+The updateOne() collection method modifies a single document in a collection. The updateMany() 
+collection method modifies multiple documents in a collection. The methods have two required 
+collection method modifies multiple documents in a collection. The methods have two required 
+parameters: 
+parameters: 
+1. query- The query to find the document(s) to update. An empty query { } matches all 
+1. query- The query to find the document(s) to update. An empty query { } matches all 
+documents. 
+documents. 
+2. update - The modification to perform on matched documents using an update operator like 
+2. update - The modification to perform on matched documents using an update operator like 
+$inc, $set, and $unset. 
+$inc, $set, and $unset. 
+In the example below, the calls to updateOne () and updateMany () return the matchedCount 
+In the example below, the calls to updateOne () and updateMany () return the matchedCount 
+property indicating how many documents matched the query, and the modifiedCount property 
+property indicating how many documents matched the query, and the modifiedCount property 
+indicating the number of documents modified. 
+indicating the number of documents modified. 
+Figure 8.1.3: Change Sue's GPA to 3.3, and set all students with GPA> 3 to 1. 
+Figure 8.1.3: Change Sue's GPA to 3.3, and set all students with GPA> 3 to 1. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 12/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+mydb> db.students.updateOne({ name: 'Sue' }, { $set: { gpa: 3.3 } }) 
+mydb> db.students.updateOne({ name: 'Sue' }, { $set: { gpa: 3.3 } }) 
+{ 
+{ 
+acknowledged: true, 
+acknowledged: true, 
+insertedid: null, 
+insertedid: null, 
+matchedCount: 1, 
+matchedCount: 1, 
+modifiedCount: 1, 
+modifiedCount: 1, 
+upsertedCount: 0 
+upsertedCount: 0 
+mydb> db.students.find({ name: 'Sue' }) 
+mydb> db.students.find({ name: 'Sue' }) 
+{ "_id" : Objectid("5e600dl8bbdl0ee972f6ed9a"), "name" 
+{ "_id" : Objectid("5e600dl8bbdl0ee972f6ed9a"), "name" 
+3. 3 } 
+3. 3 } 
+"Sue ", " gpa " 
+"Sue ", " gpa " 
+mydb> db.students.updateMany({ gpa: { $gt: 3 } }, { $set: { gpa: 1 } }) 
+mydb> db.students.updateMany({ gpa: { $gt: 3 } }, { $set: { gpa: 1 } }) 
+{ 
+{ 
+acknowledged: true, 
+acknowledged: true, 
+insertedid: null, 
+insertedid: null, 
+matchedCount: 3, 
+matchedCount: 3, 
+modifiedCount: 3, 
+modifiedCount: 3, 
+upsertedCount: 0 
+upsertedCount: 0 
+mydb> db.students.find() 
+mydb> db.students.find() 
+[ 
+[ 
+◄ 
+◄ 
+id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 1 }, 
+id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 1 }, 
+id: Objectid{"627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 1 }, 
+id: Objectid{"627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 1 }, 
+id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 1 }, 
+id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 1 }, 
+id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 2.5 
+id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 2.5 
+► 
+► 
+Table 8.1.2: Common MongoDB update operators. 
+Table 8.1.2: Common MongoDB update operators. 
+Operator 
+Operator 
+I 
+I 
+$currentDate 
+$currentDate 
+$inc 
+$inc 
+1 
+1 
+Description _J Example 
+Description _J Example 
+Sets a field's value to the 
+Sets a field's value to the 
+current date/time 
+current date/time 
+Increments a field's 
+Increments a field's 
+value by the specified 
+value by the specified 
+amount l 
+amount l 
+II Sue's •~irthDate": 
+II Sue's •~irthDate": 
+ISODa te ( "2022-05-09Tl 6: 39: 00 .121Z ") 
+ISODa te ( "2022-05-09Tl 6: 39: 00 .121Z ") 
+db .students . updateOne ({ name : 'Sue' 
+db .students . updateOne ({ name : 'Sue' 
+} ' 
+} ' 
+$currentDate : { birthDate : 
+$currentDate : { birthDate : 
+true } } ) 
+true } } ) 
+II Sue's "gpa" incremented from 3.1 
+II Sue's "gpa" incremented from 3.1 
+to 3.2 
+to 3.2 
+db .students . updateOne ({ name : 'Sue' 
+db .students . updateOne ({ name : 'Sue' 
+} ' 
+} ' 
+{ $inc : { gpa : 0.1 } }) 
+{ $inc : { gpa : 0.1 } }) 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 13/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+I 
+I 
+$rename Renames a field 
+$rename Renames a field 
+$set Sets a field's value 
+$set Sets a field's value 
+_____ I
+_____ I
+$unset Removes a field 
+$unset Removes a field 
+I 
+I 
+zyBooks 
+zyBooks 
+II Sue's "name" is now "firstName" 
+II Sue's "name" is now "firstName" 
+db .students . updateOne ({ name : 'Sue' 
+db .students . updateOne ({ name : 'Sue' 
+} ' 
+} ' 
+{ $rename : { name : 'firstName' } 
+{ $rename : { name : 'firstName' } 
+} ) 
+} ) 
+I I Sue's "gpa" : 4. 0 
+I I Sue's "gpa" : 4. 0 
+db .students . updateOne ( { name : 'Sue' 
+db .students . updateOne ( { name : 'Sue' 
+} ' 
+} ' 
+{ $set : { gpa : 4 . 0 } }) 
+{ $set : { gpa : 4 . 0 } }) 
+II Removes Sue's "gpa" and 
+II Removes Sue's "gpa" and 
+"birthDate" fields 
+"birthDate" fields 
+db .students . updateOne ({ name : 'Sue' 
+db .students . updateOne ({ name : 'Sue' 
+} ' 
+} ' 
+{ $unset : { gpa : 
+{ $unset : { gpa : 
+"" } } ) 
+"" } } ) 
+"" ' birthDate : 
+"" ' birthDate : 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.1.7: Updating documents in the 'autos' collection. 
+ACTIVITY 8.1.7: Updating documents in the 'autos' collection. 
+Refer to the "autos" collection below, and choose the result of each command. 
+Refer to the "autos" collection below, and choose the result of each command. 
+} ' 
+} ' 
+{ 
+{ 
+" id" : 100 , 
+" id" : 100 , 
+"make" : "Ford" , 
+"make" : "Ford" , 
+"model" : "Fusion" , 
+"model" : "Fusion" , 
+"year" : 2014 , 
+"year" : 2014 , 
+"options" : [ "engine start" , "moon roof" ], 
+"options" : [ "engine start" , "moon roof" ], 
+"price" : 13500 
+"price" : 13500 
+" id" : 200 , 
+" id" : 200 , 
+"make" : "Honda" , 
+"make" : "Honda" , 
+"model" : "Accord" , 
+"model" : "Accord" , 
+"year" : 2013 , 
+"year" : 2013 , 
+"options" : [ "spoiler" , "alloy wheels" , "sunroof" ], 
+"options" : [ "spoiler" , "alloy wheels" , "sunroof" ], 
+"price" : 16900 
+"price" : 16900 
+1) db . autos . updateOne ({ price : 
+1) db . autos . updateOne ({ price : 
+$gt : 10000 } }, 
+$gt : 10000 } }, 
+{ $set : { year : 2000 , 
+{ $set : { year : 2000 , 
+options : [] } } ) 
+options : [] } } ) 
+Only auto with _id 100 has year 
+Only auto with _id 100 has year 
+O set to 2000 and options 
+O set to 2000 and options 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+► 
+► 
+0 
+0 
+14/100 
+14/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+removed. 
+removed. 
+O Both autos have year set to 2000 
+O Both autos have year set to 2000 
+and options removed. 
+and options removed. 
+O No autos are updated. 
+O No autos are updated. 
+2) db . autos . updateMany ({ price : 
+2) db . autos . updateMany ({ price : 
+$ gt : 10 0 0 0 } } , 
+$ gt : 10 0 0 0 } } , 
+{ $set : { year : 2000 , 
+{ $set : { year : 2000 , 
+options : [] } } ) 
+options : [] } } ) 
+Only auto with _id 100 has year 
+Only auto with _id 100 has year 
+0 set to 2000 and options 
+0 set to 2000 and options 
+removed. 
+removed. 
+O Both autos have year set to 2000 
+O Both autos have year set to 2000 
+and options removed. 
+and options removed. 
+0 No autos are updated. 
+0 No autos are updated. 
+3) db . autos . updateOne ({ price : 
+3) db . autos . updateOne ({ price : 
+$ gt : 10 0 0 0 } } , 
+$ gt : 10 0 0 0 } } , 
+{ $set : { sold : true } } ) 
+{ $set : { sold : true } } ) 
+No autos are updated because 
+No autos are updated because 
+O the autos do not have a "sold" 
+O the autos do not have a "sold" 
+field. 
+field. 
+0 Auto with _id 100 has new field 
+0 Auto with _id 100 has new field 
+"sold" set to true. 
+"sold" set to true. 
+Both autos have a new field 
+Both autos have a new field 
+O "sold" set to true. 
+O "sold" set to true. 
+4) db . autos . updateOne ({ id : 100 
+4) db . autos . updateOne ({ id : 100 
+} , 
+} , 
+{ $currentDate : { soldDate : 
+{ $currentDate : { soldDate : 
+true } } ) 
+true } } ) 
+O Auto with _id 100 has new field 
+O Auto with _id 100 has new field 
+"sold Date" set to true. 
+"sold Date" set to true. 
+Auto with _id 100 has new field 
+Auto with _id 100 has new field 
+O "sold Date" set to the Unix epoch 
+O "sold Date" set to the Unix epoch 
+(January 1, 1970). 
+(January 1, 1970). 
+Auto with _id 100 has new field 
+Auto with _id 100 has new field 
+O "sold Date" set to the current date 
+O "sold Date" set to the current date 
+and time. 
+and time. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+0 
+0 
+15/100 
+15/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+5) db . autos . updateOne ({ id : 100 
+5) db . autos . updateOne ({ id : 100 
+} ' 
+} ' 
+{ $inc : { price : -500, year : 
+{ $inc : { price : -500, year : 
+2 } } ) 
+2 } } ) 
+Auto with _id 100 has price 
+Auto with _id 100 has price 
+O reduced by 500 and year 
+O reduced by 500 and year 
+increased by 2. 
+increased by 2. 
+O Auto with _id 100 has price set 
+O Auto with _id 100 has price set 
+to -500 and year set to 2. 
+to -500 and year set to 2. 
+O Auto with _id 100 has price and 
+O Auto with _id 100 has price and 
+year fields removed. 
+year fields removed. 
+Deleting documents 
+Deleting documents 
+zyBooks 
+zyBooks 
+0 
+0 
+The deleteOne() collection method deletes a single document from a collection. The deleteMany() 
+The deleteOne() collection method deletes a single document from a collection. The deleteMany() 
+collection method deletes multiple document from a collection. The methods have a required query 
+collection method deletes multiple document from a collection. The methods have a required query 
+parameter that matches documents to delete. 
+parameter that matches documents to delete. 
+In the example below, the calls to deleteOne () and deleteMany () return a deletedCount 
+In the example below, the calls to deleteOne () and deleteMany () return a deletedCount 
+property indicating how many documents were deleted. 
+property indicating how many documents were deleted. 
+Figure 8.1.4: Delete the first student with GPA< 3.5 (Sue), and delete all 
+Figure 8.1.4: Delete the first student with GPA< 3.5 (Sue), and delete all 
+students with GPA> 3.5 (Maria and Xiu). 
+students with GPA> 3.5 (Maria and Xiu). 
+mydb> db.students.deleteOne({ gpa: { $lt:3.5 } }) 
+mydb> db.students.deleteOne({ gpa: { $lt:3.5 } }) 
+{ acknowledged: true, deletedCount: 1 } 
+{ acknowledged: true, deletedCount: 1 } 
+mydb> db.students.find() 
+mydb> db.students.find() 
+[ 
+[ 
+id: Objectid("627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 4 
+id: Objectid("627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 4 
+} , 
+} , 
+{ id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 3.8 
+{ id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 3.8 
+} , 
+} , 
+{ _id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
+{ _id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
+2. 5 } 
+2. 5 } 
+l 
+l 
+mydb> db.students.deleteMany({ gpa: $gt:3.5 } }) 
+mydb> db.students.deleteMany({ gpa: $gt:3.5 } }) 
+{ acknowledged: true, deletedCount: 2 } 
+{ acknowledged: true, deletedCount: 2 } 
+mydb> db.students.find() 
+mydb> db.students.find() 
+[ 
+[ 
+id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
+id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
+2. 5 } 
+2. 5 } 
+l 
+l 
+◄ ► 
+◄ ► 
+I n 
+I n 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 16/100 
+11/17/24, 12:11 PM I PARTICIPATION I 
+11/17/24, 12:11 PM I PARTICIPATION I 
+ACTIVITY 8.1.8: Deleting documents. 
+ACTIVITY 8.1.8: Deleting documents. 
+1) Delete all documents from the 
+1) Delete all documents from the 
+"autos" collection. 
+"autos" collection. 
+db.autos. 
+db.autos. 
+Show answer 
+Show answer 
+2) Delete all documents with a price 
+2) Delete all documents with a price 
+more than $10,000. 
+more than $10,000. 
+db.autos. 
+db.autos. 
+Show answer 
+Show answer 
+3) Delete only the first document with 
+3) Delete only the first document with 
+the year 2020. 
+the year 2020. 
+db.autos. 
+db.autos. 
+Show answer 
+Show answer 
+Exploring further: 
+Exploring further: 
+• MongoDB manual 
+• MongoDB manual 
+• Installing MongoDB 
+• Installing MongoDB 
+• Query and Projection Operators 
+• Query and Projection Operators 
+• SQL to MongoDB MaQQing Chart 
+• SQL to MongoDB MaQQing Chart 
+zyBooks 
+zyBooks 

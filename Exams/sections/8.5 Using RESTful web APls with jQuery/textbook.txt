@@ -1,0 +1,1222 @@
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+72/100 
+72/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Music API 
+Music API 
+A web application uses a web API running on the web server to manipulate data in the server's 
+A web application uses a web API running on the web server to manipulate data in the server's 
+database. This section uses a RESTful Music API that is developed elsewhere in this material. The 
+database. This section uses a RESTful Music API that is developed elsewhere in this material. The 
+Music API uses a song resource with the following fields: 
+Music API uses a song resource with the following fields: 
+• _id - Object ID uniquely identifying each song 
+• _id - Object ID uniquely identifying each song 
+• title - Required string 
+• title - Required string 
+• artist - String 
+• artist - String 
+• popularity- Number between 1 and 10 
+• popularity- Number between 1 and 10 
+• releaseDate - Date 
+• releaseDate - Date 
+• genre - Array of strings 
+• genre - Array of strings 
+The Music API supports the operations in the below table. 
+The Music API supports the operations in the below table. 
+Table 8.5.1: Music API operations. 
+Table 8.5.1: Music API operations. 
+Resource Request Description Status code verb 
+Resource Request Description Status code verb 
+/api/songs GET Gets a list of all songs in the database 200 OK 
+/api/songs GET Gets a list of all songs in the database 200 OK 
+/api/songs/:id GET Gets the song with the given id 200 OK 
+/api/songs/:id GET Gets the song with the given id 200 OK 
+-
+-
+/api/songs POST 
+/api/songs POST 
+Adds the JSON-encoded song in the request 201 Created body to the database I 
+Adds the JSON-encoded song in the request 201 Created body to the database I 
+/api/songs PUT Updates the existing song with the JSON- 204 No 
+/api/songs PUT Updates the existing song with the JSON- 204 No 
+encodedsongintherequestbody Content 
+encodedsongintherequestbody Content 
+I -
+I -
+/api/songs/:id DELETE Removes the song with the given id from the 204 No 
+/api/songs/:id DELETE Removes the song with the given id from the 204 No 
+database Content I 
+database Content I 
+◄ ► 
+◄ ► 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.5.1: Music APL D 
+ACTIVITY 8.5.1: Music APL D 
+1) A POST request to/ api/ songs 
+1) A POST request to/ api/ songs 
+returns all songs in the database. 
+returns all songs in the database. 
+0 True 
+0 True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+73/100 
+73/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+2) A GET request to /api/songs/888 
+2) A GET request to /api/songs/888 
+returns the song with ID 888. 
+returns the song with ID 888. 
+0 True 
+0 True 
+O False 
+O False 
+3) Only the POST and PUT requests 
+3) Only the POST and PUT requests 
+require sending JSON to the web API. 
+require sending JSON to the web API. 
+O True 
+O True 
+0 False 
+0 False 
+Getting songs 
+Getting songs 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+Web applications call a web API from the browser by using the XMLHttpRequest object to make 
+Web applications call a web API from the browser by using the XMLHttpRequest object to make 
+Ajax requests. jQuery provides Ajax methods like $ . get () to make calling a web API easier than 
+Ajax requests. jQuery provides Ajax methods like $ . get () to make calling a web API easier than 
+using the XMLHttpRequest object directly. 
+using the XMLHttpRequest object directly. 
+The example code below uses jQuery to interact with the Music API. The Music API is housed on a 
+The example code below uses jQuery to interact with the Music API. The Music API is housed on a 
+web server running Express, and song data is saved in a MongoDB database. 
+web server running Express, and song data is saved in a MongoDB database. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.5.2: Using $.get() to request all songs from the Music API. 
+ACTIVITY 8.5.2: Using $.get() to request all songs from the Music API. 
+<!DOCTYPE html> 
+<!DOCTYPE html> 
+<html lang=11 en 11 > 
+<html lang=11 en 11 > 
+<title>Songs</title> 
+<title>Songs</title> 
+<script 
+<script 
+src=11 https://code.jquery.com/jquery-3.7.1.min.js 11 
+src=11 https://code.jquery.com/jquery-3.7.1.min.js 11 
+integrity=11 sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=11 
+integrity=11 sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=11 
+crossorigin=11 anonymous 11 ></script> 
+crossorigin=11 anonymous 11 ></script> 
+<script> 
+<script> 
+$ (function () { 
+$ (function () { 
+} ) ; 
+} ) ; 
+let $list = $ ( 11 ul 11 ); 
+let $list = $ ( 11 ul 11 ); 
+$ . get ( 11 /api/songs 11 , function (songs) 
+$ . get ( 11 /api/songs 11 , function (songs) 
+songs . forEach (function (song) { 
+songs . forEach (function (song) { 
+$list . append ( 11<li>11 + song . title + 11 - 11 + 
+$list . append ( 11<li>11 + song . title + 11 - 11 + 
+song . artist + "</li>" ); 
+song . artist + "</li>" ); 
+} ) ; 
+} ) ; 
+}) ; 
+}) ; 
+</script> 
+</script> 
+<body> 
+<body> 
+<hl>Songs</hl> 
+<hl>Songs</hl> 
+<ul> 
+<ul> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Hello - Adele</li> 
+<li>Hello - Adele</li> 
+<li>Royals - Lorde</li> 
+<li>Royals - Lorde</li> 
+</ul> 
+</ul> 
+</body> 
+</body> 
+</html> 
+</html> 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+Web browser 
+Web browser 
+localhost:3000/songs.html 
+localhost:3000/songs.html 
+Songs 
+Songs 
+• Uptown Funk - Bruno Mars 
+• Uptown Funk - Bruno Mars 
+• Hello - Adele 
+• Hello - Adele 
+• Royals - Lorde 
+• Royals - Lorde 
+GET 
+GET 
+/api/songs {json} 
+/api/songs {json} 
+Express server 
+Express server 
+[ MusicAPI] 
+[ MusicAPI] 
+Get all songs {json} 
+Get all songs {json} 
+{ "_id":"56f00ba5", 
+{ "_id":"56f00ba5", 
+"title":"Uptown Funk", 
+"title":"Uptown Funk", 
+... }, 
+... }, 
+{ "_id":"56f00ba8", 
+{ "_id":"56f00ba8", 
+"title":"Hello", 
+"title":"Hello", 
+... }, 
+... }, 
+{ "_id":"56f00cb2", 
+{ "_id":"56f00cb2", 
+"title":"Royals", 
+"title":"Royals", 
+... } 
+... } 
+74/100 
+74/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Animation content: 
+Animation content: 
+The following code is displayed. 
+The following code is displayed. 
+<!DOCTYPE html> 
+<!DOCTYPE html> 
+<html lang=11en"> 
+<html lang=11en"> 
+<title>Songs</title> 
+<title>Songs</title> 
+<script 
+<script 
+src=11 https://code.jquery.com/jquery-3.7. 7 .min.js 11 
+src=11 https://code.jquery.com/jquery-3.7. 7 .min.js 11 
+zyBooks 
+zyBooks 
+integrity=11 sha256-/ JqT3SQfawRcv /Bl H PThkBvs0OEvtFFmqPF /IYI/Cxo=11 
+integrity=11 sha256-/ JqT3SQfawRcv /Bl H PThkBvs0OEvtFFmqPF /IYI/Cxo=11 
+crossorigin=11 anonymous 11></script> 
+crossorigin=11 anonymous 11></script> 
+<script> 
+<script> 
+$(function() { 
+$(function() { 
+let $list = $("ul"); 
+let $list = $("ul"); 
+$.get(11 /api/songs", function(songs) { 
+$.get(11 /api/songs", function(songs) { 
+songs.forEach(function(song) { 
+songs.forEach(function(song) { 
+$list.append("<li>11 +song.title+" - "+ 
+$list.append("<li>11 +song.title+" - "+ 
+song.artist+ "</Ii>"); 
+song.artist+ "</Ii>"); 
+}); 
+}); 
+}); 
+}); 
+}); 
+}); 
+</script> 
+</script> 
+<body> 
+<body> 
+<h1>Songs</h1> 
+<h1>Songs</h1> 
+<ul> 
+<ul> 
+</ul> 
+</ul> 
+</body> 
+</body> 
+</html> 
+</html> 
+Step 1: The browser's request to the Express web server reads " 
+Step 1: The browser's request to the Express web server reads " 
+MongoDB 
+MongoDB 
+localhost:3000/songs.html". The HTML is then rendered, and "Songs" is printed on the screen. 
+localhost:3000/songs.html". The HTML is then rendered, and "Songs" is printed on the screen. 
+Step 2: The line of code reading "$.get("/api/songs", function(songs) {" is highlighted. 
+Step 2: The line of code reading "$.get("/api/songs", function(songs) {" is highlighted. 
+Step 3: The list of all songs in MongoDB reads 
+Step 3: The list of all songs in MongoDB reads 
+"[ 
+"[ 
+{ "_id":"56f00ba5", 
+{ "_id":"56f00ba5", 
+"title":"Uptown Funk", 
+"title":"Uptown Funk", 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 75/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+... }, 
+... }, 
+{ "_id":"56f00ba8", 
+{ "_id":"56f00ba8", 
+"title":"Hello", 
+"title":"Hello", 
+... }, 
+... }, 
+{ "_id":"56f00cb2", 
+{ "_id":"56f00cb2", 
+"title":"Royals", 
+"title":"Royals", 
+... } 
+... } 
+] II. 
+] II. 
+Step 4: The lines of code reading 
+Step 4: The lines of code reading 
+"songs. forEach(function( song) { 
+"songs. forEach(function( song) { 
+Slist.append("<li>" +song.title+" - "+ 
+Slist.append("<li>" +song.title+" - "+ 
+song.artist+ "</Ii>");" 
+song.artist+ "</Ii>");" 
+are highlighted. 
+are highlighted. 
+The code is updated to read the following. 
+The code is updated to read the following. 
+<!DOCTYPE html> 
+<!DOCTYPE html> 
+<html lang="en"> 
+<html lang="en"> 
+<title>Songs</title> 
+<title>Songs</title> 
+<script 
+<script 
+zyBooks 
+zyBooks 
+src="https://code.jquery.com/jquery-3.7.1.min.js" 
+src="https://code.jquery.com/jquery-3.7.1.min.js" 
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/IYI/Cxo=" 
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/IYI/Cxo=" 
+crossorigin="anonymous"></script> 
+crossorigin="anonymous"></script> 
+<script> 
+<script> 
+$(function() { 
+$(function() { 
+let $list = S("ul"); 
+let $list = S("ul"); 
+$.get("/api/songs", function(songs) { 
+$.get("/api/songs", function(songs) { 
+songs.forEach(function(song) { 
+songs.forEach(function(song) { 
+Slist.append("<li>" +song.title+" - "+ 
+Slist.append("<li>" +song.title+" - "+ 
+song.artist+ "</Ii>"); 
+song.artist+ "</Ii>"); 
+}); 
+}); 
+}); 
+}); 
+}); 
+}); 
+</script> 
+</script> 
+<body> 
+<body> 
+<h1>Songs</h1> 
+<h1>Songs</h1> 
+<ul> 
+<ul> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Hello - Adele</li> 
+<li>Hello - Adele</li> 
+<li>Royals - Lorde</li> 
+<li>Royals - Lorde</li> 
+</ul> 
+</ul> 
+</body> 
+</body> 
+</html> 
+</html> 
+The output now reads 
+The output now reads 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 76/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+"Songs 
+"Songs 
+• Uptown Funk - Bruno Mars 
+• Uptown Funk - Bruno Mars 
+• Hello - Adele 
+• Hello - Adele 
+• Royals - Larde". 
+• Royals - Larde". 
+Animation captions: 
+Animation captions: 
+zyBooks 
+zyBooks 
+1. Browser requests songs.html from the Express web server and renders the HTML. 
+1. Browser requests songs.html from the Express web server and renders the HTML. 
+2. jQuery code executes, and $.get() makes an Ajax request to /api/songs. 
+2. jQuery code executes, and $.get() makes an Ajax request to /api/songs. 
+3. Web server's Music API gets a list of all songs from MongoDB and returns the songs encoded 
+3. Web server's Music API gets a list of all songs from MongoDB and returns the songs encoded 
+in JSON. 
+in JSON. 
+4. $.get() callback function is called with the song data. The forEach() method appends <Ii> 
+4. $.get() callback function is called with the song data. The forEach() method appends <Ii> 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.5.3: Getting songs with jQuery. 
+ACTIVITY 8.5.3: Getting songs with jQuery. 
+1) What is missing to output the first 
+1) What is missing to output the first 
+song's artist to the console? 
+song's artist to the console? 
+$ . get ( "/api/songs" , 
+$ . get ( "/api/songs" , 
+function (songs) { 
+function (songs) { 
+console . log ( __ ); 
+console . log ( __ ); 
+} ) ; 
+} ) ; 
+Q songs.artist 
+Q songs.artist 
+0 songs[O] .artist 
+0 songs[O] .artist 
+Q songs.artist[O] 
+Q songs.artist[O] 
+2) What is missing to output the song's 
+2) What is missing to output the song's 
+popularity to the console? 
+popularity to the console? 
+$ . get ( "/api/songs/123" , 
+$ . get ( "/api/songs/123" , 
+function (song) { 
+function (song) { 
+console . log ( __ ); 
+console . log ( __ ); 
+} ) ; 
+} ) ; 
+Q song[O] .popularity 
+Q song[O] .popularity 
+0 popularity.song 
+0 popularity.song 
+Q song.popularity 
+Q song.popularity 
+3) Why would the fail () callback 
+3) Why would the fail () callback 
+execute? 
+execute? 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+77/100 
+77/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+$ . get ( "/api/songs/123" , 
+$ . get ( "/api/songs/123" , 
+function (song) { 
+function (song) { 
+console . log (song); 
+console . log (song); 
+} ) 
+} ) 
+. fail ( function () { 
+. fail ( function () { 
+console . log ("Fail" ); 
+console . log ("Fail" ); 
+} ) ; 
+} ) ; 
+O Database has only one song 
+O Database has only one song 
+with ID 123 
+with ID 123 
+O Database does not have any 
+O Database does not have any 
+songs 
+songs 
+Database has no room for more 0 songs 
+Database has no room for more 0 songs 
+Adding new songs 
+Adding new songs 
+zyBooks 
+zyBooks 
+The jQuery method $. post () makes a POST request to a web APL However, $. post () is not ideal 
+The jQuery method $. post () makes a POST request to a web APL However, $. post () is not ideal 
+for sending JSON-encoded data. Instead, the jQuery method $. aj ax () POSTs JSON-encoded data 
+for sending JSON-encoded data. Instead, the jQuery method $. aj ax () POSTs JSON-encoded data 
+to a web API. 
+to a web API. 
+The figure below displays a form allowing the user to enter song data. Clicking the Add button results 
+The figure below displays a form allowing the user to enter song data. Clicking the Add button results 
+in the $ . aj ax () method POSTing the JSON-encoded song data from the web form to the Music API. 
+in the $ . aj ax () method POSTing the JSON-encoded song data from the web form to the Music API. 
+Figure 8.5.1 : jQuery $.ajax() method POSTing a new song. 
+Figure 8.5.1 : jQuery $.ajax() method POSTing a new song. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 78/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+<!-- add_song.html --> 
+<!-- add_song.html --> 
+<form> 
+<form> 
+<p > 
+<p > 
+<label for="title">Title: </label> 
+<label for="title">Title: </label> 
+<input type="text" id="title"> 
+<input type="text" id="title"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label for="artist">Artist: </label> 
+<label for="artist">Artist: </label> 
+<input type="text" id="artist"> 
+<input type="text" id="artist"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label for="released">Released: </ label> 
+<label for="released">Released: </ label> 
+<input type="date" id="released"> 
+<input type="date" id="released"> 
+</p > 
+</p > 
+<p > 
+<p > 
+zyBooks 
+zyBooks 
+<label for="popularity" >Popularity: </label> 
+<label for="popularity" >Popularity: </label> 
+<input type="number" min="l" max="lO" 
+<input type="number" min="l" max="lO" 
+id="popularity"> 
+id="popularity"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label for="genre">Genre: </label> 
+<label for="genre">Genre: </label> 
+<input type="text" id="genre" > 
+<input type="text" id="genre" > 
+</p > 
+</p > 
+<input type="button" id="addBtn" value="Add" > 
+<input type="button" id="addBtn" value="Add" > 
+<p id="error" ></p > 
+<p id="error" ></p > 
+</form> 
+</form> 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 79/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+$ ( "#addBtn" ) . on ("click" , function () 
+$ ( "#addBtn" ) . on ("click" , function () 
+} ) ; 
+} ) ; 
+let genre = []; 
+let genre = []; 
+if ($ ( "#genre" ) . val ()) { 
+if ($ ( "#genre" ) . val ()) { 
+II Create an array from comma-separated values 
+II Create an array from comma-separated values 
+genre = $ ("#genre" ) . val () . split ("," ); 
+genre = $ ("#genre" ) . val () . split ("," ); 
+II Create a song object from the form fields 
+II Create a song object from the form fields 
+const song = { 
+const song = { 
+} ; 
+} ; 
+title : $ ("#title" ) . val (), 
+title : $ ("#title" ) . val (), 
+artist : $ ("#artist" ) . val (), 
+artist : $ ("#artist" ) . val (), 
+releaseDate : $ ("#released" ) . val (), 
+releaseDate : $ ("#released" ) . val (), 
+popularity : $ ( "#popularity" ) . val (), 
+popularity : $ ( "#popularity" ) . val (), 
+genre : genre 
+genre : genre 
+II POST JSON-encoded song to Music API 
+II POST JSON-encoded song to Music API 
+$ . ajax ({ 
+$ . ajax ({ 
+type : "POST" , 
+type : "POST" , 
+url : "/api/songs" , 
+url : "/api/songs" , 
+data : JSON .stringify (song ), 
+data : JSON .stringify (song ), 
+contentType : "application/json" 
+contentType : "application/json" 
+}) . done (function (data ) { 
+}) . done (function (data ) { 
+II Reset the form after adding the song 
+II Reset the form after adding the song 
+$ ( "form" ) . trigger ( "reset" ); 
+$ ( "form" ) . trigger ( "reset" ); 
+}) . fail (function (jqXHR) { 
+}) . fail (function (jqXHR) { 
+$ ("#error" ) . html ( "Song could not be added." ); 
+$ ("#error" ) . html ( "Song could not be added." ); 
+} ) ; 
+} ) ; 
+0 Add So g X + 
+0 Add So g X + 
+f- ➔ C © localho s :30O0/add_song.html 
+f- ➔ C © localho s :30O0/add_song.html 
+Add Song 
+Add Song 
+Title= 
+Title= 
+Artist: 
+Artist: 
+Never Let Me Down Again 
+Never Let Me Down Again 
+Depeche Mode 
+Depeche Mode 
+Releas,ed: 0s; 2s /1987 I 
+Releas,ed: 0s; 2s /1987 I 
+Popularity: 6 
+Popularity: 6 
+~--~ 
+~--~ 
+Genre: synthpo,p,ebm 
+Genre: synthpo,p,ebm 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.5.4: POST requests to the Music APL 
+ACTIVITY 8.5.4: POST requests to the Music APL 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+80/100 
+80/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+1) The JSON. stringify () method 
+1) The JSON. stringify () method 
+converts a JavaScript object to a JSON 
+converts a JavaScript object to a JSON 
+string. 
+string. 
+0 True 
+0 True 
+O False 
+O False 
+2) The HTTP request must have the 
+2) The HTTP request must have the 
+header content-Type: 
+header content-Type: 
+application/j son or the web 
+application/j son or the web 
+server will not properly accept the 
+server will not properly accept the 
+JSON-encoded data that is POSTed. 
+JSON-encoded data that is POSTed. 
+0 True 
+0 True 
+O False 
+O False 
+3) The$. aj ax () method returns a 
+3) The$. aj ax () method returns a 
+j qXHR QQuery XMLHttpRequest) 
+j qXHR QQuery XMLHttpRequest) 
+object. 
+object. 
+0 True 
+0 True 
+O False 
+O False 
+4) The j qXHR. done () method's callback 
+4) The j qXHR. done () method's callback 
+function is called before the browser 
+function is called before the browser 
+receives the entire Ajax response. 
+receives the entire Ajax response. 
+0 True 
+0 True 
+0 False 
+0 False 
+5) The j qXHR. error() method's 
+5) The j qXHR. error() method's 
+callback function is called when the 
+callback function is called when the 
+browser receives a 200 response from 
+browser receives a 200 response from 
+the web server. 
+the web server. 
+0 True 
+0 True 
+0 False 
+0 False 
+6) Saving a song with popularity set to 
+6) Saving a song with popularity set to 
+1000 causes the j qXHR. error () 
+1000 causes the j qXHR. error () 
+method's callback function to display 
+method's callback function to display 
+an error message. 
+an error message. 
+0 True 
+0 True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+81/100 
+81/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+7) The code below resets the values of all 
+7) The code below resets the values of all 
+elements in the form. 
+elements in the form. 
+$ ( "form" ) . trigger ("reset" ); 
+$ ( "form" ) . trigger ("reset" ); 
+0 True 
+0 True 
+0 False 
+0 False 
+Updating and deleting songs 
+Updating and deleting songs 
+zyBooks 
+zyBooks 
+The $ . aj ax () method supports GET, POST, PUT, or DELETE requests. The example below uses 
+The $ . aj ax () method supports GET, POST, PUT, or DELETE requests. The example below uses 
+0 
+0 
+$. get () to load a song into a web form, and then uses $ . aj ax () to send a PUT request to update 
+$. get () to load a song into a web form, and then uses $ . aj ax () to send a PUT request to update 
+the song. 
+the song. 
+Figure 8.5.2: jQuery $.ajax() method sending PUT request to update an 
+Figure 8.5.2: jQuery $.ajax() method sending PUT request to update an 
+existing song. 
+existing song. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 82/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+<!-- update_song.html --> 
+<!-- update_song.html --> 
+<form> 
+<form> 
+<p > 
+<p > 
+<label for="songld" >ID: </label> 
+<label for="songld" >ID: </label> 
+<input type="text" id="songld"> 
+<input type="text" id="songld"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label for="title">Title: </label> 
+<label for="title">Title: </label> 
+<input type="text" id="title"> 
+<input type="text" id="title"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label for="artist">Artist: </label> 
+<label for="artist">Artist: </label> 
+<input type="text" id="artist"> 
+<input type="text" id="artist"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label for="released">Released : </label> 
+<label for="released">Released : </label> 
+<input type="date" id="released"> 
+<input type="date" id="released"> 
+</p > 
+</p > 
+<p > 
+<p > 
+zyBooks 
+zyBooks 
+<label for="popularity" >Popularity: </label> 
+<label for="popularity" >Popularity: </label> 
+<input type="number" min="l" max="lO" 
+<input type="number" min="l" max="lO" 
+id="popularity"> 
+id="popularity"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label for="genre">Genre: </label> 
+<label for="genre">Genre: </label> 
+<input type="text" id="genre" > 
+<input type="text" id="genre" > 
+</p > 
+</p > 
+<input type="button" id="updateBtn" value="Update" > 
+<input type="button" id="updateBtn" value="Update" > 
+<p id="error" ></p > 
+<p id="error" ></p > 
+</form> 
+</form> 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 83/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+II Load a song into the web form 
+II Load a song into the web form 
+canst songid = "5fe1097caf3b173148985746" ; 
+canst songid = "5fe1097caf3b173148985746" ; 
+$ . get ( "/api/songs/" + songid, function (song) 
+$ . get ( "/api/songs/" + songid, function (song) 
+} ) ; 
+} ) ; 
+$ ( "#songid" ) . val (song . _id); 
+$ ( "#songid" ) . val (song . _id); 
+$ ( "#title" ) . val (song . title ); 
+$ ( "#title" ) . val (song . title ); 
+$ ( "#artist" ) . val (song . artist); 
+$ ( "#artist" ) . val (song . artist); 
+$ ( "#released" ) . val (song . releaseDate . substring (0, 10 )); 
+$ ( "#released" ) . val (song . releaseDate . substring (0, 10 )); 
+$ ("#popularity" ) . val (song . popularity); 
+$ ("#popularity" ) . val (song . popularity); 
+$ ("#genre" ) . val (song . genre ); 
+$ ("#genre" ) . val (song . genre ); 
+$ ("#updateBtn" ) . on ( "click" , function () { 
+$ ("#updateBtn" ) . on ( "click" , function () { 
+let genre = []; 
+let genre = []; 
+} ) ; 
+} ) ; 
+if ($ ( "#genre" ). val ()) { 
+if ($ ( "#genre" ). val ()) { 
+II Create an array from the comma-separated values 
+II Create an array from the comma-separated values 
+genre = $ ("#genre" ) . val () . split ("," ); 
+genre = $ ("#genre" ) . val () . split ("," ); 
+II Create a song object from the form fields 
+II Create a song object from the form fields 
+canst song = { 
+canst song = { 
+} ; 
+} ; 
+id : $ ("#songid" ) . val (), 
+id : $ ("#songid" ) . val (), 
+title : $ ("#title" ) . val (), 
+title : $ ("#title" ) . val (), 
+artist : $ ("#artist" ) . val () , 
+artist : $ ("#artist" ) . val () , 
+releaseDate : $ ("#released" ) . val (), 
+releaseDate : $ ("#released" ) . val (), 
+popularity : $ ( "#popularity" ) . val (), 
+popularity : $ ( "#popularity" ) . val (), 
+genre : genre 
+genre : genre 
+II Send PUT request with updated song data 
+II Send PUT request with updated song data 
+$ . aj ax ( { 
+$ . aj ax ( { 
+type : "PUT" , 
+type : "PUT" , 
+url : "/api/songs" , 
+url : "/api/songs" , 
+data : JSON .stringify (song ), 
+data : JSON .stringify (song ), 
+contentType : "application/json" 
+contentType : "application/json" 
+}) . done (function (data ) { 
+}) . done (function (data ) { 
+II Successfully updated a song 
+II Successfully updated a song 
+$ ( "form" ) . trigger ( "reset" ); 
+$ ( "form" ) . trigger ( "reset" ); 
+}) . fail (function (jqXHR) { 
+}) . fail (function (jqXHR) { 
+$ ("#error" ) . htrnl ( "The song could not be updated." ); 
+$ ("#error" ) . htrnl ( "The song could not be updated." ); 
+} ) ; 
+} ) ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 84/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+0 Update So g X + 
+0 Update So g X + 
+f- C CD localhost:3000/update_song.html 
+f- C CD localhost:3000/update_song.html 
+Update• So,1ng1 
+Update• So,1ng1 
+ID: 
+ID: 
+Title= 
+Title= 
+Artist 
+Artist 
+I 5fe1 097caf3b1731489857 46 I 
+I 5fe1 097caf3b1731489857 46 I 
+I Never Let Me Oown Ag1ain 
+I Never Let Me Oown Ag1ain 
+I Depeche M,ode 
+I Depeche M,ode 
+Released: i 0 s / 24 / 1'987 I 
+Released: i 0 s / 24 / 1'987 I 
+Popularity: l .... 7 __ ~-1 
+Popularity: l .... 7 __ ~-1 
+Genre: I synthpop,ebrn 
+Genre: I synthpop,ebrn 
+I Update I 
+I Update I 
+The example below uses $. get () to load all song titles into a drop-down list. When the user clicks 
+The example below uses $. get () to load all song titles into a drop-down list. When the user clicks 
+Delete, $ . aj ax () sends a DELETE request to delete the selected song. 
+Delete, $ . aj ax () sends a DELETE request to delete the selected song. 
+Figure 8.5.3: jQuery $.ajax() method sending DELETE request to remove a 
+Figure 8.5.3: jQuery $.ajax() method sending DELETE request to remove a 
+song. 
+song. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 85/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+<!-- delete song.html--> 
+<!-- delete song.html--> 
+<form> 
+<form> 
+<select> 
+<select> 
+</select> 
+</select> 
+<input type="button" value="Delete" 
+<input type="button" value="Delete" 
+id="deleteBtn"> 
+id="deleteBtn"> 
+<p id="error" ></p > 
+<p id="error" ></p > 
+</form> 
+</form> 
+getAllSongs (); 
+getAllSongs (); 
+II Load all songs into the drop-down list 
+II Load all songs into the drop-down list 
+function getAllSongs () { 
+function getAllSongs () { 
+$ . get ( "/api/songs" , function (songs) 
+$ . get ( "/api/songs" , function (songs) 
+let $select = $ ("select" ); 
+let $select = $ ("select" ); 
+$select . html ("" ); 
+$select . html ("" ); 
+songs . forEach (function (song) 
+songs . forEach (function (song) 
+zyBooks 
+zyBooks 
+$select . append ( "<option value='" + song . id + "'>" + 
+$select . append ( "<option value='" + song . id + "'>" + 
+song . title + "</option>" ) 
+song . title + "</option>" ) 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+$ ( "#deleteBtn" ) . on ( "click" , function () { 
+$ ( "#deleteBtn" ) . on ( "click" , function () { 
+} ) ; 
+} ) ; 
+II Get the song ID of the selected song 
+II Get the song ID of the selected song 
+const songid = $ ("select :selected" ) . val (); 
+const songid = $ ("select :selected" ) . val (); 
+$ . ajax ({ 
+$ . ajax ({ 
+type : "DELETE" , 
+type : "DELETE" , 
+url : "/api/songs/" + songid 
+url : "/api/songs/" + songid 
+}) . done (function (data ) 
+}) . done (function (data ) 
+II Successfully deleted song 
+II Successfully deleted song 
+getAllSongs (); 
+getAllSongs (); 
+}) . fail (function (jqXHR) { 
+}) . fail (function (jqXHR) { 
+$ ("#error" ) . html ( "The song could not be deleted." ); 
+$ ("#error" ) . html ( "The song could not be deleted." ); 
+} ) ; 
+} ) ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 86/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+0 Delete Song X + 
+0 Delete Song X + 
+f- ➔ C © localhost:3000/delete_song.html 
+f- ➔ C © localhost:3000/delete_song.html 
+~U_.p_.to_,w_n_F_u_nk _____ v_ I Delete j 
+~U_.p_.to_,w_n_F_u_nk _____ v_ I Delete j 
+Uptown Funk 
+Uptown Funk 
+Hello 
+Hello 
+Super Freak 
+Super Freak 
+Brick Hm.1 se 
+Brick Hm.1 se 
+I PARTICIPATION 8.5.5: PUT and DELETE requests to the Music API. ACTIVITY 
+I PARTICIPATION 8.5.5: PUT and DELETE requests to the Music API. ACTIVITY 
+1) In the examples above, what fields are 
+1) In the examples above, what fields are 
+different in the calls to $. aj ax () 
+different in the calls to $. aj ax () 
+when creating a POST request vs. a 
+when creating a POST request vs. a 
+PUT request? 
+PUT request? 
+0 type 
+0 type 
+0 url 
+0 url 
+O data 
+O data 
+2) In the examples above, which request 
+2) In the examples above, which request 
+verb does not send data in the "data" 
+verb does not send data in the "data" 
+field when calling $. aj ax ()? 
+field when calling $. aj ax ()? 
+Q POST 
+Q POST 
+Q PUT 
+Q PUT 
+Q DELETE 
+Q DELETE 
+3) What effect would the code below have 
+3) What effect would the code below have 
+if placed immediately before the 
+if placed immediately before the 
+songs. forEach ( ... ) loop in the 
+songs. forEach ( ... ) loop in the 
+figure above? 
+figure above? 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+87/100 
+87/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+sangs .sart (functian (a , b ) { 
+sangs .sart (functian (a , b ) { 
+canst titlel = 
+canst titlel = 
+a . title . taLawerCase (); 
+a . title . taLawerCase (); 
+canst title2 = 
+canst title2 = 
+b . title . taLawerCase (); 
+b . title . taLawerCase (); 
+} ) ; 
+} ) ; 
+if (titlel < title2 ) 
+if (titlel < title2 ) 
+return -1; 
+return -1; 
+if (titlel > title2 ) 
+if (titlel > title2 ) 
+return 1 ; 
+return 1 ; 
+return 0 ; 
+return 0 ; 
+0 No effect. 
+0 No effect. 
+The titles in the drop-down list 
+The titles in the drop-down list 
+O would be sorted in ascending (A 
+O would be sorted in ascending (A 
+to Z) order. 
+to Z) order. 
+The titles in the drop-down list 
+The titles in the drop-down list 
+0 would be sorted in descending 
+0 would be sorted in descending 
+(Z to A) order. 
+(Z to A) order. 
+4) In the figure above, why is the 
+4) In the figure above, why is the 
+getAllSongs () function called in the 
+getAllSongs () function called in the 
+done () callback function? 
+done () callback function? 
+O The song is not deleted until 
+O The song is not deleted until 
+getAllSongs () is called. 
+getAllSongs () is called. 
+The done () callback function 
+The done () callback function 
+0 must call at least one other 
+0 must call at least one other 
+function. 
+function. 
+O To remove the deleted song 
+O To remove the deleted song 
+from the drop-down list. 
+from the drop-down list. 
+Keeping the user interface updated 
+Keeping the user interface updated 
+zyBooks 
+zyBooks 
+0 
+0 
+Suppose two users named Bob and Sue view the webpage that lists all songs. Bob deletes a song, 
+Suppose two users named Bob and Sue view the webpage that lists all songs. Bob deletes a song, 
+and the song is removed from Bob's drop-down list of songs. However, the deleted song remains in 
+and the song is removed from Bob's drop-down list of songs. However, the deleted song remains in 
+Sue's drop-down list until Sue reloads the webpage or deletes a song and gets an updated list of 
+Sue's drop-down list until Sue reloads the webpage or deletes a song and gets an updated list of 
+available songs. Keeping a website's user interface consistent or up-to-date when multiple users are 
+available songs. Keeping a website's user interface consistent or up-to-date when multiple users are 
+accessing the same data is a significant challenge for developers. Two general solutions exist: 
+accessing the same data is a significant challenge for developers. Two general solutions exist: 
+1. Polling - The web browser sends periodic requests to the web server asking if the data has 
+1. Polling - The web browser sends periodic requests to the web server asking if the data has 
+changed. 
+changed. 
+2. Pushing - The web server pushes updates to all web browsers as soon as the data is changed 
+2. Pushing - The web server pushes updates to all web browsers as soon as the data is changed 
+on the web server. 
+on the web server. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 88/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Polling is typically implemented with Ajax, but can be problematic: The browser can become out of 
+Polling is typically implemented with Ajax, but can be problematic: The browser can become out of 
+synch with the web server in the time between poll requests. Pushing keeps the browser and server 
+synch with the web server in the time between poll requests. Pushing keeps the browser and server 
+better synchronized. Pushing is implemented with WebSockets or server-sent events (SSE). 
+better synchronized. Pushing is implemented with WebSockets or server-sent events (SSE). 
+I PARTICIPATION 8.5.6: Keeping the UI updated. ACTIVITY D 
+I PARTICIPATION 8.5.6: Keeping the UI updated. ACTIVITY D 
+1) Suppose Bob and Sue access the 
+1) Suppose Bob and Sue access the 
+webpage that displays the drop-down 
+webpage that displays the drop-down 
+list of songs. If Bob deletes a song, and 
+list of songs. If Bob deletes a song, and 
+then Sue selects the same song to 
+then Sue selects the same song to 
+delete, what will Sue see after pressing 
+delete, what will Sue see after pressing 
+Delete? 
+Delete? 
+0 A "404 Not Found" message. 
+0 A "404 Not Found" message. 
+An error message that reads, 
+An error message that reads, 
+O "The song could not be deleted." 
+O "The song could not be deleted." 
+O No error message. 
+O No error message. 
+2) If a developer modifies the above 
+2) If a developer modifies the above 
+example to call getAllSongs () every 
+example to call getAllSongs () every 
+5 seconds to keep the list of available 
+5 seconds to keep the list of available 
+songs current, the developer has 
+songs current, the developer has 
+implemented a __ solution. 
+implemented a __ solution. 
+0 polling 
+0 polling 
+O pushing 
+O pushing 
+3) __ requires the web server to keep a 
+3) __ requires the web server to keep a 
+network connection open to every 
+network connection open to every 
+browser that needs to receive a 
+browser that needs to receive a 
+message. 
+message. 
+0 Polling 
+0 Polling 
+0 Pushing 
+0 Pushing 
+Exploring further: 
+Exploring further: 
+• jQuery _Ajax methods 
+• jQuery _Ajax methods 
+• WebSockets (MON). 
+• WebSockets (MON). 
+• Server-sent events (MON). 
+• Server-sent events (MON). 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+0 
+0 
+89/100 
+89/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 

@@ -1,0 +1,1000 @@
+Cryptographic hash functions 
+Cryptographic hash functions 
+► 
+► 
+Websites must exercise care when storing personal information about users. Numerous high-profile 
+Websites must exercise care when storing personal information about users. Numerous high-profile 
+data breaches confirm that protecting personal data is very difficult to do. To protect users, 
+data breaches confirm that protecting personal data is very difficult to do. To protect users, 
+organizations should store as little sensitive information as possible. 
+organizations should store as little sensitive information as possible. 
+Many individuals are interested in discovering the passwords used by a website's users. Therefore, 
+Many individuals are interested in discovering the passwords used by a website's users. Therefore, 
+user passwords should never be stored as plain text in a database. Instead, developers should use a 
+user passwords should never be stored as plain text in a database. Instead, developers should use a 
+cryptographic hash function to convert passwords into hashes and store only the hashes in the 
+cryptographic hash function to convert passwords into hashes and store only the hashes in the 
+database. A cryptographic hash function is a mathematical algorithm that converts text of any length 
+database. A cryptographic hash function is a mathematical algorithm that converts text of any length 
+into a fixed-length sequence of characters called the hash digest or "hash". Various cryptographic 
+into a fixed-length sequence of characters called the hash digest or "hash". Various cryptographic 
+hash functions exist including MD5, SHA-1, bcrypt, and PBKDF2. 
+hash functions exist including MD5, SHA-1, bcrypt, and PBKDF2. 
+Figure 9.3.1: Hashing various passwords using the MD5 cryptographic hash 
+Figure 9.3.1: Hashing various passwords using the MD5 cryptographic hash 
+function. 
+function. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 25/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+◄ 
+◄ 
+Input 
+Input 
+Hash 
+Hash 
+Function 
+Function 
+zyBooks 
+zyBooks 
+Hash Digest 
+Hash Digest 
+password ~ 5f 4d·cc3b5a,a765d61d8327deb882cf99 
+password ~ 5f 4d·cc3b5a,a765d61d8327deb882cf99 
+pas:.123 ~ 32250170a0dca92d53@c9624f336ca24 
+pas:.123 ~ 32250170a0dca92d53@c9624f336ca24 
+pass123 ! ~ c9d9b8cab32214716ee1b44b3aae2502 
+pass123 ! ~ c9d9b8cab32214716ee1b44b3aae2502 
+Pa ss123 ! ~ 10487c8581423e8b2fbeed2b21c2c c53 
+Pa ss123 ! ~ 10487c8581423e8b2fbeed2b21c2c c53 
+Try 9.3.1: Try generating your own MD5 hashes. 
+Try 9.3.1: Try generating your own MD5 hashes. 
+1. Go to an online MD5 Hash Generator. 
+1. Go to an online MD5 Hash Generator. 
+► 
+► 
+2. Type "password" into the text box and verify the MD5 hash is the same as the 
+2. Type "password" into the text box and verify the MD5 hash is the same as the 
+"password" hash digest in the figure above. 
+"password" hash digest in the figure above. 
+◄ 
+◄ 
+3. Try changing the password by a single character, and notice that the hash completely 
+3. Try changing the password by a single character, and notice that the hash completely 
+changes. 
+changes. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.3.1: Cryptographic hash functions. 
+ACTIVITY 9.3.1: Cryptographic hash functions. 
+1) The length of the hash digest is the 
+1) The length of the hash digest is the 
+same regardless of how many 
+same regardless of how many 
+characters are in the password. 
+characters are in the password. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) All cryptographic hash functions 
+2) All cryptographic hash functions 
+produce the same size hash digest. 
+produce the same size hash digest. 
+Q True 
+Q True 
+O False 
+O False 
+3) Given a hash digest, a clever hacker 
+3) Given a hash digest, a clever hacker 
+might be able to determine the original 
+might be able to determine the original 
+input that created the hash digest. 
+input that created the hash digest. 
+Q True 
+Q True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+► 
+► 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+26/37 
+26/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+4) Two different inputs may exist that will 
+4) Two different inputs may exist that will 
+convert into the same hash digest. 
+convert into the same hash digest. 
+0 True 
+0 True 
+O False 
+O False 
+Hashed passwords and password cracking 
+Hashed passwords and password cracking 
+zyBooks 
+zyBooks 
+0 
+0 
+An authentication system should only store password hashes, not plain text passwords. To 
+An authentication system should only store password hashes, not plain text passwords. To 
+authenticate a user, the authentication system hashes the password submitted by the user and 
+authenticate a user, the authentication system hashes the password submitted by the user and 
+compares the hash with the hash stored in the database. If the two hashes are identical, then the user 
+compares the hash with the hash stored in the database. If the two hashes are identical, then the user 
+provided the correct password. 
+provided the correct password. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.3.2: Verifying passwords by comparing password hashes. 
+ACTIVITY 9.3.2: Verifying passwords by comparing password hashes. 
+New user: pgreen 
+New user: pgreen 
+opensesame 
+opensesame 
+Login attempt: 
+Login attempt: 
+Login attempt: 
+Login attempt: 
+Animation content: 
+Animation content: 
+cryptographic 
+cryptographic 
+hash function 
+hash function 
+pgreen 
+pgreen 
+Open Sesame @ 
+Open Sesame @ 
+pgreen 
+pgreen 
+opensesame © 
+opensesame © 
+Database 
+Database 
+username 
+username 
+bsmith 
+bsmith 
+jwhite 
+jwhite 
+ablack 
+ablack 
+pgreen 
+pgreen 
+passhash 
+passhash 
+F993GH93F1 
+F993GH93F1 
+83B8F2EE48 
+83B8F2EE48 
+49A8EF48D3 
+49A8EF48D3 
+BC029G8A38 
+BC029G8A38 
+75EE39FA90 != BC029G8A38 
+75EE39FA90 != BC029G8A38 
+BC029G8A38 = BC029G8A38 
+BC029G8A38 = BC029G8A38 
+A database is shown with column names username and passhash. The following data is in the 
+A database is shown with column names username and passhash. The following data is in the 
+format username, passhash: 
+format username, passhash: 
+bsmith, F993GH93F1 
+bsmith, F993GH93F1 
+jwhite, 83B8F2EE48 
+jwhite, 83B8F2EE48 
+ablack, 49A8EF48D3 
+ablack, 49A8EF48D3 
+D 
+D 
+A new user is added with the username pgreen and password opensesame. The password is sent 
+A new user is added with the username pgreen and password opensesame. The password is sent 
+through a cryptic hash function and is stored in the table as the following: 
+through a cryptic hash function and is stored in the table as the following: 
+pgreen, BC029G8A38 
+pgreen, BC029G8A38 
+When the user tries to login the tried password is sent through the cryptic hash function and 
+When the user tries to login the tried password is sent through the cryptic hash function and 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 27/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+checked against the passhash stored in the table. If pgreen types in OpenSesame, the hash value is 
+checked against the passhash stored in the table. If pgreen types in OpenSesame, the hash value is 
+75EE39FA90 which does not equal BC029G8A38, the passhash that is stored in the table, so pgreen 
+75EE39FA90 which does not equal BC029G8A38, the passhash that is stored in the table, so pgreen 
+is denied access. 
+is denied access. 
+Animation captions: 
+Animation captions: 
+1. New user's username and password hash is added to the database. 
+1. New user's username and password hash is added to the database. 
+2. User pgreen attempts to login with the wrong password. Hash of "OpenSesame" does not 
+2. User pgreen attempts to login with the wrong password. Hash of "OpenSesame" does not 
+match hash of "opensesame". 
+match hash of "opensesame". 
+3. User pgreen attempts to login with the correct password. Hash of "opensesame" matches 
+3. User pgreen attempts to login with the correct password. Hash of "opensesame" matches 
+hash of "opensesame". 
+hash of "opensesame". 
+If a data breach occurs and an attacker obtains an organization's database of password hashes, the 
+If a data breach occurs and an attacker obtains an organization's database of password hashes, the 
+attacker would be unable to directly convert the hashes back into the users' original passwords. 
+attacker would be unable to directly convert the hashes back into the users' original passwords. 
+However, a determined attacker may use a variety of methods to crack the password hashes. 
+However, a determined attacker may use a variety of methods to crack the password hashes. 
+Password cracking is the process of recovering passwords from data, like the database of a 
+Password cracking is the process of recovering passwords from data, like the database of a 
+compromised website. 
+compromised website. 
+A dictionary attack is a popular password-cracking strategy where the attacker feeds a number of 
+A dictionary attack is a popular password-cracking strategy where the attacker feeds a number of 
+possible passwords, such as words from a dictionary, into a hash function and compares the stolen 
+possible passwords, such as words from a dictionary, into a hash function and compares the stolen 
+hashes to the generated hashes. Passwords are revealed for any matching hashes. Dictionary attacks 
+hashes to the generated hashes. Passwords are revealed for any matching hashes. Dictionary attacks 
+are computationally expensive, so attackers often create precomputed dictionary tables in advance. 
+are computationally expensive, so attackers often create precomputed dictionary tables in advance. 
+Developers use salt to circumvent attacks with precomputed tables. A salt is a random string that is 
+Developers use salt to circumvent attacks with precomputed tables. A salt is a random string that is 
+combined with a password so two identical passwords produce different hashes. Cracking salted 
+combined with a password so two identical passwords produce different hashes. Cracking salted 
+passwords is significantly more challenging because an attacker has to create a table for each salt 
+passwords is significantly more challenging because an attacker has to create a table for each salt 
+value, which is computationally expensive. 
+value, which is computationally expensive. 
+Figure 9.3.2: Using salt to protect against precomputed table attacks. 
+Figure 9.3.2: Using salt to protect against precomputed table attacks. 
+◄ 
+◄ 
+Salt + Password 
+Salt + Password 
+Hash 
+Hash 
+Function Hash Digest 
+Function Hash Digest 
+p4@9s + pass113 - ~ d3ebe55d16b484e616e2c3787aed5c5a 
+p4@9s + pass113 - ~ d3ebe55d16b484e616e2c3787aed5c5a 
+90sk# + pass123 - ~ c77390d36b93bf0a52a650576680c61f 
+90sk# + pass123 - ~ c77390d36b93bf0a52a650576680c61f 
+*s41<2p + pa ss 123 - ~ 9458c6e01f03645daef18cla01dec2fb 
+*s41<2p + pa ss 123 - ~ 9458c6e01f03645daef18cla01dec2fb 
+► 
+► 
+Salt does not necessarily keep attackers from cracking passwords, but strong passwords are less 
+Salt does not necessarily keep attackers from cracking passwords, but strong passwords are less 
+susceptible to dictionary attacks. A strong password is a password that is difficult to guess. A strong 
+susceptible to dictionary attacks. A strong password is a password that is difficult to guess. A strong 
+password has the following characteristics: 
+password has the following characteristics: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 28/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+• Does not contain words found in a dictionary or on the web 
+• Does not contain words found in a dictionary or on the web 
+• Composed of uppercase and lowercase letters, digits, and perhaps punctuation 
+• Composed of uppercase and lowercase letters, digits, and perhaps punctuation 
+• At least 10 characters in length 
+• At least 10 characters in length 
+• Has not been used as a password before on the same website or on any other website 
+• Has not been used as a password before on the same website or on any other website 
+• Does not conform to popular password patterns like an initial capital letter, 2-4 digits at the end, 
+• Does not conform to popular password patterns like an initial capital letter, 2-4 digits at the end, 
+or adding ! at the end 
+or adding ! at the end 
+Figure 9.3.3: Secure password check indicates 'qwerty123!' is a poor 
+Figure 9.3.3: Secure password check indicates 'qwerty123!' is a poor 
+password. 
+password. 
+How secure is your password? 
+How secure is your password? 
+Tip: Try to make your passwords at least 15 characters long Show password: LI 
+Tip: Try to make your passwords at least 15 characters long Show password: LI 
+qwerty123! 
+qwerty123! 
+10 characters containing: ✓ Lowercase Upper case ✓ Numbers ✓ Symbols 
+10 characters containing: ✓ Lowercase Upper case ✓ Numbers ✓ Symbols 
+Time to crack your password: 
+Time to crack your password: 
+0.01 seconds 
+0.01 seconds 
+Review: Oh dear, using that password is like leaving your front 
+Review: Oh dear, using that password is like leaving your front 
+door wide open. Your password is very weak because it contains 
+door wide open. Your password is very weak because it contains 
+a common password, a sequence of characters and a dictionary 
+a common password, a sequence of characters and a dictionary 
+word. 
+word. 
+Your passwords are never stored. Even if they were, we have no idea who you are! 
+Your passwords are never stored. Even if they were, we have no idea who you are! 
+Source: !!lY.1 login.com 
+Source: !!lY.1 login.com 
+◄ 
+◄ 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.3.3: Password hashes. 
+ACTIVITY 9.3.3: Password hashes. 
+1) If an authentication system hashes a 
+1) If an authentication system hashes a 
+user's submitted password and finds 
+user's submitted password and finds 
+the hash is the same as the user's 
+the hash is the same as the user's 
+password hash in the database, then 
+password hash in the database, then 
+the user supplied the __ password. 
+the user supplied the __ password. 
+O correct 
+O correct 
+0 wrong 
+0 wrong 
+O hashed 
+O hashed 
+2) Someone who steals a database of 
+2) Someone who steals a database of 
+password hashes may attempt a __ 
+password hashes may attempt a __ 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/chapter/9/print 
+► 
+► 
+D 
+D 
+0 
+0 
+0 
+0 
+29/37 
+29/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+attack to discover some of the 
+attack to discover some of the 
+passwords. 
+passwords. 
+0 hash 
+0 hash 
+0 dictionary 
+0 dictionary 
+0 salt 
+0 salt 
+3) Is the salt stored with the passwords in 
+3) Is the salt stored with the passwords in 
+the database? 
+the database? 
+0 Yes 
+0 Yes 
+Q No 
+Q No 
+4) Which password is a strong password? 
+4) Which password is a strong password? 
+0 PurpleRain 
+0 PurpleRain 
+0 qwertyuiop 
+0 qwertyuiop 
+0 flBPs03!5a 
+0 flBPs03!5a 
+5) Can a website that stores password 
+5) Can a website that stores password 
+hashes in their database recover lost 
+hashes in their database recover lost 
+passwords for their users? 
+passwords for their users? 
+0 Yes 
+0 Yes 
+Q No 
+Q No 
+2012 Linkedln data breach 
+2012 Linkedln data breach 
+zyBooks 
+zyBooks 
+Russian cybercriminals stole 6.5 million password hashes from Linkedln on June 5, 
+Russian cybercriminals stole 6.5 million password hashes from Linkedln on June 5, 
+2012. The criminals cracked more than 60% of the unique passwords from the hashes 
+2012. The criminals cracked more than 60% of the unique passwords from the hashes 
+and published the passwords in plain text on the web. Linkedln had used the SHA 1 hash 
+and published the passwords in plain text on the web. Linkedln had used the SHA 1 hash 
+function to generate the hashes but did not use salt. The data breach highlights the risk 
+function to generate the hashes but did not use salt. The data breach highlights the risk 
+to users who do not use strong passwords. 
+to users who do not use strong passwords. 
+Source: 2012 Linkedln hack (.Wikig_edia). 
+Source: 2012 Linkedln hack (.Wikig_edia). 
+◄ 
+◄ 
+bcryptjs 
+bcryptjs 
+0 
+0 
+0 
+0 
+0 
+0 
+► 
+► 
+Cryptography researchers have found weaknesses in older hash functions like MD5 and SHA-7 that 
+Cryptography researchers have found weaknesses in older hash functions like MD5 and SHA-7 that 
+make those hash functions vulnerable to attacks. Good practice is to use a strong hash function like 
+make those hash functions vulnerable to attacks. Good practice is to use a strong hash function like 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 30/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+bcrypt, scrypt, or PBKDF2, which purposely execute slowly and make password cracking significantly 
+bcrypt, scrypt, or PBKDF2, which purposely execute slowly and make password cracking significantly 
+more difficult. 
+more difficult. 
+The bcryptjs module is a popular module for implementing authentication in Node.js applications. 
+The bcryptjs module is a popular module for implementing authentication in Node.js applications. 
+bcryptjs is installed using: npm install bcryptj s . The module has two commonly used methods: 
+bcryptjs is installed using: npm install bcryptj s . The module has two commonly used methods: 
+1. The bcrypt.hashSync() method returns a hash value that is 60 characters long for a given 
+1. The bcrypt.hashSync() method returns a hash value that is 60 characters long for a given 
+password and "cost factor". The hash value is created by prepending a random salt to the hash 
+password and "cost factor". The hash value is created by prepending a random salt to the hash 
+digest. 
+digest. 
+2. The bcrypt.compareSync() method takes a password and bcrypt hash value as arguments and 
+2. The bcrypt.compareSync() method takes a password and bcrypt hash value as arguments and 
+returns true if the password is identical to the password used to create the hash value, false 
+returns true if the password is identical to the password used to create the hash value, false 
+otherwise. 
+otherwise. 
+An example bcrypt hash of $2a$10$33M.4Zn7R7k3jHOISHxCe.yUql4vl9mv4/oeiluhHDQZcfySVg6wC 
+An example bcrypt hash of $2a$10$33M.4Zn7R7k3jHOISHxCe.yUql4vl9mv4/oeiluhHDQZcfySVg6wC 
+is composed of four parts: 
+is composed of four parts: 
+1. "2a" indicates the bcrypt algorithm created the hash. 
+1. "2a" indicates the bcrypt algorithm created the hash. 
+2. "1 O" indicates the cost factor is 10. 
+2. "1 O" indicates the cost factor is 10. 
+3. "33M.4Zn7R7k3jHOISHxCe." is the 16-byte salt value encoded to 22 characters. 
+3. "33M.4Zn7R7k3jHOISHxCe." is the 16-byte salt value encoded to 22 characters. 
+4. "yUql4vl9mv4/oeiluhHDQZcfySVg6wC" is the 24-byte hash digest encoded to 31 characters. 
+4. "yUql4vl9mv4/oeiluhHDQZcfySVg6wC" is the 24-byte hash digest encoded to 31 characters. 
+Figure 9.3.4: Generating a hash and comparing hashes with the bcryptjs 
+Figure 9.3.4: Generating a hash and comparing hashes with the bcryptjs 
+module. 
+module. 
+const bcrypt = require ( "bcryptjs" ); 
+const bcrypt = require ( "bcryptjs" ); 
+II Generate 3 hashes for the same password 
+II Generate 3 hashes for the same password 
+for (let c = 0 ; c < 3 ; c ++) { 
+for (let c = 0 ; c < 3 ; c ++) { 
+let hash = bcrypt . hashSync ("opensesame" , 10 ); 
+let hash = bcrypt . hashSync ("opensesame" , 10 ); 
+console . log ("Hash: " + hash ); 
+console . log ("Hash: " + hash ); 
+II Compare hash produced by identical passwords 
+II Compare hash produced by identical passwords 
+const passwordHash = bcrypt . hashSync ( "opensesame" , 
+const passwordHash = bcrypt . hashSync ( "opensesame" , 
+10 ); 
+10 ); 
+if (bcrypt . compareSync ( "opensesame" , passwordHash )) 
+if (bcrypt . compareSync ( "opensesame" , passwordHash )) 
+console . log ("Same!" ); 
+console . log ("Same!" ); 
+else { 
+else { 
+console . log ("Not the same" ); 
+console . log ("Not the same" ); 
+Hash: 
+Hash: 
+$2a$10$33M.4Zn7R7k3jHOISHxCe.yUqI4vl9mv4 / oeiLuhHDQZcfySVg6wC 
+$2a$10$33M.4Zn7R7k3jHOISHxCe.yUqI4vl9mv4 / oeiLuhHDQZcfySVg6wC 
+Hash: 
+Hash: 
+$2a$10$ByrTcHizkol25klWOnlV2egFI3DdRzo9 . xrjal/ IyiaKd8X5diFpi 
+$2a$10$ByrTcHizkol25klWOnlV2egFI3DdRzo9 . xrjal/ IyiaKd8X5diFpi 
+Hash: 
+Hash: 
+$2a$10$cd . MX 7Ubbm3n9Lfc8ilrgeYw3MRpJ512fUtPq4kHEQyhI8wpJ8LPq 
+$2a$10$cd . MX 7Ubbm3n9Lfc8ilrgeYw3MRpJ512fUtPq4kHEQyhI8wpJ8LPq 
+Same! 
+Same! 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 31/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.3.4: Password hashing with bcryptjs. 
+ACTIVITY 9.3.4: Password hashing with bcryptjs. 
+1) 
+1) 
+2) 
+2) 
+3) 
+3) 
+Does bcrypt. hashSync () always 
+Does bcrypt. hashSync () always 
+generate a unique hash for the same 
+generate a unique hash for the same 
+password and cost factor? 
+password and cost factor? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+The larger the cost factor passed to 
+The larger the cost factor passed to 
+bcrypt. hashSync (),the __ time 
+bcrypt. hashSync (),the __ time 
+bcrypt.hashSync() takesto 
+bcrypt.hashSync() takesto 
+produce a hash value. 
+produce a hash value. 
+0 less 
+0 less 
+0 more 
+0 more 
+What does the code below output to 
+What does the code below output to 
+the consolel 
+the consolel 
+canst hash 
+canst hash 
+bcrypt . hashSync ( "qwerty" , 10 ); 
+bcrypt . hashSync ( "qwerty" , 10 ); 
+if 
+if 
+(bcrypt . compareSync ( "Qwerty" , 
+(bcrypt . compareSync ( "Qwerty" , 
+hash )) { 
+hash )) { 
+console . log ( "Same!" ); 
+console . log ( "Same!" ); 
+else { 
+else { 
+console . log ("Not the same" ); 
+console . log ("Not the same" ); 
+0 Same! 
+0 Same! 
+0 Not the same 
+0 Not the same 
+Using a database 
+Using a database 
+zyBooks 
+zyBooks 
+D 
+D 
+D 
+D 
+D 
+D 
+D ► 
+D ► 
+The Node.js project in the figure below creates a web API that stores usernames, password hashes, 
+The Node.js project in the figure below creates a web API that stores usernames, password hashes, 
+and statuses in a MongoDB database. 
+and statuses in a MongoDB database. 
+• The/ api/user route accepts a username, password, and status in a POST request. The 
+• The/ api/user route accepts a username, password, and status in a POST request. The 
+bcrypt. hashSync () method generates a password hash, which is saved with the username 
+bcrypt. hashSync () method generates a password hash, which is saved with the username 
+and status to the database. 
+and status to the database. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 32/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+• The/ api/ auth route accepts a username and password in a POST request. The 
+• The/ api/ auth route accepts a username and password in a POST request. The 
+bcrypt. compare Sync () method compares the password hash from the provided password 
+bcrypt. compare Sync () method compares the password hash from the provided password 
+with the password hash in the database. If the password is correct, the route returns a JWT. 
+with the password hash in the database. If the password is correct, the route returns a JWT. 
+• The/ api/ status route accepts a GET request and expects the X-Auth header to contain a 
+• The/ api/ status route accepts a GET request and expects the X-Auth header to contain a 
+valid JWT. The route returns a JSON-encoded list of usernames and statuses for all users in the 
+valid JWT. The route returns a JSON-encoded list of usernames and statuses for all users in the 
+database. 
+database. 
+Figure 9.3.5: Node.js project uses token-based authentication and password 
+Figure 9.3.5: Node.js project uses token-based authentication and password 
+hashing with bcryptjs. 
+hashing with bcryptjs. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 33/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+myproject 
+myproject 
+api 
+api 
+L_ users. j s 
+L_ users. j s 
+models 
+models 
+L_ user.js 
+L_ user.js 
+node modules 
+node modules 
+~ bcryptjs 
+~ bcryptjs 
+~ express 
+~ express 
+~ mongoose L jwt-simple 
+~ mongoose L jwt-simple 
+etc . .. 
+etc . .. 
+db.js 
+db.js 
+~ package . json 
+~ package . json 
+L_ server. j s 
+L_ server. j s 
+II modelsluser.js 
+II modelsluser.js 
+const db = require ( " .. /db" ); 
+const db = require ( " .. /db" ); 
+II Create a model from the schema 
+II Create a model from the schema 
+const User = db . model ( "User" , { 
+const User = db . model ( "User" , { 
+username : type : String, required : 
+username : type : String, required : 
+true }, 
+true }, 
+passwordHash : 
+passwordHash : 
+true }, 
+true }, 
+status : 
+status : 
+} ) ; 
+} ) ; 
+module . exports 
+module . exports 
+II db.js 
+II db.js 
+type : String, required : 
+type : String, required : 
+String 
+String 
+User; 
+User; 
+zyBooks 
+zyBooks 
+const mongoose = require ("mongoose" ); 
+const mongoose = require ("mongoose" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+module . exports = mongoose ; 
+module . exports = mongoose ; 
+II server.js 
+II server.js 
+const express = require ("express" ); 
+const express = require ("express" ); 
+const bodyParser = require ("body-parser" ); 
+const bodyParser = require ("body-parser" ); 
+const User = require ("./models/user" ); 
+const User = require ("./models/user" ); 
+const app = express (); 
+const app = express (); 
+const router = express .Router (); 
+const router = express .Router (); 
+router . use (bodyParser . urlencoded ( 
+router . use (bodyParser . urlencoded ( 
+{ extended : false })); 
+{ extended : false })); 
+router . use ("/api" , require ("./api/users" )); 
+router . use ("/api" , require ("./api/users" )); 
+app . use (router); 
+app . use (router); 
+app . listen (3000); 
+app . listen (3000); 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 34/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+zyBooks 
+II api/users.js 
+II api/users.js 
+canst jwt = require ("jwt-simple 
+canst jwt = require ("jwt-simple 
+canst User = 
+canst User = 
+require ( " .. /models/user" ); 
+require ( " .. /models/user" ); 
+canst router = 
+canst router = 
+require ("express" ) . Router (); 
+require ("express" ) . Router (); 
+canst bcrypt = require ("bcryptj: 
+canst bcrypt = require ("bcryptj: 
+II For encoding/decoding JWT 
+II For encoding/decoding JWT 
+canst secret = "supersecret" ; 
+canst secret = "supersecret" ; 
+II Add a new user to the databa . 
+II Add a new user to the databa . 
+router . post ("/user" , function (ri 
+router . post ("/user" , function (ri 
+res) 
+res) 
+if (! req . body . username I I 
+if (! req . body . username I I 
+! req . body . password) { 
+! req . body . password) { 
+res . status (400) . json ({ er: 
+res . status (400) . json ({ er: 
+"Missing username and/1 
+"Missing username and/1 
+password" }); 
+password" }); 
+return ; 
+return ; 
+// Create a hash for the sub1 
+// Create a hash for the sub1 
+password 
+password 
+canst hash = 
+canst hash = 
+bcrypt . hashSync (req . body . passwo: 
+bcrypt . hashSync (req . body . passwo: 
+10 ); 
+10 ); 
+canst newUser = new User ({ 
+canst newUser = new User ({ 
+username : req . body . usi 
+username : req . body . usi 
+passwordHash : hash, 
+passwordHash : hash, 
+status: req . body . st, 
+status: req . body . st, 
+} ) ; 
+} ) ; 
+newUser . save (function (err) 
+newUser . save (function (err) 
+if (err) { 
+if (err) { 
+res . status (400) . send (e: 
+res . status (400) . send (e: 
+else { 
+else { 
+res . sendStatus (201); 
+res . sendStatus (201); 
+Created 
+Created 
+} 
+} 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+I I Sends a token when given val. 
+I I Sends a token when given val. 
+username/password 
+username/password 
+router . post ("/auth" , function (ri 
+router . post ("/auth" , function (ri 
+res) { 
+res) { 
+if (! req . body . username I I 
+if (! req . body . username I I 
+! req . body . password) { 
+! req . body . password) { 
+res . status (401) . json ({ er: 
+res . status (401) . json ({ er: 
+"Missing username and/1 
+"Missing username and/1 
+password" }); 
+password" }); 
+return ; 
+return ; 
+35/37 
+35/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+zyBooks 
+II Get user from the databas, 
+II Get user from the databas, 
+User . findOne ({ usernarne : 
+User . findOne ({ usernarne : 
+req . body . usernarne }, function (e: 
+req . body . usernarne }, function (e: 
+user) { 
+user) { 
+if (err) 
+if (err) 
+res . status (400) . send (e: 
+res . status (400) . send (e: 
+else if (! user) 
+else if (! user) 
+II Username not in the 
+II Username not in the 
+database 
+database 
+r es . status (4 01 ) . json ({ 
+r es . status (4 01 ) . json ({ 
+error : "Bad usernarne " }); 
+error : "Bad usernarne " }); 
+else { 
+else { 
+II Does given password 
+II Does given password 
+match the database password has 
+match the database password has 
+if 
+if 
+(bcrypt . cornpareSync (req . body . pa: 
+(bcrypt . cornpareSync (req . body . pa: 
+user . passwordHash )) { 
+user . passwordHash )) { 
+II Send back a toke 
+II Send back a toke 
+contains the user's username 
+contains the user's username 
+const token = jwt . e1 
+const token = jwt . e1 
+usernarne : user . usernarne }, secri 
+usernarne : user . usernarne }, secri 
+res . j son ( { token : t< 
+res . j son ( { token : t< 
+} ) ; 
+} ) ; 
+else 
+else 
+res . status (401) . jso1 
+res . status (401) . jso1 
+error : "Bad password" }); 
+error : "Bad password" }); 
+} ) ; 
+} ) ; 
+} 
+} 
+} ) ; 
+} ) ; 
+II Gets the status of all users 
+II Gets the status of all users 
+given a valid token 
+given a valid token 
+router . get ("/status" , function (: 
+router . get ("/status" , function (: 
+res) { 
+res) { 
+I I Check if the X-Auth heade. 
+I I Check if the X-Auth heade. 
+set 
+set 
+if (! req . headers [ "x-auth" ]) 
+if (! req . headers [ "x-auth" ]) 
+return 
+return 
+res . status (401) . json ({ error : "M· 
+res . status (401) . json ({ error : "M· 
+X-Auth header" }); 
+X-Auth header" }); 
+} 
+} 
+II X-Auth should contain the 
+II X-Auth should contain the 
+const token = req . headers [ "x· 
+const token = req . headers [ "x· 
+auth" ]; 
+auth" ]; 
+try { 
+try { 
+const decoded = 
+const decoded = 
+jwt . decode (token , secret); 
+jwt . decode (token , secret); 
+II Send back all username 
+II Send back all username 
+status fields 
+status fields 
+User . find ({}, " usernarne s 
+User . find ({}, " usernarne s 
+function (err, users) { 
+function (err, users) { 
+res . json (users); 
+res . json (users); 
+~---''· 
+~---''· 
+36/37 
+36/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+I 
+I 
+zyBooks 
+zyBooks 
+I 
+I 
+I 
+I 
+J , 
+J , 
+catch (ex ) 
+catch (ex ) 
+res .status (401) . json ({ er: 
+res .status (401) . json ({ er: 
+"Invalid JWT" } ) ; I PARTICIPATION 9.3.5: Securing users' passwords. ACTIVITY 
+"Invalid JWT" } ) ; I PARTICIPATION 9.3.5: Securing users' passwords. ACTIVITY 
+I module . exports = router; 
+I module . exports = router; 
+Which of these techni ues should develo ers use to im rove securit of an authentication 
+Which of these techni ues should develo ers use to im rove securit of an authentication 
+system? 
+system? 
+7) Use HTTPS for login webpages. 
+7) Use HTTPS for login webpages. 
+0 Use 
+0 Use 
+0 Don't use 
+0 Don't use 
+2) Display an "account not found" 
+2) Display an "account not found" 
+message when a user attempts to 
+message when a user attempts to 
+authenticate with an email address 
+authenticate with an email address 
+that is not in the database. 
+that is not in the database. 
+0 Use 
+0 Use 
+0 Don't use 
+0 Don't use 
+3) Provide a password recovery 
+3) Provide a password recovery 
+mechanism. 
+mechanism. 
+0 Use 
+0 Use 
+0 Don't use 
+0 Don't use 
+4) Force users to answer security 
+4) Force users to answer security 
+questions when creating an account 
+questions when creating an account 
+that can be asked when the user wants 
+that can be asked when the user wants 
+to reset a password. 
+to reset a password. 
+0 Use 
+0 Use 
+0 Don't use 
+0 Don't use 
+5) Financial websites should only log 
+5) Financial websites should only log 
+users out when they click the Logout 
+users out when they click the Logout 
+link. 
+link. 
+0 Use 
+0 Use 
+0 Don't use 
+0 Don't use 
+6) Temporarily disable an account after a 
+6) Temporarily disable an account after a 
+preset number of unsuccessful login 
+preset number of unsuccessful login 
+attempts. 
+attempts. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+37/37 37/37 

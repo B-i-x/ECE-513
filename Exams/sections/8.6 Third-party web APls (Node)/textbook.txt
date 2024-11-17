@@ -1,0 +1,629 @@
+Introduction 
+Introduction 
+Many organizations have created public web APls that provide access to the organization's data or the 
+Many organizations have created public web APls that provide access to the organization's data or the 
+user's data that is stored by the organization. Ex: The Google Maps API provides applications 
+user's data that is stored by the organization. Ex: The Google Maps API provides applications 
+information about geographic locations, and the lnstagram API allows applications access to photos 
+information about geographic locations, and the lnstagram API allows applications access to photos 
+shared on lnstagram. Public APls on GitHub.com lists thousands of free, public web APls. 
+shared on lnstagram. Public APls on GitHub.com lists thousands of free, public web APls. 
+A third-party web AP/ is a public web API that is used by a web application to perform some 
+A third-party web AP/ is a public web API that is used by a web application to perform some 
+operation. ''Third-party" refers to a person or organization that is neither the web application using the 
+operation. ''Third-party" refers to a person or organization that is neither the web application using the 
+API nor the user using the web application, which are the "first" and "second" parties. Websites rely on 
+API nor the user using the web application, which are the "first" and "second" parties. Websites rely on 
+third-party web APls to integrate with social media, obtain maps and weather data, or access 
+third-party web APls to integrate with social media, obtain maps and weather data, or access 
+collections of data. 
+collections of data. 
+To use a third-party web API, a developer usually registers with the third party to obtain an API key. 
+To use a third-party web API, a developer usually registers with the third party to obtain an API key. 
+Third parties require an API key for several reasons: 
+Third parties require an API key for several reasons: 
+• The API key identifies who or what application is using the web API. 
+• The API key identifies who or what application is using the web API. 
+• The API key helps the third party limit the number of requests made to the API in a fixed time 
+• The API key helps the third party limit the number of requests made to the API in a fixed time 
+period or may be used to charge a developer a fee for additional requests. 
+period or may be used to charge a developer a fee for additional requests. 
+• To obtain an API key, developers must agree to restrictions the third party places on data 
+• To obtain an API key, developers must agree to restrictions the third party places on data 
+obtained from the web API. 
+obtained from the web API. 
+This material discusses third-party web APls that are RESTful. A RESTfu/ web AP/ is a web API that is 
+This material discusses third-party web APls that are RESTful. A RESTfu/ web AP/ is a web API that is 
+called with a URL that specifies API parameters and returns JSON or XML containing the API data. Ex: 
+called with a URL that specifies API parameters and returns JSON or XML containing the API data. Ex: 
+The URL http://linkedin.com/api/article?id=123 specifies the article ID 123, so the article would be 
+The URL http://linkedin.com/api/article?id=123 specifies the article ID 123, so the article would be 
+returned formatted in JSON. Some APls are SOAP-based, which are generally more complex to use 
+returned formatted in JSON. Some APls are SOAP-based, which are generally more complex to use 
+than RESTful web APls. And some APls, like the Google Maps API, require developers to use a specific 
+than RESTful web APls. And some APls, like the Google Maps API, require developers to use a specific 
+JavaScript library. 
+JavaScript library. 
+Third-party web APls may be called from the web server or the web browser. This material shows how 
+Third-party web APls may be called from the web server or the web browser. This material shows how 
+to call web APls from an Express web server. 
+to call web APls from an Express web server. 
+Figure 8.6.1: Calling third-party web API from the web browser or web server. 
+Figure 8.6.1: Calling third-party web API from the web browser or web server. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 90/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+request 
+request 
+response 
+response 
+Web browser 
+Web browser 
+Node.js. 
+Node.js. 
+Python, 
+Python, 
+elC. 
+elC. 
+Web server 
+Web server 
+API 
+API 
+request 
+request 
+zyBooks 
+zyBooks 
+API 
+API 
+request 
+request 
+____ ,G 
+____ ,G 
+API 
+API 
+response 
+response 
+Third party 
+Third party 
+1-------18 
+1-------18 
+Web browser 
+Web browser 
+◄ 
+◄ 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.6.1: Third-party web APls. 
+ACTIVITY 8.6.1: Third-party web APls. 
+1) Information from a third-party web API 
+1) Information from a third-party web API 
+will reach the browser faster if the 
+will reach the browser faster if the 
+browser calls the web API directly 
+browser calls the web API directly 
+instead of the web server calling the 
+instead of the web server calling the 
+web API. 
+web API. 
+O True 
+O True 
+0 False 
+0 False 
+2) For a third-party web API requiring an 
+2) For a third-party web API requiring an 
+API key, the API key must be 
+API key, the API key must be 
+transmitted for every API request. 
+transmitted for every API request. 
+0 True 
+0 True 
+O False 
+O False 
+3) When the browser makes an API 
+3) When the browser makes an API 
+request to a third-party web API, the 
+request to a third-party web API, the 
+web API key can be kept secret from 
+web API key can be kept secret from 
+prying eyes. 
+prying eyes. 
+0 True 
+0 True 
+O False 
+O False 
+API 
+API 
+response 
+response 
+https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/chapter/8/print 
+Third party 
+Third party 
+► 
+► 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+91/100 
+91/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+4) Many web APls charge a fee to the 
+4) Many web APls charge a fee to the 
+developer after a limited number of 
+developer after a limited number of 
+requests have been made in a 24-hour 
+requests have been made in a 24-hour 
+period. 
+period. 
+0 True 
+0 True 
+0 False 
+0 False 
+5) Developers always use jQuery to call 
+5) Developers always use jQuery to call 
+third-party web APls from the web 
+third-party web APls from the web 
+server. 
+server. 
+0 True 
+0 True 
+O False 
+O False 
+Weather API 
+Weather API 
+zyBooks 
+zyBooks 
+OpenWeatherMap provides a free Weather API providing current weather data, forecasts, and 
+OpenWeatherMap provides a free Weather API providing current weather data, forecasts, and 
+historical data. Developers must register at Qpenweathermap.org for an API key that must be 
+historical data. Developers must register at Qpenweathermap.org for an API key that must be 
+transmitted in all API requests. 
+transmitted in all API requests. 
+0 
+0 
+0 
+0 
+The OpenWeatherMap website provides documentation explaining how to use the Weather API using 
+The OpenWeatherMap website provides documentation explaining how to use the Weather API using 
+GET requests with various query string parameters. The API endpoint 
+GET requests with various query string parameters. The API endpoint 
+http:// api. openweathermap. org/data/2. 5/weather returns the current weather based on 
+http:// api. openweathermap. org/data/2. 5/weather returns the current weather based on 
+the following query string parameters: 
+the following query string parameters: 
+• zip - Five digit US ZIP code 
+• zip - Five digit US ZIP code 
+• units - Standard, metric, or imperial units to use for measurements like temperature and wind 
+• units - Standard, metric, or imperial units to use for measurements like temperature and wind 
+speed 
+speed 
+• appid - Developer's API key 
+• appid - Developer's API key 
+Other parameters are documented in the OpenWeatherMap website. The Weather API returns weather 
+Other parameters are documented in the OpenWeatherMap website. The Weather API returns weather 
+data in JSON format by default. 
+data in JSON format by default. 
+Figure 8.6.2: GET request to obtain the current weather for ZIP 90210. 
+Figure 8.6.2: GET request to obtain the current weather for ZIP 90210. 
+http:// api .openweathermap. org/ data/2. 5/weather? 
+http:// api .openweathermap. org/ data/2. 5/weather? 
+zip=9021 O&units=imperial&appid=APIKEY 
+zip=9021 O&units=imperial&appid=APIKEY 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 92/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+{ 
+{ 
+} 
+} 
+zyBooks 
+zyBooks 
+"coord " : { 
+"coord " : { 
+"lon " :- 118.4, -- City's geo location "lat " :34.07 ----
+"lon " :- 118.4, -- City's geo location "lat " :34.07 ----
+}, 
+}, 
+"weather " : [ 
+"weather " : [ 
+{ 
+{ 
+"id " :800, 
+"id " :800, 
+"main " : "Clear ", / Overall description 
+"main " : "Clear ", / Overall description 
+"description" : "clear sky", 
+"description" : "clear sky", 
+"icon " : "01d " 
+"icon " : "01d " 
+} 
+} 
+], 
+], 
+"base " : "cmc stations ", 
+"base " : "cmc stations ", 
+"main " : { / Degrees Fahrenheit 
+"main " : { / Degrees Fahrenheit 
+"temp " : 75. 61 , N' 
+"temp " : 75. 61 , N' 
+"pressure " : 1017 ' Percent humidity 
+"pressure " : 1017 ' Percent humidity 
+"humidity " :14, .....,,.,--
+"humidity " :14, .....,,.,--
+"temp min " : 60. 8, ~ Minimum and maximum 
+"temp min " : 60. 8, ~ Minimum and maximum 
+"temp_max " : 82 .4 temps at the moment 
+"temp_max " : 82 .4 temps at the moment 
+}, 
+}, 
+"wind " : { .,,,,-- Miles per hour 
+"wind " : { .,,,,-- Miles per hour 
+"speed " : 3.36 
+"speed " : 3.36 
+}, 
+}, 
+"clouds " :{ _.- Percent cloudy 
+"clouds " :{ _.- Percent cloudy 
+"all " :1 ~ 
+"all " :1 ~ 
+}, 
+}, 
+"id " : 5328041 , .,,,,-- City 
+"id " : 5328041 , .,,,,-- City 
+"name " : "Beverly Hills", 
+"name " : "Beverly Hills", 
+"cod " :200 
+"cod " :200 
+Try 8.6.1: Try OpenWeatherMap's API in your web browser. 
+Try 8.6.1: Try OpenWeatherMap's API in your web browser. 
+1. Go to QQenweathermaQ.org0 
+1. Go to QQenweathermaQ.org0 
+2. Sign up for an account. 
+2. Sign up for an account. 
+f · Try the link: http:/laQi.OQenweathermaQ.org/data/2.5/weather? 
+f · Try the link: http:/laQi.OQenweathermaQ.org/data/2.5/weather? 
+ziQ=9021 0&units=imQerial&aQQid=APIKEY to make an API request for the weather with 
+ziQ=9021 0&units=imQerial&aQQid=APIKEY to make an API request for the weather with 
+ZIP 90210. An error message indicating an invalid API key was used should be 
+ZIP 90210. An error message indicating an invalid API key was used should be 
+returned. 
+returned. 
+4. Replace APIKEY in the URL'.s query string with your API key, and reload the webpage. 
+4. Replace APIKEY in the URL'.s query string with your API key, and reload the webpage. 
+The JSON-encoded weather information for 90210 should be displayed. 
+The JSON-encoded weather information for 90210 should be displayed. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+► 
+► 
+93/100 
+93/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+5. Change the ZIP code in the URL'.s query string to your ZIP code, and reload the URL. 
+5. Change the ZIP code in the URL'.s query string to your ZIP code, and reload the URL. 
+I PARTICIPATION 8.6.2: The Weather APL ACTIVITY D 
+I PARTICIPATION 8.6.2: The Weather APL ACTIVITY D 
+1) What request method does the 
+1) What request method does the 
+Weather API expect in an API request 
+Weather API expect in an API request 
+for the current weather data? 
+for the current weather data? 
+0 POST 
+0 POST 
+◄ Q PUT 
+◄ Q PUT 
+Q GET 
+Q GET 
+2) What "units" parameter value would 
+2) What "units" parameter value would 
+make the Weather API return the 
+make the Weather API return the 
+temperature in Celsius? 
+temperature in Celsius? 
+0 imperial 
+0 imperial 
+O metric 
+O metric 
+0 standard 
+0 standard 
+3) Does the Weather API support finding 
+3) Does the Weather API support finding 
+the current weather by city name? 
+the current weather by city name? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+Calling the Weather API from the web server 
+Calling the Weather API from the web server 
+0 
+0 
+► 
+► 
+0 
+0 
+0 
+0 
+The Weather API may be called from an Express web server using the node-fetch module. The nodefetch module imitates window. fetch, which implements the Fetch API to make HTTP requests. The 
+The Weather API may be called from an Express web server using the node-fetch module. The nodefetch module imitates window. fetch, which implements the Fetch API to make HTTP requests. The 
+node-fetch module is installed using: npm install node-fetch. 
+node-fetch module is installed using: npm install node-fetch. 
+The animation below uses the node-fetch module to request the weather for ZIP 90210. The 
+The animation below uses the node-fetch module to request the weather for ZIP 90210. The 
+URLSearchParams class is used to create query string parameters for the web APl's URL. The fetch() 
+URLSearchParams class is used to create query string parameters for the web APl's URL. The fetch() 
+method sends an HTTP request to the specified URL and returns a Promise object. The Promise 
+method sends an HTTP request to the specified URL and returns a Promise object. The Promise 
+object's then () method is passed arrow functions that convert the JSON response into JavaScript 
+object's then () method is passed arrow functions that convert the JSON response into JavaScript 
+objects and then pass the JavaScript objects to Pug for rendering a webpage. 
+objects and then pass the JavaScript objects to Pug for rendering a webpage. 
+For the animation code to work properly in an Express server, the "APIKEY" string must be replaced 
+For the animation code to work properly in an Express server, the "APIKEY" string must be replaced 
+with an actual API key. 
+with an actual API key. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 94/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 
+ACTIVITY 
+8.6.3: Calling the Weather API from an Express server with the nodefetch module. D 
+8.6.3: Calling the Weather API from an Express server with the nodefetch module. D 
+canst fetch = require ("node-fetch" ); 
+canst fetch = require ("node-fetch" ); 
+app . get ( "/weather" , function (req, res) 
+app . get ( "/weather" , function (req, res) 
+canst zip = 90210 ; 
+canst zip = 90210 ; 
+canst params = new URLSearchParams ({ 
+canst params = new URLSearchParams ({ 
+zip : zip, 
+zip : zip, 
+units : "imperial" , 
+units : "imperial" , 
+appid : "APIKEY" }); 
+appid : "APIKEY" }); 
+fetch ("http://api.openweathermap.org/data/2.5/weather?" + params ) 
+fetch ("http://api.openweathermap.org/data/2.5/weather?" + params ) 
+. then (response => response . json ()) 
+. then (response => response . json ()) 
+} ) ; 
+} ) ; 
+. then (data => { 
+. then (data => { 
+canst locals = 
+canst locals = 
+data : data , 
+data : data , 
+zip : zip 
+zip : zip 
+} ; 
+} ; 
+res . render ("weather" , locals); 
+res . render ("weather" , locals); 
+} ) 
+} ) 
+. catch (error => console . log (error)) 
+. catch (error => console . log (error)) 
+title Weather 
+title Weather 
+body 
+body 
+h2 Weather for #{zip} 
+h2 Weather for #{zip} 
+p Current temp : 
+p Current temp : 
+I #{data.main.temp} °F 
+I #{data.main.temp} °F 
+p Description: 
+p Description: 
+I #{data.weather[0) .description} 
+I #{data.weather[0) .description} 
+p Humidity: 
+p Humidity: 
+I #{data.main.humidity} % 
+I #{data.main.humidity} % 
+Animation content: 
+Animation content: 
+A JavaScript block is shown: 
+A JavaScript block is shown: 
+const fetch = require("node-fetch"); 
+const fetch = require("node-fetch"); 
+app.get("/weather", function(req, res) { 
+app.get("/weather", function(req, res) { 
+const zip= 9021 O; 
+const zip= 9021 O; 
+const params = new URLSearchParams({ 
+const params = new URLSearchParams({ 
+zip: zip, 
+zip: zip, 
+units: "imperial", 
+units: "imperial", 
+appid: "APIKEY"}); 
+appid: "APIKEY"}); 
+weather.pug 
+weather.pug 
+fetch("http:// api .openweatherma p.org/ data/2. 5/weather?" + para ms) 
+fetch("http:// api .openweatherma p.org/ data/2. 5/weather?" + para ms) 
+.then(response => response.json()) 
+.then(response => response.json()) 
+.then(data => { 
+.then(data => { 
+const locals = { 
+const locals = { 
+data: data, 
+data: data, 
+zip: zip 
+zip: zip 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+Web browser 
+Web browser 
+http://localhost:3000/weathe1 
+http://localhost:3000/weathe1 
+Weather for 90210 
+Weather for 90210 
+Current temp: 53.2 °F 
+Current temp: 53.2 °F 
+Description: clear sky 
+Description: clear sky 
+Humidity: 71% 
+Humidity: 71% 
+GET 
+GET 
+/weather <html 
+/weather <html 
+Web server 
+Web server 
+zip=90210 
+zip=90210 
+units=imperial 
+units=imperial 
+appid=APIKEY 
+appid=APIKEY 
+{jsor 
+{jsor 
+OpenWeatherMap 
+OpenWeatherMap 
+95/100 
+95/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+}; 
+}; 
+res.render("weather", locals); 
+res.render("weather", locals); 
+}) 
+}) 
+.catch(error => console.log(error)) 
+.catch(error => console.log(error)) 
+}); 
+}); 
+A block of Pug called weather.pug is also shown: 
+A block of Pug called weather.pug is also shown: 
+title Weather 
+title Weather 
+body 
+body 
+h2 Weather for #{zip} 
+h2 Weather for #{zip} 
+p Current temp: 
+p Current temp: 
+I #{data.main.temp} °F 
+I #{data.main.temp} °F 
+p Description: 
+p Description: 
+I #{data.weather[0].description} 
+I #{data.weather[0].description} 
+p Humidity: 
+p Humidity: 
+I #{data.main.humidity}% 
+I #{data.main.humidity}% 
+zyBooks 
+zyBooks 
+A web browser with the URL http://localhost:3000/weather sends a GET request to the web server 
+A web browser with the URL http://localhost:3000/weather sends a GET request to the web server 
+for /weather. The web server sends a request to the OpenWeatherMap API with the following 
+for /weather. The web server sends a request to the OpenWeatherMap API with the following 
+parameters: 
+parameters: 
+zip=90210 
+zip=90210 
+units=imperial 
+units=imperial 
+appid=APIKEY 
+appid=APIKEY 
+The API sends back a JSON encoded file with the weather for the zip 90210 to the web server. The 
+The API sends back a JSON encoded file with the weather for the zip 90210 to the web server. The 
+web server sends the web browser an html file that displays the following on the screen: 
+web server sends the web browser an html file that displays the following on the screen: 
+Weather for 9021 0 
+Weather for 9021 0 
+Current temp: 53.2 °F 
+Current temp: 53.2 °F 
+Description: clear sky 
+Description: clear sky 
+Humidity: 71 % 
+Humidity: 71 % 
+Animation captions: 
+Animation captions: 
+1. Web browser requests "/weather" from Express web server, which triggers the server's GET 
+1. Web browser requests "/weather" from Express web server, which triggers the server's GET 
+route. 
+route. 
+2. The URLSearchParams object creates a query string with the given parameters and values. 
+2. The URLSearchParams object creates a query string with the given parameters and values. 
+3. Web server uses the node-fetch module to generate a GET request for the current weather: 
+3. Web server uses the node-fetch module to generate a GET request for the current weather: 
+http://api.openweathermap.org/data/2.5/weather?zip=9021 0&units=imperial&appid=APIKEY 
+http://api.openweathermap.org/data/2.5/weather?zip=9021 0&units=imperial&appid=APIKEY 
+4. OpenWeatherMap responds with JSON containing current weather for ZIP code 90210. 
+4. OpenWeatherMap responds with JSON containing current weather for ZIP code 90210. 
+5. The response.json() method converts the JSON response into JavaScript objects. 
+5. The response.json() method converts the JSON response into JavaScript objects. 
+6. Pug renders the webpage with weather data, and the page is sent to the web browser. 
+6. Pug renders the webpage with weather data, and the page is sent to the web browser. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.6.4: Calling the Weather API from the web server. D 
+ACTIVITY 8.6.4: Calling the Weather API from the web server. D 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 96/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Refer to the animation above. 
+Refer to the animation above. 
+1) When is the first then ( ) arrow 
+1) When is the first then ( ) arrow 
+function executed? 
+function executed? 
+0 Before the API request is sent. 
+0 Before the API request is sent. 
+O Immediately after the API 
+O Immediately after the API 
+request is sent. 
+request is sent. 
+O After the API response is 
+O After the API response is 
+received. 
+received. 
+2) When is the second then ( ) arrow 
+2) When is the second then ( ) arrow 
+function executed? 
+function executed? 
+O Before the API request is sent. 
+O Before the API request is sent. 
+O While the first then () arrow 
+O While the first then () arrow 
+function executes. 
+function executes. 
+Immediately after the first 
+Immediately after the first 
+O then ( ) arrow function 
+O then ( ) arrow function 
+completes. 
+completes. 
+3) What variable would the Pug code 
+3) What variable would the Pug code 
+above display in order to show the 
+above display in order to show the 
+current wind speed? 
+current wind speed? 
+0 data.main.temp 
+0 data.main.temp 
+0 data.wind.speed 
+0 data.wind.speed 
+0 data.main .speed 
+0 data.main .speed 
+Exploring further: 
+Exploring further: 
+• Public APls on GitHub.com 
+• Public APls on GitHub.com 
+zyBooks 
+zyBooks 

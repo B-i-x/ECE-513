@@ -1,0 +1,1142 @@
+Music API 
+Music API 
+A web application uses a web API running on the web server to manipulate data in the server's 
+A web application uses a web API running on the web server to manipulate data in the server's 
+database. This section uses a RESTful Music API that was developed elsewhere in this material. The 
+database. This section uses a RESTful Music API that was developed elsewhere in this material. The 
+Music API uses a song resource with the following fields: 
+Music API uses a song resource with the following fields: 
+• _id - Object ID uniquely identifying each song 
+• _id - Object ID uniquely identifying each song 
+• title - Required string 
+• title - Required string 
+• artist - String 
+• artist - String 
+• popularity- Number between 1 and 1 O 
+• popularity- Number between 1 and 1 O 
+• releaseDate - Date 
+• releaseDate - Date 
+• genre - Array of strings 
+• genre - Array of strings 
+The Music API supports the operations in the below table. 
+The Music API supports the operations in the below table. 
+Table 8.4.1: Music API operations. 
+Table 8.4.1: Music API operations. 
+◄ 
+◄ 
+Resource 
+Resource 
+/api/songs 
+/api/songs 
+Request 
+Request 
+verb 
+verb 
+GET 
+GET 
+/api/songs/:id GET 
+/api/songs/:id GET 
+/api/songs POST 
+/api/songs POST 
+I 
+I 
+/api/songs PUT 
+/api/songs PUT 
+I 
+I 
+/api/songs/:id DELETE 
+/api/songs/:id DELETE 
+I 
+I 
+Description 
+Description 
+Gets a list of all songs in the database 
+Gets a list of all songs in the database 
+Gets the song with the given id 
+Gets the song with the given id 
+Adds the JSON-encoded song in the request 
+Adds the JSON-encoded song in the request 
+body to the database 
+body to the database 
+Updates the existing song with the JSONencoded song in the request body 
+Updates the existing song with the JSONencoded song in the request body 
+Removes the song with the given id from the 
+Removes the song with the given id from the 
+database 
+database 
+Status code 
+Status code 
+200 OK 
+200 OK 
+200 OK 
+200 OK 
+-
+-
+-
+-
+201 Created 
+201 Created 
+l
+l
+204 No 
+204 No 
+Content 
+Content 
+204 No 
+204 No 
+Content 
+Content 
+-
+-
+-
+-
+► 
+► 
+I .--------, 
+I .--------, 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 60/100 
+11/17/24, 12:11 PM zyBooks I ACTIVITY 8.4.1: Music APL 
+11/17/24, 12:11 PM zyBooks I ACTIVITY 8.4.1: Music APL 
+PARTICIPATION I u 
+PARTICIPATION I u 
+7) A POST request to/ api/ songs 0 
+7) A POST request to/ api/ songs 0 
+returns all songs in the database. 
+returns all songs in the database. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) A GET request to/ api/ songs/ 888 0 
+2) A GET request to/ api/ songs/ 888 0 
+returns the song with ID 888. 
+returns the song with ID 888. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) Only the POST and PUT requests 0 
+3) Only the POST and PUT requests 0 
+require sending JSON to the web APL 
+require sending JSON to the web APL 
+0 True 
+0 True 
+0 False 
+0 False 
+Getting songs 
+Getting songs 
+Web applications call a web API from the browser by using the XMLHttpRequest object, the Fetch 
+Web applications call a web API from the browser by using the XMLHttpRequest object, the Fetch 
+API, or some other library that can send HTTP requests. The example code below uses Fetch to 
+API, or some other library that can send HTTP requests. The example code below uses Fetch to 
+interact with the Music APL The Music API is housed on an Express web server, and song data is 
+interact with the Music APL The Music API is housed on an Express web server, and song data is 
+saved in a MongoDB database. 
+saved in a MongoDB database. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.4.2: Using Fetch to request all songs from the Music API. 
+ACTIVITY 8.4.2: Using Fetch to request all songs from the Music API. 
+<body> 
+<body> 
+<hl>Songs</hl> 
+<hl>Songs</hl> 
+<ul> 
+<ul> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Hello - Adele</li> 
+<li>Hello - Adele</li> 
+<li>Royals - Lorde</li> 
+<li>Royals - Lorde</li> 
+</ul> 
+</ul> 
+</body> 
+</body> 
+addEventListener ( "DOMContentLoaded" , async function () 
+addEventListener ( "DOMContentLoaded" , async function () 
+const response = await fetch ("/api/songs" ); 
+const response = await fetch ("/api/songs" ); 
+const songs = await response . json (); 
+const songs = await response . json (); 
+let html = "" ; 
+let html = "" ; 
+for (let song of songs) { 
+for (let song of songs) { 
+html += '<li>${ song . title } - ${ song . artist }</li>' ; 
+html += '<li>${ song . title } - ${ song . artist }</li>' ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+web browser 
+web browser 
+localhost:3000/songs.html 
+localhost:3000/songs.html 
+Songs 
+Songs 
+• Uptown Funk - Bruno Mars 
+• Uptown Funk - Bruno Mars 
+• Hello - Adele 
+• Hello - Adele 
+• Royals - Lorde 
+• Royals - Lorde 
+GET 
+GET 
+/api/songs {json} 
+/api/songs {json} 
+Express server 
+Express server 
+[ MusicAPI] 
+[ MusicAPI] 
+Get all songs {json} 
+Get all songs {json} 
+[ 
+[ 
+{ "_id":"56f00ba5", 
+{ "_id":"56f00ba5", 
+61/100 
+61/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+document . querySelector ( "ul") . innerHTML = html ; "title":"Uptown Funk", 
+document . querySelector ( "ul") . innerHTML = html ; "title":"Uptown Funk", 
+}); ---~ ... }, 
+}); ---~ ... }, 
+Animation content: 
+Animation content: 
+An HTML block is shown: 
+An HTML block is shown: 
+<body> 
+<body> 
+<h1>Songs</h1> 
+<h1>Songs</h1> 
+<ul> 
+<ul> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Uptown Funk - Bruno Mars</li> 
+<li>Hello -Adele</li> 
+<li>Hello -Adele</li> 
+<li>Royals - Lorde</li> 
+<li>Royals - Lorde</li> 
+</ul> 
+</ul> 
+</body> 
+</body> 
+A block of JavaScript is shown: 
+A block of JavaScript is shown: 
+addEventlistener("DOMContentLoaded", async functionO { 
+addEventlistener("DOMContentLoaded", async functionO { 
+const response = await fetch("/api/songs"); 
+const response = await fetch("/api/songs"); 
+const songs = await response.json(); 
+const songs = await response.json(); 
+let html=""; 
+let html=""; 
+for (let song of songs) { 
+for (let song of songs) { 
+html+= '<li>S{song.title}- S{song.artist}</li>'; 
+html+= '<li>S{song.title}- S{song.artist}</li>'; 
+} 
+} 
+document.querySelector("ul").innerHTML = html; 
+document.querySelector("ul").innerHTML = html; 
+}); 
+}); 
+{ "_id":"56f00ba8", 
+{ "_id":"56f00ba8", 
+"title":"Hello", 
+"title":"Hello", 
+... }, 
+... }, 
+{ "_id":"56f00cb2", 
+{ "_id":"56f00cb2", 
+"title":"Royals", 
+"title":"Royals", 
+... } 
+... } 
+MongoDB 
+MongoDB 
+A web browser with the URL localhost:3000/songs.html sends a GET request to the Express server 
+A web browser with the URL localhost:3000/songs.html sends a GET request to the Express server 
+for /api/songs. The Express server gets all songs from the MongoDB database and returns the 
+for /api/songs. The Express server gets all songs from the MongoDB database and returns the 
+songs back to the web browser encoded in JSON. The web browser then displays the following: 
+songs back to the web browser encoded in JSON. The web browser then displays the following: 
+Songs 
+Songs 
+• Uptown Funk - Bruno Mars 
+• Uptown Funk - Bruno Mars 
+• Hello - Adele 
+• Hello - Adele 
+• Royals - Lorde 
+• Royals - Lorde 
+Animation captions: 
+Animation captions: 
+1. Browser requests songs.html from the Express web server and renders the HTML with an 
+1. Browser requests songs.html from the Express web server and renders the HTML with an 
+empty list. 
+empty list. 
+2. fetchO sends a GET request using the URL /api/songs. 
+2. fetchO sends a GET request using the URL /api/songs. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 62/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+3. Web server's Music API retrieves all songs from MongoDB and returns the songs encoded in 
+3. Web server's Music API retrieves all songs from MongoDB and returns the songs encoded in 
+JSON. 
+JSON. 
+4. response.json() parses the JSON-encoded songs and returns an array of song objects. 
+4. response.json() parses the JSON-encoded songs and returns an array of song objects. 
+5. The for-of loop creates <Ii> elements containing each song title and artist. The <Ii> elements 
+5. The for-of loop creates <Ii> elements containing each song title and artist. The <Ii> elements 
+are added to <ul>, creating a bulleted list of songs. 
+are added to <ul>, creating a bulleted list of songs. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.4.3: Getting songs with Fetch. D 
+ACTIVITY 8.4.3: Getting songs with Fetch. D 
+1) What is missing to output the first 
+1) What is missing to output the first 
+song's artist to the console? 
+song's artist to the console? 
+canst response = await 
+canst response = await 
+fetch ("/api/songs" ); 
+fetch ("/api/songs" ); 
+canst songs = await 
+canst songs = await 
+response . json (); 
+response . json (); 
+console . log ( __ ); 
+console . log ( __ ); 
+0 songs.artist 
+0 songs.artist 
+0 songs[O] .artist 
+0 songs[O] .artist 
+0 songs.artist[O] 
+0 songs.artist[O] 
+2) What is missing to output the song's 
+2) What is missing to output the song's 
+popularity to the console? 
+popularity to the console? 
+canst response = await 
+canst response = await 
+fetch ("/api/songs/123" ); 
+fetch ("/api/songs/123" ); 
+canst song = await 
+canst song = await 
+response . json (); 
+response . json (); 
+console . log ( __ ); 
+console . log ( __ ); 
+0 song[O] .popularity 
+0 song[O] .popularity 
+0 popularity.song 
+0 popularity.song 
+0 song.popularity 
+0 song.popularity 
+3) What is missing to ensure that the 
+3) What is missing to ensure that the 
+Music API returns a valid song? 
+Music API returns a valid song? 
+canst response = await 
+canst response = await 
+fetch ("/api/songs/888" ); 
+fetch ("/api/songs/888" ); 
+if ( __ ) { 
+if ( __ ) { 
+canst song = await 
+canst song = await 
+response . json (); 
+response . json (); 
+console . log (song . title ); 
+console . log (song . title ); 
+else { 
+else { 
+console . log ("Can't get 
+console . log ("Can't get 
+song" ) ; 
+song" ) ; 
+} 
+} 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+0 
+0 
+63/100 
+63/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Q response. ok 
+Q response. ok 
+Q response 
+Q response 
+Q song 
+Q song 
+Adding new songs 
+Adding new songs 
+zyBooks 
+zyBooks 
+The fetch () method can send a POST request to a web API by specifying a second argument 
+The fetch () method can send a POST request to a web API by specifying a second argument 
+containing the request method, the Content-Type header, and the data to send in the request body. 
+containing the request method, the Content-Type header, and the data to send in the request body. 
+The figure below displays a form allowing the user to enter song data. Clicking the Add button results 
+The figure below displays a form allowing the user to enter song data. Clicking the Add button results 
+in fetch () POSTing the JSON-encoded song data from the web form to the Music API. 
+in fetch () POSTing the JSON-encoded song data from the web form to the Music API. 
+Figure 8.4.1: POSTing a new song. 
+Figure 8.4.1: POSTing a new song. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 64/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+<!-- add_song.html --> 
+<!-- add_song.html --> 
+<form> 
+<form> 
+<p > 
+<p > 
+<label 
+<label 
+for="title">Title: </label> 
+for="title">Title: </label> 
+<input type="text" 
+<input type="text" 
+id="title"> 
+id="title"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="artist">Artist: </label> 
+for="artist">Artist: </label> 
+<input type="text" 
+<input type="text" 
+id="artist"> 
+id="artist"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="released">Released: 
+for="released">Released: 
+</label> 
+</label> 
+<input type="date" 
+<input type="date" 
+id="released"> 
+id="released"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="popularity" >Popularity: 
+for="popularity" >Popularity: 
+</label> 
+</label> 
+<input type="number" 
+<input type="number" 
+min="l" max="l0" 
+min="l" max="l0" 
+id="popularity"> 
+id="popularity"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="genre" >Genre: </label> 
+for="genre" >Genre: </label> 
+<input type="text" 
+<input type="text" 
+id="genre"> 
+id="genre"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<input type="button" 
+<input type="button" 
+id="addBtn" value="Add" > 
+id="addBtn" value="Add" > 
+</p > 
+</p > 
+<p id="error" ></p > 
+<p id="error" ></p > 
+</form> 
+</form> 
+zyBooks 
+zyBooks 
+addEventListener ("DOMContentLoaded" , function () 
+addEventListener ("DOMContentLoaded" , function () 
+document . querySelector ("#addBtn" ) . addEventListener 
+document . querySelector ("#addBtn" ) . addEventListener 
+addSong ); 
+addSong ); 
+} ) ; 
+} ) ; 
+async function addSong () 
+async function addSong () 
+II Create a song object from the form fields 
+II Create a song object from the form fields 
+const song = { 
+const song = { 
+title : document . querySelector ("#title" ) . val~ 
+title : document . querySelector ("#title" ) . val~ 
+artist : document . querySelector ("#artist" ) . va 
+artist : document . querySelector ("#artist" ) . va 
+releaseDate : 
+releaseDate : 
+document . querySelector ("#released" ) . value , 
+document . querySelector ("#released" ) . value , 
+popularity : 
+popularity : 
+document . querySelector ("#popularity" ) . value , 
+document . querySelector ("#popularity" ) . value , 
+genre : document . querySelector ( "#genre" ) . val~ 
+genre : document . querySelector ( "#genre" ) . val~ 
+document . querySelector ( "#genre" ) . value . sr 
+document . querySelector ( "#genre" ) . value . sr 
+[ l 
+[ l 
+} ; 
+} ; 
+II POST a JSON-encoded song to Music API 
+II POST a JSON-encoded song to Music API 
+const response = await fetch ( "/api/songs" , 
+const response = await fetch ( "/api/songs" , 
+method : "POST" , 
+method : "POST" , 
+} ) ; 
+} ) ; 
+headers : { "Content-Type" : "application/jsor 
+headers : { "Content-Type" : "application/jsor 
+body : JSON . stringify (song ) 
+body : JSON . stringify (song ) 
+if (response . ok ) 
+if (response . ok ) 
+const results await response . json (); 
+const results await response . json (); 
+alert ("Added song with ID" + results . id); 
+alert ("Added song with ID" + results . id); 
+II Reset the form after adding the song 
+II Reset the form after adding the song 
+document . querySelector ("form" ) . reset (); 
+document . querySelector ("form" ) . reset (); 
+else { 
+else { 
+document . querySelector ("#error" ) . innerHTML 
+document . querySelector ("#error" ) . innerHTML 
+add song." ; 
+add song." ; 
+} 
+} 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 65/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+0 AddSo g X + 
+0 AddSo g X + 
+f- ➔ C © localhost:3000/add_song.html 
+f- ➔ C © localhost:3000/add_song.html 
+Add Song 
+Add Song 
+Title= 
+Title= 
+Artist: 
+Artist: 
+Never Let Me Down Again 
+Never Let Me Down Again 
+Depeche Mode 
+Depeche Mode 
+Releas,ed: 0s 12s / 19s7 I 
+Releas,ed: 0s 12s / 19s7 I 
+Popularity~ 6 
+Popularity~ 6 
+~--~ 
+~--~ 
+Genre: synthipop,ebm 
+Genre: synthipop,ebm 
+I PARTICIPATION 8.4.4: POST requests and the Music API. ACTIVITY 
+I PARTICIPATION 8.4.4: POST requests and the Music API. ACTIVITY 
+1) The JSON . stringify () method 
+1) The JSON . stringify () method 
+converts a JavaScript object to a JSON 
+converts a JavaScript object to a JSON 
+string. 
+string. 
+0 True 
+0 True 
+O False 
+O False 
+2) The HTTP request must have the 
+2) The HTTP request must have the 
+header content-Type: 
+header content-Type: 
+application/j son or the web 
+application/j son or the web 
+server will not properly accept the 
+server will not properly accept the 
+JSON-encoded data that is POSTed. 
+JSON-encoded data that is POSTed. 
+0 True 
+0 True 
+O False 
+O False 
+3) In the figure above, the web browser 
+3) In the figure above, the web browser 
+displays a dialog box when the browser 
+displays a dialog box when the browser 
+receives a 400 status code from the 
+receives a 400 status code from the 
+web server. 
+web server. 
+0 True 
+0 True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+66/100 
+66/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+4) If the Music API returns a 400 status 
+4) If the Music API returns a 400 status 
+code, the webpage displays an error 
+code, the webpage displays an error 
+message. 
+message. 
+0 True 
+0 True 
+O False 
+O False 
+Updating songs 
+Updating songs 
+zyBooks 
+zyBooks 
+0 
+0 
+The example below uses fetch () to load a song into a web form when the page first loads. The user 
+The example below uses fetch () to load a song into a web form when the page first loads. The user 
+can then modify the song data. When the user clicks the Update button, the updateSong () function 
+can then modify the song data. When the user clicks the Update button, the updateSong () function 
+calls fetch () to send a PUT request to the Music API to update the song. 
+calls fetch () to send a PUT request to the Music API to update the song. 
+Figure 8.4.2: Sending PUT request to update an existing song. 
+Figure 8.4.2: Sending PUT request to update an existing song. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 67/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+<!-- update_song.html --> 
+<!-- update_song.html --> 
+<form> 
+<form> 
+<p > 
+<p > 
+<label 
+<label 
+for="songid" >ID: </label> 
+for="songid" >ID: </label> 
+<input type="text" 
+<input type="text" 
+id="songid" > 
+id="songid" > 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="title">Title: </label> 
+for="title">Title: </label> 
+<input type="text" 
+<input type="text" 
+id="title"> 
+id="title"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="artist">Artist: </label> 
+for="artist">Artist: </label> 
+<input type="text" 
+<input type="text" 
+id="artist"> 
+id="artist"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="released">Released: 
+for="released">Released: 
+</label> 
+</label> 
+<input type="date" 
+<input type="date" 
+id="released"> 
+id="released"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="popularity" >Popularity: 
+for="popularity" >Popularity: 
+</label> 
+</label> 
+<input type="number" 
+<input type="number" 
+min="l" max="l0" 
+min="l" max="l0" 
+id="popularity"> 
+id="popularity"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<label 
+<label 
+for="genre" >Genre: </label> 
+for="genre" >Genre: </label> 
+<input type="text" 
+<input type="text" 
+id="genre"> 
+id="genre"> 
+</p > 
+</p > 
+<p > 
+<p > 
+<input type="button" 
+<input type="button" 
+id="updateBtn" 
+id="updateBtn" 
+value="Update" > 
+value="Update" > 
+</p > 
+</p > 
+<p id="error" ></p > 
+<p id="error" ></p > 
+</form> 
+</form> 
+zyBooks 
+zyBooks 
+addEventListener ( "DOMContentLoaded" , async functic 
+addEventListener ( "DOMContentLoaded" , async functic 
+document . querySelector ("#updateBtn" ) . addEventListe 
+document . querySelector ("#updateBtn" ) . addEventListe 
+updateSong ); 
+updateSong ); 
+II Load a song into the web form 
+II Load a song into the web form 
+const songid = "5fe1097caf3b173148985746" ; 
+const songid = "5fe1097caf3b173148985746" ; 
+const response = await fe tch ( "/api/songs/" + sc 
+const response = await fe tch ( "/api/songs/" + sc 
+if (response . ok ) { 
+if (response . ok ) { 
+let song = await response . json (); 
+let song = await response . json (); 
+document . querySelector ("#songid" ) . value = sc 
+document . querySelector ("#songid" ) . value = sc 
+document . querySelector ("#title" ) . value = sor 
+document . querySelector ("#title" ) . value = sor 
+document . querySelector ("#artist" ) . value = sc 
+document . querySelector ("#artist" ) . value = sc 
+document . querySelector ("#released" ) . value = 
+document . querySelector ("#released" ) . value = 
+song . releaseDate . substring (0, 10 ); 
+song . releaseDate . substring (0, 10 ); 
+document . querySelector ("#popularity" ) . value 
+document . querySelector ("#popularity" ) . value 
+song . popularity; 
+song . popularity; 
+} ) ; 
+} ) ; 
+document . querySelector ("#genre" ) . value = sor 
+document . querySelector ("#genre" ) . value = sor 
+} 
+} 
+async function updateSong () 
+async function updateSong () 
+II Create a song object from the form fields 
+II Create a song object from the form fields 
+const song = { 
+const song = { 
+id : document . querySelector ("#songid" ) . value 
+id : document . querySelector ("#songid" ) . value 
+title : document . querySelector ("#title" ) . val~ 
+title : document . querySelector ("#title" ) . val~ 
+artist : document . querySelector ("#artist" ) . va 
+artist : document . querySelector ("#artist" ) . va 
+releaseDate : document . querySelector ("#releas 
+releaseDate : document . querySelector ("#releas 
+popularity : document . querySelector ("#popular 
+popularity : document . querySelector ("#popular 
+genre : document . querySelector ( "#genre" ) . val~ 
+genre : document . querySelector ( "#genre" ) . val~ 
+document . querySelector ( "#genre" ) . value . sf 
+document . querySelector ( "#genre" ) . value . sf 
+[ l 
+[ l 
+} ; 
+} ; 
+II Send PUT request with JSON-encoded song to 
+II Send PUT request with JSON-encoded song to 
+const response = await fetch ("/api/songs" , { 
+const response = await fetch ("/api/songs" , { 
+method : "PUT" , 
+method : "PUT" , 
+} ) ; 
+} ) ; 
+headers : { "Content-Type" : "application/jsor 
+headers : { "Content-Type" : "application/jsor 
+body : JSON . stringify (song ) 
+body : JSON . stringify (song ) 
+if (response . ok ) 
+if (response . ok ) 
+alert ("Updated song." ); 
+alert ("Updated song." ); 
+else { 
+else { 
+document . querySel ect or ("#error" ) . i nner HTML 
+document . querySel ect or ("#error" ) . i nner HTML 
+update song." ; 
+update song." ; 
+} 
+} 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 68/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+0 Update So g X + 
+0 Update So g X + 
+f- C CD localhost:3000/update_song.html 
+f- C CD localhost:3000/update_song.html 
+Update• So,1ng1 
+Update• So,1ng1 
+ID: I 5fe1 097caf3b1731489857 46 I 
+ID: I 5fe1 097caf3b1731489857 46 I 
+Title= 
+Title= 
+Artist 
+Artist 
+I Never Let Me Oown Ag1ain 
+I Never Let Me Oown Ag1ain 
+I Depeche M,ode 
+I Depeche M,ode 
+Released: i 0 s / 24 / 1'987 I 
+Released: i 0 s / 24 / 1'987 I 
+Popularity: l .... 7 __ ~-1 
+Popularity: l .... 7 __ ~-1 
+Genre: I synthpop,ebrn 
+Genre: I synthpop,ebrn 
+I Update I 
+I Update I 
+I PARTICIPATION 8.4.5: PUT request and the Music API. ACTIVITY 
+I PARTICIPATION 8.4.5: PUT request and the Music API. ACTIVITY 
+Refer to the figure above. 
+Refer to the figure above. 
+1) What happens when the page first 
+1) What happens when the page first 
+loads if the database does not contain 
+loads if the database does not contain 
+a song with ID 
+a song with ID 
+5fe0f679af3b173148985743? 
+5fe0f679af3b173148985743? 
+0 Error message is displayed 
+0 Error message is displayed 
+O Form displays a default song 
+O Form displays a default song 
+O Form displays no song data 
+O Form displays no song data 
+2) In the examples above, what fields are 
+2) In the examples above, what fields are 
+different in the calls to fetch () when 
+different in the calls to fetch () when 
+creating a POST request vs. a PUT 
+creating a POST request vs. a PUT 
+request? 
+request? 
+0 method 
+0 method 
+O headers 
+O headers 
+0 body 
+0 body 
+3) What happens if the user changes the 
+3) What happens if the user changes the 
+title to "Little 15" and clicks Update? 
+title to "Little 15" and clicks Update? 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+69/100 
+69/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+0 Nothing happens 
+0 Nothing happens 
+0 A dialog box displays 
+0 A dialog box displays 
+O The song's title is left unchanged 
+O The song's title is left unchanged 
+4) What happens if the user removes a 
+4) What happens if the user removes a 
+character from the ID text box and 
+character from the ID text box and 
+clicks Update? 
+clicks Update? 
+0 Nothing happens 
+0 Nothing happens 
+O The song's ID is updated 
+O The song's ID is updated 
+O An error message displays 
+O An error message displays 
+Deleting songs 
+Deleting songs 
+zyBooks 
+zyBooks 
+0 
+0 
+The getAllSongs () function below uses fetch () to load all song titles into a drop-down list. 
+The getAllSongs () function below uses fetch () to load all song titles into a drop-down list. 
+When the user clicks Delete, deletesong () calls fetch () to send a DELETE request to delete the 
+When the user clicks Delete, deletesong () calls fetch () to send a DELETE request to delete the 
+selected song. 
+selected song. 
+Figure 8.4.3: Sending DELETE request to delete a song. 
+Figure 8.4.3: Sending DELETE request to delete a song. 
+addEv entListener ("DOMContentLoaded" , async function () { 
+addEv entListener ("DOMContentLoaded" , async function () { 
+document . querySelector ("#deleteBtn" ) . addEventListener ("click 
+document . querySelector ("#deleteBtn" ) . addEventListener ("click 
+deleteSong ); 
+deleteSong ); 
+getAllSongs () ; 
+getAllSongs () ; 
+} ) ; 
+} ) ; 
+II Load all songs into the drop-down list 
+II Load all songs into the drop-down list 
+async function getAllSongs () { 
+async function getAllSongs () { 
+canst response = await fetch ( "/api/songs" ); 
+canst response = await fetch ( "/api/songs" ); 
+if (response . ok ) { 
+if (response . ok ) { 
+canst songs = await response . json (); 
+canst songs = await response . json (); 
+let html = "" ; 
+let html = "" ; 
+for ( let song of songs ) { 
+for ( let song of songs ) { 
+html += '<option value="${ song . id}">${ song . title } 
+html += '<option value="${ song . id}">${ song . title } 
+</option>' ; 
+</option>' ; 
+html ; 
+html ; 
+} 
+} 
+) 
+) 
+document . querySelector ( "#songDropDown'' ) . innerHTML 
+document . querySelector ( "#songDropDown'' ) . innerHTML 
+async function deleteSong () { 
+async function deleteSong () { 
+II Get the song ID of the selected song 
+II Get the song ID of the selected song 
+canst songld = document . querySelector ( 
+canst songld = document . querySelector ( 
+"#songDropDown option:checked" ) . value ; 
+"#songDropDown option:checked" ) . value ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 70/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+<!--
+<!--
+delete song.html -
+delete song.html -
+-> 
+-> 
+<form> 
+<form> 
+<select 
+<select 
+id="songDropDown" > 
+id="songDropDown" > 
+</select> 
+</select> 
+<input 
+<input 
+type= "button" 
+type= "button" 
+value="Delete" 
+value="Delete" 
+id="deleteBtn"> 
+id="deleteBtn"> 
+<div 
+<div 
+id="error"></div> 
+id="error"></div> 
+</form> 
+</form> 
+zyBooks 
+zyBooks 
+canst response = await fetch ( "/api/songs/" + songid, { 
+canst response = await fetch ( "/api/songs/" + songid, { 
+method : "DELETE" 
+method : "DELETE" 
+} ) ; 
+} ) ; 
+if (response . ck) 
+if (response . ck) 
+II Successfully deleted song 
+II Successfully deleted song 
+getAllSongs () ; 
+getAllSongs () ; 
+else { 
+else { 
+document . querySelector ( "#error" ) . i nn erHTML 
+document . querySelector ( "#error" ) . i nn erHTML 
+delete song." ; 
+delete song." ; 
+0 Delete Song X + 
+0 Delete Song X + 
+© localhos :3000/delete_song.html 
+© localhos :3000/delete_song.html 
+"Cannot 
+"Cannot 
+1-U __ p __ .t_ow_n ___ f _1Jn_k ______ v~ I Delete j 
+1-U __ p __ .t_ow_n ___ f _1Jn_k ______ v~ I Delete j 
+Uptown Funk 
+Uptown Funk 
+Hello 
+Hello 
+Super Freak 
+Super Freak 
+Bri ck House 
+Bri ck House 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.4.6: DELETE request and the Music APL D 
+ACTIVITY 8.4.6: DELETE request and the Music APL D 
+Refer to the figure above. 
+Refer to the figure above. 
+1) According to the fetch () call in 
+1) According to the fetch () call in 
+deleteSong (), what is sent in the 
+deleteSong (), what is sent in the 
+request body? 
+request body? 
+Q JSON 
+Q JSON 
+0 song ID 
+0 song ID 
+0 Nothing 
+0 Nothing 
+2) What effect would the code below have 
+2) What effect would the code below have 
+if placed immediately before the for-of 
+if placed immediately before the for-of 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+71/100 
+71/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+loop in getAllSongs ()? 
+loop in getAllSongs ()? 
+sangs .sart (functian (a , b ) { 
+sangs .sart (functian (a , b ) { 
+canst titlel = 
+canst titlel = 
+a . title . taLawerCase (); 
+a . title . taLawerCase (); 
+canst title2 = 
+canst title2 = 
+b . title . taLawerCase (); 
+b . title . taLawerCase (); 
+} ) ; 
+} ) ; 
+if (titlel < title2 ) 
+if (titlel < title2 ) 
+return -1; 
+return -1; 
+if (titlel > title2 ) 
+if (titlel > title2 ) 
+return 1 ; 
+return 1 ; 
+return 0 ; 
+return 0 ; 
+0 No effect 
+0 No effect 
+O Sorts titles in the drop-down list 
+O Sorts titles in the drop-down list 
+in ascending (A to Z) order 
+in ascending (A to Z) order 
+O Sorts titles in the drop-down list 
+O Sorts titles in the drop-down list 
+in descending (Z to A) order 
+in descending (Z to A) order 
+3) What happens after the user clicks the 
+3) What happens after the user clicks the 
+Delete button? 
+Delete button? 
+The selected song is deleted 
+The selected song is deleted 
+O from the database but remains 
+O from the database but remains 
+in the drop-down list. 
+in the drop-down list. 
+The selected song is removed 
+The selected song is removed 
+O from the drop-down list but 
+O from the drop-down list but 
+remains in the database. 
+remains in the database. 
+The selected song is removed 
+The selected song is removed 
+0 from the drop-down list and the 
+0 from the drop-down list and the 
+database. 
+database. 
+Exploring further: 
+Exploring further: 
+• Fetch API (MDN). 
+• Fetch API (MDN). 
+zyBooks 
+zyBooks 
+• JavaScript Fetch API Tutorial with JS Fetch Post and Header Examples 
+• JavaScript Fetch API Tutorial with JS Fetch Post and Header Examples 

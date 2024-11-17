@@ -1,0 +1,418 @@
+Web Storage API 
+Web Storage API 
+The Web Storage AP/ provides storage objects that allow JavaScript programs to securely store 
+The Web Storage AP/ provides storage objects that allow JavaScript programs to securely store 
+key/value pairs in the web browser. The Web Storage API supports two storage objects: 
+key/value pairs in the web browser. The Web Storage API supports two storage objects: 
+1. The sessionStorage object stores key/value pairs for an origin that are only available for the 
+1. The sessionStorage object stores key/value pairs for an origin that are only available for the 
+duration of the session. Closing the browser or browser tab ends the session. 
+duration of the session. Closing the browser or browser tab ends the session. 
+2. The loca/Storage object stores key/value pairs for an origin that are stored indefinitely. 
+2. The loca/Storage object stores key/value pairs for an origin that are stored indefinitely. 
+An origin is a combination of scheme, hostname, and port number in a URL. Each of the following are 
+An origin is a combination of scheme, hostname, and port number in a URL. Each of the following are 
+examples of different origins: 
+examples of different origins: 
+• http://example.com/ 
+• http://example.com/ 
+• http://www.example.com/ 
+• http://www.example.com/ 
+• https://www.example.com/ 
+• https://www.example.com/ 
+• http://www.example.com:8080/ 
+• http://www.example.com:8080/ 
+The browser stores the data for each origin separately and does not share the data between origins. 
+The browser stores the data for each origin separately and does not share the data between origins. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.1.1: Web storage. 
+ACTIVITY 9.1.1: Web storage. 
+1) Refreshing a webpage begins a new 
+1) Refreshing a webpage begins a new 
+session. 
+session. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) Data that should remain after the user 
+2) Data that should remain after the user 
+closes a web browser should be stored 
+closes a web browser should be stored 
+in sessionStorage. 
+in sessionStorage. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) The webpage from http://google.com/ 
+3) The webpage from http://google.com/ 
+cannot access web storage data from 
+cannot access web storage data from 
+https://google.com/. 
+https://google.com/. 
+0 True 
+0 True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+1/37 
+1/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Chrome DevTools displays web storage 
+Chrome DevTools displays web storage 
+◄ 
+◄ 
+Most web browsers allow developers to see the key/value pairs stored in web storage. 
+Most web browsers allow developers to see the key/value pairs stored in web storage. 
+Chrome's DevTools displays the key/value pairs stored for the origin 
+Chrome's DevTools displays the key/value pairs stored for the origin 
+http://taz.harding.edu below and allows the developer to edit and delete key/value 
+http://taz.harding.edu below and allows the developer to edit and delete key/value 
+pairs. Good practice is to avoid storing sensitive data like social security numbers, 
+pairs. Good practice is to avoid storing sensitive data like social security numbers, 
+financial data, and passwords in web storage, because the values can be easily seen by 
+financial data, and passwords in web storage, because the values can be easily seen by 
+others. 
+others. 
+□ X 
+□ X 
+/ ['.'] Web Storage AP I erno X 
+/ ['.'] Web Storage AP I erno X 
+C I (D taz.harding,edu/~fmc:cown/storage,html * 
+C I (D taz.harding,edu/~fmc:cown/storage,html * 
+S tti' e ngs. 
+S tti' e ngs. 
+Pla -er Nmn e: ~IJ_en_n_y _______ ~ 
+Pla -er Nmn e: ~IJ_en_n_y _______ ~ 
+Difficulty LeYel: J ~3--~ 
+Difficulty LeYel: J ~3--~ 
+I Save I 
+I Save I 
+Beme:nts Console Sources N-eti.vork Trmo:Iine Applica on » X 
+Beme:nts Console Sources N-eti.vork Trmo:Iine Applica on » X 
+Ap-plic ion 
+Ap-plic ion 
+I Manife, 
+I Manife, 
+(I: Service Workers 
+(I: Service Workers 
+ii C1earstorage 
+ii C1earstorage 
+Storage. 
+Storage. 
+T 55 Local Storage 
+T 55 Local Storage 
+55 h './ / ,az hanf g..edu 
+55 h './ / ,az hanf g..edu 
+► 55 Sesswn Storage 
+► 55 Sesswn Storage 
+ie!l In e dDB 
+ie!l In e dDB 
+51 WebSQL 
+51 WebSQL 
+► Co ies ,,. e X 
+► Co ies ,,. e X 
+Con-sole l Ne ark condition5 Sensors 
+Con-sole l Ne ark condition5 Sensors 
+Ed., -V.:ilue" 
+Ed., -V.:ilue" 
+Delet e 
+Delet e 
+X 
+X 
+Private browsing 
+Private browsing 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+► 
+► 
+2/37 
+2/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+◄ 
+◄ 
+Many web browsers allow users to browse the web privately using "incognito" mode or 
+Many web browsers allow users to browse the web privately using "incognito" mode or 
+"private windows". When browsing privately, web storage may be disabled or may be 
+"private windows". When browsing privately, web storage may be disabled or may be 
+cleared when the user stops browsing privately See the Exploring further section for 
+cleared when the user stops browsing privately See the Exploring further section for 
+information on detecting the availability of localStorage. 
+information on detecting the availability of localStorage. 
+Accessing web storage data 
+Accessing web storage data 
+The localStorage and sessionStorage objects provide methods for storing data, retrieving 
+The localStorage and sessionStorage objects provide methods for storing data, retrieving 
+data, and removing data: 
+data, and removing data: 
+• setltem(key, value) stores the key string and associated value string in storage. 
+• setltem(key, value) stores the key string and associated value string in storage. 
+► 
+► 
+• getltem(key) returns the value associated with the key in storage or null if the key does not 
+• getltem(key) returns the value associated with the key in storage or null if the key does not 
+exist. 
+exist. 
+• removeltem(key) removes the key and associated value from storage. 
+• removeltem(key) removes the key and associated value from storage. 
+• clear() removes all keys and associated values from storage. 
+• clear() removes all keys and associated values from storage. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.1.2: Storing and retrieving values from localStorage. 
+ACTIVITY 9.1.2: Storing and retrieving values from localStorage. 
+<hl>Settings</hl> 
+<hl>Settings</hl> 
+<label>Player Name: 
+<label>Player Name: 
+D 
+D 
+Settings <input type="text" id="playerName" value="Player 1"> 
+Settings <input type="text" id="playerName" value="Player 1"> 
+</label> Player Name: ! Jenny """;:::::::::::::=,-...., 
+</label> Player Name: ! Jenny """;:::::::::::::=,-...., 
+<label>Difficulty Level: Difficulty Level: !._3 _ ___. <input type="number" min="l" max="3" id="diffLevel" value="l"> 
+<label>Difficulty Level: Difficulty Level: !._3 _ ___. <input type="number" min="l" max="3" id="diffLevel" value="l"> 
+</label> 
+</label> 
+<input type="button" value="Save" id="saveBtn" > 
+<input type="button" value="Save" id="saveBtn" > 
+let playerNameWidget = document . getElementByid ("playerName" ); 
+let playerNameWidget = document . getElementByid ("playerName" ); 
+let difficultyLevelWidget = document . getElementByid ( "diffLevel" ); 
+let difficultyLevelWidget = document . getElementByid ( "diffLevel" ); 
+if (localStorage . getitem ("playerName" )) { 
+if (localStorage . getitem ("playerName" )) { 
+( Save ) 
+( Save ) 
+playerNameWidget . value = localStorage . getitem ("playerName" ); 
+playerNameWidget . value = localStorage . getitem ("playerName" ); 
+difficultyLevelWidget . value = localStorage . getitem ( "difficultyLevel" ); 
+difficultyLevelWidget . value = localStorage . getitem ( "difficultyLevel" ); 
+document . getElementByid ( "saveBtn" ) . addEventListener ( "click" , function () { 
+document . getElementByid ( "saveBtn" ) . addEventListener ( "click" , function () { 
+localStorage . setitem ( "playerName" , playerNameWidget . value ); 
+localStorage . setitem ( "playerName" , playerNameWidget . value ); 
+localStorage . setitem ( "difficultyLevel" , difficultyLevelWidget . value ); 
+localStorage . setitem ( "difficultyLevel" , difficultyLevelWidget . value ); 
+} ) ; 
+} ) ; 
+Animation content: 
+Animation content: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+local storage 
+local storage 
+playerName = 
+playerName = 
+Jenny 
+Jenny 
+difficultyLevel = 
+difficultyLevel = 
+3 
+3 
+3/37 
+3/37 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+The following HTML is displayed. 
+The following HTML is displayed. 
+<h1 >Settings</h1 > 
+<h1 >Settings</h1 > 
+Player Name: 
+Player Name: 
+<input type="text" id="playerName" value="Player 1 "> 
+<input type="text" id="playerName" value="Player 1 "> 
+Difficulty Level: 
+Difficulty Level: 
+zyBooks 
+zyBooks 
+<input type="number" min="1" max="3" id="diffLevel" value="1 "> 
+<input type="number" min="1" max="3" id="diffLevel" value="1 "> 
+<input type="button" value="Save" id="saveBtn"> 
+<input type="button" value="Save" id="saveBtn"> 
+The following JavaScript is displayed: 
+The following JavaScript is displayed: 
+let playerNameWidget = document.getElementByld("playerName"); 
+let playerNameWidget = document.getElementByld("playerName"); 
+let difficultyLevelWidget = document.getElementByld("diffLevel"); 
+let difficultyLevelWidget = document.getElementByld("diffLevel"); 
+if (localStorage.getltem("playerName")) { 
+if (localStorage.getltem("playerName")) { 
+playerNameWidget.value = localStorage.getltem("playerName"); 
+playerNameWidget.value = localStorage.getltem("playerName"); 
+difficultyLevelWidget.value = localStorage.getltem("difficultyLevel"); 
+difficultyLevelWidget.value = localStorage.getltem("difficultyLevel"); 
+} 
+} 
+document.getElementByld("saveBtn").addEventlistener("click", function() { 
+document.getElementByld("saveBtn").addEventlistener("click", function() { 
+localStorage.setltem("playerName", playerNameWidget.value); 
+localStorage.setltem("playerName", playerNameWidget.value); 
+localStorage.setltem("difficultyLevel", difficultyLevelWidget.value); 
+localStorage.setltem("difficultyLevel", difficultyLevelWidget.value); 
+}); 
+}); 
+The browser displays two input boxes labeled Player Name and Difficulty level. Below the input 
+The browser displays two input boxes labeled Player Name and Difficulty level. Below the input 
+boxes is a Save button. 
+boxes is a Save button. 
+A box entitled local storage has the starting value of Empty in it. 
+A box entitled local storage has the starting value of Empty in it. 
+Step 3: The user enters Jenny and 3 in the form. 
+Step 3: The user enters Jenny and 3 in the form. 
+Step 4: The name Jenny and difficult level 3 replace "Empty" in localStorage. 
+Step 4: The name Jenny and difficult level 3 replace "Empty" in localStorage. 
+Step 5: The statement if (localStorage.getltem("playerName")) is true, so playerNameWidget.value 
+Step 5: The statement if (localStorage.getltem("playerName")) is true, so playerNameWidget.value 
+and difficultyLevelWidget.value are assigned Jenny and 3. 
+and difficultyLevelWidget.value are assigned Jenny and 3. 
+Animation captions: 
+Animation captions: 
+1. The form displays the default values "Player 1" and "1" in the browser. 
+1. The form displays the default values "Player 1" and "1" in the browser. 
+2. localStorage.getltem() returns null because the playerName has not been previously saved in 
+2. localStorage.getltem() returns null because the playerName has not been previously saved in 
+localStorage. The default HTML values remain in the browser. 
+localStorage. The default HTML values remain in the browser. 
+3. The user changes the player name and difficulty level and clicks Save. 
+3. The user changes the player name and difficulty level and clicks Save. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 4/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+4. The Save button's click handler calls localStorage.setltem() to save the player name and 
+4. The Save button's click handler calls localStorage.setltem() to save the player name and 
+difficulty level to local storage. 
+difficulty level to local storage. 
+5. When the page is reloaded, the player name and difficulty level are loaded from localStorage 
+5. When the page is reloaded, the player name and difficulty level are loaded from localStorage 
+using localStorage.getltem(). 
+using localStorage.getltem(). 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 9.1.3: Web storage methods. D 
+ACTIVITY 9.1.3: Web storage methods. D 
+Refer to the animation above. 
+Refer to the animation above. 
+7) If local storage is empty and the Settings webpage is 0 
+7) If local storage is empty and the Settings webpage is 0 
+loaded into the browser, what does 
+loaded into the browser, what does 
+localStorage.getitem("difficultyLevel") 
+localStorage.getitem("difficultyLevel") 
+return? 
+return? 
+0 117 11 
+0 117 11 
+0 null 
+0 null 
+0 false 
+0 false 
+2) Suppose localStorage is empty, and the Settings 0 
+2) Suppose localStorage is empty, and the Settings 0 
+webpage is loaded in the browser. If the user clicks 
+webpage is loaded in the browser. If the user clicks 
+the Save button without changing the difficulty level, 
+the Save button without changing the difficulty level, 
+what does 
+what does 
+localStorage . getitem("difficultyLevel") 
+localStorage . getitem("difficultyLevel") 
+return? 
+return? 
+0 117 11 
+0 117 11 
+0 11311 
+0 11311 
+0 null 
+0 null 
+3) If the user sets the difficulty level to 2, 0 
+3) If the user sets the difficulty level to 2, 0 
+clicks Save, closes the browser, reopens the browser, and navigates to 
+clicks Save, closes the browser, reopens the browser, and navigates to 
+the Settings webpage, what difficulty 
+the Settings webpage, what difficulty 
+level is displayed? 
+level is displayed? 
+0 1 
+0 1 
+0 2 
+0 2 
+0 null 
+0 null 
+4) If localStorage stores the difficulty level "3" and then 0 
+4) If localStorage stores the difficulty level "3" and then 0 
+local Storage. clear () is called, what does 
+local Storage. clear () is called, what does 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 5/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+localStorage.getitem("difficultyLevel") 
+localStorage.getitem("difficultyLevel") 
+return? 
+return? 
+0 
+0 
+0 
+0 
+0 
+0 
+I CHALLENGE 
+I CHALLENGE 
+ACTIVITY 
+ACTIVITY 
+117 11 
+117 11 
+11311 
+11311 
+null 
+null 
+9 .1.1: Web storage. 
+9 .1.1: Web storage. 
+570104.2065416.qx3zqy7 
+570104.2065416.qx3zqy7 
+-
+-
+Using sessionStorage, store a key of "name" with value of "Bob". 
+Using sessionStorage, store a key of "name" with value of "Bob". 
+1 
+1 
+2 /* Your solution goes here*/ 
+2 /* Your solution goes here*/ 
+3 
+3 
+1 
+1 
+Check 
+Check 
+-
+-
+View your last submission v 
+View your last submission v 
+Exploring further: 
+Exploring further: 
+• Web Storage API from MDN 
+• Web Storage API from MDN 
+2 
+2 
+• Feature-detecting localStorag~ from MON 
+• Feature-detecting localStorag~ from MON 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+D 
+D 
+3 
+3 
+6/37 
+6/37 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 

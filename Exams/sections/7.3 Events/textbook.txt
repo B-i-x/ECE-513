@@ -1,0 +1,541 @@
+Event handlers 
+Event handlers 
+A developer may use jQuery to define an event handler, a function that executes when an event 
+A developer may use jQuery to define an event handler, a function that executes when an event 
+occurs. Common events include clicking, moving the mouse, and typing. 
+occurs. Common events include clicking, moving the mouse, and typing. 
+The jQuery on() method takes two arguments: an event name and an event handler. The event 
+The jQuery on() method takes two arguments: an event name and an event handler. The event 
+handler is registered to the selected elements of a object. 
+handler is registered to the selected elements of a object. 
+I PARTICIPATION I . ACTIVITY 7.3.1: Click event handler example. 
+I PARTICIPATION I . ACTIVITY 7.3.1: Click event handler example. 
+JavaScript example 
+JavaScript example 
+<button i d =" some - btn" > 
+<button i d =" some - btn" > 
+Cli ck Me 
+Cli ck Me 
+</ button> 
+</ button> 
+f unc tion buttonCli cked () 
+f unc tion buttonCli cked () 
+a l ert ( "Click !" ); 
+a l ert ( "Click !" ); 
+document . getEl ementByi d ( " some- btn" ) 
+document . getEl ementByi d ( " some- btn" ) 
+. addEventLi stener ( " c lick" , buttonClicked); 
+. addEventLi stener ( " c lick" , buttonClicked); 
+Animation content: 
+Animation content: 
+Static figure: 
+Static figure: 
+Begin HTML code: 
+Begin HTML code: 
+[ ClickMeJ 
+[ ClickMeJ 
+jQuery example 
+jQuery example 
+f unction buttonClicked () 
+f unction buttonClicked () 
+a l ert ( "Cli ck! " ); 
+a l ert ( "Cli ck! " ); 
+□ 
+□ 
+alert 
+alert 
+Click! 
+Click! 
+$ ( " #some - btn" ) . on ( " click" , buttonClicked) 
+$ ( " #some - btn" ) . on ( " click" , buttonClicked) 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+15 of 66 2024-11-17, 12:17 p.m.
+15 of 66 2024-11-17, 12:17 p.m.
+<button id="some-btn"> 
+<button id="some-btn"> 
+Click Me 
+Click Me 
+</button> 
+</button> 
+End code. 
+End code. 
+Begin JavaScript code: 
+Begin JavaScript code: 
+function buttonClicked() { 
+function buttonClicked() { 
+alert("Click!"); 
+alert("Click!"); 
+} 
+} 
+document.getElementByld("some-btn") 
+document.getElementByld("some-btn") 
+.addEventlistener("click", buttonClicked); 
+.addEventlistener("click", buttonClicked); 
+End code. 
+End code. 
+Begin jQuery code: 
+Begin jQuery code: 
+function buttonClicked() { 
+function buttonClicked() { 
+alert("Click!"); 
+alert("Click!"); 
+} 
+} 
+$("#some-btn").on("click", buttonClicked); 
+$("#some-btn").on("click", buttonClicked); 
+End code. 
+End code. 
+Animation captions: 
+Animation captions: 
+1. The HTML displays a button in the webpage. 
+1. The HTML displays a button in the webpage. 
+2. The JavaScript code calls getElementByld() to search the DOM for the button, then 
+2. The JavaScript code calls getElementByld() to search the DOM for the button, then 
+addEventlistener() to add a click event handler. 
+addEventlistener() to add a click event handler. 
+3. When the user clicks the button, the buttonClicked() function executes and shows an alert 
+3. When the user clicks the button, the buttonClicked() function executes and shows an alert 
+dialog box. 
+dialog box. 
+4. The equivalent jQuery code calls$() to search the DOM for the button and on() to add a 
+4. The equivalent jQuery code calls$() to search the DOM for the button and on() to add a 
+click event handler. The jQuery code is more concise and easier to read. 
+click event handler. The jQuery code is more concise and easier to read. 
+5. Clicking the button calls buttonClicked(), which shows an alert dialog box. 
+5. Clicking the button calls buttonClicked(), which shows an alert dialog box. 
+Shortcut methods are deprecated 
+Shortcut methods are deprecated 
+Many on line examples of }Query show the use of "shortcut methods" like click() and 
+Many on line examples of }Query show the use of "shortcut methods" like click() and 
+mousemove() to register event handlers. Shortcut methods were deprecated in 
+mousemove() to register event handlers. Shortcut methods were deprecated in 
+}Query version 3.3 and should no longer be used. 
+}Query version 3.3 and should no longer be used. 
+ready
+ready
+ready
+ready
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+16 of 66 2024-11-17, 12:17 p.m.
+16 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I 
+I PARTICIPATION I 
+ACTIVITY 7.3.2: Event handlers. 
+ACTIVITY 7.3.2: Event handlers. 
+1) Which code segment adds the event 
+1) Which code segment adds the event 
+handler do This() to the jQuery object 
+handler do This() to the jQuery object 
+$btn? 
+$btn? 
+2) 
+2) 
+3) 
+3) 
+O $btn.on(click, 
+O $btn.on(click, 
+doThis); 
+doThis); 
+$btn.on("click", 0 doThis); 
+$btn.on("click", 0 doThis); 
+$btn.on("click", 0 doThis () ) ; 
+$btn.on("click", 0 doThis () ) ; 
+The code below specifies an 
+The code below specifies an 
+anonymous event handler. If the 
+anonymous event handler. If the 
+webpage has three <button> 
+webpage has three <button> 
+elements, clicking on which button 
+elements, clicking on which button 
+causes an alert to display? 
+causes an alert to display? 
+$ ( "button" ) . on ( "click" , 
+$ ( "button" ) . on ( "click" , 
+function () { 
+function () { 
+alert ( "Click!" ) ; 
+alert ( "Click!" ) ; 
+} ) ; 
+} ) ; 
+0 First button only 
+0 First button only 
+0 None of the buttons 
+0 None of the buttons 
+0 All three buttons 
+0 All three buttons 
+Are buttons the only elements that 
+Are buttons the only elements that 
+can have click event handlers? 
+can have click event handlers? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+The ready event 
+The ready event 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+One of the most important jQuery events is the event. The ready event is triggered when the 
+One of the most important jQuery events is the event. The ready event is triggered when the 
+browser has finished loading the webpage's DOM. Good practice is to use jQuery selectors inside 
+browser has finished loading the webpage's DOM. Good practice is to use jQuery selectors inside 
+the event handler to ensure the DOM is fully loaded before searching the DOM for elements. 
+the event handler to ensure the DOM is fully loaded before searching the DOM for elements. 
+Figure 7.3.1: Waiting for the ready event. 
+Figure 7.3.1: Waiting for the ready event. 
+// Wait until the document's DOM is 
+// Wait until the document's DOM is 
+ready
+ready
+function() {
+function() {
+// DOM is ready to go
+// DOM is ready to go
+addClass("big");
+addClass("big");
+ready ready()
+ready ready()
+$() ready
+$() ready
+// DOM is ready to go
+// DOM is ready to go
+addClass("big");
+addClass("big");
+$(doThis);
+$(doThis);
+doThis
+doThis
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+17 of 66 2024-11-17, 12:17 p.m.
+17 of 66 2024-11-17, 12:17 p.m.
+$ (document) . ready ( fur 
+$ (document) . ready ( fur 
+I I DOM is ready tc 
+I I DOM is ready tc 
+$ ("button" ) . addC l c 
+$ ("button" ) . addC l c 
+} ) ; 
+} ) ; 
+Developers use the event so frequently that the shortcut method is not needed. 
+Developers use the event so frequently that the shortcut method is not needed. 
+The function can be supplied an event handler that will only execute when the event 
+The function can be supplied an event handler that will only execute when the event 
+triggers on the document. 
+triggers on the document. 
+Figure 7.3.2: Registering a ready event handler with $(). 
+Figure 7.3.2: Registering a ready event handler with $(). 
+$ ( function () { 
+$ ( function () { 
+I I DOM is rec 
+I I DOM is rec 
+$ ( "button" ) . add( 
+$ ( "button" ) . add( 
+} ) ; 
+} ) ; 
+I PARTICIPATION I 
+I PARTICIPATION I 
+ACTIVITY 7.3.3: The ready event. 
+ACTIVITY 7.3.3: The ready event. 
+1) Developers typically use a ready event 
+1) Developers typically use a ready event 
+handler when the jQuery code is 
+handler when the jQuery code is 
+located at the end of the web page. 
+located at the end of the web page. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) The code 
+2) The code 
+$(document) .ready(doThis); is 
+$(document) .ready(doThis); is 
+equivalent to s I rln'T'h i .~, : where 
+equivalent to s I rln'T'h i .~, : where 
+is a function. 
+is a function. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) The ready event is triggered after all 
+3) The ready event is triggered after all 
+the page's images, videos, and scripts 
+the page's images, videos, and scripts 
+have finished downloading. 
+have finished downloading. 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+<div>
+<div>
+big <div>
+big <div>
+<div>
+<div>
+<div> <div>
+<div> <div>
+toggleClass() yellow
+toggleClass() yellow
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+18 of 66 2024-11-17, 12:17 p.m.
+18 of 66 2024-11-17, 12:17 p.m.
+0 True 
+0 True 
+0 False 
+0 False 
+Mouse events 
+Mouse events 
+jQuery supports many types of mouse events besides click. Ex: A drawing program needs to be 
+jQuery supports many types of mouse events besides click. Ex: A drawing program needs to be 
+alerted when the mouse button is first pressed (mousedown), when the mouse is moved 
+alerted when the mouse button is first pressed (mousedown), when the mouse is moved 
+(mousemove), and when the mouse button is released (mouseup). 
+(mousemove), and when the mouse button is released (mouseup). 
+Table 7.3.1: Mouse events. 
+Table 7.3.1: Mouse events. 
+Event Description 
+Event Description 
+click Triggered when the user clicks an element. 
+click Triggered when the user clicks an element. 
+dblclick Triggered when the user double-clicks an element. 
+dblclick Triggered when the user double-clicks an element. 
+mousedown / Triggered when the user first clicks down on an element or 
+mousedown / Triggered when the user first clicks down on an element or 
+mouseup releases the mouse. 
+mouseup releases the mouse. 
+mouseover / 
+mouseover / 
+Triggered when the mouse enters or leaves an element. 
+Triggered when the mouse enters or leaves an element. 
+mouseout 
+mouseout 
+mousemove Triggered when the mouse is moved while inside an element. 
+mousemove Triggered when the mouse is moved while inside an element. 
+I PARTICIPATION I . ACTIVITY 7.3.4: Mouse event practice. 
+I PARTICIPATION I . ACTIVITY 7.3.4: Mouse event practice. 
+The following HTML uses CSS and JavaScript to render the webpage. Try modifying the 
+The following HTML uses CSS and JavaScript to render the webpage. Try modifying the 
+JavaScript so that the rendered webpage matches the expected webpage. Do not modify 
+JavaScript so that the rendered webpage matches the expected webpage. Do not modify 
+the HTML or CSS. 
+the HTML or CSS. 
+1. Make the words "Hover over me!" become large when the mouse is over the <di r> 
+1. Make the words "Hover over me!" become large when the mouse is over the <di r> 
+containing the words. Return the font to regular size when the mouse is not over the 
+containing the words. Return the font to regular size when the mouse is not over the 
+<div>. Do this by modifying the mouseover and mouseout event handlers to add 
+<div>. Do this by modifying the mouseover and mouseout event handlers to add 
+and remove the,_" -· class to/from the / _,' at the right time. 
+and remove the,_" -· class to/from the / _,' at the right time. 
+2. Make the 
+2. Make the 
+mouse on the 
+mouse on the 
+and calling the 
+and calling the 
+background alternate between yellow and white when moving the 
+background alternate between yellow and white when moving the 
+. Do this by adding a "mousemove" event hander to the 
+. Do this by adding a "mousemove" event hander to the 
+method to add or remove the classes to 
+method to add or remove the classes to 
+□ 
+□ 
+<input type="text">
+<input type="text">
+<textarea>
+<textarea>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+19 of 66 2024-11-17, 12:17 p.m.
+19 of 66 2024-11-17, 12:17 p.m.
+the <div>. 
+the <div>. 
+3. Although the JavaScript code will work without a ready event handler, put all of the 
+3. Although the JavaScript code will work without a ready event handler, put all of the 
+JavaScript code inside a ready event handler, just for practice. 
+JavaScript code inside a ready event handler, just for practice. 
+Keyboard and form events 
+Keyboard and form events 
+jQuery supports keyboard events that are helpful when a webpage needs to react to the user 
+jQuery supports keyboard events that are helpful when a webpage needs to react to the user 
+pressing or releasing keys on a keyboard. Ex: Moving a spaceship left or right depending on what 
+pressing or releasing keys on a keyboard. Ex: Moving a spaceship left or right depending on what 
+key is pressed. jQuery also supports form events that are helpful when the webpage needs to 
+key is pressed. jQuery also supports form events that are helpful when the webpage needs to 
+perform data validation. Ex: Ensuring the credit card field contains the correct number of digits 
+perform data validation. Ex: Ensuring the credit card field contains the correct number of digits 
+when the user presses the submit button. 
+when the user presses the submit button. 
+Table 7.3.2: Keyboard events. 
+Table 7.3.2: Keyboard events. 
+Event Description 
+Event Description 
+keydown Triggered when the user first presses a key on the keyboard. ,--
+keydown Triggered when the user first presses a key on the keyboard. ,--
+keyup Triggered when the user releases a key from the keyboard. 
+keyup Triggered when the user releases a key from the keyboard. 
+~ 
+~ 
+Triggered when the browser registers keyboard input from printable 
+Triggered when the browser registers keyboard input from printable 
+keypress character keys. Non-printing keys like Shift and Esc do not register keypress 
+keypress character keys. Non-printing keys like Shift and Esc do not register keypress 
+events. 
+events. 
+Table 7.3.3: Form events. 
+Table 7.3.3: Form events. 
+Event Description 
+Event Description 
+focus/ blur Triggered when an element gains or loses focus. 
+focus/ blur Triggered when an element gains or loses focus. 
+focusin / Triggered when an element or any of the element's children gain or 
+focusin / Triggered when an element or any of the element's children gain or 
+focusout lose focus . 
+focusout lose focus . 
+change Triggered when an element's value changes. 
+change Triggered when an element's value changes. 
+Triggered when a user selects text in an or 
+Triggered when a user selects text in an or 
+select 
+select 
+element. 
+element. 
+$.isNumeric()
+$.isNumeric()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+20 of 66 2024-11-17, 12:17 p.m.
+20 of 66 2024-11-17, 12:17 p.m.
+Event Description 
+Event Description 
+submit Triggered when the user is attempting to submit a form. 
+submit Triggered when the user is attempting to submit a form. 
+I PARTICIPATION I 
+I PARTICIPATION I 
+ACTIVITY 7.3.5: Keyboard and form events. 
+ACTIVITY 7.3.5: Keyboard and form events. 
+1) What event is helpful for writing an 
+1) What event is helpful for writing an 
+event handler that ensures the 
+event handler that ensures the 
+password the user is entering is long 
+password the user is entering is long 
+enough while the password is being 
+enough while the password is being 
+typed? 
+typed? 
+0 blur 
+0 blur 
+0 keyup 
+0 keyup 
+0 change 
+0 change 
+2) What event is helpful for writing an 
+2) What event is helpful for writing an 
+event handler that ensures the user 
+event handler that ensures the user 
+typed a valid phone number after the 
+typed a valid phone number after the 
+user moves to another input field? 
+user moves to another input field? 
+0 keypress 
+0 keypress 
+0 submit 
+0 submit 
+0 blur 
+0 blur 
+3) What event is helpful for writing an 
+3) What event is helpful for writing an 
+event handler that ensures a radio 
+event handler that ensures a radio 
+button was selected when the user 
+button was selected when the user 
+pressed the form's submit button? 
+pressed the form's submit button? 
+0 submit 
+0 submit 
+0 focusout 
+0 focusout 
+0 select 
+0 select 
+I PARTICIPATION I . ACTIVITY 7.3.6: Keyboard event practice. 
+I PARTICIPATION I . ACTIVITY 7.3.6: Keyboard event practice. 
+The following webpage converts Celsius to Fahrenheit and vice versa. The JavaScript 
+The following webpage converts Celsius to Fahrenheit and vice versa. The JavaScript 
+code uses the jQuery method val () to extract the number that was typed into one of the 
+code uses the jQuery method val () to extract the number that was typed into one of the 
+text input fields when Convert is pressed. The jQuery function 
+text input fields when Convert is pressed. The jQuery function 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+□ 
+□ 
+val()
+val()
+val()
+val()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+21 of 66 2024-11-17, 12:17 p.m.
+21 of 66 2024-11-17, 12:17 p.m.
+determines if what was typed is a number or not. If a number has not been typed, no 
+determines if what was typed is a number or not. If a number has not been typed, no 
+conversion is performed. Otherwise is used to put the converted temperature into 
+conversion is performed. Otherwise is used to put the converted temperature into 
+the appropriate text field. 
+the appropriate text field. 
+Try modifying the JavaScript so the rendered webpage matches the behavior of the 
+Try modifying the JavaScript so the rendered webpage matches the behavior of the 
+expected webpage. Do not modify the HTML or CSS. 
+expected webpage. Do not modify the HTML or CSS. 
+1. Make the °For °C label appear blue when focus is given to the Fahrenheit or Celsius 
+1. Make the °For °C label appear blue when focus is given to the Fahrenheit or Celsius 
+input field, respectively. Use the focus and blur events to add or remove the CSS 
+input field, respectively. Use the focus and blur events to add or remove the CSS 
+class selected to the labels. 
+class selected to the labels. 
+2. Blank-out the °F input field when the user types anything into the °C field and vice 
+2. Blank-out the °F input field when the user types anything into the °C field and vice 
+versa. Use the keyup event on each of the respective input fields to change the 
+versa. Use the keyup event on each of the respective input fields to change the 
+opposing field into an empty string with the method. 
+opposing field into an empty string with the method. 
+3. Add the error class to the °For °C text fields if the user has typed anything but a 
+3. Add the error class to the °For °C text fields if the user has typed anything but a 
+number. Remove the error class if the user has typed a number. Use the keyup 
+number. Remove the error class if the user has typed a number. Use the keyup 
+event on each of the respective input fields to test the user input while the input is 
+event on each of the respective input fields to test the user input while the input is 
+being typed. 
+being typed. 
+I CHALLENGE I . ACTIVITY 7.3.1 : JOuery events. 
+I CHALLENGE I . ACTIVITY 7.3.1 : JOuery events. 
+570104.2065416.qx3zqy7 
+570104.2065416.qx3zqy7 
+Exploring further: 
+Exploring further: 
+• jQuerY- Events documentation 
+• jQuerY- Events documentation 
+• Events - jQuery Learning Center 
+• Events - jQuery Learning Center 
+• £.isNumeric() documentation 
+• £.isNumeric() documentation 
+• .val() documentation 
+• .val() documentation 

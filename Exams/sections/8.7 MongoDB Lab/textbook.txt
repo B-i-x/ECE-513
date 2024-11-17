@@ -1,0 +1,214 @@
+0 
+0 
+0 
+0 
+0 
+0 
+In this lab, you will complete the implementation of a server capable of receiving information, utilizing 
+In this lab, you will complete the implementation of a server capable of receiving information, utilizing 
+a database to store said information, process it, and send it back in JSON format when requested. The 
+a database to store said information, process it, and send it back in JSON format when requested. The 
+task consists on implementing a server that stores the air quality of different zip codes, and returns 
+task consists on implementing a server that stores the air quality of different zip codes, and returns 
+the average air quality for a specific zip code utilizing POST and GET requests respectively. 
+the average air quality for a specific zip code utilizing POST and GET requests respectively. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 97/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Installation links: 
+Installation links: 
+Official MongoDB Installation guide: https://www.mongodb.com/docs/manual/tutorial/installmongodb-on-amazon/ To install mongoose, you can use npm install mongoose 
+Official MongoDB Installation guide: https://www.mongodb.com/docs/manual/tutorial/installmongodb-on-amazon/ To install mongoose, you can use npm install mongoose 
+1. app.js file 
+1. app.js file 
+Add the following code to your app.js to enable cross-origin access. Add this right after your app.set 
+Add the following code to your app.js to enable cross-origin access. Add this right after your app.set 
+commands.: 
+commands.: 
+II This is to enable cross-origin access 
+II This is to enable cross-origin access 
+app.use(function (req, res, next) 
+app.use(function (req, res, next) 
+II Website you wish to allow to connect 
+II Website you wish to allow to connect 
+res.setHeader('Access-Control-Allow-Origin', '*'); 
+res.setHeader('Access-Control-Allow-Origin', '*'); 
+II Request methods you wish to allow 
+II Request methods you wish to allow 
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, 
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, 
+PUT, PATCH, DELETE'); 
+PUT, PATCH, DELETE'); 
+II Request headers you wish to allow 
+II Request headers you wish to allow 
+res.setHeader('Access-Control-Allow-Headers', 'X-RequestedWith,content-type'); 
+res.setHeader('Access-Control-Allow-Headers', 'X-RequestedWith,content-type'); 
+II Set to true if you need the website to include cookies in the 
+II Set to true if you need the website to include cookies in the 
+requests sent 
+requests sent 
+} ) ; 
+} ) ; 
+II to the API (e.g. in case you use sessions) 
+II to the API (e.g. in case you use sessions) 
+res.setHeader('Access-Control-Allow-Credentials', true); 
+res.setHeader('Access-Control-Allow-Credentials', true); 
+II Pass to next layer of middleware 
+II Pass to next layer of middleware 
+next(); 
+next(); 
+2. Server Endpoints 
+2. Server Endpoints 
+Add the following two endpoints to your server. 
+Add the following two endpoints to your server. 
+/lab/status 
+/lab/status 
+• This GET endpoint takes in one query parameter called zip, and return the average airQuality 
+• This GET endpoint takes in one query parameter called zip, and return the average airQuality 
+found across all entrees in the database for that specific zip code, along with a 200 status code. 
+found across all entrees in the database for that specific zip code, along with a 200 status code. 
+The average must be truncated to use two decimals, using the .toFixed() method. The average 
+The average must be truncated to use two decimals, using the .toFixed() method. The average 
+should be sent without any additional information e.g. 
+should be sent without any additional information e.g. 
+res.status(200) .json(average); 
+res.status(200) .json(average); 
+o Ex:myserver:3000llablstatus?zip=85705 would return the average 
+o Ex:myserver:3000llablstatus?zip=85705 would return the average 
+airQuality in zip code 85705 
+airQuality in zip code 85705 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 98/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+• If the zip is not specified or is invalid, the following error message must be returned along with 
+• If the zip is not specified or is invalid, the following error message must be returned along with 
+a 400 code. 
+a 400 code. 
+0 var errormsg = {"error" : "a zip code is required."} 
+0 var errormsg = {"error" : "a zip code is required."} 
+• If the zip is valid, but no data exist for it inside the database, the following error message must 
+• If the zip is valid, but no data exist for it inside the database, the following error message must 
+be returned along with a 400 code. 
+be returned along with a 400 code. 
+o var errormsg = {"error" "Zip does not exist in the database."} 
+o var errormsg = {"error" "Zip does not exist in the database."} 
+/lab/register 
+/lab/register 
+• This POST endpoint will take in two values passed in the body, namely zip and airQuali ty. If 
+• This POST endpoint will take in two values passed in the body, namely zip and airQuali ty. If 
+any of the parameters is missing, the following error message must be returned along with a 
+any of the parameters is missing, the following error message must be returned along with a 
+400 code. 
+400 code. 
+o var errormsg = {"error" : "zip and airQuality are required."} 
+o var errormsg = {"error" : "zip and airQuality are required."} 
+• If both parameters are present, a new entry must be created in the database with the 
+• If both parameters are present, a new entry must be created in the database with the 
+information received, and the following message must be returned along with a 201 code. 
+information received, and the following message must be returned along with a 201 code. 
+o var msg = {"response" : "Data recorded."} 
+o var msg = {"response" : "Data recorded."} 
+3. Schema 
+3. Schema 
+The database should use the following schema: 
+The database should use the following schema: 
+var Recording= db.model("Recording", { 
+var Recording= db.model("Recording", { 
+zip: {type: Number}, 
+zip: {type: Number}, 
+airQuality: {type: Number} 
+airQuality: {type: Number} 
+} ) ; 
+} ) ; 
+4. Lab Submission 
+4. Lab Submission 
+The zylab submission will consists only of submitting a file named index.html, which has a complete 
+The zylab submission will consists only of submitting a file named index.html, which has a complete 
+link to your server, with the port included. 
+link to your server, with the port included. 
+• Ex:http://myserver:3000/ 
+• Ex:http://myserver:3000/ 
+NOTE: Make sure to clear the database before submitting, if the database has something in the zip 
+NOTE: Make sure to clear the database before submitting, if the database has something in the zip 
+codes we are using to test your server, your values won't match the expected averages. To drop the 
+codes we are using to test your server, your values won't match the expected averages. To drop the 
+database, use the following commands: 
+database, use the following commands: 
+$ mongosh 
+$ mongosh 
+$ show dbs -> use this command to see all the databases that 
+$ show dbs -> use this command to see all the databases that 
+currently exist, and look for the name of yours. 
+currently exist, and look for the name of yours. 
+$ use mydatabase -> replace "mydatabase" with the name of your 
+$ use mydatabase -> replace "mydatabase" with the name of your 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 99/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+database. 
+database. 
+$ db.dropDatabase() 
+$ db.dropDatabase() 
+zyBooks 
+zyBooks 
+You should see a message saying "{ "dropped" 
+You should see a message saying "{ "dropped" 
+"narneofyourdatabase", "ok" : 1 } 
+"narneofyourdatabase", "ok" : 1 } 
+$ exit 
+$ exit 
+5. Test Cases 
+5. Test Cases 
+The following are the Ajax calls used to test your server endpoints. 
+The following are the Ajax calls used to test your server endpoints. 
+1. Check for data 
+1. Check for data 
+var zips= [85700, 85701, 85702]; 
+var zips= [85700, 85701, 85702]; 
+var serverLink = docurnent.getElernentByid("serverLink") .href; 
+var serverLink = docurnent.getElernentByid("serverLink") .href; 
+for (var zip= 0; zip< zips.length; zip++) { 
+for (var zip= 0; zip< zips.length; zip++) { 
+var xhr = new XMLHttpRequest(); 
+var xhr = new XMLHttpRequest(); 
+xhr.addEventListener("load", rnyHandler); 
+xhr.addEventListener("load", rnyHandler); 
+xhr.responseType = "json" 
+xhr.responseType = "json" 
+xhr.open("GET", serverLink + "lab/ status?zip=" + zips[zip]); 
+xhr.open("GET", serverLink + "lab/ status?zip=" + zips[zip]); 
+xhr. send() ; 
+xhr. send() ; 
+2. POST with incorrect data format 
+2. POST with incorrect data format 
+var zip= "not a zip"; 
+var zip= "not a zip"; 
+var serverLink docurnent.getElernentByid("serverLink") .href; 
+var serverLink docurnent.getElernentByid("serverLink") .href; 
+var xhr = new XMLHttpRequest(); 
+var xhr = new XMLHttpRequest(); 
+xhr.addEventListener("load", rnyHandler); 
+xhr.addEventListener("load", rnyHandler); 
+xhr.responseType = "json" 
+xhr.responseType = "json" 
+data= 
+data= 
+{ "zip" : zip, 
+{ "zip" : zip, 
+"airQuality" 15 
+"airQuality" 15 
+} ; 
+} ; 
+xhr.open("POST", serverLink + "lab/register"); 
+xhr.open("POST", serverLink + "lab/register"); 
+xhr.setRequestHeader("Content-type", "application/json"); 
+xhr.setRequestHeader("Content-type", "application/json"); 
+xhr.send(JSON.stringify(data)); 
+xhr.send(JSON.stringify(data)); 
+3. POST with correct data format 
+3. POST with correct data format 
+var zip= "85700"; 
+var zip= "85700"; 
+var serverLink = docurnent.getElernentByid("serverLink") .href; 
+var serverLink = docurnent.getElernentByid("serverLink") .href; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 100/100 

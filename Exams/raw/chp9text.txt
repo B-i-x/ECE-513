@@ -1,4177 +1,1438 @@
 11/17/24, 12:11 PM zyBooks 
-8.1 MongoDB 
-MongoDB document database 
-Node.js web applications may use relational or non-relational (NoSQL) databases to store web 
-application data. MongoDB is the most popular NoSQL database used by Node.js developers. 
-MongoDB stores data objects as documents inside a collection. 
-• A document is a single data object in a MongoDB database that is composed of field/value 
-pairs, similar to JSON property/value pairs. 
-• A collection is a group of related documents in a MongoDB database. 
-MongoDB stores documents internally as BSON documents. ABSON document (Binary JSON) is a 
-binary representation of JSON with additional type information. BSON types include string, integer, 
-double, date, boolean, null, and others. ABSON document may not exceed 16 MB in size. 
-I PARTICIPATION 8.1 .1: Documents and collections. ACTIVITY 
-document 
-name: "Sue", 
-gpa: 3 .1, 
-interests: ["biking", "reading") 
-t t 
-field 
-name: "Sue", 
-gpa: 3 .1, 
-value 
-interests: ["biking", "reading"] , 
-address: { 
-city: "Dallas", } nested 
-state: "TX" document 
+9.1 Web storage 
+Web Storage API 
+The Web Storage AP/ provides storage objects that allow JavaScript programs to securely store 
+key/value pairs in the web browser. The Web Storage API supports two storage objects: 
+1. The sessionStorage object stores key/value pairs for an origin that are only available for the 
+duration of the session. Closing the browser or browser tab ends the session. 
+2. The loca/Storage object stores key/value pairs for an origin that are stored indefinitely. 
+An origin is a combination of scheme, hostname, and port number in a URL. Each of the following are 
+examples of different origins: 
+• http://example.com/ 
+• http://www.example.com/ 
+• https://www.example.com/ 
+• http://www.example.com:8080/ 
+The browser stores the data for each origin separately and does not share the data between origins. 
+I PARTICIPATION 
+ACTIVITY 9.1.1: Web storage. 
+1) Refreshing a webpage begins a new 
+session. 
+0 True 
+0 False 
+2) Data that should remain after the user 
+closes a web browser should be stored 
+in sessionStorage. 
+0 True 
+0 False 
+3) The webpage from http://google.com/ 
+cannot access web storage data from 
+https://google.com/. 
+0 True 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+D 
+0 
+0 
+0 
+1/37 
+11/17/24, 12:11 PM zyBooks 
+Chrome DevTools displays web storage 
+◄ 
+Most web browsers allow developers to see the key/value pairs stored in web storage. 
+Chrome's DevTools displays the key/value pairs stored for the origin 
+http://taz.harding.edu below and allows the developer to edit and delete key/value 
+pairs. Good practice is to avoid storing sensitive data like social security numbers, 
+financial data, and passwords in web storage, because the values can be easily seen by 
+others. 
+□ X 
+/ ['.'] Web Storage AP I erno X 
+C I (D taz.harding,edu/~fmc:cown/storage,html * 
+S tti' e ngs. 
+Pla -er Nmn e: ~IJ_en_n_y _______ ~ 
+Difficulty LeYel: J ~3--~ 
+I Save I 
+Beme:nts Console Sources N-eti.vork Trmo:Iine Applica on » X 
+Ap-plic ion 
+I Manife, 
+(I: Service Workers 
+ii C1earstorage 
+Storage. 
+T 55 Local Storage 
+55 h './ / ,az hanf g..edu 
+► 55 Sesswn Storage 
+ie!l In e dDB 
+51 WebSQL 
+► Co ies ,,. e X 
+Con-sole l Ne ark condition5 Sensors 
+Ed., -V.:ilue" 
+Delet e 
+X 
+Private browsing 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+► 
+2/37 
+11/17/24, 12:11 PM zyBooks 
+◄ 
+Many web browsers allow users to browse the web privately using "incognito" mode or 
+"private windows". When browsing privately, web storage may be disabled or may be 
+cleared when the user stops browsing privately See the Exploring further section for 
+information on detecting the availability of localStorage. 
+Accessing web storage data 
+The localStorage and sessionStorage objects provide methods for storing data, retrieving 
+data, and removing data: 
+• setltem(key, value) stores the key string and associated value string in storage. 
+► 
+• getltem(key) returns the value associated with the key in storage or null if the key does not 
+exist. 
+• removeltem(key) removes the key and associated value from storage. 
+• clear() removes all keys and associated values from storage. 
+I PARTICIPATION 
+ACTIVITY 9.1.2: Storing and retrieving values from localStorage. 
+<hl>Settings</hl> 
+<label>Player Name: 
+D 
+Settings <input type="text" id="playerName" value="Player 1"> 
+</label> Player Name: ! Jenny """;:::::::::::::=,-...., 
+<label>Difficulty Level: Difficulty Level: !._3 _ ___. <input type="number" min="l" max="3" id="diffLevel" value="l"> 
+</label> 
+<input type="button" value="Save" id="saveBtn" > 
+let playerNameWidget = document . getElementByid ("playerName" ); 
+let difficultyLevelWidget = document . getElementByid ( "diffLevel" ); 
+if (localStorage . getitem ("playerName" )) { 
+( Save ) 
+playerNameWidget . value = localStorage . getitem ("playerName" ); 
+difficultyLevelWidget . value = localStorage . getitem ( "difficultyLevel" ); 
+document . getElementByid ( "saveBtn" ) . addEventListener ( "click" , function () { 
+localStorage . setitem ( "playerName" , playerNameWidget . value ); 
+localStorage . setitem ( "difficultyLevel" , difficultyLevelWidget . value ); 
+} ) ; 
 Animation content: 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-collection 
-name: "Sue", 
-gpa: 3 .1, 
-D 
-interests: ["biking", "reading") 
-name: "Larry", 
-gpa: 2. 5, 
-interests: ["RPGs", "chess") 
-name: "Anne", 
-gpa: 4. 0, 
-interests: ["coding", "Pilates"] 
-1/100 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+local storage 
+playerName = 
+Jenny 
+difficultyLevel = 
+3 
+3/37 
 11/17/24, 12:11 PM 
-A document shows a single student: 
-{ 
-name: "Sue", 
-gpa: 3.1, 
-interests: ["biking", "reading"] 
-} 
+The following HTML is displayed. 
+<h1 >Settings</h1 > 
+Player Name: 
+<input type="text" id="playerName" value="Player 1 "> 
+Difficulty Level: 
 zyBooks 
-On the last line, interests is the field and ["biking", "reading"] is the value. 
-Another document with a nested document is shown: 
-{ 
-name: "Sue", 
-gpa: 3.1, 
-interests: ["biking", "reading"], 
-address: { 
-city: "Dallas", 
-state: 'TX" 
+<input type="number" min="1" max="3" id="diffLevel" value="1 "> 
+<input type="button" value="Save" id="saveBtn"> 
+The following JavaScript is displayed: 
+let playerNameWidget = document.getElementByld("playerName"); 
+let difficultyLevelWidget = document.getElementByld("diffLevel"); 
+if (localStorage.getltem("playerName")) { 
+playerNameWidget.value = localStorage.getltem("playerName"); 
+difficultyLevelWidget.value = localStorage.getltem("difficultyLevel"); 
 } 
-} 
-The address block is the nested document. Next a collection of a group of student doucments is 
-shown: 
-{ 
-name: "Sue", 
-gpa: 3.1 , 
-interests: ["biking", "reading"] 
-} 
-{ 
-} 
-{ 
-} 
-name: "Larry", 
-gpa: 2.5, 
-interests: ["RPGs", "chess"] 
-name: "Anne", 
-gpa: 4.0, 
-interests: ["coding", "Pilates"] 
+document.getElementByld("saveBtn").addEventlistener("click", function() { 
+localStorage.setltem("playerName", playerNameWidget.value); 
+localStorage.setltem("difficultyLevel", difficultyLevelWidget.value); 
+}); 
+The browser displays two input boxes labeled Player Name and Difficulty level. Below the input 
+boxes is a Save button. 
+A box entitled local storage has the starting value of Empty in it. 
+Step 3: The user enters Jenny and 3 in the form. 
+Step 4: The name Jenny and difficult level 3 replace "Empty" in localStorage. 
+Step 5: The statement if (localStorage.getltem("playerName")) is true, so playerNameWidget.value 
+and difficultyLevelWidget.value are assigned Jenny and 3. 
 Animation captions: 
-1. A single student is represented as a document with field:value pairs. The name field is 
-assigned a BSON string, gpa is a double, and interests is an array. 
-2. Documents may be nested. The student document contains a nested address document. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 2/100 
+1. The form displays the default values "Player 1" and "1" in the browser. 
+2. localStorage.getltem() returns null because the playerName has not been previously saved in 
+localStorage. The default HTML values remain in the browser. 
+3. The user changes the player name and difficulty level and clicks Save. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 4/37 
 11/17/24, 12:11 PM zyBooks 
-3. MongoDB organizes documents into collections. A group of students is stored in a single 
+4. The Save button's click handler calls localStorage.setltem() to save the player name and 
+difficulty level to local storage. 
+5. When the page is reloaded, the player name and difficulty level are loaded from localStorage 
+using localStorage.getltem(). 
 I PARTICIPATION 
-ACTIVITY 8.1.2: MongoDB concepts. D 
-1) Node.js only works with non-relational 0 
-databases. 
-0 True 
-0 False 
-2) All MongoDB documents must be 0 
-stored in a collection. 
-0 True 
-0 False 
-3) MongoDB documents may store 0 
-nested documents. 
-0 True 
-0 False 
-4) Document fields do not require quotes, 0 
-but all values do. 
-0 True 
-0 False 
-5) MongoDB stores documents in a 0 
-binary-encoded format. 
-0 True 
-0 False 
-6) No size limit exists for a BSON 0 
-document. 
-0 True 
-0 False 
-Installing MongoDB 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 3/100 
-11/17/24, 12:11 PM zyBooks 
-◄ 
-MongoDB runs on a wide range of operating systems. Instructions for installing 
-MongoDB Community Edition are provided on the MongoDB website. 
-MongoDB Shell is a program for interacting with MongoDB. Instructions for installing 
-MongoDB Shell are also available on the MongoDB website. 
-MongoDB Shell 
-► 
-MongoDB Shell is a command-line interface for creating and deleting documents, querying, creating 
-user accounts, and performing many other operations in MongoDB. The mongosh command starts 
-MongoDB Shell. 
-I PARTICIPATION 
-ACTIVITY 8.1.3: Running MongoDB Shell. 
-$ mongosh 
-Current Mongosh Log ID: XYZ 
-Connecting to: mongodb://127.0.0.1:27017/ ... 
-test> use mydb 
-switched to db mydb 
-mydb> stu = { _id: 123, name: "Sue", gpa: 3.1 } 
-{"_id": 123, "name": "Sue", "gpa": 3.1} 
-mydb> db.students.insertOne(stu) 
-{ acknowledged: true, insertedid: 123 } 
-mydb> db.students.find() 
-[ { " id" : 123, "name" : "Sue", "gpa" : 3 .1 } ] 
-Animation content: 
-The following console is shown: 
-$ mongosh 
-Current Mon gosh Log ID: XYZ 
-Connecting to: mongodb://127.0.0.1 :27017 / ... 
-test> use mydb 
-switched to db mydb 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-MongoDB 
-mydb 
-D 
-,------- ~ 
-students 
-{_id: 123, 
-name: "Sue", 
-gpa: 3.1 } 
-4/100 
-11/17/24, 12:11 PM 
-mydb> stu = { _id: 123, name: "Sue", gpa: 3.1 } 
-{ "_id" : 123, "name" : "Sue", "gpa" : 3.1 } 
-mydb>db.students.insertOne(stu) 
-{ acknowledged: true, insertedld: 123} 
-mydb>db.students.flndO 
-[ { "_id" : 123, "name" : "Sue", "gpa" : 3.1 } ] 
-zyBooks 
-The MongoDB shell is displayed next which holds the mydb database. mydb database contains the 
-student collection with the following student information: 
-{_id: 123, 
-name: "Sue", 
-gpa: 3.1} 
-Animation captions: 
-1. Entering "mongosh" at the command line starts the MongoDB Shell and connects to the 
-MongoDB instance running on the local computer. 
-2. The use command creates a new database called "mydb" since mydb does not exist. 
-3. stu is assigned a document and inserted into the students collection with insertOne(). 
-4. The find() method retrieves the one student in the students collection. 
-I PARTICIPATION 8.1 .4: MongoDB Shell commands. ACTIVITY 
-Refer to the commands entered into the MongoDB Shell below. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-5/100 
-11/17/24, 12:11 PM 
-test> use dealer 
-switched to db dealer 
-zyBooks 
-dealer> car= { id: 200, make: "Ford", model : "Mustang" 
-{ " id" : 200, "make" : "Ford", "model" : "Mustang" } 
-dealer> db.autos.insertOne(car) 
-{ acknowledged: true, insertedid: 200 } 
-dealer> db.autos.find() 
-[ { " id" : 200, "make" 
-dealer> show dbs 
-admin 41 kB 
-config 111 kB 
-dealer 73.7 kB 
-local 
-mydb 
-41 kB 
-73.7 kB 
-dealer> help 
-Shell Help: 
-"Ford", "model" 
-Set current database 
-"Mustang" } ] 
-use 
-show 
-databases. 
-'show databases'/'show dbs' : Print a list of all available 
-'show collections' / 'show tables': Print a list of all collections 
-for . . . 
-dealer> show collections 
-autos 
-dealer> db.autos . help() 
-Collection Class : 
-aggregate 
-bulkWrite 
-execution . 
-count 
-Calculates aggregate values for the data in a collection or a view. 
-Performs multiple write operations with controls for order of 
-Returns the count of documents that would match a find() query 
-for . .. 
-dealer> exit 
-If unable to drag and drop, refresh the page. 
-Ill show collections 
-use dealer 
-db.autos.insertOne( car) showdbs 
-Displays a summary of all available 
-shell commands. 
-db.autos.help() 
-Displays a summary of all collection 
-methods. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 6/100 
-11/17/24, 12:11 PM 
-Inserting documents 
-zyBooks 
-Creates or selects a database called 
-"dealer". 
-Quits the MongoDB Shell. 
-Displays a list of all databases. 
-Displays all collections in the current 
-database. 
-Inserts a single document into the 
-"autos" collection. 
-The insertOne() collection method inserts a single document into a collection. The insertMany() 
-collection method inserts multiple documents into a collection. 
-In the figure below, Sue is inserted into the students collection, then three students in the students 
-array are inserted. 
-Figure 8.1.1: Inserting multiple students in bulk. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 7/100 
-11/17/24, 12:11 PM zyBooks 
-mydb> db.students.insertOne({ name: "Sue", gpa: 3.1 }) 
-{ 
-acknowledged: true, 
-insertedld: Objectld("62794229fc4ebd4933877a9d") 
-mydb> students= [ 
-{ name: "Maria", gpa: 4.0 }, 
-{ name: "Xiu", gpa: 3.8 }, 
-. . . { name: "Braden", gpa: 2. 5 } 
-mydb> db.students.insertMany(students) 
-{ 
-acknowledged: true, 
-insertedlds: { 
-'0': Objectid("627942f6fc4ebd4933877a9e"), 
-'l': Objectld("627942f6fc4ebd4933877a9f"), 
-'2': Objectld("627942f6fc4ebd4933877aa0") 
-mydb> db.students.find() 
-[ 
-id: Objectld("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 3.1 
-} , 
-{ id: Objectid("627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 4 
-} , 
-{ id: Objectld("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 3.8 
-} , 
-{ id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
-2. 5 } 
-l 
-◄ ► 
-The _id field is automatically assigned to every document and is always the first field in the document. 
-The _id acts as a primary key. A primary key is a field that uniquely identifies each document in a 
-collection. 
-The _id may be assigned a unique value like a student ID number or use an auto-incrementing value. In 
-the figure above, no _id field was assigned, so MongoDB automatically assigned an Objectld to _id. An 
-Objectld is a 12-byte BSON type that contains a unique value. An Objectld is displayed as a 
-hexadecimal number. Ex: 62794229fc4ebd4933877a9d. 
-I PARTICIPATION 
-ACTIVITY 8.1.5: MongoDB _id field. 
-1) The command below assigns _id an 
-Objectld. 
-db .students . insertOne ({ id : 
-123 , "Ebony" , gpa : 3.2 }) 
-0 True 
-O False 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-0 
-8/100 
-11/17/24, 12:11 PM zyBooks 
-2) In the figure above, the inserted 0 
-documents received similar Objectlds. 
-0 True 
-0 False 
-3) The Objectld is 12 characters long. 0 
-0 True 
-0 False 
-4) The _id field may use duplicate values. 0 
-0 True 
-0 False 
-Finding documents 
-The find() collection method returns all documents by default or documents that match an optional 
-query parameter. The findOne() collection method returns only the first document matching the query. 
-Both methods return null if the query matches no documents. 
-Figure 8.1.2: Find 'Sue' and students with GPA~ 3.0. 
-mydb> db.students . find({ name: 'Sue ' }) 
-[ 
-{ _id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 
-3.1 } 
-l 
-mydb> db.students.find({ gpa: { $gte: 3.0 } }) 
-[ 
-{ _id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 
-3 .1 } , 
-{ _id: Objectid("627942f6fc4ebd4933877a9e"), name : 'Maria', gpa: 
-4 } , 
-{ _id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 
-3.8 } 
-l 
-◄ 
-The operators used in queries are summarized in the table below, but many more exist and are 
-documented in the MongoDB manual. 
-Table 8.1.1: Common MongoDB query operators. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 9/100 
-11/17/24, 12:11 PM 
-Operator Description 
-Matches documents 
-field: value with fields that are equal 
-to the given value. 
-$eq $ne 
-$gt $gte 
-$lt $lte 
-Matches values= or f:. to 
-the given value. 
-Matches values> or~ to 
-the given value. 
-Matches values< ors to 
-the given value. 
-I 
-I 
-zyBooks 
-Example 
-II Matches student with this id 
-{ " id" : 
-Objectid ("62794229fc4ebd4933877a9d" ) 
-} 
-II Matches all docs except Sue 
-{ name : { $ne : "Sue" } } 
-II Matches students with gpa > 3.5 
-{ gpa : { $gt : 3.5 } } 
-II Matches students with gpa <= 3. 0 
-{ gpa : { $lte : 3.0 } } 
--
--
-$in $nin Matches values in or not II Matches Sue, Susan, or Susie 
-{ name : { $in : [ "Sue" , "Susan" , 
-in a given array. "Susie" ] } } 
-I I 
-Joins query clauses with II Matches student with gpa >= 3.0 
-$and a logical AND, returns and gpa <= 3.5 
-documents that match { $and : [ { gpa : { $gte : 3.0 } } ' 
-{ gpa : { $lte : 3.5 } } l } 
-both clauses. I 
-Joins query clauses with II Matches students with gpa >= 3.9 
-$or 
-◄ 
-I PARTICIPATION 
-ACTIVITY 
-a logical OR, returns or gpa 
-documents that match { $or : 
-either clauses. I 
-8.1.6: Querying the 'autos' collection. 
-<= 3.0 
-[ { gpa : { $gte : 3.9 } } ' 
-{ gpa : { $lte : 3.0 } } l } 
-Refer to the "autos" collection below, and choose the documents returned by each query. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-► 
-D 
-10/100 
-11/17/24, 12:11 PM zyBooks 
-7) 
-2) 
-3) 
-} , 
-{ 
-} , 
-{ 
-} , 
-{ 
-" id" : 100 , 
-"make" : "Ford" , 
-"model" : "Fusion" , 
-"year" : 2014 , 
-"options" : [ "engine start" , "moon roof" ], 
-"price" : 13500 
-" id" : 200 , 
-"make" : "Honda" , 
-"model" : "Accord" , 
-"year" : 2013 , 
-"options" : [ "spoiler" , "alloy wheels" , "sunroof" ] , 
-"price" : 16900 
-" id" : 300 , 
-"make" : "Dodge" , 
-"model" : "Avenger" , 
-"year" : 2012 , 
-"options" : [ "leather seats" ], 
-"price" : 10800 
-" id" : 400 , 
-"make" : "Toyota" , 
-"model" : "Corolla" , 
-"year" : 2013 , 
-"options" : [ "antitheft" ], 
-"price" : 13400 
-db . autos . find ({}) 
-0 _id 100 
-0 All documents 
-0 null 
-db . autos . find ( { year : { $gte : 
-2013 } } ) 
-0 _id 100 
-0 _id 1 00, 200, 400 
-0 _id 300 
-db . autos . findOne ({ year : { 
-$gte : 2013 } } ) 
-0 _id 100 
-0 _id 1 00, 200, 400 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-0 
-0 
-11/100 
-11/17/24, 12:11 PM 
-0 _id 300 
-4) db . autos . findOne ({ year : { 
-$gte : 2016 } }) 
-0 _id 100 
-0 Run-time error 
-0 null 
-5) db . autos . find ({ $and : [ {price : 
-{ $lte : 15000 } }, 
-6) 
-{ options : { $in : 
-[ "sunroof" , "antitheft" , "moon 
-roof" ] 
-} } l } ) 
-0 _id 100 
-0 _id 100, 400 
-0 _id 100, 200, 400 
-db . autos . find ({ $or : 
-{"make" : "Honda" }, 
-year : {$ne : 2013 } } l } ) 
-0 All documents 
-0 _id 100, 300 
-0 _id 100, 200, 300 
-Updating documents 
-zyBooks 
-0 
-0 
-0 
-The updateOne() collection method modifies a single document in a collection. The updateMany() 
-collection method modifies multiple documents in a collection. The methods have two required 
-parameters: 
-1. query- The query to find the document(s) to update. An empty query { } matches all 
-documents. 
-2. update - The modification to perform on matched documents using an update operator like 
-$inc, $set, and $unset. 
-In the example below, the calls to updateOne () and updateMany () return the matchedCount 
-property indicating how many documents matched the query, and the modifiedCount property 
-indicating the number of documents modified. 
-Figure 8.1.3: Change Sue's GPA to 3.3, and set all students with GPA> 3 to 1. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 12/100 
-11/17/24, 12:11 PM zyBooks 
-mydb> db.students.updateOne({ name: 'Sue' }, { $set: { gpa: 3.3 } }) 
-{ 
-acknowledged: true, 
-insertedid: null, 
-matchedCount: 1, 
-modifiedCount: 1, 
-upsertedCount: 0 
-mydb> db.students.find({ name: 'Sue' }) 
-{ "_id" : Objectid("5e600dl8bbdl0ee972f6ed9a"), "name" 
-3. 3 } 
-"Sue ", " gpa " 
-mydb> db.students.updateMany({ gpa: { $gt: 3 } }, { $set: { gpa: 1 } }) 
-{ 
-acknowledged: true, 
-insertedid: null, 
-matchedCount: 3, 
-modifiedCount: 3, 
-upsertedCount: 0 
-mydb> db.students.find() 
-[ 
-◄ 
-id: Objectid("62794229fc4ebd4933877a9d"), name: 'Sue', gpa: 1 }, 
-id: Objectid{"627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 1 }, 
-id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 1 }, 
-id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 2.5 
-► 
-Table 8.1.2: Common MongoDB update operators. 
-Operator 
-I 
-$currentDate 
-$inc 
-1 
-Description _J Example 
-Sets a field's value to the 
-current date/time 
-Increments a field's 
-value by the specified 
-amount l 
-II Sue's •~irthDate": 
-ISODa te ( "2022-05-09Tl 6: 39: 00 .121Z ") 
-db .students . updateOne ({ name : 'Sue' 
-} ' 
-$currentDate : { birthDate : 
-true } } ) 
-II Sue's "gpa" incremented from 3.1 
-to 3.2 
-db .students . updateOne ({ name : 'Sue' 
-} ' 
-{ $inc : { gpa : 0.1 } }) 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 13/100 
-11/17/24, 12:11 PM 
-I 
-$rename Renames a field 
-$set Sets a field's value 
-_____ I
-$unset Removes a field 
-I 
-zyBooks 
-II Sue's "name" is now "firstName" 
-db .students . updateOne ({ name : 'Sue' 
-} ' 
-{ $rename : { name : 'firstName' } 
-} ) 
-I I Sue's "gpa" : 4. 0 
-db .students . updateOne ( { name : 'Sue' 
-} ' 
-{ $set : { gpa : 4 . 0 } }) 
-II Removes Sue's "gpa" and 
-"birthDate" fields 
-db .students . updateOne ({ name : 'Sue' 
-} ' 
-{ $unset : { gpa : 
-"" } } ) 
-"" ' birthDate : 
-I PARTICIPATION 
-ACTIVITY 8.1.7: Updating documents in the 'autos' collection. 
-Refer to the "autos" collection below, and choose the result of each command. 
-} ' 
-{ 
-" id" : 100 , 
-"make" : "Ford" , 
-"model" : "Fusion" , 
-"year" : 2014 , 
-"options" : [ "engine start" , "moon roof" ], 
-"price" : 13500 
-" id" : 200 , 
-"make" : "Honda" , 
-"model" : "Accord" , 
-"year" : 2013 , 
-"options" : [ "spoiler" , "alloy wheels" , "sunroof" ], 
-"price" : 16900 
-1) db . autos . updateOne ({ price : 
-$gt : 10000 } }, 
-{ $set : { year : 2000 , 
-options : [] } } ) 
-Only auto with _id 100 has year 
-O set to 2000 and options 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-► 
-0 
-14/100 
-11/17/24, 12:11 PM 
-removed. 
-O Both autos have year set to 2000 
-and options removed. 
-O No autos are updated. 
-2) db . autos . updateMany ({ price : 
-$ gt : 10 0 0 0 } } , 
-{ $set : { year : 2000 , 
-options : [] } } ) 
-Only auto with _id 100 has year 
-0 set to 2000 and options 
-removed. 
-O Both autos have year set to 2000 
-and options removed. 
-0 No autos are updated. 
-3) db . autos . updateOne ({ price : 
-$ gt : 10 0 0 0 } } , 
-{ $set : { sold : true } } ) 
-No autos are updated because 
-O the autos do not have a "sold" 
-field. 
-0 Auto with _id 100 has new field 
-"sold" set to true. 
-Both autos have a new field 
-O "sold" set to true. 
-4) db . autos . updateOne ({ id : 100 
-} , 
-{ $currentDate : { soldDate : 
-true } } ) 
-O Auto with _id 100 has new field 
-"sold Date" set to true. 
-Auto with _id 100 has new field 
-O "sold Date" set to the Unix epoch 
-(January 1, 1970). 
-Auto with _id 100 has new field 
-O "sold Date" set to the current date 
-and time. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-zyBooks 
-0 
-0 
-0 
-15/100 
-11/17/24, 12:11 PM 
-5) db . autos . updateOne ({ id : 100 
-} ' 
-{ $inc : { price : -500, year : 
-2 } } ) 
-Auto with _id 100 has price 
-O reduced by 500 and year 
-increased by 2. 
-O Auto with _id 100 has price set 
-to -500 and year set to 2. 
-O Auto with _id 100 has price and 
-year fields removed. 
-Deleting documents 
-zyBooks 
-0 
-The deleteOne() collection method deletes a single document from a collection. The deleteMany() 
-collection method deletes multiple document from a collection. The methods have a required query 
-parameter that matches documents to delete. 
-In the example below, the calls to deleteOne () and deleteMany () return a deletedCount 
-property indicating how many documents were deleted. 
-Figure 8.1.4: Delete the first student with GPA< 3.5 (Sue), and delete all 
-students with GPA> 3.5 (Maria and Xiu). 
-mydb> db.students.deleteOne({ gpa: { $lt:3.5 } }) 
-{ acknowledged: true, deletedCount: 1 } 
-mydb> db.students.find() 
-[ 
-id: Objectid("627942f6fc4ebd4933877a9e"), name: 'Maria', gpa: 4 
-} , 
-{ id: Objectid("627942f6fc4ebd4933877a9f"), name: 'Xiu', gpa: 3.8 
-} , 
-{ _id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
-2. 5 } 
-l 
-mydb> db.students.deleteMany({ gpa: $gt:3.5 } }) 
-{ acknowledged: true, deletedCount: 2 } 
-mydb> db.students.find() 
-[ 
-id: Objectid("627942f6fc4ebd4933877aa0"), name: 'Braden', gpa: 
-2. 5 } 
-l 
-◄ ► 
-I n 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 16/100 
-11/17/24, 12:11 PM I PARTICIPATION I 
-ACTIVITY 8.1.8: Deleting documents. 
-1) Delete all documents from the 
-"autos" collection. 
-db.autos. 
-Show answer 
-2) Delete all documents with a price 
-more than $10,000. 
-db.autos. 
-Show answer 
-3) Delete only the first document with 
-the year 2020. 
-db.autos. 
-Show answer 
-Exploring further: 
-• MongoDB manual 
-• Installing MongoDB 
-• Query and Projection Operators 
-• SQL to MongoDB MaQQing Chart 
-zyBooks 
-8.2 Mongoose 
-Schemas and models 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-0 
-0 
-17/100 
-11/17/24, 12:11 PM zyBooks 
-A Node.js application using MongoDB may use the mongodb module to interact with a MongoDB 
-database using many of the same functions supported in the mango shell. However, many developers 
-prefer to use Mongoose, which simplifies some MongoDB operations. The mongoose module 
-provides object data mapping (ODM) and structured schemas to MongoDB collections. Object data 
-mapping (ODM) is the conversion of data from a database into a JavaScript object. 
-Mongoose is installed using: nprn install rnongoose@6. 12. 8. Note the version number 6.12.8, 
-which is necessary to support the syntax in this material. The newest version of Mongoose uses 
-slightly different syntax. 
-Mongoose uses schemas and models to interact with MongoDB databases. A schema defines the 
-structure of documents within a MongoDB collection. The mongoose.Schema() method creates a 
-new Schema object that defines the properties and data types of a document. The supported data 
-types are: 
-• String - "string" 
-• Number - Integers or floating-point numbers 
-• Date - Date and time 
-• Buffer - Binary data 
-• Boolean - true or false 
-• Mixed - Any kind of data 
-• Obj ectid- MongoDB Obj ectid 
-• Array - Array of any data type. Ex: [Number J. 
-Figure 8.2.1: Mongoose schema for a student. 
-canst mongoose = require ("mongoose" ); 
-canst studentSchema = new mongoose . Schema ({ 
-name : String, 
-gpa : { type : Number, min : 0 , max : 4 
-} ' 
-birthDate : type : Date , default : Date . now 
-} ' 
-interests: String ] 
-} ) ; 
-◄ ► 
-A model is a constructor compiled from a schema. A model instance represents a MongoDB 
-document that can be saved to or retrieved from a MongoDB database. Models are created from 
-schemas using the mongoose.model() method, which has two parameters: 
-1. modelName - Singular name of the model's collection. Ex: "Card" for the collection "cards". 
-Mongoose automatically uses collections that are the plural of the model name. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 18/100 
-11/17/24, 12:11 PM zyBooks 
-2. schema - Previously defined schema. 
-Good practice is to use model names and model variables that have the first letter capitalized. Ex: "Card" 
-instead of "card". 
-Figure 8.2.2: Mongoose model for a 'students' collection. 
-I PARTICIPATION 
-ACTIVITY 
-II Create a "Student" model from the studentSchema 
-schema 
-const Student = mongoose . model ("Student" , 
-studentSchema ); 
-II Create a student document from the Student model 
-const stu = new Student ({ 
-} ) ; 
-◄ 
-name : "Sue Black" , 
-gpa : 3 .1 , 
-birthDate : new Date (1999, 11 , 2 ), 
-interests: [ "biking" , "reading" ] 
-8.2.1: Mongoose concepts. 
-1) Mongoose is an essential package for 
-any Node.js application that needs to 
-interface with MongoDB. 
-0 True 
-0 False 
-2) Mongoose forces all documents within 
-a collection to match a predefined 
-schema. 
-O True 
-0 False 
-3) The second argument to the 
-mongoose. model () method may be 
-a schema or a map of properties and 
-data types. 
-0 True 
-O False 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-► 
-D 
-0 
-0 
-0 
-19/100 
-11/17/24, 12:11 PM 
-4) The call mongoose .model ("Dog", 
-dogSchema) creates a constructor for 
-creating objects for a collection called 
-"Dog". 
-0 True 
-O False 
-5) The studentSchema defined in the 
-figure above requires the gpa field to be 
-assigned only values between O and 4. 
-0 True 
-O False 
-Connecting to MongoDB 
-zyBooks 
-0 
-0 
-Mongoose must establish a connection with MongoDB before executing any database operations. 
-The mongoose.connect() method takes a URL parameter indicating the machine on which MongoDB 
-is running and the name of the database to use. If the specified database does not exist, MongoDB 
-creates the database. 
-Figure 8.2.3: Connecting to the 'mydb' database on MongoDB. 
-Saving documents 
-II Connect to MongoDB running on 127.0.0.1 
-mongoose . connect ("mongodb://localhost/mydb" ); 
-◄ ► 
-Mongoose provides a collection of methods for implementing CRUD operations. Two Mongoose 
-methods can be used to implement the Create operation: 
-• The Document.save() method saves the document to a MongoDB database. The given callback 
-function is executed after the save operation has completed. 
-• The Model.create() method saves a single document or array of documents to a MongoDB 
-database. The given callback function is executed after the save operation has completed. 
-I PARTICIPATION 
-ACTIVITY 8.2.2: Mongoose saving a student to MongoDB. D 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 20/100 
-11/17/24, 12:11 PM 
-canst express = require ("express" ); 
-canst mongoose = require ("mongoose" ); 
-mongoose . connect ("mongodb://localhost/mydb" ); 
-canst studentSchema = new mongoose . Schema ({ 
-zyBooks 
-name : { type : String, required : true }, 
-} ) ; 
-gpa : 
-birthDate : 
-interests: 
-{ type : Number, min : 0 , max : 4 }, 
-type : Date , default : Date . now }, 
-String ] 
-canst Student = mongoose .model ("Student" , studentSchema ); 
-canst app = express (); 
-app . get ("/create" , function (req, res) { 
-} ) ; 
-canst stu = new Student ({ 
-name : "Sue Black" , 
-} ) ; 
-gpa : 3 .1 , 
-birthDate : "1999-11-02" , 
-interests: [ "biking" , "reading" ] 
-stu . save (function (err, stu ) { 
-res . send ("Sue with id" + stu . id + 
-"was saved." ); 
-} ) ; 
-app . listen (3000); 
-Animation content: 
-A block of code is displayed: 
-const express = require("express"); 
-const mongoose = require("mongoose"); 
-mongoose.set("useUnifiedTopology", true); 
-mongoose.connect("mongodb://localhost/mydb"); 
-const studentSchema = new mongoose.Schema({ 
-name: { type: String, required: true}, 
-gpa: { type: Number, min: 0, max: 4 }, 
-birth Date: { type: Date, default: Date.now}, 
-interests: [String] 
-}); 
-const Student = mongoose.model("Student", studentSchema); 
-const app = express(); 
-app.get("/create", function(req, res) { 
-const stu = new Student({ 
-name: "Sue Black", 
-gpa: 3.1 , 
-birth Date: "1999-11-02", 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-Web browser 
-http://localhost:3000/create 
-Sue with id 56e6c2dd 
-was saved. 
-... GET /create Response 
-~ I, 
-node server.js 
-DB connection 
-mydb database 
-{ _id: 56e6c2dd, 
-name: Sue Black, 
-gpa: 3.1, 
-} 
-birthDate: 1999-11-2, 
-interests: biking, reading, 
-_v:O 
-MongoDB 
-21/100 
-11/17/24, 12:11 PM 
-interests: ["biking", "reading"] 
-}); 
-stu.save(function(err, stu) { 
-res.send("Sue with id " + stu._id + 
-" was saved."); 
-}); 
-}); 
-app. listen(3000); 
-zyBooks 
-A connection between the web server called node server.js and the MongoDB database called mydb 
-database is established. A web browser with the URL http://localhost:3000/create sends the 
-following GET request to the web server: 
-GET/create 
-The GET request creates a student in mydb database with the following information: 
-{ 
-} 
-name: Sue Black, 
-gpa: 3.1, 
-birthDate: 1999-11-2, 
-interests: biking, reading, 
-_v : 0 
-The database sends back this information and the following is displayed on the web browser: 
-Sue with id 56e6c2dd was saved. 
-Animation captions: 
-1. The express and mongoose modules are loaded. 
-2. Mongoose connects to the "mydb" database on MongoDB running on the local machine. 
-3. The student schema and model are created. 
-4. Express app defines the "/create" route and starts listening on port 3000. 
-5. When the browser requests the "/create" route, the server creates a new Student object from 
-the Student model. 
-6. stu.save() saves the student object as a document in the mydb database where a new 
-Objectld is assigned to _id. 
-7. The Express server sends a response to the browser with Sue's ID. 
-I PARTICIPATION 
-ACTIVITY 8.2.3: Saving documents to MongoDB using Mongoose. D 
+ACTIVITY 9.1.3: Web storage methods. D 
 Refer to the animation above. 
-1) What URL does 
-mongoose.connect() useto 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-22/100 
-11/17/24, 12:11 PM 
-connect to the MongoDB database 
-called "students" instead of "mydb"? 
-0 mongodb://localhost/mydb 
-O http://localhost/students 
-O mongodb://localhost/students 
-2) What method could be used in place of 
-stu. save () in the example above? 
-Q Student.create() 
-Q Student.updateOne() 
-Q Student.deleteOne() 
-3) When is the new student's id created 
-in the animation above? 
-O When assigning stu = new 
-Student ( ... ) . 
-Q When stu. save () is called. 
-When the studentScherna is 
-O created. 
-4) What does the v field in the 
-student document represent? 
-O versionKey 
-0 document's ID 
-0 Mongoose version 
-5) According to the student schema, what 
-birthDate is assigned to the student 
-below when the student is saved to 
-MongoDB? 
-canst stu = new Student ({ 
-name : "Jack White" , 
-gpa : 2. 5, 
-interests : ["football" , 
-"piano" ) 
-} ) ; 
+7) If local storage is empty and the Settings webpage is 0 
+loaded into the browser, what does 
+localStorage.getitem("difficultyLevel") 
+return? 
+0 117 11 
 0 null 
-0 The current date and time. 
-No birthDate is assigned 
-O because an exception is thrown. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-zyBooks 
-0 
-0 
-0 
-0 
-23/100 
-11/17/24, 12:11 PM 
-6) According to the student schema, what 
-happens when the student below is 
-saved to MongoDB? 
-canst stu = new Student ({ 
-gpa : 2. 5 , 
-interests : [ "football" , 
-"piano" ] 
-} ) ; 
-O A student with no name field is 
-saved. 
-A student with an empty string 
-O assigned to the name field is 
-saved. 
-O An error occurs, and no student 
-is saved. 
-Finding documents 
-zyBooks 
-0 
-The Mongoose methods for retrieving documents work similar to MongoDB's find () and 
-findOne () methods. The Mongoose find methods support MongoDB query operators like $in and 
-$gt. 
-Table 8.2.1: Common Mongoose find methods. 
-Method 
-Model. find (conditions, [ callback] ) 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-Description 
-Finds all 
-documents 
-that match 
-the 
-conditions. 
-Exam~ 
-II Find all students wit 
-Student . find ({ gpa : { $g 
-function (err, student 
-console . log (studen 
-) ; 
-24/100 
-11/17/24, 12:11 PM 
-Method 
-Model. findOne (conditions, [callback]) 
-Model.findByid(id, [callback]) 
-I 
-zyBooks 
-Description 
-Finds the 
-first 
-document 
-that match 
-the 
-conditions. 
-Finds the 
-document 
-that 
-matches 
-the id. 
-Exam~ 
-II Find first student wi 
-in the name 
-Student . findOne ({ name : 
-"i" ) } , 
-function (err, stu ) { 
-if (stu === null ) 
-console . log ( "Nc 
-} ) ; 
-e l se { 
-console . log (stu 
-} 
-II Find the student witr. 
-Student . findByid ("56e0ad 
-function (err, stu) { 
-if (stu === null ) 
-console . log ( "Nc 
-} ) ; 
-else { 
-console . log (stu 
-} 
-All Mongoose find methods return a Query object. The Query object has a number of methods that 
-may be chained to create a more readable query. Example methods include: 
-• The Query.where() method specifies a path to filter documents. 
-• The Query.sort() method sets the sort order. 
-• The Query.limit() method limits the number of documents returned. 
-• The Query.exec() method is called last to execute the query and provides a callback function 
-that is called after the query executes. 
-I PARTICIPATION 
-ACTIVITY 8.2.4: Finding students by chaining Query methods. D 
-Student . find ({ gpa : { $gte : 3 }}) 
-. where ("interests" ) . in ([ "fishing" , "biking" ]) 
-. sort ({ "birthDate" : "desc" }) 
-. limit (2) 
-. exec (function (err, students) { 
-students . forEach (function (stu) 
-console . log (stu . name ); 
-} ) ; 
-} ) ; 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-id : 9ed , name : Dana , 
-gpa : 3 . 3 , birthDate : 2000 - 1- 15 , 
-interests : gardening , biking } 
-id : 5ab , name : Sue , 
-gpa : 3 . 1 , birthDate : 1999-1 1- 2 , 
-interests : biking, reading } 
-_id : 3ff, name : Greg , 
-gpa : 3.2 , birthDate : 1998-6-30, 
-25/100 
-11/17/24, 12:11 PM 
-~ 
-~ 
-Animation content: 
-A block of Node.js is shown: 
-Student.find({ gpa: { Sgte: 3 }}) 
-.where("interests").in(["fishing", "biking"]) 
-.sort({ "birthDate": "desc" }) 
-.limit(2) 
-.exec(function(err, students) { 
-students.forEach(function(stu) { 
-console.log(stu.name); 
-}); 
-}); 
-The collection of students is shown: 
-{ _id: 9ed, name: Dana, 
-gpa: 3.3, birthDate: 2000-1-15, 
-interests: gardening, biking } 
-{ _id: 5ab, name: Sue, 
-gpa: 3.1, birthDate: 1999-11-2, 
-interests: biking, reading } 
-{ _id: 3ff, name: Greg, 
-gpa: 3.2, birthDate: 1998-6-30, 
-interests: fishing, tennis} 
-{ _id: 7ac, name: Cindy, 
-gpa: 4.0, birthDate: 2001-2-6, 
-interests: rock climbing} 
-{ _id: 3ca, name: Laura, 
-gpa: 2.6, birthDate: 2002-5-6, 
-interests: dancing, coding } 
-zyBooks 
-interests: fishing , tennis } 
-{ id : 7ac , name : Cindy, 
-gpa : 4.0 , birthDate : 2001-2-6, 
-interests: rock climbing } 
-{ _id : 3ca , name : Laura , 
-gpa : 2.6, birthDate : 2002 -5-6, 
-interests: dancing , coding } 
-Sue, Dana, Cindy, and Greg have a GPA>= 3.0, so they are selected. Of those with a GPA>= 3.0, 
-Dana, Sue, and Greg have interests in fishing or biking, so they are selected. When sorted by birth 
-date and limited to 2 students, only Dana and Sue are selected and output to the console. 
-Animation captions: 
-1. The query first finds all students with gpa >= 3. 
-2 .. where() selects students that have an interest of fishing or biking. 
-3 .. sort() sorts the matching documents by birthDate in descending order. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 26/100 
-11/17/24, 12:11 PM zyBooks 
-4 .. limit() limits the number of results to the first 2 documents. 
-5 .. exec() executes the query, and returns the students' names. 
-I PARTICIPATION 
-ACTIVITY 8.2.5: Mongoose find methods. 
-Given the model and schema below and the collection of super heroes, match each query 
-with the query's results. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-27/100 
-11/17/24, 12:11 PM zyBooks 
-canst SuperHero = mongoose .model ( "SuperHero" , 
-id : Number, 
-universe : { type : String, enum : [ "Marvel" , "DC" , "other" ], default : 
-"other" } , 
-name : 
-stamina : 
-powers : 
-origin : 
-comic : 
-year : 
-} 
-} ) ; 
-{ type : String, required : true }, 
-{ type : Number, min : 1 , max : 10 }, 
-[ String ), 
-{ 
-String, 
-Number 
-canst heroes = 
-id : 111 , 
-universe : "DC" , 
-name : "Wonder Woman" , 
-stamina : 9, 
-powers : [ "strength" , "combat" ], 
-origin : { comic : "All Star Comics #8" , year : 1941 } 
-} , 
-{ 
-id : 222 , 
-universe : "DC" , 
-name : "Green Lantern" , 
-stamina : 5 , 
-powers : [ "flying" , "power ring" ), 
-origin : { comic : "All-American Comics #16" , year : 1940 } 
-} , 
-{ 
-id : 333 , 
-universe : "Marvel" , 
-name : "Spider-Man" , 
-stamina : 6, 
-powers : [ "strength" , "agility" , "spider-sense" ), 
-origin : { comic : "Amazing Fantasy #15" , year : 1962 
-} , 
-{ 
-id : 444 , 
-universe : "Marvel" , 
-name : "Storm" , 
-stamina : 4 , 
-powers : [ "control weather" ), 
-origin : { comic : "Giant-Size X-Men #1" , year : 1976 } 
-} l ; 
-SuperHero . create (heroes, function (err, heroes) 
-console . log ("Created" ); 
-} ) ; 
-If unable to drag and drop, refresh the page. 
-1111 IDs 222 and 333 IDs 111 and 333 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-I IDs 222 and 444 
-28/100 
-11/17/24, 12:11 PM 
-Finding with await operator 
-zyBooks 
-SuperHero.find({ stamina: { $gte: 6 }}, 
-function (err, heroes) { . . . } ) 
-SuperHero.findOne( 
-{ powers: {$in: ["strength", "shrinking" 
-function (err, hero) { . . . } ) 
-SuperHero.find({}) 
-. where ("powers") . in ( ["strength", "f lyin 
-. sort ( { "stamina": "asc" } ) 
-.limit(2) 
-. exec ( function (err, heroes) { . . . } ) ; 
-SuperHero.find({}) 
-.or([ { "origin.year": { $gt: 1970} }, 
-{ name: "Green Lantern"} ]) 
-. exec ( function (err, heroes) { . . . } ) 
-SuperHero.where({ stamina: { $lte: 5 }}) 
-.count(function(err, count) { ... }) 
-Mongoose find methods can be called with a callback function or from an async function using the 
-await operator. Both functions in the figure below find all students with a GPA> 3 and output the 
-students to the console. The f indStudentsCallback () function uses a callback function, but 
-findStudentsAsync () awaits the results returned by find () and sort (). 
-Figure 8.2.4: Two ways to find documents. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 29/100 
-11/17/24, 12:11 PM zyBooks 
-I 
-function findStudentsCallback () { 
-Student . find ({ gpa : { $gte : 3 }}) 
-) ; 
-.sort ({ "gpa" : "desc" }) 
-. exec (function (err, students) { 
-for (let stu of students) { 
-console . log (stu . name + " " + stu . gpa ); 
-async function findStudentsAsync () { 
-const students = await Student . find ({ gpa : { $gte : 3 }}) .sort ({ "gpa" : 
-"desc" } ) ; 
-◄ 
-for (let stu of students) 
-console . log (stu . name + " " + stu . gpa ); 
-PARTICIPATION 8.2.6: Asynchronous finding. ACTIVITY 
-7) Calling find methods with await 
-generally results in simpler code. 
-0 True 
-0 False 
-2) Calling find methods with await 
-generally results in faster queries. 
-0 True 
-0 False 
-3) The code below is guaranteed to show 
-the results from query 1 before 
-showing the results from query 2. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-► 
-D 
-0 
-0 
-0 
-30/100 
-11/17/24, 12:11 PM 
-II Query 1 
-Student . find ({ gpa : { $gte : 3 
-} } ) 
-. exec (function (err, 
-students) { 
-console . log (students); 
-} ) ; 
-II Query 2 
-Student . find ({ gpa : { $lte : 3 
-} } ) 
-. exec (function (err, 
-students) { 
-console . log (students); 
-} ) ; 
-0 True 
-0 False 
-4) The code below is guaranteed to show 
-the results from query 1 before 
-showing the results from query 2. 
-II Query 1 
-let students await 
-Student . find ({ gpa : { $gte : 3 
-} } ) 
-.sort ({ "gpa" : "desc" }); 
-console . log (students); 
-II Query 2 
-students = await Student . find ({ 
-gpa : { $1 te : 3 } } ) 
-.sort ({ "gpa" : "desc" }); 
-console . log (students); 
-0 True 
-0 False 
-Updating and deleting documents 
-zyBooks 
-The model's save () method can be used to update an existing document. 
-Figure 8.2.5: Changing a student's GPA with save(). 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-31/100 
-11/17/24, 12:11 PM zyBooks 
-II Find the student with this ID 
-Student . findByid ("56e711a9elb0f9080f7a5621" , function (err, 
-stu ) { 
-} ) ; 
-◄ 
-if (stu === null ) { 
-console . log ("Student not found" ); 
-else { 
-} 
-II Increase student's GPA and save 
-stu . gpa += 0.1 ; 
-stu . save (function (err, stu ) 
-console . log ("New GPA: " + stu . gpa ); 
-} ) ; 
-► 
-Mongoose also provides methods to modify existing documents in a collection and to remove 
-documents. 
-Table 8.2.2: Common Mongoose update methods. 
-Method 
-Model.updateOne(conditions, update, 
-[options] , [ callback] ) 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-Description 
-Updates 
-the first 
-document 
-that 
-matches 
-the 
-conditions. 
-Example 
-II Change Sue's birthDate 
-to 1995-12-02 
-Student . updateOne ({ name : 
-"Sue Black" }, 
-{ birthDate : new 
-Date (1995, 11 , 2 ) } , 
-function (err, result) 
-console . log ("Docs 
-updated: " + 
-result .modifiedCount); 
-} ) ; 
-32/100 
-11/17/24, 12:11 PM 
-Method 
-Model.updateMany(conditions, update, 
-[options] , [ callback] ) 
-zyBooks 
-Description 
-Updates all 
-documents 
-that match 
-the 
-conditions. 
-._ ___________ -"I 
-Query.updateOne([conditions], 
-[update], [options], [callback]) 
-Updates 
-the first 
-document 
-that 
-matches 
-the 
-optional 
-conditions. 
-._ ___________ -"I 
-Query.updateMany([conditions], 
-[update], [options], [callback]) 
-Updates all 
-documents 
-that match 
-the 
-optional 
-conditions. 
-Table 8.2.3: Common Mongoose delete methods. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-I 
-Example 
-II Add 0.5 to all GPAs <= 
-3.5 
-Student . updateMany ({ gpa : 
-{ $1 te : 3. 5 } } , 
-{ $inc : { gpa : 0 . 5 } 
-} , function (err, result) 
-console . l og ( "Docs 
-updated: " + 
-result .modifiedCount); 
-} ) ; 
-II Change this student's 
-GPA to 3.9 
-Student . where ({ _id : 
-"56e711a9elb0f9080f7a5621 
-} ) 
-. updateOne ({ $set : { 
-gpa : 3. 9 } } ) 
-. exec (function (err, 
-result ) { 
-console . log ( "Docs 
-updated: " + 
-result .modifiedCount); 
-} ) ; 
-II Set all GPAs <= 3.5 tc 
-2 
-Student . where ({ gpa : { 
-$1 te : 3. 5 } } ) 
-. updateMany ({ $set : { 
-gpa : 2 } } ) 
-. exec (function (err, 
-result ) { 
-console . log ( "Docs 
-updated: " + 
-result .modifiedCount); 
-} ) ; 
-33/100 
-11/17/24, 12:11 PM 
-Method 
-Model. deleteOne (conditions, [ callback] ) 
-zyBooks 
-Description 
-Deletes the 
-first 
-document 
-that 
-matches 
-the 
-conditions. 
--------------------------------
-Model. deleteMany (conditions, [ callback] ) 
-Deletes all 
-documents 
-that match 
-the 
-conditions. 
--------------------------------
-◄ 
-Query.deleteOne([conditions], [ callback] ) 
-Deletes the 
-first 
-document 
-that 
-matches 
-the 
-optional 
-conditions. 
-Deletes all 
-the 
-documents 
-Query. deleteMany ( [conditions] , [ callback] ) that match 
-the 
-optional 
-conditions. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-I 
-I 
-Example 
-II Delete student 
-given id 
-Student . deleteOne ( 
-"56e711a9elb0f9080 
-} , 
-function (err, r 
-console . log ("Delet 
-result . deletedCoun 
-} ) ; 
-II Delete all stud 
-with GPA < 3 
-Student . deleteMany 
-{ $lt : 3 }}, 
-function (err, r 
-console . log ("Delet 
-result . deletedCoun 
-} ) ; 
-II Delete first st 
-with 2000-10-05 bi 
-Student . find ({ bir 
-"2000-10-05" } ) 
-. deleteOne () 
-. exec (function ( 
-result ) { 
-I console . log ("Delet 
-result . deletedCoun 
-} ) ; 
-II Delete all stud 
-with GPA < 2 
-Student . find ({ gpa 
-$lt : 2 } } ) 
-. deleteMany () 
-. exec (); 
-► 
-34/100 
-11/17/24, 12:11 PM zyBooks 
-Like the Mongoose find methods, all update and delete methods may be executed asynchronously 
-with await instead of using callback functions or calling exec () . 
-Figure 8.2.6: Calling update and delete methods with async. 
-const updateResult = await Student . updateMany ({ gpa : { $l te : 3.5 } }, { 
-$inc : { gpa : 0 . 5 } } ) ; 
-console . log ("Docs updated: " + updateResult .modifiedCount); 
-const deleteResult = await Student . deleteOne ({ id: 
-"5f077d4616956f72105fb613" }); 
-console . log ("Docs deleted: " + deleteResult . deletedCount); 
-◄ ► 
-I PARTICIPATION 
-ACTIVITY 8.2.7: Updating and deleting documents with Mongoose. D 
-Refer to the "superheroes" collection and SuperHero model. 
-} ' 
-{ 
-id : 111 , 
-universe : "DC" , 
-name : "Wonder Woman" , 
-stamina : 9, 
-powers : [ "strength" , "combat" ], 
-origin : { comic : "All Star Comics #8" , year : 1941 } 
-id : 222 , 
-universe : "DC" , 
-name : "Green Lantern" , 
-stamina : 5 , 
-powers : [ "flying" , "power ring" ], 
-origin : { comic : "All-American Comics #16" , year : 1940 } 
-1) What is the result of the following 
-command? 
-SuperHero . updateMany ({}, 
-{ $inc : { stamina : 1 } } , 
-function (err) {} ) ; 
-O Both heroes' stamina are set to 
-1. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-35/100 
-11/17/24, 12:11 PM 
-O Wonder Woman's stamina 
-increases by 1. 
-O Both heroes' stamina increases 
-by 1. 
-2) What is the result of the following 
-command? 
-SuperHero . updateOne ({ 
-"origin.year" : { $gt : 1900 
-} ' 
-{ $set : { "origin.year" : 
-1900 }}, 
-function (err, result) { ... 
-} ) ; 
-O Both heroes' origin year are set 
-to 1900. 
-O Wonder Woman's origin year is 
-set to 1900. 
-0 No heroes are updated. 
-3) Select the code segment equivalent to 
-the following: 
-SuperHero . findByid (222, 
-function (err, hero ) { 
-hero . powers . push ( "mind 
-control" ); 
-hero . save (function (err, 
-hero ) { . . . } ) ; 
-} ) ; 
-0 
-SuperHero . updateOne ({ id : 
-222 } , 
-{ $set : {powers : [ "mind 
-control" ]}}); 
-SuperHero . find ({ id : 222 
-} ) 
-Q . updateOne ({ $push : 
-{powers : "mind control" } 
-} ) ; 
-0 
-SuperHero . find ({ id : 222 
-} ) 
-. updateOne ({ $push : 
-{powers : "mind control" } 
-} ) 
-. exec (); 
-4) Select the code segment equivalent to 
-the following: 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-zyBooks 
-0 
-0 
-0 
-36/100 
-11/17/24, 12:11 PM 
-SuperHero . find ({ _id : 111 
-}) . deleteOne () . exec (); 
-Q SuperHero . deleteOne (lll); 
-Q SuperHero . deleteOne ({ 
-111 }); 
-await 
-Q SuperHero . deleteOne ({ 
-111 } ) ; 
-id : 
-id : 
-5) If three students have the same 2000-10-
-15 birthdate, what does the code output 
-to the console? 
-const result = await 
-Student . deleteOne ( 
-{ birthDate : "2000-10-05" }); 
-console . log (result . deletedCount); 
-0 0 
+0 false 
+2) Suppose localStorage is empty, and the Settings 0 
+webpage is loaded in the browser. If the user clicks 
+the Save button without changing the difficulty level, 
+what does 
+localStorage . getitem("difficultyLevel") 
+return? 
+0 117 11 
+0 11311 
+0 null 
+3) If the user sets the difficulty level to 2, 0 
+clicks Save, closes the browser, reopens the browser, and navigates to 
+the Settings webpage, what difficulty 
+level is displayed? 
 0 1 
-0 3 
-Project organization 
-zyBooks 
-Node.js code is often organized into separate modules to decrease the project's complexity and 
-create re-usable code. Ex: Database connection code and Mongoose models are separated into 
-separate modules with the models stored in a models directory. 
-Figure 8.2.7: Example Node.js project that adds new students entered in a 
-form to a MongoDB database. 
-myproject 
-models 
-t._ student. j s 
-node modules 
-~ express L mongoose 
-etc ... 
-public 
-t._ student . html 
-db. js 
-package.json 
-package-lock . json 
-server.js 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-37/100 
+0 2 
+0 null 
+4) If localStorage stores the difficulty level "3" and then 0 
+local Storage. clear () is called, what does 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 5/37 
 11/17/24, 12:11 PM zyBooks 
-I 
-II models/student.js 
-const db = require ( " .. /db" ); 
-const Student = db . model ("Student" , 
-name : String, 
-gpa : { type : Number, min : 0 , max : 
-4 } , 
-birthDate : type : Date , default : 
-Date . now }, 
-interests: String ] 
-} ) ; 
-module . exports Student; 
-II db.js 
-canst mongoose = require ("mongoose" ); 
-mongoose . connect ("mongodb://localhost/mydb" ); 
-module . exports = mongoose ; 
-<!--public/student.html--> 
-<form method="post" action="/create"> 
-<p > 
-<label>Name?</label> 
-<input type="text" name="name" > 
-<Ip> 
-<p > 
-<label>GPA?</label> 
-<input type= "text" name="gpa" > 
-<Ip> 
-<p > 
-<label>Date of birth?</label> 
-<input type="date" name="birthdate" > 
-<Ip> 
-<input type="submit" value="Save" > 
-</form> 
-, ~ localhost:3000/student ht X 
-+- C I CJ localhost:3000/student.html 
-Name? !Natali e Portman I 
-GPA? ~13._7 _;:::::.========:::::::_I----, 
-Date of birtl1? !01 / 09/ 1981 
-I Save~ 
-post 
-i::::::> 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-I I 
-II server.js 
-canst express 
-require ("express" ); 
-canst bodyParser = require ("bo~ 
-parser" ); 
-canst Student = 
-require ("./models/student" ); 
-const app = express (); 
-app . u se (b od yPars er . urlencoded ({ 
-extended : false })); 
-app . use (express .static ("public" 
-app . post ("/create" , 
-res) { 
-function (re< 
-II Create a student from the 
-submitted form data 
-canst stu = new Student ({ 
-name : req . body . name , 
-gpa : req . body . gpa , 
-birthDate : new 
-Date (req . body . birthdate ) 
-} ) ; 
-stu . save (function (err, stu) 
-if (err) { 
-res .status (400) . send (err); 
-} 
-else { 
-res . send ("Student was 
-saved." ); 
-} ) ; 
-} 
-} ) ; 
-app . listen (3000); 
-1 ~ localhost:3000/ create X 
-+- C J CJ localhost:3000/create 
-Student \.Vas saYed. 
-n 
-38/100 
-11/17/24, 12:11 PM I PARTICIPATION I 
-ACTIVITY 8.2.8: Layout of Node.js project. 
-Refer to the figure above. 
-1) The db object in student.js is the 
-mongoose object from db.js. 
-0 True 
-0 False 
-2) The require statement in student.js 
-uses" .. / db" in the path because db.js 
-is one directory above student.js. 
-0 True 
-0 False 
-3) Adding a new model called Faculty 
-entails adding Faculty to students.js. 
-0 True 
-O False 
-4) The require ("mongoose") 
-statement was mistakenly left out of 
-server.js. 
-0 True 
-O False 
-5) Changing the method="post" 
-statement in student.html to 
-method=" get" requires making 
-changes to server.js. 
-O True 
-O False 
-6) A 400 Bad Request is sent to the client 
-if an error occurs saving the POSTed 
-student to the database. 
-O True 
-O False 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-zyBooks 
+localStorage.getitem("difficultyLevel") 
+return? 
 0 
 0 
 0 
-0 
-0 
-0 
-39/100 
-11/17/24, 12:11 PM zyBooks 
+I CHALLENGE 
+ACTIVITY 
+117 11 
+11311 
+null 
+9 .1.1: Web storage. 
+570104.2065416.qx3zqy7 
+-
+Using sessionStorage, store a key of "name" with value of "Bob". 
+1 
+2 /* Your solution goes here*/ 
+3 
+1 
+Check 
+-
+View your last submission v 
 Exploring further: 
-• Mongoose website 
-• Mongoose documentation 
-• MongoDB native driver for Node.js 
-8.3 Creating RESTful web APls (Node) 
-RESTful web APls 
-Modern web applications use web APls to manipulate and transport data between the web browser 
-and web server. A web API provides a standard interface to application data that may be used by other 
-clients like mobile applications on phones and smartwatches. A client is a program that sends web 
-API requests. 
-Web APls typically are REST-based. REST (representational state transfer) is an architectural style 
-that describes how various components interact in a distributed hypermedia system. A RESTfu/ web 
-AP/ is a web API that implements CRUD (create, read/retrieve, update, delete) operations on resources 
-using the mechanics of HTTP A resource is a data entity whose representation is accessible via a 
-URL. Ex: A representation for a "customer" resource may be accessible at http://paypal.com/customer. 
+• Web Storage API from MDN 
+2 
+• Feature-detecting localStorag~ from MON 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+D 
+3 
+6/37 
+11/17/24, 12:11 PM zyBooks 
+9.2 Token-based user authentication (Node) 
+Overview 
+User authentication is the process of verifying that a user is who the user claims to be. Many websites 
+authenticate users based on a user provided username and password. Some websites supplement 
+passwords with security questions, security images, and other techniques. Using usernames and 
+passwords to authenticate users is certainly not foolproof, but the technique is currently the most 
+common form of user authentication. 
+To implement user authentication, most websites use token-based authentication. Token-based 
+authentication is a technique where the client uses a signed token to "prove" to a server that the client 
+has successfully authenticated. A signed token is a string of characters produced with a secret key 
+that uniquely identifies the entity that created the token. 
 I PARTICIPATION 
-ACTIVITY 8.3.1: Web application interacting with a web API to obtain song data. D 
-Web browser Web server Database 
-API request ... query ... ... ... GET /songs/123 
-JS Web Song 
-code 
+ACTIVITY 9.2.1 : Token-based authentication process. D 
+Web browser Web server 
+l
+s1Cr I http://google.com/ POST bsmith/password .. .,, User is valid 
+1 .... token 
+ml ~ 
+GET api/calendar .. 
+.,, Q token is valid 
+I ~ 
+calendar data 
+Animation content: 
+A web browser is shown with a username and password field. When the user types in the username 
+bsmith and password, a POST request with bsmith/password is sent to the web server for 
+authentication. Once validated, the web server sends back a token. The web app request bsmith's 
+calendar with GET api/calendar and the token is sent back the the web server for validation. Once 
+the token is found valid, bsmith's calendar information is sent back to the web browser and 
+displayed on the screen. 
+Animation captions: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 7/37 
+11/17/24, 12:11 PM zyBooks 
+1. User authenticates by entering a username and password, which are sent to the web server. 
+2. Web server verifies the username and password are valid and generates a token. 
+3. The token is returned to the web browser and stored for future requests. 
+4. Web app requests bsmith's calendar, so the token is sent in the web API request. 
+5. Web server validates bsmith's token and returns back bsmith's calendar data. 
+I PARTICIPATION 
+ACTIVITY 9.2.2: Steps in token-based authentication. 
+Match each request or response with the action the request or response generates. 
+If unable to drag and drop, refresh the page. 
+Client sends username and password for authentication. 
+Server responds with data when given a valid token. Server generates a token. 
+Client sends the token with an API request. 
+JSON Web Tokens (JWT) 
+Server verifies the username and 
+password. 
+Client stores the token for future 
+requests. 
+Server validates the token. 
+Client receives API response. 
+D 
+JSON Web Tokens are a popular way of implementing tokens in token-based authentication. A JSON 
+Web Token (JWT), pronounced "jot", is a string produced by the server that encodes JSON data. The 
+string is signed with a secret key known only by the server to ensure the data in a JWT is unaltered by 
+the client. JWTs are composed of three parts separated by periods: Header. Payload. Signature. 
+JSON data is base64 encoded in a JWT. Base64 encoding is a technique that converts data into 64 
+printable characters. 
 I 
-API data .. API response results .. ... ... - {song} 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 8/37 
+11/17/24, 12:11 PM I PARTICIPATION I 
+ACTIVITY 9.2.3: Creating a JWT. 
+Header: { " typ" : "JWT" , "alg" : "HS256" } 
+Payload: { "username" : "bob" } 
+Secret Key: supersecret 
+I Encode) 
+B 
+zyBooks 
+8 Header: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9 . 
+JWT Payload: eyJlc2VybmFtZSI6ImJvYiJ9 . 
+Signature: Mrn0fNOZMBFOrFu99NlnHdz3jkp5IE_BQCNOz4shlepQ 
 Animation content: 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 40/100 
-11/17/24, 12:11 PM zyBooks 
-A web browser using JavaScript code, a web server using a web API, and a database with song data 
-are shown. The web browser sends an API request with GET /songs/123 to the web server. The web 
-server requests the song from the database with a query. The database sends the sends the song 
-back to the web server and the web server sends an API response back to the web browser with the 
-song. 
+A header, payload, and secret key contain the following before being encoded: 
+Header: {"typ":"JWT","alg":"HS256"} 
+Payload: {"username":"bob"} 
+Secret Key: supersecret 
+The header and payload are encoded with Base64 and stored in the token as the following: 
+Header: eyJ0eXAiOiJKVl QiLCJhbGciOiJIUzll NiJ9. 
+Payload: eyJl c2VybmFtZSl6ImJvYiJ9 
+A signature is stored in the token and reads: 
+Signature: Mm0fNOZMBFOrFu99NlnHdz3jkp5IE_BQCNOz4sh1 epQ 
 Animation captions: 
-1. A web application uses JavaScript to send an API request. The request is for a song resource 
-with ID 123. 
-2. The web API requests the song data from the database. 
-3. The database returns the song results to the web API. 
-4. The web API returns the song resource to the web browser in an API response. 
-I PARTICIPATION 8.3.2: RESTful web APls. ACTIVITY D 
-1) Where is data for resources primarily 
-stored? 
-O Web browser 
-0 Database 
-0 Web server 
-2) In the animation above, the __ is a 
-client. 
-0 Web browser 
-0 Database 
-0 Web server 
-HTTP request verbs 
-RESTful web APls typically use four of the HTTP request verbs to implement CRUD operations: 
-• POST - Create a new resource 
-• GET - Retrieve a resource 
-• PUT - Update a resource 
-• DELETE - Delete a resource 
-0 
-0 
-Resources and related data are frequently transmitted with JSON. Ex: A GET request to a Music API 
-may return a JSON-encoded list of songs. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 41/100 
+u 
+1. The Header contains the type of token (JWT) and the algorithm used to sign the token (HMAC 
+SHA256). 
+2. The Header is Base64 encoded. 
+3. The Payload containing the information to transmit is Base64 encoded. 
+4. The Signature is created using the HMAC SHA256 algorithm on the base64-encoded Header+ 
+base64-encoded Payload + Secret Key. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 9/37 
 11/17/24, 12:11 PM zyBooks 
-Table 8.3.1: Example requests and responses for a Music API. 
-Resource Request Description verb 
-/songs GET Get a list of all songs 
-/songs? GET Get all songs in the pop genre 
-genre=pop 
-- --
-/songs/234 GET Get song with ID 234 
--
-/songs/999 GET 
-Get non-existing song with ID 
-999 
--
-/songs POST Create a new song 
-/songs/234 PUT Update song with ID 234 
-I • 
-/songs/234 DELETE Delete song with ID 234 
-I I 
-◄ 
-I PARTICIPATION 8.3.3: HTTP request verbs. ACTIVITY 
-1) What does a web API return for a GET 
-request with no query string or other 
-path information? 
-0 One resource 
-0 No resources 
-0 All resources 
-2) Which request verb represents an 
-update to an existing resource. 
-0 GET 
-Q POST 
-Q PUT 
-3) What response indicates the request 
-was successfully fulfilled by the web 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-Status code 
-200 OK 
-200 OK 
-200 OK 
-404 Not Found 
--
-201 Created 
-204 No 
-Content 
--
-204 No 
-Content 
-► 
+When the client sends a JWT back to the server, the server validates the JWT by generating a new 
+signature based on the JWT's base64 encoded header and payload and the server's secret key. If the 
+payload was not modified, the new signature should be identical to the JWT's signature. 
+I PARTICIPATION 9.2.4: JSON Web Tokens. ACTIVITY 
+1) JWTs almost always have the same 
+header. 
+0 True 
+O False 
+2) JWTs almost always have the same 
+payload. 
+0 True 
+0 False 
+3) A JWT's payload can only include the 
+user's username. 
+0 True 
+O False 
+4) If the client changes one character of 
+the JWT, the JWT will fail validation on 
+the server. 
+0 True 
+O False 
+5) If a client knows the server's secret key, 
+the client can create JWTs with any 
+payload that the server will accept as 
+valid JWTs. 
+O True 
+O False 
+jwt-simple module 
 D 
 0 
 0 
 0 
-42/100 
-11/17/24, 12:11 PM 
-server but no message body is 
-returned? 
-0 200 
-0 204 
-0 404 
-4) What response indicates the requested 
-resource to be deleted does not exist? 
-0 200 
-0 204 
-0 404 
-5) Which request verb is likely to return a 
-207 response? 
-Q POST 
-Q DELETE 
-Q GET 
-6) Which request verb usually does not 
-require the browser to send JSON data 
-to the web server? 
-Q POST 
-Q PUT 
-Q GET 
-Web services and SOAP 
-zyBooks 
-The term "web service" is often used synonymously with "web AP/''. but web services are 
-usually associated with XML-based SOAP (Simple Object Access Protocol) over HTTP. 
-SOAP and related technologies provide some benefits over REST, but SOAP web 
-services are generally more complex to build and use than REST-based web AP/s. 
-◄ 
-Express router 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
 0 
 0 
-0 
-► 
-43/100 
+The jwt-simple module is used to encode and decode JWTs in Node.js web applications. The jwtsimple module is installed using: npm install j wt-simple. jwt-simple provides an jwt.encode() 
+method to create a JWT and ajwt.decode() method to decode a JWT. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 10/37 
 11/17/24, 12:11 PM zyBooks 
-To create a web API using Express, a developer uses the express.Router class to create modular route 
-callbacks for the web API endpoints. An endpoint is a URL for a web API used to access a resource. 
-Ex: http: // yahoo.com/ api / movies. 
-The example below creates an Express server that listens on port 3000. A route that was created with 
-the express. Router returns a single song in JSON format when a GET request is sent to 
-http://localhost:3000/api/songs. 
-I PARTICIPATION 
-ACTIVITY 8.3.4: Express router sends JSON-encoded song to web browser. 
-const express = require ("express" ); 
-const app = express (); 
-const router = express . Router (); 
-II GET request returns JSON-encoded song 
-router . get ("/songs" , function (req, res) { 
-const song = { 
-} ; 
-title : "Uptown Funk" , 
-artist : "Bruno Mars" , 
-popularity : 10 , 
-releaseDate : new Date (2014, 10 , 10 ), 
-genre : [ "funk" , "boogie" ] 
-res . json (song); 
-} ) ; 
-II All requests to API begin with lapi 
-app . use ("/api" , router); 
-app . listen (3000); 
-Animation content: 
-A block of Node.js is shown: 
-const express = require("express"); 
-const app = expressQ; 
-const router= express.Router(); 
-// GET request returns JSON-encoded song 
-router.get("/songs", function(req, res) { 
-const song = { 
-title: "Uptown Funk", 
-artist: "Bruno Mars", 
-popularity: 10, 
-releaseDate: new Date(2014, 10, 10), 
-genre: ["funk", "boogie"] 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-Web browser 
-http://localhost:3000/api/songs 
-{"title":"Uptown Funk", 
-I "artist":"Bruno Mars", 
-"popularity": 10, 
-"releaseDate": 
-"2014-11-10T06:00:00.000Z", 
-"genre": ["funk", "boogie"]} _J 
-... GET 
-/a pi/song {song} 
-,, 
-Web server 
-D 
-44/100 
-11/17/24, 12:11 PM 
-}; 
-res.json( song); 
-}); 
-// All requests to API begin with /api 
-app.use("/api", router); 
-app. listen(3000); 
-zyBooks 
-A web browser is shown with the URL http://localhost:3000/api/songs. The web browser sends a 
-GET request with /api/songs to the web server. The web server returns {songs} and 
-{"title":"Uptown Funk", 
-"artist":"Bruno Mars", 
-"popularity":10, 
-"releaseDate": 
-"2014-11-1 0T06:00:00.000Z", 
-"genre":["funk","boogie"]} 
-displays on the web browser. 
-Animation captions: 
-1. Express router creates a "/songs" route. 
-2. Any URL that begins with /api will be routed to the Express router, so /api/songs request is 
-routed to /songs route. 
-3. Browser requests song data with API request: http://localhost:3000/api/songs 
-4. The /songs route uses res.json() to return a JSON-encoded song in the API response. 
-I PARTICIPATION 
-ACTIVITY 8.3.5: Express router. D 
-Refer to the expanded example below, which supports GET and POST requests. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 45/100 
+Figure 9.2.1: Encoding and decoding a JWT with the jwt-simple module. 
+canst jwt = require ("jwt-simple" ); 
+canst secret = "supersecret" ; 
+canst payload = { username : "bsmith" }; 
+II Create a JWT 
+canst token = jwt . encode (payload, secret); 
+console . log ("Token: " + token ); 
+II Decode a JWT 
+canst decoded = jwt . decode (token , secret); 
+console . log ("Decoded payload: " + decoded . username ); 
+Token: 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlc2VybmFtZSI6ImJvYiJ9.Mm0fNOZMBFOrFu99NlnHdz3jkp5IE_BQ 
+Decoded payload: bsmith 
+◄ --------------------------------
+The figure below uses jwt-simple in the context of an Express server with two routes: 
+1. / api/ auth-Accepts a username and password in a POST request. After verifying the 
+username is "bsmith" and password is "pass", the route sends back a JWT carrying a payload 
+containing bsmith's username. 
+2. I api/ status -Accepts a GET request and expects the X-Auth header to contain the JWT 
+obtained from the/ api/ auth route. After validating the JWT, the route sends back bsmith's 
+status. 
+Developers can use a tool like Postman to test the Express server with the example HTTP requests 
+shown at the bottom of the figure below. 
+Figure 9.2.2: Using jwt-simple in an Express server. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+► 
+11/37 
 11/17/24, 12:11 PM zyBooks 
 canst express = require ( "express" ); 
+canst bodyParser = require ("body-parser" ); 
+canst jwt require ( "jwt-simple" ); 
 canst app = express (); 
 canst router = express . Router (); 
-II Middleware that parses HTTP requests with JSON body 
-app . use (express . json ()); 
-II GET request returns JSON-encoded songs 
-router . get ("/songs" , function (req, res) { 
-canst songs = [ 
-l ; 
-} , 
-{ 
-title : "We Found Love" , 
-artist : "Rihanna" , 
-popularity : 10 , 
-releaseDate : new Date (2011, 9 , 22 ), 
-genre : [ "electro house" ] 
-title : "Happy" , 
-artist : "Pharrell Williams" , 
-popularity : 10 , 
-releaseDate : new Date (2013, 11 , 21 ), 
-genre : [ "soul" , "new soul" ] 
-res . json (songs); 
+II Parse application/x-www-form-urlencoded 
+router . use (bodyParser . urlencoded ( 
+{ extended : false })); 
+II Secret used to encode/decode JWTs 
+canst secret = "supersecret" ; 
+router . post ("/auth" , function (req, res) 
 } ) ; 
-II POST request of JSON-encoded song displays song in the console 
-router . post ("/songs" , function (req, res) { 
-console . log (req . body ); 
-res . sendStatus (201); 
+II Verify bsmith/pass was POSTed 
+if (req . body . username === "bsmith" && reg . body . password === "pass" ) 
+II Send back a token that contains the user's username 
+canst token = jwt . encode ({ username : "bsmith" }, secret); 
+res . json ({ token : token }); 
+else { 
+II Unauthorized access 
+res . status (401) . json ({ error: "Bad username/password" }); 
+router . get ("/status" , function (req, res) 
 } ) ; 
-II All requests to API begin with lapi 
+II Check if the X-Auth header is set 
+if (! req . headers [ "x-auth" ]) 
+return res . status (401) . json ({ error: "Missing X-Auth header" }); 
+II X-Auth should contain the token value 
+canst token = req . headers [ "x-auth" ]; 
+try { 
+canst decoded = jwt . decode (token , secret); 
+II Send back a status 
+if (decoded . username === "bsmith" ) 
+res . json ({ status: "Enjoying a beautiful day!" }); 
+else { 
+res . json ({ status: "Working hard!" }); 
+catch (ex ) 
+res . status (401) . json ({ error: "Invalid JWT" }) ; 
 app . use ("/api" , router); 
 app . listen (3000); 
-1) What status code does a GET request 
-to http://localhost:3000/songs return? 
-0 200 
-0 201 
-0 404 
-2) What does a GET request to 
-http://localhost:3000/api/songs return 
-in the response body? 
-0 A single song 
-0 Array of two songs 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-0 
-46/100 
-11/17/24, 12:11 PM 
-0 Two individual song objects 
-3) __ is middleware that enables HTTP 
-requests containing JSON to be 
-automatically converted into a 
-JavaScript object. 
-0 express.json() 
-0 router. post() 
-0 res.sendStatus() 
-4) What MIME type is missing in the 
-HTTP request below so the Express 
-app outputs the JSON-encoded song 
-to the console? 
-POST /api/songs HTTP / 1.1 
-Host: localhost : 3000 
-Content-Type: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 12/37 
+11/17/24, 12:11 PM zyBooks 
+HTTP request HTTP response 
+POST /api/auth HTTP/1.1 HTTP/1.1 200 OK 
+Host : localhost:3000 
 User-Agent: Mozilla/5.0 
-Chrome / 48.0.2564 
-"title": "Stayin' Alive", 
-"artist": "Bee Gees", 
-"popularity": 9, 
-"releaseDate": "1977-02-01", 
-"genre": ["disco"] 
-0 text/plain 
-0 application/json 
-0 text/javascript 
-5) The call to router. get ( 11 / songs 11 , 
-... ) above could be replaced with a 
-call to app.get ( 11 /api/songs 11 , 
-... ) without changing how the API 
-works. 
-0 True 
-0 False 
+Chrome/48.0.2564 
+Content-Type: application/xwww-form-urlencoded 
+Content-Type: application/json; charset=utf-8 
+Content-Length: 121 
+Date: Tue, 03 May 2016 15:22:17 GMT 
+ETag: W/"79-d6Dq2n+D6aIQoSfkTMks8w" 
+X-Powered-By: Express 
+username=bsmith&password=pass {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9. E 
+yuHqmPCsMMWPZvVflRwxkJV3o1Gk0xsUfaCI7wmleC0"} 
+GET /api/status HTTP/1.1 
+Host: localhost:3000 
+HTTP request 
+User-Agent: Mozilla/5.0 Chrome/48.0.2564 
+Content-Type: application/x-www-form-urlencoded 
+X-Auth: 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlc2VybmFtZSI6ImJzbW10aCJ9. 
+yuHqmPCsMMWPZvVflRwxkJV3o1Gk0xsUfaCI7wmleC0 
+I PARTICIPATION 
+ACTIVITY 9.2.5: JWTs in an Express server. 
+Refer to the code in the figure above. 
+1) What status code is returned when a 
+POST to/ api/ auth contains the 
+username "bmsith" and the password 
+"opensesame"? 
+0 200 
+0 401 
+0 404 
+2) What status code is returned when a 
+GET to /api/status does not 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+HT 
+HTTP/1.1 21 
+Content-Ty] 
+applicatio1 
+charset=ut: 
+Content-Lei 
+Date: Tue, 
+15: 24: 33 GI 
+ETag: 
+W/"26-/MFB• 
+X-Powered-1 
+{"status":' 
+beautiful < 
+D 
+0 
+0 
+13/37 
+11/17/24, 12:11 PM 
+contain an X-Auth header? 
+0 200 
+0 401 
+0 404 
+3) Can the Express server above return a 
+token that would later cause the 
+"Working hard!" status to be returned by 
+/api/status? 
+0 Yes 
+Q No 
+Storing the secret key. 
 zyBooks 
-Developer tools for interacting with web APls 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-0 
-0 
-47/100 
-11/17/24, 12:11 PM zyBooks 
-Developers use a variety of tools to test and interact with web APls. cURL is a popular 
-command-line tool for sending HTTP requests. The image below shows curl sending 
-GET and POST requests to the Music API. 
-$ curl http: //localhost:3000 / api / songs 
-{"title":"Uptown Funk", "artist" : "Bruno Mars","popularity":10, 
-"releaseDate":"2014-ll-10T06:00 : 00.000Z","genre" : ["funk","boogie " ]} 
-$ curl -H "Content-Type: application / json" -X POST -d 
-'{"title":"Hello","artist":"Adele"}' http: //localhost:3000 / api/song s 
-Created 
-Postman is a popular application that allows developers to formulate HTTP requests. 
-API queries can be saved into collections for easy retrieval. The screenshot below 
-shows a GET request to the example Music API that returned back a JSON-encoded 
-song. 
-GET Fintl so g X + ooo 
-► Find song 
-GET T hrrp://localhos,:3000/api/songs 
-Params Auch Headers (6) Body Pre-req. Tests Serrin.gs 
-Query Pa@ms 
-KEY 
-Key 
-Body,., 
-Pretty Raw Preview Visualize 
-1 
-2 "t .'..tle" : "Uptown Funk" , 
-3 " ar-t i st" : "Bruno Mars" , 
-4 "popularit y" : 10, 
-VALUE 
-Value 
-JSON T 
-5 "releaseDat e " : "2014 - 11- 10T06:B0:B~ .eeeZ" , 
-6 " genr~e" : [ 
-7 "funk" , 
-8 "boogie" 
-9 
-No Environment T 
-Examples D "' BUILD c;9 S 
-send ... Save .. 
-Cookies Code 
-DESCRl?TJON ••• Bulk Edit 
-De.scripuon 
-@ 200 OK 67 ms 341 B Save Response • 
-,. Q 
-I 
-10 I 
-The screenshot below shows a POST request in Postman. The Body tab shows the 
-JSON-encoded song to be sent in the POST request. The "raw" and "JSON" options are 
-selected so the HTTP request will automatically include a 
-Content-Type: application/j son header. After pressing Send, Postman 
-shows the "Created" API response. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 48/100 
-11/17/24, 12:11 PM zyBooks 
-Saves.orig X + ooo 
-No Environment T 
-► Save song Examples D "' BUILD c;9 S 
-POST T hrrp://localhos,:3000/api/songs send ... Save "' 
-Pararns Auch Headers (8) Body • Pre-req. Tests Sercings Cookies Code 
-raw '"' JSON "' Beau ify 
-1 I 
-1 "t itle" : "He o", 
-4 "popu arity": 10, 
-5 "releaseDate " : "2015-10 - 23", 
-6 "genre" : [ "soul "] 
-1 I 
-Body ,., @ 201 Created 48 ms 216 B Save Response • 
-Prerry Raw Preview Visualize Tex "' Iii Q 
-1 Cr eat ed 
+The examples in this section show the secret key used to sign the JWT in the source 
+code. Good practice is to store the secret key in a configuration file and use a long 
+randomized string for the secret key Ex: qs3h6z0JUN9wgTy1j2Cl54g86yzG is a good 
+secret key 
+◄ 
 Using a database 
-The previous Music API example does not interact with a database. The figure below uses the 
-mongoose module to store and retrieve song information from a MongoDB database. The get route 
-uses the Mongoose Model.find () method to retrieve all songs in the database. The post route 
-uses the Mongoose Document. save () method to save the posted song to the database. 
-Figure 8.3.1: Music API using Mongoose to access/save data in MongoDB. 
-models/song.js server.js 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 49/100 
+0 
+► 
+Authentication services generally store and retrieve data from a database. The figure below shows a 
+Node.js project that stores data in a MongoDB database using a Mongoose model called User. The 
+user model stores a username, password, and status for a user. The Express server has three routes: 
+1. / api/user -Accepts a username, password, and status in a POST request. The route adds a 
+new user to the database. 
+2. I api/ auth-Accepts a username and password in a POST request. The route verifies the 
+POSTed username/password matches a username/password from the database and returns a 
+JWT with the username in the payload. 
+3. I api/ status -Accepts a GET request and expects the X-Auth header to contain a valid JWT. 
+The route validates the JWT and sends back the username and status of all users in the 
+database. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 14/37 
 11/17/24, 12:11 PM zyBooks 
-const db = require ( " .. /db" ); 
-II Create a model from the schema 
-const Song db . model ( "Song" , { 
-title : { type : String, required : true 
-} , 
-artist : 
-popularity : 
-} , 
-releaseDate : 
-} , 
-genre : 
-} ) ; 
-module . exports 
-db.js 
-String, 
-{ type : Number , min : 1 , max : 10 
-type : Date , default : Date . now 
-String l 
-Song; 
-const mongoose = require ("mongoose" ); 
-mongoose . connect ("mongodb://localhost/musicdb" ); 
-module . exports = mongoose ; 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-const express = 
-require ("express" ); 
-const Song = 
-require ("./models/song" ); 
-const app = express (); 
-II Middleware that parses 
-HTTP requests with JSON 
-body 
-app . use (express . json ()); 
-const router = 
-express . Router (); 
-II Get list of all songs in 
-the database 
-router . get ("/songs" , 
-function (req, res) { 
-Song . find (function (err, 
-songs) { 
-if (err) 
-res .status (400) . send (err); 
-} 
-} ) ; 
-} ) ; 
-else { 
-res . json (songs); 
-} 
-II Add a new song to the 
-database 
-router . post ("/songs" , 
-function (req, res) { 
-II Save the song 
-const song = new 
-Song (req . body ); 
-song . save (function (err, 
-song) { 
-if (err) 
-res .status (400) . send (err); 
-} 
-else { 
-r es . statu s (201) . j son (song ); 
-} 
-} ) ; 
-} ) ; 
-app . use ("/api" , router); 
-app . listen (3000); 
-50/100 
+Figure 9.2.3: Node.js project uses token-based authentication with user data 
+in a MongoDB database. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 15/37 
 11/17/24, 12:11 PM zyBooks 
-To manage the complexity of web APls, developers organize routes and API functionality into separate 
-Node.js modules. The Node.js project in the below figure defines the song routes in api/ songs. j s. 
-In server.js, the song routes are defined in relation to the relative path / api/ songs, so the"/" route 
-path in songs.js means the full path is / api / songs/ or /api/songs without the"/" at the end. 
-Figure 8.3.2: Organizing routes and APls in separate modules: Example Music 
-API project. 
-musicproject 
-~ api 
-I t._ songs . j s 
-~ models 
-I t._ song.js 
-~ node modules 
-~ ;xpress 
+myproject 
+----
+t= 
+api 
+L_ users. j s 
+models 
+L_ user.js 
+node modules 
+~ express 
 ~ mongoose 
-t._ etc ... 
+~ jwt-simple 
+L_ etc . .. 
 db.js 
 package.json 
 server.js 
-api/songs.js models/song.js 
+II modelsluser.js 
 const db = require ( " .. /db" ); 
 II Create a model from the schema 
-const Song 
-title : 
-db . model ("Song" , { 
-} ' 
-} ' 
-} ' 
+const User = db . model ( "User" , { 
+username : { type : String, required : true 
+} , password : type : String, required : true 
+} , status: String 
 } ) ; 
-artist : 
-popularity : 
-releaseDate : 
-genre : 
-module . exports 
-db.js 
-{ type : String, required : true 
-String, 
-{ type : Number, min : 1 , max : 10 
-type : Date , default : Date . now 
-String ] 
-Song ; 
+module . exports User; 
+II db.js 
 const mongoose = require ("mongoose" ); 
-mongoose . connect ( "mongodb://localhost/musicdb" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
 module . exports = mongoose ; 
-server.js 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 51/100 
-11/17/24, 12:11 PM 
-const Song = 
-require ( " .. /models/song" ); 
-const router = 
-require ( "express" ) . Router (); 
-II Get list of all songs in 
-the database 
-zyBooks 
+II server.js 
 const express = require ("express" ); 
+const bodyParser = require ("body-parser" ); 
+const User = require ("./models/user" ); 
 const app = express (); 
-II Middleware that parses HTTP requests with 
-JSON body 
-app . use (express . json ()); 
-router . get ("/" , 
-function (req, res) 
-app . use ("/api/songs" , require ("./api/songs" )); 
-Song . find (function (err, 
-songs) { 
-if (err) { 
-res . status (400) . send (err); 
-} 
-} ) ; 
-} ) ; 
-else { 
-res . json (songs); 
-} 
-II Add a new song to the 
+const router = express .Router (); 
+router . use (bodyParser . urlencoded ( 
+{ extended : false })); 
+router . use ("/api" , require ("./api/users" )); 
+app . use (router); 
+app . listen (3000); 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+I 
+16/37 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+II api/users.js 
+canst jwt = reguire ("jwtsimple" ); 
+canst User = 
+reguire ( " .. /models/user" ); 
+canst router = 
+reguire ("express" ) . Router (); 
+II For encoding/decoding JWT 
+canst secre t = 
+"supersecret" ; 
+II Add a new user to the 
 database 
-router . post ("/" , 
-function (req, res) 
-const song = new 
-Song (req . body ); 
-song . save (function (err, 
-song ) { 
+router . post ( "/user" , 
+function (reg, res) { 
+if (! reg . body . username I I 
+!reg . body . password) { 
+res . status (400) . json ({ 
+error : "Missing username 
+and/or password" }); 
+return ; 
+canst newUser new 
+User ( { 
+username : 
+reg . body . username , 
+password : 
+reg . body . password, 
+status: 
+reg . body . status 
+} ) ; 
+newUser . save (function (err) 
+if (err) { 
+res .status (400) . send (err); 
+} 
+else { 
+res . sendStatus (201); // 
+Created 
+} ) ; 
+} ) ; 
+} 
+II Sends a token when given 
+valid username/password 
+router . post ("/auth" , 
+function (reg, res) { 
+if (! reg . body . username I I 
+! reg . body . password) { 
+res . status (401) . json ({ 
+error: "Missing username 
+and/or password" }); 
+17/37 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+return ; 
+II Get user from the 
+database 
+User . findOne ({ username : 
+req . body . username }, 
+function (err, user) { 
 if (err) { 
 res . status (400) . send (err); 
 } 
+else if (! user) 
+II Username not in 
+the database 
+res . status (401) . json ({ 
+error : "Bad username" }); 
 else { 
-res . status (201) . json (song); 
+II Check if 
+password from database 
+matches given password 
+if (user . password 
+!= req . body . password) { 
+res . status (401) . json ({ 
+error : "Bad password" }); 
+} 
+else { 
+II Send back a 
+token that contains the 
+user's username 
+const token 
+jwt . encode ({ username : 
+user . username }, secret); 
+res . j son ( { 
+token : token }) ; 
+} 
 } 
 } ) ; 
+} ) ; 
+II Gets the status of all 
+users when given a valid 
+token 
+router . get ("/status" , 
+function ( req , res) { 
+II See if the X-Auth 
+header is set 
+if (! req . headers [ "xauth" ]) { 
+return 
+res .status (401) . json ({ error : 
+"Missing X-Auth header" }); 
+} 
+II X-Auth should contain 4- i.,._ 4- ...... 1.,. ,__ ..... 
+18/37 
+11/17/24, 12:11 PM 
+I 
+zyBooks 
+I 1.-llt:: l-Vl'Ct::11 
+canst token 
+req . headers [ "x-auth" ); 
+try { 
+canst decoded I PARTICIPATION 
+ACTIVITY 9.2.6: Token-based authentication with a MongoDB database. 
+efer to the code in the figure above. 
+) What does the HTTP request below do? 
+POST /api/user HTTP/1.1 
+Host: localhost : 3000 
+Content-Type: application/x-www-form-urlencoded 
+username and status fields 
+Us e r . find ({}, 
+"username status " , 
+function (e r r , use r s ) 
+res . json (users); 
+} ) ; 
+:ch (ex ) 
+res . status (401) . json ({ 
+"Invalid JWT" }); 
+username=jwhite&password=qwerty&status=Working+hard! 
+O Authenticates user jwhite 
+0 Gets all user statuses 
+0 Creates a new user 
+2) If user "jwhite" with password "qwerty" is in 
+the database, what response does the 
+Express server return to the request below? 
+POST /api/auth HTTP/1.1 
+Host: localhost:3000 
+Content-Type: application/x-wwwform-urlencoded 
+username=jwhite&password=opensesame 
+0 200 status code with a JWT 
+401 status code with an error 0 message 
+0 201 status code 
+3) What response does the Express 
+server return to the request below? 
+GET / api / status HTTP / 1.1 
+Host: localhost:3000 
+X-Auth: jwhi te 
+O 200 status code with all user 
+statuses 
+401 status code with an error 0 message 
+0 201 status code 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
 } ) ; 
 module . exports router; 
+I 
+~ D 
+0 
+0 
+19/37 
+11/17/24, 12:11 PM zyBooks 
+Saving passwords in the database 
+◄ 
+The examples above show passwords stored as plain text in a database. Passwords 
+should NEVER be stored as plain text in a database. Instead, password hashes 
+(discussed elsewhere) should be stored in the database. 
+Storing JWT in localStorage 
+► 
+The web application running in the web browser must interact with the server's API to authenticate the 
+user, save the JWT, and transmit the JWT in subsequent API requests. The window. local Storage 
+object allows web applications to store data in the web browser and is ideal for storing a JWT. The 
+example below uses the Fetch API to obtain and transmit a JWT. 
 I PARTICIPATION 
-ACTIVITY 8.3.6: Web API project. 
-app . listen (3000); 
-Use the Music API project in the figure above. 
-1) Which file defines the Mongoose 
-model? 
-O models/song.js 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-0 
-52/100 
-11/17/24, 12:11 PM 
-0 api/songs.js 
-0 db.js 
-2) What is the name of the MongoDB 
-database storing song data? 
-0 songs 
-0 musicdb 
-0 db.js 
-3) After POSTing the same JSON data 
-twice to the Music API, what is stored 
-in the MongoDB database? 
-0 Nothing 
-0 One version of the song 
-O Two versions of the same song 
-with different song IDs 
-4) In which file should the API code to 
-handle the DELETE verb for the path 
-/ api/ songs be added? 
-0 models/song.js 
-0 server.js 
-0 api/songs.js 
-5) What file should be modified to change 
-the route path / api/ songs to 
-/api/music? 
-0 models/song.js 
-O server.js 
-0 api/songs.js 
-Search by genre and ID 
-zyBooks 
-0 
-0 
-0 
-0 
-The Node.js code below improves the Music API to support searching by genre using the query string 
-parameter "genre". 
-Figure 8.3.3: GET request can limit results by genre using the query string. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 53/100 
-11/17/24, 12:11 PM 
-router . get ("/" , function (req, res) { 
-let query ={}; 
-zyBooks 
-II Check if genre was supplied in query string 
-if (reg . query . genre ) { 
-} ) ; 
-query = { genre : reg . query . genre }; 
-Song . find (query, function (err, songs ) 
-if (err) { 
-} ) ; 
-res . status (400) . send (err); 
-else { 
-res . json (songs); 
-} 
-Request: 
-http://localhost:3000/api/songs?genre=funk 
-Response: 
-[{" id" : "56f00ce0853096ac12c88ba5","title" : "Uptown Funk", 
-"artist":"Bruno Mars","popularity":10,"_v" : 0,"genre": 
-["funk","boogie"], 
-"releaseDate":"2014-11-10T06 : 00:00 . 000Z"}, 
-{" id":"56f00ce0853096ac12c88ba8","title":"Brick House", 
-"artist":"Commodores","popularity":8,"_v":0,"genre": 
-["disco", "funk"], 
-"releaseDate":"1977-08-26T05:00:00.000Z"}, 
-{" id":"56f00ce0853096ac12c88ba9","title":"Super Freak", 
-"artist": "Rick James", "popularity": 8," v" : 0, "genre": ["funk"], 
-"releaseDate":"1981-07-lOTOS:OO:OO.OOOZ"}] 
-Most web APls support finding a resource by ID. The route in the figure below only executes if a URL 
-contains characters after "/api/songs/". If the characters do not match a valid Objectld, the err object 
-will contain an error message that is transmitted to the client. 
-Figure 8.3.4: GET request to find specific song by ID. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 54/100 
-11/17/24, 12:11 PM zyBooks 
-router . get ("/:id" , function (req, res) { 
-II Use the ID in the URL path to find the song 
-Song . findByid (req . params . id, function (err, song) 
-if (err) { 
-res . status (400) . send (err); 
-else { 
-res . j son (song ); 
-} 
-} ) ; 
-} ) ; 
-Request: 
-http ://localhost:3000 / api / songs/ 56ecle48960dd58447478ce0 
-Response: 
-{" id" : "56ecle48960dd58447478ce0","title":"Humble And Kind", 
-"artist":"Tim McGraw","popularity" : 8,"genre'': ["country 
-pop"],"releaseDate" : 
-"2016-02-01T06:00:00Z","_v":0} 
-I PARTICIPATION 
-ACTIVITY 
-◄ 
-8.3.7: Web API GET parameters. 
-Refer to the two figures above. 
-1) The GET request to / api / songs 
-returns all songs in the MongoDB 
-database. 
-0 True 
-O False 
-2) The GET request to/ api/ songs? 
-genre=rap returns an empty array if 
-no songs exist in the MongoDB 
-database with a "rap" genre. 
-0 True 
-O False 
-3) The GET request to 
-I api / songs/ some id where some id 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-► 
-0 
-0 
-0 
-55/100 
-11/17/24, 12:11 PM 
-is not a valid Objectld results in a 400 
-response. 
-0 True 
-O False 
-4) The GET request to 
-I api/ songs/ some id where some id 
-is a valid Objectld returns a 404 
-response if the ID is not in the 
-database. 
-0 True 
-O False 
-Updating and deleting songs 
-zyBooks 
-0 
-Web APls use the PUT verb to update an existing resource. The figure below uses the Mongoose 
-function upda teOne () to update a song with data transmitted in the body of the PUT request. The 
-Music API returns a 204 status for a successful update, a 400 status if an error occurs, and a 404 
-status if the song's ID is not found. 
-Figure 8.3.5: Update song's title and popularity with PUT verb in Music API. 
-router . put ("/:id" , function (req, res) { 
-} ) ; 
-II Song to update sent in body of request 
-canst song = reg . body ; 
-II Replace existing song fields with updated song 
-Song . updateOne ({ id : req . params . id }, song, function (err, result) { 
-if (err) { 
-} ) ; 
-res .status (400) . send (err); 
-else if (result .matchedCount 0 ) { 
-res .sendStatus (404); 
-else { 
-res .sendStatus (204); 
-} 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 56/100 
-11/17/24, 12:11 PM zyBooks 
-HTTP request 
-PUT /api/song/56ecle48960dd58447478cdf 
-HTTP/1.1 
-Host: localhost:3000 
-Content-Type: application/json 
-User-Agent: Mozilla/5.0 Chrome/48.0.2564 
-"title": "Hello There!", 
-"popularity": 8 
-HTTP response 
-HTTP/1.1 204 No Content 
-Date: Mon, 15 Mar 2021 
-14:26:20 GMT 
-ETag: W/"66-
-cZws74LP8XEnwbIEyLgWFw" 
-X-Powered-By: Express 
-PUT and PATCH 
-◄ 
-Some RESTful web APls support two HTTP methods for updating resources: 
-• PUT for performing a complete update 
-• PATCH for performing a partial update 
-For simplicity, this material uses PUT to perform a partial update and does not include 
-PATCH. 
-► 
-Web APls use the DELETE verb to delete an existing resource. The figure below uses the Mongoose 
-method deleteone () to delete a song whose ID appears in the URL of the DELETE request. The 
-Music API returns a 204 status for a successful delete, a 400 status if an error occurs, and a 404 
-status if the song's ID is not found. ◄ ► 
-Figure 8.3.6: Delete a song by ID with DELETE verb in Music API. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 57/100 
-11/17/24, 12:11 PM zyBooks 
-router . delete ("/:id" , function (req, res) { 
-Song . deleteOne ({ id : req . params . id }, function (err, result) { 
-if (err) { 
-I 
-} ) ; 
-res .status (400) . send (err); 
-else if (result .matchedCount 0 ) { 
-res .sendStatus (404); 
-else { 
-res .sendStatus (204); 
-} 
-} ) ; 
-HTTP request 
-DELETE / api / song/56ecle48960dd58447478cdf 
-HTTP/ 1.1 
-Host : localhost:3000 
-User-Agent: Mozilla / 5.0 Chrome/48.0.2564 
-PARTICIPATION 8.3.8: Update and delete. ACTIVITY 
-Refer to the two figures above. 
-1) Where is the song data to update sent 
-in a PUT request? 
-◄ 
-0 Query string 
-0 Request body 
-0 Response body 
-2) In the figure that updates Adele's song, 
-what song data is changed? 
-0 _id 
-0 artist 
-0 title and popularity 
-3) A PUT request with the following 
-message body specifies a title that is 
-identical to the song's existing title. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-I 
-I 
-HTTP response 
-HTTP/1.1 204 No Content 
-Date : Mon, 15 Mar 2021 
-14:31:35 GMT 
-ETag: W/ "aoQDOV50elMN2H/ N8GYi+8w" 
-X-Powered-By: Express 
-D 
-0 
-► 
-0 
-0 
-58/100 
-11/17/24, 12:11 PM zyBooks 
-4) 
-What status code does the PUT route 
-return? 
-"title" : "Hello" 
-0 204 
-0 400 
-0 404 
-What status code do the PUT and 
-DELETE routes return if the supplied 
-song ID cannot be located in the 
-database? 
-0 204 
-0 400 
-0 404 
-CORS 
-◄ 
-A web AP/ that needs to be accessed from different origins needs to enable CORS. The 
-cors module provides middleware to enable CORS in an Express app. Install cars with 
-npm: npm install cors. 
-canst express = require ("express" ); 
-canst cars = require ("cors" ); 
-canst app = express (); 
-II Enable all CORS requests 
-app . use (cars ()); 
-Exploring further: 
-• Postman 
-• cURL 
-• Understanding SOAP and REST Basics And Differences 
-• PUT vs. PATCH 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-► 
-59/100 
-11/17/24, 12:11 PM zyBooks 
-• cars middleware 
-8.4 Using RESTful web APls with Fetch 
-Music API 
-A web application uses a web API running on the web server to manipulate data in the server's 
-database. This section uses a RESTful Music API that was developed elsewhere in this material. The 
-Music API uses a song resource with the following fields: 
-• _id - Object ID uniquely identifying each song 
-• title - Required string 
-• artist - String 
-• popularity- Number between 1 and 1 O 
-• releaseDate - Date 
-• genre - Array of strings 
-The Music API supports the operations in the below table. 
-Table 8.4.1: Music API operations. 
-◄ 
-Resource 
-/api/songs 
-Request 
-verb 
-GET 
-/api/songs/:id GET 
-/api/songs POST 
-I 
-/api/songs PUT 
-I 
-/api/songs/:id DELETE 
-I 
-Description 
-Gets a list of all songs in the database 
-Gets the song with the given id 
-Adds the JSON-encoded song in the request 
-body to the database 
-Updates the existing song with the JSONencoded song in the request body 
-Removes the song with the given id from the 
-database 
-Status code 
-200 OK 
-200 OK 
--
--
-201 Created 
-l
-204 No 
-Content 
-204 No 
-Content 
--
--
-► 
-I .--------, 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 60/100 
-11/17/24, 12:11 PM zyBooks I ACTIVITY 8.4.1: Music APL 
-PARTICIPATION I u 
-7) A POST request to/ api/ songs 0 
-returns all songs in the database. 
-0 True 
-0 False 
-2) A GET request to/ api/ songs/ 888 0 
-returns the song with ID 888. 
-0 True 
-0 False 
-3) Only the POST and PUT requests 0 
-require sending JSON to the web APL 
-0 True 
-0 False 
-Getting songs 
-Web applications call a web API from the browser by using the XMLHttpRequest object, the Fetch 
-API, or some other library that can send HTTP requests. The example code below uses Fetch to 
-interact with the Music APL The Music API is housed on an Express web server, and song data is 
-saved in a MongoDB database. 
-I PARTICIPATION 
-ACTIVITY 8.4.2: Using Fetch to request all songs from the Music API. 
-<body> 
-<hl>Songs</hl> 
-<ul> 
-<li>Uptown Funk - Bruno Mars</li> 
-<li>Hello - Adele</li> 
-<li>Royals - Lorde</li> 
-</ul> 
-</body> 
-addEventListener ( "DOMContentLoaded" , async function () 
-const response = await fetch ("/api/songs" ); 
-const songs = await response . json (); 
-let html = "" ; 
-for (let song of songs) { 
-html += '<li>${ song . title } - ${ song . artist }</li>' ; 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-web browser 
-localhost:3000/songs.html 
-Songs 
-• Uptown Funk - Bruno Mars 
-• Hello - Adele 
-• Royals - Lorde 
-GET 
-/api/songs {json} 
-Express server 
-[ MusicAPI] 
-Get all songs {json} 
-[ 
-{ "_id":"56f00ba5", 
-61/100 
-11/17/24, 12:11 PM zyBooks 
-document . querySelector ( "ul") . innerHTML = html ; "title":"Uptown Funk", 
-}); ---~ ... }, 
-Animation content: 
-An HTML block is shown: 
-<body> 
-<h1>Songs</h1> 
-<ul> 
-<li>Uptown Funk - Bruno Mars</li> 
-<li>Hello -Adele</li> 
-<li>Royals - Lorde</li> 
-</ul> 
-</body> 
-A block of JavaScript is shown: 
-addEventlistener("DOMContentLoaded", async functionO { 
-const response = await fetch("/api/songs"); 
-const songs = await response.json(); 
-let html=""; 
-for (let song of songs) { 
-html+= '<li>S{song.title}- S{song.artist}</li>'; 
-} 
-document.querySelector("ul").innerHTML = html; 
-}); 
-{ "_id":"56f00ba8", 
-"title":"Hello", 
-... }, 
-{ "_id":"56f00cb2", 
-"title":"Royals", 
-... } 
-MongoDB 
-A web browser with the URL localhost:3000/songs.html sends a GET request to the Express server 
-for /api/songs. The Express server gets all songs from the MongoDB database and returns the 
-songs back to the web browser encoded in JSON. The web browser then displays the following: 
-Songs 
-• Uptown Funk - Bruno Mars 
-• Hello - Adele 
-• Royals - Lorde 
-Animation captions: 
-1. Browser requests songs.html from the Express web server and renders the HTML with an 
-empty list. 
-2. fetchO sends a GET request using the URL /api/songs. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 62/100 
-11/17/24, 12:11 PM zyBooks 
-3. Web server's Music API retrieves all songs from MongoDB and returns the songs encoded in 
-JSON. 
-4. response.json() parses the JSON-encoded songs and returns an array of song objects. 
-5. The for-of loop creates <Ii> elements containing each song title and artist. The <Ii> elements 
-are added to <ul>, creating a bulleted list of songs. 
-I PARTICIPATION 
-ACTIVITY 8.4.3: Getting songs with Fetch. D 
-1) What is missing to output the first 
-song's artist to the console? 
-canst response = await 
-fetch ("/api/songs" ); 
-canst songs = await 
-response . json (); 
-console . log ( __ ); 
-0 songs.artist 
-0 songs[O] .artist 
-0 songs.artist[O] 
-2) What is missing to output the song's 
-popularity to the console? 
-canst response = await 
-fetch ("/api/songs/123" ); 
-canst song = await 
-response . json (); 
-console . log ( __ ); 
-0 song[O] .popularity 
-0 popularity.song 
-0 song.popularity 
-3) What is missing to ensure that the 
-Music API returns a valid song? 
-canst response = await 
-fetch ("/api/songs/888" ); 
-if ( __ ) { 
-canst song = await 
-response . json (); 
-console . log (song . title ); 
-else { 
-console . log ("Can't get 
-song" ) ; 
-} 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-0 
-0 
-63/100 
-11/17/24, 12:11 PM 
-Q response. ok 
-Q response 
-Q song 
-Adding new songs 
-zyBooks 
-The fetch () method can send a POST request to a web API by specifying a second argument 
-containing the request method, the Content-Type header, and the data to send in the request body. 
-The figure below displays a form allowing the user to enter song data. Clicking the Add button results 
-in fetch () POSTing the JSON-encoded song data from the web form to the Music API. 
-Figure 8.4.1: POSTing a new song. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 64/100 
-11/17/24, 12:11 PM 
-<!-- add_song.html --> 
-<form> 
-<p > 
-<label 
-for="title">Title: </label> 
-<input type="text" 
-id="title"> 
-</p > 
-<p > 
-<label 
-for="artist">Artist: </label> 
-<input type="text" 
-id="artist"> 
-</p > 
-<p > 
-<label 
-for="released">Released: 
-</label> 
-<input type="date" 
-id="released"> 
-</p > 
-<p > 
-<label 
-for="popularity" >Popularity: 
-</label> 
-<input type="number" 
-min="l" max="l0" 
-id="popularity"> 
-</p > 
-<p > 
-<label 
-for="genre" >Genre: </label> 
-<input type="text" 
-id="genre"> 
-</p > 
-<p > 
-<input type="button" 
-id="addBtn" value="Add" > 
-</p > 
-<p id="error" ></p > 
-</form> 
-zyBooks 
-addEventListener ("DOMContentLoaded" , function () 
-document . querySelector ("#addBtn" ) . addEventListener 
-addSong ); 
-} ) ; 
-async function addSong () 
-II Create a song object from the form fields 
-const song = { 
-title : document . querySelector ("#title" ) . val~ 
-artist : document . querySelector ("#artist" ) . va 
-releaseDate : 
-document . querySelector ("#released" ) . value , 
-popularity : 
-document . querySelector ("#popularity" ) . value , 
-genre : document . querySelector ( "#genre" ) . val~ 
-document . querySelector ( "#genre" ) . value . sr 
-[ l 
-} ; 
-II POST a JSON-encoded song to Music API 
-const response = await fetch ( "/api/songs" , 
+ACTIVITY 9.2.7: Authenticating with Fetch and storing the JWT in localStorage. D 
+async function login (username , password) { 
+const response = await fetch ("/api/auth" , 
 method : "POST" , 
 } ) ; 
-headers : { "Content-Type" : "application/jsor 
-body : JSON . stringify (song ) 
+body : new URLSearchParams ({ 
+username : username , 
+password : password }) 
 if (response . ok ) 
-const results await response . json (); 
-alert ("Added song with ID" + results . id); 
-II Reset the form after adding the song 
-document . querySelector ("form" ) . reset (); 
-else { 
-document . querySelector ("#error" ) . innerHTML 
-add song." ; 
-} 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 65/100 
-11/17/24, 12:11 PM zyBooks 
-0 AddSo g X + 
-f- ➔ C © localhost:3000/add_song.html 
-Add Song 
-Title= 
-Artist: 
-Never Let Me Down Again 
-Depeche Mode 
-Releas,ed: 0s 12s / 19s7 I 
-Popularity~ 6 
-~--~ 
-Genre: synthipop,ebm 
-I PARTICIPATION 8.4.4: POST requests and the Music API. ACTIVITY 
-1) The JSON . stringify () method 
-converts a JavaScript object to a JSON 
-string. 
-0 True 
-O False 
-2) The HTTP request must have the 
-header content-Type: 
-application/j son or the web 
-server will not properly accept the 
-JSON-encoded data that is POSTed. 
-0 True 
-O False 
-3) In the figure above, the web browser 
-displays a dialog box when the browser 
-receives a 400 status code from the 
-web server. 
-0 True 
-O False 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-0 
-0 
-0 
-66/100 
-11/17/24, 12:11 PM 
-4) If the Music API returns a 400 status 
-code, the webpage displays an error 
-message. 
-0 True 
-O False 
-Updating songs 
-zyBooks 
-0 
-The example below uses fetch () to load a song into a web form when the page first loads. The user 
-can then modify the song data. When the user clicks the Update button, the updateSong () function 
-calls fetch () to send a PUT request to the Music API to update the song. 
-Figure 8.4.2: Sending PUT request to update an existing song. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 67/100 
-11/17/24, 12:11 PM 
-<!-- update_song.html --> 
-<form> 
-<p > 
-<label 
-for="songid" >ID: </label> 
-<input type="text" 
-id="songid" > 
-</p > 
-<p > 
-<label 
-for="title">Title: </label> 
-<input type="text" 
-id="title"> 
-</p > 
-<p > 
-<label 
-for="artist">Artist: </label> 
-<input type="text" 
-id="artist"> 
-</p > 
-<p > 
-<label 
-for="released">Released: 
-</label> 
-<input type="date" 
-id="released"> 
-</p > 
-<p > 
-<label 
-for="popularity" >Popularity: 
-</label> 
-<input type="number" 
-min="l" max="l0" 
-id="popularity"> 
-</p > 
-<p > 
-<label 
-for="genre" >Genre: </label> 
-<input type="text" 
-id="genre"> 
-</p > 
-<p > 
-<input type="button" 
-id="updateBtn" 
-value="Update" > 
-</p > 
-<p id="error" ></p > 
-</form> 
-zyBooks 
-addEventListener ( "DOMContentLoaded" , async functic 
-document . querySelector ("#updateBtn" ) . addEventListe 
-updateSong ); 
-II Load a song into the web form 
-const songid = "5fe1097caf3b173148985746" ; 
-const response = await fe tch ( "/api/songs/" + sc 
-if (response . ok ) { 
-let song = await response . json (); 
-document . querySelector ("#songid" ) . value = sc 
-document . querySelector ("#title" ) . value = sor 
-document . querySelector ("#artist" ) . value = sc 
-document . querySelector ("#released" ) . value = 
-song . releaseDate . substring (0, 10 ); 
-document . querySelector ("#popularity" ) . value 
-song . popularity; 
+const tokenResponse = await response . json (); 
+localStorage .setitem ("token" , 
+tokenResponse . token ); 
+async function displayStatus () { 
+const token = localStorage . getitem ( "token" ); 
+const response = await fetch ("/api/status" , 
+headers : { "X-Auth" : token } 
 } ) ; 
-document . querySelector ("#genre" ) . value = sor 
-} 
-async function updateSong () 
-II Create a song object from the form fields 
-const song = { 
-id : document . querySelector ("#songid" ) . value 
-title : document . querySelector ("#title" ) . val~ 
-artist : document . querySelector ("#artist" ) . va 
-releaseDate : document . querySelector ("#releas 
-popularity : document . querySelector ("#popular 
-genre : document . querySelector ( "#genre" ) . val~ 
-document . querySelector ( "#genre" ) . value . sf 
-[ l 
-} ; 
-II Send PUT request with JSON-encoded song to 
-const response = await fetch ("/api/songs" , { 
-method : "PUT" , 
-} ) ; 
-headers : { "Content-Type" : "application/jsor 
-body : JSON . stringify (song ) 
 if (response . ok ) 
-alert ("Updated song." ); 
-else { 
-document . querySel ect or ("#error" ) . i nner HTML 
-update song." ; 
-} 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 68/100 
-11/17/24, 12:11 PM zyBooks 
-0 Update So g X + 
-f- C CD localhost:3000/update_song.html 
-Update• So,1ng1 
-ID: I 5fe1 097caf3b1731489857 46 I 
-Title= 
-Artist 
-I Never Let Me Oown Ag1ain 
-I Depeche M,ode 
-Released: i 0 s / 24 / 1'987 I 
-Popularity: l .... 7 __ ~-1 
-Genre: I synthpop,ebrn 
-I Update I 
-I PARTICIPATION 8.4.5: PUT request and the Music API. ACTIVITY 
-Refer to the figure above. 
-1) What happens when the page first 
-loads if the database does not contain 
-a song with ID 
-5fe0f679af3b173148985743? 
-0 Error message is displayed 
-O Form displays a default song 
-O Form displays no song data 
-2) In the examples above, what fields are 
-different in the calls to fetch () when 
-creating a POST request vs. a PUT 
-request? 
-0 method 
-O headers 
-0 body 
-3) What happens if the user changes the 
-title to "Little 15" and clicks Update? 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-0 
-0 
-0 
-69/100 
-11/17/24, 12:11 PM 
-0 Nothing happens 
-0 A dialog box displays 
-O The song's title is left unchanged 
-4) What happens if the user removes a 
-character from the ID text box and 
-clicks Update? 
-0 Nothing happens 
-O The song's ID is updated 
-O An error message displays 
-Deleting songs 
-zyBooks 
-0 
-The getAllSongs () function below uses fetch () to load all song titles into a drop-down list. 
-When the user clicks Delete, deletesong () calls fetch () to send a DELETE request to delete the 
-selected song. 
-Figure 8.4.3: Sending DELETE request to delete a song. 
-addEv entListener ("DOMContentLoaded" , async function () { 
-document . querySelector ("#deleteBtn" ) . addEventListener ("click 
-deleteSong ); 
-getAllSongs () ; 
-} ) ; 
-II Load all songs into the drop-down list 
-async function getAllSongs () { 
-canst response = await fetch ( "/api/songs" ); 
-if (response . ok ) { 
-canst songs = await response . json (); 
+const users = await response . json (); 
 let html = "" ; 
-for ( let song of songs ) { 
-html += '<option value="${ song . id}">${ song . title } 
-</option>' ; 
-html ; 
+for (let user of users) { 
+html += "<li>" + user . username + fl - fl + 
+user .status + "</li>" ; 
+const status = document . querySelector (flul" ); 
+status . innerHTML = html ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+web browser 
+local 
+Storage 
+http:l/localhost:3000/app 
+Status: token:3a.s8.: 
+I 
+• bsmith - Enjoying a 
+beautiful day! 
+• jwhite - Working hard! 
+• ablack - Doing homework 
+I 
+GET /api/status 
+X-Auth: 3a.s8.2p 
+{ usernames & 
+statuses} 
+Token 
+validated! Express server 
+Get statuses ! t { json } 
+{ "username":"bsmith", 
+"password":"pass", 
+... }, 
+{ "username":"jwhite", 
+"password":"qwerty", 
+... }, 
+{ "username: "ablack", 
+"password":"abc123", 
+... } 
+20/37 
+11/17/24, 12:11 PM 
 } 
-) 
-document . querySelector ( "#songDropDown'' ) . innerHTML 
-async function deleteSong () { 
-II Get the song ID of the selected song 
-canst songld = document . querySelector ( 
-"#songDropDown option:checked" ) . value ; 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 70/100 
-11/17/24, 12:11 PM 
-<!--
-delete song.html -
--> 
-<form> 
-<select 
-id="songDropDown" > 
-</select> 
-<input 
-type= "button" 
-value="Delete" 
-id="deleteBtn"> 
-<div 
-id="error"></div> 
-</form> 
-zyBooks 
-canst response = await fetch ( "/api/songs/" + songid, { 
-method : "DELETE" 
-} ) ; 
-if (response . ck) 
-II Successfully deleted song 
-getAllSongs () ; 
-else { 
-document . querySelector ( "#error" ) . i nn erHTML 
-delete song." ; 
-0 Delete Song X + 
-© localhos :3000/delete_song.html 
-"Cannot 
-1-U __ p __ .t_ow_n ___ f _1Jn_k ______ v~ I Delete j 
-Uptown Funk 
-Hello 
-Super Freak 
-Bri ck House 
-I PARTICIPATION 
-ACTIVITY 8.4.6: DELETE request and the Music APL D 
-Refer to the figure above. 
-1) According to the fetch () call in 
-deleteSong (), what is sent in the 
-request body? 
-Q JSON 
-0 song ID 
-0 Nothing 
-2) What effect would the code below have 
-if placed immediately before the for-of 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-0 
-71/100 
-11/17/24, 12:11 PM 
-loop in getAllSongs ()? 
-sangs .sart (functian (a , b ) { 
-canst titlel = 
-a . title . taLawerCase (); 
-canst title2 = 
-b . title . taLawerCase (); 
-} ) ; 
-if (titlel < title2 ) 
-return -1; 
-if (titlel > title2 ) 
-return 1 ; 
-return 0 ; 
-0 No effect 
-O Sorts titles in the drop-down list 
-in ascending (A to Z) order 
-O Sorts titles in the drop-down list 
-in descending (Z to A) order 
-3) What happens after the user clicks the 
-Delete button? 
-The selected song is deleted 
-O from the database but remains 
-in the drop-down list. 
-The selected song is removed 
-O from the drop-down list but 
-remains in the database. 
-The selected song is removed 
-0 from the drop-down list and the 
-database. 
-Exploring further: 
-• Fetch API (MDN). 
-zyBooks 
-• JavaScript Fetch API Tutorial with JS Fetch Post and Header Examples 
-8.5 Using RESTful web APls with jQuery 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-72/100 
-11/17/24, 12:11 PM zyBooks 
-Music API 
-A web application uses a web API running on the web server to manipulate data in the server's 
-database. This section uses a RESTful Music API that is developed elsewhere in this material. The 
-Music API uses a song resource with the following fields: 
-• _id - Object ID uniquely identifying each song 
-• title - Required string 
-• artist - String 
-• popularity- Number between 1 and 10 
-• releaseDate - Date 
-• genre - Array of strings 
-The Music API supports the operations in the below table. 
-Table 8.5.1: Music API operations. 
-Resource Request Description Status code verb 
-/api/songs GET Gets a list of all songs in the database 200 OK 
-/api/songs/:id GET Gets the song with the given id 200 OK 
--
-/api/songs POST 
-Adds the JSON-encoded song in the request 201 Created body to the database I 
-/api/songs PUT Updates the existing song with the JSON- 204 No 
-encodedsongintherequestbody Content 
-I -
-/api/songs/:id DELETE Removes the song with the given id from the 204 No 
-database Content I 
-◄ ► 
-I PARTICIPATION 
-ACTIVITY 8.5.1: Music APL D 
-1) A POST request to/ api/ songs 
-returns all songs in the database. 
-0 True 
-O False 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-73/100 
-11/17/24, 12:11 PM 
-2) A GET request to /api/songs/888 
-returns the song with ID 888. 
-0 True 
-O False 
-3) Only the POST and PUT requests 
-require sending JSON to the web API. 
-O True 
-0 False 
-Getting songs 
-zyBooks 
-0 
-0 
-Web applications call a web API from the browser by using the XMLHttpRequest object to make 
-Ajax requests. jQuery provides Ajax methods like $ . get () to make calling a web API easier than 
-using the XMLHttpRequest object directly. 
-The example code below uses jQuery to interact with the Music API. The Music API is housed on a 
-web server running Express, and song data is saved in a MongoDB database. 
-I PARTICIPATION 
-ACTIVITY 8.5.2: Using $.get() to request all songs from the Music API. 
-<!DOCTYPE html> 
-<html lang=11 en 11 > 
-<title>Songs</title> 
-<script 
-src=11 https://code.jquery.com/jquery-3.7.1.min.js 11 
-integrity=11 sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=11 
-crossorigin=11 anonymous 11 ></script> 
-<script> 
-$ (function () { 
-} ) ; 
-let $list = $ ( 11 ul 11 ); 
-$ . get ( 11 /api/songs 11 , function (songs) 
-songs . forEach (function (song) { 
-$list . append ( 11<li>11 + song . title + 11 - 11 + 
-song . artist + "</li>" ); 
-} ) ; 
-}) ; 
-</script> 
-<body> 
-<hl>Songs</hl> 
-<ul> 
-<li>Uptown Funk - Bruno Mars</li> 
-<li>Hello - Adele</li> 
-<li>Royals - Lorde</li> 
-</ul> 
-</body> 
-</html> 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-Web browser 
-localhost:3000/songs.html 
-Songs 
-• Uptown Funk - Bruno Mars 
-• Hello - Adele 
-• Royals - Lorde 
-GET 
-/api/songs {json} 
-Express server 
-[ MusicAPI] 
-Get all songs {json} 
-{ "_id":"56f00ba5", 
-"title":"Uptown Funk", 
-... }, 
-{ "_id":"56f00ba8", 
-"title":"Hello", 
-... }, 
-{ "_id":"56f00cb2", 
-"title":"Royals", 
-... } 
-74/100 
-11/17/24, 12:11 PM 
 Animation content: 
-The following code is displayed. 
-<!DOCTYPE html> 
-<html lang=11en"> 
-<title>Songs</title> 
-<script 
-src=11 https://code.jquery.com/jquery-3.7. 7 .min.js 11 
+A block of JavaScript is shown: 
+async function login(username, password) { 
+canst response = await fetch("/api/auth", { 
+method: "POST", 
+body: new URLSearchParams({ 
+username: username, 
+password: password}) 
+}); 
+if (response.ok) { 
+} 
+} 
+canst tokenResponse = await response.jsonO; 
+localStorage.setltem("token", 
+token Response.token); 
+async function displayStatus() { 
+canst token = localStorage.getltem("token"); 
+canst response = await fetch("/api/status", { 
+headers: { "X-Auth": token } 
+}); 
+if (response.ok) { 
+} 
+} 
+canst users = await response.json(); 
+let html = ""; 
+for (let user of users) { 
+html += "<Ii>" + user.username + " - " + 
+user.status + "</Ii>"; 
+} 
+canst status = document.querySelector("ul"); 
+status.innerHTML = html; 
 zyBooks 
-integrity=11 sha256-/ JqT3SQfawRcv /Bl H PThkBvs0OEvtFFmqPF /IYI/Cxo=11 
-crossorigin=11 anonymous 11></script> 
-<script> 
-$(function() { 
-let $list = $("ul"); 
-$.get(11 /api/songs", function(songs) { 
-songs.forEach(function(song) { 
-$list.append("<li>11 +song.title+" - "+ 
-song.artist+ "</Ii>"); 
-}); 
-}); 
-}); 
-</script> 
-<body> 
-<h1>Songs</h1> 
-<ul> 
-</ul> 
-</body> 
-</html> 
-Step 1: The browser's request to the Express web server reads " 
 MongoDB 
-localhost:3000/songs.html". The HTML is then rendered, and "Songs" is printed on the screen. 
-Step 2: The line of code reading "$.get("/api/songs", function(songs) {" is highlighted. 
-Step 3: The list of all songs in MongoDB reads 
-"[ 
-{ "_id":"56f00ba5", 
-"title":"Uptown Funk", 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 75/100 
-11/17/24, 12:11 PM 
-... }, 
-{ "_id":"56f00ba8", 
-"title":"Hello", 
-... }, 
-{ "_id":"56f00cb2", 
-"title":"Royals", 
-... } 
-] II. 
-Step 4: The lines of code reading 
-"songs. forEach(function( song) { 
-Slist.append("<li>" +song.title+" - "+ 
-song.artist+ "</Ii>");" 
-are highlighted. 
-The code is updated to read the following. 
-<!DOCTYPE html> 
-<html lang="en"> 
-<title>Songs</title> 
-<script 
-zyBooks 
-src="https://code.jquery.com/jquery-3.7.1.min.js" 
-integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/IYI/Cxo=" 
-crossorigin="anonymous"></script> 
-<script> 
-$(function() { 
-let $list = S("ul"); 
-$.get("/api/songs", function(songs) { 
-songs.forEach(function(song) { 
-Slist.append("<li>" +song.title+" - "+ 
-song.artist+ "</Ii>"); 
-}); 
-}); 
-}); 
-</script> 
-<body> 
-<h1>Songs</h1> 
-<ul> 
-<li>Uptown Funk - Bruno Mars</li> 
-<li>Hello - Adele</li> 
-<li>Royals - Lorde</li> 
-</ul> 
-</body> 
-</html> 
-The output now reads 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 76/100 
-11/17/24, 12:11 PM 
-"Songs 
-• Uptown Funk - Bruno Mars 
-• Hello - Adele 
-• Royals - Larde". 
+A web browser is shown with a username and password field. The user types in the bsmith 
+username and password. The following POST request is sent the the Express server: 
+POST /api/auth 
+username=bsmith 
+password= pass 
+The web server verifies the login information with a MongoDB database. The Express server sends a 
+JWT token back to the web browser with the following information: 
+{ "token": 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 21/37 
+11/17/24, 12:11 PM zyBooks 
+"3a.s8.2p"} 
+The web browser stores the token in local storage. To request status the web browser sends the 
+following GET request to the web server: 
+GET /api/status 
+X-Auth: 3a.s8.2p 
+The web server validates the token and retrieves the data to be displayed on the web browser, which 
+is the following information: 
+Status: 
+• bsmith - Enjoying a beautiful day! 
+• jwhite - Working hard! 
+• ablack - Doing homework 
 Animation captions: 
-zyBooks 
-1. Browser requests songs.html from the Express web server and renders the HTML. 
-2. jQuery code executes, and $.get() makes an Ajax request to /api/songs. 
-3. Web server's Music API gets a list of all songs from MongoDB and returns the songs encoded 
-in JSON. 
-4. $.get() callback function is called with the song data. The forEach() method appends <Ii> 
+1. The user enters a username and password and clicks Login button. 
+2. To authenticate the user, the browser calls login() with the username and password. The 
+fetch() method sends a POST request with username and password to /api/auth. 
+3. The server verifies bsmith/pass and returns a JWT to the web browser. 
+4. response.json() extracts the token from the JSON response. The setltem() method saves the 
+token to localStorage. 
+5. To display user statuses, displayStatus() retrieves the token from localStorage with getltem(). 
+Then fetch() sends a GET request to /a pi/status with the token in the X-Auth header. 
+6. Token is validated by the server, so server sends JSON with all user statuses to the browser. 
+7. response.json() parses the user data. The usernames and statuses display in an unordered 
+list. 
 I PARTICIPATION 
-ACTIVITY 8.5.3: Getting songs with jQuery. 
-1) What is missing to output the first 
-song's artist to the console? 
-$ . get ( "/api/songs" , 
-function (songs) { 
-console . log ( __ ); 
-} ) ; 
-Q songs.artist 
-0 songs[O] .artist 
-Q songs.artist[O] 
-2) What is missing to output the song's 
-popularity to the console? 
-$ . get ( "/api/songs/123" , 
-function (song) { 
-console . log ( __ ); 
-} ) ; 
-Q song[O] .popularity 
-0 popularity.song 
-Q song.popularity 
-3) Why would the fail () callback 
-execute? 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+ACTIVITY 9.2.8: Storing JWT in localStorage. 
+Refer to the code in the animation above. 
+1) local Storage does not store a JWT until 
+after the user authenticates. 
+O True 
+O False 
+2) The JWT is not stored in localStorage if 
+the user provides the wrong username 
+or password when authenticating. 
+O True 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
 D 
 0 
 0 
+22/37 
+11/17/24, 12:11 PM 
+3) If the user provides the wrong 
+username or password when 
+authenticating, displayStatus () 
+can still display the user statuses. 
+0 True 
+0 False 
+4) If the code below executes, 
+displayStatus () can no longer 
+obtain the user statuses. 
+localStorage . removeitem ("token" ); 
+0 True 
+O False 
+zyBooks 
+I PARTICIPATION 9.2.9: User authentication with Fetch. ACTIVITY 
+Press the Display Status button before typing a username/password to see an "X-Auth 
+header missing" error message. The Display Status button calls the JavaScript function 
+displayStatus () . If the user is not logged in, displayStatus () sends a GET request 
+to https://wp.zybooks.com/status.php?op=auth with an empty token, which returns back an 
+error message. 
+Enter the username "bsmith" and password "pass" and press the Login button. Then press 
+the Display Status button again. The status of three users will display. Only bsmith/pass is an 
+acceptable username/password. 
+If the user enters a bad username or password, the webpage does not indicate so. Add the 
+necessary code in login () to display an appropriate error message when the server 
+returns a 401 response. 
+Note that JavaScript does not use localStorage due to browser restrictions. Also, the 
+URLs in the Fetch calls differ from previous examples. 
+CSS I JavaScript I 
 0 
-77/100 
-11/17/24, 12:11 PM 
-$ . get ( "/api/songs/123" , 
-function (song) { 
-console . log (song); 
-} ) 
-. fail ( function () { 
-console . log ("Fail" ); 
-} ) ; 
-O Database has only one song 
-with ID 123 
-O Database does not have any 
-songs 
-Database has no room for more 0 songs 
-Adding new songs 
-zyBooks 
-The jQuery method $. post () makes a POST request to a web APL However, $. post () is not ideal 
-for sending JSON-encoded data. Instead, the jQuery method $. aj ax () POSTs JSON-encoded data 
-to a web API. 
-The figure below displays a form allowing the user to enter song data. Clicking the Add button results 
-in the $ . aj ax () method POSTing the JSON-encoded song data from the web form to the Music API. 
-Figure 8.5.1 : jQuery $.ajax() method POSTing a new song. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 78/100 
-11/17/24, 12:11 PM 
-<!-- add_song.html --> 
-<form> 
-<p > 
-<label for="title">Title: </label> 
-<input type="text" id="title"> 
-</p > 
-<p > 
-<label for="artist">Artist: </label> 
-<input type="text" id="artist"> 
-</p > 
-<p > 
-<label for="released">Released: </ label> 
-<input type="date" id="released"> 
-</p > 
-<p > 
-zyBooks 
-<label for="popularity" >Popularity: </label> 
-<input type="number" min="l" max="lO" 
-id="popularity"> 
-</p > 
-<p > 
-<label for="genre">Genre: </label> 
-<input type="text" id="genre" > 
-</p > 
-<input type="button" id="addBtn" value="Add" > 
-<p id="error" ></p > 
-</form> 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 79/100 
-11/17/24, 12:11 PM zyBooks 
-$ ( "#addBtn" ) . on ("click" , function () 
-} ) ; 
-let genre = []; 
-if ($ ( "#genre" ) . val ()) { 
-II Create an array from comma-separated values 
-genre = $ ("#genre" ) . val () . split ("," ); 
-II Create a song object from the form fields 
-const song = { 
-} ; 
-title : $ ("#title" ) . val (), 
-artist : $ ("#artist" ) . val (), 
-releaseDate : $ ("#released" ) . val (), 
-popularity : $ ( "#popularity" ) . val (), 
-genre : genre 
-II POST JSON-encoded song to Music API 
-$ . ajax ({ 
-type : "POST" , 
-url : "/api/songs" , 
-data : JSON .stringify (song ), 
-contentType : "application/json" 
-}) . done (function (data ) { 
-II Reset the form after adding the song 
-$ ( "form" ) . trigger ( "reset" ); 
-}) . fail (function (jqXHR) { 
-$ ("#error" ) . html ( "Song could not be added." ); 
-} ) ; 
-0 Add So g X + 
-f- ➔ C © localho s :30O0/add_song.html 
-Add Song 
-Title= 
-Artist: 
-Never Let Me Down Again 
-Depeche Mode 
-Releas,ed: 0s; 2s /1987 I 
-Popularity: 6 
-~--~ 
-Genre: synthpo,p,ebm 
-I PARTICIPATION 
-ACTIVITY 8.5.4: POST requests to the Music APL 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
 D 
-80/100 
-11/17/24, 12:11 PM 
-1) The JSON. stringify () method 
-converts a JavaScript object to a JSON 
-string. 
-0 True 
-O False 
-2) The HTTP request must have the 
-header content-Type: 
-application/j son or the web 
-server will not properly accept the 
-JSON-encoded data that is POSTed. 
-0 True 
-O False 
-3) The$. aj ax () method returns a 
-j qXHR QQuery XMLHttpRequest) 
-object. 
-0 True 
-O False 
-4) The j qXHR. done () method's callback 
-function is called before the browser 
-receives the entire Ajax response. 
-0 True 
-0 False 
-5) The j qXHR. error() method's 
-callback function is called when the 
-browser receives a 200 response from 
-the web server. 
-0 True 
-0 False 
-6) Saving a song with popularity set to 
-1000 causes the j qXHR. error () 
-method's callback function to display 
-an error message. 
-0 True 
-O False 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-zyBooks 
-0 
-0 
-0 
-0 
-0 
-0 
-81/100 
-11/17/24, 12:11 PM 
-7) The code below resets the values of all 
-elements in the form. 
-$ ( "form" ) . trigger ("reset" ); 
-0 True 
-0 False 
-Updating and deleting songs 
-zyBooks 
-The $ . aj ax () method supports GET, POST, PUT, or DELETE requests. The example below uses 
-0 
-$. get () to load a song into a web form, and then uses $ . aj ax () to send a PUT request to update 
-the song. 
-Figure 8.5.2: jQuery $.ajax() method sending PUT request to update an 
-existing song. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 82/100 
-11/17/24, 12:11 PM 
-<!-- update_song.html --> 
-<form> 
-<p > 
-<label for="songld" >ID: </label> 
-<input type="text" id="songld"> 
-</p > 
-<p > 
-<label for="title">Title: </label> 
-<input type="text" id="title"> 
-</p > 
-<p > 
-<label for="artist">Artist: </label> 
-<input type="text" id="artist"> 
-</p > 
-<p > 
-<label for="released">Released : </label> 
-<input type="date" id="released"> 
-</p > 
-<p > 
-zyBooks 
-<label for="popularity" >Popularity: </label> 
-<input type="number" min="l" max="lO" 
-id="popularity"> 
-</p > 
-<p > 
-<label for="genre">Genre: </label> 
-<input type="text" id="genre" > 
-</p > 
-<input type="button" id="updateBtn" value="Update" > 
-<p id="error" ></p > 
-</form> 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 83/100 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/chapter/9/print 23/37 
 11/17/24, 12:11 PM zyBooks 
-II Load a song into the web form 
-canst songid = "5fe1097caf3b173148985746" ; 
-$ . get ( "/api/songs/" + songid, function (song) 
-} ) ; 
-$ ( "#songid" ) . val (song . _id); 
-$ ( "#title" ) . val (song . title ); 
-$ ( "#artist" ) . val (song . artist); 
-$ ( "#released" ) . val (song . releaseDate . substring (0, 10 )); 
-$ ("#popularity" ) . val (song . popularity); 
-$ ("#genre" ) . val (song . genre ); 
-$ ("#updateBtn" ) . on ( "click" , function () { 
-let genre = []; 
-} ) ; 
-if ($ ( "#genre" ). val ()) { 
-II Create an array from the comma-separated values 
-genre = $ ("#genre" ) . val () . split ("," ); 
-II Create a song object from the form fields 
-canst song = { 
-} ; 
-id : $ ("#songid" ) . val (), 
-title : $ ("#title" ) . val (), 
-artist : $ ("#artist" ) . val () , 
-releaseDate : $ ("#released" ) . val (), 
-popularity : $ ( "#popularity" ) . val (), 
-genre : genre 
-II Send PUT request with updated song data 
-$ . aj ax ( { 
-type : "PUT" , 
-url : "/api/songs" , 
-data : JSON .stringify (song ), 
-contentType : "application/json" 
-}) . done (function (data ) { 
-II Successfully updated a song 
-$ ( "form" ) . trigger ( "reset" ); 
-}) . fail (function (jqXHR) { 
-$ ("#error" ) . htrnl ( "The song could not be updated." ); 
-} ) ; 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 84/100 
+1 id="login" autocomplete="off" > 
+2 <p> 
+3 <label for="username" >Username: </label> 
+4 <input type="text" id="username" > 
+5 </p> 
+6 <p> 
+7 <label for="password" >Password: </label> 
+8 <input type="text" id="password" > 
+9 </p> 
+10 <button id="loginBtn" type="button" >Login</ button > 
+11 < id="errorMsg" ></p> 
+12 < for > 
+13 
+14 <button id="statusBtn" >Display Status</button> 
+15 
+16 <ul> 
+17 </ul> 1 
+Render webpage 
+Your webpage 
+Usemame: 
+Password: 
+I Login I 
+I Display Status I 
+► View solution 
+Reset code 
+Third-party authentication 
+Many web applications and mobile apps allow users to login to the web/mobile app 
+using the user's account on Google, Facebook, Microsoft, etc., using an authentication 
+protocol called Open/D. Open ID allows a user to login to the application without creating 
+another username/password. The application does not have to manage the user's 
+password or provide methods for the user to reset their password. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+.... 
+24/37 
 11/17/24, 12:11 PM zyBooks 
-0 Update So g X + 
-f- C CD localhost:3000/update_song.html 
-Update• So,1ng1 
-ID: 
-Title= 
-Artist 
-I 5fe1 097caf3b1731489857 46 I 
-I Never Let Me Oown Ag1ain 
-I Depeche M,ode 
-Released: i 0 s / 24 / 1'987 I 
-Popularity: l .... 7 __ ~-1 
-Genre: I synthpop,ebrn 
-I Update I 
-The example below uses $. get () to load all song titles into a drop-down list. When the user clicks 
-Delete, $ . aj ax () sends a DELETE request to delete the selected song. 
-Figure 8.5.3: jQuery $.ajax() method sending DELETE request to remove a 
-song. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 85/100 
-11/17/24, 12:11 PM 
-<!-- delete song.html--> 
-<form> 
-<select> 
-</select> 
-<input type="button" value="Delete" 
-id="deleteBtn"> 
-<p id="error" ></p > 
-</form> 
-getAllSongs (); 
-II Load all songs into the drop-down list 
-function getAllSongs () { 
-$ . get ( "/api/songs" , function (songs) 
-let $select = $ ("select" ); 
-$select . html ("" ); 
-songs . forEach (function (song) 
-zyBooks 
-$select . append ( "<option value='" + song . id + "'>" + 
-song . title + "</option>" ) 
-} ) ; 
-} ) ; 
-$ ( "#deleteBtn" ) . on ( "click" , function () { 
-} ) ; 
-II Get the song ID of the selected song 
-const songid = $ ("select :selected" ) . val (); 
-$ . ajax ({ 
-type : "DELETE" , 
-url : "/api/songs/" + songid 
-}) . done (function (data ) 
-II Successfully deleted song 
-getAllSongs (); 
-}) . fail (function (jqXHR) { 
-$ ("#error" ) . html ( "The song could not be deleted." ); 
-} ) ; 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 86/100 
-11/17/24, 12:11 PM zyBooks 
-0 Delete Song X + 
-f- ➔ C © localhost:3000/delete_song.html 
-~U_.p_.to_,w_n_F_u_nk _____ v_ I Delete j 
-Uptown Funk 
-Hello 
-Super Freak 
-Brick Hm.1 se 
-I PARTICIPATION 8.5.5: PUT and DELETE requests to the Music API. ACTIVITY 
-1) In the examples above, what fields are 
-different in the calls to $. aj ax () 
-when creating a POST request vs. a 
-PUT request? 
-0 type 
-0 url 
-O data 
-2) In the examples above, which request 
-verb does not send data in the "data" 
-field when calling $. aj ax ()? 
-Q POST 
-Q PUT 
-Q DELETE 
-3) What effect would the code below have 
-if placed immediately before the 
-songs. forEach ( ... ) loop in the 
-figure above? 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-D 
-0 
-0 
-0 
-87/100 
-11/17/24, 12:11 PM 
-sangs .sart (functian (a , b ) { 
-canst titlel = 
-a . title . taLawerCase (); 
-canst title2 = 
-b . title . taLawerCase (); 
-} ) ; 
-if (titlel < title2 ) 
-return -1; 
-if (titlel > title2 ) 
-return 1 ; 
-return 0 ; 
-0 No effect. 
-The titles in the drop-down list 
-O would be sorted in ascending (A 
-to Z) order. 
-The titles in the drop-down list 
-0 would be sorted in descending 
-(Z to A) order. 
-4) In the figure above, why is the 
-getAllSongs () function called in the 
-done () callback function? 
-O The song is not deleted until 
-getAllSongs () is called. 
-The done () callback function 
-0 must call at least one other 
-function. 
-O To remove the deleted song 
-from the drop-down list. 
-Keeping the user interface updated 
-zyBooks 
-0 
-Suppose two users named Bob and Sue view the webpage that lists all songs. Bob deletes a song, 
-and the song is removed from Bob's drop-down list of songs. However, the deleted song remains in 
-Sue's drop-down list until Sue reloads the webpage or deletes a song and gets an updated list of 
-available songs. Keeping a website's user interface consistent or up-to-date when multiple users are 
-accessing the same data is a significant challenge for developers. Two general solutions exist: 
-1. Polling - The web browser sends periodic requests to the web server asking if the data has 
-changed. 
-2. Pushing - The web server pushes updates to all web browsers as soon as the data is changed 
-on the web server. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 88/100 
-11/17/24, 12:11 PM zyBooks 
-Polling is typically implemented with Ajax, but can be problematic: The browser can become out of 
-synch with the web server in the time between poll requests. Pushing keeps the browser and server 
-better synchronized. Pushing is implemented with WebSockets or server-sent events (SSE). 
-I PARTICIPATION 8.5.6: Keeping the UI updated. ACTIVITY D 
-1) Suppose Bob and Sue access the 
-webpage that displays the drop-down 
-list of songs. If Bob deletes a song, and 
-then Sue selects the same song to 
-delete, what will Sue see after pressing 
-Delete? 
-0 A "404 Not Found" message. 
-An error message that reads, 
-O "The song could not be deleted." 
-O No error message. 
-2) If a developer modifies the above 
-example to call getAllSongs () every 
-5 seconds to keep the list of available 
-songs current, the developer has 
-implemented a __ solution. 
-0 polling 
-O pushing 
-3) __ requires the web server to keep a 
-network connection open to every 
-browser that needs to receive a 
-message. 
-0 Polling 
-0 Pushing 
+OAuth is an authorization protocol that allows a web/mobile app to access services 
+from a service provider like Google, Facebook, Microsoft, etc., on behalf of the 
+authenticated user. Ex: Words with Friends is a popular mobile game that uses a user's 
+Facebook friends to help the user find friends to play with. 
 Exploring further: 
-• jQuery _Ajax methods 
-• WebSockets (MON). 
-• Server-sent events (MON). 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-0 
-0 
-0 
-89/100 
-11/17/24, 12:11 PM zyBooks 
-8.6 Third-party web APls (Node) 
-Introduction 
-Many organizations have created public web APls that provide access to the organization's data or the 
-user's data that is stored by the organization. Ex: The Google Maps API provides applications 
-information about geographic locations, and the lnstagram API allows applications access to photos 
-shared on lnstagram. Public APls on GitHub.com lists thousands of free, public web APls. 
-A third-party web AP/ is a public web API that is used by a web application to perform some 
-operation. ''Third-party" refers to a person or organization that is neither the web application using the 
-API nor the user using the web application, which are the "first" and "second" parties. Websites rely on 
-third-party web APls to integrate with social media, obtain maps and weather data, or access 
-collections of data. 
-To use a third-party web API, a developer usually registers with the third party to obtain an API key. 
-Third parties require an API key for several reasons: 
-• The API key identifies who or what application is using the web API. 
-• The API key helps the third party limit the number of requests made to the API in a fixed time 
-period or may be used to charge a developer a fee for additional requests. 
-• To obtain an API key, developers must agree to restrictions the third party places on data 
-obtained from the web API. 
-This material discusses third-party web APls that are RESTful. A RESTfu/ web AP/ is a web API that is 
-called with a URL that specifies API parameters and returns JSON or XML containing the API data. Ex: 
-The URL http://linkedin.com/api/article?id=123 specifies the article ID 123, so the article would be 
-returned formatted in JSON. Some APls are SOAP-based, which are generally more complex to use 
-than RESTful web APls. And some APls, like the Google Maps API, require developers to use a specific 
-JavaScript library. 
-Third-party web APls may be called from the web server or the web browser. This material shows how 
-to call web APls from an Express web server. 
-Figure 8.6.1: Calling third-party web API from the web browser or web server. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 90/100 
+• Authentication (TechTarget) 
+◄ 
+• node-jwt-simP-le 
+• 0P-enID and OAuth 
+9.3 Password hashing (Node) 
+Cryptographic hash functions 
+► 
+Websites must exercise care when storing personal information about users. Numerous high-profile 
+data breaches confirm that protecting personal data is very difficult to do. To protect users, 
+organizations should store as little sensitive information as possible. 
+Many individuals are interested in discovering the passwords used by a website's users. Therefore, 
+user passwords should never be stored as plain text in a database. Instead, developers should use a 
+cryptographic hash function to convert passwords into hashes and store only the hashes in the 
+database. A cryptographic hash function is a mathematical algorithm that converts text of any length 
+into a fixed-length sequence of characters called the hash digest or "hash". Various cryptographic 
+hash functions exist including MD5, SHA-1, bcrypt, and PBKDF2. 
+Figure 9.3.1: Hashing various passwords using the MD5 cryptographic hash 
+function. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 25/37 
 11/17/24, 12:11 PM 
-request 
-response 
-Web browser 
-Node.js. 
-Python, 
-elC. 
-Web server 
-API 
-request 
+◄ 
+Input 
+Hash 
+Function 
 zyBooks 
-API 
-request 
-____ ,G 
-API 
-response 
-Third party 
-1-------18 
-Web browser 
+Hash Digest 
+password ~ 5f 4d·cc3b5a,a765d61d8327deb882cf99 
+pas:.123 ~ 32250170a0dca92d53@c9624f336ca24 
+pass123 ! ~ c9d9b8cab32214716ee1b44b3aae2502 
+Pa ss123 ! ~ 10487c8581423e8b2fbeed2b21c2c c53 
+Try 9.3.1: Try generating your own MD5 hashes. 
+1. Go to an online MD5 Hash Generator. 
+► 
+2. Type "password" into the text box and verify the MD5 hash is the same as the 
+"password" hash digest in the figure above. 
+◄ 
+3. Try changing the password by a single character, and notice that the hash completely 
+changes. 
+I PARTICIPATION 
+ACTIVITY 9.3.1: Cryptographic hash functions. 
+1) The length of the hash digest is the 
+same regardless of how many 
+characters are in the password. 
+0 True 
+0 False 
+2) All cryptographic hash functions 
+produce the same size hash digest. 
+Q True 
+O False 
+3) Given a hash digest, a clever hacker 
+might be able to determine the original 
+input that created the hash digest. 
+Q True 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+► 
+D 
+0 
+0 
+0 
+26/37 
+11/17/24, 12:11 PM 
+4) Two different inputs may exist that will 
+convert into the same hash digest. 
+0 True 
+O False 
+Hashed passwords and password cracking 
+zyBooks 
+0 
+An authentication system should only store password hashes, not plain text passwords. To 
+authenticate a user, the authentication system hashes the password submitted by the user and 
+compares the hash with the hash stored in the database. If the two hashes are identical, then the user 
+provided the correct password. 
+I PARTICIPATION 
+ACTIVITY 9.3.2: Verifying passwords by comparing password hashes. 
+New user: pgreen 
+opensesame 
+Login attempt: 
+Login attempt: 
+Animation content: 
+cryptographic 
+hash function 
+pgreen 
+Open Sesame @ 
+pgreen 
+opensesame © 
+Database 
+username 
+bsmith 
+jwhite 
+ablack 
+pgreen 
+passhash 
+F993GH93F1 
+83B8F2EE48 
+49A8EF48D3 
+BC029G8A38 
+75EE39FA90 != BC029G8A38 
+BC029G8A38 = BC029G8A38 
+A database is shown with column names username and passhash. The following data is in the 
+format username, passhash: 
+bsmith, F993GH93F1 
+jwhite, 83B8F2EE48 
+ablack, 49A8EF48D3 
+D 
+A new user is added with the username pgreen and password opensesame. The password is sent 
+through a cryptic hash function and is stored in the table as the following: 
+pgreen, BC029G8A38 
+When the user tries to login the tried password is sent through the cryptic hash function and 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 27/37 
+11/17/24, 12:11 PM zyBooks 
+checked against the passhash stored in the table. If pgreen types in OpenSesame, the hash value is 
+75EE39FA90 which does not equal BC029G8A38, the passhash that is stored in the table, so pgreen 
+is denied access. 
+Animation captions: 
+1. New user's username and password hash is added to the database. 
+2. User pgreen attempts to login with the wrong password. Hash of "OpenSesame" does not 
+match hash of "opensesame". 
+3. User pgreen attempts to login with the correct password. Hash of "opensesame" matches 
+hash of "opensesame". 
+If a data breach occurs and an attacker obtains an organization's database of password hashes, the 
+attacker would be unable to directly convert the hashes back into the users' original passwords. 
+However, a determined attacker may use a variety of methods to crack the password hashes. 
+Password cracking is the process of recovering passwords from data, like the database of a 
+compromised website. 
+A dictionary attack is a popular password-cracking strategy where the attacker feeds a number of 
+possible passwords, such as words from a dictionary, into a hash function and compares the stolen 
+hashes to the generated hashes. Passwords are revealed for any matching hashes. Dictionary attacks 
+are computationally expensive, so attackers often create precomputed dictionary tables in advance. 
+Developers use salt to circumvent attacks with precomputed tables. A salt is a random string that is 
+combined with a password so two identical passwords produce different hashes. Cracking salted 
+passwords is significantly more challenging because an attacker has to create a table for each salt 
+value, which is computationally expensive. 
+Figure 9.3.2: Using salt to protect against precomputed table attacks. 
+◄ 
+Salt + Password 
+Hash 
+Function Hash Digest 
+p4@9s + pass113 - ~ d3ebe55d16b484e616e2c3787aed5c5a 
+90sk# + pass123 - ~ c77390d36b93bf0a52a650576680c61f 
+*s41<2p + pa ss 123 - ~ 9458c6e01f03645daef18cla01dec2fb 
+► 
+Salt does not necessarily keep attackers from cracking passwords, but strong passwords are less 
+susceptible to dictionary attacks. A strong password is a password that is difficult to guess. A strong 
+password has the following characteristics: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 28/37 
+11/17/24, 12:11 PM zyBooks 
+• Does not contain words found in a dictionary or on the web 
+• Composed of uppercase and lowercase letters, digits, and perhaps punctuation 
+• At least 10 characters in length 
+• Has not been used as a password before on the same website or on any other website 
+• Does not conform to popular password patterns like an initial capital letter, 2-4 digits at the end, 
+or adding ! at the end 
+Figure 9.3.3: Secure password check indicates 'qwerty123!' is a poor 
+password. 
+How secure is your password? 
+Tip: Try to make your passwords at least 15 characters long Show password: LI 
+qwerty123! 
+10 characters containing: ✓ Lowercase Upper case ✓ Numbers ✓ Symbols 
+Time to crack your password: 
+0.01 seconds 
+Review: Oh dear, using that password is like leaving your front 
+door wide open. Your password is very weak because it contains 
+a common password, a sequence of characters and a dictionary 
+word. 
+Your passwords are never stored. Even if they were, we have no idea who you are! 
+Source: !!lY.1 login.com 
 ◄ 
 I PARTICIPATION 
-ACTIVITY 8.6.1: Third-party web APls. 
-1) Information from a third-party web API 
-will reach the browser faster if the 
-browser calls the web API directly 
-instead of the web server calling the 
-web API. 
-O True 
-0 False 
-2) For a third-party web API requiring an 
-API key, the API key must be 
-transmitted for every API request. 
-0 True 
-O False 
-3) When the browser makes an API 
-request to a third-party web API, the 
-web API key can be kept secret from 
-prying eyes. 
-0 True 
-O False 
-API 
-response 
-https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/chapter/8/print 
-Third party 
+ACTIVITY 9.3.3: Password hashes. 
+1) If an authentication system hashes a 
+user's submitted password and finds 
+the hash is the same as the user's 
+password hash in the database, then 
+the user supplied the __ password. 
+O correct 
+0 wrong 
+O hashed 
+2) Someone who steals a database of 
+password hashes may attempt a __ 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/chapter/9/print 
 ► 
 D 
 0 
 0 
-0 
-91/100 
+29/37 
 11/17/24, 12:11 PM 
-4) Many web APls charge a fee to the 
-developer after a limited number of 
-requests have been made in a 24-hour 
-period. 
-0 True 
-0 False 
-5) Developers always use jQuery to call 
-third-party web APls from the web 
-server. 
-0 True 
-O False 
-Weather API 
+attack to discover some of the 
+passwords. 
+0 hash 
+0 dictionary 
+0 salt 
+3) Is the salt stored with the passwords in 
+the database? 
+0 Yes 
+Q No 
+4) Which password is a strong password? 
+0 PurpleRain 
+0 qwertyuiop 
+0 flBPs03!5a 
+5) Can a website that stores password 
+hashes in their database recover lost 
+passwords for their users? 
+0 Yes 
+Q No 
+2012 Linkedln data breach 
 zyBooks 
-OpenWeatherMap provides a free Weather API providing current weather data, forecasts, and 
-historical data. Developers must register at Qpenweathermap.org for an API key that must be 
-transmitted in all API requests. 
+Russian cybercriminals stole 6.5 million password hashes from Linkedln on June 5, 
+2012. The criminals cracked more than 60% of the unique passwords from the hashes 
+and published the passwords in plain text on the web. Linkedln had used the SHA 1 hash 
+function to generate the hashes but did not use salt. The data breach highlights the risk 
+to users who do not use strong passwords. 
+Source: 2012 Linkedln hack (.Wikig_edia). 
+◄ 
+bcryptjs 
 0 
 0 
-The OpenWeatherMap website provides documentation explaining how to use the Weather API using 
-GET requests with various query string parameters. The API endpoint 
-http:// api. openweathermap. org/data/2. 5/weather returns the current weather based on 
-the following query string parameters: 
-• zip - Five digit US ZIP code 
-• units - Standard, metric, or imperial units to use for measurements like temperature and wind 
-speed 
-• appid - Developer's API key 
-Other parameters are documented in the OpenWeatherMap website. The Weather API returns weather 
-data in JSON format by default. 
-Figure 8.6.2: GET request to obtain the current weather for ZIP 90210. 
-http:// api .openweathermap. org/ data/2. 5/weather? 
-zip=9021 O&units=imperial&appid=APIKEY 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 92/100 
-11/17/24, 12:11 PM 
-{ 
-} 
-zyBooks 
-"coord " : { 
-"lon " :- 118.4, -- City's geo location "lat " :34.07 ----
-}, 
-"weather " : [ 
-{ 
-"id " :800, 
-"main " : "Clear ", / Overall description 
-"description" : "clear sky", 
-"icon " : "01d " 
-} 
-], 
-"base " : "cmc stations ", 
-"main " : { / Degrees Fahrenheit 
-"temp " : 75. 61 , N' 
-"pressure " : 1017 ' Percent humidity 
-"humidity " :14, .....,,.,--
-"temp min " : 60. 8, ~ Minimum and maximum 
-"temp_max " : 82 .4 temps at the moment 
-}, 
-"wind " : { .,,,,-- Miles per hour 
-"speed " : 3.36 
-}, 
-"clouds " :{ _.- Percent cloudy 
-"all " :1 ~ 
-}, 
-"id " : 5328041 , .,,,,-- City 
-"name " : "Beverly Hills", 
-"cod " :200 
-Try 8.6.1: Try OpenWeatherMap's API in your web browser. 
-1. Go to QQenweathermaQ.org0 
-2. Sign up for an account. 
-f · Try the link: http:/laQi.OQenweathermaQ.org/data/2.5/weather? 
-ziQ=9021 0&units=imQerial&aQQid=APIKEY to make an API request for the weather with 
-ZIP 90210. An error message indicating an invalid API key was used should be 
-returned. 
-4. Replace APIKEY in the URL'.s query string with your API key, and reload the webpage. 
-The JSON-encoded weather information for 90210 should be displayed. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
 ► 
-93/100 
+Cryptography researchers have found weaknesses in older hash functions like MD5 and SHA-7 that 
+make those hash functions vulnerable to attacks. Good practice is to use a strong hash function like 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 30/37 
 11/17/24, 12:11 PM zyBooks 
-5. Change the ZIP code in the URL'.s query string to your ZIP code, and reload the URL. 
-I PARTICIPATION 8.6.2: The Weather APL ACTIVITY D 
-1) What request method does the 
-Weather API expect in an API request 
-for the current weather data? 
-0 POST 
-◄ Q PUT 
-Q GET 
-2) What "units" parameter value would 
-make the Weather API return the 
-temperature in Celsius? 
-0 imperial 
-O metric 
-0 standard 
-3) Does the Weather API support finding 
-the current weather by city name? 
+bcrypt, scrypt, or PBKDF2, which purposely execute slowly and make password cracking significantly 
+more difficult. 
+The bcryptjs module is a popular module for implementing authentication in Node.js applications. 
+bcryptjs is installed using: npm install bcryptj s . The module has two commonly used methods: 
+1. The bcrypt.hashSync() method returns a hash value that is 60 characters long for a given 
+password and "cost factor". The hash value is created by prepending a random salt to the hash 
+digest. 
+2. The bcrypt.compareSync() method takes a password and bcrypt hash value as arguments and 
+returns true if the password is identical to the password used to create the hash value, false 
+otherwise. 
+An example bcrypt hash of $2a$10$33M.4Zn7R7k3jHOISHxCe.yUql4vl9mv4/oeiluhHDQZcfySVg6wC 
+is composed of four parts: 
+1. "2a" indicates the bcrypt algorithm created the hash. 
+2. "1 O" indicates the cost factor is 10. 
+3. "33M.4Zn7R7k3jHOISHxCe." is the 16-byte salt value encoded to 22 characters. 
+4. "yUql4vl9mv4/oeiluhHDQZcfySVg6wC" is the 24-byte hash digest encoded to 31 characters. 
+Figure 9.3.4: Generating a hash and comparing hashes with the bcryptjs 
+module. 
+const bcrypt = require ( "bcryptjs" ); 
+II Generate 3 hashes for the same password 
+for (let c = 0 ; c < 3 ; c ++) { 
+let hash = bcrypt . hashSync ("opensesame" , 10 ); 
+console . log ("Hash: " + hash ); 
+II Compare hash produced by identical passwords 
+const passwordHash = bcrypt . hashSync ( "opensesame" , 
+10 ); 
+if (bcrypt . compareSync ( "opensesame" , passwordHash )) 
+console . log ("Same!" ); 
+else { 
+console . log ("Not the same" ); 
+Hash: 
+$2a$10$33M.4Zn7R7k3jHOISHxCe.yUqI4vl9mv4 / oeiLuhHDQZcfySVg6wC 
+Hash: 
+$2a$10$ByrTcHizkol25klWOnlV2egFI3DdRzo9 . xrjal/ IyiaKd8X5diFpi 
+Hash: 
+$2a$10$cd . MX 7Ubbm3n9Lfc8ilrgeYw3MRpJ512fUtPq4kHEQyhI8wpJ8LPq 
+Same! 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 31/37 
+11/17/24, 12:11 PM 
+I PARTICIPATION 
+ACTIVITY 9.3.4: Password hashing with bcryptjs. 
+1) 
+2) 
+3) 
+Does bcrypt. hashSync () always 
+generate a unique hash for the same 
+password and cost factor? 
 0 Yes 
 0 No 
-Calling the Weather API from the web server 
-0 
-► 
-0 
-0 
-The Weather API may be called from an Express web server using the node-fetch module. The nodefetch module imitates window. fetch, which implements the Fetch API to make HTTP requests. The 
-node-fetch module is installed using: npm install node-fetch. 
-The animation below uses the node-fetch module to request the weather for ZIP 90210. The 
-URLSearchParams class is used to create query string parameters for the web APl's URL. The fetch() 
-method sends an HTTP request to the specified URL and returns a Promise object. The Promise 
-object's then () method is passed arrow functions that convert the JSON response into JavaScript 
-objects and then pass the JavaScript objects to Pug for rendering a webpage. 
-For the animation code to work properly in an Express server, the "APIKEY" string must be replaced 
-with an actual API key. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 94/100 
-11/17/24, 12:11 PM zyBooks 
-I PARTICIPATION 
-ACTIVITY 
-8.6.3: Calling the Weather API from an Express server with the nodefetch module. D 
-canst fetch = require ("node-fetch" ); 
-app . get ( "/weather" , function (req, res) 
-canst zip = 90210 ; 
-canst params = new URLSearchParams ({ 
-zip : zip, 
-units : "imperial" , 
-appid : "APIKEY" }); 
-fetch ("http://api.openweathermap.org/data/2.5/weather?" + params ) 
-. then (response => response . json ()) 
-} ) ; 
-. then (data => { 
-canst locals = 
-data : data , 
-zip : zip 
-} ; 
-res . render ("weather" , locals); 
-} ) 
-. catch (error => console . log (error)) 
-title Weather 
-body 
-h2 Weather for #{zip} 
-p Current temp : 
-I #{data.main.temp} °F 
-p Description: 
-I #{data.weather[0) .description} 
-p Humidity: 
-I #{data.main.humidity} % 
-Animation content: 
-A JavaScript block is shown: 
-const fetch = require("node-fetch"); 
-app.get("/weather", function(req, res) { 
-const zip= 9021 O; 
-const params = new URLSearchParams({ 
-zip: zip, 
-units: "imperial", 
-appid: "APIKEY"}); 
-weather.pug 
-fetch("http:// api .openweatherma p.org/ data/2. 5/weather?" + para ms) 
-.then(response => response.json()) 
-.then(data => { 
-const locals = { 
-data: data, 
-zip: zip 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
-Web browser 
-http://localhost:3000/weathe1 
-Weather for 90210 
-Current temp: 53.2 °F 
-Description: clear sky 
-Humidity: 71% 
-GET 
-/weather <html 
-Web server 
-zip=90210 
-units=imperial 
-appid=APIKEY 
-{jsor 
-OpenWeatherMap 
-95/100 
-11/17/24, 12:11 PM 
-}; 
-res.render("weather", locals); 
-}) 
-.catch(error => console.log(error)) 
-}); 
-A block of Pug called weather.pug is also shown: 
-title Weather 
-body 
-h2 Weather for #{zip} 
-p Current temp: 
-I #{data.main.temp} °F 
-p Description: 
-I #{data.weather[0].description} 
-p Humidity: 
-I #{data.main.humidity}% 
+The larger the cost factor passed to 
+bcrypt. hashSync (),the __ time 
+bcrypt.hashSync() takesto 
+produce a hash value. 
+0 less 
+0 more 
+What does the code below output to 
+the consolel 
+canst hash 
+bcrypt . hashSync ( "qwerty" , 10 ); 
+if 
+(bcrypt . compareSync ( "Qwerty" , 
+hash )) { 
+console . log ( "Same!" ); 
+else { 
+console . log ("Not the same" ); 
+0 Same! 
+0 Not the same 
+Using a database 
 zyBooks 
-A web browser with the URL http://localhost:3000/weather sends a GET request to the web server 
-for /weather. The web server sends a request to the OpenWeatherMap API with the following 
-parameters: 
-zip=90210 
-units=imperial 
-appid=APIKEY 
-The API sends back a JSON encoded file with the weather for the zip 90210 to the web server. The 
-web server sends the web browser an html file that displays the following on the screen: 
-Weather for 9021 0 
-Current temp: 53.2 °F 
-Description: clear sky 
-Humidity: 71 % 
-Animation captions: 
-1. Web browser requests "/weather" from Express web server, which triggers the server's GET 
-route. 
-2. The URLSearchParams object creates a query string with the given parameters and values. 
-3. Web server uses the node-fetch module to generate a GET request for the current weather: 
-http://api.openweathermap.org/data/2.5/weather?zip=9021 0&units=imperial&appid=APIKEY 
-4. OpenWeatherMap responds with JSON containing current weather for ZIP code 90210. 
-5. The response.json() method converts the JSON response into JavaScript objects. 
-6. Pug renders the webpage with weather data, and the page is sent to the web browser. 
-I PARTICIPATION 
-ACTIVITY 8.6.4: Calling the Weather API from the web server. D 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 96/100 
-11/17/24, 12:11 PM 
-Refer to the animation above. 
-1) When is the first then ( ) arrow 
-function executed? 
-0 Before the API request is sent. 
-O Immediately after the API 
-request is sent. 
-O After the API response is 
-received. 
-2) When is the second then ( ) arrow 
-function executed? 
-O Before the API request is sent. 
-O While the first then () arrow 
-function executes. 
-Immediately after the first 
-O then ( ) arrow function 
-completes. 
-3) What variable would the Pug code 
-above display in order to show the 
-current wind speed? 
-0 data.main.temp 
-0 data.wind.speed 
-0 data.main .speed 
-Exploring further: 
-• Public APls on GitHub.com 
-zyBooks 
-8.7 MongoDB Lab 
-0 
-0 
-0 
-In this lab, you will complete the implementation of a server capable of receiving information, utilizing 
-a database to store said information, process it, and send it back in JSON format when requested. The 
-task consists on implementing a server that stores the air quality of different zip codes, and returns 
-the average air quality for a specific zip code utilizing POST and GET requests respectively. 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 97/100 
+D 
+D 
+D 
+D ► 
+The Node.js project in the figure below creates a web API that stores usernames, password hashes, 
+and statuses in a MongoDB database. 
+• The/ api/user route accepts a username, password, and status in a POST request. The 
+bcrypt. hashSync () method generates a password hash, which is saved with the username 
+and status to the database. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 32/37 
 11/17/24, 12:11 PM zyBooks 
-Installation links: 
-Official MongoDB Installation guide: https://www.mongodb.com/docs/manual/tutorial/installmongodb-on-amazon/ To install mongoose, you can use npm install mongoose 
-1. app.js file 
-Add the following code to your app.js to enable cross-origin access. Add this right after your app.set 
-commands.: 
-II This is to enable cross-origin access 
-app.use(function (req, res, next) 
-II Website you wish to allow to connect 
-res.setHeader('Access-Control-Allow-Origin', '*'); 
-II Request methods you wish to allow 
-res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, 
-PUT, PATCH, DELETE'); 
-II Request headers you wish to allow 
-res.setHeader('Access-Control-Allow-Headers', 'X-RequestedWith,content-type'); 
-II Set to true if you need the website to include cookies in the 
-requests sent 
-} ) ; 
-II to the API (e.g. in case you use sessions) 
-res.setHeader('Access-Control-Allow-Credentials', true); 
-II Pass to next layer of middleware 
-next(); 
-2. Server Endpoints 
-Add the following two endpoints to your server. 
-/lab/status 
-• This GET endpoint takes in one query parameter called zip, and return the average airQuality 
-found across all entrees in the database for that specific zip code, along with a 200 status code. 
-The average must be truncated to use two decimals, using the .toFixed() method. The average 
-should be sent without any additional information e.g. 
-res.status(200) .json(average); 
-o Ex:myserver:3000llablstatus?zip=85705 would return the average 
-airQuality in zip code 85705 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 98/100 
-11/17/24, 12:11 PM zyBooks 
-• If the zip is not specified or is invalid, the following error message must be returned along with 
-a 400 code. 
-0 var errormsg = {"error" : "a zip code is required."} 
-• If the zip is valid, but no data exist for it inside the database, the following error message must 
-be returned along with a 400 code. 
-o var errormsg = {"error" "Zip does not exist in the database."} 
-/lab/register 
-• This POST endpoint will take in two values passed in the body, namely zip and airQuali ty. If 
-any of the parameters is missing, the following error message must be returned along with a 
-400 code. 
-o var errormsg = {"error" : "zip and airQuality are required."} 
-• If both parameters are present, a new entry must be created in the database with the 
-information received, and the following message must be returned along with a 201 code. 
-o var msg = {"response" : "Data recorded."} 
-3. Schema 
-The database should use the following schema: 
-var Recording= db.model("Recording", { 
-zip: {type: Number}, 
-airQuality: {type: Number} 
-} ) ; 
-4. Lab Submission 
-The zylab submission will consists only of submitting a file named index.html, which has a complete 
-link to your server, with the port included. 
-• Ex:http://myserver:3000/ 
-NOTE: Make sure to clear the database before submitting, if the database has something in the zip 
-codes we are using to test your server, your values won't match the expected averages. To drop the 
-database, use the following commands: 
-$ mongosh 
-$ show dbs -> use this command to see all the databases that 
-currently exist, and look for the name of yours. 
-$ use mydatabase -> replace "mydatabase" with the name of your 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 99/100 
-11/17/24, 12:11 PM 
+• The/ api/ auth route accepts a username and password in a POST request. The 
+bcrypt. compare Sync () method compares the password hash from the provided password 
+with the password hash in the database. If the password is correct, the route returns a JWT. 
+• The/ api/ status route accepts a GET request and expects the X-Auth header to contain a 
+valid JWT. The route returns a JSON-encoded list of usernames and statuses for all users in the 
 database. 
-$ db.dropDatabase() 
+Figure 9.3.5: Node.js project uses token-based authentication and password 
+hashing with bcryptjs. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 33/37 
+11/17/24, 12:11 PM 
+myproject 
+api 
+L_ users. j s 
+models 
+L_ user.js 
+node modules 
+~ bcryptjs 
+~ express 
+~ mongoose L jwt-simple 
+etc . .. 
+db.js 
+~ package . json 
+L_ server. j s 
+II modelsluser.js 
+const db = require ( " .. /db" ); 
+II Create a model from the schema 
+const User = db . model ( "User" , { 
+username : type : String, required : 
+true }, 
+passwordHash : 
+true }, 
+status : 
+} ) ; 
+module . exports 
+II db.js 
+type : String, required : 
+String 
+User; 
 zyBooks 
-You should see a message saying "{ "dropped" 
-"narneofyourdatabase", "ok" : 1 } 
-$ exit 
-5. Test Cases 
-The following are the Ajax calls used to test your server endpoints. 
-1. Check for data 
-var zips= [85700, 85701, 85702]; 
-var serverLink = docurnent.getElernentByid("serverLink") .href; 
-for (var zip= 0; zip< zips.length; zip++) { 
-var xhr = new XMLHttpRequest(); 
-xhr.addEventListener("load", rnyHandler); 
-xhr.responseType = "json" 
-xhr.open("GET", serverLink + "lab/ status?zip=" + zips[zip]); 
-xhr. send() ; 
-2. POST with incorrect data format 
-var zip= "not a zip"; 
-var serverLink docurnent.getElernentByid("serverLink") .href; 
-var xhr = new XMLHttpRequest(); 
-xhr.addEventListener("load", rnyHandler); 
-xhr.responseType = "json" 
-data= 
-{ "zip" : zip, 
-"airQuality" 15 
-} ; 
-xhr.open("POST", serverLink + "lab/register"); 
-xhr.setRequestHeader("Content-type", "application/json"); 
-xhr.send(JSON.stringify(data)); 
-3. POST with correct data format 
-var zip= "85700"; 
-var serverLink = docurnent.getElernentByid("serverLink") .href; 
-https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 100/100 
+const mongoose = require ("mongoose" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+module . exports = mongoose ; 
+II server.js 
+const express = require ("express" ); 
+const bodyParser = require ("body-parser" ); 
+const User = require ("./models/user" ); 
+const app = express (); 
+const router = express .Router (); 
+router . use (bodyParser . urlencoded ( 
+{ extended : false })); 
+router . use ("/api" , require ("./api/users" )); 
+app . use (router); 
+app . listen (3000); 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 34/37 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+II api/users.js 
+canst jwt = require ("jwt-simple 
+canst User = 
+require ( " .. /models/user" ); 
+canst router = 
+require ("express" ) . Router (); 
+canst bcrypt = require ("bcryptj: 
+II For encoding/decoding JWT 
+canst secret = "supersecret" ; 
+II Add a new user to the databa . 
+router . post ("/user" , function (ri 
+res) 
+if (! req . body . username I I 
+! req . body . password) { 
+res . status (400) . json ({ er: 
+"Missing username and/1 
+password" }); 
+return ; 
+// Create a hash for the sub1 
+password 
+canst hash = 
+bcrypt . hashSync (req . body . passwo: 
+10 ); 
+canst newUser = new User ({ 
+username : req . body . usi 
+passwordHash : hash, 
+status: req . body . st, 
+} ) ; 
+newUser . save (function (err) 
+if (err) { 
+res . status (400) . send (e: 
+else { 
+res . sendStatus (201); 
+Created 
+} 
+} ) ; 
+} ) ; 
+I I Sends a token when given val. 
+username/password 
+router . post ("/auth" , function (ri 
+res) { 
+if (! req . body . username I I 
+! req . body . password) { 
+res . status (401) . json ({ er: 
+"Missing username and/1 
+password" }); 
+return ; 
+35/37 
+11/17/24, 12:11 PM 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+zyBooks 
+II Get user from the databas, 
+User . findOne ({ usernarne : 
+req . body . usernarne }, function (e: 
+user) { 
+if (err) 
+res . status (400) . send (e: 
+else if (! user) 
+II Username not in the 
+database 
+r es . status (4 01 ) . json ({ 
+error : "Bad usernarne " }); 
+else { 
+II Does given password 
+match the database password has 
+if 
+(bcrypt . cornpareSync (req . body . pa: 
+user . passwordHash )) { 
+II Send back a toke 
+contains the user's username 
+const token = jwt . e1 
+usernarne : user . usernarne }, secri 
+res . j son ( { token : t< 
+} ) ; 
+else 
+res . status (401) . jso1 
+error : "Bad password" }); 
+} ) ; 
+} 
+} ) ; 
+II Gets the status of all users 
+given a valid token 
+router . get ("/status" , function (: 
+res) { 
+I I Check if the X-Auth heade. 
+set 
+if (! req . headers [ "x-auth" ]) 
+return 
+res . status (401) . json ({ error : "M· 
+X-Auth header" }); 
+} 
+II X-Auth should contain the 
+const token = req . headers [ "x· 
+auth" ]; 
+try { 
+const decoded = 
+jwt . decode (token , secret); 
+II Send back all username 
+status fields 
+User . find ({}, " usernarne s 
+function (err, users) { 
+res . json (users); 
+~---''· 
+36/37 
+11/17/24, 12:11 PM 
+I 
+zyBooks 
+I 
+I 
+J , 
+catch (ex ) 
+res .status (401) . json ({ er: 
+"Invalid JWT" } ) ; I PARTICIPATION 9.3.5: Securing users' passwords. ACTIVITY 
+I module . exports = router; 
+Which of these techni ues should develo ers use to im rove securit of an authentication 
+system? 
+7) Use HTTPS for login webpages. 
+0 Use 
+0 Don't use 
+2) Display an "account not found" 
+message when a user attempts to 
+authenticate with an email address 
+that is not in the database. 
+0 Use 
+0 Don't use 
+3) Provide a password recovery 
+mechanism. 
+0 Use 
+0 Don't use 
+4) Force users to answer security 
+questions when creating an account 
+that can be asked when the user wants 
+to reset a password. 
+0 Use 
+0 Don't use 
+5) Financial websites should only log 
+users out when they click the Logout 
+link. 
+0 Use 
+0 Don't use 
+6) Temporarily disable an account after a 
+preset number of unsuccessful login 
+attempts. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/9/print 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+37/37 

@@ -1,0 +1,1033 @@
+JavaScript libraries 
+JavaScript libraries 
+Developers use JavaScript libraries to simplify coding tasks. A library is a collection of functions 
+Developers use JavaScript libraries to simplify coding tasks. A library is a collection of functions 
+that focus on a related set of tasks.jQuery is a popular JavaScript library that focuses on a broad 
+that focus on a related set of tasks.jQuery is a popular JavaScript library that focuses on a broad 
+range of tasks, many of them associated with the visual elements of a webpage. 
+range of tasks, many of them associated with the visual elements of a webpage. 
+Library vs. framework 
+Library vs. framework 
+What is the difference between a "library" and a "framework"? A framework is a suite 
+What is the difference between a "library" and a "framework"? A framework is a suite 
+of libraries designed to offer a more comprehensive platform in which to program. 
+of libraries designed to offer a more comprehensive platform in which to program. 
+When using a framework, the program's flow is dictated by the framework, not the 
+When using a framework, the program's flow is dictated by the framework, not the 
+programmer Examples of popular JavaScript frameworks include Angular JS, Ember, 
+programmer Examples of popular JavaScript frameworks include Angular JS, Ember, 
+and Backbone.)~. 
+and Backbone.)~. 
+Table 7.1.1: Common tasks performed by jQuery. 
+Table 7.1.1: Common tasks performed by jQuery. 
+Task Description 
+Task Description 
+DOM 
+DOM 
+Find, alter, add, or remove DOM elements 
+Find, alter, add, or remove DOM elements 
+manipulation 
+manipulation 
+User interaction Respond to mouse clicks, mouse movement, or typing 
+User interaction Respond to mouse clicks, mouse movement, or typing 
+Animation Smoothly show, hide, or move webpage elements 
+Animation Smoothly show, hide, or move webpage elements 
+Widgets Display and manage the interaction of complex UI 
+Widgets Display and manage the interaction of complex UI 
+elements 
+elements 
+-
+-
+Ajax 
+Ajax 
+Issue asynchronous HTTP requests and handle 
+Issue asynchronous HTTP requests and handle 
+responses 
+responses 
+Browser quirks Handle inconsistencies across different browsers 
+Browser quirks Handle inconsistencies across different browsers 
+<script src="jquery-3.7.1.min.js"></
+<script src="jquery-3.7.1.min.js"></
+script>
+script>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+2 of 66 2024-11-17, 12:17 p.m.
+2 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I . ACTIVITY 7.1.1: JOuery tasks. 
+I PARTICIPATION I . ACTIVITY 7.1.1: JOuery tasks. 
+Match the tasks performed by jQuery to the corresponding example. 
+Match the tasks performed by jQuery to the corresponding example. 
+If unable to drag and drop, refresh the page. 
+If unable to drag and drop, refresh the page. 
+DOM manipulation User interaction Ajax Widgets Browser quirks 
+DOM manipulation User interaction Ajax Widgets Browser quirks 
+Animation 
+Animation 
+Accessing the jQuery library 
+Accessing the jQuery library 
+Respond to the user clicking a 
+Respond to the user clicking a 
+button. 
+button. 
+Write code that works in older 
+Write code that works in older 
+versions of Internet Explorer. 
+versions of Internet Explorer. 
+Display a date picker. 
+Display a date picker. 
+Fade an image into view. 
+Fade an image into view. 
+Interact with a web API. 
+Interact with a web API. 
+Add a new item to a list. 
+Add a new item to a list. 
+Reset 
+Reset 
+□ 
+□ 
+The jQuery library can be obtained from ji'juery.com. Version 3 is the latest version. After 
+The jQuery library can be obtained from ji'juery.com. Version 3 is the latest version. After 
+downloading the library, a developer can place the library in a standard location on their web server. 
+downloading the library, a developer can place the library in a standard location on their web server. 
+Webpages that use jQuery import the library as shown in the figure below. The filename contains a 
+Webpages that use jQuery import the library as shown in the figure below. The filename contains a 
+version number (3.7.1), and the ".min" means the code has been minified to download quicker. 
+version number (3.7.1), and the ".min" means the code has been minified to download quicker. 
+Figure 7.1.1: Downloading jQuery library from the local web server. 
+Figure 7.1.1: Downloading jQuery library from the local web server. 
+"https://code.jquery.com/jquery-3.7.1.min.js"
+"https://code.jquery.com/jquery-3.7.1.min.js"
+"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/
+"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/
+script>
+script>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+3 of 66 2024-11-17, 12:17 p.m.
+3 of 66 2024-11-17, 12:17 p.m.
+Another option is for a webpage to download the jQuery library from a CON. A Content Delivery 
+Another option is for a webpage to download the jQuery library from a CON. A Content Delivery 
+Network (CDN) hosts popular web files around the globe and automatically routes requests to the 
+Network (CDN) hosts popular web files around the globe and automatically routes requests to the 
+closest server, thus speeding up the delivery of the files. The figure below shows how to import the 
+closest server, thus speeding up the delivery of the files. The figure below shows how to import the 
+jQuery library from a CON. The <script> element's integrity and crossorigin attributes are optional 
+jQuery library from a CON. The <script> element's integrity and crossorigin attributes are optional 
+and are used for Subresource Integrity (SRI) checking, which allows web browsers to verify 
+and are used for Subresource Integrity (SRI) checking, which allows web browsers to verify 
+resources hosted on third-party servers have not been altered. 
+resources hosted on third-party servers have not been altered. 
+Figure 7.1.2: Downloading jQuery library from the code.jquery.com CDN. 
+Figure 7.1.2: Downloading jQuery library from the code.jquery.com CDN. 
+<script 
+<script 
+src= "https://code.jquery.com/jc 
+src= "https://code.jquery.com/jc 
+integrity= " sha25 6-/ JqT3SQfawRc-\ 
+integrity= " sha25 6-/ JqT3SQfawRc-\ 
+Cxo=" 
+Cxo=" 
+crossorigin= " anonymous" ></ scri1 
+crossorigin= " anonymous" ></ scri1 
+Figure 7.1.3: Single server distribution vs. CDN distribution. 
+Figure 7.1.3: Single server distribution vs. CDN distribution. 
+Source: Kanoha / CC BY-SA 3.0 
+Source: Kanoha / CC BY-SA 3.0 
+I PARTICIPATION I . . . ACTIVITY 7.1.2: Loading the JQuery library. 
+I PARTICIPATION I . . . ACTIVITY 7.1.2: Loading the JQuery library. 
+1) Older versions of Query can be 
+1) Older versions of Query can be 
+downloaded from the jQuery website. 
+downloaded from the jQuery website. 
+□ 
+□ 
+0 
+0 
+jQuery() jQuery
+jQuery() jQuery
+jQuery
+jQuery
+"https://code.jquery.com/jquery-3.7.1.min.js"></script>
+"https://code.jquery.com/jquery-3.7.1.min.js"></script>
+>
+>
+getElementById("hello");
+getElementById("hello");
+helloPar);
+helloPar);
+getElementsByTagName("p");
+getElementsByTagName("p");
+allParas);
+allParas);
+<p>
+<p>
+[ <p> ]
+[ <p> ]
+[<p>,<p>]
+[<p>,<p>]
+[<p>,<p>]
+[<p>,<p>]
+DOM node
+DOM node
+jQuery obj
+jQuery obj
+DOM node array
+DOM node array
+jQuery obj
+jQuery obj
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+4 of 66 2024-11-17, 12:17 p.m.
+4 of 66 2024-11-17, 12:17 p.m.
+0 True 
+0 True 
+0 False 
+0 False 
+2) The jQuery library will almost always 
+2) The jQuery library will almost always 
+download faster to the browser using 
+download faster to the browser using 
+a CDN than from a webpage's server. 
+a CDN than from a webpage's server. 
+0 True 
+0 True 
+0 Fa lse 
+0 Fa lse 
+3) Other CDNs besides code.jquery.com 
+3) Other CDNs besides code.jquery.com 
+exist. 
+exist. 
+0 True 
+0 True 
+0 Fa lse 
+0 Fa lse 
+The jQuery() function 
+The jQuery() function 
+The jQuery library defines a primary function called jQuery(). The function behaves differently 
+The jQuery library defines a primary function called jQuery(). The function behaves differently 
+depending on what arguments are passed to , but the function always returns a 
+depending on what arguments are passed to , but the function always returns a 
+object. Good practice is to use variables that start with "$" to hold objects. 
+object. Good practice is to use variables that start with "$" to hold objects. 
+I PARTICIPATION I . . . ACTIVITY 7.1.3: Creating JOuery obJects from DOM nodes. 
+I PARTICIPATION I . . . ACTIVITY 7.1.3: Creating JOuery obJects from DOM nodes. 
+< !DOCTYPE HTML> 
+< !DOCTYPE HTML> 
+<html l ang="en" > 
+<html l ang="en" > 
+<title>jQuery Exampl e </ title> 
+<title>jQuery Exampl e </ title> 
+<script src="https://code.jquery.c< 
+<script src="https://code.jquery.c< 
+<body> 
+<body> 
+<p id="hello" >He llo, jQuery! </ p : 
+<p id="hello" >He llo, jQuery! </ p : 
+<p>Th i s stuff i s great! </ p> 
+<p>Th i s stuff i s great! </ p> 
+<script> 
+<script> 
+l et he lloPar = document . getE: 
+l et he lloPar = document . getE: 
+l et $he lloPar = jQuery (he llol 
+l et $he lloPar = jQuery (he llol 
+l et a llParas = document . getE: 
+l et a llParas = document . getE: 
+l et $a l1 Paras = jQuery (a llPai 
+l et $a l1 Paras = jQuery (a llPai 
+</ script> 
+</ script> 
+</body> 
+</body> 
+</html> 
+</html> 
+helloPar <p:: 1---------t 
+helloPar <p:: 1---------t 
+$helloPar [ <p:: -----t 
+$helloPar [ <p:: -----t 
+allParas [<p>,< -----t 
+allParas [<p>,< -----t 
+$al1Paras ......_ [<p>,- _____ _. 
+$al1Paras ......_ [<p>,- _____ _. 
+0 
+0 
+0 
+0 
+□ 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+5 of 66 2024-11-17, 12:17 p.m.
+5 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+Animation content: 
+The following code block is displayed. 
+The following code block is displayed. 
+<!DOCTYPE HTML> 
+<!DOCTYPE HTML> 
+<html lang="en"> 
+<html lang="en"> 
+<title>jQuery Example</title> 
+<title>jQuery Example</title> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<body> 
+<body> 
+<p id="hello">Hello, jQuery!</p> 
+<p id="hello">Hello, jQuery!</p> 
+<p> This stuff is great!</p> 
+<p> This stuff is great!</p> 
+<script> 
+<script> 
+let helloPar = document.getElementByld("hello"); 
+let helloPar = document.getElementByld("hello"); 
+let $helloPar = jQuery(helloPar); 
+let $helloPar = jQuery(helloPar); 
+let allParas = document.getElementsByTagName("p"); 
+let allParas = document.getElementsByTagName("p"); 
+let $alIParas = jQuery(allParas); 
+let $alIParas = jQuery(allParas); 
+</script> 
+</script> 
+</body> 
+</body> 
+</html> 
+</html> 
+Step 1: The line of code reading "<script src="https://code.jquery.com/jquery-3.7.1.min.js"></ 
+Step 1: The line of code reading "<script src="https://code.jquery.com/jquery-3.7.1.min.js"></ 
+script>" is highlighted. 
+script>" is highlighted. 
+Step 2: The line of code reading "let helloPar = document.getElementByld("hello");" is highlighted. 
+Step 2: The line of code reading "let helloPar = document.getElementByld("hello");" is highlighted. 
+Next, the line reading "<p id="hello">Hello, jQuery!</p>" is highlighted, and "<p>" is recorded in a 
+Next, the line reading "<p id="hello">Hello, jQuery!</p>" is highlighted, and "<p>" is recorded in a 
+table below as the corresponding DOM node for helloPar. 
+table below as the corresponding DOM node for helloPar. 
+Step 3: First, the line of code reading "let $helloPar = jQuery(helloPar);" is highlighted. "[<p>]" is 
+Step 3: First, the line of code reading "let $helloPar = jQuery(helloPar);" is highlighted. "[<p>]" is 
+added to the table as the jQuery obj corresponding to $helloPar. 
+added to the table as the jQuery obj corresponding to $helloPar. 
+Step 4: A line of code reading "let allParas = document.getElementsByTagName("p");" is 
+Step 4: A line of code reading "let allParas = document.getElementsByTagName("p");" is 
+highlighted. Next, both lines of code containing "<p>" are highlighted, and "[<p>,<p>]" is added to 
+highlighted. Next, both lines of code containing "<p>" are highlighted, and "[<p>,<p>]" is added to 
+the table as the corresponding DOM node array for allParas. 
+the table as the corresponding DOM node array for allParas. 
+Step 5: The line of code reading "let $all Paras= jQuery(allParas);" is highlighted. "[<p>,<p>]" is 
+Step 5: The line of code reading "let $all Paras= jQuery(allParas);" is highlighted. "[<p>,<p>]" is 
+added to the table as the corresponding jQuery obj array for $alIParas. 
+added to the table as the corresponding jQuery obj array for $alIParas. 
+Animation captions: 
+Animation captions: 
+1. The <script> tag downloads the jQuery library. 
+1. The <script> tag downloads the jQuery library. 
+2. getElementByld() finds the element with ID "hello" and returns the first <p> DOM node. 
+2. getElementByld() finds the element with ID "hello" and returns the first <p> DOM node. 
+3. The jQuery() function creates a jQuery object with the <p> DOM node. 
+3. The jQuery() function creates a jQuery object with the <p> DOM node. 
+4. getElementsByTagName() finds all paragraphs and returns an array of DOM nodes. 
+4. getElementsByTagName() finds all paragraphs and returns an array of DOM nodes. 
+jQuery()
+jQuery()
+getElementById("hello"));
+getElementById("hello"));
+getElementById("hello"));
+getElementById("hello"));
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+6 of 66 2024-11-17, 12:17 p.m.
+6 of 66 2024-11-17, 12:17 p.m.
+5. The jQuery() function creates a jQuery object from the array of DOM nodes. 
+5. The jQuery() function creates a jQuery object from the array of DOM nodes. 
+The $() function is the same as the 
+The $() function is the same as the 
+code. 
+code. 
+function, which developers often use to type less 
+function, which developers often use to type less 
+Figure 7.1.4: Using the SO function. 
+Figure 7.1.4: Using the SO function. 
+let $p = $ (document . getEl 
+let $p = $ (document . getEl 
+II same as 
+II same as 
+let $p = 
+let $p = 
+j Query (document . getEl eme n 
+j Query (document . getEl eme n 
+I PARTICIPATION I . . ACTIVITY 7.1.4: The JOuery() and$() functions. 
+I PARTICIPATION I . . ACTIVITY 7.1.4: The JOuery() and$() functions. 
+1) If the jQuery library is not downloaded 
+1) If the jQuery library is not downloaded 
+to the user's browser, using $ () will 
+to the user's browser, using $ () will 
+result in a syntax error. 
+result in a syntax error. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) $ ( x) is equivalent to j Query ( x), 
+2) $ ( x) is equivalent to j Query ( x), 
+where x contains a DOM node. 
+where x contains a DOM node. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) The j Query object contains a 
+3) The j Query object contains a 
+collection of DOM nodes. 
+collection of DOM nodes. 
+0 True 
+0 True 
+0 False 
+0 False 
+4) The j Query object returned by $ () 
+4) The j Query object returned by $ () 
+must be stored in a variable that 
+must be stored in a variable that 
+begins with $. 
+begins with $. 
+0 True 
+0 True 
+0 False 
+0 False 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"https://code.jquery.com/jquery-3.7.1.min.js"></script>
+"https://code.jquery.com/jquery-3.7.1.min.js"></script>
+$allParas [<p>,<p>]
+$allParas [<p>,<p>]
+Hello, jQuery!</p>
+Hello, jQuery!</p>
+</p>
+</p>
+Hello, jQuery!
+Hello, jQuery!
+This stuff is great!
+This stuff is great!
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+7 of 66 2024-11-17, 12:17 p.m.
+7 of 66 2024-11-17, 12:17 p.m.
+Exploring further: 7.2 Selectors 
+Exploring further: 7.2 Selectors 
+• jQuerY- API 
+• jQuerY- API 
+• Subresource lntegd!Y- from W3C 
+• Subresource lntegd!Y- from W3C 
+Basic selectors . • J.\,JuerY-O-iu nctIon 
+Basic selectors . • J.\,JuerY-O-iu nctIon 
+The $ () function is used to select DOM elements using selectors. A selector is a string that is 
+The $ () function is used to select DOM elements using selectors. A selector is a string that is 
+crafted to match specific DOM elements. Once an element is selected, other jQuery methods can 
+crafted to match specific DOM elements. Once an element is selected, other jQuery methods can 
+be used to add and remove CSS classes or properties from the selected element, show or hide the 
+be used to add and remove CSS classes or properties from the selected element, show or hide the 
+selected element, etc. The jQuery method addC/ass() is used to add a CSS class to selected 
+selected element, etc. The jQuery method addC/ass() is used to add a CSS class to selected 
+elements as illustrated in the animation below. 
+elements as illustrated in the animation below. 
+I PARTICIPATION I ' 
+I PARTICIPATION I ' 
+ACTIVITY 7.2.1: Adding classes to all paragraphs. 
+ACTIVITY 7.2.1: Adding classes to all paragraphs. 
+< !DOCTYPE html> 
+< !DOCTYPE html> 
+<html l ang="en" > 
+<html l ang="en" > 
+<title>jQuery Examp l e </ title> 
+<title>jQuery Examp l e </ title> 
+<script src="https://code.jquery.com/jque 
+<script src="https://code.jquery.com/jque 
+<style> 
+<style> 
+.important { co l or : red; } 
+.important { co l or : red; } 
+</ style> 
+</ style> 
+<p i d="hello" c l ass="important" >He llo , jQ 
+<p i d="hello" c l ass="important" >He llo , jQ 
+<p c l ass="important">Th i s stuff i s great! 
+<p c l ass="important">Th i s stuff i s great! 
+<script> 
+<script> 
+l et $a l1 Paras = $ ( "p" ); 
+l et $a l1 Paras = $ ( "p" ); 
+$a llParas . addCl ass ("important" ); 
+$a llParas . addCl ass ("important" ); 
+</ script> 
+</ script> 
+</ html> 
+</ html> 
+Animation content: 
+Animation content: 
+The following code block is displayed. 
+The following code block is displayed. 
+<IDOCTYPE html> 
+<IDOCTYPE html> 
+<html lang="en"> 
+<html lang="en"> 
+<title>jQuery Example</title> 
+<title>jQuery Example</title> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<style> 
+<style> 
+.important { color: red;} 
+.important { color: red;} 
+</style> 
+</style> 
+<p id="hello">Hello, jQuery!</p> 
+<p id="hello">Hello, jQuery!</p> 
+□ 
+□ 
+// Select all paragraphs, then remove the "important" class from all of 
+// Select all paragraphs, then remove the "important" class from all of 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+8 of 66 2024-11-17, 12:17 p.m.
+8 of 66 2024-11-17, 12:17 p.m.
+<p> This stuff is great!</p> 
+<p> This stuff is great!</p> 
+<script> 
+<script> 
+let $alIParas = $("p"); 
+let $alIParas = $("p"); 
+$al I Pa ras.addC lass("i mporta nt"); 
+$al I Pa ras.addC lass("i mporta nt"); 
+</script> 
+</script> 
+</html> 
+</html> 
+Step 1: The two lines reading "<p id="hello">Hello, jQuery!</p> 
+Step 1: The two lines reading "<p id="hello">Hello, jQuery!</p> 
+<p> This stuff is great!</p>" are highlighted. First, the plain text, "Hello, jQuery! This stuff is great!" 
+<p> This stuff is great!</p>" are highlighted. First, the plain text, "Hello, jQuery! This stuff is great!" 
+is displayed to the right. 
+is displayed to the right. 
+Step 2: The line reading "let $all Paras= $("p");" is highlighted. The two lines, "<p id="hello">Hello, 
+Step 2: The line reading "let $all Paras= $("p");" is highlighted. The two lines, "<p id="hello">Hello, 
+jQuery!</p>" and "<p> This stuff is great!</p>" are highlighted again in red. "[<p>,<p>]" is shown 
+jQuery!</p>" and "<p> This stuff is great!</p>" are highlighted again in red. "[<p>,<p>]" is shown 
+beside "$all Paras" to the side. 
+beside "$all Paras" to the side. 
+Step 3: The line reading "$allParas.addClass("important");" is highlighted. The two lines of code 
+Step 3: The line reading "$allParas.addClass("important");" is highlighted. The two lines of code 
+surrounded by "<p>" tags are changed to read "<p id="hello" class="important">Hello, jQuery!</p>" 
+surrounded by "<p>" tags are changed to read "<p id="hello" class="important">Hello, jQuery!</p>" 
+and "<p class="important"> This stuff is great!</p>". When this new code is executed, the text 
+and "<p class="important"> This stuff is great!</p>". When this new code is executed, the text 
+reading "Hello, jQuery! This stuff is great!" changes to a red font. 
+reading "Hello, jQuery! This stuff is great!" changes to a red font. 
+Animation captions: 
+Animation captions: 
+1. The browser renders the webpage. 
+1. The browser renders the webpage. 
+2. $("p") selects all <p> elements. 
+2. $("p") selects all <p> elements. 
+3. The addClass("important") method adds the "important" class to both paragraphs. 
+3. The addClass("important") method adds the "important" class to both paragraphs. 
+4. Changes to the DOM cause the browser to update the rendered webpage, making both 
+4. Changes to the DOM cause the browser to update the rendered webpage, making both 
+paragraphs use a red font. 
+paragraphs use a red font. 
+A web developer can select elements and call jQuery methods to perform operations on the 
+A web developer can select elements and call jQuery methods to perform operations on the 
+selected elements in a single line of code. The figure below selects and removes the "important" 
+selected elements in a single line of code. The figure below selects and removes the "important" 
+class from all paragraphs using the jQuery method removeC/ass(), which removes a class from a 
+class from all paragraphs using the jQuery method removeC/ass(), which removes a class from a 
+selected element. 
+selected element. 
+Example 7.2.1: Using$() and removeClass() on a single line. 
+Example 7.2.1: Using$() and removeClass() on a single line. 
+II Select all paragraphs, then remove 
+II Select all paragraphs, then remove 
+them 
+them 
+$ ("p" ) . removeCl ass ("important" ); 
+$ ("p" ) . removeCl ass ("important" ); 
+<p>
+<p>
+id="hello"
+id="hello"
+class="important"
+class="important"
+$("#game").addClass("crazy");
+$("#game").addClass("crazy");
+$(".game").addClass("crazy");
+$(".game").addClass("crazy");
+$(".crazy").removeClass(".crazy");
+$(".crazy").removeClass(".crazy");
+$(".crazy").removeClass("crazy");
+$(".crazy").removeClass("crazy");
+$("div").removeClass("crazy");
+$("div").removeClass("crazy");
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+9 of 66 2024-11-17, 12:17 p.m.
+9 of 66 2024-11-17, 12:17 p.m.
+Three common ways exist to select elements: by element, ID, or class. The jQuery syntax for 
+Three common ways exist to select elements: by element, ID, or class. The jQuery syntax for 
+selecting by element, ID, and class is similar to CSS selector syntax. 
+selecting by element, ID, and class is similar to CSS selector syntax. 
+Table 7.2.1: Basic jQuery selectors. 
+Table 7.2.1: Basic jQuery selectors. 
+Selector 
+Selector 
+Example Explanation Type -
+Example Explanation Type -
+Element $ ( "p" ) Selects all elements 
+Element $ ( "p" ) Selects all elements 
+ID $ ( "#hello" ) Selects the element with 
+ID $ ( "#hello" ) Selects the element with 
+Class $ ( ".important" ) Selects all elements with 
+Class $ ( ".important" ) Selects all elements with 
+clasE 
+clasE 
+I PARTICIPATION I . . ACTIVITY 7.2.2: Using basic selectors. 
+I PARTICIPATION I . . ACTIVITY 7.2.2: Using basic selectors. 
+1) Which line of code selects all <h2> 
+1) Which line of code selects all <h2> 
+elements in a document? 
+elements in a document? 
+Q $ ("<h2>") 
+Q $ ("<h2>") 
+Q $ ("#h2") 
+Q $ ("#h2") 
+Q $ ("h2") 
+Q $ ("h2") 
+2) Which line of code adds the class "crazy" to 
+2) Which line of code adds the class "crazy" to 
+the element with ID "game"? 
+the element with ID "game"? 
+0 $ ("#game") .addClass ("crazy") 
+0 $ ("#game") .addClass ("crazy") 
+0 $(".game") .addClass ("crazy") 
+0 $(".game") .addClass ("crazy") 
+0 $ ("game") .addClass ("crazy"); 
+0 $ ("game") .addClass ("crazy"); 
+3) Which line of code removes the class "crazy" from all 
+3) Which line of code removes the class "crazy" from all 
+elements currently using the "crazy" class? 
+elements currently using the "crazy" class? 
+0 $ (".crazy") . removeClass (". er 
+0 $ (".crazy") . removeClass (". er 
+0 
+0 
+0 
+0 
+4) Which line of code removes the "crazy" class 
+4) Which line of code removes the "crazy" class 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+$("div").removeClass("crazy");
+$("div").removeClass("crazy");
+$("div").toggleClass("crazy");
+$("div").toggleClass("crazy");
+$("p").addClass("crazy").addClass("completed");
+$("p").addClass("crazy").addClass("completed");
+$("p").addClass("crazy + completed")
+$("p").addClass("crazy + completed")
+$("p").addClass("completed");
+$("p").addClass("completed");
+<span> id
+<span> id
+<a> href
+<a> href
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+10 of 66 2024-11-17, 12:17 p.m.
+10 of 66 2024-11-17, 12:17 p.m.
+from all <div> elements currently using the 
+from all <div> elements currently using the 
+"crazy" class and adds the "crazy" class to all 
+"crazy" class and adds the "crazy" class to all 
+<div> elements currently not using the "crazy" 
+<div> elements currently not using the "crazy" 
+class? 
+class? 
+0 $ ("div") .removeClass ("crazy" 
+0 $ ("div") .removeClass ("crazy" 
+0 $ ("div") .addClass ("crazy"); 
+0 $ ("div") .addClass ("crazy"); 
+0 $ ("div") .toggleClass ("crazy" 
+0 $ ("div") .toggleClass ("crazy" 
+5) Which line of code adds the classes "crazy" and "completed" in the 
+5) Which line of code adds the classes "crazy" and "completed" in the 
+most efficient manner to all <p > elements? 
+most efficient manner to all <p > elements? 
+0 $ ("p") .addClass ("crazy") .adc 
+0 $ ("p") .addClass ("crazy") .adc 
+0 $ ("p") .addClass ("crazy + corr 
+0 $ ("p") .addClass ("crazy + corr 
+$ ("p") .addClass ("crazy"); 
+$ ("p") .addClass ("crazy"); 
+0 $ ("p") . addClass ("completed") 
+0 $ ("p") . addClass ("completed") 
+Additional selectors 
+Additional selectors 
+Additional jQuery selectors provide more sophisticated selection of DOM elements: 
+Additional jQuery selectors provide more sophisticated selection of DOM elements: 
+• Attribute selector - Selects elements based on an element attribute. 
+• Attribute selector - Selects elements based on an element attribute. 
+• Basic filter selector - Selects elements based on a variety of properties. 
+• Basic filter selector - Selects elements based on a variety of properties. 
+• Child filter selector - Selects child elements based on location or other properties. 
+• Child filter selector - Selects child elements based on location or other properties. 
+• Content filter selector - Selects elements based on an element's contents. 
+• Content filter selector - Selects elements based on an element's contents. 
+• Hierarchy selector - Selects elements based on an element's location within the DOM 
+• Hierarchy selector - Selects elements based on an element's location within the DOM 
+hierarchy. 
+hierarchy. 
+The table below shows examples of each additional jQuery selector type. 
+The table below shows examples of each additional jQuery selector type. 
+Table 7.2.2: Additional jQuery selectors. 
+Table 7.2.2: Additional jQuery selectors. 
+Selector 
+Selector 
+Example Explanation Type ~ 
+Example Explanation Type ~ 
+Attribute $ ( "span[id] " ) Selects all that have an 
+Attribute $ ( "span[id] " ) Selects all that have an 
+attribute 
+attribute 
+Attribute $ ( "a[href$=' .pdf'] " ) Selects all with attributes 
+Attribute $ ( "a[href$=' .pdf'] " ) Selects all with attributes 
+ending in .pdf 
+ending in .pdf 
+0 
+0 
+$("p:first") <p>
+$("p:first") <p>
+<li>
+<li>
+<li>
+<li>
+<p>
+<p>
+<span>
+<span>
+<li>
+<li>
+>Jamie</strong>!</p>
+>Jamie</strong>!</p>
+strong>Robert Wilensky</strong>:
+strong>Robert Wilensky</strong>:
+ We've all heard that a million monkeys banging on a million 
+ We've all heard that a million monkeys banging on a million 
+ will eventually reproduce the entire works of Shakespeare. Now, 
+ will eventually reproduce the entire works of Shakespeare. Now, 
+strong>not true</strong>.
+strong>not true</strong>.
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+11 of 66 2024-11-17, 12:17 p.m.
+11 of 66 2024-11-17, 12:17 p.m.
+Selector 
+Selector 
+Example Explanation Type 
+Example Explanation Type 
+Basic filter 'T' \ t-' • .L ...L .Lu L- / Selects the first element 
+Basic filter 'T' \ t-' • .L ...L .Lu L- / Selects the first element 
+Basic filter $ ( 11 tr:even 11 ) Selects the first, third, fifth, etc. table rows 
+Basic filter $ ( 11 tr:even 11 ) Selects the first, third, fifth, etc. table rows 
+(zero-indexed) 
+(zero-indexed) 
+~ 
+~ 
+Basic filter $ ( 11 li:eq(l) 11 ) 
+Basic filter $ ( 11 li:eq(l) 11 ) 
+Selects the second < 7 ; > element (index 
+Selects the second < 7 ; > element (index 
+n) 
+n) 
+Child filter $ ( 11 li:last-child 11 ) Selects the last in each group 
+Child filter $ ( 11 li:last-child 11 ) Selects the last in each group 
+Content $ ( 11 p: contains ( 'bye') 11 ) Selects all that contain the word "bye" filter 
+Content $ ( 11 p: contains ( 'bye') 11 ) Selects all that contain the word "bye" filter 
+$ ( 11 li span 11 ) 
+$ ( 11 li span 11 ) 
+Selects all that are descendants 
+Selects all that are descendants 
+Hierarchy of 
+Hierarchy of 
+I PARTICIPATION I . . . ACTIVITY 7.2.3: Using add1t1onal selectors. 
+I PARTICIPATION I . . . ACTIVITY 7.2.3: Using add1t1onal selectors. 
+Given the HTML below, what elements are selected with each jQuery selector? 
+Given the HTML below, what elements are selected with each jQuery selector? 
+<h2 >About Me</h2 > 
+<h2 >About Me</h2 > 
+<p id= 11 intro 11 >Hell o , my name is <strong 
+<p id= 11 intro 11 >Hell o , my name is <strong 
+<p class= 11 books 11 >My favorite books: </p > 
+<p class= 11 books 11 >My favorite books: </p > 
+<ol> 
+<ol> 
+<li>Animal Farm</li> 
+<li>Animal Farm</li> 
+<li>l984 </li> 
+<li>l984 </li> 
+<li>Oh ... I forgot the name! </li> 
+<li>Oh ... I forgot the name! </li> 
+</ol> 
+</ol> 
+<div>One of my favorite quotes from <st 
+<div>One of my favorite quotes from <st 
+<blockquote> 
+<blockquote> 
+We ' ve all heard that a million monk 
+We ' ve all heard that a million monk 
+typewriters 
+typewriters 
+will eventually reproduce the entir 
+will eventually reproduce the entir 
+thanks 
+thanks 
+to the Internet, we know this i s <s 
+to the Internet, we know this i s <s 
+</blockquote> 
+</blockquote> 
+</div> 
+</div> 
+1) $ ("div strong") 
+1) $ ("div strong") 
+<strong>Jamie< /strong> 
+<strong>Jamie< /strong> 
+0 and <strong>Robert 
+0 and <strong>Robert 
+............. ~ ,._ '-'....., .t-'............. ...... ....... • ... • ....., •• , 
+............. ~ ,._ '-'....., .t-'............. ...... ....... • ... • ....., •• , 
+... ..... , - ----••":fl ,,, • 
+... ..... , - ----••":fl ,,, • 
+□ 
+□ 
+0 
+0 
+Wilensky</strong>
+Wilensky</strong>
+<strong>Robert 
+<strong>Robert 
+Wilensky</strong>
+Wilensky</strong>
+<strong>Robert 
+<strong>Robert 
+Wilensky</strong>
+Wilensky</strong>
+<strong>not true</
+<strong>not true</
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+12 of 66 2024-11-17, 12:17 p.m.
+12 of 66 2024-11-17, 12:17 p.m.
+0 
+0 
+0 and 
+0 and 
+<strong>not true</ 
+<strong>not true</ 
+strong> 
+strong> 
+2) $("li:first") 
+2) $("li:first") 
+0 <li>Animal Farm</li> 
+0 <li>Animal Farm</li> 
+0 <li>Oh ... I forgot the 
+0 <li>Oh ... I forgot the 
+name! </li> 
+name! </li> 
+0 All <li> elements 
+0 All <li> elements 
+3) $ ( "l i: eq ( 2) ") 
+3) $ ( "l i: eq ( 2) ") 
+Q <li>1984</li> 
+Q <li>1984</li> 
+Q <li>Oh ... I forgot the 
+Q <li>Oh ... I forgot the 
+name!</li> 
+name!</li> 
+0 All <li> elements 
+0 All <li> elements 
+4) $ ("div[class] ") 
+4) $ ("div[class] ") 
+0 <p class="books" > ... </ 
+0 <p class="books" > ... </ 
+p > 
+p > 
+0 <div>One o f ... </div> 
+0 <div>One o f ... </div> 
+0 Nothing 
+0 Nothing 
+5) $ ("p:co ntains ('name')") 
+5) $ ("p:co ntains ('name')") 
+O Both <p > elements 
+O Both <p > elements 
+0 <p id="intro " > ... </p> 
+0 <p id="intro " > ... </p> 
+0 Nothing 
+0 Nothing 
+I PARTICIPATION I . ACTIVITY 7.2.4: Selector practice. 
+I PARTICIPATION I . ACTIVITY 7.2.4: Selector practice. 
+The following webpage is rendered using a combination of HTML, CSS, and JavaScript. 
+The following webpage is rendered using a combination of HTML, CSS, and JavaScript. 
+Try making the following JavaScript modifications so that the rendered webpage matches 
+Try making the following JavaScript modifications so that the rendered webpage matches 
+the expected webpage. Do not modify the HTML or CSS. 
+the expected webpage. Do not modify the HTML or CSS. 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+□ 
+□ 
+Highest-Grossing
+Highest-Grossing
+Films
+Films
+Films adjusted for inflation as of 2019:
+Films adjusted for inflation as of 2019:
+1. Gone with the Wind (1939)
+1. Gone with the Wind (1939)
+2. Avatar (2009)
+2. Avatar (2009)
+3. Titanic (1997)
+3. Titanic (1997)
+4. Star Wars (1977)
+4. Star Wars (1977)
+5. Avengers: Endgame (2019)
+5. Avengers: Endgame (2019)
+Gone with the Wind is the oldest movie to
+Gone with the Wind is the oldest movie to
+rank in the top 10 list of highest-grossing
+rank in the top 10 list of highest-grossing
+zyBooks 
+zyBooks 
+13 of 66 
+13 of 66 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c ... 
+1. Modify the jQuery so that only the even <Ii> elements have the "highlight" class. 
+1. Modify the jQuery so that only the even <Ii> elements have the "highlight" class. 
+2. Add a jQuery method call to remove the "border" class from the first <p>. 
+2. Add a jQuery method call to remove the "border" class from the first <p>. 
+3. Add a jQuery method call to add the "border" class to the second <p>. 
+3. Add a jQuery method call to add the "border" class to the second <p>. 
+[ HTML [ CSS [ JavaScript ] 
+[ HTML [ CSS [ JavaScript ] 
+1 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min. 
+1 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min. 
+2 
+2 
+3 <hl>Highest-Grossing Films </hl> 
+3 <hl>Highest-Grossing Films </hl> 
+4 <p class="border" >Films adjusted for inflation as of 2019: </p> 
+4 <p class="border" >Films adjusted for inflation as of 2019: </p> 
+5 <ol> 
+5 <ol> 
+6 <li><cite>Gone with the Wind </cite> (1939) </li> 
+6 <li><cite>Gone with the Wind </cite> (1939) </li> 
+7 <li><cite>Avatar</cite> (2009) </li> 
+7 <li><cite>Avatar</cite> (2009) </li> 
+8 <li><cite>Titanic</cite> (1997) </li> 
+8 <li><cite>Titanic</cite> (1997) </li> 
+9 <li><cite>Star Wars </cite> (1977) </li> 
+9 <li><cite>Star Wars </cite> (1977) </li> 
+10 <li><cite>Avengers: Endgame</cite> (2019) </li> 
+10 <li><cite>Avengers: Endgame</cite> (2019) </li> 
+11 </ol> 
+11 </ol> 
+12 <p><cite>Gone with the Wind</cite> is the oldest movie to rank in the top 1 
+12 <p><cite>Gone with the Wind</cite> is the oldest movie to rank in the top 1 
+13 <p>Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_ 
+13 <p>Source: <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_ 
+14 
+14 
+Render webpage Reset code 
+Render webpage Reset code 
+Your webpage 
+Your webpage 
+Highest-Grossing 
+Highest-Grossing 
+Films 
+Films 
+!Films adjusted for inflation as of 2019: 
+!Films adjusted for inflation as of 2019: 
+1. Gone with the Wind (1939) 
+1. Gone with the Wind (1939) 
+2. Avatar (2009) 
+2. Avatar (2009) 
+3. Titanic ( 1997) 
+3. Titanic ( 1997) 
+4. Star Wars (1977) 
+4. Star Wars (1977) 
+5. Avengers: Endgame (2019) 
+5. Avengers: Endgame (2019) 
+Gone with the Wind is the oldest movie to 
+Gone with the Wind is the oldest movie to 
+rank in the top 10 list of highest-grossing 
+rank in the top 10 list of highest-grossing 
+► View solution 
+► View solution 
+I CHALLENGE I 7.2.1 : J·Query selectors. ACTIVITY 
+I CHALLENGE I 7.2.1 : J·Query selectors. ACTIVITY 
+Expected webpage 
+Expected webpage 
+Highest-Grossing 
+Highest-Grossing 
+Films 
+Films 
+Films adjusted for inflation as of 2019: 
+Films adjusted for inflation as of 2019: 
+1. Gone with the Wind (1939) 
+1. Gone with the Wind (1939) 
+2. Avatar (2009) 
+2. Avatar (2009) 
+3. Titanic ( 1997) 
+3. Titanic ( 1997) 
+4. Star Wars (1977) 
+4. Star Wars (1977) 
+5. Avengers: Endgame (2019) 
+5. Avengers: Endgame (2019) 
+Gone with the Wind is the oldest movie to 
+Gone with the Wind is the oldest movie to 
+ank in the top 10 list of highest-grossing 
+ank in the top 10 list of highest-grossing 
+□ 
+□ 
+2024-11-17, 12:17 p.m. 
+2024-11-17, 12:17 p.m. 
+jQuery
+jQuery
+jQuery example
+jQuery example
+buttonClicked);
+buttonClicked);
+function buttonClicked() {
+function buttonClicked() {
+alert("Click!");
+alert("Click!");
+}
+}
+$("#some-btn").on("click", buttonClicked);
+$("#some-btn").on("click", buttonClicked);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+14 of 66 2024-11-17, 12:17 p.m.
+14 of 66 2024-11-17, 12:17 p.m.
+5707 04.20654 7 6.qx3zqy7 
+5707 04.20654 7 6.qx3zqy7 
+Exploring further: 
+Exploring further: 
+• jQuerY- selectors 
+• jQuerY- selectors 

@@ -1,0 +1,970 @@
+Introduction 
+Introduction 
+□ 
+□ 
+Many organizations have created public web APls that provide access to the organization's data or 
+Many organizations have created public web APls that provide access to the organization's data or 
+the user's data that is stored by the organization. Ex: The Google Maps API provides applications 
+the user's data that is stored by the organization. Ex: The Google Maps API provides applications 
+information about geographic locations, and the lnstagram API allows applications access to 
+information about geographic locations, and the lnstagram API allows applications access to 
+photos shared on lnstagram. Public APls on GitHub.com lists thousands of free, public web APls. 
+photos shared on lnstagram. Public APls on GitHub.com lists thousands of free, public web APls. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+52 of 66 2024-11-17, 12:17 p.m.
+52 of 66 2024-11-17, 12:17 p.m.
+A third-party web AP/ is a public web API used by a web application to access data provided by a 
+A third-party web AP/ is a public web API used by a web application to access data provided by a 
+third party. ''Third-party" refers to a person or organization that is neither the web application using 
+third party. ''Third-party" refers to a person or organization that is neither the web application using 
+the API nor the user using the web application, which are the "first" and "second" parties. Websites 
+the API nor the user using the web application, which are the "first" and "second" parties. Websites 
+rely on third-party web APls to integrate with social media, obtain maps and weather data, or 
+rely on third-party web APls to integrate with social media, obtain maps and weather data, or 
+access collections of data. 
+access collections of data. 
+To use a third-party web API, a developer usually registers with the third party to obtain an AP/ key. 
+To use a third-party web API, a developer usually registers with the third party to obtain an AP/ key. 
+Third parties require API keys for several reasons: 
+Third parties require API keys for several reasons: 
+• The API key identifies who or what application is using the web API. 
+• The API key identifies who or what application is using the web API. 
+• The API key helps the third party limit the number of requests made to the API in a fixed time 
+• The API key helps the third party limit the number of requests made to the API in a fixed time 
+period or may be used to charge a developer a fee for additional requests. 
+period or may be used to charge a developer a fee for additional requests. 
+• To obtain an API key, developers must agree to restrictions the third party places on data 
+• To obtain an API key, developers must agree to restrictions the third party places on data 
+obtained from the web API. 
+obtained from the web API. 
+Most third-party web APls are RESTful. A RESTfu/ web AP/ is a web API that is called with a URL 
+Most third-party web APls are RESTful. A RESTfu/ web AP/ is a web API that is called with a URL 
+that specifies API parameters and returns JSON or XML containing the API data. Ex: The URL 
+that specifies API parameters and returns JSON or XML containing the API data. Ex: The URL 
+http://linkedin.com/api/article?id=123 specifies the article ID 123, so the article would be returned 
+http://linkedin.com/api/article?id=123 specifies the article ID 123, so the article would be returned 
+formatted in JSON. 
+formatted in JSON. 
+Third-party web APls may be called from the web server or the web browser. This material shows 
+Third-party web APls may be called from the web server or the web browser. This material shows 
+how to call web APls from the web browser using JavaScript. 
+how to call web APls from the web browser using JavaScript. 
+SOAP 
+SOAP 
+A SOAP-based web AP/ is another type of web AP/ that relies heavily on XML and is 
+A SOAP-based web AP/ is another type of web AP/ that relies heavily on XML and is 
+in general more complex to use than RESTful web AP/s. See the "Exploring further" 
+in general more complex to use than RESTful web AP/s. See the "Exploring further" 
+section for more information on SOAP 
+section for more information on SOAP 
+Figure 7.7.1: Calling third-party web API from the web server or web 
+Figure 7.7.1: Calling third-party web API from the web server or web 
+browser. 
+browser. 
+API 
+API 
+request request 
+request request 
+® G 
+® G 
+response API 
+response API 
+response 
+response 
+Web browser Web server Third party 
+Web browser Web server Third party 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+53 of 66 2024-11-17, 12:17 p.m.
+53 of 66 2024-11-17, 12:17 p.m.
+Web browser 
+Web browser 
+API 
+API 
+request 
+request 
+___ e 
+___ e 
+API 
+API 
+response 
+response 
+Third party 
+Third party 
+I PARTICIPATION I . ACTIVITY 7.7.1: Third-party web APls. 
+I PARTICIPATION I . ACTIVITY 7.7.1: Third-party web APls. 
+1) Information from a third-party web 
+1) Information from a third-party web 
+API reaches the browser faster if the 
+API reaches the browser faster if the 
+browser calls the web API directly 
+browser calls the web API directly 
+instead of the web server calling the 
+instead of the web server calling the 
+web API. 
+web API. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) For a third-party web API requiring an 
+2) For a third-party web API requiring an 
+API key, the API key must be 
+API key, the API key must be 
+transmitted with every API request. 
+transmitted with every API request. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) When the browser makes an API 
+3) When the browser makes an API 
+request to a third-party web API, the 
+request to a third-party web API, the 
+web API key can be kept secret from 
+web API key can be kept secret from 
+prying eyes. 
+prying eyes. 
+0 True 
+0 True 
+0 False 
+0 False 
+4) Many web AP ls charge a fee to the 
+4) Many web AP ls charge a fee to the 
+developer after a limited number of 
+developer after a limited number of 
+requests have been made in a 24-
+requests have been made in a 24-
+hour period. 
+hour period. 
+0 True 
+0 True 
+0 False 
+0 False 
+5) RESTful web APls only return XML. 
+5) RESTful web APls only return XML. 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+http://api.openweathermap.org/data/2.5/weather
+http://api.openweathermap.org/data/2.5/weather
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+54 of 66 2024-11-17, 12:17 p.m.
+54 of 66 2024-11-17, 12:17 p.m.
+0 True 
+0 True 
+0 False 
+0 False 
+Weather API 
+Weather API 
+OpenWeatherMap provides a free Weather API providing current weather data, forecasts, and 
+OpenWeatherMap provides a free Weather API providing current weather data, forecasts, and 
+historical data. Developers must register at QQenweathermag.org for an API key that must be 
+historical data. Developers must register at QQenweathermag.org for an API key that must be 
+transmitted in all API requests. 
+transmitted in all API requests. 
+The OpenWeatherMap website provides documentation explaining how to use the Weather API 
+The OpenWeatherMap website provides documentation explaining how to use the Weather API 
+using GET requests with various query string parameters. The API endpoint 
+using GET requests with various query string parameters. The API endpoint 
+returns the current weather based 
+returns the current weather based 
+on the following query string parameters: 
+on the following query string parameters: 
+• zip - Five digit US ZIP code 
+• zip - Five digit US ZIP code 
+• units - Standard, metric, or imperial units to use for measurements like temperature and wind 
+• units - Standard, metric, or imperial units to use for measurements like temperature and wind 
+speed 
+speed 
+• appid - Developer's API key 
+• appid - Developer's API key 
+Other parameters are documented in the OpenWeatherMap website. The Weather API returns 
+Other parameters are documented in the OpenWeatherMap website. The Weather API returns 
+weather data in JSON format by default. 
+weather data in JSON format by default. 
+Figure 7.7.2: GET request to obtain the current weather for ZIP 90210. 
+Figure 7.7.2: GET request to obtain the current weather for ZIP 90210. 
+http:// a pi .openweatherma p.org/ data/ 2. 5/ weather? 
+http:// a pi .openweatherma p.org/ data/ 2. 5/ weather? 
+zip=9021 O&units=imperial&appid=APIKEY 
+zip=9021 O&units=imperial&appid=APIKEY 
+{ 
+{ 
+"coord ":{ 
+"coord ":{ 
+"lon ":-118.4, -- City's geo location "lat ":34.07 .---
+"lon ":-118.4, -- City's geo location "lat ":34.07 .---
+}, 
+}, 
+"weather ": [ 
+"weather ": [ 
+{ 
+{ 
+} 
+} 
+], 
+], 
+"id":800 , 
+"id":800 , 
+"main " : "Clear" , / Overall description 
+"main " : "Clear" , / Overall description 
+"description":"clear sky", 
+"description":"clear sky", 
+"icon ": "01d" 
+"icon ": "01d" 
+"base" : "cmc stations " , 
+"base" : "cmc stations " , 
+"main " : { Degrees Fahrenheit 
+"main " : { Degrees Fahrenheit 
+"temp " : 75. 61 , / 
+"temp " : 75. 61 , / 
+" orE!ssurE! " : 1017 . 
+" orE!ssurE! " : 1017 . 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+55 of 66 2024-11-17, 12:17 p.m.
+55 of 66 2024-11-17, 12:17 p.m.
+} 
+} 
+r· ----- - - - - - - , t'ercem num,any 
+r· ----- - - - - - - , t'ercem num,any 
+"humidity " : 14, ----
+"humidity " : 14, ----
+"temp min " :60.8, Minimum and maximum 
+"temp min " :60.8, Minimum and maximum 
+"temp=max " :82.4 ;::> temps at the moment 
+"temp=max " :82.4 ;::> temps at the moment 
+}, 
+}, 
+"wind " : { .,-- Miles per hour 
+"wind " : { .,-- Miles per hour 
+"speed" :3.36 
+"speed" :3.36 
+}, 
+}, 
+"clouds ":{ .. all " : 1 ---- Percent cloudy 
+"clouds ":{ .. all " : 1 ---- Percent cloudy 
+}, 
+}, 
+"id" : 5328041 , ---- City 
+"id" : 5328041 , ---- City 
+"name":"Beverly Hills", 
+"name":"Beverly Hills", 
+"cod" :200 
+"cod" :200 
+Try 7.7.1: Try OpenWeatherMap's API in your web browser. 
+Try 7.7.1: Try OpenWeatherMap's API in your web browser. 
+1. Go to QQenweathermaQ.org..,_ 
+1. Go to QQenweathermaQ.org..,_ 
+2. Sign up for an account to obtain an API key. 
+2. Sign up for an account to obtain an API key. 
+3. When your API key is ready, try the link: http://api.openweathermap.org/data/2.5/ 
+3. When your API key is ready, try the link: http://api.openweathermap.org/data/2.5/ 
+weather?ziQ=9021 0&un its=imQerial&appid=APIKEY to make an API request for the 
+weather?ziQ=9021 0&un its=imQerial&appid=APIKEY to make an API request for the 
+weather with ZIP 90210. The page should indicate an invalid API key was used. 
+weather with ZIP 90210. The page should indicate an invalid API key was used. 
+4. Replace API KEY in the URL'.s query string with your API key, and reload the webpage. 
+4. Replace API KEY in the URL'.s query string with your API key, and reload the webpage. 
+The JSON-encoded weather information for 90210 should be displayed. 
+The JSON-encoded weather information for 90210 should be displayed. 
+5. Change the ZIP code in the URL'.s query string to your ZIP code, and reload the URL 
+5. Change the ZIP code in the URL'.s query string to your ZIP code, and reload the URL 
+to see the weather in your ZIP code. 
+to see the weather in your ZIP code. 
+I PARTICIPATION I 
+I PARTICIPATION I 
+ACTIVITY 7.7.2: The Weather API. 
+ACTIVITY 7.7.2: The Weather API. 
+1) What does the Weather API return 
+1) What does the Weather API return 
+when an invalid API key is used in a 
+when an invalid API key is used in a 
+request? 
+request? 
+0 A blank webpage 
+0 A blank webpage 
+0 Weather for the 90210 ZIP 
+0 Weather for the 90210 ZIP 
+O An error message formatted in 
+O An error message formatted in 
+JSON 
+JSON 
+□ 
+□ 
+0 
+0 
+<script>
+<script>
+Origin
+Origin
+Access-Control-Allow-Origin Origin
+Access-Control-Allow-Origin Origin
+*
+*
+Access-Control-*
+Access-Control-*
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+56 of 66 2024-11-17, 12:17 p.m.
+56 of 66 2024-11-17, 12:17 p.m.
+2) In the figure above, what does the 
+2) In the figure above, what does the 
+Weather API return as the current 
+Weather API return as the current 
+humidity in the 90210 ZIP code? 
+humidity in the 90210 ZIP code? 
+0 75.61 
+0 75.61 
+0 14 
+0 14 
+0 3.36 
+0 3.36 
+3) What "units" parameter value would 
+3) What "units" parameter value would 
+make the Weather API return the 
+make the Weather API return the 
+temperature in Celsius? 
+temperature in Celsius? 
+0 imperial 
+0 imperial 
+0 metric 
+0 metric 
+0 standard 
+0 standard 
+4) Does the Weather API support finding 
+4) Does the Weather API support finding 
+the current weather by city name? 
+the current weather by city name? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+Cross-origin requests 
+Cross-origin requests 
+0 
+0 
+0 
+0 
+0 
+0 
+Calling a third-party web API from the web browser requires a cross-origin HTTP request, since the 
+Calling a third-party web API from the web browser requires a cross-origin HTTP request, since the 
+web API is not hosted on the local website's web server. Two main techniques are used to make 
+web API is not hosted on the local website's web server. Two main techniques are used to make 
+cross-origin requests: 
+cross-origin requests: 
+• Cross-Origin Resource Sharing (CORS) is a W3C specification for how web browsers and 
+• Cross-Origin Resource Sharing (CORS) is a W3C specification for how web browsers and 
+web servers should communicate when making cross-origin requests. 
+web servers should communicate when making cross-origin requests. 
+• JSON with Padding (JSONP) is a technique to circumvent cross-origin restrictions by 
+• JSON with Padding (JSONP) is a technique to circumvent cross-origin restrictions by 
+injecting elements dynamically into a webpage. Script elements have no crossorigin restrictions. 
+injecting elements dynamically into a webpage. Script elements have no crossorigin restrictions. 
+CORS is the more common of the two techniques and, for the web API user, the easiest to use. 
+CORS is the more common of the two techniques and, for the web API user, the easiest to use. 
+CORS requires the web browser to send an header in a web API request to indicate the 
+CORS requires the web browser to send an header in a web API request to indicate the 
+scheme and domain making the API request. If the API accepts the request, the API responds with 
+scheme and domain making the API request. If the API accepts the request, the API responds with 
+an header indicating the same value in the request 
+an header indicating the same value in the request 
+header or" ", which indicates that requests are allowed from any origin. CORS uses other headers 
+header or" ", which indicates that requests are allowed from any origin. CORS uses other headers 
+that begin with to support other interactions with the API. 
+that begin with to support other interactions with the API. 
+CORS allows the browser to send GET, POST, PUT, and DELETE requests. JSONP limits the browser 
+CORS allows the browser to send GET, POST, PUT, and DELETE requests. JSONP limits the browser 
+to sending only GET requests. 
+to sending only GET requests. 
+GET /data/2.5/weather?
+GET /data/2.5/weather?
+zip=90210&units=imperial&appid=APIKEY 
+zip=90210&units=imperial&appid=APIKEY 
+HTTP/1.1
+HTTP/1.1
+Host: api.openweathermap.org
+Host: api.openweathermap.org
+Origin: http://mywebsite.com
+Origin: http://mywebsite.com
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: *
+Content-Type: application/json; 
+Content-Type: application/json; 
+charset=utf-8
+charset=utf-8
+Content-Length: 431
+Content-Length: 431
+Date: Mon, 28 Mar 2016 16:09:48 GMT
+Date: Mon, 28 Mar 2016 16:09:48 GMT
+Server: openresty
+Server: openresty
+{"coord":
+{"coord":
+{"lon":-118.4,"lat":34.07},"weather":
+{"lon":-118.4,"lat":34.07},"weather":
+[{"id":500,
+[{"id":500,
+"main":"Rain","description":"light 
+"main":"Rain","description":"light 
+rain","icon":"10d"}], etc...}
+rain","icon":"10d"}], etc...}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+57 of 66 2024-11-17, 12:17 p.m.
+57 of 66 2024-11-17, 12:17 p.m.
+Figure 7.7.3: Making a request to the Weather API with CORS. 
+Figure 7.7.3: Making a request to the Weather API with CORS. 
+HTTP request 
+HTTP request 
+V l. .L '::J .Lll. l lL L!,-J . / / lll ;f W 'C.U::> .l. L'C • l...,.Ull l 
+V l. .L '::J .Lll. l lL L!,-J . / / lll ;f W 'C.U::> .l. L'C • l...,.Ull l 
+User- Agent : Moz illa/ 5. 0 
+User- Agent : Moz illa/ 5. 0 
+Chrome/ 4 8 . 0 . 256 4 
+Chrome/ 4 8 . 0 . 256 4 
+I PARTICIPATION I ' ' 
+I PARTICIPATION I ' ' 
+ACTIVITY 7.7.3: Cross-origin requests . 
+ACTIVITY 7.7.3: Cross-origin requests . 
+1) What HTTP header must the web 
+1) What HTTP header must the web 
+browser send in every CORS request? 
+browser send in every CORS request? 
+0 Access-Control-Allow-Origin 
+0 Access-Control-Allow-Origin 
+0 Origin 
+0 Origin 
+0 User-Agent 
+0 User-Agent 
+2) The web browser knows to send the 
+2) The web browser knows to send the 
+Origin header in the HTTP request 
+Origin header in the HTTP request 
+when the requested URL'.s domain 
+when the requested URL'.s domain 
+name and the requesting script's 
+name and the requesting script's 
+domain name are __ . 
+domain name are __ . 
+0 the same 
+0 the same 
+0 different 
+0 different 
+3) When a third-party web API does not 
+3) When a third-party web API does not 
+support CORS, what is AccessControl-Allow-Origin set to in the web 
+support CORS, what is AccessControl-Allow-Origin set to in the web 
+APl's response? 
+APl's response? 
+O Access-Control-Allow-Origin is 
+O Access-Control-Allow-Origin is 
+set to*. 
+set to*. 
+HTTP response 
+HTTP response 
+J.,._, J... ,,_, ..L. .L .1. ..L. - '-' -~ ~~ '=' ~ .. . , ' --- - - ----- ~,t-J.J.. .J.. \...- U. L- .J.. V J.J. / j ..:>V J.J. 
+J.,._, J... ,,_, ..L. .L .1. ..L. - '-' -~ ~~ '=' ~ .. . , ' --- - - ----- ~,t-J.J.. .J.. \...- U. L- .J.. V J.J. / j ..:>V J.J. 
+u 
+u 
+□ 
+□ 
+0 
+0 
+0 
+0 
+0 
+0 
+$.ajax()
+$.ajax()
+done()
+done()
+fail()
+fail()
+"APIKEY"
+"APIKEY"
+done()
+done()
+$.ajax()
+$.ajax()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+58 of 66 2024-11-17, 12:17 p.m.
+58 of 66 2024-11-17, 12:17 p.m.
+O Access-Control-Allow-Origin is 
+O Access-Control-Allow-Origin is 
+set to the Origin value. 
+set to the Origin value. 
+O Access-Control-Allow-Origin is 
+O Access-Control-Allow-Origin is 
+not present. 
+not present. 
+4) Does JSONP support POST or PUT 
+4) Does JSONP support POST or PUT 
+request methods? 
+request methods? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+Weather API request with jQuery 
+Weather API request with jQuery 
+0 
+0 
+ThejQuery method is commonly used to make Ajax requests to third-party web APls 
+ThejQuery method is commonly used to make Ajax requests to third-party web APls 
+from a webpage. The OpenWeatherMap implements CORS, and API requests can come from any 
+from a webpage. The OpenWeatherMap implements CORS, and API requests can come from any 
+origin. 
+origin. 
+I =~~~i~;~•110" I 7.7.4: Calling the Weather API from the web browser using CORS. 0 
+I =~~~i~;~•110" I 7.7.4: Calling the Weather API from the web browser using CORS. 0 
+The webpage below allows the user to enter a ZIP code. When the Find button is clicked, 
+The webpage below allows the user to enter a ZIP code. When the Find button is clicked, 
+the jQuery code uses $. aj ax () to send a CORS request to the Weather API. 
+the jQuery code uses $. aj ax () to send a CORS request to the Weather API. 
+• If the API returns a 200 status code, the de callback function executes with the 
+• If the API returns a 200 status code, the de callback function executes with the 
+API response in the data parameter. The callback function displays the current 
+API response in the data parameter. The callback function displays the current 
+temperature in the webpage. 
+temperature in the webpage. 
+• If the API returns a 401 or 404 status code, the function callback executes. 
+• If the API returns a 401 or 404 status code, the function callback executes. 
+A 401 indicates an invalid API key was used. A 404 indicates the ZIP code could not 
+A 401 indicates an invalid API key was used. A 404 indicates the ZIP code could not 
+be found. The callback function displays a general error message. 
+be found. The callback function displays a general error message. 
+To make the web page operational, replace "API with your API key. Then render the 
+To make the web page operational, replace "API with your API key. Then render the 
+web page, type in a five digit ZIP code, and press Find. The current temperature for the ZIP 
+web page, type in a five digit ZIP code, and press Find. The current temperature for the ZIP 
+code should display. 
+code should display. 
+Modify the webpage to display the description and humidity by adding HTML code under 
+Modify the webpage to display the description and humidity by adding HTML code under 
+the "Current temperature" paragraph and by adding JavaScript code in the ::J. ::::- :-: ::::: '.; 
+the "Current temperature" paragraph and by adding JavaScript code in the ::J. ::::- :-: ::::: '.; 
+callback function. 
+callback function. 
+Using JSONP 
+Using JSONP 
+If a third-party web API does not support CORS, the API may support JSON with Padding (JSONP). 
+If a third-party web API does not support CORS, the API may support JSON with Padding (JSONP). 
+The method uses the JSONP technique to call a third-party web API when the following 
+The method uses the JSONP technique to call a third-party web API when the following 
+dataType
+dataType
+jsonp
+jsonp
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+59 of 66 2024-11-17, 12:17 p.m.
+59 of 66 2024-11-17, 12:17 p.m.
+parameters are set: 
+parameters are set: 
+• - Set to "jsonp" . 
+• - Set to "jsonp" . 
+• - Set to "callback" or whatever value the third-party web API is expecting . 
+• - Set to "callback" or whatever value the third-party web API is expecting . 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY I 7.7.5: Calling the Weather API using JSONP 
+ACTIVITY I 7.7.5: Calling the Weather API using JSONP 
+II weather . js 
+II weather . js 
+$ (funct i on () { 
+$ (funct i on () { 
+} ) ; 
+} ) ; 
+let zip = 90210 ; 
+let zip = 90210 ; 
+$ . aj ax ( { 
+$ . aj ax ( { 
+url : "http://api.openweathermap . org/data/2.5/weather" , 
+url : "http://api.openweathermap . org/data/2.5/weather" , 
+jsonp : " callback" , 
+jsonp : " callback" , 
+dat a Type : " jsonp" , 
+dat a Type : " jsonp" , 
+data : { z i p : z i p , uni ts : " imperial " , appi d : "APIKEY " } 
+data : { z i p : z i p , uni ts : " imperial " , appi d : "APIKEY " } 
+}) . done (funct i on (da t a ) { 
+}) . done (funct i on (da t a ) { 
+$ (" #zip " ) . html ( z i p ); 
+$ (" #zip " ) . html ( z i p ); 
+$ (" #currentTemp " ) . html (da t a . ma i n . temp ); 
+$ (" #currentTemp " ) . html (da t a . ma i n . temp ); 
+$ (" #description" ) . html (data . weather [0 ] . descri pti on ); 
+$ (" #description" ) . html (data . weather [0 ] . descri pti on ); 
+$ (" #humidity" ) . h t ml (data . ma i n . humi d ity ); 
+$ (" #humidity" ) . h t ml (data . ma i n . humi d ity ); 
+}) . fa il (funct i on (jqXHR) { 
+}) . fa il (funct i on (jqXHR) { 
+$ (" #error " ) . html ( "Error retrieving the weather ." ); 
+$ (" #error " ) . html ( "Error retrieving the weather ." ); 
+} ) ; 
+} ) ; 
+< !DOCTYPE h t ml > 
+< !DOCTYPE h t ml > 
+<html> 
+<html> 
+<title>Wea t her</title> 
+<title>Wea t her</title> 
+□ 
+□ 
+Web browser 
+Web browser 
+localhost:3000/weather.htr 
+localhost:3000/weather.htr 
+Weather for 9021 
+Weather for 9021 
+Current temp: 53.2 °F 
+Current temp: 53.2 °F 
+Description: clear sky 
+Description: clear sky 
+Humidity: 71 % 
+Humidity: 71 % 
+jQuery214 ( { json 
+jQuery214 ( { json 
+callback=jQuery214 
+callback=jQuery214 
+zip=90210 
+zip=90210 
+units=imperial 
+units=imperial 
+appid=APIKEY T 
+appid=APIKEY T 
+Ji 
+Ji 
+st 
+st 
+OpenWeatherM, 
+OpenWeatherM, 
+<script src="https : //code . jquery.com/jquery- 3.7 . 1 . min.js " ></script> 
+<script src="https : //code . jquery.com/jquery- 3.7 . 1 . min.js " ></script> 
+<script src=" scripts/weather . js " ></script> 
+<script src=" scripts/weather . js " ></script> 
+<script src="http : //api . openweathermap.org/data/2 . 5/weather? 
+<script src="http : //api . openweathermap.org/data/2 . 5/weather? 
+callback= jQuery214&zip= 90210&units=imperial&appid=APIKEY" > 
+callback= jQuery214&zip= 90210&units=imperial&appid=APIKEY" > 
+</script> 
+</script> 
+<body> 
+<body> 
+<hl>Weather for <span i d= "zip"></span></hl> 
+<hl>Weather for <span i d= "zip"></span></hl> 
+<p id=" error " style=" color:red" ></p > 
+<p id=" error " style=" color:red" ></p > 
+<p >Current t emp : <span i d=" currentTemp" ></span> &deg; F</p > 
+<p >Current t emp : <span i d=" currentTemp" ></span> &deg; F</p > 
+<p >Description : <span id="description" ></span></p > 
+<p >Description : <span id="description" ></span></p > 
+<p >Humi d i ty : <span i d=" humidity" ></span>%</p > 
+<p >Humi d i ty : <span i d=" humidity" ></span>%</p > 
+</body> 
+</body> 
+</html> 
+</html> 
+Animation content: 
+Animation content: 
+The following code blocks are displayed. 
+The following code blocks are displayed. 
+// weather.js 
+// weather.js 
+$(function() { 
+$(function() { 
+let zip = 9021 O; 
+let zip = 9021 O; 
+$.ajax({ 
+$.ajax({ 
+u rl: "http:// a pi .openweatherma p.org/ data/ 2.5/ weather", 
+u rl: "http:// a pi .openweatherma p.org/ data/ 2.5/ weather", 
+jsonp: "callback", 
+jsonp: "callback", 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+60 of 66 2024-11-17, 12:17 p.m.
+60 of 66 2024-11-17, 12:17 p.m.
+dataType: "jsonp", 
+dataType: "jsonp", 
+data: { zip: zip, units: "imperial", appid: "APIKEY"} 
+data: { zip: zip, units: "imperial", appid: "APIKEY"} 
+}).done(function(data) { 
+}).done(function(data) { 
+$("#zip").html(zip ); 
+$("#zip").html(zip ); 
+$("#currentTemp").html(data.main.temp); 
+$("#currentTemp").html(data.main.temp); 
+$("#description").html(data.weather[0].description); 
+$("#description").html(data.weather[0].description); 
+$("#humidity").html(data.main.humidity); 
+$("#humidity").html(data.main.humidity); 
+}).fail(functionQqXHR) { 
+}).fail(functionQqXHR) { 
+$("#error").html("Error retrieving the weather."); 
+$("#error").html("Error retrieving the weather."); 
+}); 
+}); 
+}); 
+}); 
+<!DOCTYPE html> 
+<!DOCTYPE html> 
+<html> 
+<html> 
+<title>Weather</title> 
+<title>Weather</title> 
+<script src="https://code.jquery.com/jquery-3.7.7 .min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.7.7 .min.js"></script> 
+<script src="scripts/weather.js"></script> 
+<script src="scripts/weather.js"></script> 
+<script src="http://api.openweathermap.org/data/2.5/weather? 
+<script src="http://api.openweathermap.org/data/2.5/weather? 
+callback=jQuery27 4&zip=9021 0&units=imperial&appid=APIKEY"> 
+callback=jQuery27 4&zip=9021 0&units=imperial&appid=APIKEY"> 
+</script> 
+</script> 
+<body> 
+<body> 
+<h1 >Weather for <span id="zip"></span></hl > 
+<h1 >Weather for <span id="zip"></span></hl > 
+<p id="error" style="color:red"></p> 
+<p id="error" style="color:red"></p> 
+<p>Current temp: <span id="currentTemp"></span> °F</p> 
+<p>Current temp: <span id="currentTemp"></span> °F</p> 
+<p>Description: <span id="description"></span></p> 
+<p>Description: <span id="description"></span></p> 
+<p>Humidity: <span id="humidity"></span>%</p> 
+<p>Humidity: <span id="humidity"></span>%</p> 
+</body> 
+</body> 
+</html> 
+</html> 
+Step 1: The browser request is shown as "localhost:3000/weather.html". The html is rendered to 
+Step 1: The browser request is shown as "localhost:3000/weather.html". The html is rendered to 
+read 
+read 
+"Weather for 
+"Weather for 
+Current temp: °F 
+Current temp: °F 
+Description: 
+Description: 
+Humidity: %". 
+Humidity: %". 
+Step 2: The lines of code reading "$.ajax({ 
+Step 2: The lines of code reading "$.ajax({ 
+url: "http://api.openweathermap.org/data/2.5/weather", 
+url: "http://api.openweathermap.org/data/2.5/weather", 
+jsonp: "callback", 
+jsonp: "callback", 
+dataType: "jsonp", 
+dataType: "jsonp", 
+data: { zip: zip, units: "imperial", appid: "APIKEY"} 
+data: { zip: zip, units: "imperial", appid: "APIKEY"} 
+}).done(function(data) {" are highlighted in the first block. 
+}).done(function(data) {" are highlighted in the first block. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+61 of 66 2024-11-17, 12:17 p.m.
+61 of 66 2024-11-17, 12:17 p.m.
+The lines of code in the second block reading "<script src="http://api.openweathermap.org/ 
+The lines of code in the second block reading "<script src="http://api.openweathermap.org/ 
+data/2. 5/weather? 
+data/2. 5/weather? 
+callback=jQuery214&zip=9021 0&units=imperial&appid=APIKEY"> 
+callback=jQuery214&zip=9021 0&units=imperial&appid=APIKEY"> 
+</script>" are also highlighted. 
+</script>" are also highlighted. 
+Step 3: The weather data requested from OpenWeatherApp from the browser is represented to 
+Step 3: The weather data requested from OpenWeatherApp from the browser is represented to 
+the side as "callback=jQuery214 
+the side as "callback=jQuery214 
+zip=90210 
+zip=90210 
+units=imperial 
+units=imperial 
+appid=API KEY" 
+appid=API KEY" 
+Step 4: The JSONP string returned by the browser is represented by "jQuery214({json })". 
+Step 4: The JSONP string returned by the browser is represented by "jQuery214({json })". 
+Step 5: "jQuery214({ json })" is highlighted to indicate that the weather data is turned into 
+Step 5: "jQuery214({ json })" is highlighted to indicate that the weather data is turned into 
+JavaScript objects. 
+JavaScript objects. 
+Step 6: The lines of code reading "}).done(function(data) { 
+Step 6: The lines of code reading "}).done(function(data) { 
+$("#zip").html(zip ); 
+$("#zip").html(zip ); 
+$("#currentTemp").html( data.main.temp); 
+$("#currentTemp").html( data.main.temp); 
+$("#description"). htm I (data. weather[0]. description); 
+$("#description"). htm I (data. weather[0]. description); 
+$("#humidity").html(data.main.humidity);" are highlighted. 
+$("#humidity").html(data.main.humidity);" are highlighted. 
+The output is updated to read 
+The output is updated to read 
+"Weather for 90210 
+"Weather for 90210 
+Current temp: 53.2 °F 
+Current temp: 53.2 °F 
+Description: clear sky 
+Description: clear sky 
+Humidity: 71 %" 
+Humidity: 71 %" 
+Animation captions: 
+Animation captions: 
+1. Web browser requests weather.html from the Express web server and renders the HTML. 
+1. Web browser requests weather.html from the Express web server and renders the HTML. 
+2. $.ajax() method with data Type parameter "jsonp" creates a script element in the DOM, 
+2. $.ajax() method with data Type parameter "jsonp" creates a script element in the DOM, 
+which makes a request to the Weather API using a "callback" parameter. 
+which makes a request to the Weather API using a "callback" parameter. 
+3. Browser requests weather data from OpenWeatherMap. 
+3. Browser requests weather data from OpenWeatherMap. 
+4. OpenWeatherMap recognizes the JSONP request because of "callback" in the query string 
+4. OpenWeatherMap recognizes the JSONP request because of "callback" in the query string 
+and returns a string containing the JSON weather data wrapped in a function call. 
+and returns a string containing the JSON weather data wrapped in a function call. 
+5. Web browser executes the jQuery function, which converts JSON weather data into 
+5. Web browser executes the jQuery function, which converts JSON weather data into 
+JavaScript objects. 
+JavaScript objects. 
+6. done() function callback is executed with the "data" parameter containing the weather data, 
+6. done() function callback is executed with the "data" parameter containing the weather data, 
+and jQuery html() method updates the webpage with the weather data. 
+and jQuery html() method updates the webpage with the weather data. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY I 7.7.6: Calling the Weather API from the web browser. □ 
+ACTIVITY I 7.7.6: Calling the Weather API from the web browser. □ 
+$.ajax()
+$.ajax()
+XMLHttpRequest
+XMLHttpRequest
+dataType
+dataType
+<script>
+<script>
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+62 of 66 2024-11-17, 12:17 p.m.
+62 of 66 2024-11-17, 12:17 p.m.
+• 
+• 
+7) Does the method use the 
+7) Does the method use the 
+object to make an 
+object to make an 
+HTTP request when the 
+HTTP request when the 
+parameter is set to "jsonp"? 
+parameter is set to "jsonp"? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+2) Does the web browser allow the 
+2) Does the web browser allow the 
+element to make crossorigin HTTP requests? 
+element to make crossorigin HTTP requests? 
+0 Yes 
+0 Yes 
+0 No 
+0 No 
+3) What query string parameter tells 
+3) What query string parameter tells 
+OpenWeatherMap that the request is 
+OpenWeatherMap that the request is 
+a JSONP request? 
+a JSONP request? 
+0 appid 
+0 appid 
+0 zip 
+0 zip 
+0 callback 
+0 callback 
+4) In the animation above, what is the 
+4) In the animation above, what is the 
+name of the function the jQuery 
+name of the function the jQuery 
+library wants the browser to execute 
+library wants the browser to execute 
+when the browser receives the API 
+when the browser receives the API 
+response containing JSON weather 
+response containing JSON weather 
+data? 
+data? 
+0 jQuery214 
+0 jQuery214 
+0 callback 
+0 callback 
+0 imperial 
+0 imperial 
+Exploring further: 
+Exploring further: 
+• Public APls on GitHub.com 
+• Public APls on GitHub.com 
+• Understanding SOAP and REST Basics And Differences 
+• Understanding SOAP and REST Basics And Differences 
+• jQueryr: Working with JSONP 
+• jQueryr: Working with JSONP 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+ready <select>
+ready <select>
+toCurrency
+toCurrency
+<option> <option value="" disabled
+<option> <option value="" disabled
+selected>Select currency</option>
+selected>Select currency</option>
+rates exchangeRates
+rates exchangeRates
+<option>
+<option>
+Canadian Dollar (CAD)
+Canadian Dollar (CAD)
+<option>
+<option>
+allCurrencies
+allCurrencies
+change
+change
+exchangeRates
+exchangeRates
+<input>
+<input>
+resultCurrency
+resultCurrency
+Canadian Dollar (CAN):
+Canadian Dollar (CAN):
+click
+click
+exchangeRates
+exchangeRates
+<textarea> exchangeRates
+<textarea> exchangeRates
+rates
+rates
+exchangeRates
+exchangeRates
+<input> resultCurrency
+<input> resultCurrency
+resultCurrency
+resultCurrency
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+63 of 66 2024-11-17, 12:17 p.m.
+63 of 66 2024-11-17, 12:17 p.m.

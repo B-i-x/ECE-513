@@ -1,0 +1,1614 @@
+RESTful web APls 
+RESTful web APls 
+Modern web applications use web APls to manipulate and transport data between the web browser 
+Modern web applications use web APls to manipulate and transport data between the web browser 
+and web server. A web API provides a standard interface to application data that may be used by other 
+and web server. A web API provides a standard interface to application data that may be used by other 
+clients like mobile applications on phones and smartwatches. A client is a program that sends web 
+clients like mobile applications on phones and smartwatches. A client is a program that sends web 
+API requests. 
+API requests. 
+Web APls typically are REST-based. REST (representational state transfer) is an architectural style 
+Web APls typically are REST-based. REST (representational state transfer) is an architectural style 
+that describes how various components interact in a distributed hypermedia system. A RESTfu/ web 
+that describes how various components interact in a distributed hypermedia system. A RESTfu/ web 
+AP/ is a web API that implements CRUD (create, read/retrieve, update, delete) operations on resources 
+AP/ is a web API that implements CRUD (create, read/retrieve, update, delete) operations on resources 
+using the mechanics of HTTP A resource is a data entity whose representation is accessible via a 
+using the mechanics of HTTP A resource is a data entity whose representation is accessible via a 
+URL. Ex: A representation for a "customer" resource may be accessible at http://paypal.com/customer. 
+URL. Ex: A representation for a "customer" resource may be accessible at http://paypal.com/customer. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.3.1: Web application interacting with a web API to obtain song data. D 
+ACTIVITY 8.3.1: Web application interacting with a web API to obtain song data. D 
+Web browser Web server Database 
+Web browser Web server Database 
+API request ... query ... ... ... GET /songs/123 
+API request ... query ... ... ... GET /songs/123 
+JS Web Song 
+JS Web Song 
+code 
+code 
+I 
+I 
+API data .. API response results .. ... ... - {song} 
+API data .. API response results .. ... ... - {song} 
+Animation content: 
+Animation content: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 40/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+A web browser using JavaScript code, a web server using a web API, and a database with song data 
+A web browser using JavaScript code, a web server using a web API, and a database with song data 
+are shown. The web browser sends an API request with GET /songs/123 to the web server. The web 
+are shown. The web browser sends an API request with GET /songs/123 to the web server. The web 
+server requests the song from the database with a query. The database sends the sends the song 
+server requests the song from the database with a query. The database sends the sends the song 
+back to the web server and the web server sends an API response back to the web browser with the 
+back to the web server and the web server sends an API response back to the web browser with the 
+song. 
+song. 
+Animation captions: 
+Animation captions: 
+1. A web application uses JavaScript to send an API request. The request is for a song resource 
+1. A web application uses JavaScript to send an API request. The request is for a song resource 
+with ID 123. 
+with ID 123. 
+2. The web API requests the song data from the database. 
+2. The web API requests the song data from the database. 
+3. The database returns the song results to the web API. 
+3. The database returns the song results to the web API. 
+4. The web API returns the song resource to the web browser in an API response. 
+4. The web API returns the song resource to the web browser in an API response. 
+I PARTICIPATION 8.3.2: RESTful web APls. ACTIVITY D 
+I PARTICIPATION 8.3.2: RESTful web APls. ACTIVITY D 
+1) Where is data for resources primarily 
+1) Where is data for resources primarily 
+stored? 
+stored? 
+O Web browser 
+O Web browser 
+0 Database 
+0 Database 
+0 Web server 
+0 Web server 
+2) In the animation above, the __ is a 
+2) In the animation above, the __ is a 
+client. 
+client. 
+0 Web browser 
+0 Web browser 
+0 Database 
+0 Database 
+0 Web server 
+0 Web server 
+HTTP request verbs 
+HTTP request verbs 
+RESTful web APls typically use four of the HTTP request verbs to implement CRUD operations: 
+RESTful web APls typically use four of the HTTP request verbs to implement CRUD operations: 
+• POST - Create a new resource 
+• POST - Create a new resource 
+• GET - Retrieve a resource 
+• GET - Retrieve a resource 
+• PUT - Update a resource 
+• PUT - Update a resource 
+• DELETE - Delete a resource 
+• DELETE - Delete a resource 
+0 
+0 
+0 
+0 
+Resources and related data are frequently transmitted with JSON. Ex: A GET request to a Music API 
+Resources and related data are frequently transmitted with JSON. Ex: A GET request to a Music API 
+may return a JSON-encoded list of songs. 
+may return a JSON-encoded list of songs. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 41/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Table 8.3.1: Example requests and responses for a Music API. 
+Table 8.3.1: Example requests and responses for a Music API. 
+Resource Request Description verb 
+Resource Request Description verb 
+/songs GET Get a list of all songs 
+/songs GET Get a list of all songs 
+/songs? GET Get all songs in the pop genre 
+/songs? GET Get all songs in the pop genre 
+genre=pop 
+genre=pop 
+- --
+- --
+/songs/234 GET Get song with ID 234 
+/songs/234 GET Get song with ID 234 
+-
+-
+/songs/999 GET 
+/songs/999 GET 
+Get non-existing song with ID 
+Get non-existing song with ID 
+999 
+999 
+-
+-
+/songs POST Create a new song 
+/songs POST Create a new song 
+/songs/234 PUT Update song with ID 234 
+/songs/234 PUT Update song with ID 234 
+I • 
+I • 
+/songs/234 DELETE Delete song with ID 234 
+/songs/234 DELETE Delete song with ID 234 
+I I 
+I I 
+◄ 
+◄ 
+I PARTICIPATION 8.3.3: HTTP request verbs. ACTIVITY 
+I PARTICIPATION 8.3.3: HTTP request verbs. ACTIVITY 
+1) What does a web API return for a GET 
+1) What does a web API return for a GET 
+request with no query string or other 
+request with no query string or other 
+path information? 
+path information? 
+0 One resource 
+0 One resource 
+0 No resources 
+0 No resources 
+0 All resources 
+0 All resources 
+2) Which request verb represents an 
+2) Which request verb represents an 
+update to an existing resource. 
+update to an existing resource. 
+0 GET 
+0 GET 
+Q POST 
+Q POST 
+Q PUT 
+Q PUT 
+3) What response indicates the request 
+3) What response indicates the request 
+was successfully fulfilled by the web 
+was successfully fulfilled by the web 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+Status code 
+Status code 
+200 OK 
+200 OK 
+200 OK 
+200 OK 
+200 OK 
+200 OK 
+404 Not Found 
+404 Not Found 
+-
+-
+201 Created 
+201 Created 
+204 No 
+204 No 
+Content 
+Content 
+-
+-
+204 No 
+204 No 
+Content 
+Content 
+► 
+► 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+42/100 
+42/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+server but no message body is 
+server but no message body is 
+returned? 
+returned? 
+0 200 
+0 200 
+0 204 
+0 204 
+0 404 
+0 404 
+4) What response indicates the requested 
+4) What response indicates the requested 
+resource to be deleted does not exist? 
+resource to be deleted does not exist? 
+0 200 
+0 200 
+0 204 
+0 204 
+0 404 
+0 404 
+5) Which request verb is likely to return a 
+5) Which request verb is likely to return a 
+207 response? 
+207 response? 
+Q POST 
+Q POST 
+Q DELETE 
+Q DELETE 
+Q GET 
+Q GET 
+6) Which request verb usually does not 
+6) Which request verb usually does not 
+require the browser to send JSON data 
+require the browser to send JSON data 
+to the web server? 
+to the web server? 
+Q POST 
+Q POST 
+Q PUT 
+Q PUT 
+Q GET 
+Q GET 
+Web services and SOAP 
+Web services and SOAP 
+zyBooks 
+zyBooks 
+The term "web service" is often used synonymously with "web AP/''. but web services are 
+The term "web service" is often used synonymously with "web AP/''. but web services are 
+usually associated with XML-based SOAP (Simple Object Access Protocol) over HTTP. 
+usually associated with XML-based SOAP (Simple Object Access Protocol) over HTTP. 
+SOAP and related technologies provide some benefits over REST, but SOAP web 
+SOAP and related technologies provide some benefits over REST, but SOAP web 
+services are generally more complex to build and use than REST-based web AP/s. 
+services are generally more complex to build and use than REST-based web AP/s. 
+◄ 
+◄ 
+Express router 
+Express router 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+0 
+0 
+► 
+► 
+43/100 
+43/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+To create a web API using Express, a developer uses the express.Router class to create modular route 
+To create a web API using Express, a developer uses the express.Router class to create modular route 
+callbacks for the web API endpoints. An endpoint is a URL for a web API used to access a resource. 
+callbacks for the web API endpoints. An endpoint is a URL for a web API used to access a resource. 
+Ex: http: // yahoo.com/ api / movies. 
+Ex: http: // yahoo.com/ api / movies. 
+The example below creates an Express server that listens on port 3000. A route that was created with 
+The example below creates an Express server that listens on port 3000. A route that was created with 
+the express. Router returns a single song in JSON format when a GET request is sent to 
+the express. Router returns a single song in JSON format when a GET request is sent to 
+http://localhost:3000/api/songs. 
+http://localhost:3000/api/songs. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.3.4: Express router sends JSON-encoded song to web browser. 
+ACTIVITY 8.3.4: Express router sends JSON-encoded song to web browser. 
+const express = require ("express" ); 
+const express = require ("express" ); 
+const app = express (); 
+const app = express (); 
+const router = express . Router (); 
+const router = express . Router (); 
+II GET request returns JSON-encoded song 
+II GET request returns JSON-encoded song 
+router . get ("/songs" , function (req, res) { 
+router . get ("/songs" , function (req, res) { 
+const song = { 
+const song = { 
+} ; 
+} ; 
+title : "Uptown Funk" , 
+title : "Uptown Funk" , 
+artist : "Bruno Mars" , 
+artist : "Bruno Mars" , 
+popularity : 10 , 
+popularity : 10 , 
+releaseDate : new Date (2014, 10 , 10 ), 
+releaseDate : new Date (2014, 10 , 10 ), 
+genre : [ "funk" , "boogie" ] 
+genre : [ "funk" , "boogie" ] 
+res . json (song); 
+res . json (song); 
+} ) ; 
+} ) ; 
+II All requests to API begin with lapi 
+II All requests to API begin with lapi 
+app . use ("/api" , router); 
+app . use ("/api" , router); 
+app . listen (3000); 
+app . listen (3000); 
+Animation content: 
+Animation content: 
+A block of Node.js is shown: 
+A block of Node.js is shown: 
+const express = require("express"); 
+const express = require("express"); 
+const app = expressQ; 
+const app = expressQ; 
+const router= express.Router(); 
+const router= express.Router(); 
+// GET request returns JSON-encoded song 
+// GET request returns JSON-encoded song 
+router.get("/songs", function(req, res) { 
+router.get("/songs", function(req, res) { 
+const song = { 
+const song = { 
+title: "Uptown Funk", 
+title: "Uptown Funk", 
+artist: "Bruno Mars", 
+artist: "Bruno Mars", 
+popularity: 10, 
+popularity: 10, 
+releaseDate: new Date(2014, 10, 10), 
+releaseDate: new Date(2014, 10, 10), 
+genre: ["funk", "boogie"] 
+genre: ["funk", "boogie"] 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+Web browser 
+Web browser 
+http://localhost:3000/api/songs 
+http://localhost:3000/api/songs 
+{"title":"Uptown Funk", 
+{"title":"Uptown Funk", 
+I "artist":"Bruno Mars", 
+I "artist":"Bruno Mars", 
+"popularity": 10, 
+"popularity": 10, 
+"releaseDate": 
+"releaseDate": 
+"2014-11-10T06:00:00.000Z", 
+"2014-11-10T06:00:00.000Z", 
+"genre": ["funk", "boogie"]} _J 
+"genre": ["funk", "boogie"]} _J 
+... GET 
+... GET 
+/a pi/song {song} 
+/a pi/song {song} 
+,, 
+,, 
+Web server 
+Web server 
+D 
+D 
+44/100 
+44/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+}; 
+}; 
+res.json( song); 
+res.json( song); 
+}); 
+}); 
+// All requests to API begin with /api 
+// All requests to API begin with /api 
+app.use("/api", router); 
+app.use("/api", router); 
+app. listen(3000); 
+app. listen(3000); 
+zyBooks 
+zyBooks 
+A web browser is shown with the URL http://localhost:3000/api/songs. The web browser sends a 
+A web browser is shown with the URL http://localhost:3000/api/songs. The web browser sends a 
+GET request with /api/songs to the web server. The web server returns {songs} and 
+GET request with /api/songs to the web server. The web server returns {songs} and 
+{"title":"Uptown Funk", 
+{"title":"Uptown Funk", 
+"artist":"Bruno Mars", 
+"artist":"Bruno Mars", 
+"popularity":10, 
+"popularity":10, 
+"releaseDate": 
+"releaseDate": 
+"2014-11-1 0T06:00:00.000Z", 
+"2014-11-1 0T06:00:00.000Z", 
+"genre":["funk","boogie"]} 
+"genre":["funk","boogie"]} 
+displays on the web browser. 
+displays on the web browser. 
+Animation captions: 
+Animation captions: 
+1. Express router creates a "/songs" route. 
+1. Express router creates a "/songs" route. 
+2. Any URL that begins with /api will be routed to the Express router, so /api/songs request is 
+2. Any URL that begins with /api will be routed to the Express router, so /api/songs request is 
+routed to /songs route. 
+routed to /songs route. 
+3. Browser requests song data with API request: http://localhost:3000/api/songs 
+3. Browser requests song data with API request: http://localhost:3000/api/songs 
+4. The /songs route uses res.json() to return a JSON-encoded song in the API response. 
+4. The /songs route uses res.json() to return a JSON-encoded song in the API response. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.3.5: Express router. D 
+ACTIVITY 8.3.5: Express router. D 
+Refer to the expanded example below, which supports GET and POST requests. 
+Refer to the expanded example below, which supports GET and POST requests. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 45/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+canst express = require ( "express" ); 
+canst express = require ( "express" ); 
+canst app = express (); 
+canst app = express (); 
+canst router = express . Router (); 
+canst router = express . Router (); 
+II Middleware that parses HTTP requests with JSON body 
+II Middleware that parses HTTP requests with JSON body 
+app . use (express . json ()); 
+app . use (express . json ()); 
+II GET request returns JSON-encoded songs 
+II GET request returns JSON-encoded songs 
+router . get ("/songs" , function (req, res) { 
+router . get ("/songs" , function (req, res) { 
+canst songs = [ 
+canst songs = [ 
+l ; 
+l ; 
+} , 
+} , 
+{ 
+{ 
+title : "We Found Love" , 
+title : "We Found Love" , 
+artist : "Rihanna" , 
+artist : "Rihanna" , 
+popularity : 10 , 
+popularity : 10 , 
+releaseDate : new Date (2011, 9 , 22 ), 
+releaseDate : new Date (2011, 9 , 22 ), 
+genre : [ "electro house" ] 
+genre : [ "electro house" ] 
+title : "Happy" , 
+title : "Happy" , 
+artist : "Pharrell Williams" , 
+artist : "Pharrell Williams" , 
+popularity : 10 , 
+popularity : 10 , 
+releaseDate : new Date (2013, 11 , 21 ), 
+releaseDate : new Date (2013, 11 , 21 ), 
+genre : [ "soul" , "new soul" ] 
+genre : [ "soul" , "new soul" ] 
+res . json (songs); 
+res . json (songs); 
+} ) ; 
+} ) ; 
+II POST request of JSON-encoded song displays song in the console 
+II POST request of JSON-encoded song displays song in the console 
+router . post ("/songs" , function (req, res) { 
+router . post ("/songs" , function (req, res) { 
+console . log (req . body ); 
+console . log (req . body ); 
+res . sendStatus (201); 
+res . sendStatus (201); 
+} ) ; 
+} ) ; 
+II All requests to API begin with lapi 
+II All requests to API begin with lapi 
+app . use ("/api" , router); 
+app . use ("/api" , router); 
+app . listen (3000); 
+app . listen (3000); 
+1) What status code does a GET request 
+1) What status code does a GET request 
+to http://localhost:3000/songs return? 
+to http://localhost:3000/songs return? 
+0 200 
+0 200 
+0 201 
+0 201 
+0 404 
+0 404 
+2) What does a GET request to 
+2) What does a GET request to 
+http://localhost:3000/api/songs return 
+http://localhost:3000/api/songs return 
+in the response body? 
+in the response body? 
+0 A single song 
+0 A single song 
+0 Array of two songs 
+0 Array of two songs 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+46/100 
+46/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+0 Two individual song objects 
+0 Two individual song objects 
+3) __ is middleware that enables HTTP 
+3) __ is middleware that enables HTTP 
+requests containing JSON to be 
+requests containing JSON to be 
+automatically converted into a 
+automatically converted into a 
+JavaScript object. 
+JavaScript object. 
+0 express.json() 
+0 express.json() 
+0 router. post() 
+0 router. post() 
+0 res.sendStatus() 
+0 res.sendStatus() 
+4) What MIME type is missing in the 
+4) What MIME type is missing in the 
+HTTP request below so the Express 
+HTTP request below so the Express 
+app outputs the JSON-encoded song 
+app outputs the JSON-encoded song 
+to the console? 
+to the console? 
+POST /api/songs HTTP / 1.1 
+POST /api/songs HTTP / 1.1 
+Host: localhost : 3000 
+Host: localhost : 3000 
+Content-Type: 
+Content-Type: 
+User-Agent: Mozilla/5.0 
+User-Agent: Mozilla/5.0 
+Chrome / 48.0.2564 
+Chrome / 48.0.2564 
+"title": "Stayin' Alive", 
+"title": "Stayin' Alive", 
+"artist": "Bee Gees", 
+"artist": "Bee Gees", 
+"popularity": 9, 
+"popularity": 9, 
+"releaseDate": "1977-02-01", 
+"releaseDate": "1977-02-01", 
+"genre": ["disco"] 
+"genre": ["disco"] 
+0 text/plain 
+0 text/plain 
+0 application/json 
+0 application/json 
+0 text/javascript 
+0 text/javascript 
+5) The call to router. get ( 11 / songs 11 , 
+5) The call to router. get ( 11 / songs 11 , 
+... ) above could be replaced with a 
+... ) above could be replaced with a 
+call to app.get ( 11 /api/songs 11 , 
+call to app.get ( 11 /api/songs 11 , 
+... ) without changing how the API 
+... ) without changing how the API 
+works. 
+works. 
+0 True 
+0 True 
+0 False 
+0 False 
+zyBooks 
+zyBooks 
+Developer tools for interacting with web APls 
+Developer tools for interacting with web APls 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+0 
+0 
+47/100 
+47/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Developers use a variety of tools to test and interact with web APls. cURL is a popular 
+Developers use a variety of tools to test and interact with web APls. cURL is a popular 
+command-line tool for sending HTTP requests. The image below shows curl sending 
+command-line tool for sending HTTP requests. The image below shows curl sending 
+GET and POST requests to the Music API. 
+GET and POST requests to the Music API. 
+$ curl http: //localhost:3000 / api / songs 
+$ curl http: //localhost:3000 / api / songs 
+{"title":"Uptown Funk", "artist" : "Bruno Mars","popularity":10, 
+{"title":"Uptown Funk", "artist" : "Bruno Mars","popularity":10, 
+"releaseDate":"2014-ll-10T06:00 : 00.000Z","genre" : ["funk","boogie " ]} 
+"releaseDate":"2014-ll-10T06:00 : 00.000Z","genre" : ["funk","boogie " ]} 
+$ curl -H "Content-Type: application / json" -X POST -d 
+$ curl -H "Content-Type: application / json" -X POST -d 
+'{"title":"Hello","artist":"Adele"}' http: //localhost:3000 / api/song s 
+'{"title":"Hello","artist":"Adele"}' http: //localhost:3000 / api/song s 
+Created 
+Created 
+Postman is a popular application that allows developers to formulate HTTP requests. 
+Postman is a popular application that allows developers to formulate HTTP requests. 
+API queries can be saved into collections for easy retrieval. The screenshot below 
+API queries can be saved into collections for easy retrieval. The screenshot below 
+shows a GET request to the example Music API that returned back a JSON-encoded 
+shows a GET request to the example Music API that returned back a JSON-encoded 
+song. 
+song. 
+GET Fintl so g X + ooo 
+GET Fintl so g X + ooo 
+► Find song 
+► Find song 
+GET T hrrp://localhos,:3000/api/songs 
+GET T hrrp://localhos,:3000/api/songs 
+Params Auch Headers (6) Body Pre-req. Tests Serrin.gs 
+Params Auch Headers (6) Body Pre-req. Tests Serrin.gs 
+Query Pa@ms 
+Query Pa@ms 
+KEY 
+KEY 
+Key 
+Key 
+Body,., 
+Body,., 
+Pretty Raw Preview Visualize 
+Pretty Raw Preview Visualize 
+1 
+1 
+2 "t .'..tle" : "Uptown Funk" , 
+2 "t .'..tle" : "Uptown Funk" , 
+3 " ar-t i st" : "Bruno Mars" , 
+3 " ar-t i st" : "Bruno Mars" , 
+4 "popularit y" : 10, 
+4 "popularit y" : 10, 
+VALUE 
+VALUE 
+Value 
+Value 
+JSON T 
+JSON T 
+5 "releaseDat e " : "2014 - 11- 10T06:B0:B~ .eeeZ" , 
+5 "releaseDat e " : "2014 - 11- 10T06:B0:B~ .eeeZ" , 
+6 " genr~e" : [ 
+6 " genr~e" : [ 
+7 "funk" , 
+7 "funk" , 
+8 "boogie" 
+8 "boogie" 
+9 
+9 
+No Environment T 
+No Environment T 
+Examples D "' BUILD c;9 S 
+Examples D "' BUILD c;9 S 
+send ... Save .. 
+send ... Save .. 
+Cookies Code 
+Cookies Code 
+DESCRl?TJON ••• Bulk Edit 
+DESCRl?TJON ••• Bulk Edit 
+De.scripuon 
+De.scripuon 
+@ 200 OK 67 ms 341 B Save Response • 
+@ 200 OK 67 ms 341 B Save Response • 
+,. Q 
+,. Q 
+I 
+I 
+10 I 
+10 I 
+The screenshot below shows a POST request in Postman. The Body tab shows the 
+The screenshot below shows a POST request in Postman. The Body tab shows the 
+JSON-encoded song to be sent in the POST request. The "raw" and "JSON" options are 
+JSON-encoded song to be sent in the POST request. The "raw" and "JSON" options are 
+selected so the HTTP request will automatically include a 
+selected so the HTTP request will automatically include a 
+Content-Type: application/j son header. After pressing Send, Postman 
+Content-Type: application/j son header. After pressing Send, Postman 
+shows the "Created" API response. 
+shows the "Created" API response. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 48/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Saves.orig X + ooo 
+Saves.orig X + ooo 
+No Environment T 
+No Environment T 
+► Save song Examples D "' BUILD c;9 S 
+► Save song Examples D "' BUILD c;9 S 
+POST T hrrp://localhos,:3000/api/songs send ... Save "' 
+POST T hrrp://localhos,:3000/api/songs send ... Save "' 
+Pararns Auch Headers (8) Body • Pre-req. Tests Sercings Cookies Code 
+Pararns Auch Headers (8) Body • Pre-req. Tests Sercings Cookies Code 
+raw '"' JSON "' Beau ify 
+raw '"' JSON "' Beau ify 
+1 I 
+1 I 
+1 "t itle" : "He o", 
+1 "t itle" : "He o", 
+4 "popu arity": 10, 
+4 "popu arity": 10, 
+5 "releaseDate " : "2015-10 - 23", 
+5 "releaseDate " : "2015-10 - 23", 
+6 "genre" : [ "soul "] 
+6 "genre" : [ "soul "] 
+1 I 
+1 I 
+Body ,., @ 201 Created 48 ms 216 B Save Response • 
+Body ,., @ 201 Created 48 ms 216 B Save Response • 
+Prerry Raw Preview Visualize Tex "' Iii Q 
+Prerry Raw Preview Visualize Tex "' Iii Q 
+1 Cr eat ed 
+1 Cr eat ed 
+Using a database 
+Using a database 
+The previous Music API example does not interact with a database. The figure below uses the 
+The previous Music API example does not interact with a database. The figure below uses the 
+mongoose module to store and retrieve song information from a MongoDB database. The get route 
+mongoose module to store and retrieve song information from a MongoDB database. The get route 
+uses the Mongoose Model.find () method to retrieve all songs in the database. The post route 
+uses the Mongoose Model.find () method to retrieve all songs in the database. The post route 
+uses the Mongoose Document. save () method to save the posted song to the database. 
+uses the Mongoose Document. save () method to save the posted song to the database. 
+Figure 8.3.1: Music API using Mongoose to access/save data in MongoDB. 
+Figure 8.3.1: Music API using Mongoose to access/save data in MongoDB. 
+models/song.js server.js 
+models/song.js server.js 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 49/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+const db = require ( " .. /db" ); 
+const db = require ( " .. /db" ); 
+II Create a model from the schema 
+II Create a model from the schema 
+const Song db . model ( "Song" , { 
+const Song db . model ( "Song" , { 
+title : { type : String, required : true 
+title : { type : String, required : true 
+} , 
+} , 
+artist : 
+artist : 
+popularity : 
+popularity : 
+} , 
+} , 
+releaseDate : 
+releaseDate : 
+} , 
+} , 
+genre : 
+genre : 
+} ) ; 
+} ) ; 
+module . exports 
+module . exports 
+db.js 
+db.js 
+String, 
+String, 
+{ type : Number , min : 1 , max : 10 
+{ type : Number , min : 1 , max : 10 
+type : Date , default : Date . now 
+type : Date , default : Date . now 
+String l 
+String l 
+Song; 
+Song; 
+const mongoose = require ("mongoose" ); 
+const mongoose = require ("mongoose" ); 
+mongoose . connect ("mongodb://localhost/musicdb" ); 
+mongoose . connect ("mongodb://localhost/musicdb" ); 
+module . exports = mongoose ; 
+module . exports = mongoose ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+const express = 
+const express = 
+require ("express" ); 
+require ("express" ); 
+const Song = 
+const Song = 
+require ("./models/song" ); 
+require ("./models/song" ); 
+const app = express (); 
+const app = express (); 
+II Middleware that parses 
+II Middleware that parses 
+HTTP requests with JSON 
+HTTP requests with JSON 
+body 
+body 
+app . use (express . json ()); 
+app . use (express . json ()); 
+const router = 
+const router = 
+express . Router (); 
+express . Router (); 
+II Get list of all songs in 
+II Get list of all songs in 
+the database 
+the database 
+router . get ("/songs" , 
+router . get ("/songs" , 
+function (req, res) { 
+function (req, res) { 
+Song . find (function (err, 
+Song . find (function (err, 
+songs) { 
+songs) { 
+if (err) 
+if (err) 
+res .status (400) . send (err); 
+res .status (400) . send (err); 
+} 
+} 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+else { 
+else { 
+res . json (songs); 
+res . json (songs); 
+} 
+} 
+II Add a new song to the 
+II Add a new song to the 
+database 
+database 
+router . post ("/songs" , 
+router . post ("/songs" , 
+function (req, res) { 
+function (req, res) { 
+II Save the song 
+II Save the song 
+const song = new 
+const song = new 
+Song (req . body ); 
+Song (req . body ); 
+song . save (function (err, 
+song . save (function (err, 
+song) { 
+song) { 
+if (err) 
+if (err) 
+res .status (400) . send (err); 
+res .status (400) . send (err); 
+} 
+} 
+else { 
+else { 
+r es . statu s (201) . j son (song ); 
+r es . statu s (201) . j son (song ); 
+} 
+} 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+app . use ("/api" , router); 
+app . use ("/api" , router); 
+app . listen (3000); 
+app . listen (3000); 
+50/100 
+50/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+To manage the complexity of web APls, developers organize routes and API functionality into separate 
+To manage the complexity of web APls, developers organize routes and API functionality into separate 
+Node.js modules. The Node.js project in the below figure defines the song routes in api/ songs. j s. 
+Node.js modules. The Node.js project in the below figure defines the song routes in api/ songs. j s. 
+In server.js, the song routes are defined in relation to the relative path / api/ songs, so the"/" route 
+In server.js, the song routes are defined in relation to the relative path / api/ songs, so the"/" route 
+path in songs.js means the full path is / api / songs/ or /api/songs without the"/" at the end. 
+path in songs.js means the full path is / api / songs/ or /api/songs without the"/" at the end. 
+Figure 8.3.2: Organizing routes and APls in separate modules: Example Music 
+Figure 8.3.2: Organizing routes and APls in separate modules: Example Music 
+API project. 
+API project. 
+musicproject 
+musicproject 
+~ api 
+~ api 
+I t._ songs . j s 
+I t._ songs . j s 
+~ models 
+~ models 
+I t._ song.js 
+I t._ song.js 
+~ node modules 
+~ node modules 
+~ ;xpress 
+~ ;xpress 
+~ mongoose 
+~ mongoose 
+t._ etc ... 
+t._ etc ... 
+db.js 
+db.js 
+package.json 
+package.json 
+server.js 
+server.js 
+api/songs.js models/song.js 
+api/songs.js models/song.js 
+const db = require ( " .. /db" ); 
+const db = require ( " .. /db" ); 
+II Create a model from the schema 
+II Create a model from the schema 
+const Song 
+const Song 
+title : 
+title : 
+db . model ("Song" , { 
+db . model ("Song" , { 
+} ' 
+} ' 
+} ' 
+} ' 
+} ' 
+} ' 
+} ) ; 
+} ) ; 
+artist : 
+artist : 
+popularity : 
+popularity : 
+releaseDate : 
+releaseDate : 
+genre : 
+genre : 
+module . exports 
+module . exports 
+db.js 
+db.js 
+{ type : String, required : true 
+{ type : String, required : true 
+String, 
+String, 
+{ type : Number, min : 1 , max : 10 
+{ type : Number, min : 1 , max : 10 
+type : Date , default : Date . now 
+type : Date , default : Date . now 
+String ] 
+String ] 
+Song ; 
+Song ; 
+const mongoose = require ("mongoose" ); 
+const mongoose = require ("mongoose" ); 
+mongoose . connect ( "mongodb://localhost/musicdb" ); 
+mongoose . connect ( "mongodb://localhost/musicdb" ); 
+module . exports = mongoose ; 
+module . exports = mongoose ; 
+server.js 
+server.js 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 51/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+const Song = 
+const Song = 
+require ( " .. /models/song" ); 
+require ( " .. /models/song" ); 
+const router = 
+const router = 
+require ( "express" ) . Router (); 
+require ( "express" ) . Router (); 
+II Get list of all songs in 
+II Get list of all songs in 
+the database 
+the database 
+zyBooks 
+zyBooks 
+const express = require ("express" ); 
+const express = require ("express" ); 
+const app = express (); 
+const app = express (); 
+II Middleware that parses HTTP requests with 
+II Middleware that parses HTTP requests with 
+JSON body 
+JSON body 
+app . use (express . json ()); 
+app . use (express . json ()); 
+router . get ("/" , 
+router . get ("/" , 
+function (req, res) 
+function (req, res) 
+app . use ("/api/songs" , require ("./api/songs" )); 
+app . use ("/api/songs" , require ("./api/songs" )); 
+Song . find (function (err, 
+Song . find (function (err, 
+songs) { 
+songs) { 
+if (err) { 
+if (err) { 
+res . status (400) . send (err); 
+res . status (400) . send (err); 
+} 
+} 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+else { 
+else { 
+res . json (songs); 
+res . json (songs); 
+} 
+} 
+II Add a new song to the 
+II Add a new song to the 
+database 
+database 
+router . post ("/" , 
+router . post ("/" , 
+function (req, res) 
+function (req, res) 
+const song = new 
+const song = new 
+Song (req . body ); 
+Song (req . body ); 
+song . save (function (err, 
+song . save (function (err, 
+song ) { 
+song ) { 
+if (err) { 
+if (err) { 
+res . status (400) . send (err); 
+res . status (400) . send (err); 
+} 
+} 
+else { 
+else { 
+res . status (201) . json (song); 
+res . status (201) . json (song); 
+} 
+} 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+module . exports router; 
+module . exports router; 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.3.6: Web API project. 
+ACTIVITY 8.3.6: Web API project. 
+app . listen (3000); 
+app . listen (3000); 
+Use the Music API project in the figure above. 
+Use the Music API project in the figure above. 
+1) Which file defines the Mongoose 
+1) Which file defines the Mongoose 
+model? 
+model? 
+O models/song.js 
+O models/song.js 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+0 
+0 
+52/100 
+52/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+0 api/songs.js 
+0 api/songs.js 
+0 db.js 
+0 db.js 
+2) What is the name of the MongoDB 
+2) What is the name of the MongoDB 
+database storing song data? 
+database storing song data? 
+0 songs 
+0 songs 
+0 musicdb 
+0 musicdb 
+0 db.js 
+0 db.js 
+3) After POSTing the same JSON data 
+3) After POSTing the same JSON data 
+twice to the Music API, what is stored 
+twice to the Music API, what is stored 
+in the MongoDB database? 
+in the MongoDB database? 
+0 Nothing 
+0 Nothing 
+0 One version of the song 
+0 One version of the song 
+O Two versions of the same song 
+O Two versions of the same song 
+with different song IDs 
+with different song IDs 
+4) In which file should the API code to 
+4) In which file should the API code to 
+handle the DELETE verb for the path 
+handle the DELETE verb for the path 
+/ api/ songs be added? 
+/ api/ songs be added? 
+0 models/song.js 
+0 models/song.js 
+0 server.js 
+0 server.js 
+0 api/songs.js 
+0 api/songs.js 
+5) What file should be modified to change 
+5) What file should be modified to change 
+the route path / api/ songs to 
+the route path / api/ songs to 
+/api/music? 
+/api/music? 
+0 models/song.js 
+0 models/song.js 
+O server.js 
+O server.js 
+0 api/songs.js 
+0 api/songs.js 
+Search by genre and ID 
+Search by genre and ID 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+The Node.js code below improves the Music API to support searching by genre using the query string 
+The Node.js code below improves the Music API to support searching by genre using the query string 
+parameter "genre". 
+parameter "genre". 
+Figure 8.3.3: GET request can limit results by genre using the query string. 
+Figure 8.3.3: GET request can limit results by genre using the query string. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 53/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+router . get ("/" , function (req, res) { 
+router . get ("/" , function (req, res) { 
+let query ={}; 
+let query ={}; 
+zyBooks 
+zyBooks 
+II Check if genre was supplied in query string 
+II Check if genre was supplied in query string 
+if (reg . query . genre ) { 
+if (reg . query . genre ) { 
+} ) ; 
+} ) ; 
+query = { genre : reg . query . genre }; 
+query = { genre : reg . query . genre }; 
+Song . find (query, function (err, songs ) 
+Song . find (query, function (err, songs ) 
+if (err) { 
+if (err) { 
+} ) ; 
+} ) ; 
+res . status (400) . send (err); 
+res . status (400) . send (err); 
+else { 
+else { 
+res . json (songs); 
+res . json (songs); 
+} 
+} 
+Request: 
+Request: 
+http://localhost:3000/api/songs?genre=funk 
+http://localhost:3000/api/songs?genre=funk 
+Response: 
+Response: 
+[{" id" : "56f00ce0853096ac12c88ba5","title" : "Uptown Funk", 
+[{" id" : "56f00ce0853096ac12c88ba5","title" : "Uptown Funk", 
+"artist":"Bruno Mars","popularity":10,"_v" : 0,"genre": 
+"artist":"Bruno Mars","popularity":10,"_v" : 0,"genre": 
+["funk","boogie"], 
+["funk","boogie"], 
+"releaseDate":"2014-11-10T06 : 00:00 . 000Z"}, 
+"releaseDate":"2014-11-10T06 : 00:00 . 000Z"}, 
+{" id":"56f00ce0853096ac12c88ba8","title":"Brick House", 
+{" id":"56f00ce0853096ac12c88ba8","title":"Brick House", 
+"artist":"Commodores","popularity":8,"_v":0,"genre": 
+"artist":"Commodores","popularity":8,"_v":0,"genre": 
+["disco", "funk"], 
+["disco", "funk"], 
+"releaseDate":"1977-08-26T05:00:00.000Z"}, 
+"releaseDate":"1977-08-26T05:00:00.000Z"}, 
+{" id":"56f00ce0853096ac12c88ba9","title":"Super Freak", 
+{" id":"56f00ce0853096ac12c88ba9","title":"Super Freak", 
+"artist": "Rick James", "popularity": 8," v" : 0, "genre": ["funk"], 
+"artist": "Rick James", "popularity": 8," v" : 0, "genre": ["funk"], 
+"releaseDate":"1981-07-lOTOS:OO:OO.OOOZ"}] 
+"releaseDate":"1981-07-lOTOS:OO:OO.OOOZ"}] 
+Most web APls support finding a resource by ID. The route in the figure below only executes if a URL 
+Most web APls support finding a resource by ID. The route in the figure below only executes if a URL 
+contains characters after "/api/songs/". If the characters do not match a valid Objectld, the err object 
+contains characters after "/api/songs/". If the characters do not match a valid Objectld, the err object 
+will contain an error message that is transmitted to the client. 
+will contain an error message that is transmitted to the client. 
+Figure 8.3.4: GET request to find specific song by ID. 
+Figure 8.3.4: GET request to find specific song by ID. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 54/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+router . get ("/:id" , function (req, res) { 
+router . get ("/:id" , function (req, res) { 
+II Use the ID in the URL path to find the song 
+II Use the ID in the URL path to find the song 
+Song . findByid (req . params . id, function (err, song) 
+Song . findByid (req . params . id, function (err, song) 
+if (err) { 
+if (err) { 
+res . status (400) . send (err); 
+res . status (400) . send (err); 
+else { 
+else { 
+res . j son (song ); 
+res . j son (song ); 
+} 
+} 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+Request: 
+Request: 
+http ://localhost:3000 / api / songs/ 56ecle48960dd58447478ce0 
+http ://localhost:3000 / api / songs/ 56ecle48960dd58447478ce0 
+Response: 
+Response: 
+{" id" : "56ecle48960dd58447478ce0","title":"Humble And Kind", 
+{" id" : "56ecle48960dd58447478ce0","title":"Humble And Kind", 
+"artist":"Tim McGraw","popularity" : 8,"genre'': ["country 
+"artist":"Tim McGraw","popularity" : 8,"genre'': ["country 
+pop"],"releaseDate" : 
+pop"],"releaseDate" : 
+"2016-02-01T06:00:00Z","_v":0} 
+"2016-02-01T06:00:00Z","_v":0} 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 
+ACTIVITY 
+◄ 
+◄ 
+8.3.7: Web API GET parameters. 
+8.3.7: Web API GET parameters. 
+Refer to the two figures above. 
+Refer to the two figures above. 
+1) The GET request to / api / songs 
+1) The GET request to / api / songs 
+returns all songs in the MongoDB 
+returns all songs in the MongoDB 
+database. 
+database. 
+0 True 
+0 True 
+O False 
+O False 
+2) The GET request to/ api/ songs? 
+2) The GET request to/ api/ songs? 
+genre=rap returns an empty array if 
+genre=rap returns an empty array if 
+no songs exist in the MongoDB 
+no songs exist in the MongoDB 
+database with a "rap" genre. 
+database with a "rap" genre. 
+0 True 
+0 True 
+O False 
+O False 
+3) The GET request to 
+3) The GET request to 
+I api / songs/ some id where some id 
+I api / songs/ some id where some id 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+► 
+► 
+0 
+0 
+0 
+0 
+0 
+0 
+55/100 
+55/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+is not a valid Objectld results in a 400 
+is not a valid Objectld results in a 400 
+response. 
+response. 
+0 True 
+0 True 
+O False 
+O False 
+4) The GET request to 
+4) The GET request to 
+I api/ songs/ some id where some id 
+I api/ songs/ some id where some id 
+is a valid Objectld returns a 404 
+is a valid Objectld returns a 404 
+response if the ID is not in the 
+response if the ID is not in the 
+database. 
+database. 
+0 True 
+0 True 
+O False 
+O False 
+Updating and deleting songs 
+Updating and deleting songs 
+zyBooks 
+zyBooks 
+0 
+0 
+Web APls use the PUT verb to update an existing resource. The figure below uses the Mongoose 
+Web APls use the PUT verb to update an existing resource. The figure below uses the Mongoose 
+function upda teOne () to update a song with data transmitted in the body of the PUT request. The 
+function upda teOne () to update a song with data transmitted in the body of the PUT request. The 
+Music API returns a 204 status for a successful update, a 400 status if an error occurs, and a 404 
+Music API returns a 204 status for a successful update, a 400 status if an error occurs, and a 404 
+status if the song's ID is not found. 
+status if the song's ID is not found. 
+Figure 8.3.5: Update song's title and popularity with PUT verb in Music API. 
+Figure 8.3.5: Update song's title and popularity with PUT verb in Music API. 
+router . put ("/:id" , function (req, res) { 
+router . put ("/:id" , function (req, res) { 
+} ) ; 
+} ) ; 
+II Song to update sent in body of request 
+II Song to update sent in body of request 
+canst song = reg . body ; 
+canst song = reg . body ; 
+II Replace existing song fields with updated song 
+II Replace existing song fields with updated song 
+Song . updateOne ({ id : req . params . id }, song, function (err, result) { 
+Song . updateOne ({ id : req . params . id }, song, function (err, result) { 
+if (err) { 
+if (err) { 
+} ) ; 
+} ) ; 
+res .status (400) . send (err); 
+res .status (400) . send (err); 
+else if (result .matchedCount 0 ) { 
+else if (result .matchedCount 0 ) { 
+res .sendStatus (404); 
+res .sendStatus (404); 
+else { 
+else { 
+res .sendStatus (204); 
+res .sendStatus (204); 
+} 
+} 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 56/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+HTTP request 
+HTTP request 
+PUT /api/song/56ecle48960dd58447478cdf 
+PUT /api/song/56ecle48960dd58447478cdf 
+HTTP/1.1 
+HTTP/1.1 
+Host: localhost:3000 
+Host: localhost:3000 
+Content-Type: application/json 
+Content-Type: application/json 
+User-Agent: Mozilla/5.0 Chrome/48.0.2564 
+User-Agent: Mozilla/5.0 Chrome/48.0.2564 
+"title": "Hello There!", 
+"title": "Hello There!", 
+"popularity": 8 
+"popularity": 8 
+HTTP response 
+HTTP response 
+HTTP/1.1 204 No Content 
+HTTP/1.1 204 No Content 
+Date: Mon, 15 Mar 2021 
+Date: Mon, 15 Mar 2021 
+14:26:20 GMT 
+14:26:20 GMT 
+ETag: W/"66-
+ETag: W/"66-
+cZws74LP8XEnwbIEyLgWFw" 
+cZws74LP8XEnwbIEyLgWFw" 
+X-Powered-By: Express 
+X-Powered-By: Express 
+PUT and PATCH 
+PUT and PATCH 
+◄ 
+◄ 
+Some RESTful web APls support two HTTP methods for updating resources: 
+Some RESTful web APls support two HTTP methods for updating resources: 
+• PUT for performing a complete update 
+• PUT for performing a complete update 
+• PATCH for performing a partial update 
+• PATCH for performing a partial update 
+For simplicity, this material uses PUT to perform a partial update and does not include 
+For simplicity, this material uses PUT to perform a partial update and does not include 
+PATCH. 
+PATCH. 
+► 
+► 
+Web APls use the DELETE verb to delete an existing resource. The figure below uses the Mongoose 
+Web APls use the DELETE verb to delete an existing resource. The figure below uses the Mongoose 
+method deleteone () to delete a song whose ID appears in the URL of the DELETE request. The 
+method deleteone () to delete a song whose ID appears in the URL of the DELETE request. The 
+Music API returns a 204 status for a successful delete, a 400 status if an error occurs, and a 404 
+Music API returns a 204 status for a successful delete, a 400 status if an error occurs, and a 404 
+status if the song's ID is not found. ◄ ► 
+status if the song's ID is not found. ◄ ► 
+Figure 8.3.6: Delete a song by ID with DELETE verb in Music API. 
+Figure 8.3.6: Delete a song by ID with DELETE verb in Music API. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 57/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+router . delete ("/:id" , function (req, res) { 
+router . delete ("/:id" , function (req, res) { 
+Song . deleteOne ({ id : req . params . id }, function (err, result) { 
+Song . deleteOne ({ id : req . params . id }, function (err, result) { 
+if (err) { 
+if (err) { 
+I 
+I 
+} ) ; 
+} ) ; 
+res .status (400) . send (err); 
+res .status (400) . send (err); 
+else if (result .matchedCount 0 ) { 
+else if (result .matchedCount 0 ) { 
+res .sendStatus (404); 
+res .sendStatus (404); 
+else { 
+else { 
+res .sendStatus (204); 
+res .sendStatus (204); 
+} 
+} 
+} ) ; 
+} ) ; 
+HTTP request 
+HTTP request 
+DELETE / api / song/56ecle48960dd58447478cdf 
+DELETE / api / song/56ecle48960dd58447478cdf 
+HTTP/ 1.1 
+HTTP/ 1.1 
+Host : localhost:3000 
+Host : localhost:3000 
+User-Agent: Mozilla / 5.0 Chrome/48.0.2564 
+User-Agent: Mozilla / 5.0 Chrome/48.0.2564 
+PARTICIPATION 8.3.8: Update and delete. ACTIVITY 
+PARTICIPATION 8.3.8: Update and delete. ACTIVITY 
+Refer to the two figures above. 
+Refer to the two figures above. 
+1) Where is the song data to update sent 
+1) Where is the song data to update sent 
+in a PUT request? 
+in a PUT request? 
+◄ 
+◄ 
+0 Query string 
+0 Query string 
+0 Request body 
+0 Request body 
+0 Response body 
+0 Response body 
+2) In the figure that updates Adele's song, 
+2) In the figure that updates Adele's song, 
+what song data is changed? 
+what song data is changed? 
+0 _id 
+0 _id 
+0 artist 
+0 artist 
+0 title and popularity 
+0 title and popularity 
+3) A PUT request with the following 
+3) A PUT request with the following 
+message body specifies a title that is 
+message body specifies a title that is 
+identical to the song's existing title. 
+identical to the song's existing title. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+I 
+I 
+I 
+I 
+HTTP response 
+HTTP response 
+HTTP/1.1 204 No Content 
+HTTP/1.1 204 No Content 
+Date : Mon, 15 Mar 2021 
+Date : Mon, 15 Mar 2021 
+14:31:35 GMT 
+14:31:35 GMT 
+ETag: W/ "aoQDOV50elMN2H/ N8GYi+8w" 
+ETag: W/ "aoQDOV50elMN2H/ N8GYi+8w" 
+X-Powered-By: Express 
+X-Powered-By: Express 
+D 
+D 
+0 
+0 
+► 
+► 
+0 
+0 
+0 
+0 
+58/100 
+58/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+4) 
+4) 
+What status code does the PUT route 
+What status code does the PUT route 
+return? 
+return? 
+"title" : "Hello" 
+"title" : "Hello" 
+0 204 
+0 204 
+0 400 
+0 400 
+0 404 
+0 404 
+What status code do the PUT and 
+What status code do the PUT and 
+DELETE routes return if the supplied 
+DELETE routes return if the supplied 
+song ID cannot be located in the 
+song ID cannot be located in the 
+database? 
+database? 
+0 204 
+0 204 
+0 400 
+0 400 
+0 404 
+0 404 
+CORS 
+CORS 
+◄ 
+◄ 
+A web AP/ that needs to be accessed from different origins needs to enable CORS. The 
+A web AP/ that needs to be accessed from different origins needs to enable CORS. The 
+cors module provides middleware to enable CORS in an Express app. Install cars with 
+cors module provides middleware to enable CORS in an Express app. Install cars with 
+npm: npm install cors. 
+npm: npm install cors. 
+canst express = require ("express" ); 
+canst express = require ("express" ); 
+canst cars = require ("cors" ); 
+canst cars = require ("cors" ); 
+canst app = express (); 
+canst app = express (); 
+II Enable all CORS requests 
+II Enable all CORS requests 
+app . use (cars ()); 
+app . use (cars ()); 
+Exploring further: 
+Exploring further: 
+• Postman 
+• Postman 
+• cURL 
+• cURL 
+• Understanding SOAP and REST Basics And Differences 
+• Understanding SOAP and REST Basics And Differences 
+• PUT vs. PATCH 
+• PUT vs. PATCH 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+► 
+► 
+59/100 
+59/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+• cars middleware 
+• cars middleware 

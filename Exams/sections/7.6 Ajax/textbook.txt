@@ -1,0 +1,899 @@
+Loading HTML snippets 
+Loading HTML snippets 
+Writing Ajax code with plain JavaScript can be a daunting task, so jQuery provides several functions 
+Writing Ajax code with plain JavaScript can be a daunting task, so jQuery provides several functions 
+to make writing Ajax code easier. All the methods examined in this section are wrappers around the 
+to make writing Ajax code easier. All the methods examined in this section are wrappers around the 
+object. The load() method is used for asynchronously loading a short snippet 
+object. The load() method is used for asynchronously loading a short snippet 
+of HTML that is inserted into a webpage. 
+of HTML that is inserted into a webpage. 
+I PARTICIPATION I . ACTIVITY 7.6.1: Using load() to load content asynchronously. 
+I PARTICIPATION I . ACTIVITY 7.6.1: Using load() to load content asynchronously. 
+<body> 
+<body> 
+<hl>Mov i e I nformati on</hl> 
+<hl>Mov i e I nformati on</hl> 
+<p id="movieinfo " > 
+<p id="movieinfo " > 
+<cite>Star Wars</cite> : Rated PG , re 
+<cite>Star Wars</cite> : Rated PG , re 
+</p > 
+</p > 
+</body> 
+</body> 
+$ ( " #movieinfo " ) . l oad ( " starwars . html " ); 
+$ ( " #movieinfo " ) . l oad ( " starwars . html " ); 
+HTTP 
+HTTP 
+request T 
+request T 
+Web server 
+Web server 
+HTTP 
+HTTP 
+response 
+response 
+sta1 
+sta1 
+<cite>Star 
+<cite>Star 
+Rated PG , 
+Rated PG , 
+Animation content: 
+Animation content: 
+Step 1: The following code blocks are displayed. 
+Step 1: The following code blocks are displayed. 
+<body> 
+<body> 
+<h3>Movie lnformation</h3> 
+<h3>Movie lnformation</h3> 
+<p id="movieinfo"> 
+<p id="movieinfo"> 
+</p> 
+</p> 
+</body> 
+</body> 
+□ 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+41 of 66 2024-11-17, 12:17 p.m.
+41 of 66 2024-11-17, 12:17 p.m.
+$("#movieinfo").load("starwars.html"); 
+$("#movieinfo").load("starwars.html"); 
+The text "Movie Information" is displayed on the screen to the right. 
+The text "Movie Information" is displayed on the screen to the right. 
+Step 2: A HTTP request is sent to the web server. Text reading "starwars.html" is displayed below 
+Step 2: A HTTP request is sent to the web server. Text reading "starwars.html" is displayed below 
+the code with contents reading "<cite>Star Wars</cite>: 
+the code with contents reading "<cite>Star Wars</cite>: 
+Rated PG, released in 1977." 
+Rated PG, released in 1977." 
+Step 3: The text and contents of "starwars.html" are brought to the line of code reading 
+Step 3: The text and contents of "starwars.html" are brought to the line of code reading 
+"$("#movieinfo").load("starwars.html");". 
+"$("#movieinfo").load("starwars.html");". 
+Step 4: The first block of code is changed to read: 
+Step 4: The first block of code is changed to read: 
+<body> 
+<body> 
+<h3>Movie lnformation</h3> 
+<h3>Movie lnformation</h3> 
+<p id="movieinfo"> 
+<p id="movieinfo"> 
+<cite>Star Wars</cite>: Rated PG, released in 1977 
+<cite>Star Wars</cite>: Rated PG, released in 1977 
+</p> 
+</p> 
+</body> 
+</body> 
+Step 5: The text displayed on the right is updated to read "Movie Information 
+Step 5: The text displayed on the right is updated to read "Movie Information 
+<i>Star Wars</i>: Rated PG, released in 1977." 
+<i>Star Wars</i>: Rated PG, released in 1977." 
+Animation captions: 
+Animation captions: 
+1. Browser renders the webpage with no movie information. 
+1. Browser renders the webpage with no movie information. 
+2. The load() method sends an HTTP request for starwars.html from the web server. 
+2. The load() method sends an HTTP request for starwars.html from the web server. 
+3. The web server responds with starwars.html in the HTTP response. 
+3. The web server responds with starwars.html in the HTTP response. 
+4. The content of starwars.html is placed in the paragraph with ID movieinfo. 
+4. The content of starwars.html is placed in the paragraph with ID movieinfo. 
+5. The browser updates when the DOM is altered, displaying the movie information. 
+5. The browser updates when the DOM is altered, displaying the movie information. 
+I PARTICIPATION I 
+I PARTICIPATION I 
+ACTIVITY 7.6.2: The load() method. 
+ACTIVITY 7.6.2: The load() method. 
+1) The load () method can only 
+1) The load () method can only 
+download HTML. 
+download HTML. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) The load () method can execute 
+2) The load () method can execute 
+code when the load completes. 
+code when the load completes. 
+0 True 
+0 True 
+□ 
+□ 
+0 
+0 
+0 
+0 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+42 of 66 2024-11-17, 12:17 p.m.
+42 of 66 2024-11-17, 12:17 p.m.
+0 False 
+0 False 
+3) The l o ad () method uses the 
+3) The l o ad () method uses the 
+XMLHttpReque s t object internally 
+XMLHttpReque s t object internally 
+to make an HTTP request. 
+to make an HTTP request. 
+0 True 
+0 True 
+0 Fal se 
+0 Fal se 
+GET and POST requests 
+GET and POST requests 
+0 
+0 
+Most web applications use Ajax to interact with programs that run on a web server. The programs 
+Most web applications use Ajax to interact with programs that run on a web server. The programs 
+may be created using a number of server-side technologies including PHP, Node.js, ASP NET, 
+may be created using a number of server-side technologies including PHP, Node.js, ASP NET, 
+Python, and Java. Regardless of what technology is being used on the web server, the server-side 
+Python, and Java. Regardless of what technology is being used on the web server, the server-side 
+program generally accepts data from an Ajax request, uses the data to query a database, and 
+program generally accepts data from an Ajax request, uses the data to query a database, and 
+sends a response back to the web browser. 
+sends a response back to the web browser. 
+Figure 7.6.1: Server-side program interacting with web browser and 
+Figure 7.6.1: Server-side program interacting with web browser and 
+database. 
+database. 
+HTTP 
+HTTP 
+request query 
+request query 
+@ 
+@ 
+HTTP data 
+HTTP data 
+response 
+response 
+Web Browser Web Server Database 
+Web Browser Web Server Database 
+The web server's response may contain HTML or plain text, but frequently the response contains 
+The web server's response may contain HTML or plain text, but frequently the response contains 
+data in XML or JSON format. The jQuery library has functions for parsing XML data, but JSON data 
+data in XML or JSON format. The jQuery library has functions for parsing XML data, but JSON data 
+is parsed automatically and is generally easier for web developers to work with. JSON is more 
+is parsed automatically and is generally easier for web developers to work with. JSON is more 
+popular than XML and will therefore be the focus of this section. 
+popular than XML and will therefore be the focus of this section. 
+XML vs. JSON 
+XML vs. JSON 
+The two most common ways to transport Ajax data is with XML and JSON. XML was 
+The two most common ways to transport Ajax data is with XML and JSON. XML was 
+once quite popular, hence the "x" in Ajax and "XML" in the XMLHttpRequest object 
+once quite popular, hence the "x" in Ajax and "XML" in the XMLHttpRequest object 
+name. However, JSON has become the de facto standard over the last several years 
+name. However, JSON has become the de facto standard over the last several years 
+{
+{
+"title": "Star Wars",
+"title": "Star Wars",
+"rating": "PG",
+"rating": "PG",
+"year": "1977"
+"year": "1977"
+}
+}
+$.get() $.post()
+$.get() $.post()
+jQuery load() jQuery
+jQuery load() jQuery
+$.get() $.post()
+$.get() $.post()
+data
+data
+Title: 
+Title: 
+val() };
+val() };
+function(data) {
+function(data) {
+data.title +
+data.title +
++
++
+: Rated PG, 
+: Rated PG, 
+released in 1977
+released in 1977
+></p>
+></p>
+Search
+Search
+Star Wars 
+Star Wars 
+Star Wars
+Star Wars
+{"title":"Star Wars","rating":"PG","year":"1977"}
+{"title":"Star Wars","rating":"PG","year":"1977"}
+: Rated PG, released in 1977
+: Rated PG, released in 1977
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+43 of 66 2024-11-17, 12:17 p.m.
+43 of 66 2024-11-17, 12:17 p.m.
+primarily because JSON has a more compact structure than XML, making more 
+primarily because JSON has a more compact structure than XML, making more 
+efficient use of network bandwidth. 
+efficient use of network bandwidth. 
+XML JSON 
+XML JSON 
+<movie> 
+<movie> 
+<title>Star Wars</title> 
+<title>Star Wars</title> 
+<rating>PG</rating> - - ' 
+<rating>PG</rating> - - ' 
+<year>l977</year> " 10'7 '7" 
+<year>l977</year> " 10'7 '7" 
+</movie> 
+</movie> 
+The jQuery methods $.get() and $.post() are general-purpose functions for sending asynchronous 
+The jQuery methods $.get() and $.post() are general-purpose functions for sending asynchronous 
+HTTP GET and POST requests to the web server. Both and are methods of 
+HTTP GET and POST requests to the web server. Both and are methods of 
+the global object, unlike methods like that work on instances of objects. 
+the global object, unlike methods like that work on instances of objects. 
+The and methods send HTTP requests and supply a callback function that 
+The and methods send HTTP requests and supply a callback function that 
+executes when the full response is received from the web server. The callback function has a 
+executes when the full response is received from the web server. The callback function has a 
+parameter, which contains the server's response. 
+parameter, which contains the server's response. 
+I PARTICIPATION I . ACTIVITY 7.6.3: Using $.get() to load JSON asynchronously. 
+I PARTICIPATION I . ACTIVITY 7.6.3: Using $.get() to load JSON asynchronously. 
+<body> 
+<body> 
+<p >Title: <input type=" text " id=" title " > 
+<p >Title: <input type=" text " id=" title " > 
+<button i d=" search" >Search</button> 
+<button i d=" search" >Search</button> 
+<p id="movieinfo " > 
+<p id="movieinfo " > 
+<cite>Star Wars<cite> : Rated PG, re l e , 
+<cite>Star Wars<cite> : Rated PG, re l e , 
+</p > 
+</p > 
+</body> 
+</body> 
+$ ( " #search " ) . on ( " click" , funct i on () { 
+$ ( " #search " ) . on ( " click" , funct i on () { 
+} ) ; 
+} ) ; 
+l et requestData = { t i t l e : $ ( " #title" ). 
+l et requestData = { t i t l e : $ ( " #title" ). 
+$ . get (" lookup . php " , requestData , funct i 
+$ . get (" lookup . php " , requestData , funct i 
+$ ( " #movieinfo " ) . html ("<cite> " + data 
+$ ( " #movieinfo " ) . html ("<cite> " + data 
+"</cite> : Rated " + data . rating i 
+"</cite> : Rated " + data . rating i 
+", released in " + data . year); 
+", released in " + data . year); 
+} , " j son" ); 
+} , " j son" ); 
+GET 
+GET 
+lookup.php?title=Star+Wars T 
+lookup.php?title=Star+Wars T 
+{"title":"Star \ 
+{"title":"Star \ 
+Web Server 
+Web Server 
+□ 
+□ 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+44 of 66 2024-11-17, 12:17 p.m.
+44 of 66 2024-11-17, 12:17 p.m.
+Animation content: 
+Animation content: 
+The following code blocks are displayed. 
+The following code blocks are displayed. 
+<body> 
+<body> 
+Title: <input type="text" id="title"><br> 
+Title: <input type="text" id="title"><br> 
+<button id="search">Search</button> 
+<button id="search">Search</button> 
+<div id="movieinfo"> 
+<div id="movieinfo"> 
+<cite>Star Wars<cite>: Rated PG, released in 1977 
+<cite>Star Wars<cite>: Rated PG, released in 1977 
+</div> 
+</div> 
+</body> 
+</body> 
+$("#search").on("click", function() { 
+$("#search").on("click", function() { 
+let requestData = { title: $("#title").val() }; 
+let requestData = { title: $("#title").val() }; 
+$.get("lookup.php", requestData, function(data) { 
+$.get("lookup.php", requestData, function(data) { 
+$("#movieinfo").html("<cite>" +data.title+ 
+$("#movieinfo").html("<cite>" +data.title+ 
+"</cite>: Rated"+ data.rating+ 
+"</cite>: Rated"+ data.rating+ 
+", released in " + data.year); 
+", released in " + data.year); 
+}, "json"); 
+}, "json"); 
+}); 
+}); 
+Step 1: "Star Wars" is typed in the search bar to the right. 
+Step 1: "Star Wars" is typed in the search bar to the right. 
+Step 2: The line of code reading "let requestData = { title: S("#title").val() };" is highlighted. 
+Step 2: The line of code reading "let requestData = { title: S("#title").val() };" is highlighted. 
+Step 3: The line of code reading "$.get("lookup.php", requestData, function(data) {" is highlighted. 
+Step 3: The line of code reading "$.get("lookup.php", requestData, function(data) {" is highlighted. 
+The GET request sent to the web server is represented by "lookup.php?title=Star+Wars" 
+The GET request sent to the web server is represented by "lookup.php?title=Star+Wars" 
+Step 4: The server's response is represented by "{"title":"Star Wars","rating":"PG","year":"1977"}" 
+Step 4: The server's response is represented by "{"title":"Star Wars","rating":"PG","year":"1977"}" 
+Step 5: The lines of code reading "$("#movieinfo").html("<cite>" +data.title+ 
+Step 5: The lines of code reading "$("#movieinfo").html("<cite>" +data.title+ 
+"</cite>: Rated"+ data.rating+ 
+"</cite>: Rated"+ data.rating+ 
+", released in"+ data.year);" are highlighted. The first block of code is edited to read as 
+", released in"+ data.year);" are highlighted. The first block of code is edited to read as 
+follows. 
+follows. 
+<body> 
+<body> 
+Title: <input type="text" id="title"><br> 
+Title: <input type="text" id="title"><br> 
+<button id="search">Search</button> 
+<button id="search">Search</button> 
+<div id="movieinfo"> 
+<div id="movieinfo"> 
+<cite>Star Wars<cite>: Rated PG, released in 1977 
+<cite>Star Wars<cite>: Rated PG, released in 1977 
+</div> 
+</div> 
+</body> 
+</body> 
+The text reading "<i>Star Wars:</i> Rated PG, releasing in 1977" is outputted to the user. 
+The text reading "<i>Star Wars:</i> Rated PG, releasing in 1977" is outputted to the user. 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+45 of 66 2024-11-17, 12:17 p.m.
+45 of 66 2024-11-17, 12:17 p.m.
+Animation captions: 
+Animation captions: 
+1. The user types the movie title "Star Wars" and presses the Search button. 
+1. The user types the movie title "Star Wars" and presses the Search button. 
+2. The request Data object literal is assigned the "Star Wars" value from the text box. 
+2. The request Data object literal is assigned the "Star Wars" value from the text box. 
+3. $.get() makes an HTTP GET request for lookup.php. The data in requestData is sent in the 
+3. $.get() makes an HTTP GET request for lookup.php. The data in requestData is sent in the 
+URL'.s query string. 
+URL'.s query string. 
+4. The web server looks up "Star Wars" in a database and sends back a JSON response. 
+4. The web server looks up "Star Wars" in a database and sends back a JSON response. 
+5. jQuery converts JSON into a JavaScript object, which is assigned to the data parameter. 
+5. jQuery converts JSON into a JavaScript object, which is assigned to the data parameter. 
+The html() method displays the movie data in the paragraph. 
+The html() method displays the movie data in the paragraph. 
+I PARTICIPATION I . ACTIVITY 7.6.4: Sending GET and POST requests. □ 
+I PARTICIPATION I . ACTIVITY 7.6.4: Sending GET and POST requests. □ 
+1) Which method sends data to a web 0 
+1) Which method sends data to a web 0 
+server in an HTTP POST request and 
+server in an HTTP POST request and 
+may receive back a JSON response? 
+may receive back a JSON response? 
+0 load () 
+0 load () 
+0 $.get() 
+0 $.get() 
+0 $.post() 
+0 $.post() 
+2) When is the callback function passed 0 
+2) When is the callback function passed 0 
+to $. get () executed? 
+to $. get () executed? 
+0 As soon as the GET request is 
+0 As soon as the GET request is 
+sent. 
+sent. 
+0 As soon as the response from 
+0 As soon as the response from 
+the server is received. 
+the server is received. 
+3) The code from the animation above 0 
+3) The code from the animation above 0 
+was modified to use a named 
+was modified to use a named 
+callback function instead of an 
+callback function instead of an 
+anonymous function. What is missing 
+anonymous function. What is missing 
+from the code? 
+from the code? 
+$("#search").on("click",
+$("#search").on("click",
+function() {
+function() {
+let requestData = { title:
+let requestData = { title:
+$ "#title"
+$ "#title"
+$.ajax()
+$.ajax()
+$.get() $.post()
+$.get() $.post()
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+46 of 66 2024-11-17, 12:17 p.m.
+46 of 66 2024-11-17, 12:17 p.m.
+$ ( "#title" ) . val () } ; 
+$ ( "#title" ) . val () } ; 
+$ . get ("lookup.php" , 
+$ . get ("lookup.php" , 
+requestData , 
+requestData , 
+} ) ; 
+} ) ; 
+, "json" ); 
+, "json" ); 
+fun c ti o n responseHandler (data ) 
+fun c ti o n responseHandler (data ) 
+$ ( "#movieinfo" ) . html ( " <cite>" 
+$ ( "#movieinfo" ) . html ( " <cite>" 
++ data . title + 
++ data . title + 
+"</cite>: Rated " + 
+"</cite>: Rated " + 
+data . rating + 
+data . rating + 
+", released in " + 
+", released in " + 
+data . year); 
+data . year); 
+} 
+} 
+0 responseHandler(data) 
+0 responseHandler(data) 
+0 responseHandler() 
+0 responseHandler() 
+0 responseHandler 
+0 responseHandler 
+4) What does the URL-encoded string that 
+4) What does the URL-encoded string that 
+is sent to the web server look like for the 
+is sent to the web server look like for the 
+following method call? 
+following method call? 
+$ . post ("create.php" , { title : 
+$ . post ("create.php" , { title : 
+"War Games " , year : 1983 }) ; 
+"War Games " , year : 1983 }) ; 
+{"title": "War 0 Games", "year": "19 83"} 
+{"title": "War 0 Games", "year": "19 83"} 
+0 title=War+Games&year=l9 83 
+0 title=War+Games&year=l9 83 
+5) What other data type arguments 
+5) What other data type arguments 
+could be used instead of "json" in a 
+could be used instead of "json" in a 
+call to$. get() or$ .post()? 
+call to$. get() or$ .post()? 
+0 "xml" 
+0 "xml" 
+0 "image" 
+0 "image" 
+0 "xml", "script", "html" 
+0 "xml", "script", "html" 
+The $.ajax() method 
+The $.ajax() method 
+0 
+0 
+0 
+0 
+The $.ajax() method is a general purpose method for making Ajax requests. The 
+The $.ajax() method is a general purpose method for making Ajax requests. The 
+method can send GET and POST requests like and but can also send PUT 
+method can send GET and POST requests like and but can also send PUT 
+$.ajax()
+$.ajax()
+url
+url
+method
+method
+data
+data
+dataType
+dataType
+$.ajax() $.get() $.post()
+$.ajax() $.get() $.post()
+jqXHR
+jqXHR
+XMLHttpRequest jqXHR
+XMLHttpRequest jqXHR
+// Data to send in request
+// Data to send in request
+: "Star Wars" };
+: "Star Wars" };
+// Make GET request for Star Wars
+// Make GET request for Star Wars
+requestData, function(data)
+requestData, function(data)
+); }, "json");
+); }, "json");
+);
+);
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+47 of 66 2024-11-17, 12:17 p.m.
+47 of 66 2024-11-17, 12:17 p.m.
+and DELETE requests. The 
+and DELETE requests. The 
+optional properties, including: 
+optional properties, including: 
+method's settings parameter is an object with a number of 
+method's settings parameter is an object with a number of 
+• - URL to request 
+• - URL to request 
+• - HTTP request method "GET', "POST', etc. 
+• - HTTP request method "GET', "POST', etc. 
+• - Object that is converted into key/value pairs for a query string and sent in the request 
+• - Object that is converted into key/value pairs for a query string and sent in the request 
+• - Type of data expected back, like "html", "json", "text", "xml", etc. 
+• - Type of data expected back, like "html", "json", "text", "xml", etc. 
+The , and methods all return ajqXHR object, which is an 
+The , and methods all return ajqXHR object, which is an 
+abbreviation for jQuery XMLHttpRequest object. The object adds additional capabilities to 
+abbreviation for jQuery XMLHttpRequest object. The object adds additional capabilities to 
+the object the browser uses to make Ajax requests. The object has a 
+the object the browser uses to make Ajax requests. The object has a 
+callback method done() that is called when a successful HTTP response is received. 
+callback method done() that is called when a successful HTTP response is received. 
+Figure 7.6.2: Example call to $.ajax(). 
+Figure 7.6.2: Example call to $.ajax(). 
+Promises 
+Promises 
+II Data to send in reques 
+II Data to send in reques 
+let requestData = { t i t l e 
+let requestData = { t i t l e 
+II Make GET request for S 
+II Make GET request for S 
+$ . get ("lookup.php" , reque 
+$ . get ("lookup.php" , reque 
+{ 
+{ 
+consol e . l og ( "success" ) 
+consol e . l og ( "success" ) 
+II Same thing as $ . get() 
+II Same thing as $ . get() 
+$ . a j ax ( { 
+$ . a j ax ( { 
+} ) 
+} ) 
+url : "lookup .php" , 
+url : "lookup .php" , 
+method : "GET" , 
+method : "GET" , 
+data : requestData , 
+data : requestData , 
+dataType : "json" 
+dataType : "json" 
+. done (function (data ) 
+. done (function (data ) 
+consol e . l og ( "success" ) 
+consol e . l og ( "success" ) 
+} ) ; 
+} ) ; 
+The j qXHR implements the Promise interface, so the object has all the properties 
+The j qXHR implements the Promise interface, so the object has all the properties 
+and methods of a Promise. Promises are covered in detail elsewhere in this material. 
+and methods of a Promise. Promises are covered in detail elsewhere in this material. 
+I PARTICIPATION I 7.6.5: The $.aJ·ax() method. ACTIVITY □ 
+I PARTICIPATION I 7.6.5: The $.aJ·ax() method. ACTIVITY □ 
+$.ajax({
+$.ajax({
+url: "search.php",
+url: "search.php",
+method: __A__,
+method: __A__,
+data: __B__,
+data: __B__,
+dataType: __C__
+dataType: __C__
+})
+})
+.done(function(data) {
+.done(function(data) {
+$("#bookPrice").html("$" + data.price);
+$("#bookPrice").html("$" + data.price);
+});
+});
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+48 of 66 2024-11-17, 12:17 p.m.
+48 of 66 2024-11-17, 12:17 p.m.
+Refer to the code segment below that uses search.php to find book information. 
+Refer to the code segment below that uses search.php to find book information. 
+1) What replaces A to create a POST 
+1) What replaces A to create a POST 
+request? 
+request? 
+0 "POST" 
+0 "POST" 
+0 POST 
+0 POST 
+0 "GET' 
+0 "GET' 
+2) What replaces B to search for a used 
+2) What replaces B to search for a used 
+"Harry Potter" book? 
+"Harry Potter" book? 
+0 [ "Harry Potter", "used"] 
+0 [ "Harry Potter", "used"] 
+0 { "Harry Potter", "used"} 
+0 { "Harry Potter", "used"} 
+0 { title: "Harry Potter", type: 
+0 { title: "Harry Potter", type: 
+"used"} 
+"used"} 
+3) What replaces C to specify the server 
+3) What replaces C to specify the server 
+is returning JSON? 
+is returning JSON? 
+0 json 
+0 json 
+0 "json" 
+0 "json" 
+0 JSON 
+0 JSON 
+Cross-origin HTTP request 
+Cross-origin HTTP request 
+For security reasons, browsers limit Ajax requests to the web server from which the 
+For security reasons, browsers limit Ajax requests to the web server from which the 
+JavaScript was downloaded. Ex: JavaScript downloaded from http://instagram.com 
+JavaScript was downloaded. Ex: JavaScript downloaded from http://instagram.com 
+may only make Ajax requests to instagram.com. A cross-origin HTTP request is a 
+may only make Ajax requests to instagram.com. A cross-origin HTTP request is a 
+request made to another domain. Ex: An Ajax request from JavaScript downloaded 
+request made to another domain. Ex: An Ajax request from JavaScript downloaded 
+from instagram.com to yahoo.com is a cross-origin HTTP request. Browsers can 
+from instagram.com to yahoo.com is a cross-origin HTTP request. Browsers can 
+make cross-origin HTTP requests using a number of techniques including proxy 
+make cross-origin HTTP requests using a number of techniques including proxy 
+servers, Cross-Origin Resource Sharing (CORS), and JSON with Padding (JSONP). 
+servers, Cross-Origin Resource Sharing (CORS), and JSON with Padding (JSONP). 
+0 
+0 
+0 
+0 
+0 
+0 
+jqXHR
+jqXHR
+function(data) {
+function(data) {
+data.title + "</cite>: Rated " +
+data.title + "</cite>: Rated " +
++ data.year);
++ data.year);
+"The movie title could not be found.");
+"The movie title could not be found.");
+function(data) {
+function(data) {
+.title + "</cite>: Rated " +
+.title + "</cite>: Rated " +
+data.year);
+data.year);
+$("#movieinfo").html("There was a problem contacting the server: " +
+$("#movieinfo").html("There was a problem contacting the server: " +
+jqXHR.status + " " + jqXHR.responseText);
+jqXHR.status + " " + jqXHR.responseText);
+});
+});
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+49 of 66 2024-11-17, 12:17 p.m.
+49 of 66 2024-11-17, 12:17 p.m.
+Handling errors 
+Handling errors 
+Developers should write Ajax code that is robust and properly handles error conditions. Two of the 
+Developers should write Ajax code that is robust and properly handles error conditions. Two of the 
+most common error conditions are: 
+most common error conditions are: 
+1. The web server returns an empty response or a response with an error message because the 
+1. The web server returns an empty response or a response with an error message because the 
+requested data was not found. 
+requested data was not found. 
+2. The web server returns a 40x or 500 response code. 
+2. The web server returns a 40x or 500 response code. 
+The object has a callback method fail() that is called when a 40x or 500 response code is 
+The object has a callback method fail() that is called when a 40x or 500 response code is 
+received from the Ajax request. 
+received from the Ajax request. 
+I PARTICIPATION I . ACTIVITY 7.6.6: Robust AJax code. 
+I PARTICIPATION I . ACTIVITY 7.6.6: Robust AJax code. 
+Match the code segments below with the type of error that each is designed to catch. 
+Match the code segments below with the type of error that each is designed to catch. 
+I I (a) 
+I I (a) 
+$ . get ( "lookup.php" , requestData , funct i 
+$ . get ( "lookup.php" , requestData , funct i 
+if (data . title ) { 
+if (data . title ) { 
+$ ( "#movieinfo" ) . html ( "<cite>" + d 
+$ ( "#movieinfo" ) . html ( "<cite>" + d 
+data . rating + ", re leased in" 
+data . rating + ", re leased in" 
+else 
+else 
+$ ( "#movieinfo" ) . html ( "The movie t 
+$ ( "#movieinfo" ) . html ( "The movie t 
+} , "json" ); 
+} , "json" ); 
+I I (b) 
+I I (b) 
+$ . get ( "lookup.php" , requestData , funct i 
+$ . get ( "lookup.php" , requestData , funct i 
+$ ( "#movieinfo" ) . html ( "<cite>" + data 
+$ ( "#movieinfo" ) . html ( "<cite>" + data 
+data . rating + ", released in " + 
+data . rating + ", released in " + 
+} , "json" ) . fail (function (jqXHR) { 
+} , "json" ) . fail (function (jqXHR) { 
+$ ( "#movieinfo" ) . html ("There was a Dr 
+$ ( "#movieinfo" ) . html ("There was a Dr 
+If unable to drag and drop, refresh the page. 
+If unable to drag and drop, refresh the page. 
+(b) (a) 
+(b) (a) 
+Empty response was returned from 
+Empty response was returned from 
+the web server. 
+the web server. 
+□ 
+□ 
+$.get()
+$.get()
+{
+{
+"success": false,
+"success": false,
+"error": "ZIP code not 
+"error": "ZIP code not 
+found"
+found"
+}
+}
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+50 of 66 2024-11-17, 12:17 p.m.
+50 of 66 2024-11-17, 12:17 p.m.
+I PARTICIPATION I . . ACTIVITY 7.6.7: AJaX practice. 
+I PARTICIPATION I . . ACTIVITY 7.6.7: AJaX practice. 
+40x or 500 status code was 
+40x or 500 status code was 
+returned from the web server. 
+returned from the web server. 
+Reset 
+Reset 
+The web page below prompts the user for a ZIP code. When the Search button is pressed, 
+The web page below prompts the user for a ZIP code. When the Search button is pressed, 
+the JavaScript displays the "high" values from the test response, regardless of what ZIP 
+the JavaScript displays the "high" values from the test response, regardless of what ZIP 
+code is typed. 
+code is typed. 
+Modify the JavaScript code to make an Ajax request to the web server and display the 
+Modify the JavaScript code to make an Ajax request to the web server and display the 
+weather forecast returned by the web server in an ordered list. Use or 
+weather forecast returned by the web server in an ordered list. Use or 
+$. aj ax () to send the ZIP code in a request to the weather.php script located at https:// 
+$. aj ax () to send the ZIP code in a request to the weather.php script located at https:// 
+wp.zybooks.com/weather.php. 
+wp.zybooks.com/weather.php. 
+The weather.php script looks for the ZIP code in the query string. Ex: zip=80110. The 
+The weather.php script looks for the ZIP code in the query string. Ex: zip=80110. The 
+server responds with a 200 status code and a JSON object containing a Boolean 
+server responds with a 200 status code and a JSON object containing a Boolean 
+success indicating if the request was successful. If the request is successful, the JSON 
+success indicating if the request was successful. If the request is successful, the JSON 
+object also contains forecast with an array of forecast details. If the request is not 
+object also contains forecast with an array of forecast details. If the request is not 
+successful, the JSON object contains error with a string describing the error. 
+successful, the JSON object contains error with a string describing the error. 
+Display the error message in the webpage if the request is unsuccessful. 
+Display the error message in the webpage if the request is unsuccessful. 
+Successful request Unsuccessful request 
+Successful request Unsuccessful request 
+{ 
+{ 
+"success" : true , 
+"success" : true , 
+"forecast" : [ 
+"forecast" : [ 
+{ "high" : 90 , "low" : 72 , "desc" : 
+{ "high" : 90 , "low" : 72 , "desc" : 
+"sunny" } ' 
+"sunny" } ' 
+{ "high" : 92 , "low" : 73 , "desc" : 
+{ "high" : 92 , "low" : 73 , "desc" : 
+"partly sunny " } ' 
+"partly sunny " } ' 
+{ "high" : 87 , "low" : 64 , "desc" : 
+{ "high" : 87 , "low" : 64 , "desc" : 
+"rain" } ' 
+"rain" } ' 
+{ "high" : 88 , "low" : 65 , "desc" : 
+{ "high" : 88 , "low" : 65 , "desc" : 
+"cloudy" } ' 
+"cloudy" } ' 
+{ "high" : 90 , "low" : 68 , "desc" : 
+{ "high" : 90 , "low" : 68 , "desc" : 
+"partly cloudy" } 
+"partly cloudy" } 
+l 
+l 
+} 
+} 
+The user interface and Ajax 
+The user interface and Ajax 
+□ 
+□ 
+1, 
+1, 
+zyBooks https://learn.zybooks.com/zybook/ARIZONAECE413SalehiFall2024/c...
+51 of 66 2024-11-17, 12:17 p.m.
+51 of 66 2024-11-17, 12:17 p.m.
+Developers sometimes overlook the importance of keeping the user knowledgeable 
+Developers sometimes overlook the importance of keeping the user knowledgeable 
+about what the software is doing. Ex: In the weather webpage above, an Ajax request 
+about what the software is doing. Ex: In the weather webpage above, an Ajax request 
+is made in response to a button click, and the webpage is updated with the weather 
+is made in response to a button click, and the webpage is updated with the weather 
+when the response arrives. Usually the weather update appears immediately after the 
+when the response arrives. Usually the weather update appears immediately after the 
+button click, but if the web server is busy or the network is slow, the update could 
+button click, but if the web server is busy or the network is slow, the update could 
+take a few seconds to appear If the user interface (Uf) does not immediately update 
+take a few seconds to appear If the user interface (Uf) does not immediately update 
+after the button click, the user may not be aware that the software is busy processing 
+after the button click, the user may not be aware that the software is busy processing 
+the button click, and the user may press the button again. 
+the button click, and the user may press the button again. 
+Good practice is to display a "waiting" message or progress bar immediately when 
+Good practice is to display a "waiting" message or progress bar immediately when 
+the button is pressed and hide the message or progress bar when the Ajax response 
+the button is pressed and hide the message or progress bar when the Ajax response 
+is received. When the UI acknowledges the button click immediately, users will 
+is received. When the UI acknowledges the button click immediately, users will 
+normally be patient before trying to click the button again. 
+normally be patient before trying to click the button again. 
+I CHALLENGE I . . ACTIVITY 7.6.1: JOuery AJax. 
+I CHALLENGE I . . ACTIVITY 7.6.1: JOuery AJax. 
+5707 04.2065416 qx3zqy7 
+5707 04.2065416 qx3zqy7 
+Exploring further: 
+Exploring further: 
+• jQuerY- Ajax documentation 
+• jQuerY- Ajax documentation 
+• 6jax - j.Query Learning Center 
+• 6jax - j.Query Learning Center 
+• HTTP access control (CORS). 
+• HTTP access control (CORS). 
+• Working with JSONP 
+• Working with JSONP 

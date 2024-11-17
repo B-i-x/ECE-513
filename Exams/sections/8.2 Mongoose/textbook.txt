@@ -1,0 +1,2069 @@
+Schemas and models 
+Schemas and models 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+0 
+0 
+0 
+0 
+17/100 
+17/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+A Node.js application using MongoDB may use the mongodb module to interact with a MongoDB 
+A Node.js application using MongoDB may use the mongodb module to interact with a MongoDB 
+database using many of the same functions supported in the mango shell. However, many developers 
+database using many of the same functions supported in the mango shell. However, many developers 
+prefer to use Mongoose, which simplifies some MongoDB operations. The mongoose module 
+prefer to use Mongoose, which simplifies some MongoDB operations. The mongoose module 
+provides object data mapping (ODM) and structured schemas to MongoDB collections. Object data 
+provides object data mapping (ODM) and structured schemas to MongoDB collections. Object data 
+mapping (ODM) is the conversion of data from a database into a JavaScript object. 
+mapping (ODM) is the conversion of data from a database into a JavaScript object. 
+Mongoose is installed using: nprn install rnongoose@6. 12. 8. Note the version number 6.12.8, 
+Mongoose is installed using: nprn install rnongoose@6. 12. 8. Note the version number 6.12.8, 
+which is necessary to support the syntax in this material. The newest version of Mongoose uses 
+which is necessary to support the syntax in this material. The newest version of Mongoose uses 
+slightly different syntax. 
+slightly different syntax. 
+Mongoose uses schemas and models to interact with MongoDB databases. A schema defines the 
+Mongoose uses schemas and models to interact with MongoDB databases. A schema defines the 
+structure of documents within a MongoDB collection. The mongoose.Schema() method creates a 
+structure of documents within a MongoDB collection. The mongoose.Schema() method creates a 
+new Schema object that defines the properties and data types of a document. The supported data 
+new Schema object that defines the properties and data types of a document. The supported data 
+types are: 
+types are: 
+• String - "string" 
+• String - "string" 
+• Number - Integers or floating-point numbers 
+• Number - Integers or floating-point numbers 
+• Date - Date and time 
+• Date - Date and time 
+• Buffer - Binary data 
+• Buffer - Binary data 
+• Boolean - true or false 
+• Boolean - true or false 
+• Mixed - Any kind of data 
+• Mixed - Any kind of data 
+• Obj ectid- MongoDB Obj ectid 
+• Obj ectid- MongoDB Obj ectid 
+• Array - Array of any data type. Ex: [Number J. 
+• Array - Array of any data type. Ex: [Number J. 
+Figure 8.2.1: Mongoose schema for a student. 
+Figure 8.2.1: Mongoose schema for a student. 
+canst mongoose = require ("mongoose" ); 
+canst mongoose = require ("mongoose" ); 
+canst studentSchema = new mongoose . Schema ({ 
+canst studentSchema = new mongoose . Schema ({ 
+name : String, 
+name : String, 
+gpa : { type : Number, min : 0 , max : 4 
+gpa : { type : Number, min : 0 , max : 4 
+} ' 
+} ' 
+birthDate : type : Date , default : Date . now 
+birthDate : type : Date , default : Date . now 
+} ' 
+} ' 
+interests: String ] 
+interests: String ] 
+} ) ; 
+} ) ; 
+◄ ► 
+◄ ► 
+A model is a constructor compiled from a schema. A model instance represents a MongoDB 
+A model is a constructor compiled from a schema. A model instance represents a MongoDB 
+document that can be saved to or retrieved from a MongoDB database. Models are created from 
+document that can be saved to or retrieved from a MongoDB database. Models are created from 
+schemas using the mongoose.model() method, which has two parameters: 
+schemas using the mongoose.model() method, which has two parameters: 
+1. modelName - Singular name of the model's collection. Ex: "Card" for the collection "cards". 
+1. modelName - Singular name of the model's collection. Ex: "Card" for the collection "cards". 
+Mongoose automatically uses collections that are the plural of the model name. 
+Mongoose automatically uses collections that are the plural of the model name. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 18/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+2. schema - Previously defined schema. 
+2. schema - Previously defined schema. 
+Good practice is to use model names and model variables that have the first letter capitalized. Ex: "Card" 
+Good practice is to use model names and model variables that have the first letter capitalized. Ex: "Card" 
+instead of "card". 
+instead of "card". 
+Figure 8.2.2: Mongoose model for a 'students' collection. 
+Figure 8.2.2: Mongoose model for a 'students' collection. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 
+ACTIVITY 
+II Create a "Student" model from the studentSchema 
+II Create a "Student" model from the studentSchema 
+schema 
+schema 
+const Student = mongoose . model ("Student" , 
+const Student = mongoose . model ("Student" , 
+studentSchema ); 
+studentSchema ); 
+II Create a student document from the Student model 
+II Create a student document from the Student model 
+const stu = new Student ({ 
+const stu = new Student ({ 
+} ) ; 
+} ) ; 
+◄ 
+◄ 
+name : "Sue Black" , 
+name : "Sue Black" , 
+gpa : 3 .1 , 
+gpa : 3 .1 , 
+birthDate : new Date (1999, 11 , 2 ), 
+birthDate : new Date (1999, 11 , 2 ), 
+interests: [ "biking" , "reading" ] 
+interests: [ "biking" , "reading" ] 
+8.2.1: Mongoose concepts. 
+8.2.1: Mongoose concepts. 
+1) Mongoose is an essential package for 
+1) Mongoose is an essential package for 
+any Node.js application that needs to 
+any Node.js application that needs to 
+interface with MongoDB. 
+interface with MongoDB. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) Mongoose forces all documents within 
+2) Mongoose forces all documents within 
+a collection to match a predefined 
+a collection to match a predefined 
+schema. 
+schema. 
+O True 
+O True 
+0 False 
+0 False 
+3) The second argument to the 
+3) The second argument to the 
+mongoose. model () method may be 
+mongoose. model () method may be 
+a schema or a map of properties and 
+a schema or a map of properties and 
+data types. 
+data types. 
+0 True 
+0 True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+► 
+► 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+19/100 
+19/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+4) The call mongoose .model ("Dog", 
+4) The call mongoose .model ("Dog", 
+dogSchema) creates a constructor for 
+dogSchema) creates a constructor for 
+creating objects for a collection called 
+creating objects for a collection called 
+"Dog". 
+"Dog". 
+0 True 
+0 True 
+O False 
+O False 
+5) The studentSchema defined in the 
+5) The studentSchema defined in the 
+figure above requires the gpa field to be 
+figure above requires the gpa field to be 
+assigned only values between O and 4. 
+assigned only values between O and 4. 
+0 True 
+0 True 
+O False 
+O False 
+Connecting to MongoDB 
+Connecting to MongoDB 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+Mongoose must establish a connection with MongoDB before executing any database operations. 
+Mongoose must establish a connection with MongoDB before executing any database operations. 
+The mongoose.connect() method takes a URL parameter indicating the machine on which MongoDB 
+The mongoose.connect() method takes a URL parameter indicating the machine on which MongoDB 
+is running and the name of the database to use. If the specified database does not exist, MongoDB 
+is running and the name of the database to use. If the specified database does not exist, MongoDB 
+creates the database. 
+creates the database. 
+Figure 8.2.3: Connecting to the 'mydb' database on MongoDB. 
+Figure 8.2.3: Connecting to the 'mydb' database on MongoDB. 
+Saving documents 
+Saving documents 
+II Connect to MongoDB running on 127.0.0.1 
+II Connect to MongoDB running on 127.0.0.1 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+◄ ► 
+◄ ► 
+Mongoose provides a collection of methods for implementing CRUD operations. Two Mongoose 
+Mongoose provides a collection of methods for implementing CRUD operations. Two Mongoose 
+methods can be used to implement the Create operation: 
+methods can be used to implement the Create operation: 
+• The Document.save() method saves the document to a MongoDB database. The given callback 
+• The Document.save() method saves the document to a MongoDB database. The given callback 
+function is executed after the save operation has completed. 
+function is executed after the save operation has completed. 
+• The Model.create() method saves a single document or array of documents to a MongoDB 
+• The Model.create() method saves a single document or array of documents to a MongoDB 
+database. The given callback function is executed after the save operation has completed. 
+database. The given callback function is executed after the save operation has completed. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.2.2: Mongoose saving a student to MongoDB. D 
+ACTIVITY 8.2.2: Mongoose saving a student to MongoDB. D 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 20/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+canst express = require ("express" ); 
+canst express = require ("express" ); 
+canst mongoose = require ("mongoose" ); 
+canst mongoose = require ("mongoose" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+canst studentSchema = new mongoose . Schema ({ 
+canst studentSchema = new mongoose . Schema ({ 
+zyBooks 
+zyBooks 
+name : { type : String, required : true }, 
+name : { type : String, required : true }, 
+} ) ; 
+} ) ; 
+gpa : 
+gpa : 
+birthDate : 
+birthDate : 
+interests: 
+interests: 
+{ type : Number, min : 0 , max : 4 }, 
+{ type : Number, min : 0 , max : 4 }, 
+type : Date , default : Date . now }, 
+type : Date , default : Date . now }, 
+String ] 
+String ] 
+canst Student = mongoose .model ("Student" , studentSchema ); 
+canst Student = mongoose .model ("Student" , studentSchema ); 
+canst app = express (); 
+canst app = express (); 
+app . get ("/create" , function (req, res) { 
+app . get ("/create" , function (req, res) { 
+} ) ; 
+} ) ; 
+canst stu = new Student ({ 
+canst stu = new Student ({ 
+name : "Sue Black" , 
+name : "Sue Black" , 
+} ) ; 
+} ) ; 
+gpa : 3 .1 , 
+gpa : 3 .1 , 
+birthDate : "1999-11-02" , 
+birthDate : "1999-11-02" , 
+interests: [ "biking" , "reading" ] 
+interests: [ "biking" , "reading" ] 
+stu . save (function (err, stu ) { 
+stu . save (function (err, stu ) { 
+res . send ("Sue with id" + stu . id + 
+res . send ("Sue with id" + stu . id + 
+"was saved." ); 
+"was saved." ); 
+} ) ; 
+} ) ; 
+app . listen (3000); 
+app . listen (3000); 
+Animation content: 
+Animation content: 
+A block of code is displayed: 
+A block of code is displayed: 
+const express = require("express"); 
+const express = require("express"); 
+const mongoose = require("mongoose"); 
+const mongoose = require("mongoose"); 
+mongoose.set("useUnifiedTopology", true); 
+mongoose.set("useUnifiedTopology", true); 
+mongoose.connect("mongodb://localhost/mydb"); 
+mongoose.connect("mongodb://localhost/mydb"); 
+const studentSchema = new mongoose.Schema({ 
+const studentSchema = new mongoose.Schema({ 
+name: { type: String, required: true}, 
+name: { type: String, required: true}, 
+gpa: { type: Number, min: 0, max: 4 }, 
+gpa: { type: Number, min: 0, max: 4 }, 
+birth Date: { type: Date, default: Date.now}, 
+birth Date: { type: Date, default: Date.now}, 
+interests: [String] 
+interests: [String] 
+}); 
+}); 
+const Student = mongoose.model("Student", studentSchema); 
+const Student = mongoose.model("Student", studentSchema); 
+const app = express(); 
+const app = express(); 
+app.get("/create", function(req, res) { 
+app.get("/create", function(req, res) { 
+const stu = new Student({ 
+const stu = new Student({ 
+name: "Sue Black", 
+name: "Sue Black", 
+gpa: 3.1 , 
+gpa: 3.1 , 
+birth Date: "1999-11-02", 
+birth Date: "1999-11-02", 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+Web browser 
+Web browser 
+http://localhost:3000/create 
+http://localhost:3000/create 
+Sue with id 56e6c2dd 
+Sue with id 56e6c2dd 
+was saved. 
+was saved. 
+... GET /create Response 
+... GET /create Response 
+~ I, 
+~ I, 
+node server.js 
+node server.js 
+DB connection 
+DB connection 
+mydb database 
+mydb database 
+{ _id: 56e6c2dd, 
+{ _id: 56e6c2dd, 
+name: Sue Black, 
+name: Sue Black, 
+gpa: 3.1, 
+gpa: 3.1, 
+} 
+} 
+birthDate: 1999-11-2, 
+birthDate: 1999-11-2, 
+interests: biking, reading, 
+interests: biking, reading, 
+_v:O 
+_v:O 
+MongoDB 
+MongoDB 
+21/100 
+21/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+interests: ["biking", "reading"] 
+interests: ["biking", "reading"] 
+}); 
+}); 
+stu.save(function(err, stu) { 
+stu.save(function(err, stu) { 
+res.send("Sue with id " + stu._id + 
+res.send("Sue with id " + stu._id + 
+" was saved."); 
+" was saved."); 
+}); 
+}); 
+}); 
+}); 
+app. listen(3000); 
+app. listen(3000); 
+zyBooks 
+zyBooks 
+A connection between the web server called node server.js and the MongoDB database called mydb 
+A connection between the web server called node server.js and the MongoDB database called mydb 
+database is established. A web browser with the URL http://localhost:3000/create sends the 
+database is established. A web browser with the URL http://localhost:3000/create sends the 
+following GET request to the web server: 
+following GET request to the web server: 
+GET/create 
+GET/create 
+The GET request creates a student in mydb database with the following information: 
+The GET request creates a student in mydb database with the following information: 
+{ 
+{ 
+} 
+} 
+name: Sue Black, 
+name: Sue Black, 
+gpa: 3.1, 
+gpa: 3.1, 
+birthDate: 1999-11-2, 
+birthDate: 1999-11-2, 
+interests: biking, reading, 
+interests: biking, reading, 
+_v : 0 
+_v : 0 
+The database sends back this information and the following is displayed on the web browser: 
+The database sends back this information and the following is displayed on the web browser: 
+Sue with id 56e6c2dd was saved. 
+Sue with id 56e6c2dd was saved. 
+Animation captions: 
+Animation captions: 
+1. The express and mongoose modules are loaded. 
+1. The express and mongoose modules are loaded. 
+2. Mongoose connects to the "mydb" database on MongoDB running on the local machine. 
+2. Mongoose connects to the "mydb" database on MongoDB running on the local machine. 
+3. The student schema and model are created. 
+3. The student schema and model are created. 
+4. Express app defines the "/create" route and starts listening on port 3000. 
+4. Express app defines the "/create" route and starts listening on port 3000. 
+5. When the browser requests the "/create" route, the server creates a new Student object from 
+5. When the browser requests the "/create" route, the server creates a new Student object from 
+the Student model. 
+the Student model. 
+6. stu.save() saves the student object as a document in the mydb database where a new 
+6. stu.save() saves the student object as a document in the mydb database where a new 
+Objectld is assigned to _id. 
+Objectld is assigned to _id. 
+7. The Express server sends a response to the browser with Sue's ID. 
+7. The Express server sends a response to the browser with Sue's ID. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.2.3: Saving documents to MongoDB using Mongoose. D 
+ACTIVITY 8.2.3: Saving documents to MongoDB using Mongoose. D 
+Refer to the animation above. 
+Refer to the animation above. 
+1) What URL does 
+1) What URL does 
+mongoose.connect() useto 
+mongoose.connect() useto 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+22/100 
+22/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+connect to the MongoDB database 
+connect to the MongoDB database 
+called "students" instead of "mydb"? 
+called "students" instead of "mydb"? 
+0 mongodb://localhost/mydb 
+0 mongodb://localhost/mydb 
+O http://localhost/students 
+O http://localhost/students 
+O mongodb://localhost/students 
+O mongodb://localhost/students 
+2) What method could be used in place of 
+2) What method could be used in place of 
+stu. save () in the example above? 
+stu. save () in the example above? 
+Q Student.create() 
+Q Student.create() 
+Q Student.updateOne() 
+Q Student.updateOne() 
+Q Student.deleteOne() 
+Q Student.deleteOne() 
+3) When is the new student's id created 
+3) When is the new student's id created 
+in the animation above? 
+in the animation above? 
+O When assigning stu = new 
+O When assigning stu = new 
+Student ( ... ) . 
+Student ( ... ) . 
+Q When stu. save () is called. 
+Q When stu. save () is called. 
+When the studentScherna is 
+When the studentScherna is 
+O created. 
+O created. 
+4) What does the v field in the 
+4) What does the v field in the 
+student document represent? 
+student document represent? 
+O versionKey 
+O versionKey 
+0 document's ID 
+0 document's ID 
+0 Mongoose version 
+0 Mongoose version 
+5) According to the student schema, what 
+5) According to the student schema, what 
+birthDate is assigned to the student 
+birthDate is assigned to the student 
+below when the student is saved to 
+below when the student is saved to 
+MongoDB? 
+MongoDB? 
+canst stu = new Student ({ 
+canst stu = new Student ({ 
+name : "Jack White" , 
+name : "Jack White" , 
+gpa : 2. 5, 
+gpa : 2. 5, 
+interests : ["football" , 
+interests : ["football" , 
+"piano" ) 
+"piano" ) 
+} ) ; 
+} ) ; 
+0 null 
+0 null 
+0 The current date and time. 
+0 The current date and time. 
+No birthDate is assigned 
+No birthDate is assigned 
+O because an exception is thrown. 
+O because an exception is thrown. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+23/100 
+23/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+6) According to the student schema, what 
+6) According to the student schema, what 
+happens when the student below is 
+happens when the student below is 
+saved to MongoDB? 
+saved to MongoDB? 
+canst stu = new Student ({ 
+canst stu = new Student ({ 
+gpa : 2. 5 , 
+gpa : 2. 5 , 
+interests : [ "football" , 
+interests : [ "football" , 
+"piano" ] 
+"piano" ] 
+} ) ; 
+} ) ; 
+O A student with no name field is 
+O A student with no name field is 
+saved. 
+saved. 
+A student with an empty string 
+A student with an empty string 
+O assigned to the name field is 
+O assigned to the name field is 
+saved. 
+saved. 
+O An error occurs, and no student 
+O An error occurs, and no student 
+is saved. 
+is saved. 
+Finding documents 
+Finding documents 
+zyBooks 
+zyBooks 
+0 
+0 
+The Mongoose methods for retrieving documents work similar to MongoDB's find () and 
+The Mongoose methods for retrieving documents work similar to MongoDB's find () and 
+findOne () methods. The Mongoose find methods support MongoDB query operators like $in and 
+findOne () methods. The Mongoose find methods support MongoDB query operators like $in and 
+$gt. 
+$gt. 
+Table 8.2.1: Common Mongoose find methods. 
+Table 8.2.1: Common Mongoose find methods. 
+Method 
+Method 
+Model. find (conditions, [ callback] ) 
+Model. find (conditions, [ callback] ) 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+Description 
+Description 
+Finds all 
+Finds all 
+documents 
+documents 
+that match 
+that match 
+the 
+the 
+conditions. 
+conditions. 
+Exam~ 
+Exam~ 
+II Find all students wit 
+II Find all students wit 
+Student . find ({ gpa : { $g 
+Student . find ({ gpa : { $g 
+function (err, student 
+function (err, student 
+console . log (studen 
+console . log (studen 
+) ; 
+) ; 
+24/100 
+24/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Method 
+Method 
+Model. findOne (conditions, [callback]) 
+Model. findOne (conditions, [callback]) 
+Model.findByid(id, [callback]) 
+Model.findByid(id, [callback]) 
+I 
+I 
+zyBooks 
+zyBooks 
+Description 
+Description 
+Finds the 
+Finds the 
+first 
+first 
+document 
+document 
+that match 
+that match 
+the 
+the 
+conditions. 
+conditions. 
+Finds the 
+Finds the 
+document 
+document 
+that 
+that 
+matches 
+matches 
+the id. 
+the id. 
+Exam~ 
+Exam~ 
+II Find first student wi 
+II Find first student wi 
+in the name 
+in the name 
+Student . findOne ({ name : 
+Student . findOne ({ name : 
+"i" ) } , 
+"i" ) } , 
+function (err, stu ) { 
+function (err, stu ) { 
+if (stu === null ) 
+if (stu === null ) 
+console . log ( "Nc 
+console . log ( "Nc 
+} ) ; 
+} ) ; 
+e l se { 
+e l se { 
+console . log (stu 
+console . log (stu 
+} 
+} 
+II Find the student witr. 
+II Find the student witr. 
+Student . findByid ("56e0ad 
+Student . findByid ("56e0ad 
+function (err, stu) { 
+function (err, stu) { 
+if (stu === null ) 
+if (stu === null ) 
+console . log ( "Nc 
+console . log ( "Nc 
+} ) ; 
+} ) ; 
+else { 
+else { 
+console . log (stu 
+console . log (stu 
+} 
+} 
+All Mongoose find methods return a Query object. The Query object has a number of methods that 
+All Mongoose find methods return a Query object. The Query object has a number of methods that 
+may be chained to create a more readable query. Example methods include: 
+may be chained to create a more readable query. Example methods include: 
+• The Query.where() method specifies a path to filter documents. 
+• The Query.where() method specifies a path to filter documents. 
+• The Query.sort() method sets the sort order. 
+• The Query.sort() method sets the sort order. 
+• The Query.limit() method limits the number of documents returned. 
+• The Query.limit() method limits the number of documents returned. 
+• The Query.exec() method is called last to execute the query and provides a callback function 
+• The Query.exec() method is called last to execute the query and provides a callback function 
+that is called after the query executes. 
+that is called after the query executes. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.2.4: Finding students by chaining Query methods. D 
+ACTIVITY 8.2.4: Finding students by chaining Query methods. D 
+Student . find ({ gpa : { $gte : 3 }}) 
+Student . find ({ gpa : { $gte : 3 }}) 
+. where ("interests" ) . in ([ "fishing" , "biking" ]) 
+. where ("interests" ) . in ([ "fishing" , "biking" ]) 
+. sort ({ "birthDate" : "desc" }) 
+. sort ({ "birthDate" : "desc" }) 
+. limit (2) 
+. limit (2) 
+. exec (function (err, students) { 
+. exec (function (err, students) { 
+students . forEach (function (stu) 
+students . forEach (function (stu) 
+console . log (stu . name ); 
+console . log (stu . name ); 
+} ) ; 
+} ) ; 
+} ) ; 
+} ) ; 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+id : 9ed , name : Dana , 
+id : 9ed , name : Dana , 
+gpa : 3 . 3 , birthDate : 2000 - 1- 15 , 
+gpa : 3 . 3 , birthDate : 2000 - 1- 15 , 
+interests : gardening , biking } 
+interests : gardening , biking } 
+id : 5ab , name : Sue , 
+id : 5ab , name : Sue , 
+gpa : 3 . 1 , birthDate : 1999-1 1- 2 , 
+gpa : 3 . 1 , birthDate : 1999-1 1- 2 , 
+interests : biking, reading } 
+interests : biking, reading } 
+_id : 3ff, name : Greg , 
+_id : 3ff, name : Greg , 
+gpa : 3.2 , birthDate : 1998-6-30, 
+gpa : 3.2 , birthDate : 1998-6-30, 
+25/100 
+25/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+~ 
+~ 
+~ 
+~ 
+Animation content: 
+Animation content: 
+A block of Node.js is shown: 
+A block of Node.js is shown: 
+Student.find({ gpa: { Sgte: 3 }}) 
+Student.find({ gpa: { Sgte: 3 }}) 
+.where("interests").in(["fishing", "biking"]) 
+.where("interests").in(["fishing", "biking"]) 
+.sort({ "birthDate": "desc" }) 
+.sort({ "birthDate": "desc" }) 
+.limit(2) 
+.limit(2) 
+.exec(function(err, students) { 
+.exec(function(err, students) { 
+students.forEach(function(stu) { 
+students.forEach(function(stu) { 
+console.log(stu.name); 
+console.log(stu.name); 
+}); 
+}); 
+}); 
+}); 
+The collection of students is shown: 
+The collection of students is shown: 
+{ _id: 9ed, name: Dana, 
+{ _id: 9ed, name: Dana, 
+gpa: 3.3, birthDate: 2000-1-15, 
+gpa: 3.3, birthDate: 2000-1-15, 
+interests: gardening, biking } 
+interests: gardening, biking } 
+{ _id: 5ab, name: Sue, 
+{ _id: 5ab, name: Sue, 
+gpa: 3.1, birthDate: 1999-11-2, 
+gpa: 3.1, birthDate: 1999-11-2, 
+interests: biking, reading } 
+interests: biking, reading } 
+{ _id: 3ff, name: Greg, 
+{ _id: 3ff, name: Greg, 
+gpa: 3.2, birthDate: 1998-6-30, 
+gpa: 3.2, birthDate: 1998-6-30, 
+interests: fishing, tennis} 
+interests: fishing, tennis} 
+{ _id: 7ac, name: Cindy, 
+{ _id: 7ac, name: Cindy, 
+gpa: 4.0, birthDate: 2001-2-6, 
+gpa: 4.0, birthDate: 2001-2-6, 
+interests: rock climbing} 
+interests: rock climbing} 
+{ _id: 3ca, name: Laura, 
+{ _id: 3ca, name: Laura, 
+gpa: 2.6, birthDate: 2002-5-6, 
+gpa: 2.6, birthDate: 2002-5-6, 
+interests: dancing, coding } 
+interests: dancing, coding } 
+zyBooks 
+zyBooks 
+interests: fishing , tennis } 
+interests: fishing , tennis } 
+{ id : 7ac , name : Cindy, 
+{ id : 7ac , name : Cindy, 
+gpa : 4.0 , birthDate : 2001-2-6, 
+gpa : 4.0 , birthDate : 2001-2-6, 
+interests: rock climbing } 
+interests: rock climbing } 
+{ _id : 3ca , name : Laura , 
+{ _id : 3ca , name : Laura , 
+gpa : 2.6, birthDate : 2002 -5-6, 
+gpa : 2.6, birthDate : 2002 -5-6, 
+interests: dancing , coding } 
+interests: dancing , coding } 
+Sue, Dana, Cindy, and Greg have a GPA>= 3.0, so they are selected. Of those with a GPA>= 3.0, 
+Sue, Dana, Cindy, and Greg have a GPA>= 3.0, so they are selected. Of those with a GPA>= 3.0, 
+Dana, Sue, and Greg have interests in fishing or biking, so they are selected. When sorted by birth 
+Dana, Sue, and Greg have interests in fishing or biking, so they are selected. When sorted by birth 
+date and limited to 2 students, only Dana and Sue are selected and output to the console. 
+date and limited to 2 students, only Dana and Sue are selected and output to the console. 
+Animation captions: 
+Animation captions: 
+1. The query first finds all students with gpa >= 3. 
+1. The query first finds all students with gpa >= 3. 
+2 .. where() selects students that have an interest of fishing or biking. 
+2 .. where() selects students that have an interest of fishing or biking. 
+3 .. sort() sorts the matching documents by birthDate in descending order. 
+3 .. sort() sorts the matching documents by birthDate in descending order. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 26/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+4 .. limit() limits the number of results to the first 2 documents. 
+4 .. limit() limits the number of results to the first 2 documents. 
+5 .. exec() executes the query, and returns the students' names. 
+5 .. exec() executes the query, and returns the students' names. 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.2.5: Mongoose find methods. 
+ACTIVITY 8.2.5: Mongoose find methods. 
+Given the model and schema below and the collection of super heroes, match each query 
+Given the model and schema below and the collection of super heroes, match each query 
+with the query's results. 
+with the query's results. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+D 
+D 
+27/100 
+27/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+canst SuperHero = mongoose .model ( "SuperHero" , 
+canst SuperHero = mongoose .model ( "SuperHero" , 
+id : Number, 
+id : Number, 
+universe : { type : String, enum : [ "Marvel" , "DC" , "other" ], default : 
+universe : { type : String, enum : [ "Marvel" , "DC" , "other" ], default : 
+"other" } , 
+"other" } , 
+name : 
+name : 
+stamina : 
+stamina : 
+powers : 
+powers : 
+origin : 
+origin : 
+comic : 
+comic : 
+year : 
+year : 
+} 
+} 
+} ) ; 
+} ) ; 
+{ type : String, required : true }, 
+{ type : String, required : true }, 
+{ type : Number, min : 1 , max : 10 }, 
+{ type : Number, min : 1 , max : 10 }, 
+[ String ), 
+[ String ), 
+{ 
+{ 
+String, 
+String, 
+Number 
+Number 
+canst heroes = 
+canst heroes = 
+id : 111 , 
+id : 111 , 
+universe : "DC" , 
+universe : "DC" , 
+name : "Wonder Woman" , 
+name : "Wonder Woman" , 
+stamina : 9, 
+stamina : 9, 
+powers : [ "strength" , "combat" ], 
+powers : [ "strength" , "combat" ], 
+origin : { comic : "All Star Comics #8" , year : 1941 } 
+origin : { comic : "All Star Comics #8" , year : 1941 } 
+} , 
+} , 
+{ 
+{ 
+id : 222 , 
+id : 222 , 
+universe : "DC" , 
+universe : "DC" , 
+name : "Green Lantern" , 
+name : "Green Lantern" , 
+stamina : 5 , 
+stamina : 5 , 
+powers : [ "flying" , "power ring" ), 
+powers : [ "flying" , "power ring" ), 
+origin : { comic : "All-American Comics #16" , year : 1940 } 
+origin : { comic : "All-American Comics #16" , year : 1940 } 
+} , 
+} , 
+{ 
+{ 
+id : 333 , 
+id : 333 , 
+universe : "Marvel" , 
+universe : "Marvel" , 
+name : "Spider-Man" , 
+name : "Spider-Man" , 
+stamina : 6, 
+stamina : 6, 
+powers : [ "strength" , "agility" , "spider-sense" ), 
+powers : [ "strength" , "agility" , "spider-sense" ), 
+origin : { comic : "Amazing Fantasy #15" , year : 1962 
+origin : { comic : "Amazing Fantasy #15" , year : 1962 
+} , 
+} , 
+{ 
+{ 
+id : 444 , 
+id : 444 , 
+universe : "Marvel" , 
+universe : "Marvel" , 
+name : "Storm" , 
+name : "Storm" , 
+stamina : 4 , 
+stamina : 4 , 
+powers : [ "control weather" ), 
+powers : [ "control weather" ), 
+origin : { comic : "Giant-Size X-Men #1" , year : 1976 } 
+origin : { comic : "Giant-Size X-Men #1" , year : 1976 } 
+} l ; 
+} l ; 
+SuperHero . create (heroes, function (err, heroes) 
+SuperHero . create (heroes, function (err, heroes) 
+console . log ("Created" ); 
+console . log ("Created" ); 
+} ) ; 
+} ) ; 
+If unable to drag and drop, refresh the page. 
+If unable to drag and drop, refresh the page. 
+1111 IDs 222 and 333 IDs 111 and 333 
+1111 IDs 222 and 333 IDs 111 and 333 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+I IDs 222 and 444 
+I IDs 222 and 444 
+28/100 
+28/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Finding with await operator 
+Finding with await operator 
+zyBooks 
+zyBooks 
+SuperHero.find({ stamina: { $gte: 6 }}, 
+SuperHero.find({ stamina: { $gte: 6 }}, 
+function (err, heroes) { . . . } ) 
+function (err, heroes) { . . . } ) 
+SuperHero.findOne( 
+SuperHero.findOne( 
+{ powers: {$in: ["strength", "shrinking" 
+{ powers: {$in: ["strength", "shrinking" 
+function (err, hero) { . . . } ) 
+function (err, hero) { . . . } ) 
+SuperHero.find({}) 
+SuperHero.find({}) 
+. where ("powers") . in ( ["strength", "f lyin 
+. where ("powers") . in ( ["strength", "f lyin 
+. sort ( { "stamina": "asc" } ) 
+. sort ( { "stamina": "asc" } ) 
+.limit(2) 
+.limit(2) 
+. exec ( function (err, heroes) { . . . } ) ; 
+. exec ( function (err, heroes) { . . . } ) ; 
+SuperHero.find({}) 
+SuperHero.find({}) 
+.or([ { "origin.year": { $gt: 1970} }, 
+.or([ { "origin.year": { $gt: 1970} }, 
+{ name: "Green Lantern"} ]) 
+{ name: "Green Lantern"} ]) 
+. exec ( function (err, heroes) { . . . } ) 
+. exec ( function (err, heroes) { . . . } ) 
+SuperHero.where({ stamina: { $lte: 5 }}) 
+SuperHero.where({ stamina: { $lte: 5 }}) 
+.count(function(err, count) { ... }) 
+.count(function(err, count) { ... }) 
+Mongoose find methods can be called with a callback function or from an async function using the 
+Mongoose find methods can be called with a callback function or from an async function using the 
+await operator. Both functions in the figure below find all students with a GPA> 3 and output the 
+await operator. Both functions in the figure below find all students with a GPA> 3 and output the 
+students to the console. The f indStudentsCallback () function uses a callback function, but 
+students to the console. The f indStudentsCallback () function uses a callback function, but 
+findStudentsAsync () awaits the results returned by find () and sort (). 
+findStudentsAsync () awaits the results returned by find () and sort (). 
+Figure 8.2.4: Two ways to find documents. 
+Figure 8.2.4: Two ways to find documents. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 29/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+I 
+I 
+function findStudentsCallback () { 
+function findStudentsCallback () { 
+Student . find ({ gpa : { $gte : 3 }}) 
+Student . find ({ gpa : { $gte : 3 }}) 
+) ; 
+) ; 
+.sort ({ "gpa" : "desc" }) 
+.sort ({ "gpa" : "desc" }) 
+. exec (function (err, students) { 
+. exec (function (err, students) { 
+for (let stu of students) { 
+for (let stu of students) { 
+console . log (stu . name + " " + stu . gpa ); 
+console . log (stu . name + " " + stu . gpa ); 
+async function findStudentsAsync () { 
+async function findStudentsAsync () { 
+const students = await Student . find ({ gpa : { $gte : 3 }}) .sort ({ "gpa" : 
+const students = await Student . find ({ gpa : { $gte : 3 }}) .sort ({ "gpa" : 
+"desc" } ) ; 
+"desc" } ) ; 
+◄ 
+◄ 
+for (let stu of students) 
+for (let stu of students) 
+console . log (stu . name + " " + stu . gpa ); 
+console . log (stu . name + " " + stu . gpa ); 
+PARTICIPATION 8.2.6: Asynchronous finding. ACTIVITY 
+PARTICIPATION 8.2.6: Asynchronous finding. ACTIVITY 
+7) Calling find methods with await 
+7) Calling find methods with await 
+generally results in simpler code. 
+generally results in simpler code. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) Calling find methods with await 
+2) Calling find methods with await 
+generally results in faster queries. 
+generally results in faster queries. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) The code below is guaranteed to show 
+3) The code below is guaranteed to show 
+the results from query 1 before 
+the results from query 1 before 
+showing the results from query 2. 
+showing the results from query 2. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+► 
+► 
+D 
+D 
+0 
+0 
+0 
+0 
+0 
+0 
+30/100 
+30/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+II Query 1 
+II Query 1 
+Student . find ({ gpa : { $gte : 3 
+Student . find ({ gpa : { $gte : 3 
+} } ) 
+} } ) 
+. exec (function (err, 
+. exec (function (err, 
+students) { 
+students) { 
+console . log (students); 
+console . log (students); 
+} ) ; 
+} ) ; 
+II Query 2 
+II Query 2 
+Student . find ({ gpa : { $lte : 3 
+Student . find ({ gpa : { $lte : 3 
+} } ) 
+} } ) 
+. exec (function (err, 
+. exec (function (err, 
+students) { 
+students) { 
+console . log (students); 
+console . log (students); 
+} ) ; 
+} ) ; 
+0 True 
+0 True 
+0 False 
+0 False 
+4) The code below is guaranteed to show 
+4) The code below is guaranteed to show 
+the results from query 1 before 
+the results from query 1 before 
+showing the results from query 2. 
+showing the results from query 2. 
+II Query 1 
+II Query 1 
+let students await 
+let students await 
+Student . find ({ gpa : { $gte : 3 
+Student . find ({ gpa : { $gte : 3 
+} } ) 
+} } ) 
+.sort ({ "gpa" : "desc" }); 
+.sort ({ "gpa" : "desc" }); 
+console . log (students); 
+console . log (students); 
+II Query 2 
+II Query 2 
+students = await Student . find ({ 
+students = await Student . find ({ 
+gpa : { $1 te : 3 } } ) 
+gpa : { $1 te : 3 } } ) 
+.sort ({ "gpa" : "desc" }); 
+.sort ({ "gpa" : "desc" }); 
+console . log (students); 
+console . log (students); 
+0 True 
+0 True 
+0 False 
+0 False 
+Updating and deleting documents 
+Updating and deleting documents 
+zyBooks 
+zyBooks 
+The model's save () method can be used to update an existing document. 
+The model's save () method can be used to update an existing document. 
+Figure 8.2.5: Changing a student's GPA with save(). 
+Figure 8.2.5: Changing a student's GPA with save(). 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+31/100 
+31/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+II Find the student with this ID 
+II Find the student with this ID 
+Student . findByid ("56e711a9elb0f9080f7a5621" , function (err, 
+Student . findByid ("56e711a9elb0f9080f7a5621" , function (err, 
+stu ) { 
+stu ) { 
+} ) ; 
+} ) ; 
+◄ 
+◄ 
+if (stu === null ) { 
+if (stu === null ) { 
+console . log ("Student not found" ); 
+console . log ("Student not found" ); 
+else { 
+else { 
+} 
+} 
+II Increase student's GPA and save 
+II Increase student's GPA and save 
+stu . gpa += 0.1 ; 
+stu . gpa += 0.1 ; 
+stu . save (function (err, stu ) 
+stu . save (function (err, stu ) 
+console . log ("New GPA: " + stu . gpa ); 
+console . log ("New GPA: " + stu . gpa ); 
+} ) ; 
+} ) ; 
+► 
+► 
+Mongoose also provides methods to modify existing documents in a collection and to remove 
+Mongoose also provides methods to modify existing documents in a collection and to remove 
+documents. 
+documents. 
+Table 8.2.2: Common Mongoose update methods. 
+Table 8.2.2: Common Mongoose update methods. 
+Method 
+Method 
+Model.updateOne(conditions, update, 
+Model.updateOne(conditions, update, 
+[options] , [ callback] ) 
+[options] , [ callback] ) 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+Description 
+Description 
+Updates 
+Updates 
+the first 
+the first 
+document 
+document 
+that 
+that 
+matches 
+matches 
+the 
+the 
+conditions. 
+conditions. 
+Example 
+Example 
+II Change Sue's birthDate 
+II Change Sue's birthDate 
+to 1995-12-02 
+to 1995-12-02 
+Student . updateOne ({ name : 
+Student . updateOne ({ name : 
+"Sue Black" }, 
+"Sue Black" }, 
+{ birthDate : new 
+{ birthDate : new 
+Date (1995, 11 , 2 ) } , 
+Date (1995, 11 , 2 ) } , 
+function (err, result) 
+function (err, result) 
+console . log ("Docs 
+console . log ("Docs 
+updated: " + 
+updated: " + 
+result .modifiedCount); 
+result .modifiedCount); 
+} ) ; 
+} ) ; 
+32/100 
+32/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Method 
+Method 
+Model.updateMany(conditions, update, 
+Model.updateMany(conditions, update, 
+[options] , [ callback] ) 
+[options] , [ callback] ) 
+zyBooks 
+zyBooks 
+Description 
+Description 
+Updates all 
+Updates all 
+documents 
+documents 
+that match 
+that match 
+the 
+the 
+conditions. 
+conditions. 
+._ ___________ -"I 
+._ ___________ -"I 
+Query.updateOne([conditions], 
+Query.updateOne([conditions], 
+[update], [options], [callback]) 
+[update], [options], [callback]) 
+Updates 
+Updates 
+the first 
+the first 
+document 
+document 
+that 
+that 
+matches 
+matches 
+the 
+the 
+optional 
+optional 
+conditions. 
+conditions. 
+._ ___________ -"I 
+._ ___________ -"I 
+Query.updateMany([conditions], 
+Query.updateMany([conditions], 
+[update], [options], [callback]) 
+[update], [options], [callback]) 
+Updates all 
+Updates all 
+documents 
+documents 
+that match 
+that match 
+the 
+the 
+optional 
+optional 
+conditions. 
+conditions. 
+Table 8.2.3: Common Mongoose delete methods. 
+Table 8.2.3: Common Mongoose delete methods. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+I 
+I 
+Example 
+Example 
+II Add 0.5 to all GPAs <= 
+II Add 0.5 to all GPAs <= 
+3.5 
+3.5 
+Student . updateMany ({ gpa : 
+Student . updateMany ({ gpa : 
+{ $1 te : 3. 5 } } , 
+{ $1 te : 3. 5 } } , 
+{ $inc : { gpa : 0 . 5 } 
+{ $inc : { gpa : 0 . 5 } 
+} , function (err, result) 
+} , function (err, result) 
+console . l og ( "Docs 
+console . l og ( "Docs 
+updated: " + 
+updated: " + 
+result .modifiedCount); 
+result .modifiedCount); 
+} ) ; 
+} ) ; 
+II Change this student's 
+II Change this student's 
+GPA to 3.9 
+GPA to 3.9 
+Student . where ({ _id : 
+Student . where ({ _id : 
+"56e711a9elb0f9080f7a5621 
+"56e711a9elb0f9080f7a5621 
+} ) 
+} ) 
+. updateOne ({ $set : { 
+. updateOne ({ $set : { 
+gpa : 3. 9 } } ) 
+gpa : 3. 9 } } ) 
+. exec (function (err, 
+. exec (function (err, 
+result ) { 
+result ) { 
+console . log ( "Docs 
+console . log ( "Docs 
+updated: " + 
+updated: " + 
+result .modifiedCount); 
+result .modifiedCount); 
+} ) ; 
+} ) ; 
+II Set all GPAs <= 3.5 tc 
+II Set all GPAs <= 3.5 tc 
+2 
+2 
+Student . where ({ gpa : { 
+Student . where ({ gpa : { 
+$1 te : 3. 5 } } ) 
+$1 te : 3. 5 } } ) 
+. updateMany ({ $set : { 
+. updateMany ({ $set : { 
+gpa : 2 } } ) 
+gpa : 2 } } ) 
+. exec (function (err, 
+. exec (function (err, 
+result ) { 
+result ) { 
+console . log ( "Docs 
+console . log ( "Docs 
+updated: " + 
+updated: " + 
+result .modifiedCount); 
+result .modifiedCount); 
+} ) ; 
+} ) ; 
+33/100 
+33/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+Method 
+Method 
+Model. deleteOne (conditions, [ callback] ) 
+Model. deleteOne (conditions, [ callback] ) 
+zyBooks 
+zyBooks 
+Description 
+Description 
+Deletes the 
+Deletes the 
+first 
+first 
+document 
+document 
+that 
+that 
+matches 
+matches 
+the 
+the 
+conditions. 
+conditions. 
+-------------------------------
+-------------------------------
+Model. deleteMany (conditions, [ callback] ) 
+Model. deleteMany (conditions, [ callback] ) 
+Deletes all 
+Deletes all 
+documents 
+documents 
+that match 
+that match 
+the 
+the 
+conditions. 
+conditions. 
+-------------------------------
+-------------------------------
+◄ 
+◄ 
+Query.deleteOne([conditions], [ callback] ) 
+Query.deleteOne([conditions], [ callback] ) 
+Deletes the 
+Deletes the 
+first 
+first 
+document 
+document 
+that 
+that 
+matches 
+matches 
+the 
+the 
+optional 
+optional 
+conditions. 
+conditions. 
+Deletes all 
+Deletes all 
+the 
+the 
+documents 
+documents 
+Query. deleteMany ( [conditions] , [ callback] ) that match 
+Query. deleteMany ( [conditions] , [ callback] ) that match 
+the 
+the 
+optional 
+optional 
+conditions. 
+conditions. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+I 
+I 
+I 
+I 
+Example 
+Example 
+II Delete student 
+II Delete student 
+given id 
+given id 
+Student . deleteOne ( 
+Student . deleteOne ( 
+"56e711a9elb0f9080 
+"56e711a9elb0f9080 
+} , 
+} , 
+function (err, r 
+function (err, r 
+console . log ("Delet 
+console . log ("Delet 
+result . deletedCoun 
+result . deletedCoun 
+} ) ; 
+} ) ; 
+II Delete all stud 
+II Delete all stud 
+with GPA < 3 
+with GPA < 3 
+Student . deleteMany 
+Student . deleteMany 
+{ $lt : 3 }}, 
+{ $lt : 3 }}, 
+function (err, r 
+function (err, r 
+console . log ("Delet 
+console . log ("Delet 
+result . deletedCoun 
+result . deletedCoun 
+} ) ; 
+} ) ; 
+II Delete first st 
+II Delete first st 
+with 2000-10-05 bi 
+with 2000-10-05 bi 
+Student . find ({ bir 
+Student . find ({ bir 
+"2000-10-05" } ) 
+"2000-10-05" } ) 
+. deleteOne () 
+. deleteOne () 
+. exec (function ( 
+. exec (function ( 
+result ) { 
+result ) { 
+I console . log ("Delet 
+I console . log ("Delet 
+result . deletedCoun 
+result . deletedCoun 
+} ) ; 
+} ) ; 
+II Delete all stud 
+II Delete all stud 
+with GPA < 2 
+with GPA < 2 
+Student . find ({ gpa 
+Student . find ({ gpa 
+$lt : 2 } } ) 
+$lt : 2 } } ) 
+. deleteMany () 
+. deleteMany () 
+. exec (); 
+. exec (); 
+► 
+► 
+34/100 
+34/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Like the Mongoose find methods, all update and delete methods may be executed asynchronously 
+Like the Mongoose find methods, all update and delete methods may be executed asynchronously 
+with await instead of using callback functions or calling exec () . 
+with await instead of using callback functions or calling exec () . 
+Figure 8.2.6: Calling update and delete methods with async. 
+Figure 8.2.6: Calling update and delete methods with async. 
+const updateResult = await Student . updateMany ({ gpa : { $l te : 3.5 } }, { 
+const updateResult = await Student . updateMany ({ gpa : { $l te : 3.5 } }, { 
+$inc : { gpa : 0 . 5 } } ) ; 
+$inc : { gpa : 0 . 5 } } ) ; 
+console . log ("Docs updated: " + updateResult .modifiedCount); 
+console . log ("Docs updated: " + updateResult .modifiedCount); 
+const deleteResult = await Student . deleteOne ({ id: 
+const deleteResult = await Student . deleteOne ({ id: 
+"5f077d4616956f72105fb613" }); 
+"5f077d4616956f72105fb613" }); 
+console . log ("Docs deleted: " + deleteResult . deletedCount); 
+console . log ("Docs deleted: " + deleteResult . deletedCount); 
+◄ ► 
+◄ ► 
+I PARTICIPATION 
+I PARTICIPATION 
+ACTIVITY 8.2.7: Updating and deleting documents with Mongoose. D 
+ACTIVITY 8.2.7: Updating and deleting documents with Mongoose. D 
+Refer to the "superheroes" collection and SuperHero model. 
+Refer to the "superheroes" collection and SuperHero model. 
+} ' 
+} ' 
+{ 
+{ 
+id : 111 , 
+id : 111 , 
+universe : "DC" , 
+universe : "DC" , 
+name : "Wonder Woman" , 
+name : "Wonder Woman" , 
+stamina : 9, 
+stamina : 9, 
+powers : [ "strength" , "combat" ], 
+powers : [ "strength" , "combat" ], 
+origin : { comic : "All Star Comics #8" , year : 1941 } 
+origin : { comic : "All Star Comics #8" , year : 1941 } 
+id : 222 , 
+id : 222 , 
+universe : "DC" , 
+universe : "DC" , 
+name : "Green Lantern" , 
+name : "Green Lantern" , 
+stamina : 5 , 
+stamina : 5 , 
+powers : [ "flying" , "power ring" ], 
+powers : [ "flying" , "power ring" ], 
+origin : { comic : "All-American Comics #16" , year : 1940 } 
+origin : { comic : "All-American Comics #16" , year : 1940 } 
+1) What is the result of the following 
+1) What is the result of the following 
+command? 
+command? 
+SuperHero . updateMany ({}, 
+SuperHero . updateMany ({}, 
+{ $inc : { stamina : 1 } } , 
+{ $inc : { stamina : 1 } } , 
+function (err) {} ) ; 
+function (err) {} ) ; 
+O Both heroes' stamina are set to 
+O Both heroes' stamina are set to 
+1. 
+1. 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+35/100 
+35/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+O Wonder Woman's stamina 
+O Wonder Woman's stamina 
+increases by 1. 
+increases by 1. 
+O Both heroes' stamina increases 
+O Both heroes' stamina increases 
+by 1. 
+by 1. 
+2) What is the result of the following 
+2) What is the result of the following 
+command? 
+command? 
+SuperHero . updateOne ({ 
+SuperHero . updateOne ({ 
+"origin.year" : { $gt : 1900 
+"origin.year" : { $gt : 1900 
+} ' 
+} ' 
+{ $set : { "origin.year" : 
+{ $set : { "origin.year" : 
+1900 }}, 
+1900 }}, 
+function (err, result) { ... 
+function (err, result) { ... 
+} ) ; 
+} ) ; 
+O Both heroes' origin year are set 
+O Both heroes' origin year are set 
+to 1900. 
+to 1900. 
+O Wonder Woman's origin year is 
+O Wonder Woman's origin year is 
+set to 1900. 
+set to 1900. 
+0 No heroes are updated. 
+0 No heroes are updated. 
+3) Select the code segment equivalent to 
+3) Select the code segment equivalent to 
+the following: 
+the following: 
+SuperHero . findByid (222, 
+SuperHero . findByid (222, 
+function (err, hero ) { 
+function (err, hero ) { 
+hero . powers . push ( "mind 
+hero . powers . push ( "mind 
+control" ); 
+control" ); 
+hero . save (function (err, 
+hero . save (function (err, 
+hero ) { . . . } ) ; 
+hero ) { . . . } ) ; 
+} ) ; 
+} ) ; 
+0 
+0 
+SuperHero . updateOne ({ id : 
+SuperHero . updateOne ({ id : 
+222 } , 
+222 } , 
+{ $set : {powers : [ "mind 
+{ $set : {powers : [ "mind 
+control" ]}}); 
+control" ]}}); 
+SuperHero . find ({ id : 222 
+SuperHero . find ({ id : 222 
+} ) 
+} ) 
+Q . updateOne ({ $push : 
+Q . updateOne ({ $push : 
+{powers : "mind control" } 
+{powers : "mind control" } 
+} ) ; 
+} ) ; 
+0 
+0 
+SuperHero . find ({ id : 222 
+SuperHero . find ({ id : 222 
+} ) 
+} ) 
+. updateOne ({ $push : 
+. updateOne ({ $push : 
+{powers : "mind control" } 
+{powers : "mind control" } 
+} ) 
+} ) 
+. exec (); 
+. exec (); 
+4) Select the code segment equivalent to 
+4) Select the code segment equivalent to 
+the following: 
+the following: 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+0 
+0 
+36/100 
+36/100 
+11/17/24, 12:11 PM 
+11/17/24, 12:11 PM 
+SuperHero . find ({ _id : 111 
+SuperHero . find ({ _id : 111 
+}) . deleteOne () . exec (); 
+}) . deleteOne () . exec (); 
+Q SuperHero . deleteOne (lll); 
+Q SuperHero . deleteOne (lll); 
+Q SuperHero . deleteOne ({ 
+Q SuperHero . deleteOne ({ 
+111 }); 
+111 }); 
+await 
+await 
+Q SuperHero . deleteOne ({ 
+Q SuperHero . deleteOne ({ 
+111 } ) ; 
+111 } ) ; 
+id : 
+id : 
+id : 
+id : 
+5) If three students have the same 2000-10-
+5) If three students have the same 2000-10-
+15 birthdate, what does the code output 
+15 birthdate, what does the code output 
+to the console? 
+to the console? 
+const result = await 
+const result = await 
+Student . deleteOne ( 
+Student . deleteOne ( 
+{ birthDate : "2000-10-05" }); 
+{ birthDate : "2000-10-05" }); 
+console . log (result . deletedCount); 
+console . log (result . deletedCount); 
+0 0 
+0 0 
+0 1 
+0 1 
+0 3 
+0 3 
+Project organization 
+Project organization 
+zyBooks 
+zyBooks 
+Node.js code is often organized into separate modules to decrease the project's complexity and 
+Node.js code is often organized into separate modules to decrease the project's complexity and 
+create re-usable code. Ex: Database connection code and Mongoose models are separated into 
+create re-usable code. Ex: Database connection code and Mongoose models are separated into 
+separate modules with the models stored in a models directory. 
+separate modules with the models stored in a models directory. 
+Figure 8.2.7: Example Node.js project that adds new students entered in a 
+Figure 8.2.7: Example Node.js project that adds new students entered in a 
+form to a MongoDB database. 
+form to a MongoDB database. 
+myproject 
+myproject 
+models 
+models 
+t._ student. j s 
+t._ student. j s 
+node modules 
+node modules 
+~ express L mongoose 
+~ express L mongoose 
+etc ... 
+etc ... 
+public 
+public 
+t._ student . html 
+t._ student . html 
+db. js 
+db. js 
+package.json 
+package.json 
+package-lock . json 
+package-lock . json 
+server.js 
+server.js 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+0 
+0 
+37/100 
+37/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+I 
+I 
+II models/student.js 
+II models/student.js 
+const db = require ( " .. /db" ); 
+const db = require ( " .. /db" ); 
+const Student = db . model ("Student" , 
+const Student = db . model ("Student" , 
+name : String, 
+name : String, 
+gpa : { type : Number, min : 0 , max : 
+gpa : { type : Number, min : 0 , max : 
+4 } , 
+4 } , 
+birthDate : type : Date , default : 
+birthDate : type : Date , default : 
+Date . now }, 
+Date . now }, 
+interests: String ] 
+interests: String ] 
+} ) ; 
+} ) ; 
+module . exports Student; 
+module . exports Student; 
+II db.js 
+II db.js 
+canst mongoose = require ("mongoose" ); 
+canst mongoose = require ("mongoose" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+mongoose . connect ("mongodb://localhost/mydb" ); 
+module . exports = mongoose ; 
+module . exports = mongoose ; 
+<!--public/student.html--> 
+<!--public/student.html--> 
+<form method="post" action="/create"> 
+<form method="post" action="/create"> 
+<p > 
+<p > 
+<label>Name?</label> 
+<label>Name?</label> 
+<input type="text" name="name" > 
+<input type="text" name="name" > 
+<Ip> 
+<Ip> 
+<p > 
+<p > 
+<label>GPA?</label> 
+<label>GPA?</label> 
+<input type= "text" name="gpa" > 
+<input type= "text" name="gpa" > 
+<Ip> 
+<Ip> 
+<p > 
+<p > 
+<label>Date of birth?</label> 
+<label>Date of birth?</label> 
+<input type="date" name="birthdate" > 
+<input type="date" name="birthdate" > 
+<Ip> 
+<Ip> 
+<input type="submit" value="Save" > 
+<input type="submit" value="Save" > 
+</form> 
+</form> 
+, ~ localhost:3000/student ht X 
+, ~ localhost:3000/student ht X 
++- C I CJ localhost:3000/student.html 
++- C I CJ localhost:3000/student.html 
+Name? !Natali e Portman I 
+Name? !Natali e Portman I 
+GPA? ~13._7 _;:::::.========:::::::_I----, 
+GPA? ~13._7 _;:::::.========:::::::_I----, 
+Date of birtl1? !01 / 09/ 1981 
+Date of birtl1? !01 / 09/ 1981 
+I Save~ 
+I Save~ 
+post 
+post 
+i::::::> 
+i::::::> 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+I I 
+I I 
+II server.js 
+II server.js 
+canst express 
+canst express 
+require ("express" ); 
+require ("express" ); 
+canst bodyParser = require ("bo~ 
+canst bodyParser = require ("bo~ 
+parser" ); 
+parser" ); 
+canst Student = 
+canst Student = 
+require ("./models/student" ); 
+require ("./models/student" ); 
+const app = express (); 
+const app = express (); 
+app . u se (b od yPars er . urlencoded ({ 
+app . u se (b od yPars er . urlencoded ({ 
+extended : false })); 
+extended : false })); 
+app . use (express .static ("public" 
+app . use (express .static ("public" 
+app . post ("/create" , 
+app . post ("/create" , 
+res) { 
+res) { 
+function (re< 
+function (re< 
+II Create a student from the 
+II Create a student from the 
+submitted form data 
+submitted form data 
+canst stu = new Student ({ 
+canst stu = new Student ({ 
+name : req . body . name , 
+name : req . body . name , 
+gpa : req . body . gpa , 
+gpa : req . body . gpa , 
+birthDate : new 
+birthDate : new 
+Date (req . body . birthdate ) 
+Date (req . body . birthdate ) 
+} ) ; 
+} ) ; 
+stu . save (function (err, stu) 
+stu . save (function (err, stu) 
+if (err) { 
+if (err) { 
+res .status (400) . send (err); 
+res .status (400) . send (err); 
+} 
+} 
+else { 
+else { 
+res . send ("Student was 
+res . send ("Student was 
+saved." ); 
+saved." ); 
+} ) ; 
+} ) ; 
+} 
+} 
+} ) ; 
+} ) ; 
+app . listen (3000); 
+app . listen (3000); 
+1 ~ localhost:3000/ create X 
+1 ~ localhost:3000/ create X 
++- C J CJ localhost:3000/create 
++- C J CJ localhost:3000/create 
+Student \.Vas saYed. 
+Student \.Vas saYed. 
+n 
+n 
+38/100 
+38/100 
+11/17/24, 12:11 PM I PARTICIPATION I 
+11/17/24, 12:11 PM I PARTICIPATION I 
+ACTIVITY 8.2.8: Layout of Node.js project. 
+ACTIVITY 8.2.8: Layout of Node.js project. 
+Refer to the figure above. 
+Refer to the figure above. 
+1) The db object in student.js is the 
+1) The db object in student.js is the 
+mongoose object from db.js. 
+mongoose object from db.js. 
+0 True 
+0 True 
+0 False 
+0 False 
+2) The require statement in student.js 
+2) The require statement in student.js 
+uses" .. / db" in the path because db.js 
+uses" .. / db" in the path because db.js 
+is one directory above student.js. 
+is one directory above student.js. 
+0 True 
+0 True 
+0 False 
+0 False 
+3) Adding a new model called Faculty 
+3) Adding a new model called Faculty 
+entails adding Faculty to students.js. 
+entails adding Faculty to students.js. 
+0 True 
+0 True 
+O False 
+O False 
+4) The require ("mongoose") 
+4) The require ("mongoose") 
+statement was mistakenly left out of 
+statement was mistakenly left out of 
+server.js. 
+server.js. 
+0 True 
+0 True 
+O False 
+O False 
+5) Changing the method="post" 
+5) Changing the method="post" 
+statement in student.html to 
+statement in student.html to 
+method=" get" requires making 
+method=" get" requires making 
+changes to server.js. 
+changes to server.js. 
+O True 
+O True 
+O False 
+O False 
+6) A 400 Bad Request is sent to the client 
+6) A 400 Bad Request is sent to the client 
+if an error occurs saving the POSTed 
+if an error occurs saving the POSTed 
+student to the database. 
+student to the database. 
+O True 
+O True 
+O False 
+O False 
+https://leam.zybooks.com/zybook/ARIZONAECE413SalehiF all2024/chapter/8/print 
+zyBooks 
+zyBooks 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+39/100 
+39/100 
+11/17/24, 12:11 PM zyBooks 
+11/17/24, 12:11 PM zyBooks 
+Exploring further: 
+Exploring further: 
+• Mongoose website 
+• Mongoose website 
+• Mongoose documentation 
+• Mongoose documentation 
+• MongoDB native driver for Node.js 
+• MongoDB native driver for Node.js 
