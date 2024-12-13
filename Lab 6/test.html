@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC2 Endpoint Tester</title>
+    <script>
+        // Helper function to display server responses
+        function myHandler() {
+            console.log("Response (GET):", this.response);
+        }
+
+        function postHandler() {
+            console.log("Response (POST):", this.response);
+        }
+
+        function getHandler() {
+            console.log("Response (AGGREGATE GET):", this.response);
+        }
+
+        // Replace this with your EC2 instance public DNS
+        const serverLink = "http://ec2-54-151-120-233.us-west-1.compute.amazonaws.com:3000/";
+
+        function testEndpoints() {
+            // 1. Check for Data
+            console.log("Starting Test: Check for Data");
+            var zips = [85700, 85701, 85702];
+            for (var zip = 0; zip < zips.length; zip++) {
+                var xhr = new XMLHttpRequest();
+                xhr.addEventListener("load", myHandler);
+                xhr.responseType = "json";
+                xhr.open("GET", serverLink + "lab/status?zip=" + zips[zip]);
+                xhr.send();
+            }
+
+            // 2. POST with Incorrect Data Format
+            console.log("Starting Test: POST with Incorrect Data Format");
+            var incorrectData = {
+                zip: "not a zip",
+                airQuality: 15
+            };
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", myHandler);
+            xhr.responseType = "json";
+            xhr.open("POST", serverLink + "lab/register");
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.send(JSON.stringify(incorrectData));
+
+            // 3. POST with Correct Data Format
+            console.log("Starting Test: POST with Correct Data Format");
+            var correctData = {
+                zip: "85700",
+                airQuality: 533.07
+            };
+            xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", postHandler);
+            xhr.responseType = "json";
+            xhr.open("POST", serverLink + "lab/register");
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.send(JSON.stringify(correctData));
+
+            // GET to Verify the Data
+            xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", getHandler);
+            xhr.responseType = "json";
+            xhr.open("GET", serverLink + "lab/status?zip=85700");
+            xhr.send();
+
+            // 4. Verify Data Aggregation
+            console.log("Starting Test: Verify Data Aggregation");
+            var zip = "85701";
+            var values = [13.5, 57.0, 27];
+            for (var i = 0; i < values.length; i++) {
+                xhr = new XMLHttpRequest();
+                xhr.addEventListener("load", postHandler);
+                xhr.responseType = "json";
+                var data = {
+                    zip: zip,
+                    airQuality: values[i]
+                };
+                xhr.open("POST", serverLink + "lab/register");
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.send(JSON.stringify(data));
+            }
+            xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", getHandler);
+            xhr.responseType = "json";
+            xhr.open("GET", serverLink + "lab/status?zip=85701");
+            xhr.send();
+
+            // 5. Verifying with Different Zip Codes
+            console.log("Starting Test: Verifying with Different Zip Codes");
+            var zips = ["85700", "85701", "85702"];
+            var values = [22.3, 25, 35.7, 35.8, 13, 27, -3.5, 7.3, 8];
+            var j = 0;
+            var zip = 0;
+            while (j < values.length) {
+                xhr = new XMLHttpRequest();
+                xhr.addEventListener("load", postHandler);
+                xhr.responseType = "json";
+                var data = {
+                    zip: zips[zip],
+                    airQuality: values[j]
+                };
+                xhr.open("POST", serverLink + "lab/register");
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.send(JSON.stringify(data));
+                j++;
+                if (j % 3 === 0) {
+                    zip++;
+                }
+            }
+            var i = 0;
+            while (i < zips.length) {
+                xhr = new XMLHttpRequest();
+                xhr.addEventListener("load", getHandler);
+                xhr.responseType = "json";
+                xhr.open("GET", serverLink + "lab/status?zip=" + zips[i]);
+                xhr.send();
+                i++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>EC2 Endpoint Tester</h1>
+    <p>Click the button below to test your server endpoints.</p>
+    <button onclick="testEndpoints()">Run Tests</button>
+</body>
+</html>
